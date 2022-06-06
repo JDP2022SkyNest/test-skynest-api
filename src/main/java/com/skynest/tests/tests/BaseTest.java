@@ -6,8 +6,8 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
     @BeforeClass
-    public void setUp(){
-        RestAssured.baseURI = EndpointConstants.url;
+    public void setUp() {
+        RestAssured.baseURI = EndpointConstants.URL;
     }
 
 }
