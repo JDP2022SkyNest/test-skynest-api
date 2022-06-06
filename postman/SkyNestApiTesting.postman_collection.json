@@ -1,0 +1,2008 @@
+{
+	"info": {
+		"_postman_id": "7925ea69-96d1-41db-b700-45c980921d93",
+		"name": "SkyNestApiTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20992993"
+	},
+	"item": [
+		{
+			"name": "UserRegistration",
+			"item": [
+				{
+					"name": "ValidPayloads",
+					"item": [
+						{
+							"name": "UserRegisterRandomValidInputs",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"//Seting dynamic variables for generating random data everytime test runs\r",
+											"\r",
+											"var emailAddress = pm.variables.replaceIn('{{$randomEmail}}');\r",
+											"pm.environment.set(\"randomEmail\",emailAddress);\r",
+											"\r",
+											"var firstName = pm.variables.replaceIn('{{$randomFirstName}}');\r",
+											"pm.environment.set(\"randomFirstName\",firstName);\r",
+											"\r",
+											"var lastName = pm.variables.replaceIn('{{$randomLastName}}');\r",
+											"pm.environment.set(\"randomLastName\",lastName);\r",
+											"\r",
+											"var address = pm.variables.replaceIn('{{$randomStreetName}}');\r",
+											"pm.environment.set(\"randomStreetName\",address);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type header is application/json\", () => {\r",
+											"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response body contains id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											"\r",
+											"const jsonData = pm.response.json();\r",
+											"pm.test(\"Data type of the response is string\", () => {\r",
+											"  pm.expect(jsonData.id).to.be.a(\"string\");\r",
+											"  pm.expect(jsonData.email).to.be.a(\"string\");\r",
+											"  pm.expect(jsonData.name).to.be.a(\"string\");\r",
+											"  pm.expect(jsonData.surname).to.be.a(\"string\");\r",
+											"  pm.expect(jsonData.phoneNumber).to.be.a(\"string\");\r",
+											"  pm.expect(jsonData.address).to.be.a(\"string\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response properties match proper environment variables\", function () {\r",
+											"  pm.expect(pm.response.json().email).to.eql(pm.environment.get(\"randomEmail\"));\r",
+											"  pm.expect(pm.response.json().name).to.eql(pm.environment.get(\"randomFirstName\"));\r",
+											"  pm.expect(pm.response.json().surname).to.eql(pm.environment.get(\"randomLastName\"));\r",
+											"  pm.expect(pm.response.json().address).to.eql(pm.environment.get(\"randomStreetName\"));\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"{{randomEmail}}\",\r\n  \"password\": \"Flowers123\",\r\n  \"name\": \"{{randomFirstName}}\",\r\n  \"surname\": \"{{randomLastName}}\",\r\n  \"phoneNumber\": \"698523147\",\r\n  \"address\": \"{{randomStreetName}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "RandomValidInputs",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"{{randomEmail}}\",\r\n  \"password\": \"Riytrl5544\",\r\n  \"name\": \"{{randomFirstName}}\",\r\n  \"surname\": \"{{randomLastName}}\",\r\n  \"phoneNumber\": \"394878865\",\r\n  \"address\": \"{{randomStreetName}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 05 Jun 2022 12:42:25 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"523169a8-f6e1-44e4-b538-8057d8033ba4\",\n    \"email\": \"Eunice.Wiegand@hotmail.com\",\n    \"name\": \"Julian\",\n    \"surname\": \"Connelly\",\n    \"phoneNumber\": \"394878865\",\n    \"address\": \"Friesen Islands\"\n}"
+								}
+							]
+						},
+						{
+							"name": "UserRegisterValidInputs",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"flower123@yahoo.com\",\r\n  \"password\": \"Flower123\",\r\n  \"name\": \"Sarrra\",\r\n  \"surname\": \"Larrra\",\r\n  \"phoneNumber\": \"02744854963\",\r\n  \"address\": \"Street11112233\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InvalidPayloads",
+					"item": [
+						{
+							"name": "AlphabeticPhoneInput",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"phoneNumber format not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"testprobaxy@yahoo.com\",\r\n  \"password\": \"Testprobaxy123\",\r\n  \"name\": \"Leon\",\r\n  \"surname\": \"Anderson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street883388\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "InvalidEmailFormat",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"email format is not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"khkhkhkh\",\r\n  \"password\": \"Testprobaxy123\",\r\n  \"name\": \"Leon\",\r\n  \"surname\": \"Anders\",\r\n  \"phoneNumber\": \"857412365\",\r\n  \"address\": \"Street66\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PasswordWithoutUpperCase",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"password format not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"ulica1234\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PasswordWithoutNumber",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"password format not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulicaulica\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PasswordLessThan8Chars",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"password format not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Uli\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PasswordSpecialChar",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"password format not valid\"\r",
+											"    ]);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica_123\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NameMultipleSpaces",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"name cannot be null or empty\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"cake@yahoo.com\",\r\n    \"password\":\"Ulica123\",\r\n    \"name\": \"    \",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AllParametersMultipleSpaces",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica123\",\r\n    \"name\": \"     \",\r\n    \"surname\": \"    \",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"    \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "EmptyInputs",
+					"item": [
+						{
+							"name": "RegisterUserEmptyInputs",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\",\r\n  \"name\": \"\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "EmptyEmail",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"String55\",\r\n  \"name\": \"Fix\",\r\n  \"surname\": \"Fixing\",\r\n  \"phoneNumber\": \"789654456\",\r\n  \"address\": \"Street Test 1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:28:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:28:03\"\n}"
+								},
+								{
+									"name": "EmptyPassword",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"\",\r\n  \"name\": \"Fixy\",\r\n  \"surname\": \"Fixings\",\r\n  \"phoneNumber\": \"78965488456\",\r\n  \"address\": \"Street Test 2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:29:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:29:30\"\n}"
+								},
+								{
+									"name": "EmptyName",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"\",\r\n  \"surname\": \"Fixingss\",\r\n  \"phoneNumber\": \"789685488456\",\r\n  \"address\": \"Street Test 3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:30:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:30:24\"\n}"
+								},
+								{
+									"name": "EmptySurname",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"7896854884586\",\r\n  \"address\": \"Street Test 4\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:31:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"surname cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:31:14\"\n}"
+								},
+								{
+									"name": "EmptyPhoneNumber",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"fixy@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"Fix\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"Street Test 5\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:32:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"phoneNumber cannot be null or empty\",\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:32:01\"\n}"
+								},
+								{
+									"name": "EmptyAddress",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"fixy@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"Fix\",\r\n  \"phoneNumber\": \"875421369\",\r\n  \"address\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:32:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:32:36\"\n}"
+								},
+								{
+									"name": "AllParametersEmpty",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\",\r\n  \"name\": \"\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:42:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\",\n        \"email format is not valid\",\n        \"password format not valid\",\n        \"surname cannot be null or empty\",\n        \"phoneNumber cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:42:25\"\n}"
+								}
+							]
+						},
+						{
+							"name": "EmptyEmail",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"email format is not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"String55\",\r\n  \"name\": \"Fix\",\r\n  \"surname\": \"Fixing\",\r\n  \"phoneNumber\": \"789654456\",\r\n  \"address\": \"Street Test 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmptyPassword",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"password format not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"\",\r\n  \"name\": \"Fixy\",\r\n  \"surname\": \"Fixings\",\r\n  \"phoneNumber\": \"78965488456\",\r\n  \"address\": \"Street Test 2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmptyName",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"name cannot be null or empty\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"\",\r\n  \"surname\": \"Fixingss\",\r\n  \"phoneNumber\": \"789685488456\",\r\n  \"address\": \"Street Test 3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmptySurname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"surname cannot be null or empty\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"7896854884586\",\r\n  \"address\": \"Street Test 4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmptyPhoneNumber",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fixy@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"Fix\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"Street Test 5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmptyAddress",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"address cannot be null or empty\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fixy@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"Fix\",\r\n  \"phoneNumber\": \"875421369\",\r\n  \"address\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AllParametersEmpty",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\",\r\n  \"name\": \"\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EmptyHeader",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 415\", function () {\r",
+											"    pm.response.to.have.status(415);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.error).to.eql(\"Unsupported Media Type\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"kkkk@yahoo.com\",\r\n  \"password\": \"String55\",\r\n  \"name\": \"Fix\",\r\n  \"surname\": \"Fixing\",\r\n  \"phoneNumber\": \"789654456\",\r\n  \"address\": \"Street Test 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "StringLength",
+					"item": [
+						{
+							"name": "UserRegisterStringLength",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response body contains message\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"messages\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"//email maxLength: 254, minLength: 0\r",
+											"//password maxLength: 30, minLength:0\r",
+											"//name maxLength: 50, minLength: 0\r",
+											"//surname maxLength: 100, minLength: 0\r",
+											"//phoneNumber maxLength: 30, minLength: 0\r",
+											"//address maxLength: 254, minLength:0\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\":\"fdhadfhafhhkafdhdfhjadkf@gmail.com\",\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgc\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"875412547854522452188965412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "AllParametarsJustAboveMaxLimit",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\":\"Jhfhjdfhjdghjds9iewioi457823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnn@gmail.com\",\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:25:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"surname length cannot be over 100\",\n        \"email length cannot be over 254 characters\",\n        \"email format is not valid\",\n        \"phoneNumber length cannot be over 30\",\n        \"address length cannot be over 254\",\n        \"name length cannot be over 50\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:25:22\"\n}"
+								},
+								{
+									"name": "ExactLimitLength",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\":\"fdhadfhafhhkafdhdfhjadkf@gmail.com\",\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgc\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"875412547854522452188965412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 03 Jun 2022 13:44:43 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"db614ec6-4fd0-4dab-8e97-e3ec1e4e7186\",\n    \"email\": \"fdhadfhafhhkafdhdfhjadkf@gmail.com\",\n    \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdj\",\n    \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\n    \"phoneNumber\": \"875412547854522452188965412322\",\n    \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\n}"
+								}
+							]
+						},
+						{
+							"name": "AllParametersJustAboveMaxLimit",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\":\"Jhfhjdfhjdghjds9iewioi457823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnn@gmail.com\",\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ExactLimitLength",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Body contains id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\":\"wdhadfhafhhkafdhdfhgadkf@gmail.com\",\r\n  \"password\": \"LwfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinawkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfwsjfdhjvdjLhfsdtsdh34559ggcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"875312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfs9iewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Re-registration",
+					"item": [
+						{
+							"name": "User can not register twice with same email address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 409\", function () {\r",
+											"    pm.response.to.have.status(409);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"This email is already in use\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"Eunice.Wiegand@hotmail.com\",\r\n  \"password\": \"Abcdefg123\",\r\n  \"name\": \"Tea\",\r\n  \"surname\": \"Taylor\",\r\n  \"phoneNumber\": \"87541296\",\r\n  \"address\": \"Street19\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "User can not register twice with same email address",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"Eunice.Wiegand@hotmail.com\",\r\n  \"password\": \"Abcdefg123\",\r\n  \"name\": \"Tea\",\r\n  \"surname\": \"Taylor\",\r\n  \"phoneNumber\": \"87541296\",\r\n  \"address\": \"Street19\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 05 Jun 2022 12:44:00 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"This email is already in use\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-06-05 14:44:00\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetUser",
+			"item": [
+				{
+					"name": "GetUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}{{ENDPOINT_GET_USER}}",
+							"host": [
+								"{{BASE_URL}}{{ENDPOINT_GET_USER}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeleteUser",
+			"item": []
+		},
+		{
+			"name": "UserLogin",
+			"item": [
+				{
+					"name": "RegisteredUserLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"flower123@yahoo.com\",\r\n  \"password\": \"Flower123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
