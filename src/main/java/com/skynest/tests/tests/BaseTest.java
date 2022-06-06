@@ -9,5 +9,4 @@ public class BaseTest {
     public void setUp() {
         RestAssured.baseURI = EndpointConstants.URL;
     }
-
 }

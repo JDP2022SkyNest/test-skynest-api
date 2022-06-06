@@ -1,7 +1,11 @@
 package com.skynest.tests.utils;
 
-public class BaseHelper {
-    public String generateRandomEmail(){
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public final class BaseHelper {
+    public static String generateRandomEmail() {
         String myEmailAddress = "myemail" + System.nanoTime() + "@gmail.com";
         return myEmailAddress;
     }

@@ -16,7 +16,7 @@ public class RegistrationTest extends BaseTest {
     @Test(dataProvider = "UserData")
     void registering_new_valid_user_should_return_specified_response(String email, String password, String name, String surname, String phoneNumber, String address) throws JsonProcessingException {
 
-        RegistrationPayload registrationPayload =new RegistrationPayload(email,password,name,surname,phoneNumber,address);
+        RegistrationPayload registrationPayload = new RegistrationPayload(email, password, name, surname, phoneNumber, address);
 
         Response response = given().log().all().header("Content-Type", "application/json")
                 .body(BaseTransformer.toJson(registrationPayload))
@@ -30,9 +30,9 @@ public class RegistrationTest extends BaseTest {
 
         Assert.assertEquals(registrationResponse.getName(), registrationPayload.getName());
         Assert.assertEquals(registrationResponse.getSurname(), registrationPayload.getSurname());
-        Assert.assertEquals(registrationResponse.getEmail(),registrationPayload.getEmail());
-        Assert.assertEquals(registrationResponse.getPhoneNumber(),registrationPayload.getPhoneNumber());
-        Assert.assertEquals(registrationResponse.getAddress(),registrationPayload.getAddress());
+        Assert.assertEquals(registrationResponse.getEmail(), registrationPayload.getEmail());
+        Assert.assertEquals(registrationResponse.getPhoneNumber(), registrationPayload.getPhoneNumber());
+        Assert.assertEquals(registrationResponse.getAddress(), registrationPayload.getAddress());
     }
 
     @DataProvider(name = "UserData")
