@@ -23,7 +23,6 @@ public class RegistrationTest extends BaseTest {
                 .when()
                 .post(EndpointConstants.REGISTER_URL);
 
-
         RegistrationResponse registrationResponse = response.as(RegistrationResponse.class);
 
         Assert.assertNotNull(registrationResponse.getId());
