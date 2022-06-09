@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegistrationResponse {
+public final class RegistrationResponse {
     private String id;
     private String email;
     private String name;
