@@ -13,7 +13,7 @@
 					"name": "ValidPayloads",
 					"item": [
 						{
-							"name": "UserRegisterRandomValidInputs",
+							"name": "ValidRandomInputs",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -187,13 +187,18 @@
 							]
 						},
 						{
-							"name": "UserRegisterValidInputs",
+							"name": "ValidHardcodedInputs",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
 										"exec": [
-											""
+											"pm.test(\"Set the id of a valid user registration as an environment variable\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.id).is.not.null;\r",
+											"    pm.environment.set(\"validUserId\", jsonData.id);\r",
+											"});"
 										],
 										"type": "text/javascript"
 									}
@@ -204,7 +209,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"flower123@yahoo.com\",\r\n  \"password\": \"Flower123\",\r\n  \"name\": \"Sarrra\",\r\n  \"surname\": \"Larrra\",\r\n  \"phoneNumber\": \"02744854963\",\r\n  \"address\": \"Street11112233\"\r\n}",
+									"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Test1234\",\r\n  \"name\": \"Test\",\r\n  \"surname\": \"Test\",\r\n  \"phoneNumber\": \"320531236654\",\r\n  \"address\": \"City 47\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -218,7 +223,93 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "ValidHardcodedInputs",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Test1234\",\r\n  \"name\": \"Test\",\r\n  \"surname\": \"Test\",\r\n  \"phoneNumber\": \"320531236654\",\r\n  \"address\": \"City 47\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 16:06:52 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"655409a4-5889-462d-8224-084fbed451dc\",\n    \"email\": \"christinezahar@yahoo.com\",\n    \"name\": \"Test\",\n    \"surname\": \"Test\",\n    \"phoneNumber\": \"320531236654\",\n    \"address\": \"City 47\"\n}"
+								}
+							]
 						}
 					]
 				},
@@ -252,7 +343,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"testprobaxy@yahoo.com\",\r\n  \"password\": \"Testprobaxy123\",\r\n  \"name\": \"Leon\",\r\n  \"surname\": \"Anderson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street883388\"\r\n}",
+									"raw": "{\r\n  \"email\": \"xyz@yahoo.com\",\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street8833\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -266,7 +357,89 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "AlphabeticPhoneInput",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"xyz@yahoo.com\",\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:29:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 15:29:51\"\n}"
+								}
+							]
 						},
 						{
 							"name": "InvalidEmailFormat",
@@ -295,7 +468,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"khkhkhkh\",\r\n  \"password\": \"Testprobaxy123\",\r\n  \"name\": \"Leon\",\r\n  \"surname\": \"Anders\",\r\n  \"phoneNumber\": \"857412365\",\r\n  \"address\": \"Street66\"\r\n}",
+									"raw": "{\r\n  \"email\": \"invalidformat\",\r\n  \"password\": \"Testprobaxy123\",\r\n  \"name\": \"Leon\",\r\n  \"surname\": \"Anders\",\r\n  \"phoneNumber\": \"857412365\",\r\n  \"address\": \"Street66\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -309,7 +482,214 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "InvalidEmailFormat",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"invalidformat\",\r\n  \"password\": \"Testprobaxy123\",\r\n  \"name\": \"Leon\",\r\n  \"surname\": \"Anders\",\r\n  \"phoneNumber\": \"857412365\",\r\n  \"address\": \"Street66\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:30:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 15:30:45\"\n}"
+								}
+							]
+						},
+						{
+							"name": "InvalidEmailProvider",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"email format is not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"xyz@hristina.com\",\r\n  \"password\": \"Testprobaxy123\",\r\n  \"name\": \"Leon\",\r\n  \"surname\": \"Anders\",\r\n  \"phoneNumber\": \"857412365\",\r\n  \"address\": \"Street66\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "InvalidEmailFormat",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"invalidformat\",\r\n  \"password\": \"Testprobaxy123\",\r\n  \"name\": \"Leon\",\r\n  \"surname\": \"Anders\",\r\n  \"phoneNumber\": \"857412365\",\r\n  \"address\": \"Street66\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:30:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 15:30:45\"\n}"
+								}
+							]
 						},
 						{
 							"name": "PasswordWithoutUpperCase",
@@ -352,7 +732,89 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "PasswordWithoutUpperCase",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"ulica1234\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:46:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 15:46:22\"\n}"
+								}
+							]
 						},
 						{
 							"name": "PasswordWithoutNumber",
@@ -395,50 +857,89 @@
 									]
 								}
 							},
-							"response": []
-						},
-						{
-							"name": "PasswordLessThan8Chars",
-							"event": [
+							"response": [
 								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Proper warning message\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.messages).to.eql([\r",
-											"        \"password format not valid\"\r",
-											"    ]);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Uli\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+									"name": "PasswordWithoutNumber",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulicaulica\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
 										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:46:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 15:46:55\"\n}"
 								}
-							},
-							"response": []
+							]
 						},
 						{
 							"name": "PasswordSpecialChar",
@@ -468,7 +969,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica_123\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica%123\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -482,10 +983,218 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "PasswordSpecialChar",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica%123\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:48:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 15:48:49\"\n}"
+								}
+							]
 						},
 						{
-							"name": "NameMultipleSpaces",
+							"name": "PasswordSpaces",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"password format not valid\"\r",
+											"    ]);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica 1 2 3\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "PasswordSpaces",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica 1 2 3\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:49:52 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 15:49:52\"\n}"
+								}
+							]
+						},
+						{
+							"name": "NameOnlyMultipleSpaces",
 							"event": [
 								{
 									"listen": "test",
@@ -511,7 +1220,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"cake@yahoo.com\",\r\n    \"password\":\"Ulica123\",\r\n    \"name\": \"    \",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"raw": "{\r\n    \"email\": \"cake@yahoo.com\",\r\n    \"password\":\"Ulica123\",\r\n    \"name\": \"    \",\r\n    \"surname\": \"   \",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -525,10 +1234,92 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "NameOnlyMultipleSpaces",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"cake@yahoo.com\",\r\n    \"password\":\"Ulica123\",\r\n    \"name\": \"    \",\r\n    \"surname\": \"   \",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:52:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\",\n        \"surname cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 15:52:50\"\n}"
+								}
+							]
 						},
 						{
-							"name": "AllParametersMultipleSpaces",
+							"name": "TrimmingTrailin&LeadingSpaces",
 							"event": [
 								{
 									"listen": "test",
@@ -547,7 +1338,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica123\",\r\n    \"name\": \"     \",\r\n    \"surname\": \"    \",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"    \"\r\n}",
+									"raw": "{\r\n    \"email\": \"useruser1@yahoo.com\",\r\n    \"password\": \"Ulica1234\",\r\n    \"name\": \"   Greg  \",\r\n    \"surname\": \"  Rex   \",\r\n    \"phoneNumber\": \"7414258963\",\r\n    \"address\": \"Street 54\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -561,15 +1352,96 @@
 									]
 								}
 							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "EmptyInputs",
-					"item": [
+							"response": [
+								{
+									"name": "TrimmingTrailin&LeadingSpaces",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"useruser1@yahoo.com\",\r\n    \"password\": \"Ulica1234\",\r\n    \"name\": \"   Greg  \",\r\n    \"surname\": \"  Rex   \",\r\n    \"phoneNumber\": \"7414258963\",\r\n    \"address\": \"Street 54\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 13:54:20 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"eaa757b0-ee5b-4425-be60-e57361e92cff\",\n    \"email\": \"useruser1@yahoo.com\",\n    \"name\": \"   Greg  \",\n    \"surname\": \"  Rex   \",\n    \"phoneNumber\": \"7414258963\",\n    \"address\": \"Street 54\"\n}"
+								}
+							]
+						},
 						{
-							"name": "RegisterUserEmptyInputs",
+							"name": "NullParameters",
 							"event": [
 								{
 									"listen": "test",
@@ -577,9 +1449,7 @@
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"\r",
-											""
+											"});"
 										],
 										"type": "text/javascript"
 									}
@@ -590,7 +1460,137 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\",\r\n  \"name\": \"\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
+									"raw": "{\r\n    \"email\": null,\r\n    \"password\": null,\r\n    \"name\": null,\r\n    \"surname\": null,\r\n    \"phoneNumber\": null,\r\n    \"address\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "NullParameters",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": null,\r\n    \"password\": null,\r\n    \"name\": null,\r\n    \"surname\": null,\r\n    \"phoneNumber\": null,\r\n    \"address\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 14:11:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\",\n        \"surname cannot be null or empty\",\n        \"phoneNumber cannot be null or empty\",\n        \"password cannot be null\",\n        \"address cannot be null or empty\",\n        \"email cannot be null\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:11:21\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "EmptyInputs",
+					"item": [
+						{
+							"name": "EmptyEmail",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"email format is not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"String55\",\r\n  \"name\": \"Fix\",\r\n  \"surname\": \"Fixing\",\r\n  \"phoneNumber\": \"789654456\",\r\n  \"address\": \"Street Test 1\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -676,7 +1676,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:28:03 GMT"
+											"value": "Thu, 09 Jun 2022 14:34:36 GMT"
 										},
 										{
 											"key": "Connection",
@@ -684,8 +1684,52 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:28:03\"\n}"
+									"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:34:36\"\n}"
+								}
+							]
+						},
+						{
+							"name": "EmptyPassword",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"password format not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"\",\r\n  \"name\": \"Fixy\",\r\n  \"surname\": \"Fixings\",\r\n  \"phoneNumber\": \"78965488456\",\r\n  \"address\": \"Street Test 2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
 								{
 									"name": "EmptyPassword",
 									"originalRequest": {
@@ -757,7 +1801,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:29:30 GMT"
+											"value": "Thu, 09 Jun 2022 14:35:06 GMT"
 										},
 										{
 											"key": "Connection",
@@ -765,8 +1809,52 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:29:30\"\n}"
+									"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:35:06\"\n}"
+								}
+							]
+						},
+						{
+							"name": "EmptyName",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"name cannot be null or empty\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"\",\r\n  \"surname\": \"Fixingss\",\r\n  \"phoneNumber\": \"789685488456\",\r\n  \"address\": \"Street Test 3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
 								{
 									"name": "EmptyName",
 									"originalRequest": {
@@ -838,7 +1926,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:30:24 GMT"
+											"value": "Thu, 09 Jun 2022 14:35:19 GMT"
 										},
 										{
 											"key": "Connection",
@@ -846,8 +1934,52 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:30:24\"\n}"
+									"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:35:19\"\n}"
+								}
+							]
+						},
+						{
+							"name": "EmptySurname",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"surname cannot be null or empty\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"7896854884586\",\r\n  \"address\": \"Street Test 4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
 								{
 									"name": "EmptySurname",
 									"originalRequest": {
@@ -919,7 +2051,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:31:14 GMT"
+											"value": "Thu, 09 Jun 2022 14:35:30 GMT"
 										},
 										{
 											"key": "Connection",
@@ -927,8 +2059,46 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"surname cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:31:14\"\n}"
+									"body": "{\n    \"messages\": [\n        \"surname cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:35:30\"\n}"
+								}
+							]
+						},
+						{
+							"name": "EmptyPhoneNumber",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fixy@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"Fix\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"Street Test 5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
 								{
 									"name": "EmptyPhoneNumber",
 									"originalRequest": {
@@ -1000,7 +2170,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:32:01 GMT"
+											"value": "Thu, 09 Jun 2022 14:35:39 GMT"
 										},
 										{
 											"key": "Connection",
@@ -1008,8 +2178,52 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"phoneNumber cannot be null or empty\",\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:32:01\"\n}"
+									"body": "{\n    \"messages\": [\n        \"phoneNumber cannot be null or empty\",\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:35:39\"\n}"
+								}
+							]
+						},
+						{
+							"name": "EmptyAddress",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"address cannot be null or empty\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"fixy@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"Fix\",\r\n  \"phoneNumber\": \"875421369\",\r\n  \"address\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
 								{
 									"name": "EmptyAddress",
 									"originalRequest": {
@@ -1081,7 +2295,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:32:36 GMT"
+											"value": "Thu, 09 Jun 2022 14:35:52 GMT"
 										},
 										{
 											"key": "Connection",
@@ -1089,8 +2303,45 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:32:36\"\n}"
+									"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:35:52\"\n}"
+								}
+							]
+						},
+						{
+							"name": "AllParametersEmpty",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\",\r\n  \"name\": \"\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
 								{
 									"name": "AllParametersEmpty",
 									"originalRequest": {
@@ -1162,7 +2413,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:42:25 GMT"
+											"value": "Thu, 09 Jun 2022 14:36:03 GMT"
 										},
 										{
 											"key": "Connection",
@@ -1170,297 +2421,9 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\",\n        \"email format is not valid\",\n        \"password format not valid\",\n        \"surname cannot be null or empty\",\n        \"phoneNumber cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:42:25\"\n}"
+									"body": "{\n    \"messages\": [\n        \"phoneNumber cannot be null or empty\",\n        \"address cannot be null or empty\",\n        \"password format not valid\",\n        \"surname cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"name cannot be null or empty\",\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:36:03\"\n}"
 								}
 							]
-						},
-						{
-							"name": "EmptyEmail",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Proper warning message\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.messages).to.eql([\r",
-											"        \"email format is not valid\"\r",
-											"    ]);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"String55\",\r\n  \"name\": \"Fix\",\r\n  \"surname\": \"Fixing\",\r\n  \"phoneNumber\": \"789654456\",\r\n  \"address\": \"Street Test 1\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "EmptyPassword",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Proper warning message\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.messages).to.eql([\r",
-											"        \"password format not valid\"\r",
-											"    ]);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"\",\r\n  \"name\": \"Fixy\",\r\n  \"surname\": \"Fixings\",\r\n  \"phoneNumber\": \"78965488456\",\r\n  \"address\": \"Street Test 2\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "EmptyName",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Proper warning message\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.messages).to.eql([\r",
-											"        \"name cannot be null or empty\"\r",
-											"    ]);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"\",\r\n  \"surname\": \"Fixingss\",\r\n  \"phoneNumber\": \"789685488456\",\r\n  \"address\": \"Street Test 3\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "EmptySurname",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Proper warning message\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.messages).to.eql([\r",
-											"        \"surname cannot be null or empty\"\r",
-											"    ]);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"fix@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"7896854884586\",\r\n  \"address\": \"Street Test 4\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "EmptyPhoneNumber",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"fixy@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"Fix\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"Street Test 5\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "EmptyAddress",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Proper warning message\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.messages).to.eql([\r",
-											"        \"address cannot be null or empty\"\r",
-											"    ]);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"fixy@yahoo.com\",\r\n  \"password\": \"Fixings987\",\r\n  \"name\": \"Fixes\",\r\n  \"surname\": \"Fix\",\r\n  \"phoneNumber\": \"875421369\",\r\n  \"address\": \"\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "AllParametersEmpty",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\",\r\n  \"name\": \"\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
-								}
-							},
-							"response": []
 						},
 						{
 							"name": "EmptyHeader",
@@ -1506,7 +2469,97 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "EmptyHeader",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"kkkk@yahoo.com\",\r\n  \"password\": \"String55\",\r\n  \"name\": \"Fix\",\r\n  \"surname\": \"Fixing\",\r\n  \"phoneNumber\": \"789654456\",\r\n  \"address\": \"Street Test 1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Unsupported Media Type",
+									"code": 415,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Accept",
+											"value": "application/json, application/*+json"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 14:36:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": 1654785417398,\n    \"status\": 415,\n    \"error\": \"Unsupported Media Type\",\n    \"path\": \"/users/register\"\n}"
+								}
+							]
 						}
 					]
 				},
@@ -1514,7 +2567,7 @@
 					"name": "StringLength",
 					"item": [
 						{
-							"name": "UserRegisterStringLength",
+							"name": "AllParametersJustAboveMaxLimit",
 							"event": [
 								{
 									"listen": "test",
@@ -1522,26 +2575,7 @@
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Response body contains message\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"messages\");\r",
 											"});"
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"//email maxLength: 254, minLength: 0\r",
-											"//password maxLength: 30, minLength:0\r",
-											"//name maxLength: 50, minLength: 0\r",
-											"//surname maxLength: 100, minLength: 0\r",
-											"//phoneNumber maxLength: 30, minLength: 0\r",
-											"//address maxLength: 254, minLength:0\r",
-											""
 										],
 										"type": "text/javascript"
 									}
@@ -1552,7 +2586,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\":\"fdhadfhafhhkafdhdfhjadkf@gmail.com\",\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgc\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"875412547854522452188965412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+									"raw": "{\r\n  \"email\":\"Jhfhjdfhjdghjds9iewioi457823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnn@gmail.com\",\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1568,7 +2602,7 @@
 							},
 							"response": [
 								{
-									"name": "AllParametarsJustAboveMaxLimit",
+									"name": "AllParametersJustAboveMaxLimit",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
@@ -1638,7 +2672,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:25:22 GMT"
+											"value": "Thu, 09 Jun 2022 14:38:06 GMT"
 										},
 										{
 											"key": "Connection",
@@ -1646,8 +2680,49 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"surname length cannot be over 100\",\n        \"email length cannot be over 254 characters\",\n        \"email format is not valid\",\n        \"phoneNumber length cannot be over 30\",\n        \"address length cannot be over 254\",\n        \"name length cannot be over 50\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-03 15:25:22\"\n}"
+									"body": "{\n    \"messages\": [\n        \"name length cannot be over 50\",\n        \"email format is not valid\",\n        \"address length cannot be over 254\",\n        \"email length cannot be over 254 characters\",\n        \"surname length cannot be over 100\",\n        \"phoneNumber length cannot be over 30\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:38:06\"\n}"
+								}
+							]
+						},
+						{
+							"name": "ExactLimitLength",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Body contains id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\":\"wfhadfhafhhkafdhdfhgadkf@gmail.com\",\r\n  \"password\": \"LgfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfssjfdhjvdjLhfsdtsdh34559ggcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"872312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
 								{
 									"name": "ExactLimitLength",
 									"originalRequest": {
@@ -1655,7 +2730,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\":\"fdhadfhafhhkafdhdfhjadkf@gmail.com\",\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgc\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"875412547854522452188965412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+											"raw": "{\r\n  \"email\":\"wfhadfhafhhkafdhdfhgadkf@gmail.com\",\r\n  \"password\": \"LgfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfssjfdhjvdjLhfsdtsdh34559ggcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"872312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1719,7 +2794,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 03 Jun 2022 13:44:43 GMT"
+											"value": "Thu, 09 Jun 2022 14:39:09 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -1731,48 +2806,12 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"id\": \"db614ec6-4fd0-4dab-8e97-e3ec1e4e7186\",\n    \"email\": \"fdhadfhafhhkafdhdfhjadkf@gmail.com\",\n    \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdj\",\n    \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\n    \"phoneNumber\": \"875412547854522452188965412322\",\n    \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\n}"
+									"body": "{\n    \"id\": \"b6e646b8-7937-4696-8538-ca59f1f54294\",\n    \"email\": \"wfhadfhafhhkafdhdfhgadkf@gmail.com\",\n    \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\n    \"surname\": \"LkfssjfdhjvdjLhfsdtsdh34559ggcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\n    \"phoneNumber\": \"872312547854522452188935412322\",\n    \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\n}"
 								}
 							]
 						},
 						{
-							"name": "AllParametersJustAboveMaxLimit",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\":\"Jhfhjdfhjdghjds9iewioi457823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnn@gmail.com\",\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "ExactLimitLength",
+							"name": "AllParametersTheMinLimit",
 							"event": [
 								{
 									"listen": "test",
@@ -1795,7 +2834,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\":\"wdhadfhafhhkafdhdfhgadkf@gmail.com\",\r\n  \"password\": \"LwfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinawkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfwsjfdhjvdjLhfsdtsdh34559ggcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"875312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfs9iewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+									"raw": "{\r\n  \"email\":\"s@gmail.com\",\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1809,7 +2848,218 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "AllParametersTheMinLimit",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\":\"s@gmail.com\",\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 14:40:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"92c9b662-16f1-40eb-b67f-49b818f1b132\",\n    \"email\": \"s@gmail.com\",\n    \"name\": \"T\",\n    \"surname\": \"L\",\n    \"phoneNumber\": \"2\",\n    \"address\": \"g\"\n}"
+								}
+							]
+						},
+						{
+							"name": "PasswordLessThan8Chars",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Proper warning message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.messages).to.eql([\r",
+											"        \"password format not valid\"\r",
+											"    ]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica12\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "PasswordLessThan8Chars",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"useruser@yahoo.com\",\r\n    \"password\": \"Ulica12\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_POST_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_POST_USER}}"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 14:40:51 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-09 16:40:51\"\n}"
+								}
+							]
 						}
 					]
 				},
@@ -1817,7 +3067,7 @@
 					"name": "Re-registration",
 					"item": [
 						{
-							"name": "User can not register twice with same email address",
+							"name": "RegisterTwiceWithSameEmail",
 							"event": [
 								{
 									"listen": "test",
@@ -1843,7 +3093,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"Eunice.Wiegand@hotmail.com\",\r\n  \"password\": \"Abcdefg123\",\r\n  \"name\": \"Tea\",\r\n  \"surname\": \"Taylor\",\r\n  \"phoneNumber\": \"87541296\",\r\n  \"address\": \"Street19\"\r\n}",
+									"raw": "{\r\n  \"email\": \"samemailtwice@gmail.com\",\r\n  \"password\": \"Twice1233\",\r\n  \"name\": \"Teag\",\r\n  \"surname\": \"Taylors\",\r\n  \"phoneNumber\": \"875441296\",\r\n  \"address\": \"Street199\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1859,13 +3109,13 @@
 							},
 							"response": [
 								{
-									"name": "User can not register twice with same email address",
+									"name": "RegisterTwiceWithSameEmail",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"Eunice.Wiegand@hotmail.com\",\r\n  \"password\": \"Abcdefg123\",\r\n  \"name\": \"Tea\",\r\n  \"surname\": \"Taylor\",\r\n  \"phoneNumber\": \"87541296\",\r\n  \"address\": \"Street19\"\r\n}",
+											"raw": "{\r\n  \"email\": \"samemailtwice@gmail.com\",\r\n  \"password\": \"Twice1233\",\r\n  \"name\": \"Teag\",\r\n  \"surname\": \"Taylors\",\r\n  \"phoneNumber\": \"875441296\",\r\n  \"address\": \"Street199\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1929,7 +3179,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 05 Jun 2022 12:44:00 GMT"
+											"value": "Thu, 09 Jun 2022 14:43:28 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -1941,7 +3191,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"messages\": [\n        \"This email is already in use\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-06-05 14:44:00\"\n}"
+									"body": "{\n    \"messages\": [\n        \"This email is already in use\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-06-09 16:43:28\"\n}"
 								}
 							]
 						}
@@ -1950,39 +3200,1210 @@
 			]
 		},
 		{
-			"name": "GetUser",
+			"name": "UserLogin",
 			"item": [
 				{
-					"name": "GetUserById",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{BASE_URL}}{{ENDPOINT_GET_USER}}",
-							"host": [
-								"{{BASE_URL}}{{ENDPOINT_GET_USER}}"
+					"name": "ValidCredentialsVerifiedAccount",
+					"item": [
+						{
+							"name": "VerifiedUserLogin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    pm.environment.set(\"SkyNestAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{SkyNestAuthToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Test1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "VerifiedUserLogin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Test1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/users/login",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Authorization",
+											"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpbmV6YWhhckB5YWhvby5jb20iLCJyb2xlcyI6WyJyb2xlX3dvcmtlciJdLCJleHAiOjE2NTQ3OTI2NjV9.Q8mT9V5sAba_I6ftT-p1Kk2f02WW2wxA0LLSs7UXGr43Wh52EUEq0ODg3mDr0pJwgouYT55g0Mku9K65LZKBEw"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 16:07:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
 							]
 						}
-					},
-					"response": []
+					]
+				},
+				{
+					"name": "ValidCredentialsNotVerifiedAccount",
+					"item": [
+						{
+							"name": "NotVerifiedUserLogin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"saroni5428@game4hr.com\",\r\n  \"password\": \"Twice1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "VerifiedUserLogin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"saroni5428@game4hr.com\",\r\n  \"password\": \"Twice1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}/users/login",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"users",
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 14:54:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"User is inactive: deleted, disabled, or not verified\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-06-09 16:54:05\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "InvalidCredentials(VerifiedAccount)",
+					"item": [
+						{
+							"name": "ValidEmailInvalidPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"saroni5428@game4hr.com\",\r\n  \"password\": \"fdsagdfgdf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ValidEmailInvalidPassword",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"saroni5428@game4hr.com\",\r\n  \"password\": \"fdsagdfgdf\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											]
+										}
+									},
+									"status": "Expectation Failed",
+									"code": 417,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 15:06:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"The provided password doesn't match the username\"\n    ],\n    \"status\": 417,\n    \"timestamp\": \"2022-06-09 17:06:26\"\n}"
+								}
+							]
+						},
+						{
+							"name": "ValidEmailBlankPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"saroni5428@game4hr.com\",\r\n  \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "ValidEmailBlankPassword",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"saroni5428@game4hr.com\",\r\n  \"password\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											]
+										}
+									},
+									"status": "Expectation Failed",
+									"code": 417,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 15:07:14 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"The provided password doesn't match the username\"\n    ],\n    \"status\": 417,\n    \"timestamp\": \"2022-06-09 17:07:14\"\n}"
+								}
+							]
+						},
+						{
+							"name": "InvalidEmailValidPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"XXXsaroni5428@game4hr.com\",\r\n  \"password\": \"Twice1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "InvalidEmailValidPassword",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"XXXsaroni5428@game4hr.com\",\r\n  \"password\": \"Twice1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 15:08:51 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-09 17:08:51\"\n}"
+								}
+							]
+						},
+						{
+							"name": "InvalidEmailInvalidPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"XXXsaroni5428@game4hr.com\",\r\n  \"password\": \"fdsfds\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "InvalidEmailValidPassword",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"XXXsaroni5428@game4hr.com\",\r\n  \"password\": \"fdsfds\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 15:10:19 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-09 17:10:19\"\n}"
+								}
+							]
+						},
+						{
+							"name": "InvalidEmailBlankPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"saroni5428TTTTT@game4hr.com\",\r\n  \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "InvalidEmailBlankPassword",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"saroni5428TTTTT@game4hr.com\",\r\n  \"password\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 15:12:12 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-09 17:12:12\"\n}"
+								}
+							]
+						},
+						{
+							"name": "BlankEmailValidPass",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"Twice1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "BlankEmailValidPass",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"Twice1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 15:13:10 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-09 17:13:10\"\n}"
+								}
+							]
+						},
+						{
+							"name": "BlankEmailInvalidPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"gsdgdcxsf4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "BlankEmailInvalidPassword",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"gsdgdcxsf4\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 15:14:14 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-09 17:14:14\"\n}"
+								}
+							]
+						},
+						{
+							"name": "BlankEmailBlankPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "BlankEmailBlankPassword",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"\",\r\n  \"password\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 15:15:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-09 17:15:09\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
 		{
-			"name": "DeleteUser",
-			"item": []
-		},
-		{
-			"name": "UserLogin",
+			"name": "GetUserById",
 			"item": [
 				{
-					"name": "RegisteredUserLogin",
+					"name": "GetUserById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
-						"header": [],
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{SkyNestAuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"email\": \"flower123@yahoo.com\",\r\n  \"password\": \"Flower123\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1990,17 +4411,635 @@
 							}
 						},
 						"url": {
-							"raw": "{{BASE_URL}}/users/login",
+							"raw": "{{BASE_URL}}/users/{{validUserId}}",
 							"host": [
 								"{{BASE_URL}}"
 							],
 							"path": [
 								"users",
-								"login"
+								"{{validUserId}}"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "GetUserById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/{{validUserId}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"{{validUserId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jun 2022 16:08:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"655409a4-5889-462d-8224-084fbed451dc\",\n    \"email\": \"christinezahar@yahoo.com\",\n    \"name\": \"Test\",\n    \"surname\": \"Test\",\n    \"phoneNumber\": \"320531236654\",\n    \"address\": \"City 47\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetNotExistingUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{SkyNestAuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/f723ab77-ca88-41bb-9d57-5ca980b219cf",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"f723ab77-ca88-41bb-9d57-5ca980b219cf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetNotExistingUser",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/f723ab77-ca88-41bb-9d57-5ca980b219cf",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"f723ab77-ca88-41bb-9d57-5ca980b219cf"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jun 2022 15:35:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-09 17:35:47\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GetAllUsers",
+			"item": [
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{SkyNestAuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetAllUsers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jun 2022 16:03:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"0796764e-1cb8-45a5-9747-384f2ee06c43\",\n        \"email\": \"stanmemailtwice@gmail.com\",\n        \"name\": \"Maria\",\n        \"surname\": \"Laura\",\n        \"phoneNumber\": \"051236654\",\n        \"address\": \"City 7\"\n    },\n    {\n        \"id\": \"0eaf9d80-ea73-4273-9c70-96bc087101a8\",\n        \"email\": \"samemailtwice@gmail.com\",\n        \"name\": \"Maria\",\n        \"surname\": \"Laura\",\n        \"phoneNumber\": \"0123654\",\n        \"address\": \"City 7\"\n    },\n    {\n        \"id\": \"b4dd13db-09d0-4c80-aebc-f18ee74ad441\",\n        \"email\": \"christinezahar@yahoo.com\",\n        \"name\": \"For\",\n        \"surname\": \"Lol\",\n        \"phoneNumber\": \"34872634853\",\n        \"address\": \"Test 3344\"\n    },\n    {\n        \"id\": \"dc25343f-90a9-47cb-b100-3cf762a49be2\",\n        \"email\": \"stamemailtwice@gmail.com\",\n        \"name\": \"Maria\",\n        \"surname\": \"Laura\",\n        \"phoneNumber\": \"05123654\",\n        \"address\": \"City 7\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{SkyNestAuthToken}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "DeleteUserById",
+			"item": [
+				{
+					"name": "DeleteUserById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{SkyNestAuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/{{validUserId}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"{{validUserId}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteUserById",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/{{validUserId}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"{{validUserId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jun 2022 16:02:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "User was successfully deleted from database"
+						}
+					]
+				},
+				{
+					"name": "DeleteNotExistingUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{SkyNestAuthToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/f723ab88-ca88-41bb-9d57-5ca980b219cf",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"f723ab88-ca88-41bb-9d57-5ca980b219cf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DeleteNotExistingUser",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/f723ab88-ca88-41bb-9d57-5ca980b219cf",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"f723ab88-ca88-41bb-9d57-5ca980b219cf"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Jun 2022 15:33:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"messages\": [\n        \"User with id f723ab88-ca88-41bb-9d57-5ca980b219cf doesn't exist\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-09 17:33:56\"\n}"
+						}
+					]
 				}
 			]
 		}
