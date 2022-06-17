@@ -4,11 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class BaseTransformer {
-    private static final ObjectMapper objectMapper = new ObjectMapper();
-
-    public static String toJson(Object payload) throws JsonProcessingException {
-        //Converting object to json, exported in Base Class for multiple usage
-        String jsonPayload = objectMapper.writeValueAsString(payload);
-        return jsonPayload;
+    private static final ObjectMapper OBJECT_MAPPER= new ObjectMapper();
+    public static String objectToJson(Object payload) throws JsonProcessingException {
+        return OBJECT_MAPPER.writeValueAsString(payload);
     }
 }
