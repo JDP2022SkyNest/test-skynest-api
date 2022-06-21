@@ -16,5 +16,6 @@ public final class RegistrationResponse {
     private String surname;
     private String phoneNumber;
     private String address;
+    private String roleName;
 
 }
