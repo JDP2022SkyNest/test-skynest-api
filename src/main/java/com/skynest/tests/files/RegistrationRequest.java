@@ -21,7 +21,12 @@ public class RegistrationRequest {
     private String address;
 
     public static RegistrationRequest generateValidRegistrationRequest() {
-        String randomPhoneNumber = faker.phoneNumber().phoneNumber().replaceAll("-", "").replaceAll("\\.", "");
+        String randomPhoneNumber = faker.phoneNumber().phoneNumber()
+                .replaceAll("-", "")
+                .replaceAll("\\.", "")
+                .replaceAll("\\(", "")
+                .replaceAll("\\)", "").
+                replaceAll(" ", "");
         return new RegistrationRequest(RandomGenerator.generateRandomEmail(), "Example123451",
                 faker.name().firstName(),
                 faker.name().lastName(),

@@ -1,5 +1,3 @@
-package com.skynest.tests.tests;
-
 import com.skynest.tests.files.ApiConstants;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeClass;

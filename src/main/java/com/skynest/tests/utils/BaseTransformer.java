@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class BaseTransformer {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-
     public static String objectToJson(Object payload) throws JsonProcessingException {
         return OBJECT_MAPPER.writeValueAsString(payload);
     }

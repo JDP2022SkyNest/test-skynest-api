@@ -1,5 +1,3 @@
-package com.skynest.tests.tests;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.skynest.tests.files.ApiConstants;
 import com.skynest.tests.files.RegistrationRequest;
@@ -14,15 +12,12 @@ import static io.restassured.RestAssured.given;
 
 public class RegistrationTest extends BaseTest {
     @Test(dataProvider = "UserData")
-    void registering_new_valid_user_should_return_specified_response(
-            RegistrationRequest registrationPayload) throws JsonProcessingException {
+    void registering_new_valid_user_should_return_specified_response
+            (RegistrationRequest registrationPayload) throws JsonProcessingException {
 
-        Response response =
-                given()
-                        .log().all().header("Content-Type", "application/json")
-                        .body(BaseTransformer.objectToJson(registrationPayload))
-                        .when()
-                        .post(ApiConstants.REGISTER_ENDPOINT);
+        Response response = given().log().all().header("Content-Type", "application/json")
+                .body(BaseTransformer.objectToJson(registrationPayload))
+                .when().post(ApiConstants.REGISTER_ENDPOINT);
 
         RegistrationResponse registrationResponse = response.as(RegistrationResponse.class);
 
@@ -35,10 +30,10 @@ public class RegistrationTest extends BaseTest {
         Assert.assertEquals(registrationResponse.getAddress(), registrationPayload.getAddress());
     }
 
-
     @DataProvider(name = "UserData")
     public Object[][] getUserData() {
         return new Object[][]{
+                new Object[]{RegistrationRequest.generateValidRegistrationRequest()},
                 new Object[]{RegistrationRequest.generateValidRegistrationRequest()}
         };
     }
