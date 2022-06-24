@@ -1,4 +1,4 @@
-package com.skynest.tests.utils;
+package com.skynest.utils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

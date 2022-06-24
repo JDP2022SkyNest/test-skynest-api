@@ -1,10 +1,10 @@
-package com.skynest.tests.files;
+package com.skynest.files;
 
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Setter
 @NoArgsConstructor
+@Data
 public class LoginRequest {
     private String email;
     private String password;

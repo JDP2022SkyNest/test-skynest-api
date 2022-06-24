@@ -1,7 +1,7 @@
-package com.skynest.tests.files;
+package com.skynest.files;
 
 import com.github.javafaker.Faker;
-import com.skynest.tests.utils.RandomGenerator;
+import com.skynest.utils.RandomGenerator;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

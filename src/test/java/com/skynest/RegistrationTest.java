@@ -1,8 +1,11 @@
+package com.skynest;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.skynest.tests.files.ApiConstants;
-import com.skynest.tests.files.RegistrationRequest;
-import com.skynest.tests.files.RegistrationResponse;
-import com.skynest.tests.utils.BaseTransformer;
+import com.skynest.BaseTest;
+import com.skynest.files.ApiConstants;
+import com.skynest.files.RegistrationRequest;
+import com.skynest.files.RegistrationResponse;
+import com.skynest.utils.BaseTransformer;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;

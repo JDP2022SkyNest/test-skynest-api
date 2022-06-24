@@ -1,4 +1,4 @@
-package com.skynest.tests.clients;
+package com.skynest.clients;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,25 +23,22 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 public class BaseClient {
-
-
     private URI baseUri = null;
-
     public static void setAuthToken(String authToken) {
         BaseClient.authToken = authToken;
     }
-
     private static String authToken;
     private String initialPath = "";
     private RestAssuredConfig restAssuredConfig;
     private final ResponseParserRegistrar responseParserRegistrar = new ResponseParserRegistrar();
-
-
     public BaseClient(String baseUri) throws URISyntaxException {
         this.baseUri = new URI(baseUri);
-        restAssuredConfig = RestAssuredConfig.config().objectMapperConfig(new ObjectMapperConfig().jackson2ObjectMapperFactory((aClass, s) -> new ObjectMapper().configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false).configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false).configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false))).logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails(LogDetail.ALL));
+        restAssuredConfig = RestAssuredConfig.config().objectMapperConfig(
+                        new ObjectMapperConfig().jackson2ObjectMapperFactory((aClass, s) -> new ObjectMapper()
+                                .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
+                                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)))
+                .logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails(LogDetail.ALL));
     }
-
     public RequestSpecification requestMaker() {
         LogRepository logRepository = new LogRepository();
         RequestSpecification requestSpec = new TestSpecificationImpl(
