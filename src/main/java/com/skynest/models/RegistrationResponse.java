@@ -1,4 +1,4 @@
-package com.skynest.files;
+package com.skynest.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

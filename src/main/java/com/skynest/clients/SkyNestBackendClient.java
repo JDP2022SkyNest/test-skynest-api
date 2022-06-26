@@ -1,20 +1,22 @@
 package com.skynest.clients;
 
-import com.skynest.files.LoginRequest;
-import com.skynest.files.LogoutRequest;
+import com.skynest.models.ApiConstants;
+import com.skynest.models.LoginRequest;
 import io.restassured.response.Response;
 
 import java.net.URISyntaxException;
 
 public class SkyNestBackendClient extends BaseClient {
     public SkyNestBackendClient() throws URISyntaxException {
-        super("http://localhost:8080");
+        //super("http://localhost:8080");
+        super(ApiConstants.BASE_URL);
     }
+
     public Response login(LoginRequest loginRequest) {
         Response response = requestMaker()
                 .body(loginRequest)
                 .post("/public/login");
-        BaseClient.setAuthToken(response.getHeader("Authorization"));
+        setAuthToken(response.getHeader("Authorization"));
         return response;
     }
 
@@ -24,12 +26,10 @@ public class SkyNestBackendClient extends BaseClient {
         return response;
     }
 
-    public Response logout(LogoutRequest logoutRequest) {
+    public Response logout() {
         Response response = requestMaker()
-                .header(logoutRequest)
                 .post("/auth/logout");
         return response;
-
     }
 
 }

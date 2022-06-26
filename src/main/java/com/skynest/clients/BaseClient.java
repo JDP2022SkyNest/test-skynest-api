@@ -23,14 +23,12 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 public class BaseClient {
-    private URI baseUri = null;
-    public static void setAuthToken(String authToken) {
-        BaseClient.authToken = authToken;
-    }
-    private static String authToken;
+    private final ResponseParserRegistrar responseParserRegistrar = new ResponseParserRegistrar();
+    private URI baseUri;
+    private String authToken;
+
     private String initialPath = "";
     private RestAssuredConfig restAssuredConfig;
-    private final ResponseParserRegistrar responseParserRegistrar = new ResponseParserRegistrar();
     public BaseClient(String baseUri) throws URISyntaxException {
         this.baseUri = new URI(baseUri);
         restAssuredConfig = RestAssuredConfig.config().objectMapperConfig(
@@ -39,6 +37,11 @@ public class BaseClient {
                                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)))
                 .logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails(LogDetail.ALL));
     }
+
+    public void setAuthToken(String authToken) {
+        this.authToken = authToken;
+    }
+
     public RequestSpecification requestMaker() {
         LogRepository logRepository = new LogRepository();
         RequestSpecification requestSpec = new TestSpecificationImpl(
@@ -63,11 +66,7 @@ public class BaseClient {
                         logRepository))
                 .getRequestSpecification();
 
-//        setLoggingFilters(requestSpec);
-//        requestSpec.queryParam("_csrf", getCookies().get("XSRF-TOKEN"));
-//        requestSpec.cookies(getCookies());
-
-        if (BaseClient.authToken != null) {
+        if (authToken != null) {
             requestSpec.header("Authorization", authToken);
         }
         requestSpec.contentType(ContentType.JSON);
