@@ -1,7 +1,10 @@
 package com.skynest.models;
 
 import com.skynest.utils.RandomGenerator;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor

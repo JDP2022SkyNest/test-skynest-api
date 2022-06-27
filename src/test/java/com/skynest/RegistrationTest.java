@@ -10,13 +10,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.net.URISyntaxException;
-
 import static io.restassured.RestAssured.given;
 
 public class RegistrationTest extends BaseTest {
-    public RegistrationTest() throws URISyntaxException {
-    }
 
     @Test(dataProvider = "UserData")
     void registering_new_valid_user_should_return_specified_response

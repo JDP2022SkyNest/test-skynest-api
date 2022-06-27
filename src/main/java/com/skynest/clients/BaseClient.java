@@ -3,7 +3,6 @@ package com.skynest.clients;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.skynest.models.ApiConstants;
 import io.restassured.RestAssured;
 import io.restassured.config.LogConfig;
 import io.restassured.config.ObjectMapperConfig;
@@ -28,8 +27,8 @@ import static org.apache.http.HttpHeaders.AUTHORIZATION;
 
 public class BaseClient {
     private final URI baseUri;
-    private RequestSpecification requestSpec;
     private final RestAssuredConfig restAssuredConfig;
+    private RequestSpecification requestSpec;
 
     public BaseClient(String baseUrl) throws URISyntaxException {
         this.baseUri = new URI(baseUrl);
