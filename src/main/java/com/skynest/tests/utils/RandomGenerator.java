@@ -4,9 +4,8 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public final class BaseHelper {
+public final class RandomGenerator {
     public static String generateRandomEmail() {
-        String myEmailAddress = "myemail" + System.nanoTime() + "@gmail.com";
-        return myEmailAddress;
+        return "myemail" + System.nanoTime() + "@gmail.com";
     }
 }
