@@ -1,15 +1,12 @@
 package com.skynest.models;
 
 import com.skynest.utils.RandomGenerator;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Setter
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class RegistrationRequest {
     private String email;
     private String password;
@@ -19,13 +16,13 @@ public class RegistrationRequest {
     private String address;
 
     public static RegistrationRequest generateValidRegistrationRequest() {
-
-        return new RegistrationRequest(RandomGenerator.generateRandomEmail(),
-                "Example123451",
-                RandomGenerator.generateRandomFirstName(),
-                RandomGenerator.generateRandomLastName(),
-                RandomGenerator.generateRandomPhoneNumber(),
-                RandomGenerator.generateRandomAddress());
+        return RegistrationRequest.builder()
+                .email(RandomGenerator.generateRandomEmail())
+                .password("Example123451")
+                .name(RandomGenerator.generateRandomFirstName())
+                .surname(RandomGenerator.generateRandomLastName())
+                .phoneNumber(RandomGenerator.generateRandomPhoneNumber())
+                .address(RandomGenerator.generateRandomAddress())
+                .build();
     }
 }
-

@@ -6,9 +6,10 @@ import io.restassured.response.Response;
 
 import java.net.URISyntaxException;
 
+import static org.apache.http.HttpHeaders.AUTHORIZATION;
+
 public class SkyNestBackendClient extends BaseClient {
     public SkyNestBackendClient() throws URISyntaxException {
-        //super("http://localhost:8080");
         super(ApiConstants.BASE_URL);
     }
 
@@ -16,20 +17,17 @@ public class SkyNestBackendClient extends BaseClient {
         Response response = requestMaker()
                 .body(loginRequest)
                 .post("/public/login");
-        setAuthToken(response.getHeader("Authorization"));
+        setAuthTokenIfExisting(response.getHeader(AUTHORIZATION));
         return response;
     }
 
     public Response getAllUsers() {
-        Response response = requestMaker()
+        return requestMaker()
                 .get("/users");
-        return response;
     }
 
     public Response logout() {
-        Response response = requestMaker()
+        return requestMaker()
                 .post("/auth/logout");
-        return response;
     }
-
 }
