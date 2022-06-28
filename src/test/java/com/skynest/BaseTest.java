@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeSuite;
 import java.net.URISyntaxException;
 
 public class BaseTest {
-    //Protected access modifier because it's used in all child classes
     protected SkyNestBackendClient skyNestBackendClient;
 
     @BeforeSuite

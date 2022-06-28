@@ -6,7 +6,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public final class BaseTransformer {
+public final class JsonTransformer {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     public static String objectToJson(Object payload) throws JsonProcessingException {

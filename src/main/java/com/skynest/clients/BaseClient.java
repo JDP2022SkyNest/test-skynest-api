@@ -25,35 +25,38 @@ import java.util.ArrayList;
 
 import static org.apache.http.HttpHeaders.AUTHORIZATION;
 
-public class BaseClient {
+class BaseClient {
     private final URI baseUri;
+    private static String authToken;
     private final RestAssuredConfig restAssuredConfig;
     private RequestSpecification requestSpec;
+    private final LogRepository logRepository = new LogRepository();
 
-    public BaseClient(String baseUrl) throws URISyntaxException {
-        this.baseUri = new URI(baseUrl);
+    protected BaseClient(String baseUrl) throws URISyntaxException {
+        baseUri = new URI(baseUrl);
+
         ObjectMapper objectMapper = new ObjectMapper()
                 .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
         ObjectMapperConfig objectMapperConfig = new ObjectMapperConfig()
                 .jackson2ObjectMapperFactory((aClass, s) -> objectMapper);
+
         LogConfig logConfig = LogConfig.logConfig()
                 .enableLoggingOfRequestAndResponseIfValidationFails(LogDetail.ALL);
+
         restAssuredConfig = RestAssuredConfig.config()
                 .objectMapperConfig(objectMapperConfig)
                 .logConfig(logConfig);
     }
 
-    public void setAuthTokenIfExisting(String authToken) {
-        if (authToken != null) requestSpec.header(AUTHORIZATION, authToken);
+    protected static void setAuthToken(String authToken) {
+        BaseClient.authToken = authToken;
     }
 
-    public RequestSpecification requestMaker() {
-        ResponseParserRegistrar responseParserRegistrar = new ResponseParserRegistrar();
-        LogRepository logRepository = new LogRepository();
-
+    private RequestSpecification createDefaultRequestSpec() {
         String initialPath = "";
-        RequestSpecification defaultReqSpec = new RequestSpecificationImpl(
+        return new RequestSpecificationImpl(
                 baseUri.toString(),
                 baseUri.getPort(),
                 initialPath,
@@ -65,17 +68,28 @@ public class BaseClient {
                 logRepository,
                 null,
                 true);
+    }
 
-        ResponseSpecification defaultResSpec = new ResponseSpecificationImpl(
+    private ResponseSpecification createDefaultResponseSpec() {
+        ResponseParserRegistrar responseParserRegistrar = new ResponseParserRegistrar();
+        return new ResponseSpecificationImpl(
                 RestAssured.DEFAULT_BODY_ROOT_PATH,
                 null,
                 responseParserRegistrar,
                 restAssuredConfig,
                 logRepository);
+    }
 
-        TestSpecificationImpl testSpecification = new TestSpecificationImpl(defaultReqSpec, defaultResSpec);
+    private TestSpecificationImpl createDefaultTestSpec() {
+        return new TestSpecificationImpl(createDefaultRequestSpec(), createDefaultResponseSpec());
+    }
 
-        requestSpec = testSpecification.getRequestSpecification()
+    protected RequestSpecification requestMaker() {
+        if (BaseClient.authToken != null) {
+            requestSpec.header(AUTHORIZATION, authToken);
+        }
+
+        requestSpec = createDefaultTestSpec().getRequestSpecification()
                 .contentType(ContentType.JSON)
                 .filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
 
