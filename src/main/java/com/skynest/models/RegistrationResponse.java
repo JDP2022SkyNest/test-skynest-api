@@ -1,11 +1,9 @@
-package com.skynest.tests.files;
+package com.skynest.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,5 +15,6 @@ public class RegistrationResponse {
     private String phoneNumber;
     private String address;
     private String roleName;
-
+    private boolean verified;
+    private boolean enabled;
 }
