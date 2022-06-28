@@ -17,7 +17,7 @@ public class SkyNestBackendClient extends BaseClient {
         Response response = requestMaker()
                 .body(loginRequest)
                 .post("/public/login");
-        setAuthTokenIfExisting(response.getHeader(AUTHORIZATION));
+        setAuthToken(response.getHeader(AUTHORIZATION));
         return response;
     }
 

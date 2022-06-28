@@ -4,13 +4,15 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.skynest.models.ApiConstants;
 import com.skynest.models.RegistrationRequest;
 import com.skynest.models.RegistrationResponse;
-import com.skynest.utils.BaseTransformer;
+import com.skynest.utils.JsonTransformer;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpHeaders.CONTENT_TYPE;
+import static org.apache.http.entity.ContentType.APPLICATION_JSON;
 
 public class RegistrationTest extends BaseTest {
 
@@ -18,8 +20,8 @@ public class RegistrationTest extends BaseTest {
     void registering_new_valid_user_should_return_specified_response
             (RegistrationRequest registrationPayload) throws JsonProcessingException {
 
-        Response response = given().log().all().header("Content-Type", "application/json")
-                .body(BaseTransformer.objectToJson(registrationPayload))
+        Response response = given().log().all().header(CONTENT_TYPE, APPLICATION_JSON)
+                .body(JsonTransformer.objectToJson(registrationPayload))
                 .when().post(ApiConstants.REGISTER_ENDPOINT);
 
         RegistrationResponse registrationResponse = response.as(RegistrationResponse.class);
