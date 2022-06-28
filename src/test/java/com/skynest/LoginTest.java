@@ -9,6 +9,18 @@ import static org.apache.http.HttpStatus.*;
 
 public class LoginTest extends BaseTest {
 
+    @DataProvider(name = "invalidCredentialCombinations")
+    public static Object[][] invalidCredentials() {
+        return new Object[][]{
+                {"invalidemail@yahoo.com", "System123"},
+                {"invalidemail@yahoo.com", "invalidpass"},
+                {"invalidemail@yahoo.com", ""},
+                {"", "System123"},
+                {"", "invalidpass"},
+                {"", ""}
+        };
+    }
+
     @Test
     void verified_user_should_be_successfully_logged_in() {
         LoginRequest body = new LoginRequest("yagaj78380@jrvps.com", "System123");
@@ -52,17 +64,5 @@ public class LoginTest extends BaseTest {
             response = skyNestBackendClient.login(body);
         }
         response.then().statusCode(429);
-    }
-
-    @DataProvider(name = "invalidCredentialCombinations")
-    public static Object[][] invalidCredentials() {
-        return new Object[][] {
-                {"invalidemail@yahoo.com", "System123"},
-                {"invalidemail@yahoo.com", "invalidpass"},
-                {"invalidemail@yahoo.com", ""},
-                {"", "System123"},
-                {"", "invalidpass"},
-                {"", ""}
-        };
     }
 }

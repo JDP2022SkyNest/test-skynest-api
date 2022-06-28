@@ -27,5 +27,6 @@ public class RegistrationRequest {
                 .phoneNumber(RandomGenerator.generateRandomPhoneNumber())
                 .address(RandomGenerator.generateRandomAddress())
                 .build();
+
     }
 }

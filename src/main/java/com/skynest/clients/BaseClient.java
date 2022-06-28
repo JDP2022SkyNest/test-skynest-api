@@ -27,10 +27,10 @@ import static org.apache.http.HttpHeaders.AUTHORIZATION;
 
 class BaseClient {
     private final URI baseUri;
-    private static String authToken;
     private final RestAssuredConfig restAssuredConfig;
-    private RequestSpecification requestSpec;
     private final LogRepository logRepository = new LogRepository();
+    private String authToken;
+    private RequestSpecification requestSpec;
 
     protected BaseClient(String baseUrl) throws URISyntaxException {
         baseUri = new URI(baseUrl);
@@ -50,8 +50,8 @@ class BaseClient {
                 .logConfig(logConfig);
     }
 
-    protected static void setAuthToken(String authToken) {
-        BaseClient.authToken = authToken;
+    protected void setAuthToken(String authToken) {
+        this.authToken = authToken;
     }
 
     private RequestSpecification createDefaultRequestSpec() {
@@ -85,13 +85,14 @@ class BaseClient {
     }
 
     protected RequestSpecification requestMaker() {
-        if (BaseClient.authToken != null) {
-            requestSpec.header(AUTHORIZATION, authToken);
-        }
 
         requestSpec = createDefaultTestSpec().getRequestSpecification()
                 .contentType(ContentType.JSON)
                 .filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
+
+        if (authToken != null) {
+            requestSpec.header(AUTHORIZATION, authToken);
+        }
 
         return requestSpec;
     }

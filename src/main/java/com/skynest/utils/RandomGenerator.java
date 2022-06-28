@@ -15,9 +15,9 @@ public final class RandomGenerator {
     public static String generateRandomPhoneNumber() {
         return FAKER.phoneNumber().phoneNumber()
                 .replace("-", "")
-                .replace("\\.", "")
-                .replace("\\(", "")
-                .replace("\\)", "").
+                .replace(".", "")
+                .replace("(", "")
+                .replace(")", "").
                 replace(" ", "");
     }
 
