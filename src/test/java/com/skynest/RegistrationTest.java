@@ -13,24 +13,25 @@ import static org.apache.http.HttpStatus.SC_OK;
 public class RegistrationTest extends BaseTest {
 
     @Test(dataProvider = "UserData")
-    void registering_new_valid_user_should_return_specified_response(RegistrationRequest registrationPayload) throws JsonProcessingException {
-        
-        Response response = skyNestBackendClient.register(registrationPayload);
+    void registering_new_valid_user_should_return_specified_response(RegistrationRequest registrationRequest) throws JsonProcessingException {
+
+        Response response = skyNestBackendClient.register(registrationRequest);
         response.then().statusCode(SC_OK);
 
         RegistrationResponse registrationResponse = response.as(RegistrationResponse.class);
 
         Assert.assertNotNull(registrationResponse.getId());
 
-        Assert.assertEquals(registrationResponse.getName(), registrationPayload.getName());
-        Assert.assertEquals(registrationResponse.getSurname(), registrationPayload.getSurname());
-        Assert.assertEquals(registrationResponse.getEmail(), registrationPayload.getEmail());
-        Assert.assertEquals(registrationResponse.getPhoneNumber(), registrationPayload.getPhoneNumber());
-        Assert.assertEquals(registrationResponse.getAddress(), registrationPayload.getAddress());
+        Assert.assertEquals(registrationResponse.getName(), registrationRequest.getName());
+        Assert.assertEquals(registrationResponse.getSurname(), registrationRequest.getSurname());
+        Assert.assertEquals(registrationResponse.getEmail(), registrationRequest.getEmail());
+        Assert.assertEquals(registrationResponse.getPhoneNumber(), registrationRequest.getPhoneNumber());
+        Assert.assertEquals(registrationResponse.getAddress(), registrationRequest.getAddress());
     }
 
     @DataProvider(name = "UserData")
     public Object[][] getUserData() {
-        return new Object[][]{new Object[]{RegistrationRequest.generateValidRegistrationRequest()}, new Object[]{RegistrationRequest.generateValidRegistrationRequest()}};
+        return new Object[][]{
+                new Object[]{RegistrationRequest.generateValidRegistrationRequest()}};
     }
 }

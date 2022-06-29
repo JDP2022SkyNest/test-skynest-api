@@ -17,8 +17,9 @@ public final class RandomGenerator {
                 .replace("-", "")
                 .replace(".", "")
                 .replace("(", "")
-                .replace(")", "").
-                replace(" ", "");
+                .replace(")", "")
+                .replace("x", "")
+                .replace(" ", "");
     }
 
     public static String generateRandomFirstName() {
