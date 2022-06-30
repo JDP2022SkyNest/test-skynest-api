@@ -33,7 +33,7 @@ public final class RandomGenerator {
     }
 
     public static String generateStrongPassword() {
-        var password = new Faker().internet().password(8,30 , true, false, true);
+        String password = new Faker().internet().password(8, 10, true, false, true);
         if (isPasswordValid(password)) {
             return password;
         }

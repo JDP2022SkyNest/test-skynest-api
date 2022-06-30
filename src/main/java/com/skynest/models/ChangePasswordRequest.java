@@ -1,6 +1,5 @@
 package com.skynest.models;
 
-import com.skynest.utils.RandomGenerator;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +16,8 @@ public class ChangePasswordRequest {
     public static ChangePasswordRequest generateValidChangePasswordRequest() {
         return ChangePasswordRequest.builder()
                 .currentPassword("Hris8833")
-                .newPassword(RandomGenerator.generateStrongPassword())
+                .newPassword("Hris8833")
+                //TODO Change this with random generated password properties file for credentials is added
                 .build();
     }
 }

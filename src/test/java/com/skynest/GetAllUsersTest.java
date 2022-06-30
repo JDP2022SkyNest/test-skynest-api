@@ -9,8 +9,8 @@ public class GetAllUsersTest extends LoggedUserBaseTest {
 
     @Test
     void valid_get_all_users_test() {
-        Response response = skyNestBackendClient.getAllUsers();
-        response.then().statusCode(SC_OK);
+        Response getAllUsersResponse = skyNestBackendClient.getAllUsers();
+        getAllUsersResponse.then().statusCode(SC_OK);
     }
 
 }

@@ -1,24 +1,26 @@
 package com.skynest;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.skynest.models.RegistrationRequest;
 import com.skynest.models.RegistrationResponse;
+import com.skynest.utils.JsonTransformer;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class RegistrationTest extends BaseTest {
 
     @Test(dataProvider = "UserData")
-    void registering_new_valid_user_should_return_specified_response(RegistrationRequest registrationRequest) throws JsonProcessingException {
+    void registering_new_valid_user_should_return_specified_response(RegistrationRequest registrationRequest) throws IOException {
 
-        Response response = skyNestBackendClient.register(registrationRequest);
-        response.then().statusCode(SC_OK);
+        Response registerUserResponse = skyNestBackendClient.register(registrationRequest);
+        registerUserResponse.then().statusCode(SC_OK);
 
-        RegistrationResponse registrationResponse = response.as(RegistrationResponse.class);
+        RegistrationResponse registrationResponse = JsonTransformer.mapResponse(registerUserResponse, RegistrationResponse.class);
 
         Assert.assertNotNull(registrationResponse.getId());
 

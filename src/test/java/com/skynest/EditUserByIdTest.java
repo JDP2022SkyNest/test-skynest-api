@@ -14,10 +14,10 @@ import static org.apache.http.HttpStatus.SC_OK;
 public class EditUserByIdTest extends LoggedUserBaseTest {
     @Test(dataProvider = "UserData")
     void valid_edit_user_by_id_test(EditRequest editRequest) throws IOException {
-        Response response = skyNestBackendClient.editUserById(editRequest);
-        response.then().statusCode(SC_OK);
+        Response editUserResponse = skyNestBackendClient.editUserById(editRequest);
+        editUserResponse.then().statusCode(SC_OK);
 
-        EditResponse editResponse = response.as(EditResponse.class);
+        EditResponse editResponse = editUserResponse.as(EditResponse.class);
 
         Assert.assertNotNull(editResponse.getId());
 
