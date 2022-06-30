@@ -35,14 +35,14 @@ public class SkyNestBackendClient extends BaseClient {
 
     public Response getAllUsers() {
         return requestMaker()
-                .get(ApiConstants.GET_ALL_USERS_ENDPOINT);
+                .get(ApiConstants.USERS_PATH);
     }
 
     public Response getUserById() throws IOException {
         Response response = getLoggedUser();
         LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponseToLoggedUserResponse(response);
         return requestMaker()
-                .get(ApiConstants.GET_USER_BY_ID_ENDPOINT+loggedUserResponse.getUuid());
+                .get(ApiConstants.USERS_PATH+loggedUserResponse.getUuid());
     }
 
     public Response editUserById(EditRequest editRequest) throws IOException {
@@ -50,9 +50,16 @@ public class SkyNestBackendClient extends BaseClient {
         LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponseToLoggedUserResponse(response);
         return requestMaker()
                 .body(editRequest)
-                .put(ApiConstants.EDIT_USER_BY_ID_ENDPOINT+loggedUserResponse.getUuid());
+                .put(ApiConstants.USERS_PATH+loggedUserResponse.getUuid());
     }
 
+    public Response changePassword(ChangePasswordRequest changePasswordRequest) throws IOException {
+        Response response = getLoggedUser();
+        LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponseToLoggedUserResponse(response);
+        return requestMaker()
+                .body(changePasswordRequest)
+                .put(ApiConstants.CHANGE_PASSWORD_ENDPOINT+loggedUserResponse.getUuid());
+    }
 
     public Response logout() {
         return requestMaker()

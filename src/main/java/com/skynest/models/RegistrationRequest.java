@@ -21,7 +21,7 @@ public class RegistrationRequest {
     public static RegistrationRequest generateValidRegistrationRequest() {
         return RegistrationRequest.builder()
                 .email(RandomGenerator.generateRandomEmail())
-                .password("Example123451")
+                .password(RandomGenerator.generateStrongPassword())
                 .name(RandomGenerator.generateRandomFirstName())
                 .surname(RandomGenerator.generateRandomLastName())
                 .phoneNumber(RandomGenerator.generateRandomPhoneNumber())
