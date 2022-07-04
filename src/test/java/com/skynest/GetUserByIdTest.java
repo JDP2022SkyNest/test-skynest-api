@@ -13,4 +13,5 @@ public class GetUserByIdTest extends LoggedUserBaseTest {
         Response getUserResponse = skyNestBackendClient.getUserById();
         getUserResponse.then().statusCode(SC_OK);
     }
+
 }

@@ -17,7 +17,7 @@ public class ChangePasswordRequest {
         return ChangePasswordRequest.builder()
                 .currentPassword("Hris8833")
                 .newPassword("Hris8833")
-                //TODO Change this with random generated password properties file for credentials is added
+                //TODO Change this with random generated password when properties file for credentials is added
                 .build();
     }
 }
