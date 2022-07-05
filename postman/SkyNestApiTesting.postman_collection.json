@@ -31343,6 +31343,84 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"description cannot be null or empty\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-04 13:07:58\"\n}"
+												},
+												{
+													"id": "2e4a2b75-d060-4af8-9d6f-5da3beee66cb",
+													"name": "EditBucketWithEmptyParameters",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"\",\r\n  \"description\": \"\",\r\n  \"isPublic\": \"\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 05 Jul 2022 12:05:31 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"isPublic must be true or false\",\n        \"name cannot be null or empty\",\n        \"description cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 14:05:31\"\n}"
 												}
 											]
 										},
