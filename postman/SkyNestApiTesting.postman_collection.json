@@ -35749,7 +35749,7 @@
 							"name": "ValidTokenAndUnsuccessfulPUT",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "RestoreNotExistingBucket",
 									"id": "094f0a14-37f7-4f06-bf8c-dbc354fea37e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
