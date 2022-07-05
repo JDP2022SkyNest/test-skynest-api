@@ -30896,7 +30896,7 @@
 											"response": [
 												{
 													"id": "e14c550f-edcc-4361-a564-78b2c30f9b4a",
-													"name": "EdirBucketWithCyrilicParameters",
+													"name": "EditBucketWithCyrilicParameters",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
