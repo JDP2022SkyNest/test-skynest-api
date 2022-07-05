@@ -35208,6 +35208,35 @@
 								"header": []
 							},
 							"response": []
+						},
+						{
+							"name": "UploadFile",
+							"id": "5f58bf1e-a3d0-4229-b04c-8883669d7aeb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuZW1hbmphLm1paGFqbG92aWNAaHRlY2dyb3VwLmNvbSIsInJvbGVzIjpbInJvbGVfYWRtaW4iXSwiZXhwIjoxNjU3MDMwNjAyLCJ1dWlkIjoiY2UyMGFhYjYtMDA1MS00OWM2LTkzNDktNzI4NDU0Y2E4YWY0In0.bmCpsH73ZAs3qesopfNTCQBPQYS0t7q7LBU4e_3svDZAAAZEyQ6dmYTJtbOFZotIECwBxDXlvO5qMR8J1vWFZQ"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Nemanja/Downloads/MicrosoftTeams-image (20).png"
+										}
+									]
+								},
+								"url": "{{BASE_URL}}/files/bucket/fb168088-7760-4054-9785-7d68ef522ec4"
+							},
+							"response": []
 						}
 					],
 					"id": "7de2bf1f-cb35-4156-9ddc-a65713390973"
