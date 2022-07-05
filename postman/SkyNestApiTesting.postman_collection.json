@@ -26848,7 +26848,7 @@
 									"response": []
 								},
 								{
-									"name": "AddCompanyWithInvalidInputs",
+									"name": "EditCompanyWithInvalidInputs",
 									"event": [
 										{
 											"listen": "test",
