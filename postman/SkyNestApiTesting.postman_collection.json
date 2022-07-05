@@ -26884,7 +26884,7 @@
 											"response": [
 												{
 													"id": "30fb7e9f-95cf-42e8-ad9a-d3f33c5819a3",
-													"name": "EditPib",
+													"name": "EditPibForCompany",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
