@@ -35756,7 +35756,8 @@
 									},
 									"request": {
 										"method": "PUT",
-										"header": []
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
 									},
 									"response": []
 								}
