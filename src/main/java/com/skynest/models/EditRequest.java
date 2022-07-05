@@ -10,23 +10,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RegistrationRequest {
-    private String email;
-    private String password;
+public class EditRequest {
     private String name;
     private String surname;
     private String phoneNumber;
     private String address;
 
-    public static RegistrationRequest generateValidRegistrationRequest() {
-        return RegistrationRequest.builder()
-                .email(RandomGenerator.generateRandomEmail())
-                .password(RandomGenerator.generateStrongPassword())
+    public static EditRequest generateValidEditRequest() {
+        return EditRequest.builder()
                 .name(RandomGenerator.generateRandomFirstName())
                 .surname(RandomGenerator.generateRandomLastName())
                 .phoneNumber(RandomGenerator.generateRandomPhoneNumber())
                 .address(RandomGenerator.generateRandomAddress())
                 .build();
-
     }
 }

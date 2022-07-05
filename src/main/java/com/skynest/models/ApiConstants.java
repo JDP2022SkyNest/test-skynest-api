@@ -5,6 +5,13 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class ApiConstants {
-    public static final String BASE_URL = "http://13.94.241.83:8080";
-    public static final String REGISTER_ENDPOINT = "/public/register";
+    public static final String REGISTER_PATH = "/public/register";
+    public static final String LOGIN_PATH = "/public/login";
+    public static final String ME_PATH = "/users/me";
+    public static final String GET_ALL_USERS_PATH = "/users";
+    public static final String USERS_PATH = "/users/";
+    public static final String LOGOUT_PATH = "/auth/logout";
+    public static final String CHANGE_PASSWORD_PATH = "/users/password-change/";
+    public static final String ENABLE_PATH = "/enable";
+    public static final String DISABLE_PATH = "/disable";
 }
