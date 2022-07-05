@@ -35196,7 +35196,20 @@
 				},
 				{
 					"name": "Files",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "c7b972b2-31e5-45dc-bc25-2cf7ef4269cd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "7de2bf1f-cb35-4156-9ddc-a65713390973"
 				}
 			],
