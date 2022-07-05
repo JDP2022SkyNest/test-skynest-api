@@ -26141,7 +26141,7 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "GetWorker'sCompany",
 									"id": "63e70239-5451-4550-ba21-411993b3cdea",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
