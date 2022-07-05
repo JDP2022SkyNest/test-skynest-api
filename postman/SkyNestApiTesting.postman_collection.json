@@ -36532,7 +36532,13 @@
 		},
 		{
 			"name": "FolderAPI",
-			"item": [],
+			"item": [
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "914063ca-b298-4c4f-ae3e-b84cd14a9a69"
+				}
+			],
 			"id": "7c5604c7-db6c-45b2-97a4-74a97e535d69"
 		}
 	]
