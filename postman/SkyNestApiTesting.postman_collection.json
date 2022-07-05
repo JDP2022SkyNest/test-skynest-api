@@ -31256,7 +31256,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"\",\r\n  \"description\": \"\",\r\n  \"isPublic\": true\r\n}",
+													"raw": "{\r\n  \"name\": \"\",\r\n  \"description\": \"\",\r\n  \"isPublic\": \"\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
