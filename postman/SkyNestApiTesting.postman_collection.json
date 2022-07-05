@@ -26969,7 +26969,7 @@
 									]
 								},
 								{
-									"name": "AddCompanyWithEmptyInputs",
+									"name": "EditCompanyWithEmptyInputs",
 									"event": [
 										{
 											"listen": "test",
