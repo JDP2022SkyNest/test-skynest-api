@@ -36333,7 +36333,31 @@
 									]
 								}
 							],
-							"id": "cf0dbcd3-6fd1-43ac-9314-9160afeadd08"
+							"id": "cf0dbcd3-6fd1-43ac-9314-9160afeadd08",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "1e8d1444-8e0b-45a1-aec5-23c61588e37e",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "28b27a32-a244-4913-85f5-7f206621461c",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "d3feb40b-0876-40eb-8808-553ff7708c62"
