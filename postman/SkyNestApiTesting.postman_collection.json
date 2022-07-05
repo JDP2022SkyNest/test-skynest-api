@@ -36534,7 +36534,7 @@
 			"name": "FolderAPI",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "GetFolderById",
 					"item": [],
 					"id": "914063ca-b298-4c4f-ae3e-b84cd14a9a69"
 				}
