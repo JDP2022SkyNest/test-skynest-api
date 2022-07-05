@@ -26502,7 +26502,7 @@
 									]
 								},
 								{
-									"name": "GetUser'sCompanyExpiredToken Copy",
+									"name": "GetUser'sCompanyInvalidToken",
 									"id": "9187e87e-6968-4c9c-b8f5-c8e3be09b4e7",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
