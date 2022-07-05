@@ -27209,6 +27209,11 @@
 									]
 								},
 								{
+									"name": "ForbiddenEdit",
+									"item": [],
+									"id": "405afaab-66ea-42b3-9c77-63e59191fc12"
+								},
+								{
 									"name": "EditCompanyWithSameInputs",
 									"event": [
 										{
