@@ -26798,10 +26798,10 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{SecondAdminAuthToken}}"
+												"token": "{{workerAuthToken}}"
 											}
 										},
-										"method": "POST",
+										"method": "PUT",
 										"header": [],
 										"body": {
 											"mode": "raw",
