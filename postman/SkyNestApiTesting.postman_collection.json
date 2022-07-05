@@ -27070,7 +27070,7 @@
 											]
 										},
 										{
-											"name": "EditTierName",
+											"name": "EditTierNameForCompany",
 											"id": "2dc1e67b-5624-4128-b844-0589b9cd3a9b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
