@@ -35557,7 +35557,7 @@
 							"name": "ValidTokenAndSuccessfulPUT",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "RestoreOwnBucketAsWorker",
 									"id": "8bc3ba1f-f6e0-4bb5-a0a1-061f3cdc888f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -35573,7 +35573,81 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "015195a1-56c4-4d69-b966-565fc7f78b1b",
+											"name": "RestoreOwnBucketAsWorker",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 05 Jul 2022 14:26:42 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "true"
+										}
+									]
 								}
 							],
 							"id": "3953641c-779f-4b13-9de0-8319415adfdd"
