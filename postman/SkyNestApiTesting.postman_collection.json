@@ -26874,11 +26874,11 @@
 												"token": "{{adminAuthToken}}"
 											}
 										},
-										"method": "POST",
+										"method": "PUT",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"company.com\",\r\n  \"pib\": \"1234567\",\r\n  \"name\": \"\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"fsdfdfds\",\r\n  \"address\": \"\"\r\n}",
+											"raw": "{\r\n  \"name\": \"123\",\r\n  \"address\": \"Adress\",\r\n  \"phoneNumber\": \"abcdef\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
