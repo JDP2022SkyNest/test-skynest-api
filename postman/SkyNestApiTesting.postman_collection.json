@@ -25513,7 +25513,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"contactdeskk@microsoft.com\",\r\n  \"pib\": \"333888777\",\r\n  \"name\": \"Microsoft LTD\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325743477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+											"raw": "{\r\n  \"email\": \"contactdeskk@microsoft.com\",\r\n  \"pib\": \"333888555\",\r\n  \"name\": \"Microsoft LTD\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325743477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -26805,7 +26805,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"HTEC\",\r\n  \"address\": \"Company Address 13\",\r\n  \"phoneNumber\": \"5344534256\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Microsoft Company\",\r\n  \"address\": \"Company Address 13\",\r\n  \"phoneNumber\": \"5344534256\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -27006,7 +27006,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"123\",\r\n  \"address\": \"Adress\",\r\n  \"phoneNumber\": \"abcdef\"\r\n}",
+											"raw": "{\r\n  \"name\": null,\r\n  \"address\": null,\r\n  \"phoneNumber\": \"abcdef\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -27093,6 +27093,84 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"messages\": [\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 11:54:47\"\n}"
+										},
+										{
+											"id": "80aaab3a-9b5a-41f7-ad14-3268a14ee858",
+											"name": "EditCompanyWithInvalidInputs",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": null,\r\n  \"address\": null,\r\n  \"phoneNumber\": \"abcdef\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 05 Jul 2022 10:17:51 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 12:17:51\"\n}"
 										}
 									]
 								},
@@ -27225,11 +27303,8 @@
 											"script": {
 												"id": "a03012da-d1f0-4195-bef2-f0f452d1dda9",
 												"exec": [
-													"pm.test(\"Set the id of a valid company registration as an environment variable\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"validCompanyId\", jsonData.id);\r",
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -27251,7 +27326,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"contactdeskk@microsoft.com\",\r\n  \"pib\": \"333888777\",\r\n  \"name\": \"Microsoft LTD\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325743477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Worker's Company\",\r\n  \"address\": \"Edit As Worker\",\r\n  \"phoneNumber\": \"456754356\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -27262,14 +27337,14 @@
 									},
 									"response": [
 										{
-											"id": "18c723f4-4c7b-4f03-a432-c849d57c3725",
+											"id": "51aaa437-e6e2-420b-a07c-55b2bcf61aa0",
 											"name": "EditCompanyAsWorker",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"email\": \"contactdeskk@microsoft.com\",\r\n  \"pib\": \"333888777\",\r\n  \"name\": \"Microsoft LTD\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325743477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Worker's Company\",\r\n  \"address\": \"Edit As Worker\",\r\n  \"phoneNumber\": \"456754356\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -27278,8 +27353,115 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 											},
-											"status": "Bad Request",
-											"code": 400,
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 05 Jul 2022 10:16:07 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "EditCompanyAsUserThatIsNotPartOfAnyCompany",
+									"id": "53a1ce25-68fe-4582-b600-c6d25bae7a7e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{SecondAdminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Name\",\r\n  \"address\": \"User is not a part of any company\",\r\n  \"phoneNumber\": \"4567454356\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "075ba0ce-7deb-41c7-81f6-872a2b7c652b",
+											"name": "New Request",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Name\",\r\n  \"address\": \"User is not a part of any company\",\r\n  \"phoneNumber\": \"4567454356\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Not Found",
+											"code": 404,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -27328,16 +27510,20 @@
 												},
 												{
 													"key": "Date",
-													"value": "Tue, 05 Jul 2022 09:48:49 GMT"
+													"value": "Tue, 05 Jul 2022 10:23:36 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
 												},
 												{
 													"key": "Connection",
-													"value": "close"
+													"value": "keep-alive"
 												}
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"timestamp\": 1657014529821,\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/companies\"\n}"
+											"body": "{\n    \"messages\": [\n        \"User is not a part of any company\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-05 12:23:36\"\n}"
 										}
 									]
 								}
