@@ -26673,7 +26673,7 @@
 												"token": "{{adminAuthToken}}"
 											}
 										},
-										"method": "POST",
+										"method": "PUT",
 										"header": [],
 										"body": {
 											"mode": "raw",
