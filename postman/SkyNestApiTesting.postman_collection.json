@@ -26120,6 +26120,11 @@
 						}
 					],
 					"id": "f1ebecfc-6789-4b4b-bad7-9b48e244b951"
+				},
+				{
+					"name": "GetMyCompany",
+					"item": [],
+					"id": "8ba8b7ad-87f3-484b-9411-80520e7323d6"
 				}
 			],
 			"id": "1ee014eb-8db7-4a92-8501-21ff822d0766"
@@ -32746,11 +32751,6 @@
 						}
 					],
 					"id": "9d352f22-e3ca-4f1d-b51f-8ff9f267dddf"
-				},
-				{
-					"name": "AddMyCompany",
-					"item": [],
-					"id": "8ba8b7ad-87f3-484b-9411-80520e7323d6"
 				}
 			],
 			"id": "1758e616-f762-4d32-b805-f8843ae00cba"
