@@ -26770,51 +26770,6 @@
 											"body": "{\n    \"id\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n    \"pib\": \"333888999\",\n    \"name\": \"HTEC\",\n    \"address\": \"Company Address 13\",\n    \"phoneNumber\": \"5344534256\",\n    \"email\": \"contactdeskk@htec.com\",\n    \"tierName\": \"basic\"\n}"
 										}
 									]
-								},
-								{
-									"name": "EditCompanyAsWorker",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "a03012da-d1f0-4195-bef2-f0f452d1dda9",
-												"exec": [
-													"pm.test(\"Set the id of a valid company registration as an environment variable\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"validCompanyId\", jsonData.id);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "d44461be-9d5b-4398-b8b2-69552d0c10c3",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"contactdeskk@microsoft.com\",\r\n  \"pib\": \"333888777\",\r\n  \"name\": \"Microsoft LTD\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325743477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
-									},
-									"response": []
 								}
 							],
 							"id": "d5dc5278-2616-4078-b31b-c08f161b7ac7",
@@ -26822,7 +26777,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "ac5a56b3-6edd-4547-a179-6a888f5547ce",
+										"id": "25b41d71-a0a3-442c-93a8-d31823a7724f",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -26832,27 +26787,11 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c6cd45a4-b2d0-48d2-b97c-12e8240f948e",
+										"id": "be9c9f85-0fc8-42a2-8049-6e57fa03f03b",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
-											"});",
-											"",
-											"pm.test(\"Content-Type header is application/json\", () => {",
-											"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
-											"});",
-											"",
-											"const jsonData = pm.response.json();",
-											"pm.test(\"Test data type of the response\", () => {",
-											"  pm.expect(jsonData).to.be.an(\"object\");",
-											"  pm.expect(jsonData.id).to.be.a(\"string\");",
-											"  pm.expect(jsonData.pib).to.be.a(\"string\");",
-											"  pm.expect(jsonData.name).to.be.a(\"string\");",
-											"  pm.expect(jsonData.address).to.be.a(\"string\");",
-											"  pm.expect(jsonData.phoneNumber).to.be.a(\"string\");",
-											"  pm.expect(jsonData.email).to.be.a(\"string\");",
-											"  pm.expect(jsonData.tierName).to.be.a(\"string\");",
 											"});",
 											"",
 											"pm.test(\"Response must be valid and have a body\", function () {",
@@ -27480,6 +27419,51 @@
 											"body": null
 										}
 									]
+								},
+								{
+									"name": "EditCompanyAsWorker",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a03012da-d1f0-4195-bef2-f0f452d1dda9",
+												"exec": [
+													"pm.test(\"Set the id of a valid company registration as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validCompanyId\", jsonData.id);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "d44461be-9d5b-4398-b8b2-69552d0c10c3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contactdeskk@microsoft.com\",\r\n  \"pib\": \"333888777\",\r\n  \"name\": \"Microsoft LTD\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325743477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": []
 								}
 							],
 							"id": "982b9afa-c45b-4729-a1b8-78968a40153c"
