@@ -26808,7 +26808,7 @@
 							"name": "ValidTokenButUnsuccessfulPOST",
 							"item": [
 								{
-									"name": "AddSameCompanyTwice",
+									"name": "EditCompanyWithSameInputs",
 									"event": [
 										{
 											"listen": "test",
