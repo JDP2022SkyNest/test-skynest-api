@@ -26815,9 +26815,7 @@
 											"script": {
 												"id": "876c5e63-0899-47fe-be7e-7f15d6420709",
 												"exec": [
-													"pm.test(\"Status code is 409\", function () {\r",
-													"    pm.response.to.have.status(409);\r",
-													"});"
+													""
 												],
 												"type": "text/javascript"
 											}
@@ -26834,11 +26832,11 @@
 												"token": "{{adminAuthToken}}"
 											}
 										},
-										"method": "POST",
+										"method": "PUT",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+											"raw": "{\r\n  \"name\": \"HTEC\",\r\n  \"address\": \"Company Address 13\",\r\n  \"phoneNumber\": \"5344534256\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
