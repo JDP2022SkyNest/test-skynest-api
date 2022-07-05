@@ -26318,7 +26318,20 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "faae999a-723b-4d7a-935d-4b26abe15f1c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "e036d402-1868-4340-b4aa-bc0e0e4bdc61"
 						}
 					],
