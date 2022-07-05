@@ -26856,7 +26856,7 @@
 									"name": "EditNotEditableParameters Copy",
 									"item": [
 										{
-											"name": "EditPib",
+											"name": "EditPibForCompany",
 											"id": "1838bd53-e772-4c88-882c-e08fa1b9968a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
