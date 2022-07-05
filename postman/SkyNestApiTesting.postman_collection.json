@@ -30868,7 +30868,7 @@
 											]
 										},
 										{
-											"name": "EdirBucketWithCyrilicParameters",
+											"name": "EditBucketWithCyrilicParameters",
 											"id": "fd835be0-5bcd-42d1-8089-8c124f1fef1b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
