@@ -27337,52 +27337,32 @@
 								},
 								{
 									"name": "EditWithInvalidInputs",
-									"item": [],
-									"id": "41f6f81c-9a3b-4ab9-848e-f0b5d6335651"
-								},
-								{
-									"name": "EditCompanyWithSameInputs",
-									"event": [
+									"item": [
 										{
-											"listen": "test",
-											"script": {
-												"id": "876c5e63-0899-47fe-be7e-7f15d6420709",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "45de342e-2ea3-4560-87a1-e1cf466ea8b3",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"HTEC\",\r\n  \"address\": \"Company Address 13\",\r\n  \"phoneNumber\": \"5344534256\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
-									},
-									"response": [
-										{
-											"id": "f162d3b2-1188-44ca-bc3c-e7bd527391fc",
 											"name": "EditCompanyWithSameInputs",
-											"originalRequest": {
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "876c5e63-0899-47fe-be7e-7f15d6420709",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "45de342e-2ea3-4560-87a1-e1cf466ea8b3",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
 												"method": "PUT",
 												"header": [],
 												"body": {
@@ -27396,196 +27376,118 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "Vary",
-													"value": "Origin"
-												},
+													"id": "f162d3b2-1188-44ca-bc3c-e7bd527391fc",
+													"name": "EditCompanyWithSameInputs",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"HTEC\",\r\n  \"address\": \"Company Address 13\",\r\n  \"phoneNumber\": \"5344534256\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 05 Jul 2022 09:53:06 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n    \"pib\": \"333888999\",\n    \"name\": \"HTEC\",\n    \"address\": \"Company Address 13\",\n    \"phoneNumber\": \"5344534256\",\n    \"email\": \"contactdeskk@htec.com\",\n    \"tierName\": \"basic\"\n}"
+												}
+											]
+										},
+										{
+											"name": "EditCompanyWithInvalidInputs",
+											"event": [
 												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 05 Jul 2022 09:53:06 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
+													"listen": "test",
+													"script": {
+														"id": "19bfca7c-ec2d-48ec-a692-4ee19d372803",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
 												}
 											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n    \"pib\": \"333888999\",\n    \"name\": \"HTEC\",\n    \"address\": \"Company Address 13\",\n    \"phoneNumber\": \"5344534256\",\n    \"email\": \"contactdeskk@htec.com\",\n    \"tierName\": \"basic\"\n}"
-										}
-									]
-								},
-								{
-									"name": "EditCompanyWithInvalidInputs",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "19bfca7c-ec2d-48ec-a692-4ee19d372803",
-												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.response.to.have.status(400);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "91005475-7a2d-42f7-a693-0b2e977b6d7d",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": null,\r\n  \"address\": null,\r\n  \"phoneNumber\": \"abcdef\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
-									},
-									"response": [
-										{
-											"id": "75631203-7a29-4bfe-876b-5c23092e666f",
-											"name": "EditCompanyWithInvalidInputs",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"123\",\r\n  \"address\": \"Adress\",\r\n  \"phoneNumber\": \"abcdef\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
+											"id": "91005475-7a2d-42f7-a693-0b2e977b6d7d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
-											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 05 Jul 2022 09:54:47 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 11:54:47\"\n}"
-										},
-										{
-											"id": "80aaab3a-9b5a-41f7-ad14-3268a14ee858",
-											"name": "EditCompanyWithInvalidInputs",
-											"originalRequest": {
 												"method": "PUT",
 												"header": [],
 												"body": {
@@ -27599,114 +27501,192 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "Vary",
-													"value": "Origin"
+													"id": "75631203-7a29-4bfe-876b-5c23092e666f",
+													"name": "EditCompanyWithInvalidInputs",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"123\",\r\n  \"address\": \"Adress\",\r\n  \"phoneNumber\": \"abcdef\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 05 Jul 2022 09:54:47 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 11:54:47\"\n}"
 												},
 												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
+													"id": "80aaab3a-9b5a-41f7-ad14-3268a14ee858",
+													"name": "EditCompanyWithInvalidInputs",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": null,\r\n  \"address\": null,\r\n  \"phoneNumber\": \"abcdef\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 05 Jul 2022 10:17:51 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 12:17:51\"\n}"
+												}
+											]
+										},
+										{
+											"name": "EditCompanyWithEmptyInputs",
+											"event": [
 												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 05 Jul 2022 10:17:51 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
+													"listen": "test",
+													"script": {
+														"id": "e4414f81-b2f5-4380-8a13-f4cf62d90506",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {\r",
+															"    pm.response.to.have.status(400);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
 												}
 											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 12:17:51\"\n}"
-										}
-									]
-								},
-								{
-									"name": "EditCompanyWithEmptyInputs",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "e4414f81-b2f5-4380-8a13-f4cf62d90506",
-												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.response.to.have.status(400);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "05a13aa2-9f01-4bb8-b119-170b2aaa9818",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"\",\r\n  \"address\": \"\",\r\n  \"phoneNumber\": \"\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
-									},
-									"response": [
-										{
-											"id": "b238850f-efff-407c-b587-f02ae13c05c2",
-											"name": "EditCompanyWithEmptyInputs",
-											"originalRequest": {
+											"id": "05a13aa2-9f01-4bb8-b119-170b2aaa9818",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
 												"method": "PUT",
 												"header": [],
 												"body": {
@@ -27720,66 +27700,111 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 05 Jul 2022 10:00:26 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
+													"id": "b238850f-efff-407c-b587-f02ae13c05c2",
+													"name": "EditCompanyWithEmptyInputs",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"\",\r\n  \"address\": \"\",\r\n  \"phoneNumber\": \"\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 05 Jul 2022 10:00:26 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"phoneNumber cannot be null or empty\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 12:00:26\"\n}"
 												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"phoneNumber cannot be null or empty\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-05 12:00:26\"\n}"
+											]
+										}
+									],
+									"id": "41f6f81c-9a3b-4ab9-848e-f0b5d6335651",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "c8c2369d-009d-4648-9276-21042909305b",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "190fc92f-e496-4b8b-849b-7bb28847b7a8",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});"
+												]
+											}
 										}
 									]
 								},
