@@ -26320,7 +26320,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "GetUser'sCompanyEmptyToken",
 									"id": "faae999a-723b-4d7a-935d-4b26abe15f1c",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
