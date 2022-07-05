@@ -36121,7 +36121,31 @@
 									]
 								}
 							],
-							"id": "cb20bd73-f2b2-4c4b-a07a-3b3e89f84efc"
+							"id": "cb20bd73-f2b2-4c4b-a07a-3b3e89f84efc",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "33eb3005-bfc9-4537-8700-63164b1c1dd9",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "353a3ed1-9660-4a56-83db-042e514f8eed",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test('Check status code', () => {",
+											"    pm.expect(pm.response.code).to.be.oneOf([403, 404, 409])",
+											"})"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "InvalidToken",
