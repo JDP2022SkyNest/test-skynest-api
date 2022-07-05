@@ -26147,7 +26147,7 @@
 									"response": [
 										{
 											"id": "16dd0679-932d-4f39-8c5d-303f414ff382",
-											"name": "GetAdmin'sCompanyAsAdmin",
+											"name": "GetAdmin'sCompany",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
