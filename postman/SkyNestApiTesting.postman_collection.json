@@ -26237,7 +26237,81 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "e0cb5e04-11e1-4960-9bed-85a6714ae5ff",
+											"name": "GetWorker'sCompany",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 05 Jul 2022 09:26:45 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n    \"pib\": \"333888999\",\n    \"name\": \"Htec Group\",\n    \"address\": \"Company Address 12\",\n    \"phoneNumber\": \"325223477757\",\n    \"email\": \"contactdeskk@htec.com\",\n    \"tierName\": \"basic\"\n}"
+										}
+									]
 								}
 							],
 							"id": "8df4e0be-f065-401d-9ea2-3288ca2be5f7"
