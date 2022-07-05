@@ -27303,7 +27303,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "AddNewCompanyEmptyToken",
+									"name": "EditCompanyEmptyToken",
 									"id": "df2dc908-50c5-40ad-81ab-cbcda18d4431",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
