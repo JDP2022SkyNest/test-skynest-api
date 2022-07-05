@@ -35557,7 +35557,7 @@
 							"name": "ValidTokenAndSuccessfulPUT",
 							"item": [
 								{
-									"name": "RestoreOwnBucketAsWorker",
+									"name": "RestoreOwnBucketAsAdmin",
 									"id": "8bc3ba1f-f6e0-4bb5-a0a1-061f3cdc888f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
