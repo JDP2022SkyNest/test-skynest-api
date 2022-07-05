@@ -26500,6 +26500,25 @@
 											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-05 11:28:29\"\n}"
 										}
 									]
+								},
+								{
+									"name": "GetUser'sCompanyExpiredToken Copy",
+									"id": "9187e87e-6968-4c9c-b8f5-c8e3be09b4e7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": []
 								}
 							],
 							"id": "e036d402-1868-4340-b4aa-bc0e0e4bdc61"
