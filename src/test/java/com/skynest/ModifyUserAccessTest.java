@@ -19,6 +19,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 public class ModifyUserAccessTest extends LoggedUserBaseTest {
 
     public UUID userId;
+    public static final String WORKER_EMAIL = "fedese7585@kahase.com";
 
     @BeforeClass
     void getWorkerId() throws IOException {
@@ -31,7 +32,7 @@ public class ModifyUserAccessTest extends LoggedUserBaseTest {
     public UUID getUserId(List<UserResponse> userResponses) {
         for (int i = 0; i < userResponses.size(); i++) {
             UserResponse userResponse = userResponses.get(i);
-            if (userResponse.getEmail().equals("fedese7585@kahase.com")) {
+            if (userResponse.getEmail().equals(WORKER_EMAIL)) {
                 return userResponse.getId();
             }
         }

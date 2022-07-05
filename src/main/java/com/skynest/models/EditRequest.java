@@ -15,6 +15,7 @@ public class EditRequest {
     private String surname;
     private String phoneNumber;
     private String address;
+    private String positionInCompany;
 
     public static EditRequest generateValidEditRequest() {
         return EditRequest.builder()
@@ -22,6 +23,7 @@ public class EditRequest {
                 .surname(RandomGenerator.generateRandomLastName())
                 .phoneNumber(RandomGenerator.generateRandomPhoneNumber())
                 .address(RandomGenerator.generateRandomAddress())
+                .positionInCompany(RandomGenerator.generateRandomPositionInCompany())
                 .build();
     }
 }

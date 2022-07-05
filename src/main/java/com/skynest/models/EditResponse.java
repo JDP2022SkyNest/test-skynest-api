@@ -15,6 +15,8 @@ public class EditResponse {
     private String phoneNumber;
     private String address;
     private String roleName;
-    private boolean verified;
+    private String positionInCompany;
+    private String companyName;
     private boolean enabled;
+    private boolean verified;
 }

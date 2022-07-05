@@ -51,4 +51,8 @@ public final class RandomGenerator {
         return FAKER.address().fullAddress();
     }
 
+    public static String generateRandomPositionInCompany() {
+        return FAKER.job().position();
+    }
+
 }

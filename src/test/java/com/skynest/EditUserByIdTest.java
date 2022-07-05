@@ -25,6 +25,7 @@ public class EditUserByIdTest extends LoggedUserBaseTest {
         Assert.assertEquals(editResponse.getSurname(), editRequest.getSurname());
         Assert.assertEquals(editResponse.getPhoneNumber(), editRequest.getPhoneNumber());
         Assert.assertEquals(editResponse.getAddress(), editRequest.getAddress());
+        Assert.assertEquals(editResponse.getPositionInCompany(), editRequest.getPositionInCompany());
     }
 
     @DataProvider(name = "UserData")

@@ -15,6 +15,7 @@ public class LoggedUserResponse {
     private String username;
     private String name;
     private String surname;
-    private List<String> roles;
+    private String positionInCompany;
     private String company;
+    private List<String> roles;
 }
