@@ -26134,6 +26134,12 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
 										"method": "GET",
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
