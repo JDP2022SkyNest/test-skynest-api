@@ -26638,6 +26638,1298 @@
 					"id": "f1ebecfc-6789-4b4b-bad7-9b48e244b951"
 				},
 				{
+					"name": "EditCompany",
+					"item": [
+						{
+							"name": "ValidTokenAndSuccessfulPOST",
+							"item": [
+								{
+									"name": "AddNewCompanyAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a03012da-d1f0-4195-bef2-f0f452d1dda9",
+												"exec": [
+													"pm.test(\"Set the id of a valid company registration as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validCompanyId\", jsonData.id);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "1ec4329c-343c-4107-8a54-e22b15561f54",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contactdeskk@htec.com\",\r\n  \"pib\": \"333888999\",\r\n  \"name\": \"Htec Group\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325223477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "c3c01140-27d4-4a18-bebd-711aecf53b0d",
+											"name": "AddNewCompanyAsAdmin",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"infodesk@htec.com\",\r\n  \"pib\": \"333888333\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"35223477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Jul 2022 12:32:59 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"693b0eef-68b3-466d-ae4a-e9e882613aa3\",\n    \"pib\": \"333888333\",\n    \"name\": \"Company One\",\n    \"address\": \"Company Address 12\",\n    \"phoneNumber\": \"35223477757\",\n    \"email\": \"infodesk@htec.com\",\n    \"tierName\": \"basic\"\n}"
+										}
+									]
+								},
+								{
+									"name": "AddNewCompanyAsSecondAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a03012da-d1f0-4195-bef2-f0f452d1dda9",
+												"exec": [
+													"pm.test(\"Set the id of a valid company registration as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validCompanyId\", jsonData.id);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "d44461be-9d5b-4398-b8b2-69552d0c10c3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{SecondAdminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contactdeskk@microsoft.com\",\r\n  \"pib\": \"333888777\",\r\n  \"name\": \"Microsoft LTD\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325743477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "c1831f92-86c4-42aa-af8d-fe7cc6733a7c",
+											"name": "AddNewCompanyAsSecondAdmin",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"contactdeskk@microsoft.com\",\r\n  \"pib\": \"333888777\",\r\n  \"name\": \"Microsoft LTD\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325743477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Jul 2022 13:19:08 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"bc23b00c-4aad-4e98-b31b-220dae035736\",\n    \"pib\": \"333888777\",\n    \"name\": \"Microsoft LTD\",\n    \"address\": \"Company Address 12\",\n    \"phoneNumber\": \"325743477757\",\n    \"email\": \"contactdeskk@microsoft.com\",\n    \"tierName\": \"basic\"\n}"
+										}
+									]
+								}
+							],
+							"id": "d5dc5278-2616-4078-b31b-c08f161b7ac7",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ac5a56b3-6edd-4547-a179-6a888f5547ce",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "c6cd45a4-b2d0-48d2-b97c-12e8240f948e",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Content-Type header is application/json\", () => {",
+											"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+											"});",
+											"",
+											"const jsonData = pm.response.json();",
+											"pm.test(\"Test data type of the response\", () => {",
+											"  pm.expect(jsonData).to.be.an(\"object\");",
+											"  pm.expect(jsonData.id).to.be.a(\"string\");",
+											"  pm.expect(jsonData.pib).to.be.a(\"string\");",
+											"  pm.expect(jsonData.name).to.be.a(\"string\");",
+											"  pm.expect(jsonData.address).to.be.a(\"string\");",
+											"  pm.expect(jsonData.phoneNumber).to.be.a(\"string\");",
+											"  pm.expect(jsonData.email).to.be.a(\"string\");",
+											"  pm.expect(jsonData.tierName).to.be.a(\"string\");",
+											"});",
+											"",
+											"pm.test(\"Response must be valid and have a body\", function () {",
+											"     pm.response.to.be.ok;",
+											"     pm.response.to.be.withBody;",
+											"     pm.response.to.be.json;",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "ValidTokenButUnsuccessfulPOST",
+							"item": [
+								{
+									"name": "AddSameCompanyTwice",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "876c5e63-0899-47fe-be7e-7f15d6420709",
+												"exec": [
+													"pm.test(\"Status code is 409\", function () {\r",
+													"    pm.response.to.have.status(409);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "45de342e-2ea3-4560-87a1-e1cf466ea8b3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "5648375e-e5b7-4d88-8d93-a77f1cb3e126",
+											"name": "AddSameCompanyTwice",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 30 Jun 2022 11:02:22 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Pib already in use\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-06-30 13:02:22\"\n}"
+										}
+									]
+								},
+								{
+									"name": "AddCompanyWithInvalidInputs",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "19bfca7c-ec2d-48ec-a692-4ee19d372803",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "91005475-7a2d-42f7-a693-0b2e977b6d7d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"company.com\",\r\n  \"pib\": \"1234567\",\r\n  \"name\": \"\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"fsdfdfds\",\r\n  \"address\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "2f6ca8ef-d27c-41b8-8589-49e7e7d24e27",
+											"name": "AddCompanyWithInvalidInputs",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"company.com\",\r\n  \"pib\": \"1234567\",\r\n  \"name\": \"\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"fsdfdfds\",\r\n  \"address\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 30 Jun 2022 11:04:48 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\",\n        \"address cannot be null or empty\",\n        \"email format is not valid\",\n        \"pib format not valid\",\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-30 13:04:48\"\n}"
+										}
+									]
+								},
+								{
+									"name": "AddCompanyWithInvalidTier",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "05899301-ee76-492c-9b50-515b944aa080",
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {\r",
+													"    pm.response.to.have.status(404);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "5806bbb9-180c-4896-9c31-0f58d8539a31",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"info@company.com\",\r\n  \"pib\": \"123456799\",\r\n  \"name\": \"Company Two\",\r\n  \"tierName\": \"test\",\r\n  \"phoneNumber\": \"52354365723\",\r\n  \"address\": \"New Address 88\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "31c5997b-7e8c-477a-9b62-7401d84cb50e",
+											"name": "AddCompanyWithInvalidTier",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"info@company.com\",\r\n  \"pib\": \"123456799\",\r\n  \"name\": \"Company Two\",\r\n  \"tierName\": \"test\",\r\n  \"phoneNumber\": \"52354365723\",\r\n  \"address\": \"New Address 88\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 30 Jun 2022 11:42:58 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Tier doesn't exist\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-06-30 13:42:58\"\n}"
+										}
+									]
+								},
+								{
+									"name": "AddCompanyWithEmptyInputs",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "e4414f81-b2f5-4380-8a13-f4cf62d90506",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "05a13aa2-9f01-4bb8-b119-170b2aaa9818",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"\",\r\n  \"pib\": \"\",\r\n  \"name\": \"\",\r\n  \"tierName\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "14bcbe37-56dd-4138-b417-e940935835a0",
+											"name": "AddCompanyWithEmptyInputs",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"\",\r\n  \"pib\": \"\",\r\n  \"name\": \"\",\r\n  \"tierName\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 30 Jun 2022 11:40:05 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"pib cannot be null or empty\",\n        \"phoneNumber cannot be null or empty\",\n        \"pib format not valid\",\n        \"email format is not valid\",\n        \"address cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-30 13:40:05\"\n}"
+										}
+									]
+								},
+								{
+									"name": "AddNewCompanyAsWorker",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "bf9ec401-6c1a-4499-be74-694c5c13ede4",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "087b7822-135e-484d-8bc8-bedd7c1c9131",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "ee74723b-ed2e-45e2-b923-074be67f674f",
+											"name": "AddNewCompanyAsWorker",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 30 Jun 2022 11:01:09 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "982b9afa-c45b-4729-a1b8-78968a40153c"
+						},
+						{
+							"name": "InvalidToken",
+							"item": [
+								{
+									"name": "AddNewCompanyEmptyToken",
+									"id": "df2dc908-50c5-40ad-81ab-cbcda18d4431",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "4966562e-201c-4f05-b74d-3c62d6f23f71",
+											"name": "AddNewCompanyEmptyToken",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 30 Jun 2022 11:43:24 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "AddNewCompanyExpiredToken",
+									"id": "d2435202-b199-4a7c-9661-8049aaf08705",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "437f2ca3-c6ab-474c-8ac4-0c315956b295",
+											"name": "AddNewCompanyExpiredToken",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 30 Jun 2022 11:43:33 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-06-30 13:43:33\"\n}"
+										}
+									]
+								},
+								{
+									"name": "AddNewCompanyInvalidToken",
+									"id": "ff14ce12-e3ae-4a22-9561-088ef6998695",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{invalidToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": [
+										{
+											"id": "9acbab04-2efc-49e7-95f9-1efae6e2b110",
+											"name": "AddNewCompanyInvalidToken",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 30 Jun 2022 11:43:41 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-06-30 13:43:41\"\n}"
+										}
+									]
+								}
+							],
+							"id": "7eed400b-ce16-4db2-96f3-0e1ec299c259",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "4982dda7-e7a5-43ae-914c-de05c99e4729",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "8b8aaff7-94d6-414a-9d21-a8a7ea0fb987",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
+						}
+					],
+					"id": "ef86a89e-4d5d-482a-adb8-f03169c17a7a"
+				},
+				{
 					"name": "GetMyCompany",
 					"item": [
 						{
