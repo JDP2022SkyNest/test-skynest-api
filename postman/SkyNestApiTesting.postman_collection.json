@@ -27098,7 +27098,7 @@
 											"response": [
 												{
 													"id": "c3f878cb-2714-4b1c-9a72-d291930f7cae",
-													"name": "EditTierName",
+													"name": "EditTierNameForCompany",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
