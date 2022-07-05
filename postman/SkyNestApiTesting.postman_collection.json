@@ -26988,7 +26988,86 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "b79a0536-a0b8-47cc-bfda-98cf5004354b",
+													"name": "EditEmailForCompany",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"email\": \"username@gmail.com\",\r\n  \"name\": \"Name\",\r\n  \"phoneNumber\": \"38166575757\",\r\n  \"address\": \"Local address\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 05 Jul 2022 14:09:01 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"timestamp\": 1657030141470,\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/companies\"\n}"
+												}
+											]
 										},
 										{
 											"name": "EditTierName",
@@ -27007,14 +27086,14 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"Edited123456\",\r\n  \"name\": \"Edited Name\",\r\n  \"surname\": \"Edited Surname\",\r\n  \"phoneNumber\": \"12345\",\r\n  \"address\": \"Edited Address\",\r\n  \"positionInCompany\": \"QA\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Name\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"38166575757\",\r\n  \"address\": \"Local address\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 											},
 											"response": []
 										}
