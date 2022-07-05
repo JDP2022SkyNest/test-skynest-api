@@ -13253,6 +13253,79 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "[\n    {\n        \"id\": \"5b2cfa78-3654-4cfe-9f8b-6aa63e174019\",\n        \"email\": \"Montana_Graham@gmail.com\",\n        \"name\": \"Yvonne\",\n        \"surname\": \"Borer\",\n        \"phoneNumber\": \"698523148\",\n        \"address\": \"Shea Via\",\n        \"roleName\": \"role_worker\"\n    },\n    {\n        \"id\": \"64c0ac79-8dbc-4918-98af-5f705626559a\",\n        \"email\": \"christinezahar@yahoo.com\",\n        \"name\": \"Hristina\",\n        \"surname\": \"Zaharieva\",\n        \"phoneNumber\": \"123456789\",\n        \"address\": \"G Street 78\",\n        \"roleName\": \"role_admin\"\n    },\n    {\n        \"id\": \"7341ae2c-90ae-4037-95af-b4de6c851622\",\n        \"email\": \"spewcialchars@yahoo.com\",\n        \"name\": \"Aster\",\n        \"surname\": \"Marc\",\n        \"phoneNumber\": \"123456123456\",\n        \"address\": \"Street 33\",\n        \"roleName\": \"role_worker\"\n    },\n    {\n        \"id\": \"8ca5927a-98de-4fbd-9a41-be58177d88b4\",\n        \"email\": \"spacespass@yahoo.com\",\n        \"name\": \"Aster\",\n        \"surname\": \"Marc\",\n        \"phoneNumber\": \"74221258963\",\n        \"address\": \"Street33\",\n        \"roleName\": \"role_worker\"\n    },\n    {\n        \"id\": \"a21d8ab1-3af6-4f45-b0f0-b156cf6a6b96\",\n        \"email\": \"hristina.zaharieva@htecgroup.com\",\n        \"name\": \"Hristina\",\n        \"surname\": \"Zaharieva\",\n        \"phoneNumber\": \"9876543210\",\n        \"address\": \"G Street 78\",\n        \"roleName\": \"role_worker\"\n    },\n    {\n        \"id\": \"c4c8deaa-877e-41a4-80ec-708b99534091\",\n        \"email\": \"spacesspecialchars@yahoo.com\",\n        \"name\": \"Aster\",\n        \"surname\": \"Marc\",\n        \"phoneNumber\": \"7422331258963\",\n        \"address\": \"Street33\",\n        \"roleName\": \"role_worker\"\n    }\n]"
+										},
+										{
+											"id": "296c76bf-81ab-4109-aa6d-56fd1a9272be",
+											"name": "GetAllUsersDetailsAsAdmin",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 05 Jul 2022 09:35:03 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    {\n        \"id\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"email\": \"hristina.zaharieva@htecgroup.com\",\n        \"name\": \"Hris\",\n        \"surname\": \"Zahar\",\n        \"phoneNumber\": \"852365\",\n        \"address\": \"Address 99\",\n        \"roleName\": \"role_worker\",\n        \"positionInCompany\": \"QA\",\n        \"companyName\": \"Htec Group\",\n        \"verified\": true,\n        \"enabled\": true\n    },\n    {\n        \"id\": \"2a201b64-8bdd-46d0-80cf-658ce780b43e\",\n        \"email\": \"Janis.Donnelly@yahoo.com\",\n        \"name\": \"Wilton\",\n        \"surname\": \"Ruecker\",\n        \"phoneNumber\": \"85772880344\",\n        \"address\": \"McGlynn Corners\",\n        \"roleName\": \"role_worker\",\n        \"positionInCompany\": null,\n        \"companyName\": null,\n        \"verified\": false,\n        \"enabled\": false\n    },\n    {\n        \"id\": \"4289d65f-3c27-4d3a-a2af-c78e5b105394\",\n        \"email\": \"unverified@yahoo.com\",\n        \"name\": \"Jacob\",\n        \"surname\": \"Leon\",\n        \"phoneNumber\": \"74223318963\",\n        \"address\": \"Street33\",\n        \"roleName\": \"role_manager\",\n        \"positionInCompany\": null,\n        \"companyName\": null,\n        \"verified\": false,\n        \"enabled\": false\n    },\n    {\n        \"id\": \"768a3f62-3028-473a-aeb9-a4e6a9a092e6\",\n        \"email\": \"fedese7585@kahase.com\",\n        \"name\": \"Worker\",\n        \"surname\": \"Second\",\n        \"phoneNumber\": \"8435554212\",\n        \"address\": \"Street 80\",\n        \"roleName\": \"role_worker\",\n        \"positionInCompany\": null,\n        \"companyName\": \"Htec Group\",\n        \"verified\": true,\n        \"enabled\": true\n    },\n    {\n        \"id\": \"967aa09a-de1b-461a-949d-264054a64a51\",\n        \"email\": \"lipafaj444@hekarro.com\",\n        \"name\": \"Jacob\",\n        \"surname\": \"Leon\",\n        \"phoneNumber\": \"7422331963\",\n        \"address\": \"Street33\",\n        \"roleName\": \"role_worker\",\n        \"positionInCompany\": null,\n        \"companyName\": null,\n        \"verified\": false,\n        \"enabled\": false\n    },\n    {\n        \"id\": \"a94d87eb-21ef-4871-9cf2-e544c18a6452\",\n        \"email\": \"Leopold_Douglas@hotmail.com\",\n        \"name\": \"Eric\",\n        \"surname\": \"Shanahan\",\n        \"phoneNumber\": \"85772120344\",\n        \"address\": \"Barrows Locks\",\n        \"roleName\": \"role_worker\",\n        \"positionInCompany\": null,\n        \"companyName\": null,\n        \"verified\": false,\n        \"enabled\": false\n    },\n    {\n        \"id\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"email\": \"christinezahar@yahoo.com\",\n        \"name\": \"Hris\",\n        \"surname\": \"Zahar\",\n        \"phoneNumber\": \"883388338833\",\n        \"address\": \"Edited 88\",\n        \"roleName\": \"role_admin\",\n        \"positionInCompany\": \"Developer\",\n        \"companyName\": \"Htec Group\",\n        \"verified\": true,\n        \"enabled\": true\n    }\n]"
 										}
 									]
 								}
