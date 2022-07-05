@@ -27422,11 +27422,11 @@
 												"token": "{{expiredToken}}"
 											}
 										},
-										"method": "POST",
+										"method": "PUT",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Expired\",\r\n  \"address\": \"Expired Token\",\r\n  \"phoneNumber\": \"52243543521\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
