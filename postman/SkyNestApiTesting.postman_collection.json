@@ -27445,7 +27445,7 @@
 									"response": [
 										{
 											"id": "075ba0ce-7deb-41c7-81f6-872a2b7c652b",
-											"name": "New Request",
+											"name": "EditCompanyAsUserThatIsNotPartOfAnyCompany",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
