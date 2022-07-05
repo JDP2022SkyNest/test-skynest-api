@@ -26853,6 +26853,255 @@
 							"name": "ValidTokenButUnsuccessfulPOST",
 							"item": [
 								{
+									"name": "EditNotEditableParameters Copy",
+									"item": [
+										{
+											"name": "EditEmail",
+											"id": "1838bd53-e772-4c88-882c-e08fa1b9968a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"contactdeskk@htec.com\",\r\n  \"pib\": \"333888999\",\r\n  \"name\": \"Htec Group\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325223477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+											},
+											"response": [
+												{
+													"id": "9fab8768-7e62-4773-8fcb-b1939a0d9727",
+													"name": "EditEmail",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"email\": \"editedmail@yahoo.com\",\r\n  \"name\": \"Edited Name\",\r\n  \"surname\": \"Edited Surname\",\r\n  \"phoneNumber\": \"12345\",\r\n  \"address\": \"Edited Address\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_EDIT_USER}}{{validWorkerId}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 19 Jun 2022 20:01:31 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"timestamp\": 1655668891141,\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/users/a21d8ab1-3af6-4f45-b0f0-b156cf6a6b96\"\n}"
+												}
+											]
+										},
+										{
+											"name": "EditPassword",
+											"id": "55165b0a-b11d-44d0-9681-212ad2660b5b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": \"Edited123456\",\r\n  \"name\": \"Edited Name\",\r\n  \"surname\": \"Edited Surname\",\r\n  \"phoneNumber\": \"12345\",\r\n  \"address\": \"Edited Address\",\r\n  \"positionInCompany\": \"QA\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}"
+											},
+											"response": [
+												{
+													"id": "225c31a8-ea7c-47cc-9d3c-f93443b82778",
+													"name": "EditPassword",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"password\": \"Edited123456\",\r\n  \"name\": \"Edited Name\",\r\n  \"surname\": \"Edited Surname\",\r\n  \"phoneNumber\": \"12345\",\r\n  \"address\": \"Edited Address\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_EDIT_USER}}{{validWorkerId}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 19 Jun 2022 20:01:37 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"timestamp\": 1655668897865,\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/users/a21d8ab1-3af6-4f45-b0f0-b156cf6a6b96\"\n}"
+												}
+											]
+										}
+									],
+									"id": "cd0ecf76-d974-4594-98ab-3217ba2b8893",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "d4439c99-6bcf-4442-b193-87190433275e",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "b402f0ff-531b-4cc7-b068-383f73be56a1",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"pm.test(\"Response body contains error\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"
+												]
+											}
+										}
+									]
+								},
+								{
 									"name": "EditCompanyWithSameInputs",
 									"event": [
 										{
