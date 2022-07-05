@@ -27095,7 +27095,86 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "c3f878cb-2714-4b1c-9a72-d291930f7cae",
+													"name": "EditTierName",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Name\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"38166575757\",\r\n  \"address\": \"Local address\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 05 Jul 2022 14:10:07 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"timestamp\": 1657030207085,\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"path\": \"/companies\"\n}"
+												}
+											]
 										}
 									],
 									"id": "cd0ecf76-d974-4594-98ab-3217ba2b8893",
