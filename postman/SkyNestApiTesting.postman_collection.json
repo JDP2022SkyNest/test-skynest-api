@@ -26963,7 +26963,7 @@
 											]
 										},
 										{
-											"name": "EditEmail",
+											"name": "EditEmailForCompany",
 											"id": "55165b0a-b11d-44d0-9681-212ad2660b5b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
