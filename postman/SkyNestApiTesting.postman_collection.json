@@ -35576,7 +35576,7 @@
 									"response": [
 										{
 											"id": "015195a1-56c4-4d69-b966-565fc7f78b1b",
-											"name": "RestoreOwnBucketAsWorker",
+											"name": "RestoreOwnBucketAsAdmin",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
