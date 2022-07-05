@@ -27173,48 +27173,6 @@
 									]
 								},
 								{
-									"name": "AddNewCompanyAsWorker",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "bf9ec401-6c1a-4499-be74-694c5c13ede4",
-												"exec": [
-													"pm.test(\"Status code is 403\", function () {\r",
-													"    pm.response.to.have.status(403);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "087b7822-135e-484d-8bc8-bedd7c1c9131",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"contact@company.com\",\r\n  \"pib\": \"123456788\",\r\n  \"name\": \"Company One\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"3543475757\",\r\n  \"address\": \"Company Address 1\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
-									},
-									"response": []
-								},
-								{
 									"name": "EditCompanyAsWorker",
 									"event": [
 										{
