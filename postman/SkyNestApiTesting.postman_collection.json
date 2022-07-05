@@ -36149,7 +36149,20 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "3ea46ea1-97eb-4d52-a18a-19b1271eec77",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "cf0dbcd3-6fd1-43ac-9314-9160afeadd08"
 						}
 					],
