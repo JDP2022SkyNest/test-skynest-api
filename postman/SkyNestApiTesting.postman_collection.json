@@ -26126,7 +26126,20 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "72d132a7-d08f-4ed7-8d8b-c73b504fc511",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "8df4e0be-f065-401d-9ea2-3288ca2be5f7"
 						},
 						{
