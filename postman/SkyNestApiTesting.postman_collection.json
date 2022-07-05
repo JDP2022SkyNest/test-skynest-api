@@ -26969,48 +26969,6 @@
 									]
 								},
 								{
-									"name": "AddCompanyWithInvalidTier",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "05899301-ee76-492c-9b50-515b944aa080",
-												"exec": [
-													"pm.test(\"Status code is 404\", function () {\r",
-													"    pm.response.to.have.status(404);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "5806bbb9-180c-4896-9c31-0f58d8539a31",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"info@company.com\",\r\n  \"pib\": \"123456799\",\r\n  \"name\": \"Company Two\",\r\n  \"tierName\": \"test\",\r\n  \"phoneNumber\": \"52354365723\",\r\n  \"address\": \"New Address 88\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
-									},
-									"response": []
-								},
-								{
 									"name": "AddCompanyWithEmptyInputs",
 									"event": [
 										{
