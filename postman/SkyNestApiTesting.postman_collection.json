@@ -26644,7 +26644,7 @@
 							"name": "ValidTokenAndSuccessfulPOST",
 							"item": [
 								{
-									"name": "AddNewCompanyAsAdmin",
+									"name": "EditCompanyAsAdmin",
 									"event": [
 										{
 											"listen": "test",
