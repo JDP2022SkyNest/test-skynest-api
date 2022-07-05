@@ -27521,7 +27521,7 @@
 									]
 								},
 								{
-									"name": "AddNewCompanyInvalidToken",
+									"name": "EditCompanyInvalidToken",
 									"id": "ff14ce12-e3ae-4a22-9561-088ef6998695",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
