@@ -26128,7 +26128,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "GetAdmin'sCompany",
 									"id": "72d132a7-d08f-4ed7-8d8b-c73b504fc511",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
