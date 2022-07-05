@@ -26689,7 +26689,7 @@
 									"response": []
 								},
 								{
-									"name": "AddNewCompanyAsSecondAdmin",
+									"name": "EditCompanyAsWorker",
 									"event": [
 										{
 											"listen": "test",
