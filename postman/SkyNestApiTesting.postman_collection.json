@@ -35935,6 +35935,25 @@
 									]
 								},
 								{
+									"name": "RestoreWorker'sBucketAsAdmin Copy",
+									"id": "054b2fd0-1400-4f10-b55b-ffa2e300ca01",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
+									},
+									"response": []
+								},
+								{
 									"name": "RestoreAlreadyRestoredBucket",
 									"id": "9414f7fa-304b-4aa4-bcac-a726ef29473d",
 									"protocolProfileBehavior": {
