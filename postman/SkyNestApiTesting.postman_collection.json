@@ -35237,6 +35237,25 @@
 								"url": "{{BASE_URL}}/files/bucket/fb168088-7760-4054-9785-7d68ef522ec4"
 							},
 							"response": []
+						},
+						{
+							"name": "DownloadFile",
+							"id": "d02ce4f6-4e2a-417a-91e9-ea7751199604",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuZW1hbmphLm1paGFqbG92aWNAaHRlY2dyb3VwLmNvbSIsInJvbGVzIjpbInJvbGVfYWRtaW4iXSwiZXhwIjoxNjU3MDMwNjAyLCJ1dWlkIjoiY2UyMGFhYjYtMDA1MS00OWM2LTkzNDktNzI4NDU0Y2E4YWY0In0.bmCpsH73ZAs3qesopfNTCQBPQYS0t7q7LBU4e_3svDZAAAZEyQ6dmYTJtbOFZotIECwBxDXlvO5qMR8J1vWFZQ"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}/files/0227ae48-eb39-42b9-98bf-507f067a2e3b"
+							},
+							"response": []
 						}
 					],
 					"id": "7de2bf1f-cb35-4156-9ddc-a65713390973"
