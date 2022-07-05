@@ -35554,7 +35554,7 @@
 					"name": "RestoreBucket",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidTokenAndSuccessfulPUT",
 							"item": [],
 							"id": "3953641c-779f-4b13-9de0-8319415adfdd"
 						}
