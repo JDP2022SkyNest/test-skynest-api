@@ -26425,77 +26425,7 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
 									},
-									"response": [
-										{
-											"id": "1c637283-ca7a-4f42-99aa-9dfe98afec38",
-											"name": "GetUser'sCompanyEmptyToken",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 05 Jul 2022 09:28:00 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
+									"response": []
 								}
 							],
 							"id": "e036d402-1868-4340-b4aa-bc0e0e4bdc61"
