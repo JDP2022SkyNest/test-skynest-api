@@ -26772,7 +26772,7 @@
 									]
 								},
 								{
-									"name": "EditCompanyAsAdminWho'sNotPartOfTheCompany",
+									"name": "EditCompanyAsAdminWho'sNotPartOfAnyCompany",
 									"event": [
 										{
 											"listen": "test",
