@@ -36912,12 +36912,12 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{adminAuthToken}}"
 											}
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
 									},
 									"response": []
 								}
