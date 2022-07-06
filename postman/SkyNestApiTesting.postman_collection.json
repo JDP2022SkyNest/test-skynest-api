@@ -36489,7 +36489,7 @@
 										}
 									]
 								},
-								"url": "{{BASE_URL}}fb168088-7760-4054-9785-7d68ef522ec4"
+								"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
 							},
 							"response": []
 						}
