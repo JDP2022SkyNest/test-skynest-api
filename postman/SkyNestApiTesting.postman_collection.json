@@ -38340,7 +38340,81 @@
 								"header": [],
 								"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_GET_INFO}}"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "5fd6a31f-1f6b-413f-9ec7-9e053df8d412",
+									"name": "GetAdmin'sFIleInfoAsAdmin",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_GET_INFO}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 06 Jul 2022 14:03:53 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"ce0cda64-6c73-43d9-b301-3b6c387126c6\",\n    \"createdOn\": \"2022-07-06T12:46:42\",\n    \"modifiedOn\": \"2022-07-06T12:46:42\",\n    \"deletedOn\": null,\n    \"name\": \"chair.dwg\",\n    \"createdById\": \"14449105-1f68-4c1e-b7b0-4b30f22cc97f\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"c9a2d7dd-b647-467c-8735-16c4b8a338d6\",\n    \"type\": \"image/vnd.dwg\",\n    \"size\": \"523842\"\n}"
+								}
+							]
 						}
 					],
 					"id": "79066430-f19e-46bd-9136-a4c609d9580a"
