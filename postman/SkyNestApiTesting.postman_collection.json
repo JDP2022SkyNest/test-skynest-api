@@ -36465,18 +36465,6 @@
 					"name": "UploadNewFileToBucket",
 					"item": [
 						{
-							"name": "New Request",
-							"id": "c7b972b2-31e5-45dc-bc25-2cf7ef4269cd",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
-						},
-						{
 							"name": "UploadFile",
 							"id": "5f58bf1e-a3d0-4229-b04c-8883669d7aeb",
 							"protocolProfileBehavior": {
@@ -36501,10 +36489,16 @@
 										}
 									]
 								},
-								"url": "{{BASE_URL}}/files/bucket/fb168088-7760-4054-9785-7d68ef522ec4"
+								"url": "{{BASE_URL}}fb168088-7760-4054-9785-7d68ef522ec4"
 							},
 							"response": []
-						},
+						}
+					],
+					"id": "7de2bf1f-cb35-4156-9ddc-a65713390973"
+				},
+				{
+					"name": "DownloadFile",
+					"item": [
 						{
 							"name": "DownloadFile",
 							"id": "d02ce4f6-4e2a-417a-91e9-ea7751199604",
@@ -36525,16 +36519,24 @@
 							"response": []
 						}
 					],
-					"id": "7de2bf1f-cb35-4156-9ddc-a65713390973"
-				},
-				{
-					"name": "DownloadFile",
-					"item": [],
 					"id": "d70b52b7-36da-44a7-b484-d303c0fbb59e"
 				},
 				{
 					"name": "GetFileInfo",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "c7b972b2-31e5-45dc-bc25-2cf7ef4269cd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "79066430-f19e-46bd-9136-a4c609d9580a"
 				}
 			],
