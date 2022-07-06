@@ -36930,7 +36930,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToAdmin'sBucketAsWorker Copy",
+											"name": "UploadEmptyFile",
 											"event": [
 												{
 													"listen": "test",
