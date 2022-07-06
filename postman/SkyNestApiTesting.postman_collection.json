@@ -36465,6 +36465,11 @@
 					"name": "UploadNewFileToBucket",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "1ba56730-5598-45f6-8952-45caa17c7d8b"
+						},
+						{
 							"name": "UploadFileToWorker'sBucketAsWorker",
 							"event": [
 								{
