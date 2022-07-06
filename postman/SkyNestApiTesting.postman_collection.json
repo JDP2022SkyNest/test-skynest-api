@@ -36785,7 +36785,67 @@
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulPOST",
-									"item": [],
+									"item": [
+										{
+											"name": "UploadFileToAdmin'sBucketAsAdmin Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"createdById from the response is the same of the user who created the bucket\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"    var jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData.id).is.not.null;\r",
+															"    pm.environment.set(\"adminFileId\", jsonData.id);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "901adc56-372a-4507-9d7e-309bdcce7967",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
+											},
+											"response": []
+										}
+									],
 									"id": "5e201716-228a-4798-bce7-bbc3387e159d"
 								}
 							],
