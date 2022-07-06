@@ -36825,7 +36825,7 @@
 									"response": [
 										{
 											"id": "5ba0b500-2eb1-4923-8455-ff28683281be",
-											"name": "DownloadFile",
+											"name": "DownloadWorker'sFileAsWorker",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
