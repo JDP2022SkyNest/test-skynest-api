@@ -38741,7 +38741,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "GetFileInfoEMptyToken",
+									"name": "GetFileInfoEmptyToken",
 									"id": "7e691667-1b91-4722-a2fc-7ea4eb188897",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -38760,6 +38760,95 @@
 									"response": [
 										{
 											"id": "a6c9a357-9ce6-4774-af6e-7ae87f8f977e",
+											"name": "GetFileInfoEMptyToken",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 06 Jul 2022 14:12:41 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "GetFileInfoExpiredToken",
+									"id": "a0d083c1-3e48-4bab-8055-38814f38cc36",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_GET_INFO}}"
+									},
+									"response": [
+										{
+											"id": "3b8ffe6c-156b-4b01-af78-5146fd283ba0",
 											"name": "GetFileInfoEMptyToken",
 											"originalRequest": {
 												"method": "GET",
