@@ -36611,7 +36611,7 @@
 									]
 								},
 								{
-									"name": "UploadFileToWorker'sBucketAsWorker Copy",
+									"name": "UploadFileToAdmin'sBucketAsAdmin",
 									"event": [
 										{
 											"listen": "test",
