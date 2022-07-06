@@ -38324,7 +38324,7 @@
 							]
 						},
 						{
-							"name": "GetWorker'sFileInfoAsWorker Copy",
+							"name": "GetAdmin'sFIleInfoAsAdmin",
 							"id": "622c1dae-7f09-4515-bf59-b78fd1a4ae01",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
