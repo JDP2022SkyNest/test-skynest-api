@@ -36472,10 +36472,10 @@
 									"script": {
 										"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
 										"exec": [
-											"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+											"pm.test(\"BucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
-											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"    workerBucketId = pm.environment.get(\"workerBucketId\");\r",
+											"    pm.expect(jsonData.bucketId).to.eql(workerBucketId);\r",
 											"});\r",
 											"\r",
 											"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
