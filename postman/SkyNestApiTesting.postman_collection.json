@@ -36812,12 +36812,12 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJuZW1hbmphLm1paGFqbG92aWNAaHRlY2dyb3VwLmNvbSIsInJvbGVzIjpbInJvbGVfYWRtaW4iXSwiZXhwIjoxNjU3MDMwNjAyLCJ1dWlkIjoiY2UyMGFhYjYtMDA1MS00OWM2LTkzNDktNzI4NDU0Y2E4YWY0In0.bmCpsH73ZAs3qesopfNTCQBPQYS0t7q7LBU4e_3svDZAAAZEyQ6dmYTJtbOFZotIECwBxDXlvO5qMR8J1vWFZQ"
+										"token": "{{workerAuthToken}}"
 									}
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BASE_URL}}/files/0227ae48-eb39-42b9-98bf-507f067a2e3b"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
 							},
 							"response": []
 						}
