@@ -36535,7 +36535,20 @@
 			"item": [
 				{
 					"name": "GetFolderById",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "cd227e90-f4c3-465e-b801-30e74aa7291c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "914063ca-b298-4c4f-ae3e-b84cd14a9a69"
 				}
 			],
