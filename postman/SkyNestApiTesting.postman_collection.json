@@ -36803,6 +36803,11 @@
 					"name": "DownloadFile",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "e7d57c55-5701-4154-9d02-1cde2d847014"
+						},
+						{
 							"name": "DownloadFile",
 							"id": "d02ce4f6-4e2a-417a-91e9-ea7751199604",
 							"protocolProfileBehavior": {
