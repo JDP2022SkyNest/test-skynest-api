@@ -36474,7 +36474,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{adminAuthToken}}"
+										"token": "{{workerAuthToken}}"
 									}
 								},
 								"method": "POST",
@@ -36485,7 +36485,7 @@
 										{
 											"key": "file",
 											"type": "file",
-											"src": "/C:/Users/Nemanja/Downloads/MicrosoftTeams-image (20).png"
+											"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
 										}
 									]
 								},
