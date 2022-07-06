@@ -37775,7 +37775,27 @@
 								},
 								{
 									"name": "ValidTokenAndUnsuccessfulGET",
-									"item": [],
+									"item": [
+										{
+											"name": "DownloadNotExistingFile",
+											"id": "e6dbfe50-908a-4852-aa62-a9738144e6cc",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+											},
+											"response": []
+										}
+									],
 									"id": "5e8f50a8-331f-495e-8bb7-5b8ae9ab61ed"
 								}
 							],
