@@ -37791,7 +37791,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{notExistingFileId}}"
 											},
 											"response": [
 												{
@@ -37877,20 +37877,7 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [
-								{
-									"name": "New Request",
-									"id": "882ae807-c91c-468c-a1d1-ecb67bb96982",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
-									},
-									"response": []
-								}
-							],
+							"item": [],
 							"id": "ed8d60ac-a890-4207-b61e-dec19e994bea"
 						}
 					],
