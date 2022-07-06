@@ -36537,7 +36537,7 @@
 					"name": "GetFolderById",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "GetFolderByIdAsAdmin",
 							"id": "cd227e90-f4c3-465e-b801-30e74aa7291c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
