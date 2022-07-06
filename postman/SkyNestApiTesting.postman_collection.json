@@ -36544,7 +36544,8 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}} {{ENDPOINT_FOLDER_INFO}}"
 							},
 							"response": []
 						}
