@@ -38322,6 +38322,25 @@
 									"body": "{\n    \"id\": \"1a78b970-18c1-4475-a6d7-b873f4c32035\",\n    \"createdOn\": \"2022-07-06T10:13:10\",\n    \"modifiedOn\": \"2022-07-06T10:13:10\",\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"14449105-1f68-4c1e-b7b0-4b30f22cc97f\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"c9a2d7dd-b647-467c-8735-16c4b8a338d6\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\"\n}"
 								}
 							]
+						},
+						{
+							"name": "GetWorker'sFileInfoAsWorker Copy",
+							"id": "622c1dae-7f09-4515-bf59-b78fd1a4ae01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_GET_INFO}}"
+							},
+							"response": []
 						}
 					],
 					"id": "79066430-f19e-46bd-9136-a4c609d9580a"
