@@ -36531,6 +36531,11 @@
 					"name": "DownloadFile",
 					"item": [],
 					"id": "d70b52b7-36da-44a7-b484-d303c0fbb59e"
+				},
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "79066430-f19e-46bd-9136-a4c609d9580a"
 				}
 			],
 			"id": "d3cdc943-70d1-45b3-a2d2-36ffb687da96"
