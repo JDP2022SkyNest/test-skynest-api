@@ -38423,31 +38423,7 @@
 											]
 										}
 									],
-									"id": "fca28138-a9eb-4d46-bebc-3d0801451da5",
-									"event": [
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "4c936f84-9d9e-4474-b5d0-b87c32b1e8ef",
-												"type": "text/javascript",
-												"exec": [
-													""
-												]
-											}
-										},
-										{
-											"listen": "test",
-											"script": {
-												"id": "7a1e3a63-f9d1-4cf9-9987-6c2236b3b665",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Status code is 200\", function () {",
-													"    pm.response.to.have.status(200);",
-													"});"
-												]
-											}
-										}
-									]
+									"id": "fca28138-a9eb-4d46-bebc-3d0801451da5"
 								},
 								{
 									"name": "ValidTokenAndUnsuccessfulGET",
