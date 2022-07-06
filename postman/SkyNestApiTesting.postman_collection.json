@@ -38231,6 +38231,11 @@
 					"name": "GetFileInfo",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "90b67db1-9968-45e6-ac9f-383135b24514"
+						},
+						{
 							"name": "GetWorker'sFileInfoAsWorker",
 							"id": "c7b972b2-31e5-45dc-bc25-2cf7ef4269cd",
 							"protocolProfileBehavior": {
