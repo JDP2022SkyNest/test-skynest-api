@@ -38655,7 +38655,81 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_GET_INFO}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "4984b552-7a98-4afe-9a8b-b7697047e4e6",
+													"name": "GetInfoForNotExistingFile",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{notExistingFileId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 06 Jul 2022 14:11:39 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"File not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-06 14:11:39\"\n}"
+												}
+											]
 										}
 									],
 									"id": "b24b9280-4fa4-4dc9-84a1-131b8978491b"
