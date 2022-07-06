@@ -36473,6 +36473,11 @@
 									"id": "471f6634-84b2-4336-836a-50a175399008"
 								},
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "5e201716-228a-4798-bce7-bbc3387e159d"
+								},
+								{
 									"name": "UploadFileToWorker'sBucketAsWorker",
 									"event": [
 										{
