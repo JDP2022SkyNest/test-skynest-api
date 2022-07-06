@@ -36787,7 +36787,7 @@
 									"name": "ValidTokenButUnsuccessfulPOST",
 									"item": [
 										{
-											"name": "UploadFile",
+											"name": "UploadFileToAdmin'sBucketAsWorker",
 											"event": [
 												{
 													"listen": "test",
