@@ -38231,7 +38231,7 @@
 					"name": "GetFileInfo",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "90b67db1-9968-45e6-ac9f-383135b24514"
 						},
