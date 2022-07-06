@@ -36795,7 +36795,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "UploadFileEmptyToken",
 									"id": "23c04163-55de-4382-b3a7-f993213e76a8",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
