@@ -36465,7 +36465,7 @@
 					"name": "UploadNewFileToBucket",
 					"item": [
 						{
-							"name": "UploadFile",
+							"name": "UploadFileToWorker'sBucketAsWorker",
 							"event": [
 								{
 									"listen": "test",
