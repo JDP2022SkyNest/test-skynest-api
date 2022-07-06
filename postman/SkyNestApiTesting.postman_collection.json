@@ -36465,7 +36465,7 @@
 					"name": "UploadNewFileToBucket",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "1ba56730-5598-45f6-8952-45caa17c7d8b"
 						},
