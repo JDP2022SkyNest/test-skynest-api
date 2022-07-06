@@ -38739,7 +38739,20 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "GetFileInfoEMptyToken",
+									"id": "7e691667-1b91-4722-a2fc-7ea4eb188897",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "60be7ecf-182d-42c8-8af7-60fa216fc1d4"
 						}
 					],
