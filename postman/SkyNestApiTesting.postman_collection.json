@@ -38236,6 +38236,11 @@
 							"id": "90b67db1-9968-45e6-ac9f-383135b24514"
 						},
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "60be7ecf-182d-42c8-8af7-60fa216fc1d4"
+						},
+						{
 							"name": "GetWorker'sFileInfoAsWorker",
 							"id": "c7b972b2-31e5-45dc-bc25-2cf7ef4269cd",
 							"protocolProfileBehavior": {
