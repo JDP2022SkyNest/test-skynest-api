@@ -37574,6 +37574,11 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "1bbafb54-4b2c-437f-ba54-e8e19912a28b"
+								},
+								{
 									"name": "DownloadWorker'sFileAsWorker",
 									"id": "d02ce4f6-4e2a-417a-91e9-ea7751199604",
 									"protocolProfileBehavior": {
