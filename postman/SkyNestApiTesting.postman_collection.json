@@ -38231,7 +38231,7 @@
 					"name": "GetFileInfo",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "GetWorker'sFileInfoAsWorker",
 							"id": "c7b972b2-31e5-45dc-bc25-2cf7ef4269cd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
