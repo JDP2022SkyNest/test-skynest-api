@@ -21,6 +21,21 @@ public class LoginTest extends BaseTest {
         };
     }
 
+    @DataProvider(name = "invalidPassword")
+    public static Object[][] invalidPassword() {
+        return new Object[][]{
+                {"yagaj78380@jrvps.com", "invalidpass"},
+                {"yagaj78380@jrvps.com", ""}
+        };
+    }
+
+    @DataProvider(name = "maxNumberOfLoginAttempts")
+    public static Object[][] maxAttempts() {
+        return new Object[][]{
+                {5}
+        };
+    }
+
     @Test
     void verified_user_should_be_successfully_logged_in() {
         LoginRequest body = new LoginRequest("yagaj78380@jrvps.com", "System123");
@@ -35,16 +50,9 @@ public class LoginTest extends BaseTest {
         loginResponse.then().statusCode(SC_FORBIDDEN);
     }
 
-    @Test
-    void user_should_not_be_logged_in_entering_valid_email_and_invalid_password() {
-        LoginRequest body = new LoginRequest("yagaj78380@jrvps.com", "invalidpass");
-        Response loginResponse = skyNestBackendClient.login(body);
-        loginResponse.then().statusCode(SC_UNAUTHORIZED);
-    }
-
-    @Test
-    void user_should_not_be_logged_in_entering_valid_email_and_blank_password() {
-        LoginRequest body = new LoginRequest("yagaj78380@jrvps.com", "");
+    @Test(dataProvider = "invalidPassword")
+    void user_should_not_log_in_with_invalid_or_blank_password(String email, String password) {
+        LoginRequest body = new LoginRequest(email, password);
         Response loginResponse = skyNestBackendClient.login(body);
         loginResponse.then().statusCode(SC_UNAUTHORIZED);
     }
@@ -56,11 +64,11 @@ public class LoginTest extends BaseTest {
         loginResponse.then().statusCode(SC_NOT_FOUND);
     }
 
-    @Test
-    void user_should_be_locked_after_five_invalid_attempts() {
+    @Test(dataProvider = "maxNumberOfLoginAttempts")
+    void user_should_be_locked_after_number_of_invalid_attempts(int maxAttempts) {
         LoginRequest body = new LoginRequest("vobipi9211@kahase.com", "invalid");
         Response loginResponse = null;
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 0; i <= maxAttempts; i++) {
             loginResponse = skyNestBackendClient.login(body);
         }
         loginResponse.then().statusCode(429);
