@@ -37077,6 +37077,155 @@
 													"body": "{\n    \"timestamp\": 1657111839769,\n    \"status\": 415,\n    \"error\": \"Unsupported Media Type\",\n    \"path\": \"/files/bucket/c9a2d7dd-b647-467c-8735-16c4b8a338d6\"\n}"
 												}
 											]
+										},
+										{
+											"name": "UploadFileToAlreadyDeletedBucket",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"createdById from the response is the same of the user who created the bucket\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"    var jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData.id).is.not.null;\r",
+															"    pm.environment.set(\"adminFileId\", jsonData.id);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "216df460-93a9-4b1d-abbe-2f686c2bd444",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"value": null,
+															"disabled": true
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
+											},
+											"response": [
+												{
+													"id": "b9dd8397-d13f-481b-a9bf-1bb0c8c4fc82",
+													"name": "UploadWithoutAttachingFile",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"value": null,
+																	"disabled": true
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
+													},
+													"status": "Unsupported Media Type",
+													"code": 415,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Accept",
+															"value": "multipart/form-data"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 06 Jul 2022 12:50:39 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"timestamp\": 1657111839769,\n    \"status\": 415,\n    \"error\": \"Unsupported Media Type\",\n    \"path\": \"/files/bucket/c9a2d7dd-b647-467c-8735-16c4b8a338d6\"\n}"
+												}
+											]
 										}
 									],
 									"id": "5e201716-228a-4798-bce7-bbc3387e159d"
