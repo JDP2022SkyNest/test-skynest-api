@@ -36469,76 +36469,50 @@
 							"item": [
 								{
 									"name": "ValidTokenAndSuccessfulPOST",
-									"item": [],
-									"id": "471f6634-84b2-4336-836a-50a175399008"
-								},
-								{
-									"name": "ValidTokenButUnsuccessfulPOST",
-									"item": [],
-									"id": "5e201716-228a-4798-bce7-bbc3387e159d"
-								},
-								{
-									"name": "UploadFileToWorker'sBucketAsWorker",
-									"event": [
+									"item": [
 										{
-											"listen": "test",
-											"script": {
-												"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
-												"exec": [
-													"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    workerBucketId = pm.environment.get(\"workerBucketId\");\r",
-													"    pm.expect(jsonData.bucketId).to.eql(workerBucketId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"createdById from the response is the same of the user who created the bucket\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
-													"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"workerFileId\", jsonData.id);\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "5f58bf1e-a3d0-4229-b04c-8883669d7aeb",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "file",
-													"type": "file",
-													"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
-												}
-											]
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
-									},
-									"response": [
-										{
-											"id": "93ad928f-48f9-458f-a89d-01d0f2ffc0a0",
 											"name": "UploadFileToWorker'sBucketAsWorker",
-											"originalRequest": {
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    workerBucketId = pm.environment.get(\"workerBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(workerBucketId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"createdById from the response is the same of the user who created the bucket\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"    var jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData.id).is.not.null;\r",
+															"    pm.environment.set(\"workerFileId\", jsonData.id);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "5f58bf1e-a3d0-4229-b04c-8883669d7aeb",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
 												"method": "POST",
 												"header": [],
 												"body": {
@@ -36553,135 +36527,135 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
 											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 06 Jul 2022 10:07:56 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"a6119818-0fee-4e17-94ed-dafcd4144a77\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"0dd0ac3e-2ecf-446e-a376-3127d1766a7e\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\"\n}"
-										}
-									]
-								},
-								{
-									"name": "UploadFileToAdmin'sBucketAsAdmin",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
-												"exec": [
-													"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
-													"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"createdById from the response is the same of the user who created the bucket\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"adminFileId\", jsonData.id);\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "6371256a-14b2-4831-9c25-30aa4d307ccf",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "file",
-													"type": "file",
-													"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+													"id": "93ad928f-48f9-458f-a89d-01d0f2ffc0a0",
+													"name": "UploadFileToWorker'sBucketAsWorker",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 06 Jul 2022 10:07:56 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"a6119818-0fee-4e17-94ed-dafcd4144a77\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"0dd0ac3e-2ecf-446e-a376-3127d1766a7e\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\"\n}"
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
-									},
-									"response": [
 										{
-											"id": "b7340e67-0d37-4fac-acbd-9044ba0a93df",
 											"name": "UploadFileToAdmin'sBucketAsAdmin",
-											"originalRequest": {
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"createdById from the response is the same of the user who created the bucket\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"    var jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData.id).is.not.null;\r",
+															"    pm.environment.set(\"adminFileId\", jsonData.id);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "6371256a-14b2-4831-9c25-30aa4d307ccf",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
 												"method": "POST",
 												"header": [],
 												"body": {
@@ -36696,72 +36670,123 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
 											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 06 Jul 2022 10:15:10 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
+													"id": "b7340e67-0d37-4fac-acbd-9044ba0a93df",
+													"name": "UploadFileToAdmin'sBucketAsAdmin",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 06 Jul 2022 10:15:10 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"a1d9f426-5b85-4c70-9459-2990a7573a1e\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"14449105-1f68-4c1e-b7b0-4b30f22cc97f\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"c9a2d7dd-b647-467c-8735-16c4b8a338d6\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\"\n}"
 												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"a1d9f426-5b85-4c70-9459-2990a7573a1e\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"14449105-1f68-4c1e-b7b0-4b30f22cc97f\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"c9a2d7dd-b647-467c-8735-16c4b8a338d6\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\"\n}"
+											]
+										}
+									],
+									"id": "471f6634-84b2-4336-836a-50a175399008",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "c3154ae4-44a5-45fd-8f28-c23fe5eaae1a",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "650e196c-14c5-4ce3-a04f-b40d7c0d50f8",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
 										}
 									]
+								},
+								{
+									"name": "ValidTokenButUnsuccessfulPOST",
+									"item": [],
+									"id": "5e201716-228a-4798-bce7-bbc3387e159d"
 								}
 							],
 							"id": "1ba56730-5598-45f6-8952-45caa17c7d8b"
