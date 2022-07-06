@@ -36466,6 +36466,30 @@
 					"item": [
 						{
 							"name": "UploadFile",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+										"exec": [
+											"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.id).is.not.null;\r",
+											"    pm.environment.set(\"\", jsonData.id);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "5f58bf1e-a3d0-4229-b04c-8883669d7aeb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
