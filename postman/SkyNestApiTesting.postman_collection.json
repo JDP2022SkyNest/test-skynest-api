@@ -38941,8 +38941,8 @@
 									},
 									"response": [
 										{
-											"id": "0b71a123-0cce-4eab-b28c-cd2bf042be47",
-											"name": "GetFileInfoExpiredToken",
+											"id": "123ef87a-75bc-4364-995f-54ca2877eb68",
+											"name": "GetFileInfoInvalidToken",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -38950,7 +38950,7 @@
 											},
 											"status": "Unauthorized",
 											"code": 401,
-											"_postman_previewlanguage": "json",
+											"_postman_previewlanguage": "plain",
 											"header": [
 												{
 													"key": "Vary",
@@ -38989,16 +38989,12 @@
 													"value": "DENY"
 												},
 												{
-													"key": "Content-Type",
-													"value": "application/json;charset=ISO-8859-1"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
+													"key": "Content-Length",
+													"value": "0"
 												},
 												{
 													"key": "Date",
-													"value": "Wed, 06 Jul 2022 14:13:30 GMT"
+													"value": "Wed, 06 Jul 2022 14:13:54 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -39011,7 +39007,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-06 14:13:30\"\n}"
+											"body": null
 										}
 									]
 								}
