@@ -40915,7 +40915,7 @@
 									"name": "ValidTokenButUnsuccessfulPUT",
 									"item": [
 										{
-											"name": "New Request",
+											"name": "RemoveNotExistingFolder",
 											"id": "dc85480d-9a1c-4123-ac07-52e615d51c05",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
