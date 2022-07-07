@@ -40845,7 +40845,20 @@
 							"item": [
 								{
 									"name": "ValidTokenAndSuccessfulPUT",
-									"item": [],
+									"item": [
+										{
+											"name": "New Request",
+											"id": "ef28627a-e042-489e-849b-e5f18172c8bf",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
+										}
+									],
 									"id": "d848baae-0914-48b5-8fa8-3bd85ec09f2b"
 								},
 								{
