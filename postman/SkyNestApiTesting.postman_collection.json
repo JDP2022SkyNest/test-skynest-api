@@ -40916,7 +40916,7 @@
 									"response": []
 								},
 								{
-									"name": "CreateFolderInvalidToken",
+									"name": "RemoveFolderInvalidToken",
 									"id": "8cfbbf5e-c261-4aac-88d0-787f0c525d1b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
