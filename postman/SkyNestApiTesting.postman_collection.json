@@ -39415,14 +39415,14 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": "{{workerAuthToken}}"
 											}
 										},
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+											"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"bucketId\": \"{{workerBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
