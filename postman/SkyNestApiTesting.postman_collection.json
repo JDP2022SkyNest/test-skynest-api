@@ -36973,7 +36973,13 @@
 													}
 												},
 												"method": "POST",
-												"header": [],
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "multipart/form-data",
+														"type": "text"
+													}
+												],
 												"body": {
 													"mode": "formdata",
 													"formdata": [
