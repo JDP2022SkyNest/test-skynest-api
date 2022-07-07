@@ -39322,7 +39322,7 @@
 									},
 									"response": [
 										{
-											"id": "2d64d345-edb7-4391-8547-34ac2794bb89",
+											"id": "389ed084-0164-4d34-888b-167d7b384379",
 											"name": "CreateFolderInAdmin'sBucketAsAdmin",
 											"originalRequest": {
 												"method": "POST",
@@ -39336,7 +39336,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}/folders"
+												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
 											},
 											"status": "OK",
 											"code": 200,
@@ -39388,7 +39388,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Thu, 07 Jul 2022 09:16:45 GMT"
+													"value": "Thu, 07 Jul 2022 09:20:11 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -39401,7 +39401,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"id\": \"891947b1-f685-4ab6-85b1-477e3295a35e\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"0e16cb8c-9f61-45ad-90cf-2b18e7dbe17b\"\n}"
+											"body": "{\n    \"id\": \"5c1745de-c102-4598-b4e6-7249e47c94a0\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"0e16cb8c-9f61-45ad-90cf-2b18e7dbe17b\"\n}"
 										}
 									]
 								},
