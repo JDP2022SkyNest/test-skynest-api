@@ -29681,7 +29681,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Bucket One\",\r\n  \"description\": \"Description One\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Bucket One\",\r\n  \"description\": \"Description One\",\r\n  \"isPublic\": true\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -40737,7 +40737,7 @@
 														"token": "{{workerAuthToken}}"
 													}
 												},
-												"method": "POST",
+												"method": "GET",
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_GET_INFO}}"
 											},
