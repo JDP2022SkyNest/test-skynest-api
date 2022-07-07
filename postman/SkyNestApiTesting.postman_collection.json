@@ -39748,7 +39748,7 @@
 											]
 										},
 										{
-											"name": "CreateFolder",
+											"name": "CreateFolderWithEmptyName",
 											"id": "04be37b4-0351-41d8-8f6d-d77cabdf5c1d",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
