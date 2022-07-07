@@ -39289,7 +39289,7 @@
 					"id": "914063ca-b298-4c4f-ae3e-b84cd14a9a69"
 				},
 				{
-					"name": "AddFolder",
+					"name": "CreateFolder",
 					"item": [
 						{
 							"name": "ValidToken",
