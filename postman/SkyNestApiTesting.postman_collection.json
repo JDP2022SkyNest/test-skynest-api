@@ -35558,7 +35558,20 @@
 							"item": [
 								{
 									"name": "ValidTokenAndSuccessfulGET",
-									"item": [],
+									"item": [
+										{
+											"name": "New Request",
+											"id": "39c883e3-98a4-4d0e-975c-987c72978ae4",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
+										}
+									],
 									"id": "b1793f4c-a405-44f1-a717-efd9f5ef9b2b"
 								},
 								{
