@@ -40919,7 +40919,7 @@
 												"token": "{{invalidToken}}"
 											}
 										},
-										"method": "POST",
+										"method": "PUT",
 										"header": [],
 										"body": {
 											"mode": "raw",
@@ -40930,7 +40930,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
 									},
 									"response": []
 								}
