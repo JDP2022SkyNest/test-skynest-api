@@ -39429,7 +39429,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}/folders"
+										"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
 									},
 									"response": [
 										{
