@@ -35568,7 +35568,7 @@
 											"request": {
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{"
+												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_TRASHED_BUCKETS}}"
 											},
 											"response": []
 										}
