@@ -40841,6 +40841,17 @@
 					"name": "RemoveFolder",
 					"item": [
 						{
+							"name": "ValidToken",
+							"item": [
+								{
+									"name": "New Folder",
+									"item": [],
+									"id": "d848baae-0914-48b5-8fa8-3bd85ec09f2b"
+								}
+							],
+							"id": "e8d77b6c-763a-46f9-b298-a90e3367b262"
+						},
+						{
 							"name": "InvalidToken",
 							"item": [
 								{
