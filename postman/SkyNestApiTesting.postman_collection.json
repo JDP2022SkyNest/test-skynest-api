@@ -35611,7 +35611,7 @@
 									"response": []
 								},
 								{
-									"name": "ViewAllBucketsInvalidToken",
+									"name": "ViewTrashedBucketsInvalidToken",
 									"id": "10ab77b6-4aff-4118-81ae-acf315eb7a9a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
