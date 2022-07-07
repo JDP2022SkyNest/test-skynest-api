@@ -39086,7 +39086,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Folder One\",\r\n  \"bucketId\": {{adminBucketId}},\r\n  \"parentFolderId\": null\r\n}",
+									"raw": "{\r\n  \"name\": \"Folder Hris\",\r\n  \"parentFolderId\": null,\r\n  \"bucketId\": {{adminBucketId}}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
