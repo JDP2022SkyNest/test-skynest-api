@@ -39270,25 +39270,6 @@
 			"name": "FolderAPI",
 			"item": [
 				{
-					"name": "GetFolderById",
-					"item": [
-						{
-							"name": "GetFolderByIdAsAdmin",
-							"id": "cd227e90-f4c3-465e-b801-30e74aa7291c",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}} {{ENDPOINT_FOLDER_INFO}}"
-							},
-							"response": []
-						}
-					],
-					"id": "914063ca-b298-4c4f-ae3e-b84cd14a9a69"
-				},
-				{
 					"name": "CreateFolder",
 					"item": [
 						{
@@ -39299,6 +39280,23 @@
 									"item": [
 										{
 											"name": "CreateFolderInAdmin'sBucketAsAdmin",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "70017d98-8ff8-450f-9ac0-ec8693a54232",
+														"exec": [
+															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"    var jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData.id).is.not.null;\r",
+															"    pm.environment.set(\"workerFileId\", jsonData.id);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "f0d08cf9-63e3-4db0-a66c-f2c7cc0f2be6",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -40459,6 +40457,25 @@
 						}
 					],
 					"id": "eef3a030-7f92-43d6-be59-ef7952533c8f"
+				},
+				{
+					"name": "GetFolderById",
+					"item": [
+						{
+							"name": "GetFolderByIdAsAdmin",
+							"id": "cd227e90-f4c3-465e-b801-30e74aa7291c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}} {{ENDPOINT_FOLDER_INFO}}"
+							},
+							"response": []
+						}
+					],
+					"id": "914063ca-b298-4c4f-ae3e-b84cd14a9a69"
 				}
 			],
 			"id": "7c5604c7-db6c-45b2-97a4-74a97e535d69"
