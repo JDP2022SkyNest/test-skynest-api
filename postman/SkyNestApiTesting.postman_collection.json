@@ -37698,7 +37698,7 @@
 											]
 										},
 										{
-											"name": "DownloadAdmin'sFileAsWorker",
+											"name": "DownloadAdmin'sFileAsAdmin",
 											"id": "5a32c029-f051-4625-bc60-de9a5f0035ee",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
