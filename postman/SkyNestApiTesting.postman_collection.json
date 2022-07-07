@@ -39763,11 +39763,17 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "",
+											"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
