@@ -40874,15 +40874,6 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
 										"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
 									},
 									"response": []
