@@ -40725,7 +40725,7 @@
 									"name": "ValidTokenButUnsuccessfulGET",
 									"item": [
 										{
-											"name": "New Request",
+											"name": "GetNotExistingFolder",
 											"id": "0460ef79-5924-4f11-bc93-781b9055d15d",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
