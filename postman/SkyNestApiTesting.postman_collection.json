@@ -40847,6 +40847,11 @@
 									"name": "ValidTokenAndSuccessfulPUT",
 									"item": [],
 									"id": "d848baae-0914-48b5-8fa8-3bd85ec09f2b"
+								},
+								{
+									"name": "ValidTokenButUnsuccessfulPUT",
+									"item": [],
+									"id": "4c288785-71d9-4cae-beef-32d92f788d26"
 								}
 							],
 							"id": "e8d77b6c-763a-46f9-b298-a90e3367b262"
