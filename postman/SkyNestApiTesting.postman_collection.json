@@ -40948,7 +40948,7 @@
 												},
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{notExistingFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
 											},
 											"response": []
 										}
