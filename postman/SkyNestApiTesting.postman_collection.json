@@ -39757,7 +39757,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "CreateFolderEmptyToken",
 									"id": "d3f2411d-c4d6-47fc-a7a4-47860af0f001",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
