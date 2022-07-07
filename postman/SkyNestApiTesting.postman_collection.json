@@ -40503,6 +40503,11 @@
 					"name": "GetFolderById",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "04fa9042-78db-472a-8489-15c2f8741c6b"
+						},
+						{
 							"name": "GetFolderByIdAsAdmin",
 							"id": "cd227e90-f4c3-465e-b801-30e74aa7291c",
 							"protocolProfileBehavior": {
