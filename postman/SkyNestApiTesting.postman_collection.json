@@ -39290,7 +39290,7 @@
 															"    pm.response.to.have.status(200);\r",
 															"    var jsonData = pm.response.json();\r",
 															"    pm.expect(jsonData.id).is.not.null;\r",
-															"    pm.environment.set(\"workerFileId\", jsonData.id);\r",
+															"    pm.environment.set(\"adminFold\", jsonData.id);\r",
 															"});"
 														],
 														"type": "text/javascript"
