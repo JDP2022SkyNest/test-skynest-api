@@ -39441,8 +39441,8 @@
 															"\r",
 															"pm.test(\"createdById from the response is the same of the user who created the folder\", function () {\r",
 															"    var jsonData = pm.response.json();\r",
-															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
+															"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
 															"});"
 														],
 														"type": "text/javascript"
