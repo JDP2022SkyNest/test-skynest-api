@@ -40875,12 +40875,12 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{adminFolderId}}"
 											},
 											"response": []
 										}
