@@ -40888,7 +40888,7 @@
 									"response": []
 								},
 								{
-									"name": "CreateFolderExpiredToken",
+									"name": "RemoveFolderExpiredToken",
 									"id": "5086e086-3f88-4113-9a4b-da943825d40f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
