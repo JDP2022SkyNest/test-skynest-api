@@ -39526,7 +39526,7 @@
 									"name": "ValidTokenAndUnsuccessfulPOST",
 									"item": [
 										{
-											"name": "CreateFolderInAdmin'sBucketAsAdmin Copy",
+											"name": "CreateFolderInAdmin'sBucketAsWorker",
 											"id": "e2c358b8-95c1-48bc-9c40-02dadd25a833",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
