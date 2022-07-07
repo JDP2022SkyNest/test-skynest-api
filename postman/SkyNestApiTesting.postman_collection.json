@@ -29681,7 +29681,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Bucket One\",\r\n  \"description\": \"Description One\",\r\n  \"isPublic\": true\r\n}",
+													"raw": "{\r\n  \"name\": \"Bucket One\",\r\n  \"description\": \"Description One\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
