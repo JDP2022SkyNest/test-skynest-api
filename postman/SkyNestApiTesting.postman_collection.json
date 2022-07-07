@@ -40932,6 +40932,25 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{notExistingFolderId}}"
 											},
 											"response": []
+										},
+										{
+											"name": "RemoveAlreadyRemovedFolder",
+											"id": "830210f2-1e06-4598-b1e1-1417e3b5d36a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{notExistingFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "4c288785-71d9-4cae-beef-32d92f788d26"
