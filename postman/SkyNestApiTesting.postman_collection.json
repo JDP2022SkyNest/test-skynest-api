@@ -39070,7 +39070,7 @@
 					"name": "AddFolder",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "73cb1d36-5f5a-418a-ba12-35a8241f2a47"
 						},
