@@ -39862,6 +39862,34 @@
 											"body": null
 										}
 									]
+								},
+								{
+									"name": "CreateFolderEmptyToken Copy",
+									"id": "f5cdd913-0695-411e-a551-8af7156a2d87",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+									},
+									"response": []
 								}
 							],
 							"id": "d2b0980f-672a-403d-94ac-e0e2ab4c6a4d"
