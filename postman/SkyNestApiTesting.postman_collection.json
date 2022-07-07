@@ -40731,8 +40731,9 @@
 												"disableBodyPruning": true
 											},
 											"request": {
-												"method": "GET",
-												"header": []
+												"method": "POST",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{"
 											},
 											"response": []
 										}
