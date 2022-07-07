@@ -35571,6 +35571,19 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_TRASHED_BUCKETS}}"
 											},
 											"response": []
+										},
+										{
+											"name": "ViewTrashedBucketsAsAdmin",
+											"id": "66aabaa4-4be1-44ef-a4dd-480bbe290512",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_TRASHED_BUCKETS}}"
+											},
+											"response": []
 										}
 									],
 									"id": "b1793f4c-a405-44f1-a717-efd9f5ef9b2b"
