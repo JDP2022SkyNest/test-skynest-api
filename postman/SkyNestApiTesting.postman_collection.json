@@ -39295,7 +39295,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "CreateFolderInAdmin'sBucketAsAdmin",
 									"id": "f0d08cf9-63e3-4db0-a66c-f2c7cc0f2be6",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
