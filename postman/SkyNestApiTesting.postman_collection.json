@@ -37919,6 +37919,20 @@
 										},
 										{
 											"name": "DownloadWorker'sFileAsAdmin",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "8a494107-269e-435b-af2d-65291c369515",
+														"exec": [
+															"pm.test(\"Status code is 403\", function () {\r",
+															"    pm.response.to.have.status(403);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "d02ce4f6-4e2a-417a-91e9-ea7751199604",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
