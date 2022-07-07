@@ -35592,7 +35592,7 @@
 									"response": []
 								},
 								{
-									"name": "ViewAllBucketsExpiredToken",
+									"name": "ViewTrashedBucketsExpiredToken",
 									"id": "cb4efbde-fa43-4bcb-8a21-92361adb0909",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
