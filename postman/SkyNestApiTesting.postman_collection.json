@@ -40951,6 +40951,25 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
 											},
 											"response": []
+										},
+										{
+											"name": "RemoveWorker'sFolderAsAdmin",
+											"id": "2f0f59c4-8d7c-42cb-bea2-425847d03768",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "4c288785-71d9-4cae-beef-32d92f788d26"
