@@ -39070,6 +39070,11 @@
 					"name": "AddFolder",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "73cb1d36-5f5a-418a-ba12-35a8241f2a47"
+						},
+						{
 							"name": "New Request",
 							"id": "f0d08cf9-63e3-4db0-a66c-f2c7cc0f2be6",
 							"protocolProfileBehavior": {
