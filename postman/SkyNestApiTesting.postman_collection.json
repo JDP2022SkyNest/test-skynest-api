@@ -35560,7 +35560,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "New Request",
+											"name": "ViewTrashedBucketsAsWorker",
 											"id": "39c883e3-98a4-4d0e-975c-987c72978ae4",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
