@@ -40504,7 +40504,13 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Folder",
+									"item": [],
+									"id": "b39a1fdd-868d-4a25-8b95-375db3b5dde3"
+								}
+							],
 							"id": "04fa9042-78db-472a-8489-15c2f8741c6b"
 						},
 						{
