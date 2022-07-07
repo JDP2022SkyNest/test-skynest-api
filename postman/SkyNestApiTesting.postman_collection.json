@@ -40737,7 +40737,7 @@
 														"token": "{{workerAuthToken}}"
 													}
 												},
-												"method": "GET",
+												"method": "POST",
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_GET_INFO}}"
 											},
