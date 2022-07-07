@@ -35567,7 +35567,8 @@
 											},
 											"request": {
 												"method": "GET",
-												"header": []
+												"header": [],
+												"url": "{{BASE_URL}}{{"
 											},
 											"response": []
 										}
