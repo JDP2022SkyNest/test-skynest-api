@@ -39755,7 +39755,20 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "d3f2411d-c4d6-47fc-a7a4-47860af0f001",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "d2b0980f-672a-403d-94ac-e0e2ab4c6a4d"
 						}
 					],
