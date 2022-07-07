@@ -40503,7 +40503,7 @@
 					"name": "GetFolderById",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "04fa9042-78db-472a-8489-15c2f8741c6b"
 						},
