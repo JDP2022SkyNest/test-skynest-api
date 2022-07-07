@@ -37610,7 +37610,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "GET",
@@ -39071,41 +39071,42 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "f0d08cf9-63e3-4db0-a66c-f2c7cc0f2be6",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"parentFolderId\": null,\r\n  \"bucketId\": {{adminBucketId}}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}/folders"
+									},
+									"response": []
+								}
+							],
 							"id": "73cb1d36-5f5a-418a-ba12-35a8241f2a47"
 						},
 						{
-							"name": "New Folder",
+							"name": "InvalidToken",
 							"item": [],
 							"id": "d2b0980f-672a-403d-94ac-e0e2ab4c6a4d"
-						},
-						{
-							"name": "New Request",
-							"id": "f0d08cf9-63e3-4db0-a66c-f2c7cc0f2be6",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"parentFolderId\": null,\r\n  \"bucketId\": {{adminBucketId}}\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}/folders"
-							},
-							"response": []
 						}
 					],
 					"id": "eef3a030-7f92-43d6-be59-ef7952533c8f"
