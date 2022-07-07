@@ -37601,7 +37601,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "DownloadWorker'sFileAsWorker",
+											"name": "DownloadWorker'sFileAsAdmin",
 											"id": "d02ce4f6-4e2a-417a-91e9-ea7751199604",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -37698,7 +37698,7 @@
 											]
 										},
 										{
-											"name": "DownloadAdmin'sFileAsAdmin",
+											"name": "DownloadAdmin'sFileAsWorker",
 											"id": "5a32c029-f051-4625-bc60-de9a5f0035ee",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
