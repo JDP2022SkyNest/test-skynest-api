@@ -40913,7 +40913,20 @@
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulPUT",
-									"item": [],
+									"item": [
+										{
+											"name": "New Request",
+											"id": "dc85480d-9a1c-4123-ac07-52e615d51c05",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
+										}
+									],
 									"id": "4c288785-71d9-4cae-beef-32d92f788d26"
 								}
 							],
