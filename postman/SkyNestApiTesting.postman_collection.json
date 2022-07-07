@@ -39987,7 +39987,86 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "344cdffe-178f-471c-988a-59ea682155e9",
+													"name": "CreateFolderWithEmptyBucketId",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"bucketId\": \"\",\r\n  \"parentFolderId\": null\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json;charset=ISO-8859-1"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 07 Jul 2022 09:54:53 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null!; nested exception is java.lang.IllegalArgumentException: The given id must not be null!\"\n    ],\n    \"status\": 500,\n    \"timestamp\": \"2022-07-07 11:54:53\"\n}"
+												}
+											]
 										}
 									],
 									"id": "a62a63bd-0fe0-4ac4-afd1-755b57f84b27"
@@ -40328,7 +40407,31 @@
 									]
 								}
 							],
-							"id": "d2b0980f-672a-403d-94ac-e0e2ab4c6a4d"
+							"id": "d2b0980f-672a-403d-94ac-e0e2ab4c6a4d",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "19c9889d-79e8-4283-9d70-eeb3ee353150",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "62b285f5-7c7b-4bd1-be7f-fa43e418cc3a",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "eef3a030-7f92-43d6-be59-ef7952533c8f"
