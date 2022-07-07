@@ -39286,11 +39286,11 @@
 													"script": {
 														"id": "70017d98-8ff8-450f-9ac0-ec8693a54232",
 														"exec": [
-															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
 															"    pm.response.to.have.status(200);\r",
 															"    var jsonData = pm.response.json();\r",
 															"    pm.expect(jsonData.id).is.not.null;\r",
-															"    pm.environment.set(\"adminFold\", jsonData.id);\r",
+															"    pm.environment.set(\"adminFolderId\", jsonData.id);\r",
 															"});"
 														],
 														"type": "text/javascript"
