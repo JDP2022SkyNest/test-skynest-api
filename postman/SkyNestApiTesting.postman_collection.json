@@ -40972,7 +40972,7 @@
 											"response": []
 										},
 										{
-											"name": "RemoveWorker'sFolderAsAdmin Cop",
+											"name": "RemoveAdmin'sFolderAsWorker",
 											"id": "fd21fa8f-47b4-4c00-bc26-1cd30c543a16",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
