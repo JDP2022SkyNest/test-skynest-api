@@ -35606,7 +35606,7 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_VIEW_TRASHED_BUCKETS}}"
 									},
 									"response": []
 								},
