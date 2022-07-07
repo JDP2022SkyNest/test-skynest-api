@@ -40733,7 +40733,7 @@
 											"request": {
 												"method": "POST",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"response": []
 										}
