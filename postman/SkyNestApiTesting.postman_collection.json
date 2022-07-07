@@ -37601,103 +37601,6 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "DownloadWorker'sFileAsAdmin",
-											"id": "d02ce4f6-4e2a-417a-91e9-ea7751199604",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
-											},
-											"response": [
-												{
-													"id": "5ba0b500-2eb1-4923-8455-ff28683281be",
-													"name": "DownloadWorker'sFileAsWorker",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "plain",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "Content-Disposition",
-															"value": "attachment; filename=\"LoginTest.txt\""
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "text/plain"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Wed, 06 Jul 2022 10:19:24 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "package com.skynest;\r\n\r\nimport com.skynest.models.LoginRequest;\r\nimport io.restassured.response.Response;\r\nimport org.testng.annotations.DataProvider;\r\nimport org.testng.annotations.Test;\r\n\r\nimport static org.apache.http.HttpStatus.*;\r\n\r\npublic class LoginTest extends BaseTest {\r\n\r\n    @DataProvider(name = \"invalidCredentialCombinations\")\r\n    public static Object[][] invalidCredentials() {\r\n        return new Object[][]{\r\n                {\"invalidemail@yahoo.com\", \"System123\"},\r\n                {\"invalidemail@yahoo.com\", \"invalidpass\"},\r\n                {\"invalidemail@yahoo.com\", \"\"},\r\n                {\"\", \"System123\"},\r\n                {\"\", \"invalidpass\"},\r\n                {\"\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"invalidPassword\")\r\n    public static Object[][] invalidPassword() {\r\n        return new Object[][]{\r\n                {\"yagaj78380@jrvps.com\", \"invalidpass\"},\r\n                {\"yagaj78380@jrvps.com\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"maxNumberOfLoginAttempts\")\r\n    public static Object[][] maxAttempts() {\r\n        return new Object[][]{\r\n                {5}\r\n        };\r\n    }\r\n\r\n    @Test\r\n    void verified_user_should_be_successfully_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"yagaj78380@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_OK);\r\n    }\r\n\r\n    @Test\r\n    void not_verified_user_should_not_be_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"miwix46540@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_FORBIDDEN);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidPassword\")\r\n    void user_should_not_log_in_with_invalid_or_blank_password(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_UNAUTHORIZED);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidCredentialCombinations\")\r\n    void user_should_not_log_in_with_invalid_credentials(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_NOT_FOUND);\r\n    }\r\n\r\n    @Test(dataProvider = \"maxNumberOfLoginAttempts\")\r\n    void user_should_be_locked_after_number_of_invalid_attempts(int maxAttempts) {\r\n        LoginRequest body = new LoginRequest(\"vobipi9211@kahase.com\", \"invalid\");\r\n        Response loginResponse = null;\r\n        for (int i = 0; i <= maxAttempts; i++) {\r\n            loginResponse = skyNestBackendClient.login(body);\r\n        }\r\n        loginResponse.then().statusCode(429);\r\n    }\r\n}\r\n"
-												}
-											]
-										},
-										{
 											"name": "DownloadWorker'sFileAsWorker",
 											"id": "62b1415d-48c8-44f1-ac32-dfbc91eb75aa",
 											"protocolProfileBehavior": {
@@ -37795,104 +37698,7 @@
 											]
 										},
 										{
-											"name": "DownloadAdmin'sFileAsWorker",
-											"id": "5a32c029-f051-4625-bc60-de9a5f0035ee",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
-											},
-											"response": [
-												{
-													"id": "751badbb-87c0-4141-97df-154c46527688",
-													"name": "DownloadAdmin'sFileAsAdmin",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "plain",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "Content-Disposition",
-															"value": "attachment; filename=\"LoginTest.txt\""
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "text/plain"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Wed, 06 Jul 2022 10:22:20 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "package com.skynest;\r\n\r\nimport com.skynest.models.LoginRequest;\r\nimport io.restassured.response.Response;\r\nimport org.testng.annotations.DataProvider;\r\nimport org.testng.annotations.Test;\r\n\r\nimport static org.apache.http.HttpStatus.*;\r\n\r\npublic class LoginTest extends BaseTest {\r\n\r\n    @DataProvider(name = \"invalidCredentialCombinations\")\r\n    public static Object[][] invalidCredentials() {\r\n        return new Object[][]{\r\n                {\"invalidemail@yahoo.com\", \"System123\"},\r\n                {\"invalidemail@yahoo.com\", \"invalidpass\"},\r\n                {\"invalidemail@yahoo.com\", \"\"},\r\n                {\"\", \"System123\"},\r\n                {\"\", \"invalidpass\"},\r\n                {\"\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"invalidPassword\")\r\n    public static Object[][] invalidPassword() {\r\n        return new Object[][]{\r\n                {\"yagaj78380@jrvps.com\", \"invalidpass\"},\r\n                {\"yagaj78380@jrvps.com\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"maxNumberOfLoginAttempts\")\r\n    public static Object[][] maxAttempts() {\r\n        return new Object[][]{\r\n                {5}\r\n        };\r\n    }\r\n\r\n    @Test\r\n    void verified_user_should_be_successfully_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"yagaj78380@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_OK);\r\n    }\r\n\r\n    @Test\r\n    void not_verified_user_should_not_be_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"miwix46540@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_FORBIDDEN);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidPassword\")\r\n    void user_should_not_log_in_with_invalid_or_blank_password(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_UNAUTHORIZED);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidCredentialCombinations\")\r\n    void user_should_not_log_in_with_invalid_credentials(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_NOT_FOUND);\r\n    }\r\n\r\n    @Test(dataProvider = \"maxNumberOfLoginAttempts\")\r\n    void user_should_be_locked_after_number_of_invalid_attempts(int maxAttempts) {\r\n        LoginRequest body = new LoginRequest(\"vobipi9211@kahase.com\", \"invalid\");\r\n        Response loginResponse = null;\r\n        for (int i = 0; i <= maxAttempts; i++) {\r\n            loginResponse = skyNestBackendClient.login(body);\r\n        }\r\n        loginResponse.then().statusCode(429);\r\n    }\r\n}\r\n"
-												}
-											]
-										},
-										{
-											"name": "DownloadAdmin'sFileAsWorker Copy",
+											"name": "DownloadAdmin'sFileAsAdmin",
 											"id": "7982fd79-7cdc-4233-abb3-21c4c61a6b41",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -38108,6 +37914,200 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"File not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-06 13:55:08\"\n}"
+												}
+											]
+										},
+										{
+											"name": "DownloadWorker'sFileAsAdmin",
+											"id": "d02ce4f6-4e2a-417a-91e9-ea7751199604",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+											},
+											"response": [
+												{
+													"id": "5ba0b500-2eb1-4923-8455-ff28683281be",
+													"name": "DownloadWorker'sFileAsWorker",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Content-Disposition",
+															"value": "attachment; filename=\"LoginTest.txt\""
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 06 Jul 2022 10:19:24 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "package com.skynest;\r\n\r\nimport com.skynest.models.LoginRequest;\r\nimport io.restassured.response.Response;\r\nimport org.testng.annotations.DataProvider;\r\nimport org.testng.annotations.Test;\r\n\r\nimport static org.apache.http.HttpStatus.*;\r\n\r\npublic class LoginTest extends BaseTest {\r\n\r\n    @DataProvider(name = \"invalidCredentialCombinations\")\r\n    public static Object[][] invalidCredentials() {\r\n        return new Object[][]{\r\n                {\"invalidemail@yahoo.com\", \"System123\"},\r\n                {\"invalidemail@yahoo.com\", \"invalidpass\"},\r\n                {\"invalidemail@yahoo.com\", \"\"},\r\n                {\"\", \"System123\"},\r\n                {\"\", \"invalidpass\"},\r\n                {\"\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"invalidPassword\")\r\n    public static Object[][] invalidPassword() {\r\n        return new Object[][]{\r\n                {\"yagaj78380@jrvps.com\", \"invalidpass\"},\r\n                {\"yagaj78380@jrvps.com\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"maxNumberOfLoginAttempts\")\r\n    public static Object[][] maxAttempts() {\r\n        return new Object[][]{\r\n                {5}\r\n        };\r\n    }\r\n\r\n    @Test\r\n    void verified_user_should_be_successfully_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"yagaj78380@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_OK);\r\n    }\r\n\r\n    @Test\r\n    void not_verified_user_should_not_be_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"miwix46540@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_FORBIDDEN);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidPassword\")\r\n    void user_should_not_log_in_with_invalid_or_blank_password(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_UNAUTHORIZED);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidCredentialCombinations\")\r\n    void user_should_not_log_in_with_invalid_credentials(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_NOT_FOUND);\r\n    }\r\n\r\n    @Test(dataProvider = \"maxNumberOfLoginAttempts\")\r\n    void user_should_be_locked_after_number_of_invalid_attempts(int maxAttempts) {\r\n        LoginRequest body = new LoginRequest(\"vobipi9211@kahase.com\", \"invalid\");\r\n        Response loginResponse = null;\r\n        for (int i = 0; i <= maxAttempts; i++) {\r\n            loginResponse = skyNestBackendClient.login(body);\r\n        }\r\n        loginResponse.then().statusCode(429);\r\n    }\r\n}\r\n"
+												}
+											]
+										},
+										{
+											"name": "DownloadAdmin'sFileAsWorker",
+											"id": "5a32c029-f051-4625-bc60-de9a5f0035ee",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+											},
+											"response": [
+												{
+													"id": "751badbb-87c0-4141-97df-154c46527688",
+													"name": "DownloadAdmin'sFileAsAdmin",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Content-Disposition",
+															"value": "attachment; filename=\"LoginTest.txt\""
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 06 Jul 2022 10:22:20 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "package com.skynest;\r\n\r\nimport com.skynest.models.LoginRequest;\r\nimport io.restassured.response.Response;\r\nimport org.testng.annotations.DataProvider;\r\nimport org.testng.annotations.Test;\r\n\r\nimport static org.apache.http.HttpStatus.*;\r\n\r\npublic class LoginTest extends BaseTest {\r\n\r\n    @DataProvider(name = \"invalidCredentialCombinations\")\r\n    public static Object[][] invalidCredentials() {\r\n        return new Object[][]{\r\n                {\"invalidemail@yahoo.com\", \"System123\"},\r\n                {\"invalidemail@yahoo.com\", \"invalidpass\"},\r\n                {\"invalidemail@yahoo.com\", \"\"},\r\n                {\"\", \"System123\"},\r\n                {\"\", \"invalidpass\"},\r\n                {\"\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"invalidPassword\")\r\n    public static Object[][] invalidPassword() {\r\n        return new Object[][]{\r\n                {\"yagaj78380@jrvps.com\", \"invalidpass\"},\r\n                {\"yagaj78380@jrvps.com\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"maxNumberOfLoginAttempts\")\r\n    public static Object[][] maxAttempts() {\r\n        return new Object[][]{\r\n                {5}\r\n        };\r\n    }\r\n\r\n    @Test\r\n    void verified_user_should_be_successfully_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"yagaj78380@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_OK);\r\n    }\r\n\r\n    @Test\r\n    void not_verified_user_should_not_be_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"miwix46540@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_FORBIDDEN);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidPassword\")\r\n    void user_should_not_log_in_with_invalid_or_blank_password(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_UNAUTHORIZED);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidCredentialCombinations\")\r\n    void user_should_not_log_in_with_invalid_credentials(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_NOT_FOUND);\r\n    }\r\n\r\n    @Test(dataProvider = \"maxNumberOfLoginAttempts\")\r\n    void user_should_be_locked_after_number_of_invalid_attempts(int maxAttempts) {\r\n        LoginRequest body = new LoginRequest(\"vobipi9211@kahase.com\", \"invalid\");\r\n        Response loginResponse = null;\r\n        for (int i = 0; i <= maxAttempts; i++) {\r\n            loginResponse = skyNestBackendClient.login(body);\r\n        }\r\n        loginResponse.then().statusCode(429);\r\n    }\r\n}\r\n"
 												}
 											]
 										}
