@@ -39300,6 +39300,11 @@
 									"id": "2b29a473-0c29-472c-b45a-91d1bdd96642"
 								},
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "a62a63bd-0fe0-4ac4-afd1-755b57f84b27"
+								},
+								{
 									"name": "CreateFolderInAdmin'sBucketAsAdmin",
 									"id": "f0d08cf9-63e3-4db0-a66c-f2c7cc0f2be6",
 									"protocolProfileBehavior": {
