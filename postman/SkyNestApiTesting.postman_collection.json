@@ -40921,8 +40921,15 @@
 												"disableBodyPruning": true
 											},
 											"request": {
-												"method": "GET",
-												"header": []
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{notExistingFolderId}}"
 											},
 											"response": []
 										}
