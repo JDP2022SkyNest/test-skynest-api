@@ -39973,6 +39973,34 @@
 											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-07 11:41:47\"\n}"
 										}
 									]
+								},
+								{
+									"name": "CreateFolderInvalidToken",
+									"id": "27f10b6e-894b-4bce-bbaf-e2714a642035",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+									},
+									"response": []
 								}
 							],
 							"id": "d2b0980f-672a-403d-94ac-e0e2ab4c6a4d"
