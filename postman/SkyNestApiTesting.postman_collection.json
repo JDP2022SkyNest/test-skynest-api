@@ -40847,7 +40847,7 @@
 									"name": "ValidTokenAndSuccessfulPUT",
 									"item": [
 										{
-											"name": "New Request",
+											"name": "RemoveOwnFolderByIdAsWorker",
 											"id": "ef28627a-e042-489e-849b-e5f18172c8bf",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
