@@ -11,7 +11,7 @@ import java.io.IOException;
 
 import static org.apache.http.HttpStatus.SC_OK;
 
-public class EditUserByIdTest extends LoggedUserBaseTest {
+public class EditUserByIdTest extends LoggedAdminBaseTest {
     @Test(dataProvider = "UserData")
     void valid_edit_user_by_id_test(EditRequest editRequest) throws IOException {
         Response editUserResponse = skyNestBackendClient.editUserById(editRequest);

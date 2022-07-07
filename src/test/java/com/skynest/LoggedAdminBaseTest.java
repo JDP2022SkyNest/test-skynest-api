@@ -6,10 +6,10 @@ import org.testng.annotations.BeforeClass;
 
 import static org.apache.http.HttpStatus.SC_OK;
 
-public class LoggedUserBaseTest extends BaseTest {
+public class LoggedAdminBaseTest extends BaseTest {
 
     @BeforeClass
-    public void loginUser() {
+    public void loginAsAdmin() {
         LoginRequest body = new LoginRequest("christinezahar@yahoo.com", "Hris8833");
         Response loginResponse = skyNestBackendClient.login(body);
         loginResponse.then().statusCode(SC_OK);

@@ -39,11 +39,12 @@ public class SkyNestBackendClient extends BaseClient {
                 .get(ApiConstants.GET_ALL_USERS_PATH);
     }
 
-    public Response getUserById() throws IOException {
-        Response response = getLoggedUser();
-        LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponse(response, LoggedUserResponse.class);
+    public Response getUserById(UUID uuid) {
+//        Response response = getLoggedUser();
+//        LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponse(response, LoggedUserResponse.class);
         return requestMaker()
-                .get(ApiConstants.USERS_PATH + loggedUserResponse.getUuid());
+                .pathParam("uuid",uuid)
+                .get(ApiConstants.GET_USER_BY_ID_PATH);
     }
 
     public Response editUserById(EditRequest editRequest) throws IOException {
@@ -54,12 +55,11 @@ public class SkyNestBackendClient extends BaseClient {
                 .put(ApiConstants.USERS_PATH + loggedUserResponse.getUuid());
     }
 
-    public Response changePassword(ChangePasswordRequest changePasswordRequest) throws IOException {
-        Response response = getLoggedUser();
-        LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponse(response, LoggedUserResponse.class);
+    public Response changePassword(ChangePasswordRequest changePasswordRequest, UUID uuid) {
         return requestMaker()
                 .body(changePasswordRequest)
-                .put(ApiConstants.CHANGE_PASSWORD_PATH + loggedUserResponse.getUuid());
+                .pathParam("uuid", uuid)
+                .put(ApiConstants.CHANGE_PASSWORD_PATH);
     }
 
     public Response logout() {
@@ -67,12 +67,12 @@ public class SkyNestBackendClient extends BaseClient {
                 .post(ApiConstants.LOGOUT_PATH);
     }
 
-    public Response disableUser(UUID userId) throws IOException {
+    public Response disableUser(UUID userId) {
         return requestMaker()
                 .put(ApiConstants.USERS_PATH + userId + ApiConstants.DISABLE_PATH);
     }
 
-    public Response enableUser(UUID userId) throws IOException {
+    public Response enableUser(UUID userId) {
         return requestMaker()
                 .put(ApiConstants.USERS_PATH + userId + ApiConstants.ENABLE_PATH);
     }

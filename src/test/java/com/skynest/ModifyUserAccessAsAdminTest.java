@@ -16,15 +16,17 @@ import static org.apache.http.HttpStatus.SC_OK;
 /**
  * Class that contains tests for enable and disable user
  */
-public class ModifyUserAccessTest extends LoggedUserBaseTest {
+public class ModifyUserAccessAsAdminTest extends BaseTest {
 
     public UUID userId;
     public static final String WORKER_EMAIL = "fedese7585@kahase.com";
 
     @BeforeClass
     void getWorkerId() throws IOException {
+        loginAs(Roles.ADMIN);
         Response getAllUsersResponse = skyNestBackendClient.getAllUsers();
         getAllUsersResponse.then().statusCode(SC_OK);
+
         List<UserResponse> userResponses = JsonTransformer.mapResponseToList(getAllUsersResponse, UserResponse.class);
         userId = getUserId(userResponses);
     }
