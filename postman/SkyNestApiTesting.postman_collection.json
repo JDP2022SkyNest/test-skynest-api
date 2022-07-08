@@ -30073,7 +30073,7 @@
 											"response": [
 												{
 													"id": "5dfdc86a-7fb6-4320-96ff-175924cb6c92",
-													"name": "CreateBucketAsAdmin",
+													"name": "CreatePrivateBucketAsAdmin",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
