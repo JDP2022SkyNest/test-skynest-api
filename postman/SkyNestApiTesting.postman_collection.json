@@ -33119,12 +33119,12 @@
 									},
 									"response": [
 										{
-											"id": "d29f0ee7-d223-4c7a-b6f0-323124924474",
+											"id": "7dfd1c89-0033-4154-b53e-862e71ebf2f9",
 											"name": "ViewOwnBucketAsAdmin",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_BUCKET_BY_ID}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"status": "OK",
 											"code": 200,
@@ -33176,7 +33176,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 11:06:35 GMT"
+													"value": "Fri, 08 Jul 2022 10:13:51 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -33189,7 +33189,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"bucketId\": \"5779b61f-cbd3-4259-8fc9-113c8fb101be\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"name\": \"Bucket One\",\n    \"companyId\": null,\n    \"description\": \"Description One\",\n    \"size\": 0,\n    \"isPublic\": false\n}"
+											"body": "{\n    \"bucketId\": \"0e16cb8c-9f61-45ad-90cf-2b18e7dbe17b\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"name\": \"Edited 2\",\n    \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n    \"description\": \"Edited Bucket 2\",\n    \"size\": 2838,\n    \"isPublic\": true\n}"
 										}
 									]
 								},
