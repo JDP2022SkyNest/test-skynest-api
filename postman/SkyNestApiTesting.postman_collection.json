@@ -35046,7 +35046,7 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{notExistingBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
