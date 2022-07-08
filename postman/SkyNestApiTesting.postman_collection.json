@@ -11836,7 +11836,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PASSWORD_CHANGE}}{{validWorkerId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_PASSWORD_CHANGE}}"
 									},
 									"response": [
 										{
