@@ -29805,7 +29805,7 @@
 									"name": "ValidCreation",
 									"item": [
 										{
-											"name": "CreateBucketAsWorker",
+											"name": "CreatePrivateBucketAsWorker",
 											"event": [
 												{
 													"listen": "test",
