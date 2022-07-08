@@ -33714,7 +33714,7 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
 									},
 									"response": [
 										{
@@ -33772,6 +33772,75 @@
 												{
 													"key": "Date",
 													"value": "Fri, 01 Jul 2022 11:03:35 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										},
+										{
+											"id": "ac8ead11-c913-40cf-931f-a5147e3c22c5",
+											"name": "ViewBucketEmptyToken",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 08 Jul 2022 10:16:08 GMT"
 												},
 												{
 													"key": "Keep-Alive",
