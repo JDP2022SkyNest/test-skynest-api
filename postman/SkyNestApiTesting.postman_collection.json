@@ -30022,7 +30022,7 @@
 											]
 										},
 										{
-											"name": "CreateBucketAsAdmin",
+											"name": "CreatePrivateBucketAsAdmin",
 											"event": [
 												{
 													"listen": "test",
