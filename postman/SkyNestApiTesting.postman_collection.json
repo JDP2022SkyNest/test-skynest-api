@@ -35325,19 +35325,19 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "dfd03966-9f7d-41b2-8351-68a7225e9871",
+											"id": "08b3ae20-be5e-4f00-976d-b1cc6413579e",
 											"name": "DeleteAdmin'sBucketAsWorker",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
-											"status": "OK",
-											"code": 200,
+											"status": "Conflict",
+											"code": 409,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -35386,7 +35386,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Mon, 04 Jul 2022 08:24:21 GMT"
+													"value": "Fri, 08 Jul 2022 10:22:38 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35399,7 +35399,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "true"
+											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-08 12:22:38\"\n}"
 										}
 									]
 								}
