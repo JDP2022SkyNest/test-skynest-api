@@ -35634,12 +35634,12 @@
 									},
 									"response": [
 										{
-											"id": "4f8010fd-1a32-447e-9662-7ce43c9d7f7a",
+											"id": "dab4e04b-b1e9-476e-8bd0-7a26ca2831aa",
 											"name": "DeleteBucketInvalidToken",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -35691,7 +35691,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 08 Jul 2022 10:23:23 GMT"
+													"value": "Fri, 01 Jul 2022 14:27:20 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35704,7 +35704,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-08 12:23:23\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-01 16:27:20\"\n}"
 										}
 									]
 								}
