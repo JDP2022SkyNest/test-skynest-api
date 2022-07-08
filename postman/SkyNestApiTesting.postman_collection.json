@@ -11602,7 +11602,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"currentPassword\": \"NewPassword8833\",\r\n  \"newPassword\": \"NewPassword8833\"\r\n}",
+											"raw": "{\r\n  \"currentPassword\": \"Htec8833\",\r\n  \"newPassword\": \"Htec8833\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
