@@ -35143,12 +35143,12 @@
 									},
 									"response": [
 										{
-											"id": "2c6448d3-d1e8-4b0d-9a7e-39c6124bf9d9",
+											"id": "fa177e7f-baac-4f5f-9cba-fbd42e443c04",
 											"name": "DeleteAlreadyDeletedBucket",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
 											"status": "Conflict",
 											"code": 409,
@@ -35200,7 +35200,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 14:29:52 GMT"
+													"value": "Fri, 08 Jul 2022 10:21:41 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35213,7 +35213,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-01 16:29:52\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-08 12:21:41\"\n}"
 										}
 									]
 								},
