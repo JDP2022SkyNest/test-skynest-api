@@ -33718,12 +33718,12 @@
 									},
 									"response": [
 										{
-											"id": "18c306c4-1cf3-4032-b7b3-e349104dc603",
+											"id": "ac8ead11-c913-40cf-931f-a5147e3c22c5",
 											"name": "ViewBucketEmptyToken",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_BUCKET_BY_ID}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -33771,7 +33771,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 11:03:35 GMT"
+													"value": "Fri, 08 Jul 2022 10:16:08 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -33803,16 +33803,16 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
 									},
 									"response": [
 										{
-											"id": "a706f2ef-a2d4-4181-b2f4-dd054d842064",
+											"id": "c93aa834-c297-454c-ac4c-d562eef5b57b",
 											"name": "ViewBucketExpiredToken",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_BUCKET_BY_ID}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -33864,7 +33864,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 11:04:05 GMT"
+													"value": "Fri, 08 Jul 2022 10:16:20 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -33877,7 +33877,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-01 13:04:05\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-08 12:16:20\"\n}"
 										}
 									]
 								},
@@ -33896,16 +33896,16 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
 									},
 									"response": [
 										{
-											"id": "13ff6cd2-0e15-4cdf-9b68-96adae860ba6",
+											"id": "64c69626-cc80-456d-b30a-59f30b5d1b1f",
 											"name": "ViewBucketInvalidToken",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_BUCKET_BY_ID}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -33957,7 +33957,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 11:04:41 GMT"
+													"value": "Fri, 08 Jul 2022 10:16:34 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -33970,12 +33970,36 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-01 13:04:41\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-08 12:16:34\"\n}"
 										}
 									]
 								}
 							],
-							"id": "f71fc98e-1124-4f77-9111-e50d66eb2e91"
+							"id": "f71fc98e-1124-4f77-9111-e50d66eb2e91",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "0ade96f5-f923-4fba-a0ad-86be20a88bed",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "e60b7fa2-cfa8-4521-b167-2bb41019dec8",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "ViewNotExistingBucket",
