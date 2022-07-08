@@ -30022,7 +30022,7 @@
 											]
 										},
 										{
-											"name": "CreatePrivateBucketAsWorker Copy",
+											"name": "CreateWorker'sBucketToBePublic",
 											"event": [
 												{
 													"listen": "test",
