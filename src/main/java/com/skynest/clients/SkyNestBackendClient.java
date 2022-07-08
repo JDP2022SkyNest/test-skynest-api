@@ -1,10 +1,9 @@
 package com.skynest.clients;
 
+import com.skynest.constants.ApiConstants;
 import com.skynest.models.*;
-import com.skynest.utils.JsonTransformer;
 import io.restassured.response.Response;
 
-import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.UUID;
 
@@ -40,19 +39,16 @@ public class SkyNestBackendClient extends BaseClient {
     }
 
     public Response getUserById(UUID uuid) {
-//        Response response = getLoggedUser();
-//        LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponse(response, LoggedUserResponse.class);
         return requestMaker()
-                .pathParam("uuid",uuid)
-                .get(ApiConstants.GET_USER_BY_ID_PATH);
+                .pathParam("uuid", uuid)
+                .get(ApiConstants.USER_BY_ID_PATH);
     }
 
-    public Response editUserById(EditRequest editRequest) throws IOException {
-        Response response = getLoggedUser();
-        LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponse(response, LoggedUserResponse.class);
+    public Response editUserById(EditRequest editRequest, UUID uuid) {
         return requestMaker()
                 .body(editRequest)
-                .put(ApiConstants.USERS_PATH + loggedUserResponse.getUuid());
+                .pathParam("uuid", uuid)
+                .put(ApiConstants.USER_BY_ID_PATH);
     }
 
     public Response changePassword(ChangePasswordRequest changePasswordRequest, UUID uuid) {
@@ -67,13 +63,15 @@ public class SkyNestBackendClient extends BaseClient {
                 .post(ApiConstants.LOGOUT_PATH);
     }
 
-    public Response disableUser(UUID userId) {
+    public Response disableUser(UUID uuid) {
         return requestMaker()
-                .put(ApiConstants.USERS_PATH + userId + ApiConstants.DISABLE_PATH);
+                .pathParam("uuid",uuid)
+                .put(ApiConstants.DISABLE_PATH);
     }
 
-    public Response enableUser(UUID userId) {
+    public Response enableUser(UUID uuid) {
         return requestMaker()
-                .put(ApiConstants.USERS_PATH + userId + ApiConstants.ENABLE_PATH);
+                .pathParam("uuid",uuid)
+                .put(ApiConstants.ENABLE_PATH);
     }
 }

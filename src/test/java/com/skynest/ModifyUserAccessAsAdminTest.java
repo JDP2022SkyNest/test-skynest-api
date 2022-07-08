@@ -17,9 +17,8 @@ import static org.apache.http.HttpStatus.SC_OK;
  * Class that contains tests for enable and disable user
  */
 public class ModifyUserAccessAsAdminTest extends BaseTest {
-
-    public UUID userId;
-    public static final String WORKER_EMAIL = "fedese7585@kahase.com";
+    private static final String WORKER_EMAIL = "fedese7585@kahase.com";
+    private UUID workerId;
 
     @BeforeClass
     void getWorkerId() throws IOException {
@@ -28,10 +27,10 @@ public class ModifyUserAccessAsAdminTest extends BaseTest {
         getAllUsersResponse.then().statusCode(SC_OK);
 
         List<UserResponse> userResponses = JsonTransformer.mapResponseToList(getAllUsersResponse, UserResponse.class);
-        userId = getUserId(userResponses);
+        workerId = getUserId(userResponses);
     }
 
-    public UUID getUserId(List<UserResponse> userResponses) {
+    private UUID getUserId(List<UserResponse> userResponses) {
         for (int i = 0; i < userResponses.size(); i++) {
             UserResponse userResponse = userResponses.get(i);
             if (userResponse.getEmail().equals(WORKER_EMAIL)) {
@@ -41,17 +40,17 @@ public class ModifyUserAccessAsAdminTest extends BaseTest {
         return null;
     }
 
-
     @Test
-    void disable_user_test() throws IOException {
-        Response disableResponse = skyNestBackendClient.disableUser(userId);
+    void disable_worker_as_admin_test() {
+        Response disableResponse = skyNestBackendClient.disableUser(workerId);
         disableResponse.then().statusCode(SC_OK);
     }
 
     @AfterClass
-    void enable_user_test() throws IOException {
-        Response enableResponse = skyNestBackendClient.enableUser(userId);
+    void enable_disabled_worker_as_admin_test() {
+        Response enableResponse = skyNestBackendClient.enableUser(workerId);
         enableResponse.then().statusCode(SC_OK);
     }
 }
+
 
