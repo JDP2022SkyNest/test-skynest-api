@@ -31383,6 +31383,141 @@
 											]
 										},
 										{
+											"name": "MakeABucketPublic",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
+														"exec": [
+															"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"    var jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData.bucketId).is.not.null;\r",
+															"    pm.environment.set(\"workerBucketId\", jsonData.bucketId);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "862a4c63-933f-4fe1-bb3a-4f21b0b8df9e",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Edited Name 1\",\r\n  \"description\": \"Edited Bucket\",\r\n  \"isPublic\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+											},
+											"response": [
+												{
+													"id": "95ea4029-2645-4f24-9905-6c177776e15e",
+													"name": "EditOwnBucketAsWorker",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Edited Name 1\",\r\n  \"description\": \"Edited Bucket\",\r\n  \"isPublic\": false\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 04 Jul 2022 11:02:35 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"bucketId\": \"f2509ba2-1651-4d74-951c-0468cf0e98fd\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"name\": \"Edited Name 1\",\n    \"companyId\": null,\n    \"description\": \"Edited Bucket\",\n    \"size\": 0,\n    \"isPublic\": false\n}"
+												}
+											]
+										},
+										{
 											"name": "EditOwnBucketAsAdmin",
 											"event": [
 												{
