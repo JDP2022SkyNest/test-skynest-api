@@ -3,7 +3,6 @@ package com.skynest;
 import com.skynest.models.UserResponse;
 import com.skynest.utils.JsonTransformer;
 import io.restassured.response.Response;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -11,12 +10,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
+import static org.apache.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.http.HttpStatus.SC_OK;
 
-/**
- * Class that contains tests for enable and disable user
- */
-public class ModifyUserAccessAsAdminTest extends BaseTest {
+public class PromoteDemoteUserTest extends BaseTest {
     private static final String WORKER_EMAIL = "fedese7585@kahase.com";
     private UUID workerId;
 
@@ -40,15 +37,24 @@ public class ModifyUserAccessAsAdminTest extends BaseTest {
         return null;
     }
 
-    @Test
-    void disable_worker_as_admin_test() {
-        skyNestBackendClient.disableUser(workerId).then().statusCode(SC_OK);
+    @Test(priority = 1)
+    void promote_worker_to_manager_as_admin_test() {
+        skyNestBackendClient.promoteUser(workerId).then().statusCode(SC_OK);
     }
 
-    @AfterClass
-    void enable_disabled_worker_as_admin_test() {
-        skyNestBackendClient.enableUser(workerId).then().statusCode(SC_OK);
+    @Test(priority = 2)
+    void promote_already_promoted_user_as_admin_test() {
+        skyNestBackendClient.promoteUser(workerId).then().statusCode(SC_FORBIDDEN);
     }
+
+    @Test(priority = 3)
+    void demote_manager_to_worker_as_admin_test() {
+        skyNestBackendClient.demoteUser(workerId).then().statusCode(SC_OK);
+    }
+
+    @Test(priority = 4)
+    void demote_already_demoted_user_as_admin_test() {
+        skyNestBackendClient.demoteUser(workerId).then().statusCode(SC_FORBIDDEN);
+    }
+
 }
-
-

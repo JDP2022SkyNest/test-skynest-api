@@ -39,29 +39,25 @@ public class LoginTest extends BaseTest {
     @Test
     void verified_user_should_be_successfully_logged_in() {
         LoginRequest body = new LoginRequest("yagaj78380@jrvps.com", "System123");
-        Response loginResponse = skyNestBackendClient.login(body);
-        loginResponse.then().statusCode(SC_OK);
+        skyNestBackendClient.login(body).then().statusCode(SC_OK);
     }
 
     @Test
     void not_verified_user_should_not_be_logged_in() {
         LoginRequest body = new LoginRequest("miwix46540@jrvps.com", "System123");
-        Response loginResponse = skyNestBackendClient.login(body);
-        loginResponse.then().statusCode(SC_FORBIDDEN);
+        skyNestBackendClient.login(body).then().statusCode(SC_FORBIDDEN);
     }
 
     @Test(dataProvider = "invalidPassword")
     void user_should_not_log_in_with_invalid_or_blank_password(String email, String password) {
         LoginRequest body = new LoginRequest(email, password);
-        Response loginResponse = skyNestBackendClient.login(body);
-        loginResponse.then().statusCode(SC_UNAUTHORIZED);
+        skyNestBackendClient.login(body).then().statusCode(SC_UNAUTHORIZED);
     }
 
     @Test(dataProvider = "invalidCredentialCombinations")
     void user_should_not_log_in_with_invalid_credentials(String email, String password) {
         LoginRequest body = new LoginRequest(email, password);
-        Response loginResponse = skyNestBackendClient.login(body);
-        loginResponse.then().statusCode(SC_NOT_FOUND);
+        skyNestBackendClient.login(body).then().statusCode(SC_NOT_FOUND);
     }
 
     @Test(dataProvider = "maxNumberOfLoginAttempts")

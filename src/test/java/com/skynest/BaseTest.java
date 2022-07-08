@@ -42,9 +42,10 @@ public class BaseTest {
         }
     }
 
-    public UUID getLoggedUserId() throws IOException {
+    public UUID getLoggedUserId() {
         Response response = skyNestBackendClient.getLoggedUser();
-        LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponse(response, LoggedUserResponse.class);
+        LoggedUserResponse loggedUserResponse = response.as(LoggedUserResponse.class);
+        //LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponse(response, LoggedUserResponse.class);
         UUID uuid = loggedUserResponse.getUuid();
         return uuid;
     }
