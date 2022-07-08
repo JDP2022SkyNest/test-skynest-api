@@ -11416,7 +11416,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{validWorkerId}}{{ENDPOINT_PASSWORD_CHANGE}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_PASSWORD_CHANGE}}"
 									},
 									"response": [
 										{
