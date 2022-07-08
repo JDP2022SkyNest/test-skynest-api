@@ -34039,7 +34039,7 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_GET_INFO}}"
 							},
 							"response": [
 								{
