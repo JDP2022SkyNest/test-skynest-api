@@ -37265,7 +37265,7 @@
 											"response": [
 												{
 													"id": "b3183797-3686-4305-b546-d7c11e71ed92",
-													"name": "UploadFileToAdmin'sBucketAsWorker",
+													"name": "UploadFileToAdmin'sPrivateBucketAsWorker",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
