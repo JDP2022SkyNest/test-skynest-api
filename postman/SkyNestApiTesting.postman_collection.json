@@ -11409,7 +11409,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"currentPassword\": \"Hris8833\",\r\n  \"newPassword\": \"Htec8833\"\r\n}",
+											"raw": "{\r\n  \"currentPassword\": \"Htec8833\",\r\n  \"newPassword\": \"Hris8833\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -34830,79 +34830,6 @@
 									},
 									"response": [
 										{
-											"id": "8d9fcc1b-674e-4fd6-873a-5b5c70228fde",
-											"name": "DeleteOwnBucketByIdAsWorker",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Fri, 01 Jul 2022 14:22:03 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "true"
-										},
-										{
 											"id": "f555b592-9628-40fc-9941-509487255b79",
 											"name": "DeleteOwnBucketByIdAsWorker",
 											"originalRequest": {
@@ -34992,16 +34919,16 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "afae61e5-b41f-4ad9-851f-dfe7b7c640f3",
+											"id": "9932f824-f5ec-47b8-9a7d-b1449306ab46",
 											"name": "DeleteOwnBucketByIdAsAdmin",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
 											"status": "OK",
 											"code": 200,
@@ -35053,7 +34980,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 14:23:51 GMT"
+													"value": "Fri, 08 Jul 2022 10:20:14 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35119,16 +35046,16 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{notExistingBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "5f9f0efe-d3aa-4346-ba11-ad3808b9d392",
+											"id": "d686f0d1-0e12-4989-89cb-cc6fd7f2f7b2",
 											"name": "DeleteNotExistingBucket",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{notExistingBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
 											"status": "Not Found",
 											"code": 404,
@@ -35180,7 +35107,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 14:29:07 GMT"
+													"value": "Fri, 08 Jul 2022 10:20:58 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35193,7 +35120,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-01 16:29:07\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-08 12:20:58\"\n}"
 										}
 									]
 								},
@@ -35212,16 +35139,16 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "2c6448d3-d1e8-4b0d-9a7e-39c6124bf9d9",
+											"id": "fa177e7f-baac-4f5f-9cba-fbd42e443c04",
 											"name": "DeleteAlreadyDeletedBucket",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
 											"status": "Conflict",
 											"code": 409,
@@ -35273,7 +35200,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 14:29:52 GMT"
+													"value": "Fri, 08 Jul 2022 10:21:41 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35286,7 +35213,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-01 16:29:52\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-08 12:21:41\"\n}"
 										}
 									]
 								},
@@ -35305,19 +35232,19 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "2b46af3d-6a0d-4400-8cd4-a279940f0c08",
+											"id": "55dbf83c-8c4f-4c77-b67a-9ed28b2623d7",
 											"name": "DeleteWorker'sBucketAsAdmin",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
-											"status": "OK",
-											"code": 200,
+											"status": "Conflict",
+											"code": 409,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -35366,7 +35293,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Mon, 04 Jul 2022 08:24:15 GMT"
+													"value": "Fri, 08 Jul 2022 10:22:04 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35379,7 +35306,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "true"
+											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-08 12:22:04\"\n}"
 										}
 									]
 								},
@@ -35398,19 +35325,19 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "dfd03966-9f7d-41b2-8351-68a7225e9871",
+											"id": "08b3ae20-be5e-4f00-976d-b1cc6413579e",
 											"name": "DeleteAdmin'sBucketAsWorker",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
-											"status": "OK",
-											"code": 200,
+											"status": "Conflict",
+											"code": 409,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -35459,7 +35386,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Mon, 04 Jul 2022 08:24:21 GMT"
+													"value": "Fri, 08 Jul 2022 10:22:38 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35472,7 +35399,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "true"
+											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-08 12:22:38\"\n}"
 										}
 									]
 								}
@@ -35521,16 +35448,16 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "2304929e-b1ce-47ce-ad4f-522ee32823f5",
+											"id": "a31a4bbb-0fe0-4ef0-bad1-629308d5ce4c",
 											"name": "DeleteBucketEmptyToken",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -35578,7 +35505,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 14:26:10 GMT"
+													"value": "Fri, 08 Jul 2022 10:22:53 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35610,16 +35537,16 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "9ccba17f-2f05-4c4a-ad8e-a0a421042c59",
+											"id": "9034f616-0dec-4b2f-a34e-595c9c4e8b3e",
 											"name": "DeleteBucketExpiredToken",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -35671,7 +35598,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 14:26:43 GMT"
+													"value": "Fri, 08 Jul 2022 10:23:11 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35684,7 +35611,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-01 16:26:43\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-08 12:23:11\"\n}"
 										}
 									]
 								},
@@ -35703,16 +35630,16 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": [
 										{
-											"id": "dab4e04b-b1e9-476e-8bd0-7a26ca2831aa",
+											"id": "4f8010fd-1a32-447e-9662-7ce43c9d7f7a",
 											"name": "DeleteBucketInvalidToken",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -35764,7 +35691,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 01 Jul 2022 14:27:20 GMT"
+													"value": "Fri, 08 Jul 2022 10:23:23 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35777,7 +35704,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-01 16:27:20\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-08 12:23:23\"\n}"
 										}
 									]
 								}
