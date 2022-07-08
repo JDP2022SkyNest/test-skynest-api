@@ -31423,14 +31423,14 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Edited Name 1\",\r\n  \"description\": \"Edited Bucket\",\r\n  \"isPublic\": false\r\n}",
+													"raw": "{\r\n  \"name\": \"Public Bucket\",\r\n  \"description\": \"Edited Bucket\",\r\n  \"isPublic\": true\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{publicBucketId}}"
 											},
 											"response": [
 												{
