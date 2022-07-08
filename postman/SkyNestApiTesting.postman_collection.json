@@ -35537,16 +35537,16 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
 									},
 									"response": [
 										{
-											"id": "9034f616-0dec-4b2f-a34e-595c9c4e8b3e",
+											"id": "9ccba17f-2f05-4c4a-ad8e-a0a421042c59",
 											"name": "DeleteBucketExpiredToken",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_DELETE_BUCKET}}{{workerBucketId}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -35598,7 +35598,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 08 Jul 2022 10:23:11 GMT"
+													"value": "Fri, 01 Jul 2022 14:26:43 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -35611,7 +35611,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-08 12:23:11\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-01 16:26:43\"\n}"
 										}
 									]
 								},
