@@ -36857,7 +36857,8 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+															"value": null,
+															"disabled": true
 														}
 													]
 												},
