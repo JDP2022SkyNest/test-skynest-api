@@ -33718,12 +33718,12 @@
 									},
 									"response": [
 										{
-											"id": "ac8ead11-c913-40cf-931f-a5147e3c22c5",
+											"id": "18c306c4-1cf3-4032-b7b3-e349104dc603",
 											"name": "ViewBucketEmptyToken",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_BUCKET_BY_ID}}{{workerBucketId}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -33771,7 +33771,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 08 Jul 2022 10:16:08 GMT"
+													"value": "Fri, 01 Jul 2022 11:03:35 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -33803,16 +33803,16 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
 									},
 									"response": [
 										{
-											"id": "c93aa834-c297-454c-ac4c-d562eef5b57b",
+											"id": "a706f2ef-a2d4-4181-b2f4-dd054d842064",
 											"name": "ViewBucketExpiredToken",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_BUCKET_BY_ID}}{{workerBucketId}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -33864,7 +33864,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 08 Jul 2022 10:16:20 GMT"
+													"value": "Fri, 01 Jul 2022 11:04:05 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -33877,7 +33877,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-08 12:16:20\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-01 13:04:05\"\n}"
 										}
 									]
 								},
@@ -33896,16 +33896,16 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
 									},
 									"response": [
 										{
-											"id": "64c69626-cc80-456d-b30a-59f30b5d1b1f",
+											"id": "13ff6cd2-0e15-4cdf-9b68-96adae860ba6",
 											"name": "ViewBucketInvalidToken",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_BUCKET_BY_ID}}{{workerBucketId}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -33957,7 +33957,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 08 Jul 2022 10:16:34 GMT"
+													"value": "Fri, 01 Jul 2022 11:04:41 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -33970,7 +33970,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-08 12:16:34\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-01 13:04:41\"\n}"
 										}
 									]
 								}
