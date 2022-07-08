@@ -34043,12 +34043,12 @@
 							},
 							"response": [
 								{
-									"id": "a3fe2ecc-7da9-45b1-bb0c-bccd066ecee7",
+									"id": "7587a1f7-8712-4570-90cf-45449b5cef01",
 									"name": "ViewNotExistingBucket",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_VIEW_BUCKET_BY_ID}}{{notExistingBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_GET_INFO}}"
 									},
 									"status": "Not Found",
 									"code": 404,
@@ -34100,7 +34100,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 01 Jul 2022 11:09:45 GMT"
+											"value": "Fri, 08 Jul 2022 10:17:03 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -34113,7 +34113,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-01 13:09:45\"\n}"
+									"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-08 12:17:03\"\n}"
 								}
 							]
 						}
