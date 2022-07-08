@@ -29939,7 +29939,7 @@
 												},
 												{
 													"id": "8fe27f00-ab3e-4871-933c-3b22c32acee5",
-													"name": "CreateBucketAsWorker",
+													"name": "CreatePrivateBucketAsWorker",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
