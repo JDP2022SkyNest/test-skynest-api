@@ -12982,7 +12982,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PASSWORD_CHANGE}}{{secondValidAdminId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_PASSWORD_CHANGE}}"
 									},
 									"response": [
 										{
