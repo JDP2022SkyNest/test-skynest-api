@@ -31391,13 +31391,12 @@
 															"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
 															"});\r",
 															"\r",
-															"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
+															"pm.test(\"Set the id of a public bucket creation as an environment variable\", function () {\r",
 															"    pm.response.to.have.status(200);\r",
 															"    var jsonData = pm.response.json();\r",
 															"    pm.expect(jsonData.bucketId).is.not.null;\r",
-															"    pm.environment.set(\"workerBucketId\", jsonData.bucketId);\r",
-															"});\r",
-															""
+															"    pm.environment.set(\"publicBucketId\", jsonData.bucketId);\r",
+															"});"
 														],
 														"type": "text/javascript"
 													}
