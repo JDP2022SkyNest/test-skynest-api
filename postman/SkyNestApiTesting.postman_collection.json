@@ -31288,7 +31288,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Hristina's Bucket\",\r\n  \"description\": \"Opis na bucket\",\r\n  \"isPublic\": true \r\n}",
+													"raw": "{\r\n  \"name\": \"Hristina's Bucket\",\r\n  \"description\": \"Opis na bucket\",\r\n  \"isPublic\": false \r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
