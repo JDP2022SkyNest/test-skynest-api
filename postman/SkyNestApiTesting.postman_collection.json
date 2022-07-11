@@ -37292,7 +37292,7 @@
 													"response": [
 														{
 															"id": "d651f03c-d3da-4ba4-987e-5d478dbce125",
-															"name": "ViewWorker'sBucketContentAdAdmin",
+															"name": "ViewWorker'sBucketContentAsAdmin",
 															"originalRequest": {
 																"method": "GET",
 																"header": [],
