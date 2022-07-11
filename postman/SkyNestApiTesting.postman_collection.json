@@ -37161,7 +37161,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}"
 											},
 											"response": []
 										}
