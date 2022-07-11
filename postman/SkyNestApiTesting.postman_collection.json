@@ -37268,7 +37268,20 @@
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulGET",
-									"item": [],
+									"item": [
+										{
+											"name": "New Request",
+											"id": "5a5fd828-a6d3-436b-b380-07ae4f3e738c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
+										}
+									],
 									"id": "9b98199c-552e-4299-bf6c-f1f56163a9e1"
 								}
 							],
