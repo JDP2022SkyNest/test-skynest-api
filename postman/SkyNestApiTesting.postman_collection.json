@@ -37270,7 +37270,7 @@
 									"name": "ValidTokenButUnsuccessfulGET",
 									"item": [
 										{
-											"name": "New Request",
+											"name": "ViewWorker'sBucketContentAdAdmin",
 											"id": "5a5fd828-a6d3-436b-b380-07ae4f3e738c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
