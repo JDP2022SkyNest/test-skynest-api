@@ -37270,7 +37270,7 @@
 									"name": "ValidTokenButUnsuccessfulGET",
 									"item": [
 										{
-											"name": "New Folder",
+											"name": "ForbiddenView",
 											"item": [],
 											"id": "b0ebd579-e7ed-4ade-b325-55558ff88045"
 										},
