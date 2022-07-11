@@ -30295,7 +30295,7 @@
 															"    pm.response.to.have.status(200);\r",
 															"    var jsonData = pm.response.json();\r",
 															"    pm.expect(jsonData.bucketId).is.not.null;\r",
-															"    pm.environment.set(\"workerBucketId\", jsonData.bucketId);\r",
+															"    pm.environment.set(\"emptyBucketId\", jsonData.bucketId);\r",
 															"});"
 														],
 														"type": "text/javascript"
