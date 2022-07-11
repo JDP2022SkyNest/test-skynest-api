@@ -13,11 +13,10 @@ import java.util.List;
 import java.util.UUID;
 
 import static org.apache.http.HttpStatus.SC_OK;
-import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
 public class EditUserByIdTest extends BaseTest {
-    private static final String WORKER_EMAIL = "fedese7585@kahase.com";
 
     @Test(dataProvider = "UserData")
     void edit_admin_details_as_admin_test(EditRequest editRequest) {
@@ -40,8 +39,7 @@ public class EditUserByIdTest extends BaseTest {
 
     @DataProvider(name = "UserData")
     public Object[][] getUserData() {
-        return new Object[][]{
-                new Object[]{EditRequest.generateValidEditRequest()}};
+        return new Object[][]{new Object[]{EditRequest.generateValidEditRequest()}};
     }
 
     @Test(dataProvider = "UserData")
@@ -68,13 +66,4 @@ public class EditUserByIdTest extends BaseTest {
         assertEquals(editResponse.getPositionInCompany(), editRequest.getPositionInCompany());
     }
 
-    private UUID getSpecificWorkerId(List<UserResponse> userResponses) {
-        for (int i = 0; i < userResponses.size(); i++) {
-            UserResponse userResponse = userResponses.get(i);
-            if (userResponse.getEmail().equals(WORKER_EMAIL)) {
-                return userResponse.getId();
-            }
-        }
-        return null;
-    }
 }

@@ -2,14 +2,15 @@ package com.skynest;
 
 import com.skynest.clients.SkyNestBackendClient;
 import com.skynest.config.properties.PropertiesReader;
+import com.skynest.constants.Credentials;
 import com.skynest.models.LoggedUserResponse;
 import com.skynest.models.LoginRequest;
-import com.skynest.utils.JsonTransformer;
+import com.skynest.models.UserResponse;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeSuite;
 
-import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.List;
 import java.util.UUID;
 
 import static org.apache.http.HttpStatus.SC_OK;
@@ -45,9 +46,17 @@ public class BaseTest {
     public UUID getLoggedUserId() {
         Response response = skyNestBackendClient.getLoggedUser();
         LoggedUserResponse loggedUserResponse = response.as(LoggedUserResponse.class);
-        //LoggedUserResponse loggedUserResponse = JsonTransformer.mapResponse(response, LoggedUserResponse.class);
-        UUID uuid = loggedUserResponse.getUuid();
-        return uuid;
+        return loggedUserResponse.getUuid();
+    }
+
+    public UUID getSpecificWorkerId(List<UserResponse> userResponses) {
+        for (int i = 0; i < userResponses.size(); i++) {
+            UserResponse userResponse = userResponses.get(i);
+            if (userResponse.getEmail().equals(Credentials.WORKER_EMAIL)) {
+                return userResponse.getId();
+            }
+        }
+        return null;
     }
 
 }
