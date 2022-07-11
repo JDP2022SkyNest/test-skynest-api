@@ -37579,7 +37579,7 @@
 											]
 										},
 										{
-											"name": "New Request",
+											"name": "ViewContentOfEmptyBucket",
 											"id": "946ae4df-5247-49de-a7d9-c4756e701269",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
