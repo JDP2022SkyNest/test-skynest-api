@@ -30056,7 +30056,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Private Worker's Bucket\",\r\n  \"description\": \"Description description\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Private Worker's Bucket\",\r\n  \"description\": \"Private Worker's Bucket\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
