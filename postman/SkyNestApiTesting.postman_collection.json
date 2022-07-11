@@ -31557,7 +31557,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Edited 2\",\r\n  \"description\": \"Edited Bucket 2\",\r\n  \"isPublic\": false\r\n}",
+													"raw": "{\r\n  \"name\": \"Admin's Bucket\",\r\n  \"description\": \"Edited Bucket 2\",\r\n  \"isPublic\": false\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
