@@ -37366,7 +37366,7 @@
 													]
 												},
 												{
-													"name": "ViewWorker'sBucketContentAdAdmin Copy",
+													"name": "ViewAdmin'sBucketContentAsWorker",
 													"id": "0955d10d-8f28-468b-81c0-4dcdcdade992",
 													"protocolProfileBehavior": {
 														"disableBodyPruning": true
