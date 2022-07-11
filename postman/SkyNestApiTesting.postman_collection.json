@@ -38843,7 +38843,7 @@
 											]
 										},
 										{
-											"name": "DownloadPublicFIleAsNotCreator",
+											"name": "DownloadFileFromPublicBucketAsNotCreator",
 											"id": "6700cb03-ddf3-4382-967f-a10be72afeff",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
