@@ -37698,7 +37698,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "ViewBucketContentEmptyToken",
 									"id": "0c896425-e39f-4c10-95df-4436df4ccad5",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
