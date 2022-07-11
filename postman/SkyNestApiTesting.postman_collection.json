@@ -30285,6 +30285,23 @@
 										},
 										{
 											"name": "CreateBucketWithCyrilicParameters",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "8f427453-a706-4c3f-80d5-d1257971da6a",
+														"exec": [
+															"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
+															"    pm.response.to.have.status(200);\r",
+															"    var jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData.bucketId).is.not.null;\r",
+															"    pm.environment.set(\"workerBucketId\", jsonData.bucketId);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "96bd4e21-de7b-44b6-8a55-41a0c16d512f",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
