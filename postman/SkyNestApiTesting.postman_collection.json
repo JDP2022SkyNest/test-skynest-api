@@ -37649,7 +37649,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToPublicBucketAsNotCreator Copy",
+											"name": "UploadFileToBucketFromAnotherCompany",
 											"event": [
 												{
 													"listen": "test",
