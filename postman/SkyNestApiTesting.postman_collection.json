@@ -31873,7 +31873,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "d4d88f60-fff6-49a8-bf7b-5b8d06bd0d02",
+												"id": "9820349e-1e54-416e-9a8d-814b24433ab5",
 												"type": "text/javascript",
 												"exec": [
 													""
@@ -31883,17 +31883,13 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "7657032f-a9d3-4aae-a6d8-7b039e67946a",
+												"id": "785e416c-1dfb-403c-bae9-3eed5c7f26af",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
 													"});",
 													"",
-													"pm.test(\"Created bucket is private by default\", function () {",
-													"    var jsonData = pm.response.json();",
-													"    pm.expect(jsonData.isPublic).to.eql(false);",
-													"});",
 													"",
 													"pm.test(\"Response contains bucketId\", function () {",
 													"    pm.expect(pm.response.text()).to.include(\"bucketId\");",
