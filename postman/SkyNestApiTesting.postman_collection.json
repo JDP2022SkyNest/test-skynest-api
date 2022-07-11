@@ -37052,7 +37052,20 @@
 							"item": [
 								{
 									"name": "ValidTokenAndSuccessfulGET",
-									"item": [],
+									"item": [
+										{
+											"name": "New Request",
+											"id": "ddc13b49-f81b-47d7-bfa6-0cae874a5645",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
+										}
+									],
 									"id": "a034e64e-1677-40cc-b1b6-da8412b83131"
 								},
 								{
