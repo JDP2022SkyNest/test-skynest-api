@@ -37054,7 +37054,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "New Request",
+											"name": "ViewBucketContentAsCreator",
 											"id": "ddc13b49-f81b-47d7-bfa6-0cae874a5645",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
