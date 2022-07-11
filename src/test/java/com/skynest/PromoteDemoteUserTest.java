@@ -27,16 +27,6 @@ public class PromoteDemoteUserTest extends BaseTest {
         specificWorkerId = getSpecificWorkerId(userResponses);
     }
 
-//    private UUID getUserId(List<UserResponse> userResponses) {
-//        for (int i = 0; i < userResponses.size(); i++) {
-//            UserResponse userResponse = userResponses.get(i);
-//            if (userResponse.getEmail().equals(Credentials.WORKER_EMAIL)) {
-//                return userResponse.getId();
-//            }
-//        }
-//        return null;
-//    }
-
     @Test(priority = 1)
     void promote_worker_to_manager_as_admin_test() {
         skyNestBackendClient.promoteUser(specificWorkerId).then().statusCode(SC_OK);
