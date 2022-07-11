@@ -38933,7 +38933,7 @@
 											]
 										},
 										{
-											"name": "DownloadFileFromWorker'sBucketAsSecondWorker",
+											"name": "DownloadFileFromBucketFromAnotherCompany",
 											"id": "a163249c-ce2d-4265-9d7b-90a1ce5c81a9",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
