@@ -31288,7 +31288,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Edited Name 1\",\r\n  \"description\": \"Edited Bucket\",\r\n  \"isPublic\": false\r\n}",
+													"raw": "{\r\n  \"name\": \"Edited Hristina's bucket\",\r\n  \"description\": \"Edited Bucket\",\r\n  \"isPublic\": false\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
