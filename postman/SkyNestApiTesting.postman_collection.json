@@ -37459,7 +37459,7 @@
 													]
 												},
 												{
-													"name": "ViewAdmin'sBucketContentAsUserFromAnotherCompany",
+													"name": "ViewBucketContentAsUserFromAnotherCompany",
 													"id": "5256ec91-5317-40dc-b57c-78411cfebba5",
 													"protocolProfileBehavior": {
 														"disableBodyPruning": true
