@@ -22187,8 +22187,7 @@
 												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
 												"exec": [
 													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"    pm.environment.set(\"workerAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+													"        pm.environment.set(\"workerAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
 													"});\r",
 													"\r",
 													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
