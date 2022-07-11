@@ -37048,7 +37048,7 @@
 					"name": "GetBucketContent",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "79900000-adf8-4d8c-818d-165d1f063c9e"
 						}
