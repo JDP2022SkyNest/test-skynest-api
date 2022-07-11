@@ -37440,7 +37440,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToPublicAdminAsNotCreator",
+											"name": "UploadFileToPublicBucketAsNotCreator",
 											"event": [
 												{
 													"listen": "test",
