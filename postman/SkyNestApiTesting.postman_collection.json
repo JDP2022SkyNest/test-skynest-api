@@ -44562,6 +44562,11 @@
 									"name": "ValidTokenButUnsuccessfulPUT",
 									"item": [
 										{
+											"name": "New Folder",
+											"item": [],
+											"id": "57133b91-4ff6-4819-8090-ff46a2efa971"
+										},
+										{
 											"name": "EditWorker'sFolderNameAsAdmin",
 											"id": "5b6cc78a-aca3-455d-8441-729627bf16ba",
 											"protocolProfileBehavior": {
