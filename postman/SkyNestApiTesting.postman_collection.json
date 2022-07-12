@@ -43522,11 +43522,42 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "ValidTokenAndSuccessfulGET",
+									"item": [
+										{
+											"name": "New Request",
+											"id": "b8f9c2d4-cf38-43fb-8a27-0d79609b1ebc",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
+										}
+									],
+									"id": "5c5367cc-b3eb-448c-9a30-aff3d6a01777"
+								},
+								{
+									"name": "ValidTokenButUnsuccessfulGET",
+									"item": [],
+									"id": "ac3d2dea-ea9e-4e7c-978d-3b4e4b1dd839"
+								}
+							],
 							"id": "2c106fdc-cacd-4eaf-8cab-32af14961f98"
 						},
 						{
-							"name": "New Folder",
+							"name": "InvalidToken",
 							"item": [],
 							"id": "d16da765-d18e-4bba-9b1b-adc3bcc16285"
 						}
