@@ -44309,7 +44309,31 @@
 								{
 									"name": "ValidTokenAndSuccessfulPUT",
 									"item": [],
-									"id": "07701d24-6327-4542-996e-8a07fda7a838"
+									"id": "07701d24-6327-4542-996e-8a07fda7a838",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "1be798b0-4c81-4294-8198-0214202400a2",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "fbc79114-90ed-4a4b-b6eb-12e7a7c2ad5f",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
 								},
 								{
 									"name": "EditWorker'sFolderNameAsWorker",
