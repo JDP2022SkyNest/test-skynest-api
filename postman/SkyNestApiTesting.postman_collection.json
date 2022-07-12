@@ -44559,8 +44559,21 @@
 									]
 								},
 								{
-									"name": "New Folder",
-									"item": [],
+									"name": "ValidTokenButUnsuccessfulPUT",
+									"item": [
+										{
+											"name": "New Request",
+											"id": "5b6cc78a-aca3-455d-8441-729627bf16ba",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
+										}
+									],
 									"id": "627b40b4-8714-4163-9ab8-bbb906964b40"
 								}
 							],
