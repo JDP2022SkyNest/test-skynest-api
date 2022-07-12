@@ -3253,7 +3253,7 @@
 											"script": {
 												"id": "1ad626f7-c3b7-4553-83de-05ad743cfdb9",
 												"exec": [
-													"pm.test(\"Response body contains id and that id is the same as the user id\", function () {\r",
+													"pm.test(\"Response body contains id which is the same as the user id\", function () {\r",
 													"    pm.expect(pm.response.text()).to.include(\"id\");\r",
 													"    var jsonData = pm.response.json();\r",
 													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
