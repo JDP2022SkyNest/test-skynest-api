@@ -26935,7 +26935,6 @@
 												"id": "a03012da-d1f0-4195-bef2-f0f452d1dda9",
 												"exec": [
 													"pm.test(\"Set the id of a valid company registration as an environment variable\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
 													"    var jsonData = pm.response.json();\r",
 													"    pm.expect(jsonData.id).is.not.null;\r",
 													"    pm.environment.set(\"validCompanyId\", jsonData.id);\r",
