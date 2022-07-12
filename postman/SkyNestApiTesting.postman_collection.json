@@ -44562,7 +44562,7 @@
 									"name": "ValidTokenButUnsuccessfulPUT",
 									"item": [
 										{
-											"name": "New Folder",
+											"name": "ForbiddenEdit",
 											"item": [],
 											"id": "57133b91-4ff6-4819-8090-ff46a2efa971"
 										},
