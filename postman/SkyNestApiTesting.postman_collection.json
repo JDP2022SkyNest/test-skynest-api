@@ -39433,7 +39433,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "0bac6d43-4d1f-4642-9178-9d65738fe949",
+												"id": "261d4e3f-6c8d-48b0-be30-99716402179a",
 												"type": "text/javascript",
 												"exec": [
 													""
@@ -39443,11 +39443,11 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "d4d7985b-4260-451d-bd38-fb44c8ca86dc",
+												"id": "e0935f1f-0536-4740-ade2-d21bb78c2d53",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test('Check status code', () => {",
-													"    pm.expect(pm.response.code).to.be.oneOf([403, 404, 409])",
+													"    pm.expect(pm.response.code).to.be.oneOf([403, 415, 409])",
 													"})"
 												]
 											}
