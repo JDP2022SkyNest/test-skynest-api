@@ -16946,7 +16946,14 @@
 													"    pm.expect(jsonData.id).is.not.null;\r",
 													"    pm.environment.set(\"validAdminId\", jsonData.id);\r",
 													"});\r",
-													""
+													"\r",
+													"//For promoting a user from worker to admin execute this SQL query to the local data base:\r",
+													"//UPDATE skynest.user \r",
+													"// set role_id = ( \r",
+													"//     SELECT id \r",
+													"//     from skynest.role where name = 'role_admin'\r",
+													"// ) \r",
+													"// where email = 'christinezahar@yahoo.com';"
 												],
 												"type": "text/javascript"
 											}
