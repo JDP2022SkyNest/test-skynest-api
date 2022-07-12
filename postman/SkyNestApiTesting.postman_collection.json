@@ -20208,6 +20208,8 @@
 											"script": {
 												"id": "5dee4cc5-6ab9-4d87-b49e-309be0b432b9",
 												"exec": [
+													"const jsonData = pm.response.json();\r",
+													"\r",
 													"pm.test(\"Status code is 200\", function () {\r",
 													"    pm.response.to.have.status(200);\r",
 													"});\r",
@@ -20216,7 +20218,6 @@
 													"    pm.expect(pm.response.text()).to.include(\"id\");\r",
 													"});\r",
 													"\r",
-													"const jsonData = pm.response.json();\r",
 													"pm.test(\"Data type of the response is string\", () => {\r",
 													"  pm.expect(jsonData.id).to.be.a(\"string\");\r",
 													"  pm.expect(jsonData.email).to.be.a(\"string\");\r",
