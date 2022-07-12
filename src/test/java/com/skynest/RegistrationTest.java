@@ -30,6 +30,8 @@ public class RegistrationTest extends BaseTest {
 
     @DataProvider(name = "UserData")
     public Object[][] getUserData() {
-        return new Object[][]{new Object[]{RegistrationRequest.generateValidRegistrationRequest()}};
+        return new Object[][]{
+                new Object[]{RegistrationRequest.generateValidRegistrationRequest()}
+        };
     }
 }

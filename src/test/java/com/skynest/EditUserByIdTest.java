@@ -3,12 +3,10 @@ package com.skynest;
 import com.skynest.models.EditRequest;
 import com.skynest.models.EditResponse;
 import com.skynest.models.UserResponse;
-import com.skynest.utils.JsonTransformer;
 import io.restassured.response.Response;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
@@ -19,7 +17,7 @@ import static org.testng.AssertJUnit.assertNotNull;
 public class EditUserByIdTest extends BaseTest {
 
     @Test(dataProvider = "UserData")
-    void edit_admin_details_as_admin_test(EditRequest editRequest) {
+    void logged_admin_should_be_able_to_edit_its_own_details(EditRequest editRequest) {
         loginAs(Roles.ADMIN);
         UUID loggedUserId = getLoggedUserId();
 
@@ -39,18 +37,19 @@ public class EditUserByIdTest extends BaseTest {
 
     @DataProvider(name = "UserData")
     public Object[][] getUserData() {
-        return new Object[][]{new Object[]{EditRequest.generateValidEditRequest()}};
+        return new Object[][]{
+                new Object[]{EditRequest.generateValidEditRequest()}
+        };
     }
 
     @Test(dataProvider = "UserData")
-    void edit_random_worker_details_as_admin_test(EditRequest editRequest) throws IOException {
+    void logged_admin_should_be_able_to_edit_details_of_random_worker(EditRequest editRequest) {
         loginAs(Roles.ADMIN);
         Response getAllUsersResponse = skyNestBackendClient.getAllUsers();
         getAllUsersResponse.then().statusCode(SC_OK);
 
-        List<UserResponse> userResponses = JsonTransformer.mapResponseToList(getAllUsersResponse, UserResponse.class);
-
-        UUID specificWorkerId = getSpecificWorkerId(userResponses);
+        UserResponse[] userResponses = getAllUsersResponse.body().as(UserResponse[].class);
+        UUID specificWorkerId = getSpecificWorkerId(List.of(userResponses));
 
         Response editUserResponse = skyNestBackendClient.editUserById(editRequest, specificWorkerId);
         editUserResponse.then().statusCode(SC_OK);

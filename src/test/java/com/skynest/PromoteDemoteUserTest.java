@@ -1,13 +1,10 @@
 package com.skynest;
 
-import com.skynest.constants.Credentials;
 import com.skynest.models.UserResponse;
-import com.skynest.utils.JsonTransformer;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
@@ -18,32 +15,31 @@ public class PromoteDemoteUserTest extends BaseTest {
     private UUID specificWorkerId;
 
     @BeforeClass
-    void getWorkerId() throws IOException {
+    void getWorkerId() {
         loginAs(Roles.ADMIN);
         Response getAllUsersResponse = skyNestBackendClient.getAllUsers();
         getAllUsersResponse.then().statusCode(SC_OK);
-
-        List<UserResponse> userResponses = JsonTransformer.mapResponseToList(getAllUsersResponse, UserResponse.class);
-        specificWorkerId = getSpecificWorkerId(userResponses);
+        UserResponse[] userResponses = getAllUsersResponse.body().as(UserResponse[].class);
+        specificWorkerId = getSpecificWorkerId(List.of(userResponses));
     }
 
     @Test(priority = 1)
-    void promote_worker_to_manager_as_admin_test() {
+    void admin_should_be_able_to_promote_worker_to_manager() {
         skyNestBackendClient.promoteUser(specificWorkerId).then().statusCode(SC_OK);
     }
 
     @Test(priority = 2)
-    void promote_already_promoted_user_as_admin_test() {
+    void admin_should_not_be_able_to_promote_already_promoted_user() {
         skyNestBackendClient.promoteUser(specificWorkerId).then().statusCode(SC_FORBIDDEN);
     }
 
     @Test(priority = 3)
-    void demote_manager_to_worker_as_admin_test() {
+    void admin_should_be_able_to_demote_manager_to_worker() {
         skyNestBackendClient.demoteUser(specificWorkerId).then().statusCode(SC_OK);
     }
 
     @Test(priority = 4)
-    void demote_already_demoted_user_as_admin_test() {
+    void admin_should_not_be_able_to_demote_already_demoted_user() {
         skyNestBackendClient.demoteUser(specificWorkerId).then().statusCode(SC_FORBIDDEN);
     }
 

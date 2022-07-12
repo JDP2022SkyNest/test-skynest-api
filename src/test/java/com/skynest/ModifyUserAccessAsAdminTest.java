@@ -1,13 +1,11 @@
 package com.skynest;
 
 import com.skynest.models.UserResponse;
-import com.skynest.utils.JsonTransformer;
 import io.restassured.response.Response;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,26 +15,25 @@ import static org.apache.http.HttpStatus.SC_OK;
  * Class that contains tests for enable and disable user
  */
 public class ModifyUserAccessAsAdminTest extends BaseTest {
-    private UUID workerId;
+    private UUID specificWorkerId;
 
     @BeforeClass
-    void getWorkerId() throws IOException {
+    void getWorkerId() {
         loginAs(Roles.ADMIN);
         Response getAllUsersResponse = skyNestBackendClient.getAllUsers();
         getAllUsersResponse.then().statusCode(SC_OK);
-
-        List<UserResponse> userResponses = JsonTransformer.mapResponseToList(getAllUsersResponse, UserResponse.class);
-        workerId = getSpecificWorkerId(userResponses);
+        UserResponse[] userResponses = getAllUsersResponse.body().as(UserResponse[].class);
+        specificWorkerId = getSpecificWorkerId(List.of(userResponses));
     }
 
     @Test
-    void disable_worker_as_admin_test() {
-        skyNestBackendClient.disableUser(workerId).then().statusCode(SC_OK);
+    void admin_should_be_able_to_disable_worker() {
+        skyNestBackendClient.disableUser(specificWorkerId).then().statusCode(SC_OK);
     }
 
     @AfterClass
-    void enable_disabled_worker_as_admin_test() {
-        skyNestBackendClient.enableUser(workerId).then().statusCode(SC_OK);
+    void admin_should_be_able_to_enable_disabled_worker() {
+        skyNestBackendClient.enableUser(specificWorkerId).then().statusCode(SC_OK);
     }
 }
 

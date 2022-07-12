@@ -8,6 +8,7 @@ import com.skynest.models.LoginRequest;
 import com.skynest.models.UserResponse;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 
 import java.net.URISyntaxException;
 import java.util.List;
@@ -57,6 +58,11 @@ public class BaseTest {
             }
         }
         return null;
+    }
+
+    @DataProvider(name = "loginAsWorkerOrAdmin")
+    public static Object[][] loginAs() {
+        return new Object[][]{{Roles.WORKER}, {Roles.ADMIN}};
     }
 
 }
