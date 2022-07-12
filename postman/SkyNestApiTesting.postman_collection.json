@@ -16754,7 +16754,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"{{randomEmail}}\",\r\n  \"password\": \"Flowers123\",\r\n  \"name\": \"{{randomFirstName}}\",\r\n  \"surname\": \"{{randomLastName}}\",\r\n  \"phoneNumber\": \"8577288880344\",\r\n  \"address\": \"{{randomStreetName}}\"\r\n}",
+											"raw": "{\r\n  \"email\": \"{{randomEmail}}\",\r\n  \"password\": \"Flowers123\",\r\n  \"name\": \"{{randomFirstName}}\",\r\n  \"surname\": \"{{randomLastName}}\",\r\n  \"phoneNumber\": \"85774480344\",\r\n  \"address\": \"{{randomStreetName}}\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
