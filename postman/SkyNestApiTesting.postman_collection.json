@@ -44689,7 +44689,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Worker changed admin's folder name\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Admin changed worker's folder name\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
