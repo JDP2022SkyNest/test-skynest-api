@@ -9397,7 +9397,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "1ebcb9b6-4162-4068-bf42-3e2d07bfec87",
+										"id": "bd6f2b37-c763-4084-8dd7-0779667c2c19",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -9407,14 +9407,14 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e629c185-44c8-43a5-b406-cba850b4688d",
+										"id": "89067ea2-fcb5-4b50-b9f5-a919e0817cf4",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Body is correct\", function () {",
+											"pm.test(\"Response body is correct\", function () {",
 											"    pm.response.to.have.body(\"true\");",
 											"});"
 										]
