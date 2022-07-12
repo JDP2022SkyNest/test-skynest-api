@@ -39433,7 +39433,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "5c7fdc29-928a-456f-96c9-914b5af6db85",
+												"id": "0bac6d43-4d1f-4642-9178-9d65738fe949",
 												"type": "text/javascript",
 												"exec": [
 													""
@@ -39443,12 +39443,12 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "1cee3618-0aab-4915-a50d-b192fba74553",
+												"id": "d4d7985b-4260-451d-bd38-fb44c8ca86dc",
 												"type": "text/javascript",
 												"exec": [
-													"pm.test(\"Status code is 403\", function () {",
-													"    pm.response.to.have.status(403);",
-													"});"
+													"pm.test('Check status code', () => {",
+													"    pm.expect(pm.response.code).to.be.oneOf([403, 404, 409])",
+													"})"
 												]
 											}
 										}
