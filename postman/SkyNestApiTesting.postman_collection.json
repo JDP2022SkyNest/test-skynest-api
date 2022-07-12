@@ -44316,7 +44316,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{invalidToken}}"
+												"token": "{{workerAuthToken}}"
 											}
 										},
 										"method": "PUT",
