@@ -1972,7 +1972,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "97a37708-9fd5-460c-907b-e6a3de9fc25d",
+										"id": "507dbceb-487d-4b48-884c-5695a19f3a09",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -1982,14 +1982,14 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6f8e6175-06fd-4181-ae27-87cb02b63fd6",
+										"id": "306bc58a-3756-408f-b98f-cb3f9089bb8c",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Body is correct\", function () {",
+											"pm.test(\"Response body is correct\", function () {",
 											"    pm.response.to.have.body(\"User was successfully deleted from database\");",
 											"});"
 										]
