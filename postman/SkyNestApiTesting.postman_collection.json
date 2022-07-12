@@ -44302,7 +44302,13 @@
 				},
 				{
 					"name": "EditFolderName",
-					"item": [],
+					"item": [
+						{
+							"name": "New Folder",
+							"item": [],
+							"id": "42ad4dc0-4293-4d71-a391-c6531c436198"
+						}
+					],
 					"id": "8244a351-66a7-423d-b372-ca72699c86c4"
 				}
 			],
