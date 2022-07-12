@@ -35359,7 +35359,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f5559463-d74c-4c68-ab59-54baf0133fc7",
+										"id": "a2a9d765-c946-4feb-9ed2-203f2a6becca",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -35369,14 +35369,14 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "861c79c9-88d9-4964-834e-c0f18068b762",
+										"id": "d0f4f8d1-03b5-4900-b175-99efc2ca0b30",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
-											"pm.test(\"Body is correct\", function () {",
+											"pm.test(\"Response body is correct\", function () {",
 											"    pm.response.to.have.body(\"true\");",
 											"});"
 										]
