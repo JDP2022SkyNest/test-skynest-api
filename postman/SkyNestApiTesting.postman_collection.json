@@ -44671,6 +44671,34 @@
 													"body": "{\n    \"id\": \"f0af4fe7-81ef-4fe9-b0b0-8a44c09e4802\",\n    \"createdOn\": \"2022-07-12T13:25:26\",\n    \"modifiedOn\": \"2022-07-12T13:25:26\",\n    \"deletedOn\": null,\n    \"name\": \"Admin changed worker's folder name\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"bce27f5e-fabb-44bd-adac-a48e98ae53e6\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditWorker'sFolderNameAsAdmin Copy",
+											"id": "88e071fa-6cb9-4f90-93d1-8286cfed05a5",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Admin changed worker's folder name\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "627b40b4-8714-4163-9ab8-bbb906964b40"
