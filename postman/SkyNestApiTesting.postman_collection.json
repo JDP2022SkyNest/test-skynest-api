@@ -44946,8 +44946,8 @@
 													"script": {
 														"id": "9b410805-fe39-46e6-9644-f3a27e38e0a0",
 														"exec": [
-															"pm.test(\"Status code is 404\", function () {\r",
-															"    pm.response.to.have.status(404);\r",
+															"pm.test(\"Status code is 409\", function () {\r",
+															"    pm.response.to.have.status(409);\r",
 															"});"
 														],
 														"type": "text/javascript"
@@ -44976,7 +44976,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
 											},
 											"response": []
 										}
