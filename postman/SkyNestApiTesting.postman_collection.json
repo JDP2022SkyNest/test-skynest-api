@@ -5055,9 +5055,7 @@
 													"script": {
 														"id": "1f3c3b6b-49ec-4d0c-8955-c9cb23098c3b",
 														"exec": [
-															"pm.test(\"Status code is 403\", function () {\r",
-															"    pm.response.to.have.status(403);\r",
-															"});"
+															""
 														],
 														"type": "text/javascript"
 													}
