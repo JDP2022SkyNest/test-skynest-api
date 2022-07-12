@@ -18152,7 +18152,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f52ae957-1efc-4b50-8169-ec8b964a7037",
+										"id": "52b85f33-4f6e-4988-90d6-be0dce0add8b",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -18162,9 +18162,11 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "50af3744-6391-4109-8fca-5f5d2b58794e",
+										"id": "20c565a0-117c-4289-8f0e-7fe78b683166",
 										"type": "text/javascript",
 										"exec": [
+											"const jsonData = pm.response.json();",
+											"",
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
@@ -18173,7 +18175,6 @@
 											"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
 											"});",
 											"",
-											"const jsonData = pm.response.json();",
 											"pm.test(\"Test data type of the response\", () => {",
 											"  pm.expect(jsonData).to.be.an(\"object\");",
 											"  pm.expect(jsonData.id).to.be.a(\"string\");",
