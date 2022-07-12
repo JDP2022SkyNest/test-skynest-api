@@ -2961,7 +2961,7 @@
 											"script": {
 												"id": "0173b488-b292-4d4e-8344-c3cd83162cff",
 												"exec": [
-													"pm.test(\"Response body contains id and that id is the same as the user id\", function () {\r",
+													"pm.test(\"Response body contains id which is the same as the user id\", function () {\r",
 													"    pm.expect(pm.response.text()).to.include(\"id\");\r",
 													"    var jsonData = pm.response.json();\r",
 													"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
