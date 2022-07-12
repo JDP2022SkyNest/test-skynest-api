@@ -43620,7 +43620,7 @@
 											]
 										},
 										{
-											"name": "GetWorker'sFolderContentAsWorker Copy",
+											"name": "GetAdmin'sFolderContentAsAdmin",
 											"id": "999da45a-0244-4e24-aeec-db585a4e1633",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
