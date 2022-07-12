@@ -1,17 +1,18 @@
 package com.skynest;
 
-import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import java.util.UUID;
 
 import static org.apache.http.HttpStatus.SC_OK;
 
-public class GetUserByIdTest extends LoggedUserBaseTest {
-    @Test
-    void valid_get_user_by_id_test() throws IOException {
-        Response getUserResponse = skyNestBackendClient.getUserById();
-        getUserResponse.then().statusCode(SC_OK);
+public class GetUserByIdTest extends BaseTest {
+
+    @Test(dataProvider = "loginAsWorkerOrAdmin")
+    void logged_user_should_be_able_to_view_its_own_details(Roles role) {
+        loginAs(role);
+        UUID loggedUserId = getLoggedUserId();
+        skyNestBackendClient.getUserById(loggedUserId).then().statusCode(SC_OK);
     }
 
 }

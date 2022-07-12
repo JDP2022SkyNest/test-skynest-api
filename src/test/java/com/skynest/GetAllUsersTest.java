@@ -1,16 +1,22 @@
 package com.skynest;
 
-import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
+import static org.apache.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.http.HttpStatus.SC_OK;
 
-public class GetAllUsersTest extends LoggedUserBaseTest {
+public class GetAllUsersTest extends BaseTest {
 
     @Test
-    void valid_get_all_users_test() {
-        Response getAllUsersResponse = skyNestBackendClient.getAllUsers();
-        getAllUsersResponse.then().statusCode(SC_OK);
+    void logged_admin_should_be_able_to_view_details_of_all_users() {
+        loginAs(Roles.ADMIN);
+        skyNestBackendClient.getAllUsers().then().statusCode(SC_OK);
+    }
+
+    @Test
+    void logged_worker_should_not_be_able_to_view_details_of_all_users() {
+        loginAs(Roles.WORKER);
+        skyNestBackendClient.getAllUsers().then().statusCode(SC_FORBIDDEN);
     }
 
 }
