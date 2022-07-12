@@ -36435,7 +36435,31 @@
 									]
 								}
 							],
-							"id": "3953641c-779f-4b13-9de0-8319415adfdd"
+							"id": "3953641c-779f-4b13-9de0-8319415adfdd",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "02e08e8b-e8bf-46ac-b5ae-b08d7ba5b8ee",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "f2d566d9-e5c5-4827-af7c-006cbd403dc1",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "ValidTokenButUnsuccessfulPUT",
