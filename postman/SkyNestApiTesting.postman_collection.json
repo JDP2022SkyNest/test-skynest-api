@@ -769,7 +769,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "8681681c-8944-447b-851d-0d10e8591cca",
+										"id": "03ba209a-b691-47b3-bc70-f3dfe219c82e",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -779,9 +779,11 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2b63b41c-9e27-4e0e-bbea-adf2ad2859a5",
+										"id": "1ee6b9e6-5c86-475a-9b95-c37aff8e012d",
 										"type": "text/javascript",
 										"exec": [
+											"const jsonData = pm.response.json();",
+											"",
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
@@ -797,7 +799,6 @@
 											"    .to.be.oneOf([\"role_worker\", \"role_admin\", \"role_manager\"]);",
 											"});",
 											"",
-											"const jsonData = pm.response.json();",
 											"  pm.test(\"Data type of the response is string\", () => {",
 											"  pm.expect(jsonData).to.be.an(\"object\");",
 											"  pm.expect(jsonData.id).to.be.a(\"string\");",
