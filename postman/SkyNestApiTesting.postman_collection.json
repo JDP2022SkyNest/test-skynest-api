@@ -28737,7 +28737,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "bdc85a22-392b-4bfa-b458-10e1725b0b7a",
+										"id": "51fbd3b4-48e2-4766-b84a-c60618acef15",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -28747,7 +28747,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c26e6a49-c101-41ad-bc06-746e82c68df7",
+										"id": "516eac9b-05df-42b1-aaac-b53536ebfb78",
 										"type": "text/javascript",
 										"exec": [
 											"const jsonData = pm.response.json();",
@@ -28763,7 +28763,7 @@
 											"});",
 											"",
 											"pm.test(\"Tier value is in valid list\", () => {",
-											"  pm.expect(pm.response.jsonData.tierName).to.include.oneOf(\"basic\", \"gold\");",
+											"  pm.expect(pm.response.tierName).to.be.oneOf([\"basic\",\"gold\"]);",
 											"});",
 											"",
 											"pm.test(\"Data type of the response is string\", () => {",
