@@ -522,16 +522,16 @@
 											"script": {
 												"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
 												"exec": [
+													"var jsonData = pm.response.json();\r",
+													"\r",
 													"pm.test(\"Response body contains id and that id is the same as the user id\", function () {\r",
 													"    pm.expect(pm.response.text()).to.include(\"id\");\r",
-													"    var jsonData = pm.response.json();\r",
 													"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
 													"    pm.expect(jsonData.id).to.eql(validWorkerId);\r",
 													"\r",
 													"});\r",
 													"\r",
 													"pm.test(\"User role is admin\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
 													"    pm.expect(jsonData.roleName).to.eql(\"role_worker\");\r",
 													"});"
 												],
