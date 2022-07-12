@@ -18152,7 +18152,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "22c2942d-97fd-4732-82dc-631293740afb",
+										"id": "f52ae957-1efc-4b50-8169-ec8b964a7037",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -18162,7 +18162,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9341a64f-04dd-4411-8a69-1af6193f8120",
+										"id": "50af3744-6391-4109-8fca-5f5d2b58794e",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
@@ -18171,10 +18171,6 @@
 											"",
 											"pm.test(\"Content-Type header is application/json\", () => {",
 											"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
-											"});",
-											"",
-											"pm.test(\"Response body contains id\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"id\");",
 											"});",
 											"",
 											"const jsonData = pm.response.json();",
