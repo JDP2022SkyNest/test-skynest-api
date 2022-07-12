@@ -44562,7 +44562,7 @@
 									"name": "ValidTokenButUnsuccessfulPUT",
 									"item": [
 										{
-											"name": "New Request",
+											"name": "EditWorker'sFolderNameAsAdmin",
 											"id": "5b6cc78a-aca3-455d-8441-729627bf16ba",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
