@@ -18479,7 +18479,7 @@
 									"response": []
 								},
 								{
-									"name": "CyrilicPassword",
+									"name": "CyrilicInputs",
 									"event": [
 										{
 											"listen": "test",
