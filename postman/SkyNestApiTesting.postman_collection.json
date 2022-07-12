@@ -31629,15 +31629,14 @@
 													"script": {
 														"id": "994534b6-6b83-4dbe-8225-9e32d39811d8",
 														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
 															"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
-															"    var jsonData = pm.response.json();\r",
 															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
 															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
 															"});\r",
 															"\r",
 															"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
-															"    pm.response.to.have.status(200);\r",
-															"    var jsonData = pm.response.json();\r",
 															"    pm.expect(jsonData.bucketId).is.not.null;\r",
 															"    pm.environment.set(\"adminBucketId\", jsonData.bucketId);\r",
 															"});"
