@@ -45142,7 +45142,7 @@
 									"response": []
 								},
 								{
-									"name": "RemoveFolderInvalidToken",
+									"name": "EditFolderNameInvalidToken",
 									"id": "e32da26f-e8a4-4259-b1b1-dfbec7cf6fe0",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
