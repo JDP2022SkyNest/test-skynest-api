@@ -44305,7 +44305,27 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "7d3627b4-936e-4897-8ab2-ef0ff9f9d412",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{invalidToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+									},
+									"response": []
+								}
+							],
 							"id": "42ad4dc0-4293-4d71-a391-c6531c436198"
 						},
 						{
