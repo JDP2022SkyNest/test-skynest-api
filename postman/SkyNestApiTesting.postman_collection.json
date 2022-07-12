@@ -44529,7 +44529,31 @@
 									]
 								}
 							],
-							"id": "42ad4dc0-4293-4d71-a391-c6531c436198"
+							"id": "42ad4dc0-4293-4d71-a391-c6531c436198",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "3f18b3f4-5136-44f1-800e-928e8e54f8d3",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "7dbc2efe-2643-419b-9800-d3eee34f17b1",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "InvalidToken",
