@@ -43522,17 +43522,11 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [
-								{
-									"name": "New Folder",
-									"item": [],
-									"id": "5c5367cc-b3eb-448c-9a30-aff3d6a01777"
-								}
-							],
+							"item": [],
 							"id": "2c106fdc-cacd-4eaf-8cab-32af14961f98"
 						},
 						{
-							"name": "InvalidToken",
+							"name": "New Folder",
 							"item": [],
 							"id": "d16da765-d18e-4bba-9b1b-adc3bcc16285"
 						}
