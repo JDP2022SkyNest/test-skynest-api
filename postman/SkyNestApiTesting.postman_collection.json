@@ -44559,16 +44559,29 @@
 									]
 								},
 								{
-									"name": "New Request",
-									"id": "218fdc29-6581-40ef-a8ba-22d93141499e",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
-									},
-									"response": []
+									"name": "ValidTokenButUnsuccessfulPUT",
+									"item": [
+										{
+											"name": "EditWorker'sFolderNameAsAdmin",
+											"id": "5b6cc78a-aca3-455d-8441-729627bf16ba",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
+										}
+									],
+									"id": "627b40b4-8714-4163-9ab8-bbb906964b40"
 								}
 							],
 							"id": "42ad4dc0-4293-4d71-a391-c6531c436198",
