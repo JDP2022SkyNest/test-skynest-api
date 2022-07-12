@@ -3554,7 +3554,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3b98f5d0-316c-47a8-a372-5afa77944e82",
+										"id": "3de3477f-3527-4ff6-8669-93928b709010",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3564,9 +3564,11 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1ecc4919-cfd9-4bb4-8c65-0423a2fc7588",
+										"id": "5b828215-bbc0-47c5-bb31-ba13dffdecd1",
 										"type": "text/javascript",
 										"exec": [
+											"const jsonData = pm.response.json();",
+											"",
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
@@ -3576,7 +3578,6 @@
 											"    .to.be.oneOf([\"role_worker\", \"role_admin\", \"role_manager\"]);",
 											"});",
 											"",
-											"const jsonData = pm.response.json();",
 											"  pm.test(\"Data type of the response is string\", () => {",
 											"  pm.expect(jsonData).to.be.an(\"object\");",
 											"  pm.expect(jsonData.id).to.be.a(\"string\");",
