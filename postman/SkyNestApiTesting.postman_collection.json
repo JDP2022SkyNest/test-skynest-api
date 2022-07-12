@@ -45114,7 +45114,7 @@
 									"response": []
 								},
 								{
-									"name": "RemoveFolderExpiredToken",
+									"name": "EditFolderNameExpiredToken",
 									"id": "a2ef982a-db87-48e6-8917-00fb96e040ee",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
