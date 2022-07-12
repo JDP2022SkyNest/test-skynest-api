@@ -28737,7 +28737,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3db1ab17-6e0c-47d0-8835-2c2916c27d38",
+										"id": "2d1394b6-d063-4405-b829-83ed1b4d5b50",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -28747,7 +28747,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9d164273-f0d0-412f-bb98-6622a356e430",
+										"id": "1a18c300-c932-4447-b4f5-f1df0c542d61",
 										"type": "text/javascript",
 										"exec": [
 											"const jsonData = pm.response.json();",
@@ -28763,7 +28763,7 @@
 											"});",
 											"",
 											"pm.test(\"Tier value is in valid list\", () => {",
-											"  pm.expect(pm.response.jsonData.roles).to.include.oneOf([\"basic\", \"gold\"]);",
+											"  pm.expect(pm.response.jsonData.tierName).to.include.oneOf([\"basic\", \"gold\"]);",
 											"});",
 											"",
 											"pm.test(\"Data type of the response is string\", () => {",
