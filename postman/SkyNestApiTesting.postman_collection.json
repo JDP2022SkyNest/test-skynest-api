@@ -39462,7 +39462,31 @@
 											]
 										}
 									],
-									"id": "5e201716-228a-4798-bce7-bbc3387e159d"
+									"id": "5e201716-228a-4798-bce7-bbc3387e159d",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "5c7fdc29-928a-456f-96c9-914b5af6db85",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "1cee3618-0aab-4915-a50d-b192fba74553",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {",
+													"    pm.response.to.have.status(403);",
+													"});"
+												]
+											}
+										}
+									]
 								}
 							],
 							"id": "1ba56730-5598-45f6-8952-45caa17c7d8b"
