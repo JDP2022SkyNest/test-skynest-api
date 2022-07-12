@@ -28737,7 +28737,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "c1e65c04-6bb4-44b1-99a0-04feb68b5dc1",
+										"id": "3cc4c574-1a09-4b08-bf19-0246f93074a6",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -28747,11 +28747,34 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a3d91022-83f9-477e-b354-b95741d76f65",
+										"id": "2a38aa97-3f32-4f11-b5c6-605fdb6487fc",
 										"type": "text/javascript",
 										"exec": [
+											"const jsonData = pm.response.json();",
+											"",
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Response must be valid and have a body\", function () {",
+											"     pm.response.to.be.ok;",
+											"     pm.response.to.be.withBody;",
+											"     pm.response.to.be.json;",
+											"});",
+											"",
+											"pm.test(\"Tier value is in valid list\", () => {",
+											"  pm.expect(pm.response.jsonData.roles).to.include.oneOf([\"basic\", \"gold\"]);",
+											"});",
+											"",
+											"pm.test(\"Data type of the response is string\", () => {",
+											"  pm.expect(jsonData).to.be.an(\"object\");",
+											"  pm.expect(jsonData.id).to.be.a(\"string\");",
+											"  pm.expect(jsonData.email).to.be.a(\"string\");",
+											"  pm.expect(jsonData.name).to.be.a(\"string\");",
+											"  pm.expect(jsonData.surname).to.be.a(\"string\");",
+											"  pm.expect(jsonData.phoneNumber).to.be.a(\"string\");",
+											"  pm.expect(jsonData.address).to.be.a(\"string\");",
+											"  pm.expect(jsonData.roleName).to.be.a(\"string\");",
 											"});"
 										]
 									}
