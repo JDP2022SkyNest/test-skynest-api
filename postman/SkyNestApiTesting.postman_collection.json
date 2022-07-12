@@ -41544,7 +41544,31 @@
 											]
 										}
 									],
-									"id": "b24b9280-4fa4-4dc9-84a1-131b8978491b"
+									"id": "b24b9280-4fa4-4dc9-84a1-131b8978491b",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "2220a82e-4f2e-443b-9022-f9656edef9b2",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "d5133f0d-ac8e-4f56-bdf1-cd459562eec4",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test('Check status code', () => {",
+													"    pm.expect(pm.response.code).to.be.oneOf([403, 404])",
+													"})"
+												]
+											}
+										}
+									]
 								}
 							],
 							"id": "90b67db1-9968-45e6-ac9f-383135b24514"
