@@ -769,7 +769,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2c24ebd5-68ce-4c51-9a1d-3bc8a943bec0",
+										"id": "8681681c-8944-447b-851d-0d10e8591cca",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -779,11 +779,17 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9022610f-e076-4395-8452-a117dc5edfb3",
+										"id": "2b63b41c-9e27-4e0e-bbea-adf2ad2859a5",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Response must be valid and have a body\", function () {",
+											"     pm.response.to.be.ok;",
+											"     pm.response.to.be.withBody;",
+											"     pm.response.to.be.json;",
 											"});",
 											"",
 											"pm.test(\"User role value is in valid list\", () => {",
@@ -801,7 +807,11 @@
 											"  pm.expect(jsonData.phoneNumber).to.be.a(\"string\");",
 											"  pm.expect(jsonData.address).to.be.a(\"string\");",
 											"  pm.expect(jsonData.roleName).to.be.a(\"string\");",
-											"});"
+											"});",
+											"",
+											"",
+											"",
+											""
 										]
 									}
 								}
