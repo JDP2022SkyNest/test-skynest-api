@@ -818,9 +818,7 @@
 											"script": {
 												"id": "989b7402-d57f-4fc9-a687-36d61397770b",
 												"exec": [
-													"pm.test(\"Response body contains error messages\", function () {\r",
-													"    pm.expect(pm.response.text()).to.include(\"messages\");\r",
-													"})"
+													""
 												],
 												"type": "text/javascript"
 											}
