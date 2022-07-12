@@ -30104,7 +30104,6 @@
 														"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
 														"exec": [
 															"pm.test(\"Set the id of a public bucket creation as an environment variable\", function () {\r",
-															"    pm.response.to.have.status(200);\r",
 															"    var jsonData = pm.response.json();\r",
 															"    pm.expect(jsonData.bucketId).is.not.null;\r",
 															"    pm.environment.set(\"publicBucketId\", jsonData.bucketId);\r",
