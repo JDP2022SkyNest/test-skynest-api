@@ -28732,7 +28732,31 @@
 									]
 								}
 							],
-							"id": "8df4e0be-f065-401d-9ea2-3288ca2be5f7"
+							"id": "8df4e0be-f065-401d-9ea2-3288ca2be5f7",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "c1e65c04-6bb4-44b1-99a0-04feb68b5dc1",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "a3d91022-83f9-477e-b354-b95741d76f65",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "InvalidToken",
