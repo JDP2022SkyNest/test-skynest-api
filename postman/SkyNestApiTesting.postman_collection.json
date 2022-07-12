@@ -44557,18 +44557,6 @@
 											}
 										}
 									]
-								},
-								{
-									"name": "New Request Copy",
-									"id": "634d1739-3736-4887-9c5a-804ca848a05e",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
-									},
-									"response": []
 								}
 							],
 							"id": "42ad4dc0-4293-4d71-a391-c6531c436198",
