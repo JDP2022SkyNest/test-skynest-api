@@ -27568,7 +27568,31 @@
 											]
 										}
 									],
-									"id": "405afaab-66ea-42b3-9c77-63e59191fc12"
+									"id": "405afaab-66ea-42b3-9c77-63e59191fc12",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "e5bb1ced-e231-498f-a6ac-5f10d22f05d3",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "ddd4a61e-bbf8-4985-b887-7cf7cef28950",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {",
+													"    pm.response.to.have.status(403);",
+													"});"
+												]
+											}
+										}
+									]
 								},
 								{
 									"name": "EditWithInvalidInputs",
