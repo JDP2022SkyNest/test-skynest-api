@@ -43521,7 +43521,7 @@
 					"name": "GetFolderContent",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "2c106fdc-cacd-4eaf-8cab-32af14961f98"
 						}
