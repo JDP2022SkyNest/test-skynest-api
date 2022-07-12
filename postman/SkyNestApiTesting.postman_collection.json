@@ -34026,7 +34026,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "adfbba7b-9f94-4a10-a69c-f30e21cb0be2",
+										"id": "76d44357-4235-4250-ad33-feadcd45ec0f",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -34036,7 +34036,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1ae97f18-dcb6-413b-99ae-b7f4c3fd05bb",
+										"id": "5c6cde7e-f966-4597-ba26-41fbc90c4ed0",
 										"type": "text/javascript",
 										"exec": [
 											"const jsonData = pm.response.json();",
@@ -34050,7 +34050,7 @@
 											"  pm.expect(jsonData.bucketId).to.be.a(\"string\");",
 											"  pm.expect(jsonData.createdById).to.be.a(\"string\");",
 											"  pm.expect(jsonData.name).to.be.a(\"string\");",
-											"  pm.expect(jsonData.companyId).to.be.null;",
+											"  pm.expect(jsonData.companyId).to.be.a(\"string\");",
 											"  pm.expect(jsonData.description).to.be.a(\"string\");",
 											"  pm.expect(jsonData.size).to.be.a(\"number\");",
 											"  pm.expect(jsonData.isPublic).to.be.a(\"boolean\");",
