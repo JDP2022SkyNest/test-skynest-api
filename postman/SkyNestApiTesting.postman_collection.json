@@ -44539,7 +44539,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3f18b3f4-5136-44f1-800e-928e8e54f8d3",
+										"id": "2088a9a2-68d7-4548-8e25-06ff980d3a86",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -44549,12 +44549,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7dbc2efe-2643-419b-9800-d3eee34f17b1",
+										"id": "f072919e-9340-4d59-9c54-ed5f74c89a7b",
 										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
+											""
 										]
 									}
 								}
