@@ -9,33 +9,6 @@ import static org.apache.http.HttpStatus.*;
 
 public class LoginTest extends BaseTest {
 
-    @DataProvider(name = "invalidCredentialCombinations")
-    public static Object[][] invalidCredentials() {
-        return new Object[][]{
-                {"invalidemail@yahoo.com", "System123"},
-                {"invalidemail@yahoo.com", "invalidpass"},
-                {"invalidemail@yahoo.com", ""},
-                {"", "System123"},
-                {"", "invalidpass"},
-                {"", ""}
-        };
-    }
-
-    @DataProvider(name = "invalidPassword")
-    public static Object[][] invalidPassword() {
-        return new Object[][]{
-                {"yagaj78380@jrvps.com", "invalidpass"},
-                {"yagaj78380@jrvps.com", ""}
-        };
-    }
-
-    @DataProvider(name = "maxNumberOfLoginAttempts")
-    public static Object[][] maxAttempts() {
-        return new Object[][]{
-                {5}
-        };
-    }
-
     @Test
     void verified_user_should_be_successfully_logged_in() {
         LoginRequest body = new LoginRequest("yagaj78380@jrvps.com", "System123");
@@ -54,10 +27,30 @@ public class LoginTest extends BaseTest {
         skyNestBackendClient.login(body).then().statusCode(SC_UNAUTHORIZED);
     }
 
+    @DataProvider(name = "invalidPassword")
+    public static Object[][] invalidPassword() {
+        return new Object[][]{
+                {"yagaj78380@jrvps.com", "invalidpass"},
+                {"yagaj78380@jrvps.com", ""}
+        };
+    }
+
     @Test(dataProvider = "invalidCredentialCombinations")
     void user_should_not_log_in_with_invalid_credentials(String email, String password) {
         LoginRequest body = new LoginRequest(email, password);
         skyNestBackendClient.login(body).then().statusCode(SC_NOT_FOUND);
+    }
+
+    @DataProvider(name = "invalidCredentialCombinations")
+    public static Object[][] invalidCredentials() {
+        return new Object[][]{
+                {"invalidemail@yahoo.com", "System123"},
+                {"invalidemail@yahoo.com", "invalidpass"},
+                {"invalidemail@yahoo.com", ""},
+                {"", "System123"},
+                {"", "invalidpass"},
+                {"", ""}
+        };
     }
 
     @Test(dataProvider = "maxNumberOfLoginAttempts")
@@ -68,5 +61,12 @@ public class LoginTest extends BaseTest {
             loginResponse = skyNestBackendClient.login(body);
         }
         loginResponse.then().statusCode(429);
+    }
+
+    @DataProvider(name = "maxNumberOfLoginAttempts")
+    public static Object[][] maxAttempts() {
+        return new Object[][]{
+                {5}
+        };
     }
 }

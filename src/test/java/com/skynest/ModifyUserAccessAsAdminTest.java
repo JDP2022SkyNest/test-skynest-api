@@ -11,9 +11,6 @@ import java.util.UUID;
 
 import static org.apache.http.HttpStatus.SC_OK;
 
-/**
- * Class that contains tests for enable and disable user
- */
 public class ModifyUserAccessAsAdminTest extends BaseTest {
     private UUID specificWorkerId;
 

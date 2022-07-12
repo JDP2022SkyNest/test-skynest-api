@@ -55,4 +55,12 @@ public final class RandomGenerator {
         return FAKER.job().position();
     }
 
+    public static String generateRandomBucketName() {
+        return FAKER.name().name();
+    }
+
+    public static String generateRandomBucketDescription() {
+        return FAKER.weather().description();
+    }
+
 }

@@ -1,10 +1,7 @@
 package com.skynest.clients;
 
 import com.skynest.constants.ApiConstants;
-import com.skynest.models.ChangePasswordRequest;
-import com.skynest.models.EditRequest;
-import com.skynest.models.LoginRequest;
-import com.skynest.models.RegistrationRequest;
+import com.skynest.models.*;
 import io.restassured.response.Response;
 
 import java.net.URISyntaxException;
@@ -89,5 +86,11 @@ public class SkyNestBackendClient extends BaseClient {
         return requestMaker()
                 .pathParam(userId, uuid)
                 .put(ApiConstants.DEMOTE_PATH);
+    }
+
+    public Response createBucket(CreateBucketRequest createBucketRequest) {
+        return requestMaker()
+                .body(createBucketRequest)
+                .post(ApiConstants.BUCKETS_PATH);
     }
 }

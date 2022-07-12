@@ -35,13 +35,6 @@ public class EditUserByIdTest extends BaseTest {
         assertEquals(editResponse.getPositionInCompany(), editRequest.getPositionInCompany());
     }
 
-    @DataProvider(name = "UserData")
-    public Object[][] getUserData() {
-        return new Object[][]{
-                new Object[]{EditRequest.generateValidEditRequest()}
-        };
-    }
-
     @Test(dataProvider = "UserData")
     void logged_admin_should_be_able_to_edit_details_of_random_worker(EditRequest editRequest) {
         loginAs(Roles.ADMIN);
@@ -63,6 +56,13 @@ public class EditUserByIdTest extends BaseTest {
         assertEquals(editResponse.getPhoneNumber(), editRequest.getPhoneNumber());
         assertEquals(editResponse.getAddress(), editRequest.getAddress());
         assertEquals(editResponse.getPositionInCompany(), editRequest.getPositionInCompany());
+    }
+
+    @DataProvider(name = "UserData")
+    public Object[][] getUserData() {
+        return new Object[][]{
+                new Object[]{EditRequest.generateValidEditRequest()}
+        };
     }
 
 }

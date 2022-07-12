@@ -16,4 +16,5 @@ public final class ApiConstants {
     public static final String DISABLE_PATH = "users/{userId}/disable";
     public static final String PROMOTE_PATH = "users/{userId}/promote";
     public static final String DEMOTE_PATH = "users/{userId}/demote";
+    public static final String BUCKETS_PATH = "/buckets";
 }

@@ -27,12 +27,6 @@ public class BaseTest {
         skyNestBackendClient = new SkyNestBackendClient(targetDomain);
     }
 
-    public void loginUser(String email, String password) {
-        LoginRequest body = new LoginRequest(email, password);
-        Response loginResponse = skyNestBackendClient.login(body);
-        loginResponse.then().statusCode(SC_OK);
-    }
-
     public void loginAs(Roles role) {
         switch (role) {
             case ADMIN:
@@ -42,6 +36,12 @@ public class BaseTest {
                 loginUser("hristina.zaharieva@htecgroup.com", "Hris8833");
                 break;
         }
+    }
+
+    public void loginUser(String email, String password) {
+        LoginRequest body = new LoginRequest(email, password);
+        Response loginResponse = skyNestBackendClient.login(body);
+        loginResponse.then().statusCode(SC_OK);
     }
 
     public UUID getLoggedUserId() {
@@ -61,7 +61,7 @@ public class BaseTest {
     }
 
     @DataProvider(name = "loginAsWorkerOrAdmin")
-    public static Object[][] loginAs() {
+    public static Object[][] loginAsWorkerOrAdmin() {
         return new Object[][]{{Roles.WORKER}, {Roles.ADMIN}};
     }
 
