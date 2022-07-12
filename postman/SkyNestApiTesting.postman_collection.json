@@ -33912,14 +33912,14 @@
 											"script": {
 												"id": "76c04764-9c38-4453-95aa-60d361729a31",
 												"exec": [
+													"const jsonData = pm.response.json();\r",
+													"\r",
 													"pm.test(\"createdById from the response is the same with the id of the user that created the bucket\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
 													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
 													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
 													"});\r",
 													"\r",
 													"pm.test(\"bucketId from the response is the same with the id from the successful bucket creation\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
 													"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
 													"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
 													"});\r",
