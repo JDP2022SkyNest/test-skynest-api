@@ -22,15 +22,15 @@
 											"script": {
 												"id": "009bd056-b8f3-425e-8899-671763c23e80",
 												"exec": [
+													"var jsonData = pm.response.json();\r",
+													"\r",
 													"pm.test(\"Response body contains id and that id is the same as the user id\", function () {\r",
 													"    pm.expect(pm.response.text()).to.include(\"id\");\r",
-													"    var jsonData = pm.response.json();\r",
 													"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
 													"    pm.expect(jsonData.id).to.eql(validWorkerId);\r",
 													"});\r",
 													"\r",
 													"pm.test(\"User role is worker\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
 													"    pm.expect(jsonData.roleName).to.eql(\"role_worker\");\r",
 													"});\r",
 													"\r",
