@@ -5256,9 +5256,7 @@
 													"script": {
 														"id": "0da8a3c1-0ee2-4a90-bd64-f515721973da",
 														"exec": [
-															"pm.test(\"Status code is 403\", function () {\r",
-															"    pm.response.to.have.status(403);\r",
-															"});"
+															""
 														],
 														"type": "text/javascript"
 													}
@@ -5463,9 +5461,7 @@
 													"script": {
 														"id": "0da8a3c1-0ee2-4a90-bd64-f515721973da",
 														"exec": [
-															"pm.test(\"Status code is 403\", function () {\r",
-															"    pm.response.to.have.status(403);\r",
-															"});"
+															""
 														],
 														"type": "text/javascript"
 													}
