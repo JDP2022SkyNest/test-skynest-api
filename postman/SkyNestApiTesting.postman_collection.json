@@ -44304,7 +44304,7 @@
 					"name": "EditFolderName",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "42ad4dc0-4293-4d71-a391-c6531c436198"
 						}
