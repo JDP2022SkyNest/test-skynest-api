@@ -40706,7 +40706,31 @@
 											]
 										}
 									],
-									"id": "5e8f50a8-331f-495e-8bb7-5b8ae9ab61ed"
+									"id": "5e8f50a8-331f-495e-8bb7-5b8ae9ab61ed",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "53d2e4bb-1f55-4039-8945-9e65b5b861b7",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "2eac7934-5e05-4201-b18e-66e7de98c0e9",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test('Check status code', () => {",
+													"    pm.expect(pm.response.code).to.be.oneOf([403, 404])",
+													"})"
+												]
+											}
+										}
+									]
 								}
 							],
 							"id": "e7d57c55-5701-4154-9d02-1cde2d847014"
