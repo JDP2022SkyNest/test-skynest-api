@@ -28737,7 +28737,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3cc4c574-1a09-4b08-bf19-0246f93074a6",
+										"id": "3db1ab17-6e0c-47d0-8835-2c2916c27d38",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -28747,7 +28747,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2a38aa97-3f32-4f11-b5c6-605fdb6487fc",
+										"id": "9d164273-f0d0-412f-bb98-6622a356e430",
 										"type": "text/javascript",
 										"exec": [
 											"const jsonData = pm.response.json();",
@@ -28769,12 +28769,12 @@
 											"pm.test(\"Data type of the response is string\", () => {",
 											"  pm.expect(jsonData).to.be.an(\"object\");",
 											"  pm.expect(jsonData.id).to.be.a(\"string\");",
-											"  pm.expect(jsonData.email).to.be.a(\"string\");",
+											"  pm.expect(jsonData.pib).to.be.a(\"string\");",
 											"  pm.expect(jsonData.name).to.be.a(\"string\");",
-											"  pm.expect(jsonData.surname).to.be.a(\"string\");",
-											"  pm.expect(jsonData.phoneNumber).to.be.a(\"string\");",
 											"  pm.expect(jsonData.address).to.be.a(\"string\");",
-											"  pm.expect(jsonData.roleName).to.be.a(\"string\");",
+											"  pm.expect(jsonData.phoneNumber).to.be.a(\"string\");",
+											"  pm.expect(jsonData.email).to.be.a(\"string\");",
+											"  pm.expect(jsonData.tierName).to.be.a(\"string\");",
 											"});"
 										]
 									}
