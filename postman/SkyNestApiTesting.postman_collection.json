@@ -44307,6 +44307,11 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "07701d24-6327-4542-996e-8a07fda7a838"
+								},
+								{
 									"name": "EditWorker'sFolderNameAsWorker",
 									"id": "7d3627b4-936e-4897-8ab2-ef0ff9f9d412",
 									"protocolProfileBehavior": {
