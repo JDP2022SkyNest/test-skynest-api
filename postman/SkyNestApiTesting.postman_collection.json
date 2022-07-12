@@ -44305,20 +44305,7 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [
-								{
-									"name": "New Request",
-									"id": "7d3627b4-936e-4897-8ab2-ef0ff9f9d412",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
-									},
-									"response": []
-								}
-							],
+							"item": [],
 							"id": "42ad4dc0-4293-4d71-a391-c6531c436198"
 						},
 						{
