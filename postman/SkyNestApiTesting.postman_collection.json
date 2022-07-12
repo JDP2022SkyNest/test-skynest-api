@@ -44830,14 +44830,14 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Worker changed admin's folder name\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Not Existing Folder\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}"
 											},
 											"response": []
 										}
