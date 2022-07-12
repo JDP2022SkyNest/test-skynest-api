@@ -20736,7 +20736,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "58013890-fc9e-4dbf-b047-9664a4958efe",
+										"id": "2f99fd26-4b72-427f-b2bb-dec73d950fee",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -20746,9 +20746,11 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6a283890-f69d-459e-acae-945232d4a7b4",
+										"id": "5da726a6-6f6b-475e-8d7b-6ff39c4bfcea",
 										"type": "text/javascript",
 										"exec": [
+											"const jsonData = pm.response.json();",
+											"",
 											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
@@ -20761,7 +20763,6 @@
 											"    pm.expect(pm.response.text()).to.include(\"id\");",
 											"});",
 											"",
-											"const jsonData = pm.response.json();",
 											"pm.test(\"Data type of the response is string\", () => {",
 											"  pm.expect(jsonData.id).to.be.a(\"string\");",
 											"  pm.expect(jsonData.email).to.be.a(\"string\");",
