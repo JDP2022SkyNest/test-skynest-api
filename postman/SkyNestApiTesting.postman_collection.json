@@ -2182,9 +2182,7 @@
 											"script": {
 												"id": "8a33e62e-0095-4fe2-be15-f541fbf9654f",
 												"exec": [
-													"pm.test(\"Status code is 403\", function () {\r",
-													"    pm.response.to.have.status(403);\r",
-													"});"
+													""
 												],
 												"type": "text/javascript"
 											}
