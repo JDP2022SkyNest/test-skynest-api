@@ -44316,7 +44316,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{adminAuthToken}}"
 											}
 										},
 										"method": "PUT",
@@ -44330,7 +44330,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
 									},
 									"response": [
 										{
