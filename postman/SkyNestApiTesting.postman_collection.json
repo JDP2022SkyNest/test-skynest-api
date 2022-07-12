@@ -14790,7 +14790,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "e622ce6e-fcd6-46bd-8d83-b250402300f4",
+												"id": "fbd6f240-e1fa-4d2a-a0b0-8ae8c2735951",
 												"type": "text/javascript",
 												"exec": [
 													""
@@ -14800,14 +14800,14 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "9f85e05e-544c-4588-9688-2b510831b4cc",
+												"id": "705a2835-2342-443e-a034-9cd3a56d88c1",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
 													"});",
 													"",
-													"pm.test(\"Body is correct\", function () {",
+													"pm.test(\"Response body is correct\", function () {",
 													"    pm.response.to.have.body(\"true\");",
 													"});"
 												]
