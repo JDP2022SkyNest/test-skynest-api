@@ -43629,7 +43629,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminFolderId}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "GET",
