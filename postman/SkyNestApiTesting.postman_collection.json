@@ -30364,7 +30364,6 @@
 														"id": "8f427453-a706-4c3f-80d5-d1257971da6a",
 														"exec": [
 															"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
-															"    pm.response.to.have.status(200);\r",
 															"    var jsonData = pm.response.json();\r",
 															"    pm.expect(jsonData.bucketId).is.not.null;\r",
 															"    pm.environment.set(\"emptyBucketId\", jsonData.bucketId);\r",
@@ -31321,7 +31320,31 @@
 									]
 								}
 							],
-							"id": "05ffed62-66a1-4aad-aba6-e747478396e3"
+							"id": "05ffed62-66a1-4aad-aba6-e747478396e3",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "619b654d-b192-471a-8f9b-b51f4ae70b37",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "540f743f-edfa-401f-886a-5d88fc235f21",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "249009fb-f59d-4d1f-9a5a-6c1d1e1fd7fc"
