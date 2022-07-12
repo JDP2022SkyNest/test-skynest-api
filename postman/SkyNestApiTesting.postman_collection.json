@@ -18593,6 +18593,84 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-06-20 22:51:19\"\n}"
+										},
+										{
+											"id": "d3589170-bedf-45b3-b852-e09043d8fd78",
+											"name": "CyrilicInputs",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"cyrilicpassword@outlook.com\",\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 12 Jul 2022 09:10:51 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"surname format not valid\",\n        \"password format not valid\",\n        \"name format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-12 11:10:51\"\n}"
 										}
 									]
 								},
