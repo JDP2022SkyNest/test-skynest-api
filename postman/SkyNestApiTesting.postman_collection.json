@@ -31622,7 +31622,7 @@
 											]
 										},
 										{
-											"name": "MakeABucketPublic Copy",
+											"name": "EditPublicBucketAsNonCreator",
 											"event": [
 												{
 													"listen": "test",
