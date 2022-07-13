@@ -31751,7 +31751,7 @@
 											]
 										},
 										{
-											"name": "EditPublicBucketAsNonCreator Copy",
+											"name": "EditPrivateBucketAsNonCreator",
 											"event": [
 												{
 													"listen": "test",
