@@ -60,7 +60,7 @@ public final class RandomGenerator {
     }
 
     public static String generateRandomBucketDescription() {
-        return FAKER.weather().description();
+        return FAKER.lorem().sentence();
     }
 
 }

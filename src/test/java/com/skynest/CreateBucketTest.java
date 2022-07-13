@@ -1,12 +1,10 @@
 package com.skynest;
 
 import com.skynest.models.CreateBucketRequest;
-import com.skynest.models.CreateBucketResponse;
+import com.skynest.models.BucketResponse;
 import io.restassured.response.Response;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.UUID;
 
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.testng.Assert.assertEquals;
@@ -19,7 +17,7 @@ public class CreateBucketTest extends BaseTest {
         Response response = skyNestBackendClient.createBucket(createBucketRequest);
         response.then().statusCode(SC_OK);
 
-        CreateBucketResponse createBucketResponse = response.as(CreateBucketResponse.class);
+        BucketResponse createBucketResponse = response.as(BucketResponse.class);
 
         assertNotNull(createBucketResponse.getBucketId());
         assertEquals(createBucketResponse.getName(), createBucketRequest.getName());

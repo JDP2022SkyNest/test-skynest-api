@@ -11,6 +11,8 @@ import static org.apache.http.HttpHeaders.AUTHORIZATION;
 
 public class SkyNestBackendClient extends BaseClient {
     private static String userId = "userId";
+    private static String bucketId = "bucketId";
+
     public SkyNestBackendClient(String targetDomain) throws URISyntaxException {
         super(targetDomain);
     }
@@ -93,4 +95,22 @@ public class SkyNestBackendClient extends BaseClient {
                 .body(createBucketRequest)
                 .post(ApiConstants.BUCKETS_PATH);
     }
+
+    public Response getAllBuckets() {
+        return requestMaker()
+                .get(ApiConstants.BUCKETS_PATH);
+    }
+
+    public Response getBucketById(UUID uuid) {
+        return requestMaker()
+                .pathParam(bucketId, uuid)
+                .get(ApiConstants.BUCKET_BY_ID_PATH);
+    }
+
+    public Response getBucketContent(UUID uuid) {
+        return requestMaker()
+                .pathParam(bucketId, uuid)
+                .get(ApiConstants.BUCKET_CONTENT_PATH);
+    }
+
 }

@@ -4,14 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateBucketResponse {
-    private String bucketId;
-    private String createdById;
+public class BucketResponse {
+    private UUID bucketId;
+    private UUID createdById;
     private String name;
-    private String companyId;
+    private UUID companyId;
     private String description;
     private String size;
     private String isPublic;

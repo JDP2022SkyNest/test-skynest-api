@@ -17,4 +17,6 @@ public final class ApiConstants {
     public static final String PROMOTE_PATH = "users/{userId}/promote";
     public static final String DEMOTE_PATH = "users/{userId}/demote";
     public static final String BUCKETS_PATH = "/buckets";
+    public static final String BUCKET_BY_ID_PATH = "/buckets/{bucketId}/info";
+    public static final String BUCKET_CONTENT_PATH = "/buckets/{bucketId}";
 }

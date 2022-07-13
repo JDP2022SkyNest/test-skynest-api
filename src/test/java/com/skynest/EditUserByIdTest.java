@@ -12,7 +12,7 @@ import java.util.UUID;
 
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.testng.Assert.assertEquals;
-import static org.testng.AssertJUnit.assertNotNull;
+import static org.testng.Assert.assertNotNull;
 
 public class EditUserByIdTest extends BaseTest {
 
