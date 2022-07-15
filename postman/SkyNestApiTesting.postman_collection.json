@@ -44117,7 +44117,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToAdmin'sBucketAsAdmin",
+											"name": "UploadFileToAdmin'sFolderAsAdmin",
 											"event": [
 												{
 													"listen": "test",
