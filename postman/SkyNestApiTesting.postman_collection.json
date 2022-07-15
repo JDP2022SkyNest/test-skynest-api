@@ -44904,7 +44904,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToFolderFromAnotherCompany",
+											"name": "UploadFileToFolderThatBelongsToDeletedBucket",
 											"event": [
 												{
 													"listen": "test",
