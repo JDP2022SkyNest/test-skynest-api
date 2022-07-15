@@ -44573,7 +44573,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "POST",
@@ -44584,11 +44584,11 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+															"src": "/C:/Users/chris/Downloads/env (1)"
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
 											},
 											"response": [
 												{
