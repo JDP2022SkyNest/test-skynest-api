@@ -41787,7 +41787,7 @@
 												"token": ""
 											}
 										},
-										"method": "PUT",
+										"method": "GET",
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
 									},
