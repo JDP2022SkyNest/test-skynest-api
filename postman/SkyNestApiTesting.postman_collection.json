@@ -49593,9 +49593,9 @@
 												"token": ""
 											}
 										},
-										"method": "PUT",
+										"method": "DELETE",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
 									},
 									"response": []
 								},
