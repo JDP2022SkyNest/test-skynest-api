@@ -41773,7 +41773,20 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "179f2ed6-cd68-4863-a1b5-96baa519daf5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "d16da765-d18e-4bba-9b1b-adc3bcc16285"
 						}
 					],
