@@ -30128,7 +30128,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Private Worker's Bucket\",\r\n  \"description\": \"Private Worker's Bucket\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Public Worker's Bucket\",\r\n  \"description\": \"Public Worker's Bucket\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
