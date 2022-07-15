@@ -41775,7 +41775,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "EditFolderNameEmptyToken",
+									"name": "GetFolderContentEmptyToken",
 									"id": "d7a10ba7-07e2-45ca-8255-f318f64763ad",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
