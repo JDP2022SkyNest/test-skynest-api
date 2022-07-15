@@ -49458,12 +49458,12 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{secondWorkerAuthToken}}"
 													}
 												},
 												"method": "DELETE",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
 											},
 											"response": [
 												{
