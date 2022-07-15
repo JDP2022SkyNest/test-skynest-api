@@ -41822,7 +41822,7 @@
 									"response": []
 								},
 								{
-									"name": "EditFolderNameInvalidToken",
+									"name": "GetFolderContentInvalidToken",
 									"id": "b09899d6-2868-40f0-851c-92400b228bf2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
