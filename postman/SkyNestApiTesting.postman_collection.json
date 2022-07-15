@@ -44551,7 +44551,7 @@
 									"name": "ValidTokenButUnsuccessfulPOST",
 									"item": [
 										{
-											"name": "UploadFileToAdmin'sPrivateBucketAsWorker",
+											"name": "UploadFileToAdmin'sPrivateFolderAsWorker",
 											"event": [
 												{
 													"listen": "test",
