@@ -48743,6 +48743,15 @@
 										},
 										"method": "PUT",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Empty Token\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
 									},
 									"response": []
