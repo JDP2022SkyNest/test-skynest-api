@@ -49166,6 +49166,11 @@
 					"name": "DeleteFile",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "2851cf32-4b2c-43f5-8fc5-f119b6668f7a"
+						},
+						{
 							"name": "DeleteFileAsCreator",
 							"id": "f329d90d-6dfb-4273-b992-505238e21288",
 							"protocolProfileBehavior": {
