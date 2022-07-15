@@ -43985,7 +43985,7 @@
 														"exec": [
 															"const jsonData = pm.response.json();\r",
 															"\r",
-															"pm.test(\"folderId from the response is the same of the folder in which we are uploading the file\", function () {\r",
+															"pm.test(\"parentFolderId from the response is the same of the folder in which we are uploading the file\", function () {\r",
 															"    workerFolderId = pm.environment.get(\"workerFolderId\");\r",
 															"    pm.expect(jsonData.parentFolderId).to.eql(workerFolderId);\r",
 															"});\r",
