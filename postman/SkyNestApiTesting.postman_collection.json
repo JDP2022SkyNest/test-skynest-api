@@ -49600,7 +49600,7 @@
 									"response": []
 								},
 								{
-									"name": "RemoveFolderExpiredToken",
+									"name": "RemoveFileExpiredToken",
 									"id": "7d1f2011-c56f-4199-80e2-1af03533c78a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
