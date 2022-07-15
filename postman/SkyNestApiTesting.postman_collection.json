@@ -49081,7 +49081,20 @@
 				},
 				{
 					"name": "RemoveFile",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "f329d90d-6dfb-4273-b992-505238e21288",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "f4c1e630-ce71-454f-9eec-ca6c88619333"
 				}
 			],
