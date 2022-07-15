@@ -45187,7 +45187,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "UploadFileEmptyToken",
+									"name": "UploadFileToFolderEmptyToken",
 									"id": "556e8730-81ec-4be5-a448-5e3b260952db",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
