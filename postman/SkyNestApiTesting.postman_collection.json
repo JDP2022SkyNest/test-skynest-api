@@ -41524,172 +41524,6 @@
 													"body": "{\n    \"bucketId\": \"392b5799-b6f3-410f-b350-e016570a48c1\",\n    \"folders\": [],\n    \"files\": [\n        {\n            \"id\": \"d5d0bcc5-b054-46e7-998b-6948b2476a1d\",\n            \"createdOn\": \"2022-07-15T10:16:42\",\n            \"modifiedOn\": \"2022-07-15T10:16:42\",\n            \"deletedOn\": null,\n            \"name\": \"env (1)\",\n            \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n            \"parentFolderId\": \"c8416e4f-3a9a-4ba5-9838-5c1c18f30a17\",\n            \"bucketId\": \"392b5799-b6f3-410f-b350-e016570a48c1\",\n            \"type\": \"application/octet-stream\",\n            \"size\": \"429\"\n        }\n    ]\n}"
 												}
 											]
-										},
-										{
-											"name": "GetAdmin'sFolderContentAsAdmin",
-											"id": "999da45a-0244-4e24-aeec-db585a4e1633",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
-											},
-											"response": [
-												{
-													"id": "c4d46700-4ef8-4bcd-a201-a8b0bc868931",
-													"name": "GetAdmin'sFolderContentAsAdmin",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Tue, 12 Jul 2022 14:26:59 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"folders\": [],\n    \"files\": []\n}"
-												},
-												{
-													"id": "36d28694-ea75-4298-872b-106e4edf7cd8",
-													"name": "GetAdmin'sFolderContentAsAdmin",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Fri, 15 Jul 2022 10:21:41 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"bucketId\": \"6da707db-5839-42e3-8502-675485e50dda\",\n    \"folders\": [],\n    \"files\": [\n        {\n            \"id\": \"f81028ed-b6d7-45c6-a5f7-01769ca297f2\",\n            \"createdOn\": \"2022-07-15T10:16:45\",\n            \"modifiedOn\": \"2022-07-15T10:16:45\",\n            \"deletedOn\": null,\n            \"name\": \"MicrosoftTeams-image.png\",\n            \"createdById\": \"14449105-1f68-4c1e-b7b0-4b30f22cc97f\",\n            \"parentFolderId\": \"aa90a9b9-b5c2-463b-b7c3-01e81ad357f1\",\n            \"bucketId\": \"6da707db-5839-42e3-8502-675485e50dda\",\n            \"type\": \"image/png\",\n            \"size\": \"87143\"\n        }\n    ]\n}"
-												}
-											]
 										}
 									],
 									"id": "5c5367cc-b3eb-448c-9a30-aff3d6a01777",
@@ -41735,6 +41569,93 @@
 											"response": [
 												{
 													"id": "195c2fd4-411a-4e68-8a7d-4dec34cfa8d7",
+													"name": "GetContentOfNotExistingFolder",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}"
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 15 Jul 2022 10:24:25 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Folder not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-15 10:24:25\"\n}"
+												}
+											]
+										},
+										{
+											"name": "GetContentOfNotExistingFolder Copy",
+											"id": "667676f9-d7a6-4300-a4ba-b59d8b6a391a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+											},
+											"response": [
+												{
+													"id": "77b7452e-9efd-409f-aa79-190caf166beb",
 													"name": "GetContentOfNotExistingFolder",
 													"originalRequest": {
 														"method": "GET",
