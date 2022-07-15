@@ -44795,7 +44795,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToAlreadyDeletedBucket",
+											"name": "UploadFileToAlreadyDeletedFolder",
 											"event": [
 												{
 													"listen": "test",
