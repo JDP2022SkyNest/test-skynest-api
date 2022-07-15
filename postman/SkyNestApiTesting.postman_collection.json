@@ -38711,7 +38711,90 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "3e29547f-e2b6-454c-a218-da8b38f00c57",
+													"name": "CreateFolderInPublicBucket",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Public Folder\",\r\n  \"bucketId\": \"{{publicBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 15 Jul 2022 09:34:14 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"4f83de9a-2d3b-4851-984f-143fd4c419b3\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Public Folder\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"728ed688-dc37-4657-9082-9bdbec4180a5\"\n}"
+												}
+											]
 										}
 									],
 									"id": "2b29a473-0c29-472c-b45a-91d1bdd96642",
