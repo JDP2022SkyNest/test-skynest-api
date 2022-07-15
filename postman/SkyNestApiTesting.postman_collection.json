@@ -49089,6 +49089,12 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
 								"method": "DELETE",
 								"header": [],
 								"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
@@ -49096,7 +49102,7 @@
 							"response": [
 								{
 									"id": "e51e31f8-2600-4d41-899d-b85a96e10366",
-									"name": "New Request",
+									"name": "DeleteFileAsCreator",
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
