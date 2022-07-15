@@ -48367,7 +48367,7 @@
 									"name": "ValidTokenButUnsuccessfulPUT",
 									"item": [
 										{
-											"name": "EditFileNameWithSpecCharsNumbersCyrilc Copy",
+											"name": "EditWithEmptyFileName",
 											"id": "1c8d8824-2cd9-4424-b886-c9feed5fdeb8",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
