@@ -36565,7 +36565,7 @@
 					"id": "9d352f22-e3ca-4f1d-b51f-8ff9f267dddf"
 				},
 				{
-					"name": "ViewTrashedBuckets",
+					"name": "ViewDeletedBuckets",
 					"item": [
 						{
 							"name": "ValidToken",
