@@ -45245,7 +45245,7 @@
 									"response": []
 								},
 								{
-									"name": "UploadFileInvalidToken",
+									"name": "UploadFileToFolderInvalidToken",
 									"id": "00f64a5c-1d53-4cec-80fa-67ff3ea8946d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
