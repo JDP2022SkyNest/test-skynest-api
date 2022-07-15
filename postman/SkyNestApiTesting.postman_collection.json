@@ -38658,6 +38658,143 @@
 													"body": "{\n    \"id\": \"2bab9661-6213-4c02-bc85-2584fbd6bc6a\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"b65a3f1a-6c5c-4b33-b780-218a0dca6ee0\"\n}"
 												}
 											]
+										},
+										{
+											"name": "CreateFolderInPublicBucket",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "d29147c0-437d-4e03-ad52-6fb59383ef05",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
+															"    pm.environment.set(\"workerFolderId\", jsonData.id);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"bucketId from the response is the same of the bucket in which folder is created\", function () {\r",
+															"    workerBucketId = pm.environment.get(\"workerBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(workerBucketId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"createdById from the response is the same of the user who created the folder\", function () {\r",
+															"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "ef73858c-aac7-423d-81f4-c1f8e7461591",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"bucketId\": \"{{workerBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+											},
+											"response": [
+												{
+													"id": "725e7dae-4871-4553-9d3b-6eead7e3cf61",
+													"name": "CreateFolderInWorker'sBucketAsWorker",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"bucketId\": \"{{workerBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 07 Jul 2022 10:09:53 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"2bab9661-6213-4c02-bc85-2584fbd6bc6a\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"b65a3f1a-6c5c-4b33-b780-218a0dca6ee0\"\n}"
+												}
+											]
 										}
 									],
 									"id": "2b29a473-0c29-472c-b45a-91d1bdd96642",
