@@ -104,13 +104,26 @@ public class SkyNestBackendClient extends BaseClient {
     public Response getBucketById(UUID uuid) {
         return requestMaker()
                 .pathParam(bucketId, uuid)
-                .get(ApiConstants.BUCKET_BY_ID_PATH);
+                .get(ApiConstants.BUCKET_DETAILS_PATH);
     }
 
     public Response getBucketContent(UUID uuid) {
         return requestMaker()
                 .pathParam(bucketId, uuid)
-                .get(ApiConstants.BUCKET_CONTENT_PATH);
+                .get(ApiConstants.BUCKET_BY_ID_PATH);
+    }
+
+    public Response deleteBucket(UUID uuid) {
+        return requestMaker()
+                .pathParam(bucketId, uuid)
+                .put(ApiConstants.DELETE_BUCKET_PATH);
+    }
+
+    public Response editBucket(EditBucketRequest editBucketRequest, UUID uuid) {
+        return requestMaker()
+                .body(editBucketRequest)
+                .pathParam(bucketId, uuid)
+                .put(ApiConstants.BUCKET_BY_ID_PATH);
     }
 
 }

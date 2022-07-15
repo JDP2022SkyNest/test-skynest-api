@@ -15,6 +15,6 @@ public class BucketResponse {
     private String name;
     private UUID companyId;
     private String description;
-    private String size;
-    private String isPublic;
+    private int size;
+    private Boolean isPublic;
 }
