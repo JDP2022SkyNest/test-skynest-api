@@ -48579,12 +48579,460 @@
 													"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-15 10:48:59\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditNameOfNotExistingFile",
+											"id": "0a57d270-5f7a-4d74-87f0-ba1ac6d05b17",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": null\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": [
+												{
+													"id": "9a9192ac-b304-445b-8b51-026ae211eedc",
+													"name": "EditWithNullFileName",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": null\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 15 Jul 2022 10:48:59 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-15 10:48:59\"\n}"
+												}
+											]
 										}
 									],
 									"id": "311317d7-8503-4f89-9118-7d827b1608cc"
 								}
 							],
 							"id": "b2e236d0-1b88-420a-b110-d4fe7de46c6c"
+						},
+						{
+							"name": "InvalidToken Copy",
+							"item": [
+								{
+									"name": "EditFolderNameEmptyToken",
+									"id": "34a1c920-2948-4820-96bf-00b9b85bdf4b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+									},
+									"response": [
+										{
+											"id": "3b6128e3-0a2b-4b57-a29e-44156f2bbe0a",
+											"name": "EditFolderNameEmptyToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 12 Jul 2022 13:39:29 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "EditFolderNameExpiredToken",
+									"id": "b7b7c769-f653-4fb7-8bb0-8d748e94e2d9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+									},
+									"response": [
+										{
+											"id": "3a9f6fb7-f807-447a-92bf-38393b0d8cf3",
+											"name": "EditFolderNameExpiredToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 12 Jul 2022 13:39:52 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-12 15:39:52\"\n}"
+										}
+									]
+								},
+								{
+									"name": "EditFolderNameInvalidToken",
+									"id": "d5abd5ed-a425-4735-bd57-3cefdb062ac2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{invalidToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+									},
+									"response": [
+										{
+											"id": "33c41018-f870-4688-9461-3ddbab8c93bc",
+											"name": "EditFolderNameInvalidToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 12 Jul 2022 13:40:14 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-12 15:40:14\"\n}"
+										}
+									]
+								}
+							],
+							"id": "e93055d8-b704-41fe-89b6-4f46a7edfbc3",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "19c9889d-79e8-4283-9d70-eeb3ee353150",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "62b285f5-7c7b-4bd1-be7f-fa43e418cc3a",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "f5ea2d75-e44e-4a6c-8b37-04e82cd37ebf"
