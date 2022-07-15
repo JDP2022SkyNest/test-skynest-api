@@ -30210,7 +30210,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{secondWorkerAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "POST",
