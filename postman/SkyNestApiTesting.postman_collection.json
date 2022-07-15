@@ -44258,7 +44258,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToPublicBucketAsNotCreator",
+											"name": "UploadFileToFolderFromPublicBucketAsNotCreator",
 											"event": [
 												{
 													"listen": "test",
@@ -44308,131 +44308,6 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{publicBucketId}}"
 											},
 											"response": []
-										},
-										{
-											"name": "UploadFileToFolderFromAnotherCompany",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
-														"exec": [
-															""
-														],
-														"type": "text/javascript"
-													}
-												}
-											],
-											"id": "634a2b97-adb2-4e8f-b138-33203a75cdd4",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{secondWorkerAuthToken}}"
-													}
-												},
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "formdata",
-													"formdata": [
-														{
-															"key": "file",
-															"type": "file",
-															"src": "/C:/Users/chris/Downloads/env (1)"
-														}
-													]
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
-											},
-											"response": [
-												{
-													"id": "4313690d-e0fe-49c3-9618-9cbe2b93d1a3",
-													"name": "UploadFileToFolderFromAnotherCompany",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "formdata",
-															"formdata": [
-																{
-																	"key": "file",
-																	"type": "file",
-																	"src": "/C:/Users/chris/Downloads/env (1)"
-																}
-															]
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
-													},
-													"status": "Forbidden",
-													"code": 403,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Fri, 15 Jul 2022 09:29:28 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-15 09:29:28\"\n}"
-												}
-											]
 										}
 									],
 									"id": "2214428c-513d-4c41-8475-e0fac2211a93",
@@ -45011,6 +44886,131 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-11 14:57:59\"\n}"
+												}
+											]
+										},
+										{
+											"name": "UploadFileToFolderFromAnotherCompany",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "634a2b97-adb2-4e8f-b138-33203a75cdd4",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/chris/Downloads/env (1)"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
+											},
+											"response": [
+												{
+													"id": "4313690d-e0fe-49c3-9618-9cbe2b93d1a3",
+													"name": "UploadFileToFolderFromAnotherCompany",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/chris/Downloads/env (1)"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 15 Jul 2022 09:29:28 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-15 09:29:28\"\n}"
 												}
 											]
 										}
