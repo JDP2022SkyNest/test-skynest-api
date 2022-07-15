@@ -48929,7 +48929,7 @@
 									]
 								},
 								{
-									"name": "EditFolderNameInvalidToken",
+									"name": "EditFileNameInvalidToken",
 									"id": "d5abd5ed-a425-4735-bd57-3cefdb062ac2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
