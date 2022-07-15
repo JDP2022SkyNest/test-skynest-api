@@ -48114,6 +48114,11 @@
 							"id": "b2e236d0-1b88-420a-b110-d4fe7de46c6c"
 						},
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "48ebd8d8-8b96-402b-8dd7-a963205d9e79"
+						},
+						{
 							"name": "EditFileNameAsCreator",
 							"id": "ea10b575-41d3-40e0-aa4d-4d8cbf6cb571",
 							"protocolProfileBehavior": {
