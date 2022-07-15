@@ -48383,7 +48383,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"@# 123_abc_Кирилица\"\r\n}",
+													"raw": "{\r\n  \"name\": \"\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
