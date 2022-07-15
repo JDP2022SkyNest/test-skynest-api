@@ -42391,7 +42391,7 @@
 			"name": "FileAPI",
 			"item": [
 				{
-					"name": "UploadNewFileToBucket",
+					"name": "UploadFileToBucket",
 					"item": [
 						{
 							"name": "ValidToken",
