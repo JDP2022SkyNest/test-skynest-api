@@ -44059,7 +44059,7 @@
 					"id": "7de2bf1f-cb35-4156-9ddc-a65713390973"
 				},
 				{
-					"name": "UploadNewFileToFolder",
+					"name": "UploadFileToFolder",
 					"item": [
 						{
 							"name": "ValidToken",
