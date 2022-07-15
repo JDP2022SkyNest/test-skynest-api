@@ -49581,7 +49581,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "RemoveFolderEmptyToken",
+									"name": "RemoveFileEmptyToken",
 									"id": "741c50a4-5efb-451d-96ae-62aa177fceb6",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
