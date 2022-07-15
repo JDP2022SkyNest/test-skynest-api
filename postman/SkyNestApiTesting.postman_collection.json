@@ -39884,589 +39884,6 @@
 					"id": "eef3a030-7f92-43d6-be59-ef7952533c8f"
 				},
 				{
-					"name": "GetFolderById",
-					"item": [
-						{
-							"name": "ValidToken",
-							"item": [
-								{
-									"name": "ValidTokenAndSuccessfulGET",
-									"item": [
-										{
-											"name": "GetFolderByIdAsAdmin",
-											"id": "cd227e90-f4c3-465e-b801-30e74aa7291c",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_GET_INFO}}"
-											},
-											"response": [
-												{
-													"id": "d250267e-f8d0-45f5-8ec4-5cab7a35e6d3",
-													"name": "GetFolderByIdAsAdmin",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_GET_INFO}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 07 Jul 2022 10:10:56 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"id\": \"3302aa25-deba-407e-af32-b8c40cc0d2d6\",\n    \"createdOn\": \"2022-07-07T10:08:20\",\n    \"modifiedOn\": \"2022-07-07T10:08:20\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"0e16cb8c-9f61-45ad-90cf-2b18e7dbe17b\"\n}"
-												}
-											]
-										},
-										{
-											"name": "GetOwnFolderByIdAsWorker",
-											"id": "8ea4eff1-db4a-4556-bb6b-5adf4ec3ae5b",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{workerAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_GET_INFO}}"
-											},
-											"response": [
-												{
-													"id": "37a84adb-a47e-4a7e-987a-2a9ab7fd84ca",
-													"name": "GetOwnFolderByIdAsWorker",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_GET_INFO}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 07 Jul 2022 10:13:10 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"id\": \"2bab9661-6213-4c02-bc85-2584fbd6bc6a\",\n    \"createdOn\": \"2022-07-07T10:09:53\",\n    \"modifiedOn\": \"2022-07-07T10:09:53\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"b65a3f1a-6c5c-4b33-b780-218a0dca6ee0\"\n}"
-												}
-											]
-										}
-									],
-									"id": "b39a1fdd-868d-4a25-8b95-375db3b5dde3",
-									"event": [
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "283d79cf-5cbf-49cd-9ff8-b0f653dd0d0f",
-												"type": "text/javascript",
-												"exec": [
-													""
-												]
-											}
-										},
-										{
-											"listen": "test",
-											"script": {
-												"id": "20a7aaa4-130e-4638-bd07-0d155e697b17",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Status code is 200\", function () {",
-													"    pm.response.to.have.status(200);",
-													"});"
-												]
-											}
-										}
-									]
-								},
-								{
-									"name": "ValidTokenButUnsuccessfulGET",
-									"item": [
-										{
-											"name": "GetNotExistingFolder",
-											"id": "0460ef79-5924-4f11-bc93-781b9055d15d",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{workerAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_GET_INFO}}"
-											},
-											"response": [
-												{
-													"id": "2fd2aca1-6af3-4935-8a91-d17e6bf19374",
-													"name": "GetNotExistingFolder",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_GET_INFO}}"
-													},
-													"status": "Not Found",
-													"code": 404,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 07 Jul 2022 10:22:57 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"Folder not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-07 12:22:57\"\n}"
-												}
-											]
-										}
-									],
-									"id": "a16f2877-8810-4670-8f3d-dc732b794fc3"
-								}
-							],
-							"id": "04fa9042-78db-472a-8489-15c2f8741c6b"
-						},
-						{
-							"name": "InvalidToken",
-							"item": [],
-							"id": "e2a7c14e-d123-4824-8964-cd77cbb7fdc0"
-						}
-					],
-					"id": "914063ca-b298-4c4f-ae3e-b84cd14a9a69"
-				},
-				{
-					"name": "GetFolderContent",
-					"item": [
-						{
-							"name": "ValidToken",
-							"item": [
-								{
-									"name": "ValidTokenAndSuccessfulGET",
-									"item": [
-										{
-											"name": "GetWorker'sFolderContentAsWorker",
-											"id": "b8f9c2d4-cf38-43fb-8a27-0d79609b1ebc",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{workerAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
-											},
-											"response": [
-												{
-													"id": "3876ff28-619c-47cb-b74f-3187abb3dcd3",
-													"name": "GetWorker'sFolderContentAsWorker",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Tue, 12 Jul 2022 14:13:37 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"folders\": [],\n    \"files\": []\n}"
-												}
-											]
-										},
-										{
-											"name": "GetAdmin'sFolderContentAsAdmin",
-											"id": "999da45a-0244-4e24-aeec-db585a4e1633",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
-											},
-											"response": [
-												{
-													"id": "c4d46700-4ef8-4bcd-a201-a8b0bc868931",
-													"name": "GetAdmin'sFolderContentAsAdmin",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Tue, 12 Jul 2022 14:26:59 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"folders\": [],\n    \"files\": []\n}"
-												}
-											]
-										}
-									],
-									"id": "5c5367cc-b3eb-448c-9a30-aff3d6a01777",
-									"event": [
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "a1082bf3-1015-4bbf-8f11-299661edd8bf",
-												"type": "text/javascript",
-												"exec": [
-													""
-												]
-											}
-										},
-										{
-											"listen": "test",
-											"script": {
-												"id": "e6b05050-4edb-475d-8e99-66947ae08067",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Status code is 200\", function () {",
-													"    pm.response.to.have.status(200);",
-													"});"
-												]
-											}
-										}
-									]
-								},
-								{
-									"name": "ValidTokenButUnsuccessfulGET",
-									"item": [
-										{
-											"name": "New Request",
-											"id": "ba2980d2-e514-423e-b66f-7e277b6588e4",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "GET",
-												"header": []
-											},
-											"response": []
-										}
-									],
-									"id": "ac3d2dea-ea9e-4e7c-978d-3b4e4b1dd839"
-								}
-							],
-							"id": "2c106fdc-cacd-4eaf-8cab-32af14961f98"
-						},
-						{
-							"name": "InvalidToken",
-							"item": [],
-							"id": "d16da765-d18e-4bba-9b1b-adc3bcc16285"
-						}
-					],
-					"id": "05cb0b41-b268-4d0b-8032-6d625faab289"
-				},
-				{
 					"name": "EditFolderName",
 					"item": [
 						{
@@ -41600,6 +41017,589 @@
 						}
 					],
 					"id": "8244a351-66a7-423d-b372-ca72699c86c4"
+				},
+				{
+					"name": "GetFolderById",
+					"item": [
+						{
+							"name": "ValidToken",
+							"item": [
+								{
+									"name": "ValidTokenAndSuccessfulGET",
+									"item": [
+										{
+											"name": "GetFolderByIdAsAdmin",
+											"id": "cd227e90-f4c3-465e-b801-30e74aa7291c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": [
+												{
+													"id": "d250267e-f8d0-45f5-8ec4-5cab7a35e6d3",
+													"name": "GetFolderByIdAsAdmin",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 07 Jul 2022 10:10:56 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"3302aa25-deba-407e-af32-b8c40cc0d2d6\",\n    \"createdOn\": \"2022-07-07T10:08:20\",\n    \"modifiedOn\": \"2022-07-07T10:08:20\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"0e16cb8c-9f61-45ad-90cf-2b18e7dbe17b\"\n}"
+												}
+											]
+										},
+										{
+											"name": "GetOwnFolderByIdAsWorker",
+											"id": "8ea4eff1-db4a-4556-bb6b-5adf4ec3ae5b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": [
+												{
+													"id": "37a84adb-a47e-4a7e-987a-2a9ab7fd84ca",
+													"name": "GetOwnFolderByIdAsWorker",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 07 Jul 2022 10:13:10 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"2bab9661-6213-4c02-bc85-2584fbd6bc6a\",\n    \"createdOn\": \"2022-07-07T10:09:53\",\n    \"modifiedOn\": \"2022-07-07T10:09:53\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"b65a3f1a-6c5c-4b33-b780-218a0dca6ee0\"\n}"
+												}
+											]
+										}
+									],
+									"id": "b39a1fdd-868d-4a25-8b95-375db3b5dde3",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "283d79cf-5cbf-49cd-9ff8-b0f653dd0d0f",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "20a7aaa4-130e-4638-bd07-0d155e697b17",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
+								},
+								{
+									"name": "ValidTokenButUnsuccessfulGET",
+									"item": [
+										{
+											"name": "GetNotExistingFolder",
+											"id": "0460ef79-5924-4f11-bc93-781b9055d15d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": [
+												{
+													"id": "2fd2aca1-6af3-4935-8a91-d17e6bf19374",
+													"name": "GetNotExistingFolder",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 07 Jul 2022 10:22:57 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Folder not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-07 12:22:57\"\n}"
+												}
+											]
+										}
+									],
+									"id": "a16f2877-8810-4670-8f3d-dc732b794fc3"
+								}
+							],
+							"id": "04fa9042-78db-472a-8489-15c2f8741c6b"
+						},
+						{
+							"name": "InvalidToken",
+							"item": [],
+							"id": "e2a7c14e-d123-4824-8964-cd77cbb7fdc0"
+						}
+					],
+					"id": "914063ca-b298-4c4f-ae3e-b84cd14a9a69"
+				},
+				{
+					"name": "GetFolderContent",
+					"item": [
+						{
+							"name": "ValidToken",
+							"item": [
+								{
+									"name": "ValidTokenAndSuccessfulGET",
+									"item": [
+										{
+											"name": "GetWorker'sFolderContentAsWorker",
+											"id": "b8f9c2d4-cf38-43fb-8a27-0d79609b1ebc",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": [
+												{
+													"id": "3876ff28-619c-47cb-b74f-3187abb3dcd3",
+													"name": "GetWorker'sFolderContentAsWorker",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 12 Jul 2022 14:13:37 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"folders\": [],\n    \"files\": []\n}"
+												}
+											]
+										},
+										{
+											"name": "GetAdmin'sFolderContentAsAdmin",
+											"id": "999da45a-0244-4e24-aeec-db585a4e1633",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+											},
+											"response": [
+												{
+													"id": "c4d46700-4ef8-4bcd-a201-a8b0bc868931",
+													"name": "GetAdmin'sFolderContentAsAdmin",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 12 Jul 2022 14:26:59 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"folders\": [],\n    \"files\": []\n}"
+												}
+											]
+										}
+									],
+									"id": "5c5367cc-b3eb-448c-9a30-aff3d6a01777",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "a1082bf3-1015-4bbf-8f11-299661edd8bf",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "e6b05050-4edb-475d-8e99-66947ae08067",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
+								},
+								{
+									"name": "ValidTokenButUnsuccessfulGET",
+									"item": [
+										{
+											"name": "New Request",
+											"id": "ba2980d2-e514-423e-b66f-7e277b6588e4",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
+										}
+									],
+									"id": "ac3d2dea-ea9e-4e7c-978d-3b4e4b1dd839"
+								}
+							],
+							"id": "2c106fdc-cacd-4eaf-8cab-32af14961f98"
+						},
+						{
+							"name": "InvalidToken",
+							"item": [],
+							"id": "d16da765-d18e-4bba-9b1b-adc3bcc16285"
+						}
+					],
+					"id": "05cb0b41-b268-4d0b-8032-6d625faab289"
 				},
 				{
 					"name": "RemoveFolder",
@@ -42808,7 +42808,7 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+															"src": "/C:/Users/chris/OneDrive/Desktop/Wallpapers/3212727.jpg"
 														}
 													]
 												},
@@ -42980,142 +42980,6 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"id\": \"ef4863f0-4f5f-4d7c-9337-89e32836399a\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"bfcbe37a-a47c-48d3-9967-63ea122e4685\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\"\n}"
-												}
-											]
-										},
-										{
-											"name": "UploadFileToBucketFromAnotherCompany",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
-														"exec": [
-															"const jsonData = pm.response.json();\r",
-															"\r",
-															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
-															"    publicBucketId = pm.environment.get(\"publicBucketId\");\r",
-															"    pm.expect(jsonData.bucketId).to.eql(publicBucketId);\r",
-															"});\r",
-															"\r",
-															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
-															"    pm.expect(jsonData.id).is.not.null;\r",
-															"    pm.environment.set(\"publicFileId\", jsonData.id);\r",
-															"});\r",
-															""
-														],
-														"type": "text/javascript"
-													}
-												}
-											],
-											"id": "d1c18a49-e305-4060-a6ec-024c2957f8a5",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{secondWorkerAuthToken}}"
-													}
-												},
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "formdata",
-													"formdata": [
-														{
-															"key": "file",
-															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
-														}
-													]
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
-											},
-											"response": [
-												{
-													"id": "ce895225-9c39-4db0-a39e-4a49c031fab0",
-													"name": "UploadFileToBucketFromAnotherCompany",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "formdata",
-															"formdata": [
-																{
-																	"key": "file",
-																	"type": "file",
-																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
-																}
-															]
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
-													},
-													"status": "Forbidden",
-													"code": 403,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Mon, 11 Jul 2022 12:57:10 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-11 14:57:10\"\n}"
 												}
 											]
 										}
@@ -43661,6 +43525,142 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-11 14:57:59\"\n}"
+												}
+											]
+										},
+										{
+											"name": "UploadFileToBucketFromAnotherCompany",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
+															"    publicBucketId = pm.environment.get(\"publicBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(publicBucketId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"    pm.expect(jsonData.id).is.not.null;\r",
+															"    pm.environment.set(\"publicFileId\", jsonData.id);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "d1c18a49-e305-4060-a6ec-024c2957f8a5",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+											},
+											"response": [
+												{
+													"id": "ce895225-9c39-4db0-a39e-4a49c031fab0",
+													"name": "UploadFileToBucketFromAnotherCompany",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 11 Jul 2022 12:57:10 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-11 14:57:10\"\n}"
 												}
 											]
 										}
