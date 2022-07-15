@@ -49474,6 +49474,20 @@
 										},
 										{
 											"name": "DeleteFileAsNotCreator",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "e46d5718-70e4-4883-a056-d8f839a47a38",
+														"exec": [
+															"pm.test(\"Status code is 403\", function () {\r",
+															"    pm.response.to.have.status(403);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "0f3f5772-709a-40e7-872e-4622c350054a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
