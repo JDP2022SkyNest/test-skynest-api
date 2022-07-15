@@ -30226,7 +30226,86 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_BUCKET}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "ca309553-9d61-4f65-91c5-86eabdac79e0",
+													"name": "CreateBucketAsUserWithoutCompany",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Hristina's Bucket\",\r\n  \"description\": \"Bucket of worker\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_BUCKET}}"
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json;charset=ISO-8859-1"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 15 Jul 2022 14:49:04 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement\",\n        \"could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement\",\n        \"could not execute statement\",\n        \"Column 'company_id' cannot be null\"\n    ],\n    \"status\": 500,\n    \"timestamp\": \"2022-07-15 14:49:04\"\n}"
+												}
+											]
 										},
 										{
 											"name": "CreateWorker'sBucketToBePublic",
