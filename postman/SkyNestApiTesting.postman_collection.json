@@ -49166,7 +49166,7 @@
 					"name": "DeleteFile",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "2851cf32-4b2c-43f5-8fc5-f119b6668f7a"
 						},
