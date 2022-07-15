@@ -45211,7 +45211,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFileInFolderId}}"
 									},
 									"response": [
 										{
