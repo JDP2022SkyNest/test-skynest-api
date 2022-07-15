@@ -49257,7 +49257,31 @@
 											]
 										}
 									],
-									"id": "f9e95d16-2286-4969-8338-cce52c99f4a9"
+									"id": "f9e95d16-2286-4969-8338-cce52c99f4a9",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "ad8daca9-2511-437e-b780-1b3d792d7739",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "78eaec90-5fad-4910-a83e-3a91d192fea8",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulDELETE",
