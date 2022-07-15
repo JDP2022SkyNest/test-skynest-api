@@ -49083,7 +49083,7 @@
 					"name": "RemoveFile",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "DeleteFileAsCreator",
 							"id": "f329d90d-6dfb-4273-b992-505238e21288",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
