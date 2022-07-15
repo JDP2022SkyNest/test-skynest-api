@@ -44310,7 +44310,7 @@
 											"response": []
 										},
 										{
-											"name": "UploadFileToBucketFromAnotherCompany",
+											"name": "UploadFileToFolderFromAnotherCompany",
 											"event": [
 												{
 													"listen": "test",
