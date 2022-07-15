@@ -49628,7 +49628,7 @@
 									"response": []
 								},
 								{
-									"name": "RemoveFolderInvalidToken",
+									"name": "RemoveFileInvalidToken",
 									"id": "ffffa49a-d1f0-4fb7-b8d4-f5b050a2767b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
