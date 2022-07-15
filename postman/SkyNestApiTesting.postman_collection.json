@@ -44738,7 +44738,7 @@
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}"
 											},
 											"response": [
 												{
