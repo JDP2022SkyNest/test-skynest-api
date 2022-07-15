@@ -44716,7 +44716,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "POST",
@@ -44738,7 +44738,7 @@
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
 											},
 											"response": [
 												{
