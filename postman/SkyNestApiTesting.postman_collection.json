@@ -48852,14 +48852,14 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"FolderName\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+											"raw": "{\r\n  \"name\": \"Expired\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
 									},
 									"response": []
 								},
