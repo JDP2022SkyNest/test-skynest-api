@@ -41722,7 +41722,7 @@
 									"name": "ValidTokenButUnsuccessfulGET",
 									"item": [
 										{
-											"name": "New Request",
+											"name": "GetContentOfNotExistingFolder",
 											"id": "ba2980d2-e514-423e-b66f-7e277b6588e4",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
