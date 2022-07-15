@@ -41360,7 +41360,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "GetWorker'sFolderContentAsWorker",
+											"name": "GetFolderContentAsCreator",
 											"id": "b8f9c2d4-cf38-43fb-8a27-0d79609b1ebc",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
