@@ -43985,9 +43985,9 @@
 														"exec": [
 															"const jsonData = pm.response.json();\r",
 															"\r",
-															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
-															"    workerBucketId = pm.environment.get(\"workerBucketId\");\r",
-															"    pm.expect(jsonData.bucketId).to.eql(workerBucketId);\r",
+															"pm.test(\"folderId from the response is the same of the folder in which we are uploading the file\", function () {\r",
+															"    workerFolderId = pm.environment.get(\"workerFolderId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(workerFolderId);\r",
 															"});\r",
 															"\r",
 															"pm.test(\"createdById from the response is the same of the user who created the bucket\", function () {\r",
