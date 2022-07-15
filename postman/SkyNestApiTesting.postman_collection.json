@@ -38702,7 +38702,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"bucketId\": \"{{workerBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+													"raw": "{\r\n  \"name\": \"Public Folder\",\r\n  \"bucketId\": \"{{publicBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
