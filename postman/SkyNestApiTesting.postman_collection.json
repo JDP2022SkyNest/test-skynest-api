@@ -48818,7 +48818,7 @@
 									]
 								},
 								{
-									"name": "EditFolderNameExpiredToken",
+									"name": "EditFileNameExpiredToken",
 									"id": "b7b7c769-f653-4fb7-8bb0-8d748e94e2d9",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
