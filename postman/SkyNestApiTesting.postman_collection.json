@@ -48597,14 +48597,14 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": null\r\n}",
+													"raw": "{\r\n  \"name\": \"Not Existing\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_GET_INFO}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{notExistingFileId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"response": []
 										}
