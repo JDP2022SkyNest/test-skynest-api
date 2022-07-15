@@ -41562,9 +41562,15 @@
 												"disableBodyPruning": true
 											},
 											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}"
 											},
 											"response": [
 												{
@@ -41643,7 +41649,7 @@
 											]
 										},
 										{
-											"name": "GetContentOfNotExistingFolder Copy",
+											"name": "GetFolderContentAsNotCreator",
 											"id": "667676f9-d7a6-4300-a4ba-b59d8b6a391a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
