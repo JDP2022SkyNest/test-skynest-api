@@ -41876,7 +41876,7 @@
 												"token": "{{expiredToken}}"
 											}
 										},
-										"method": "PUT",
+										"method": "GET",
 										"header": [],
 										"body": {
 											"mode": "raw",
