@@ -42284,7 +42284,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}6f1b05cf-88de-49e7-8809-4dfa601088bd"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolderId}}"
 											},
 											"response": [
 												{
