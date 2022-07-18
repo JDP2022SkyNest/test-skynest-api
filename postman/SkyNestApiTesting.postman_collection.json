@@ -41806,7 +41806,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}77ab10ad-0e0b-49e1-971b-164e2a968082"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}"
 											},
 											"response": [
 												{
