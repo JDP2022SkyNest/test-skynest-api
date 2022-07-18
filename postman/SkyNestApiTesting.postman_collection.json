@@ -50761,20 +50761,7 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [
-								{
-									"name": "New Request",
-									"id": "1a64577e-afcc-4f5f-8191-989945fa71ee",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
-									},
-									"response": []
-								}
-							],
+							"item": [],
 							"id": "2c4eae1c-9a62-41bd-afa7-e14993593854"
 						},
 						{
