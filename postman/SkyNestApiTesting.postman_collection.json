@@ -51125,7 +51125,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "MoveAlreadyMovedFileInTheSameFolder Copy",
+									"name": "MoveFileToFolderEmptyToken",
 									"id": "6a9f849f-18b5-4cdd-a7bc-0bb8d8252903",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
