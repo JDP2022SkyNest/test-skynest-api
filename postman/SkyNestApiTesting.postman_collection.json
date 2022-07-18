@@ -39148,7 +39148,7 @@
 															"const jsonData = pm.response.json()\r",
 															"\r",
 															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-															"    pm.environment.set(\"adminFolderId\", jsonData.id);\r",
+															"    pm.environment.set(\"folderInFolderId\", jsonData.id);\r",
 															"});\r",
 															"\r",
 															""
