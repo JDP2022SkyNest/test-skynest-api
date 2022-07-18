@@ -51767,7 +51767,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "MoveFileToFolderEmptyToken",
+									"name": "MoveFileToRootEmptyToken",
 									"id": "c17c2bff-6fad-42f3-a8c8-5c32e6f4711a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
