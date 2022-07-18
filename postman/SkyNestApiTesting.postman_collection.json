@@ -51223,11 +51223,6 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
-							"id": "188169b3-89fa-4e7a-848d-5b1a5ad44c02"
-						},
-						{
-							"name": "InvalidToken",
 							"item": [
 								{
 									"name": "GrantPermissionEmptyToken",
