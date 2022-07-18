@@ -42288,12 +42288,12 @@
 											},
 											"response": [
 												{
-													"id": "6fafd4dd-48a6-4e61-95c5-d8615a175a63",
+													"id": "e5ae1133-1cf9-45c0-be07-7978076bb19d",
 													"name": "ReturnPathToFolder",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}6f1b05cf-88de-49e7-8809-4dfa601088bd"
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolderId}}"
 													},
 													"status": "OK",
 													"code": 200,
@@ -42345,7 +42345,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Mon, 18 Jul 2022 08:20:42 GMT"
+															"value": "Mon, 18 Jul 2022 08:26:30 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -42358,7 +42358,7 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"bucketId\": \"e90e7c7c-08fd-474d-a178-5e5240260fa3\",\n    \"folders\": [],\n    \"files\": [],\n    \"path\": [\n        {\n            \"id\": \"a2f6aaff-77da-4a43-a746-0ad4f84a44e1\",\n            \"name\": \"FolderInFolder\"\n        }\n    ]\n}"
+													"body": "{\n    \"bucketId\": \"e90e7c7c-08fd-474d-a178-5e5240260fa3\",\n    \"folders\": [],\n    \"files\": [],\n    \"path\": [\n        {\n            \"id\": \"a2f6aaff-77da-4a43-a746-0ad4f84a44e1\",\n            \"name\": \"FolderInFolder\"\n        },\n        {\n            \"id\": \"6f1b05cf-88de-49e7-8809-4dfa601088bd\",\n            \"name\": \"FolderInFolder\"\n        }\n    ]\n}"
 												}
 											]
 										}
