@@ -51230,7 +51230,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "UploadFileEmptyToken",
+									"name": "GrantPermissionEmptyToken",
 									"id": "dd24077d-a1b1-4253-9c7f-05f9d1ba6a2f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
