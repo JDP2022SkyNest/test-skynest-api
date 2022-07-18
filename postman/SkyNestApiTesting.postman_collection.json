@@ -50848,7 +50848,7 @@
 							"name": "ValidTokenButUnsuccessfulPUT",
 							"item": [
 								{
-									"name": "MoveFileToFolderAsOwner",
+									"name": "MoveFileToFolderAsNotOwner",
 									"id": "f3dd92e3-54f7-4fbf-ab33-b02d3070cc29",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
