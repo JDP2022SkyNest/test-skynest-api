@@ -51121,7 +51121,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -51225,6 +51225,367 @@
 							"name": "InvalidToken",
 							"item": [],
 							"id": "188169b3-89fa-4e7a-848d-5b1a5ad44c02"
+						},
+						{
+							"name": "InvalidToken",
+							"item": [
+								{
+									"name": "UploadFileEmptyToken",
+									"id": "dd24077d-a1b1-4253-9c7f-05f9d1ba6a2f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+									},
+									"response": [
+										{
+											"id": "83cb83da-c21f-4b8f-9529-5c57f3607b51",
+											"name": "UploadFileEmptyToken",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 06 Jul 2022 12:24:31 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "UploadFileExpiredToken",
+									"id": "5c136f63-b678-4b58-8909-65b05f18febe",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+									},
+									"response": [
+										{
+											"id": "a700c556-bb45-48a1-a36f-c9d84bb44e8a",
+											"name": "UploadFileExpiredToken",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 06 Jul 2022 12:25:48 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-06 12:25:48\"\n}"
+										}
+									]
+								},
+								{
+									"name": "UploadFileInvalidToken",
+									"id": "90b16110-3470-4c86-af0b-7d58779d3d33",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{invalidToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+									},
+									"response": [
+										{
+											"id": "8c286d4c-4ca8-48a4-85ef-6643f4fcff07",
+											"name": "UploadFileInvalidToken",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 06 Jul 2022 12:32:41 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "e9fc2de9-e6b3-43a9-94e6-a283a87198aa",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "02aa2246-4b80-4f79-8ac6-655b26a7e926",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "7f54c5b8-3779-4e52-897d-2849fdb94345",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "97ca0db9-9aab-4056-ba89-df209625b836"
