@@ -36683,7 +36683,81 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_TRASHED_BUCKETS}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "adfb099e-de62-4767-819a-fcf846fccac1",
+													"name": "ViewTrashedBucketsAsAdmin",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_VIEW_TRASHED_BUCKETS}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 18 Jul 2022 08:06:14 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "[\n    {\n        \"bucketId\": \"11775fbd-de90-47f2-bb72-b70f1321d76b\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Christine's Bucket\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"Bucket of admin\",\n        \"size\": 2838,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"2626af7d-554e-4e1c-a947-9b1ba110419f\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"GFg_fsd-ffdsf\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"fdadsgdf\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"2decb5a1-3724-4407-bbe3-c464921b7c21\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Hristina's Bucket\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"Bucket of worker\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"3d8a99e2-118a-4705-a27c-21617ef83710\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"UI\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"Bucket for UI test\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"613c24c1-1393-4eeb-aea2-69d82455e7a8\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"UI\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"Bucket for UI test\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"859f8c55-faa6-4b25-92c9-e9837e9c057f\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Hristina's Bucket\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"Bucket of worker\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"b87ab764-061b-46af-8b78-b195b4ea2884\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": \"ae48a315-fd3d-11ec-ae18-0242ac120003\",\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"bfcbe37a-a47c-48d3-9967-63ea122e4685\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"PublicBucket\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"string\",\n        \"size\": 2838,\n        \"isPublic\": true\n    },\n    {\n        \"bucketId\": \"c20eabbb-36fa-4b5e-8760-d7a36bb471d4\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Worker's Bucket\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"Opis na bucket\",\n        \"size\": 775766,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"fb384180-2e03-4a5d-8a3f-52c4f4974399\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Hristina's Bucket\",\n        \"companyId\": \"d1a58fcf-8c1c-426f-822b-63cc0cc2561b\",\n        \"description\": \"Bucket of worker\",\n        \"size\": 3105902,\n        \"isPublic\": false\n    }\n]"
+												}
+											]
 										}
 									],
 									"id": "b1793f4c-a405-44f1-a717-efd9f5ef9b2b"
