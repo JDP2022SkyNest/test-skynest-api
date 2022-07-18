@@ -50751,7 +50751,7 @@
 					"id": "f4c1e630-ce71-454f-9eec-ca6c88619333"
 				},
 				{
-					"name": "MoveFile",
+					"name": "MoveFileToFolder",
 					"item": [
 						{
 							"name": "ValidToken",
