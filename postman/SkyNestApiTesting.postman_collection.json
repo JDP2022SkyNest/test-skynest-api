@@ -41792,7 +41792,7 @@
 											]
 										},
 										{
-											"name": "GetFolderContentAsCreator Copy",
+											"name": "ReturnPathToFolder",
 											"id": "79bcf2c1-6147-48b1-95ae-513b580b08d5",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
