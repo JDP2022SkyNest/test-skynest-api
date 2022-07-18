@@ -51040,7 +51040,7 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{notExistingFileId}}{{ENDPOINT_MOVE_FILE}}{{adminFolderId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{workerFolderId}}"
 									},
 									"response": [
 										{
