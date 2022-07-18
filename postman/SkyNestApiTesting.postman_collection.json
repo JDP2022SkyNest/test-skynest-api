@@ -50763,7 +50763,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "GrantBucketPermissionToAdminAsWorker",
 									"id": "1a64577e-afcc-4f5f-8191-989945fa71ee",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
