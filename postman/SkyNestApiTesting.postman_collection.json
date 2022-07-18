@@ -51783,77 +51783,7 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{workerFolderId}}"
 									},
-									"response": [
-										{
-											"id": "ae239a29-6d78-472a-9c3f-6c609aeaeed2",
-											"name": "MoveFileToFolderEmptyToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{workerFolderId}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 18 Jul 2022 14:03:29 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "MoveFileToRootExpiredToken",
