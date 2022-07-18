@@ -50752,7 +50752,13 @@
 				},
 				{
 					"name": "MoveFile",
-					"item": [],
+					"item": [
+						{
+							"name": "New Folder",
+							"item": [],
+							"id": "c3b46d1c-5b4b-4de6-9d6b-0cc1f087a988"
+						}
+					],
 					"id": "9ed47eef-a20d-4b2b-85bc-b84fcfcd36e7"
 				}
 			],
