@@ -51042,7 +51042,81 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{notExistingFileId}}{{ENDPOINT_MOVE_FILE}}{{adminFolderId}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "ab1bb3b0-68af-477b-86fd-7d9238b06102",
+											"name": "MoveAlreadyMovedFileInTheSameFolder",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{workerFolderId}}"
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 18 Jul 2022 14:02:23 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"File is already inside the folder\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-18 16:02:23\"\n}"
+										}
+									]
 								}
 							],
 							"id": "542c5fc0-5c3e-42eb-8a60-734a5f46839e"
