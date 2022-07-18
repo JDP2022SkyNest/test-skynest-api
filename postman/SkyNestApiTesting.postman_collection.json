@@ -51123,7 +51123,27 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "MoveAlreadyMovedFileInTheSameFolder Copy",
+									"id": "6a9f849f-18b5-4cdd-a7bc-0bb8d8252903",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{workerFolderId}}"
+									},
+									"response": []
+								}
+							],
 							"id": "b4ccd31e-486b-4dc0-8562-51afd343c8aa"
 						}
 					],
