@@ -51223,7 +51223,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": ""
+												"token": "{{expiredToken}}"
 											}
 										},
 										"method": "PUT",
