@@ -50931,6 +50931,25 @@
 											"body": null
 										}
 									]
+								},
+								{
+									"name": "MoveNotEistingFile",
+									"id": "19e7d997-c770-416d-99d8-b52563d5732a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{adminFolderId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "542c5fc0-5c3e-42eb-8a60-734a5f46839e"
