@@ -51400,7 +51400,31 @@
 									]
 								}
 							],
-							"id": "b4ccd31e-486b-4dc0-8562-51afd343c8aa"
+							"id": "b4ccd31e-486b-4dc0-8562-51afd343c8aa",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "3f9e160d-1cbb-4cd8-a9a4-09f711541fc8",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "95c3682f-6277-40ae-9086-f312813679c7",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "9ed47eef-a20d-4b2b-85bc-b84fcfcd36e7"
