@@ -51096,7 +51096,7 @@
 									]
 								},
 								{
-									"name": "GrantBucketPermissionAsNotCreator",
+									"name": "GrantBucketPermissionAsNotOwner",
 									"id": "e78ac6b0-108e-4614-9985-90784e84a68c",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
