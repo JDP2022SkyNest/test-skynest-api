@@ -50757,7 +50757,7 @@
 			"name": "PermissionsAPI",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "GrantBucketPermission",
 					"item": [
 						{
 							"name": "New Folder",
