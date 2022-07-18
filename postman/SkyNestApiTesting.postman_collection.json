@@ -50791,7 +50791,7 @@
 									"response": [
 										{
 											"id": "21a011fb-7e65-4aec-aae9-c3dd667ebf41",
-											"name": "New Request",
+											"name": "GrantBucketPermissionToAdminAsWorker",
 											"originalRequest": {
 												"method": "POST",
 												"header": [],
