@@ -50754,7 +50754,7 @@
 					"name": "MoveFileToFolder",
 					"item": [
 						{
-							"name": "ValidToken",
+							"name": "ValidTokenAndSuccessfulPUT",
 							"item": [
 								{
 									"name": "MoveFileToFolderAsOwner",
