@@ -50760,7 +50760,7 @@
 					"name": "GrantBucketPermission",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken\\",
 							"item": [],
 							"id": "2c4eae1c-9a62-41bd-afa7-e14993593854"
 						}
