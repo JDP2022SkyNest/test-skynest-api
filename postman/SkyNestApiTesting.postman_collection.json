@@ -51339,7 +51339,7 @@
 									]
 								},
 								{
-									"name": "UploadFileExpiredToken",
+									"name": "GrantPermissionExpiredToken",
 									"id": "5c136f63-b678-4b58-8909-65b05f18febe",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
