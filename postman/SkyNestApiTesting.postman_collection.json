@@ -50763,6 +50763,11 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "6e9b7a0e-9164-4e47-9e6b-d5bb205fb32d"
+								},
+								{
 									"name": "GrantBucketPermissionToAdminAsWorker",
 									"id": "1a64577e-afcc-4f5f-8191-989945fa71ee",
 									"protocolProfileBehavior": {
