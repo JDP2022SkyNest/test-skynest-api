@@ -50765,7 +50765,7 @@
 									"request": {
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{adminFolderId}}"
 									},
 									"response": []
 								}
