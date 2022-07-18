@@ -39180,7 +39180,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"FolderInFolder\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": {{adminFolderId}}\r\n}",
+													"raw": "{\r\n  \"name\": \"FolderInFolder\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
