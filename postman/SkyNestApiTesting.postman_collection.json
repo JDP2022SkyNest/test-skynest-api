@@ -51452,7 +51452,7 @@
 									]
 								},
 								{
-									"name": "UploadFileInvalidToken",
+									"name": "GrantPermissionInvalidToken",
 									"id": "90b16110-3470-4c86-af0b-7d58779d3d33",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
