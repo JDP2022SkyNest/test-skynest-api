@@ -53135,7 +53135,7 @@
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{notExistingBucketId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
 													},
 													"status": "OK",
 													"code": 200,
