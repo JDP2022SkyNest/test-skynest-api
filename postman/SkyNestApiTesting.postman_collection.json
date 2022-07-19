@@ -52936,7 +52936,31 @@
 									"response": []
 								}
 							],
-							"id": "664d2be1-10f2-4b0d-a8e1-1895080421a5"
+							"id": "664d2be1-10f2-4b0d-a8e1-1895080421a5",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "e463503c-0a75-422d-b2c9-2a2a6efd22c6",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "26f554d6-43ae-4cb2-aa6b-1fa1b53680ef",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "InvalidToken",
