@@ -52917,7 +52917,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "ViewBucketPermissionsAsCreator",
 									"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
