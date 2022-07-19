@@ -54519,7 +54519,7 @@
 			"name": "TagAPI",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "CreateNewTag",
 					"item": [],
 					"id": "8d4b6eed-7f66-4c33-9c4d-dca2fb5048df"
 				}
