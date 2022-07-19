@@ -44044,7 +44044,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "RestoreBucketEmptyToken",
+									"name": "RestoreFolderEmptyToken",
 									"id": "674bf840-ad19-4a5b-9c3d-9aba08641c53",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -44133,7 +44133,7 @@
 									]
 								},
 								{
-									"name": "RestoreBucketExpiredToken",
+									"name": "RestoreFolderExpiredToken",
 									"id": "805ba0ce-d910-458d-a46e-6d816f58f61e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
