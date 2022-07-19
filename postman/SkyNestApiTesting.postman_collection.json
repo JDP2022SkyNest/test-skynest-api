@@ -53027,7 +53027,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}1b2b9f71-441f-42d5-b51a-a0c88cfa2fb2"
 											},
 											"response": []
 										}
