@@ -54559,7 +54559,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Worker Tag\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Tag of Worker\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
