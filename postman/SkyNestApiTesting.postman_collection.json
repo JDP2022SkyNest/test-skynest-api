@@ -54179,7 +54179,86 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_EDIT}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "6ae4ba8e-da10-46dd-a58c-707682f9b019",
+											"name": "EditGrantedPermissionsEmptyToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_EDIT}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 19 Jul 2022 12:18:17 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
 								}
 							],
 							"id": "45fb1ac6-6b2b-4ea9-9ade-99689a55059a",
