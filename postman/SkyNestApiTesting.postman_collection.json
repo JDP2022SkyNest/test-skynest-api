@@ -44028,12 +44028,12 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{adminAuthToken}}"
 											}
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_RESTORE}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
 									},
 									"response": []
 								}
