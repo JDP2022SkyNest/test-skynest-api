@@ -54834,7 +54834,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"\",\r\n  \"rgb\": \"\"\r\n}",
+													"raw": "{\r\n  \"name\": null,\r\n  \"rgb\": null\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
