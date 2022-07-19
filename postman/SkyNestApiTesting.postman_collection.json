@@ -55878,9 +55878,15 @@
 											"body": "[\n    {\n        \"id\": \"86b97e6f-264e-4813-9c02-fd440a34e4ad\",\n        \"name\": \"string\",\n        \"rgb\": \"Eebb8F\"\n    },\n    {\n        \"id\": \"98413961-9e30-44c0-93ab-2fd555797998\",\n        \"name\": \"Worker Tag\",\n        \"rgb\": \"9FE2BF\"\n    },\n    {\n        \"id\": \"cfaa5a13-4b5d-4d15-acdf-ad304f7ee832\",\n        \"name\": \"Worker's Tag\",\n        \"rgb\": \"40E0D0\"\n    },\n    {\n        \"id\": \"d7cd3146-9797-4843-a5db-87847f6d7cf7\",\n        \"name\": \"Tag of Worker\",\n        \"rgb\": \"9FE2BF\"\n    }\n]"
 										}
 									]
-								},
+								}
+							],
+							"id": "fd1955ac-d754-40e3-9999-b11158905ba9"
+						},
+						{
+							"name": "InvalidToken",
+							"item": [
 								{
-									"name": "GetAllTokensAsWorker Copy",
+									"name": "GetAllTokensM",
 									"id": "d157014a-466a-4ce9-9c78-19365d6a9e61",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -55899,11 +55905,6 @@
 									"response": []
 								}
 							],
-							"id": "fd1955ac-d754-40e3-9999-b11158905ba9"
-						},
-						{
-							"name": "InvalidToken",
-							"item": [],
 							"id": "c83aa34e-ed0b-4a22-84ea-c6ec516f3843"
 						}
 					],
