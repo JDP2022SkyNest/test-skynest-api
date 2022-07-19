@@ -54532,6 +54532,8 @@
 											"script": {
 												"id": "9dc80728-438a-4da4-86b2-d6c74b21bfb4",
 												"exec": [
+													"const jsonData = pm.response.json();\r",
+													"\r",
 													"pm.test(\"Set the id of a valid tag creation as an environment variable\", function () {\r",
 													"    pm.expect(jsonData.id).is.not.null;\r",
 													"    pm.environment.set(\"workerTagId\", jsonData.id);\r",
@@ -54566,7 +54568,90 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "8df12ca1-087b-4c36-8a79-7ca4623b33c9",
+											"name": "New Request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Tag of Worker\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 19 Jul 2022 12:39:56 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"d7cd3146-9797-4843-a5db-87847f6d7cf7\",\n    \"name\": \"Tag of Worker\",\n    \"rgb\": \"9FE2BF\"\n}"
+										}
+									]
 								}
 							],
 							"id": "921b8e0a-9d40-426f-9aa3-ac255ad68391"
