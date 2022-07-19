@@ -53790,7 +53790,13 @@
 				},
 				{
 					"name": "EditBucketPermissions",
-					"item": [],
+					"item": [
+						{
+							"name": "ValidToken",
+							"item": [],
+							"id": "d4975335-013a-40db-ab90-44be1294824f"
+						}
+					],
 					"id": "86ace443-9242-49ea-825c-8aa9d17e48dc"
 				}
 			],
