@@ -43731,6 +43731,11 @@
 					"name": "RestoreFolder",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "09b8e1c2-d32a-49bd-b0bf-8ba0055a7964"
+						},
+						{
 							"name": "RestoreOwnFolderAsWorker",
 							"id": "8002a5d9-e20a-43ad-b375-4d71ea3df469",
 							"protocolProfileBehavior": {
