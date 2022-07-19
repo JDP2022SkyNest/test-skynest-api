@@ -53000,7 +53000,7 @@
 									"response": []
 								},
 								{
-									"name": "GrantPermissionInvalidToken",
+									"name": "GetPermissionsInvalidToken",
 									"id": "9e75aacd-6306-4021-bca4-124dc2988bc3",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
