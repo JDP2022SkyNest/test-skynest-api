@@ -1,10 +1,7 @@
 package com.skynest.clients;
 
 import com.skynest.constants.ApiConstants;
-import com.skynest.models.ChangePasswordRequest;
-import com.skynest.models.EditRequest;
-import com.skynest.models.LoginRequest;
-import com.skynest.models.RegistrationRequest;
+import com.skynest.models.*;
 import io.restassured.response.Response;
 
 import java.net.URISyntaxException;
@@ -14,6 +11,8 @@ import static org.apache.http.HttpHeaders.AUTHORIZATION;
 
 public class SkyNestBackendClient extends BaseClient {
     private static String userId = "userId";
+    private static String bucketId = "bucketId";
+
     public SkyNestBackendClient(String targetDomain) throws URISyntaxException {
         super(targetDomain);
     }
@@ -90,4 +89,41 @@ public class SkyNestBackendClient extends BaseClient {
                 .pathParam(userId, uuid)
                 .put(ApiConstants.DEMOTE_PATH);
     }
+
+    public Response createBucket(CreateBucketRequest createBucketRequest) {
+        return requestMaker()
+                .body(createBucketRequest)
+                .post(ApiConstants.BUCKETS_PATH);
+    }
+
+    public Response getAllBuckets() {
+        return requestMaker()
+                .get(ApiConstants.BUCKETS_PATH);
+    }
+
+    public Response getBucketById(UUID uuid) {
+        return requestMaker()
+                .pathParam(bucketId, uuid)
+                .get(ApiConstants.BUCKET_DETAILS_PATH);
+    }
+
+    public Response getBucketContent(UUID uuid) {
+        return requestMaker()
+                .pathParam(bucketId, uuid)
+                .get(ApiConstants.BUCKET_BY_ID_PATH);
+    }
+
+    public Response deleteBucket(UUID uuid) {
+        return requestMaker()
+                .pathParam(bucketId, uuid)
+                .put(ApiConstants.DELETE_BUCKET_PATH);
+    }
+
+    public Response editBucket(EditBucketRequest editBucketRequest, UUID uuid) {
+        return requestMaker()
+                .body(editBucketRequest)
+                .pathParam(bucketId, uuid)
+                .put(ApiConstants.BUCKET_BY_ID_PATH);
+    }
+
 }
