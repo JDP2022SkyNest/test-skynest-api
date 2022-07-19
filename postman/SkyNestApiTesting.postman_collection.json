@@ -43731,7 +43731,7 @@
 					"name": "RestoreFolder",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidTokenAndSuccessfulPUT",
 							"item": [],
 							"id": "09b8e1c2-d32a-49bd-b0bf-8ba0055a7964"
 						},
