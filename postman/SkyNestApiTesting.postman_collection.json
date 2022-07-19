@@ -43728,8 +43728,21 @@
 					"id": "022f9f20-2b9e-4f8d-b4ed-5710c14a7d7e"
 				},
 				{
-					"name": "New Folder",
-					"item": [],
+					"name": "RestoreFolder",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "8002a5d9-e20a-43ad-b375-4d71ea3df469",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "7b3db6b5-ffbb-4482-9946-2c46035faef0"
 				}
 			],
