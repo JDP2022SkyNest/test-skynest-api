@@ -43851,15 +43851,15 @@
 									},
 									"response": [
 										{
-											"id": "2a066ab0-4211-4c4e-be92-9fa3569948fe",
-											"name": "RestoreOwnFolderAsWorker",
+											"id": "627858ca-950d-479f-a73d-314d6c2d4151",
+											"name": "RestoreAlreadyRestoredFolder",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
 											},
-											"status": "OK",
-											"code": 200,
+											"status": "Conflict",
+											"code": 409,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -43908,7 +43908,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Tue, 19 Jul 2022 13:34:08 GMT"
+													"value": "Tue, 19 Jul 2022 13:35:27 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -43921,7 +43921,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"id\": \"008cc325-bb2d-478f-81d4-bb984ad9cb91\",\n    \"createdOn\": \"2022-07-19T13:32:22\",\n    \"modifiedOn\": \"2022-07-19T13:34:05\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"d8e7d580-7f00-4d94-b141-bb3f3a918001\"\n}"
+											"body": "{\n    \"messages\": [\n        \"Folder already restored\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-19 15:35:27\"\n}"
 										}
 									]
 								}
