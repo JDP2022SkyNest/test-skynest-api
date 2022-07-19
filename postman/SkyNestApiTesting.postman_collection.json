@@ -55886,7 +55886,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "GetAllTokens",
+									"name": "GetAllTagsEmptyToken",
 									"id": "d157014a-466a-4ce9-9c78-19365d6a9e61",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
