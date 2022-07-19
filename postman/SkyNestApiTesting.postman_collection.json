@@ -55013,7 +55013,7 @@
 									]
 								},
 								{
-									"name": "EditGrantedPermissionForAnotherUser",
+									"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll",
 									"id": "27751a50-b089-4e65-bc8b-9e4fc68ca872",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
