@@ -55556,7 +55556,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{expiredToken}}"
+												"token": "{{invalidToken}}"
 											}
 										},
 										"method": "POST",
