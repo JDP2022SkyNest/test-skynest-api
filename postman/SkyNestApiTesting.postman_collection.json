@@ -55713,7 +55713,7 @@
 									"response": [
 										{
 											"id": "a5e389cf-5bc2-466e-bc86-5369f4af93fa",
-											"name": "GetAllTokensAsAdmin",
+											"name": "GetAllTagsAsAdmin",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
