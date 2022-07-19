@@ -53852,7 +53852,31 @@
 						{
 							"name": "InvalidToken",
 							"item": [],
-							"id": "45fb1ac6-6b2b-4ea9-9ade-99689a55059a"
+							"id": "45fb1ac6-6b2b-4ea9-9ade-99689a55059a",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "d19c3fcf-216c-472c-ace6-d02312051c85",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "6996cb73-9eb9-4bf5-94ae-127a4fa23f13",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "86ace443-9242-49ea-825c-8aa9d17e48dc"
