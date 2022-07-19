@@ -55337,7 +55337,7 @@
 					"name": "GetAllTagsForCompany",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "fd1955ac-d754-40e3-9999-b11158905ba9"
 						}
