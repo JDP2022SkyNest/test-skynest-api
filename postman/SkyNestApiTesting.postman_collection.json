@@ -54541,7 +54541,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"string\",\r\n  \"rgb\": \"Eebb8F\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Worker's Tag\",\r\n  \"rgb\": \"40E0D0\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
