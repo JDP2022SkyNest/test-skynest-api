@@ -55787,7 +55787,7 @@
 									]
 								},
 								{
-									"name": "GetAllTokensAsWorker",
+									"name": "GetAllTagsAsWorker",
 									"id": "5f697a38-d281-49bc-8dc4-09e5e74d0efc",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
