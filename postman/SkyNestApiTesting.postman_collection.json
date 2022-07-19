@@ -52918,101 +52918,107 @@
 							"item": [
 								{
 									"name": "ValidTokenAndSuccessfulGET",
-									"item": [],
-									"id": "2d596b06-994f-4f43-b001-eb3d2fd82727"
-								},
-								{
-									"name": "ViewBucketPermissionsAsCreator",
-									"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
-									},
-									"response": [
+									"item": [
 										{
-											"id": "28b8a6ea-aadf-4c24-8c62-c6e662ab7189",
 											"name": "ViewBucketPermissionsAsCreator",
-											"originalRequest": {
+											"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
 												"method": "GET",
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
 											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 19 Jul 2022 11:18:10 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
+													"id": "28b8a6ea-aadf-4c24-8c62-c6e662ab7189",
+													"name": "ViewBucketPermissionsAsCreator",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 19 Jul 2022 11:18:10 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "[\n    {\n        \"grantedToId\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n        \"objectId\": \"3671ceba-9e6a-4105-83de-09aa3bde4ecc\",\n        \"grantedOn\": \"2022-07-18T11:29:39\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n    },\n    {\n        \"grantedToId\": \"768a3f62-3028-473a-aeb9-a4e6a9a092e6\",\n        \"grantedToEmail\": \"fedese7585@kahase.com\",\n        \"objectId\": \"3671ceba-9e6a-4105-83de-09aa3bde4ecc\",\n        \"grantedOn\": \"2022-07-18T12:00:40\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"grantedToEmail\": \"christinezahar@yahoo.com\",\n        \"objectId\": \"3671ceba-9e6a-4105-83de-09aa3bde4ecc\",\n        \"grantedOn\": \"2022-07-18T11:34:15\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n    },\n    {\n        \"grantedToId\": \"eb735228-f4dd-4802-9fa0-7bc9c66bb3cc\",\n        \"grantedToEmail\": \"nanito9953@lankew.com\",\n        \"objectId\": \"3671ceba-9e6a-4105-83de-09aa3bde4ecc\",\n        \"grantedOn\": \"2022-07-18T12:01:46\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"768a3f62-3028-473a-aeb9-a4e6a9a092e6\",\n        \"grantedByEmail\": \"fedese7585@kahase.com\"\n    }\n]"
 												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "[\n    {\n        \"grantedToId\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n        \"objectId\": \"3671ceba-9e6a-4105-83de-09aa3bde4ecc\",\n        \"grantedOn\": \"2022-07-18T11:29:39\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n    },\n    {\n        \"grantedToId\": \"768a3f62-3028-473a-aeb9-a4e6a9a092e6\",\n        \"grantedToEmail\": \"fedese7585@kahase.com\",\n        \"objectId\": \"3671ceba-9e6a-4105-83de-09aa3bde4ecc\",\n        \"grantedOn\": \"2022-07-18T12:00:40\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"grantedToEmail\": \"christinezahar@yahoo.com\",\n        \"objectId\": \"3671ceba-9e6a-4105-83de-09aa3bde4ecc\",\n        \"grantedOn\": \"2022-07-18T11:34:15\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n    },\n    {\n        \"grantedToId\": \"eb735228-f4dd-4802-9fa0-7bc9c66bb3cc\",\n        \"grantedToEmail\": \"nanito9953@lankew.com\",\n        \"objectId\": \"3671ceba-9e6a-4105-83de-09aa3bde4ecc\",\n        \"grantedOn\": \"2022-07-18T12:01:46\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"768a3f62-3028-473a-aeb9-a4e6a9a092e6\",\n        \"grantedByEmail\": \"fedese7585@kahase.com\"\n    }\n]"
+											]
 										}
-									]
+									],
+									"id": "2d596b06-994f-4f43-b001-eb3d2fd82727"
+								},
+								{
+									"name": "New Folder",
+									"item": [],
+									"id": "b47fe8c9-57e4-4622-8d82-753f58fd1174"
 								}
 							],
 							"id": "664d2be1-10f2-4b0d-a8e1-1895080421a5",
