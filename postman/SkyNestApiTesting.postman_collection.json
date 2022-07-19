@@ -54694,12 +54694,6 @@
 													"script": {
 														"id": "9dc80728-438a-4da4-86b2-d6c74b21bfb4",
 														"exec": [
-															"const jsonData = pm.response.json();\r",
-															"\r",
-															"pm.test(\"Set the id of a valid tag creation as an environment variable\", function () {\r",
-															"    pm.expect(jsonData.id).is.not.null;\r",
-															"    pm.environment.set(\"workerTagId\", jsonData.id);\r",
-															"});\r",
 															""
 														],
 														"type": "text/javascript"
@@ -54721,7 +54715,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Tag of Worker\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
+													"raw": "{\r\n  \"name\": \"\",\r\n  \"rgb\": \"\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
