@@ -55041,7 +55041,7 @@
 									"response": [
 										{
 											"id": "47276a39-28c1-4a12-9b1c-6fa8566c6916",
-											"name": "EditGrantedPermissionForAnotherUser",
+											"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
