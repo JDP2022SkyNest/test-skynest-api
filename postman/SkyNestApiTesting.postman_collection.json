@@ -52912,7 +52912,20 @@
 				},
 				{
 					"name": "GetBucketPermissions",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "3ef6bb73-86e8-4b55-b4b3-3bb7d833dda3"
 				}
 			],
