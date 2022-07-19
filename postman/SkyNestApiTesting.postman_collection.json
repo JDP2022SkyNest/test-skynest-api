@@ -55327,7 +55327,20 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "08a8f426-8a5e-4d28-b6e8-121bf91c4fad",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "d15686b5-8641-4d6c-ba3b-931833e723e7"
 						}
 					],
