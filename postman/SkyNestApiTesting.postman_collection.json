@@ -52971,7 +52971,7 @@
 									"response": []
 								},
 								{
-									"name": "GrantPermissionExpiredToken",
+									"name": "GetPermissionsExpiredToken",
 									"id": "28ea51b6-09e0-4be1-8264-d7d26b3ffcb2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
