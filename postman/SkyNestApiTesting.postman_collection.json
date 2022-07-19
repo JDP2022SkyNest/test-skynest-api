@@ -54806,6 +54806,46 @@
 											]
 										},
 										{
+											"name": "CreateTagWithInvalidInputs",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "9dc80728-438a-4da4-86b2-d6c74b21bfb4",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "e06dd604-115c-4540-b7ac-dcd75a15041d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"\",\r\n  \"rgb\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
+											},
+											"response": []
+										},
+										{
 											"name": "CreateTagWithNullInputs",
 											"event": [
 												{
