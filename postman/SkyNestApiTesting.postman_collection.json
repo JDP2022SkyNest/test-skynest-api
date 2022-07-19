@@ -53811,7 +53811,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"grantedTo\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"access\": \"download\"\r\n}",
+											"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"access\": \"view\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
