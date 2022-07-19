@@ -54522,7 +54522,7 @@
 					"name": "CreateNewTag",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "921b8e0a-9d40-426f-9aa3-ac255ad68391"
 						}
