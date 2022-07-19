@@ -52917,6 +52917,11 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "2d596b06-994f-4f43-b001-eb3d2fd82727"
+								},
+								{
 									"name": "ViewBucketPermissionsAsCreator",
 									"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
 									"protocolProfileBehavior": {
