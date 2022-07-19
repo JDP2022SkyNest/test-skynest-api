@@ -54523,7 +54523,21 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "155033b0-9446-43d8-81af-05eb005ac1a9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{"
+									},
+									"response": []
+								}
+							],
 							"id": "921b8e0a-9d40-426f-9aa3-ac255ad68391"
 						},
 						{
