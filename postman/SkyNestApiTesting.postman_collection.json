@@ -55895,7 +55895,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": ""
 											}
 										},
 										"method": "GET",
