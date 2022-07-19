@@ -53063,7 +53063,7 @@
 												"token": "{{expiredToken}}"
 											}
 										},
-										"method": "POST",
+										"method": "GET",
 										"header": [],
 										"body": {
 											"mode": "formdata",
@@ -53075,7 +53075,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
 									},
 									"response": [
 										{
