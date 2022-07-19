@@ -55329,7 +55329,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "CreateNewTagEmptyToken",
 									"id": "08a8f426-8a5e-4d28-b6e8-121bf91c4fad",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
