@@ -54834,7 +54834,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"\",\r\n  \"rgb\": \"\"\r\n}",
+													"raw": "{\r\n  \"name\": \"TagName\",\r\n  \"rgb\": \":)\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
