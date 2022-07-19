@@ -43737,9 +43737,15 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
 								"method": "PUT",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
 							},
 							"response": []
 						}
