@@ -55202,7 +55202,7 @@
 									]
 								},
 								{
-									"name": "EditGrantedPermissionForAnotherUser Copy",
+									"name": "EditGrantedPermissionForAnotherUser",
 									"id": "b46569f9-8887-40d3-b8fe-4a2abc10752e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
