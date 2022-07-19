@@ -54539,6 +54539,15 @@
 										},
 										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"string\",\r\n  \"rgb\": \"Eebb8F\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
 									},
 									"response": []
