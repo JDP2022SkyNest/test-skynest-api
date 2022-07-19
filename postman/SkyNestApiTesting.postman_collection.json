@@ -54520,7 +54520,13 @@
 			"item": [
 				{
 					"name": "CreateNewTag",
-					"item": [],
+					"item": [
+						{
+							"name": "New Folder",
+							"item": [],
+							"id": "921b8e0a-9d40-426f-9aa3-ac255ad68391"
+						}
+					],
 					"id": "8d4b6eed-7f66-4c33-9c4d-dca2fb5048df"
 				}
 			],
