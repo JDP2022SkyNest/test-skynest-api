@@ -55694,7 +55694,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "GetAllTokensAsAdmin",
+									"name": "GetAllTagsAsAdmin",
 									"id": "8ca87974-ec89-4461-b365-8ade0a4b0090",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
