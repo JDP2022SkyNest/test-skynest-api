@@ -53795,7 +53795,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "EditGrantedPermission",
+									"name": "EditGrantedPermissionForYourself",
 									"id": "2bac8c52-3073-43cf-a6b7-4e42e9886fb4",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
