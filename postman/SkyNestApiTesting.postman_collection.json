@@ -44060,77 +44060,7 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
 									},
-									"response": [
-										{
-											"id": "3c7a263c-0a7f-4bab-a7f7-4ac640b1f73a",
-											"name": "RestoreBucketEmptyToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 05 Jul 2022 14:40:21 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "RestoreFolderExpiredToken",
@@ -44226,7 +44156,7 @@
 									]
 								},
 								{
-									"name": "RestoreBucketInvalidToken",
+									"name": "RestoreFolderInvalidToken",
 									"id": "7b5aae6e-4af6-4c0d-9661-928004bfe679",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
