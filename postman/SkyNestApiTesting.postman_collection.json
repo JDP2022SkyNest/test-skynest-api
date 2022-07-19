@@ -52920,9 +52920,15 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerBucketId}}"
+									}
+								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BASE_URL}}{{perm"
+								"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
 							},
 							"response": []
 						}
