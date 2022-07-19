@@ -54525,7 +54525,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "CreateTag",
+									"name": "CreateValidTag",
 									"event": [
 										{
 											"listen": "test",
