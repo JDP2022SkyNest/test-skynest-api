@@ -54804,6 +54804,125 @@
 													"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\",\n        \"rgb format not valid\",\n        \"rgb cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-19 14:42:56\"\n}"
 												}
 											]
+										},
+										{
+											"name": "CreateTagWithNullInputs",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "9dc80728-438a-4da4-86b2-d6c74b21bfb4",
+														"exec": [
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "a617eab6-0362-401c-89a6-af1545b9f7ac",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"\",\r\n  \"rgb\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
+											},
+											"response": [
+												{
+													"id": "a7925a88-0f7a-4d10-ac56-b939807e59a2",
+													"name": "CreateTagWithEmptyInputs",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"\",\r\n  \"rgb\": \"\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 19 Jul 2022 12:42:56 GMT"
+														},
+														{
+															"key": "Connection",
+															"value": "close"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\",\n        \"rgb format not valid\",\n        \"rgb cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-19 14:42:56\"\n}"
+												}
+											]
 										}
 									],
 									"id": "96e8c159-e8be-4fed-806e-4c3e1a67c132",
