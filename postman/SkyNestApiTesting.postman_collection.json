@@ -53823,7 +53823,31 @@
 									"response": []
 								}
 							],
-							"id": "d4975335-013a-40db-ab90-44be1294824f"
+							"id": "d4975335-013a-40db-ab90-44be1294824f",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "1893e1d7-2e63-4f38-952b-9d5327bb1156",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "f7d67115-a812-4eb1-80c0-8789e2e5bdbe",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "InvalidToken",
