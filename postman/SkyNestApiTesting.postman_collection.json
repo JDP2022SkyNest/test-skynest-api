@@ -37843,7 +37843,7 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE}}"
 									},
 									"response": [
 										{
