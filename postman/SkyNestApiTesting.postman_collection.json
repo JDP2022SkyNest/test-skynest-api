@@ -55230,7 +55230,7 @@
 									"response": [
 										{
 											"id": "eb8cf88e-39fa-4737-a7b0-aa166335d3ac",
-											"name": "EditGrantedPermissionForAnotherUser Copy",
+											"name": "EditGrantedPermissionForAnotherUser",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
