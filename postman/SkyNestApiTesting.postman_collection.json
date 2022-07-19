@@ -54733,7 +54733,31 @@
 											"response": []
 										}
 									],
-									"id": "96e8c159-e8be-4fed-806e-4c3e1a67c132"
+									"id": "96e8c159-e8be-4fed-806e-4c3e1a67c132",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "dbbe7abe-dcac-4bcf-ae78-538876cea6e8",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "6c4e7df3-657d-4281-9997-4e7a676a9cf2",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});"
+												]
+											}
+										}
+									]
 								}
 							],
 							"id": "921b8e0a-9d40-426f-9aa3-ac255ad68391"
