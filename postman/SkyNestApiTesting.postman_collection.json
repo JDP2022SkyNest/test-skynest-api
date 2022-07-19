@@ -54526,6 +54526,22 @@
 							"item": [
 								{
 									"name": "New Request",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9dc80728-438a-4da4-86b2-d6c74b21bfb4",
+												"exec": [
+													"pm.test(\"Set the id of a valid tag creation as an environment variable\", function () {\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"workerTagId\", jsonData.id);\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "155033b0-9446-43d8-81af-05eb005ac1a9",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
