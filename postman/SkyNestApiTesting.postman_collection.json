@@ -55119,7 +55119,7 @@
 										},
 										{
 											"id": "7b225057-ba04-4b09-ba34-a9e811a8d386",
-											"name": "EditGrantedPermissionForAnotherUser",
+											"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
