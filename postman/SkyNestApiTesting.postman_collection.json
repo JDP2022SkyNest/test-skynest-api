@@ -55340,7 +55340,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "GetAllTokensAsAdmin",
 									"id": "8ca87974-ec89-4461-b365-8ade0a4b0090",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
