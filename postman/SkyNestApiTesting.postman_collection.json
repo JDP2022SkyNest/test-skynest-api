@@ -54102,7 +54102,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{SecondAdminAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "GET",
