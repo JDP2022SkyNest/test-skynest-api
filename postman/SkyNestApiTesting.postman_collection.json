@@ -43729,20 +43729,7 @@
 				},
 				{
 					"name": "RestoreFolder",
-					"item": [
-						{
-							"name": "New Request",
-							"id": "8002a5d9-e20a-43ad-b375-4d71ea3df469",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
-						}
-					],
+					"item": [],
 					"id": "7b3db6b5-ffbb-4482-9946-2c46035faef0"
 				}
 			],
