@@ -54163,7 +54163,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": ""
 											}
 										},
 										"method": "PUT",
