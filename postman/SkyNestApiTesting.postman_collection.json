@@ -52914,7 +52914,32 @@
 					"name": "GetBucketPermissions",
 					"item": [
 						{
-							"name": "InvalidToken Copy",
+							"name": "ValidToken",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
+									},
+									"response": []
+								}
+							],
+							"id": "664d2be1-10f2-4b0d-a8e1-1895080421a5"
+						},
+						{
+							"name": "InvalidToken",
 							"item": [
 								{
 									"name": "GrantPermissionEmptyToken",
@@ -53277,30 +53302,6 @@
 									}
 								}
 							]
-						},
-						{
-							"name": "ValidToken",
-							"item": [],
-							"id": "664d2be1-10f2-4b0d-a8e1-1895080421a5"
-						},
-						{
-							"name": "New Request",
-							"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{workerAuthToken}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
-							},
-							"response": []
 						}
 					],
 					"id": "3ef6bb73-86e8-4b55-b4b3-3bb7d833dda3"
