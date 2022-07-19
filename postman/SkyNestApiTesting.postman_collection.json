@@ -43731,7 +43731,7 @@
 					"name": "RestoreFolder",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "RestoreOwnFolderAsWorker",
 							"id": "8002a5d9-e20a-43ad-b375-4d71ea3df469",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
