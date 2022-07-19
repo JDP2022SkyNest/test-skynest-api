@@ -54517,7 +54517,13 @@
 		},
 		{
 			"name": "TagAPI",
-			"item": [],
+			"item": [
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "8d4b6eed-7f66-4c33-9c4d-dca2fb5048df"
+				}
+			],
 			"id": "78599188-e76f-4e22-8a28-3bb5cba942a8"
 		}
 	]
