@@ -57968,15 +57968,14 @@
 												"method": "PUT",
 												"header": [],
 												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
 													"host": [
-														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}"
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_ACTIVATE}}"
 													],
 													"query": [
 														{
 															"key": "lambda",
-															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
-															"type": "text"
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
 														}
 													]
 												}
