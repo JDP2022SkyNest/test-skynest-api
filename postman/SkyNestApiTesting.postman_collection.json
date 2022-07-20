@@ -17916,7 +17916,12 @@
 											"script": {
 												"id": "96ec19d7-624c-4077-9b81-0f7ef4b7623e",
 												"exec": [
-													"\r",
+													"pm.test(\"Set the id of a valid user registration as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validManagerId\", jsonData.id);\r",
+													"});\r",
 													""
 												],
 												"type": "text/javascript"
@@ -17932,7 +17937,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"email\": \"lipafaj444@hekarro.com\",\r\n    \"password\": \"tempEmail8833\",\r\n    \"name\": \"Jacob\",\r\n    \"surname\": \"Leon\",\r\n    \"phoneNumber\": \"7422331963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"raw": "{\r\n    \"email\": \"hobab71038@storypo.com\",\r\n    \"password\": \"tempEmail8833\",\r\n    \"name\": \"Jacob\",\r\n    \"surname\": \"Leon\",\r\n    \"phoneNumber\": \"74233331963\",\r\n    \"address\": \"Street33\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
