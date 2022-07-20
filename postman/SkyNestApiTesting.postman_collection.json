@@ -61584,7 +61584,36 @@
 						},
 						{
 							"name": "ValidTokenButUnsuccessfulPOST",
-							"item": [],
+							"item": [
+								{
+									"name": "SendRegistrationInviteAsAdmin Copy",
+									"id": "798faac1-90c9-4181-abfa-0854ae4444fa",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": []
+								}
+							],
 							"id": "8f262302-eab4-4b2c-a087-130ceda8641c"
 						}
 					],
