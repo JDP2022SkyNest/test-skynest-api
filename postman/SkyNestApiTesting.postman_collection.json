@@ -59751,7 +59751,7 @@
 									"response": [
 										{
 											"id": "340601b8-9cf3-4e34-ba13-bbaada133a1a",
-											"name": "GetAllActiveLambdasForCertainBuck",
+											"name": "GetAllActiveLambdasForBucketThatHasNotActiveLambdas",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
