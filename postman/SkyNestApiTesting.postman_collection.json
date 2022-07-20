@@ -55071,7 +55071,7 @@
 											"response": []
 										},
 										{
-											"name": "GrantBucketPermissionAsOwnerToAnotherUser",
+											"name": "RevokePermissionAsOwnerToAnotherUser",
 											"id": "67c79732-297c-41e3-bef2-96170e4283b3",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
