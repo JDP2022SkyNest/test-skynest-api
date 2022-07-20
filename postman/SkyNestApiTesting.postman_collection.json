@@ -59642,7 +59642,7 @@
 									"name": "ValidTokenAndSuccessfulPUT",
 									"item": [
 										{
-											"name": "ActivateLambdaForCertainBucket",
+											"name": "DeactivateLambdaForCertainBucket",
 											"id": "7ef595e9-a657-41e9-b133-e9408266741d",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
