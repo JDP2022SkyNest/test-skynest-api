@@ -60106,6 +60106,36 @@
 													"body": null
 												}
 											]
+										},
+										{
+											"name": "DeactivateAlreadyDeactivatedLambda",
+											"id": "c98b701e-2e01-4f38-8ecf-ebcef3bfc6a5",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_DEACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_DEACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"response": []
 										}
 									],
 									"id": "bce0ca7f-bc41-4435-bd4b-18049ec810f8"
