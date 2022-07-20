@@ -45719,7 +45719,7 @@
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{publicBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
 											},
 											"response": []
 										}
