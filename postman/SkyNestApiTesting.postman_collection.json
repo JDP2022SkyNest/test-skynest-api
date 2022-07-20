@@ -55083,7 +55083,7 @@
 														"token": "{{adminAuthToken}}"
 													}
 												},
-												"method": "POST",
+												"method": "DELETE",
 												"header": [],
 												"body": {
 													"mode": "raw",
@@ -55094,7 +55094,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 											},
 											"response": []
 										}
