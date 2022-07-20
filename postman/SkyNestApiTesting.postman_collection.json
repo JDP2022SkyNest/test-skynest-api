@@ -57386,7 +57386,7 @@
 			"name": "LambdaAPI",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "GetAllLambdas",
 					"item": [],
 					"id": "153cb9ba-bc4f-4e75-afcf-f3eab1ed7101"
 				}
