@@ -55268,7 +55268,7 @@
 									"id": "13a7af2b-cb9e-4a66-8f62-d74643f260bc"
 								},
 								{
-									"name": "ValidTokenButUnsuccessfulPOST",
+									"name": "ValidTokenButUnsuccessfulDELETE",
 									"item": [
 										{
 											"name": "DuplicateBucketPermission",
