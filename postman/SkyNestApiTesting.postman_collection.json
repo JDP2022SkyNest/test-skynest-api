@@ -59951,7 +59951,7 @@
 											]
 										},
 										{
-											"name": "GetAllActiveLambdasForNotExistingBucket Copy",
+											"name": "GetAllActiveLambdasForAlreadyDeletedBucket",
 											"id": "b94d07a8-85cb-4035-a55e-b17d3ac9f6a2",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -59965,7 +59965,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{notExistingBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{deletedBucketId}}"
 											},
 											"response": []
 										}
