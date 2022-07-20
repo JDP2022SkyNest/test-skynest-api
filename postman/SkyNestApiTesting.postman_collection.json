@@ -61442,18 +61442,6 @@
 				}
 			],
 			"id": "0123d4da-0930-43ef-98ea-6f0a9dcee640"
-		},
-		{
-			"name": "New Request",
-			"id": "d5bbc01b-4a13-4e64-bcec-af3ca456e3b2",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
 		}
 	]
 }
