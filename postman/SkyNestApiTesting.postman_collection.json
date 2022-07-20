@@ -41746,7 +41746,7 @@
 											},
 											"response": [
 												{
-													"id": "71206d9a-fd2d-4a3e-8e9d-4493c3b3a4c8",
+													"id": "4937c41b-da05-45e4-b44c-3cfafb4ac9c8",
 													"name": "EditNameOfAlreadyDeletedFolder",
 													"originalRequest": {
 														"method": "PUT",
@@ -41760,7 +41760,7 @@
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{deletedFolderId}}"
 													},
 													"status": "Conflict",
 													"code": 409,
@@ -41812,7 +41812,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Tue, 12 Jul 2022 13:37:13 GMT"
+															"value": "Wed, 20 Jul 2022 10:32:52 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -41825,7 +41825,7 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"Folder already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-12 15:37:13\"\n}"
+													"body": "{\n    \"messages\": [\n        \"Folder already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-20 10:32:52\"\n}"
 												}
 											]
 										}
