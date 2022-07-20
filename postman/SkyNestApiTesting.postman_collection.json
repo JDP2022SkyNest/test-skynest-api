@@ -57389,7 +57389,7 @@
 					"name": "GetAllLambdas",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "GetAllPredefinedExistingLambdas",
 							"id": "b3f77a3d-8acd-4787-bfc3-c4ee5286900d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
