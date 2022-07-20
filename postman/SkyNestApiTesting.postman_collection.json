@@ -59825,7 +59825,31 @@
 									]
 								}
 							],
-							"id": "944b8e00-847b-4daf-a959-1b941c71eeef"
+							"id": "944b8e00-847b-4daf-a959-1b941c71eeef",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "27d6a795-323f-4f47-b6b5-a249aec0bcf2",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "53f25dd8-c556-4719-85d5-ee483c0fd4d2",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "InvalidToken",
