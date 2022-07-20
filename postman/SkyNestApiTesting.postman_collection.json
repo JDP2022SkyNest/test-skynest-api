@@ -55184,7 +55184,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{notExistingBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{secondValidAdminId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{deletedBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{secondValidAdminId}}"
 											},
 											"response": []
 										},
