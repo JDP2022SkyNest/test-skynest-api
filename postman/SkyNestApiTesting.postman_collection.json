@@ -59965,9 +59965,83 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{notExistingBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{deletedBucketId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "256861ba-7b3f-4eed-8676-a09e54796171",
+													"name": "GetAllActiveLambdasForAlreadyDeletedBucket",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{deletedBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 11:39:00 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "[\n    \"UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA\"\n]"
+												}
+											]
 										}
 									],
 									"id": "2e26e7d0-0ea4-437a-849f-747464ed3e26"
