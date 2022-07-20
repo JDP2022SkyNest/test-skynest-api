@@ -54546,7 +54546,7 @@
 											]
 										},
 										{
-											"name": "GrantPermissionForNotExistingBucket Copy",
+											"name": "GrantPermissionForAlreadyDeletedBucket",
 											"id": "625400b9-5cab-4ae2-b7ec-47d132a78578",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
