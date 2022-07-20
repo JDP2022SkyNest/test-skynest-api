@@ -57921,7 +57921,37 @@
 													"body": null
 												}
 											]
+										}
+									],
+									"id": "77f79b1c-67c2-4413-a29f-8b6595f9d28c",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "429486f0-4c23-4b9b-994f-d780df2d2618",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
 										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "e7d849ea-d830-494c-9732-33e9dc6c535d",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
+								},
+								{
+									"name": "ValidTokenButUnsuccessfulPUT",
+									"item": [
 										{
 											"name": "ActivateLambdaForNotExistingBucket",
 											"id": "ba5de477-480c-441b-838a-eb8b9eed68b2",
@@ -57954,11 +57984,6 @@
 											"response": []
 										}
 									],
-									"id": "77f79b1c-67c2-4413-a29f-8b6595f9d28c"
-								},
-								{
-									"name": "ValidTokenButUnsuccessfulPUT",
-									"item": [],
 									"id": "0e5edb49-7f74-4186-8aaa-f53d9004b94b"
 								}
 							],
