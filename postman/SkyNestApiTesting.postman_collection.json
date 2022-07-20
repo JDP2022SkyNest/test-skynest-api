@@ -59856,7 +59856,27 @@
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulGET",
-									"item": [],
+									"item": [
+										{
+											"name": "GetAllActiveLambdasForBucketThatHasNotActiveLambdas Copy",
+											"id": "2508ecbf-f03e-4fc1-a396-88397d6c5645",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{workerBucketId}}"
+											},
+											"response": []
+										}
+									],
 									"id": "2e26e7d0-0ea4-437a-849f-747464ed3e26"
 								}
 							],
