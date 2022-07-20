@@ -62357,7 +62357,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"\"\r\n}",
+											"raw": "{\r\n  \"email\": null\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -62366,7 +62366,86 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "eeadb013-4384-4d00-b1e2-f9b2d48318ad",
+											"name": "SendRegistrationInviteToNullMail",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": null\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 13:08:44 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"email cannot be null\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 15:08:44\"\n}"
+										}
+									]
 								}
 							],
 							"id": "8f262302-eab4-4b2c-a087-130ceda8641c"
