@@ -60257,7 +60257,7 @@
 									]
 								},
 								{
-									"name": "GetAllLambdasInvalidToken",
+									"name": "GetActiveLambdasInvalidToken",
 									"id": "3eec91da-3fb2-4e12-a381-cb052e329aa0",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
