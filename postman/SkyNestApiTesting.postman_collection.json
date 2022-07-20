@@ -57810,48 +57810,25 @@
 					"item": [
 						{
 							"name": "ValidToken",
-							"item": [],
-							"id": "ac7228e4-fe28-4fcc-9f06-593b3ae499eb"
-						},
-						{
-							"name": "InvalidToken",
-							"item": [],
-							"id": "405bbe63-9b3b-4eed-9f2b-0bf2d0353760"
-						},
-						{
-							"name": "New Request",
-							"id": "271b0552-b1e5-4052-8856-96890fe3d29c",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"url": {
-									"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
-									"host": [
-										"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}"
-									],
-									"query": [
-										{
-											"key": "lambda",
-											"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
-											"type": "text"
-										}
-									]
-								}
-							},
-							"response": [
+							"item": [
 								{
-									"id": "b67094a4-236c-4bf0-9975-aa87cca479b5",
+									"name": "New Folder",
+									"item": [],
+									"id": "77f79b1c-67c2-4413-a29f-8b6595f9d28c"
+								},
+								{
 									"name": "New Request",
-									"originalRequest": {
+									"id": "271b0552-b1e5-4052-8856-96890fe3d29c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
 										"method": "PUT",
 										"header": [],
 										"url": {
@@ -57862,69 +57839,98 @@
 											"query": [
 												{
 													"key": "lambda",
-													"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+													"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"type": "text"
 												}
 											]
 										}
 									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "plain",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 20 Jul 2022 10:12:53 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "b67094a4-236c-4bf0-9975-aa87cca479b5",
+											"name": "New Request",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 10:12:53 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": null
+									]
 								}
-							]
+							],
+							"id": "ac7228e4-fe28-4fcc-9f06-593b3ae499eb"
+						},
+						{
+							"name": "InvalidToken",
+							"item": [],
+							"id": "405bbe63-9b3b-4eed-9f2b-0bf2d0353760"
 						}
 					],
 					"id": "4c8592d1-58b0-404e-a838-c78a5af0d805"
