@@ -57809,6 +57809,11 @@
 					"name": "ActivateLambdaForBucket",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "ac7228e4-fe28-4fcc-9f06-593b3ae499eb"
+						},
+						{
 							"name": "New Request",
 							"id": "271b0552-b1e5-4052-8856-96890fe3d29c",
 							"protocolProfileBehavior": {
