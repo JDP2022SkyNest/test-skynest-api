@@ -59809,7 +59809,7 @@
 											"response": []
 										},
 										{
-											"name": "ActivateLambdaForAlreadyDeletedBucket",
+											"name": "DeactivateLambdaForAlreadyDeletedBucket",
 											"id": "192f8903-59f0-4a78-a7ca-9a9809b6f076",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
