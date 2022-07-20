@@ -60148,7 +60148,7 @@
 									"response": []
 								},
 								{
-									"name": "ActivateLambdaExpiredToken",
+									"name": "DeactivateLambdaExpiredToken",
 									"id": "4da7d63d-2281-4adc-ae1d-fc7640be6449",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
