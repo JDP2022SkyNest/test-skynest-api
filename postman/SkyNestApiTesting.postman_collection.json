@@ -41742,7 +41742,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{deletedFolderId}}"
 											},
 											"response": [
 												{
