@@ -61737,7 +61737,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+											"raw": "{\r\n  \"email\": \"invalidmail.com\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
