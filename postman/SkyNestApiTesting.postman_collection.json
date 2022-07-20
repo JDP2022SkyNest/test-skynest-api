@@ -59148,6 +59148,113 @@
 													"body": null
 												}
 											]
+										},
+										{
+											"name": "ActivateLambdaForBucketWithoutPermssion",
+											"id": "52a2e14b-1707-43cd-b166-5014abd14993",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "634e5cc5-aad1-43a3-8f06-f741b03a1e60",
+													"name": "ActivateLambdaForAlreadyDeletedBucket",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+															"host": [
+																"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}"
+															],
+															"query": [
+																{
+																	"key": "lambda",
+																	"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 11:13:28 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
 										}
 									],
 									"id": "0e5edb49-7f74-4186-8aaa-f53d9004b94b"
