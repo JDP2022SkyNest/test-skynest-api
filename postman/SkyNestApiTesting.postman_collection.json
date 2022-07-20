@@ -59909,9 +59909,9 @@
 												"method": "PUT",
 												"header": [],
 												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_DEACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
 													"host": [
-														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}"
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_DEACTIVATE}}"
 													],
 													"query": [
 														{
