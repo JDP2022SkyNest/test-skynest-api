@@ -59257,7 +59257,7 @@
 											]
 										},
 										{
-											"name": "ActivateLambdaForBucketWithoutPermssion Copy",
+											"name": "ActivateAlreadyActivatedLambda",
 											"id": "51833b54-aa74-4c35-8676-3dc2c5cc2ea9",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
