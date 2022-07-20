@@ -34962,7 +34962,7 @@
 							]
 						},
 						{
-							"name": "ViewNotExistingBucket Copy",
+							"name": "ViewAlreadyDeletedBucket",
 							"event": [
 								{
 									"listen": "test",
