@@ -59633,6 +59633,858 @@
 					"id": "4c8592d1-58b0-404e-a838-c78a5af0d805"
 				},
 				{
+					"name": "ActivateLambdaForBucket Copy",
+					"item": [
+						{
+							"name": "ValidToken",
+							"item": [
+								{
+									"name": "ValidTokenAndSuccessfulPUT",
+									"item": [
+										{
+											"name": "ActivateLambdaForCertainBucket",
+											"id": "7ef595e9-a657-41e9-b133-e9408266741d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+															"type": "text"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "5d63805a-c5ad-402d-87e4-9a0a61862dff",
+													"name": "ActivateLambdaForCertainBucket",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+															"host": [
+																"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}"
+															],
+															"query": [
+																{
+																	"key": "lambda",
+																	"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 10:12:53 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
+										}
+									],
+									"id": "e65d7d08-785f-4dd9-8279-7882fe0c1b34",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "429486f0-4c23-4b9b-994f-d780df2d2618",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "e7d849ea-d830-494c-9732-33e9dc6c535d",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
+								},
+								{
+									"name": "ValidTokenButUnsuccessfulPUT",
+									"item": [
+										{
+											"name": "ActivateLambdaForNotExistingBucket",
+											"id": "0a5b7b11-bf04-4d88-a570-176c288815e1",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "7f1667bd-ab90-4709-9a4f-d14689e456ff",
+													"name": "ActivateLambdaForNotExistingBucket",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+															"host": [
+																"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_ACTIVATE}}"
+															],
+															"query": [
+																{
+																	"key": "lambda",
+																	"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 10:18:25 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-20 10:18:25\"\n}"
+												}
+											]
+										},
+										{
+											"name": "ActivateLambdaForAlreadyDeletedBucket",
+											"id": "192f8903-59f0-4a78-a7ca-9a9809b6f076",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "369b9326-e6e6-4a39-baa9-a481eefdb7b6",
+													"name": "ActivateLambdaForAlreadyDeletedBucket",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+															"host": [
+																"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_ACTIVATE}}"
+															],
+															"query": [
+																{
+																	"key": "lambda",
+																	"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 11:13:28 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
+										},
+										{
+											"name": "ActivateLambdaForBucketWithoutPermssion",
+											"id": "61d5ada0-f207-44a8-9d90-d20177736203",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"id": "c5e173eb-a100-4db2-9943-8f7ee1794c4a",
+													"name": "ActivateLambdaForBucketWithoutPermssion",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+															"host": [
+																"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+															],
+															"query": [
+																{
+																	"key": "lambda",
+																	"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 11:22:20 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
+										}
+									],
+									"id": "bce0ca7f-bc41-4435-bd4b-18049ec810f8"
+								}
+							],
+							"id": "485aa071-0b98-4894-afec-c87f776ec043"
+						},
+						{
+							"name": "InvalidToken",
+							"item": [
+								{
+									"name": "ActivateLambdaEmptyToken",
+									"id": "dda40958-3c3a-47b9-9236-d36d172757ae",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+											],
+											"query": [
+												{
+													"key": "lambda",
+													"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "64bb8c78-e5ba-4661-9ebd-8e4177bfbf8f",
+											"name": "ActivateLambdaEmptyToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 11:20:15 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "ActivateLambdaExpiredToken",
+									"id": "4da7d63d-2281-4adc-ae1d-fc7640be6449",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+											],
+											"query": [
+												{
+													"key": "lambda",
+													"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "8f19049c-5afb-420d-94f6-da1689a071d9",
+											"name": "ActivateLambdaExpiredToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 11:20:44 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 11:20:44\"\n}"
+										}
+									]
+								},
+								{
+									"name": "ActivateLambdaInvalidToken",
+									"id": "ae6bfb88-3fb7-4b53-bfdc-b90cf45cd437",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{invalidToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+											],
+											"query": [
+												{
+													"key": "lambda",
+													"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "df31a802-7fcc-4757-b46b-10869f6dfe84",
+											"name": "ActivateLambdaInvalidToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 11:21:26 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "cf08a625-1af6-4c18-841d-a26c9a8ad6fb",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "7b9f2282-49af-438a-80db-011b952d7810",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "39aa9e3a-4945-4fab-8ffd-e927a322af02",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
+						}
+					],
+					"id": "54fe059d-3497-4df6-9794-99ada7bf947d"
+				},
+				{
 					"name": "GetAllActiveLambdas",
 					"item": [
 						{
@@ -60374,11 +61226,6 @@
 						}
 					],
 					"id": "69fd66a8-2f4e-4a70-b08f-e990fc16419d"
-				},
-				{
-					"name": "DeactivateLambdaForBucket",
-					"item": [],
-					"id": "9ebc56c5-4eec-4782-b254-d97dad80c671"
 				}
 			],
 			"id": "0123d4da-0930-43ef-98ea-6f0a9dcee640"
