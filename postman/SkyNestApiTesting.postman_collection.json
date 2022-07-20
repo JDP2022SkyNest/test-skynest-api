@@ -59639,7 +59639,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "GetAll",
 									"id": "59ef207c-7257-4817-b05b-fdb7bccb377f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
