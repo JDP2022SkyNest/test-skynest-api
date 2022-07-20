@@ -34960,6 +34960,40 @@
 									"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-08 12:17:03\"\n}"
 								}
 							]
+						},
+						{
+							"name": "ViewNotExistingBucket Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "76c04764-9c38-4453-95aa-60d361729a31",
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "1b487924-e6ca-494a-844b-d0aebad227e9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_GET_INFO}}"
+							},
+							"response": []
 						}
 					],
 					"id": "8d29e09a-4bf8-4288-8dda-b5c629146c8c"
