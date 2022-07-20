@@ -59636,7 +59636,7 @@
 					"name": "GetAllActivatedLambdas",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "944b8e00-847b-4daf-a959-1b941c71eeef"
 						}
