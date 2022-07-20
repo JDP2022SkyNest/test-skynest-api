@@ -30696,6 +30696,24 @@
 										},
 										{
 											"name": "TrimmingTrailin&LeadingSpaces",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "996360fb-5547-4163-afc8-bf9ed6f7f914",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
+															"    pm.expect(jsonData.bucketId).is.not.null;\r",
+															"    pm.environment.set(\"deletedBucketId\", jsonData.bucketId);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "eeee7dcf-ac04-4261-bee9-33d558db1017",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
