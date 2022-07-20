@@ -39491,7 +39491,90 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "239b39ea-a635-468c-b0ae-ad3714b894fd",
+													"name": "CreateFolderForDeleteForFurtherTests",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Folder for restore\",\r\n  \"bucketId\": \"{{workerBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 10:31:29 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"fdb2ce3e-64be-4393-aef9-f32450841fa7\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Folder for restore\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"f46457e2-169e-4f61-a17e-532830855de5\"\n}"
+												}
+											]
 										},
 										{
 											"name": "CreateFolderInAdmin'sFolder",
