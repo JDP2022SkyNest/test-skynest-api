@@ -60072,7 +60072,7 @@
 							]
 						},
 						{
-							"name": "InvalidToken Copy",
+							"name": "InvalidToken",
 							"item": [
 								{
 									"name": "GetAllLambdasExpiredToken",
