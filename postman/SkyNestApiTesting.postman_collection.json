@@ -57846,7 +57846,7 @@
 											"response": [
 												{
 													"id": "b67094a4-236c-4bf0-9975-aa87cca479b5",
-													"name": "New Request",
+													"name": "ActivateLambdaForCertainBucket",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
