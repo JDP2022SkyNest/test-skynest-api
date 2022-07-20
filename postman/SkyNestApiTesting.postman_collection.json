@@ -51591,73 +51591,7 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
 											},
-											"response": [
-												{
-													"id": "ef61b473-9c18-40e4-85f3-ff9236beffe0",
-													"name": "DeleteFileAsCreator",
-													"originalRequest": {
-														"method": "DELETE",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
-													},
-													"status": "No Content",
-													"code": 204,
-													"_postman_previewlanguage": "plain",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Date",
-															"value": "Fri, 15 Jul 2022 10:57:54 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": null
-												}
-											]
+											"response": []
 										}
 									],
 									"id": "f9e95d16-2286-4969-8338-cce52c99f4a9",
