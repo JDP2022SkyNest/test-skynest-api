@@ -55832,7 +55832,7 @@
 									]
 								},
 								{
-									"name": "GrantPermissionInvalidToken",
+									"name": "RevokePermissionInvalidToken",
 									"id": "18283fa7-e032-441e-bb6e-40841ba78b00",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
