@@ -59186,7 +59186,88 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"id": "aa4e0fe3-6a40-489b-a2bc-e1b79f9eaf5d",
+											"name": "ActivateLambdaEmptyToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{workerBucketId}}{{ENDPOINT_ACTIVATE}}"
+													],
+													"query": [
+														{
+															"key": "lambda",
+															"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 11:20:15 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
 								}
 							],
 							"id": "405bbe63-9b3b-4eed-9f2b-0bf2d0353760"
