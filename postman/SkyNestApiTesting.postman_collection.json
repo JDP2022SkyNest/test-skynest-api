@@ -39460,17 +39460,7 @@
 															"const jsonData = pm.response.json()\r",
 															"\r",
 															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-															"    pm.environment.set(\"adminFolderId\", jsonData.id);\r",
-															"});\r",
-															"\r",
-															"pm.test(\"bucketId from the response is the same of the bucket in which folder is created\", function () {\r",
-															"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
-															"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
-															"});\r",
-															"\r",
-															"pm.test(\"createdById from the response is the same of the user who created the folder\", function () {\r",
-															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
+															"    pm.environment.set(\"deletedFolderId\", jsonData.id);\r",
 															"});"
 														],
 														"type": "text/javascript"
