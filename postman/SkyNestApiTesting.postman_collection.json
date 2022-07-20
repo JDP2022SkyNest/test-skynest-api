@@ -17937,7 +17937,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"email\": \"hobab71038@storypo.com\",\r\n    \"password\": \"tempEmail8833\",\r\n    \"name\": \"Jacob\",\r\n    \"surname\": \"Leon\",\r\n    \"phoneNumber\": \"74233331963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"raw": "{\r\n    \"email\": \"banofax957@tebyy.com\",\r\n    \"password\": \"tempEmail8833\",\r\n    \"name\": \"Jacob\",\r\n    \"surname\": \"Leon\",\r\n    \"phoneNumber\": \"742334331963\",\r\n    \"address\": \"Street33\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -18028,6 +18028,88 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"id\": \"5287caa9-14a6-4702-adcd-51b33e25e61e\",\n    \"email\": \"hobab71038@storypo.com\",\n    \"name\": \"Jacob\",\n    \"surname\": \"Leon\",\n    \"phoneNumber\": \"74233331963\",\n    \"address\": \"Street33\",\n    \"roleName\": \"role_worker\",\n    \"positionInCompany\": null,\n    \"companyName\": null,\n    \"verified\": false,\n    \"enabled\": false\n}"
+										},
+										{
+											"id": "d0f2fdc3-75a8-4ad1-bb8a-566089b7e9e1",
+											"name": "ManagerValidInputs",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"email\": \"banofax957@tebyy.com\",\r\n    \"password\": \"tempEmail8833\",\r\n    \"name\": \"Jacob\",\r\n    \"surname\": \"Leon\",\r\n    \"phoneNumber\": \"742334331963\",\r\n    \"address\": \"Street33\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 12:59:50 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"4601679c-b445-455d-ac8f-dc282f0441c4\",\n    \"email\": \"banofax957@tebyy.com\",\n    \"name\": \"Jacob\",\n    \"surname\": \"Leon\",\n    \"phoneNumber\": \"742334331963\",\n    \"address\": \"Street33\",\n    \"roleName\": \"role_worker\",\n    \"positionInCompany\": null,\n    \"companyName\": null,\n    \"verified\": false,\n    \"enabled\": false\n}"
 										}
 									]
 								},
