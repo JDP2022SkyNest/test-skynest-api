@@ -57389,6 +57389,11 @@
 					"name": "GetAllLambdas",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "8edcd2e6-9746-49d0-ac20-4255ead70df6"
+						},
+						{
 							"name": "GetAllPredefinedExistingLambdas",
 							"id": "b3f77a3d-8acd-4787-bfc3-c4ee5286900d",
 							"protocolProfileBehavior": {
