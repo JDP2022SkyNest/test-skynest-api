@@ -54796,7 +54796,8 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+													"value": null,
+													"disabled": true
 												}
 											]
 										},
@@ -54909,7 +54910,8 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+													"value": null,
+													"disabled": true
 												}
 											]
 										},
@@ -55038,7 +55040,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "ValidTokenAndSuccessfulPOST",
+									"name": "ValidTokenAndSuccessfulDELETE",
 									"item": [
 										{
 											"name": "GrantBucketPermissionAsOwner",
