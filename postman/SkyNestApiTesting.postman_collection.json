@@ -57387,7 +57387,21 @@
 			"item": [
 				{
 					"name": "GetAllLambdas",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "b3f77a3d-8acd-4787-bfc3-c4ee5286900d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+							},
+							"response": []
+						}
+					],
 					"id": "153cb9ba-bc4f-4e75-afcf-f3eab1ed7101"
 				}
 			],
