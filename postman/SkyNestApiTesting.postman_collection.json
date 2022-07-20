@@ -55161,6 +55161,34 @@
 											"response": []
 										},
 										{
+											"name": "RevokePermissionForAlreadyDeletedBucket",
+											"id": "f36acb45-97f8-4ecb-ac08-3a431a0e394a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{notExistingBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{secondValidAdminId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "RevokeBucketPermissionAsNotOwner",
 											"id": "682d262d-3b30-42f6-8ce5-5613a6256a0a",
 											"protocolProfileBehavior": {
