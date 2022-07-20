@@ -17909,6 +17909,41 @@
 									]
 								},
 								{
+									"name": "ManagerValidInputs",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "96ec19d7-624c-4077-9b81-0f7ef4b7623e",
+												"exec": [
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "f44b233d-9002-4f3c-9da0-ebb57f18dcec",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"lipafaj444@hekarro.com\",\r\n    \"password\": \"tempEmail8833\",\r\n    \"name\": \"Jacob\",\r\n    \"surname\": \"Leon\",\r\n    \"phoneNumber\": \"7422331963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+									},
+									"response": []
+								},
+								{
 									"name": "UnverifiedUser",
 									"event": [
 										{
