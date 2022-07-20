@@ -61445,7 +61445,20 @@
 		},
 		{
 			"name": "InviteAPI",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "533d90c5-7b92-4545-868c-a353fb585e62",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "64667e8b-3231-4293-a351-566f66aa8559"
 		}
 	]
