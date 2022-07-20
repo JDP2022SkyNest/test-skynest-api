@@ -55105,7 +55105,7 @@
 									"name": "ValidTokenButUnsuccessfulDELETE",
 									"item": [
 										{
-											"name": "RevokeALreadyRevokedPermission",
+											"name": "RevokeAlreadyRevokedPermission",
 											"id": "31446c33-2448-4df5-bb93-9dbd6fdb894c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
