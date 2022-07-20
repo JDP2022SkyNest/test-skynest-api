@@ -38880,7 +38880,81 @@
 														"header": [],
 														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{deletedBucketId}}"
 													},
-													"response": []
+													"response": [
+														{
+															"id": "c653c0c2-6be6-405a-987c-c988c29eec44",
+															"name": "ViewContentOfAlreadyDeletedBucket",
+															"originalRequest": {
+																"method": "GET",
+																"header": [],
+																"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{deletedBucketId}}"
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Vary",
+																	"value": "Origin"
+																},
+																{
+																	"key": "Vary",
+																	"value": "Access-Control-Request-Method"
+																},
+																{
+																	"key": "Vary",
+																	"value": "Access-Control-Request-Headers"
+																},
+																{
+																	"key": "X-Content-Type-Options",
+																	"value": "nosniff"
+																},
+																{
+																	"key": "X-XSS-Protection",
+																	"value": "1; mode=block"
+																},
+																{
+																	"key": "Cache-Control",
+																	"value": "no-cache, no-store, max-age=0, must-revalidate"
+																},
+																{
+																	"key": "Pragma",
+																	"value": "no-cache"
+																},
+																{
+																	"key": "Expires",
+																	"value": "0"
+																},
+																{
+																	"key": "X-Frame-Options",
+																	"value": "DENY"
+																},
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																},
+																{
+																	"key": "Transfer-Encoding",
+																	"value": "chunked"
+																},
+																{
+																	"key": "Date",
+																	"value": "Wed, 20 Jul 2022 10:28:17 GMT"
+																},
+																{
+																	"key": "Keep-Alive",
+																	"value": "timeout=60"
+																},
+																{
+																	"key": "Connection",
+																	"value": "keep-alive"
+																}
+															],
+															"cookie": [],
+															"responseTime": null,
+															"body": "{\n    \"bucketId\": \"a693b0d4-1025-4887-8886-03f3b9bb1bb0\",\n    \"folders\": [],\n    \"files\": [],\n    \"path\": null\n}"
+														}
+													]
 												}
 											],
 											"id": "b0ebd579-e7ed-4ade-b325-55558ff88045",
