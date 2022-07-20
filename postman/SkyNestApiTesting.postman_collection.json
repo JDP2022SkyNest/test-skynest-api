@@ -60178,7 +60178,7 @@
 									"response": []
 								},
 								{
-									"name": "ActivateLambdaInvalidToken",
+									"name": "DeactivateLambdaInvalidToken",
 									"id": "ae6bfb88-3fb7-4b53-bfdc-b90cf45cd437",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
