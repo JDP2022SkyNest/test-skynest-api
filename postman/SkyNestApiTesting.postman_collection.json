@@ -57809,7 +57809,7 @@
 					"name": "ActivateLambdaForBucket",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "ac7228e4-fe28-4fcc-9f06-593b3ae499eb"
 						},
