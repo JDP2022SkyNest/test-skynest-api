@@ -61837,7 +61837,7 @@
 					"name": "InvalidToken",
 					"item": [
 						{
-							"name": "SendRegistrationInviteAsAdmin Copy",
+							"name": "SendRegistrationInviteEmptyToken",
 							"id": "2602752f-12f5-42d2-993d-9e0595f0fd29",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
