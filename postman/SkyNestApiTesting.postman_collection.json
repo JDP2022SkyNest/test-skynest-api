@@ -59646,7 +59646,8 @@
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{workerBucketId}}"
 									},
 									"response": []
 								}
