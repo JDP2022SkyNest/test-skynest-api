@@ -61586,7 +61586,7 @@
 							"name": "ValidTokenButUnsuccessfulPOST",
 							"item": [
 								{
-									"name": "SendRegistrationInviteAsAdmin Copy",
+									"name": "SendRegistrationInviteAsWorker",
 									"id": "798faac1-90c9-4181-abfa-0854ae4444fa",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
