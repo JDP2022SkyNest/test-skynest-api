@@ -55161,7 +55161,7 @@
 											"response": []
 										},
 										{
-											"name": "GrantBucketPermissionAsNotOwner",
+											"name": "RevokeBucketPermissionAsNotOwner",
 											"id": "682d262d-3b30-42f6-8ce5-5613a6256a0a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
