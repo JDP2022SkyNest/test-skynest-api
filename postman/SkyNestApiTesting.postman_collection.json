@@ -55719,7 +55719,7 @@
 									]
 								},
 								{
-									"name": "GrantPermissionExpiredToken",
+									"name": "RevokePermissionExpiredToken",
 									"id": "92a7e8aa-37fd-4968-b2a0-5fc66cc2c6df",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
