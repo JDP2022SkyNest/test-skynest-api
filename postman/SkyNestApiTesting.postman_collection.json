@@ -57491,8 +57491,8 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "GetAllLambdasEmptyToken",
-									"id": "6dd93659-a645-4e25-a708-0db1d63e2e01",
+									"name": "GetAllLambdasExpiredToken",
+									"id": "6d61ace5-a870-4149-b6e0-36a9b29a3d0a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -57500,7 +57500,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": ""
+												"token": "{{expiredToken}}"
 											}
 										},
 										"method": "GET",
@@ -57509,15 +57509,15 @@
 									},
 									"response": [
 										{
-											"id": "9b220037-3a90-4a1b-ab51-ab0f3476049a",
-											"name": "GetAllPredefinedExistingLambdas",
+											"id": "cda9bd62-83fb-47b4-a320-71f1c8785a7d",
+											"name": "GetAllLambdasExpiredToken",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
 											},
-											"status": "OK",
-											"code": 200,
+											"status": "Unauthorized",
+											"code": 401,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -57558,7 +57558,7 @@
 												},
 												{
 													"key": "Content-Type",
-													"value": "application/json"
+													"value": "application/json;charset=ISO-8859-1"
 												},
 												{
 													"key": "Transfer-Encoding",
@@ -57566,7 +57566,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Wed, 20 Jul 2022 09:52:07 GMT"
+													"value": "Wed, 20 Jul 2022 09:55:20 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -57579,7 +57579,100 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "[\n    \"UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA\"\n]"
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 09:55:20\"\n}"
+										}
+									]
+								},
+								{
+									"name": "GetAllLambdasExpiredToken Copy",
+									"id": "cd338e59-71dd-4287-a3d3-b977b5edda02",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+									},
+									"response": [
+										{
+											"id": "eef31884-df24-4363-9944-2fd6f95ef2eb",
+											"name": "GetAllLambdasExpiredToken",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 09:55:20 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 09:55:20\"\n}"
 										}
 									]
 								}
