@@ -60271,7 +60271,7 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{adminBucketId}}"
 									},
 									"response": []
 								}
