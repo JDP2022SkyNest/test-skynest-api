@@ -55660,11 +55660,12 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+													"value": null,
+													"disabled": true
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{secondValidWorkerId}}"
 									},
 									"response": []
 								},
