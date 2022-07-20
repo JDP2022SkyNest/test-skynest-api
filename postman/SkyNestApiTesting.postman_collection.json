@@ -59872,7 +59872,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{notExistingBucketId}}"
 											},
 											"response": []
 										}
