@@ -62166,7 +62166,31 @@
 							]
 						}
 					],
-					"id": "b9eae4a9-4a80-4ed7-aac4-21baefd5fa07"
+					"id": "b9eae4a9-4a80-4ed7-aac4-21baefd5fa07",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "e40dc1b0-e51f-4b67-af8a-3bf843c2e64c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f6cca3e0-4377-47e6-ad05-bbafb56774af",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								]
+							}
+						}
+					]
 				}
 			],
 			"id": "64667e8b-3231-4293-a351-566f66aa8559"
