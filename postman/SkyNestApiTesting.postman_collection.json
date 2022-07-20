@@ -54546,6 +54546,34 @@
 											]
 										},
 										{
+											"name": "GrantPermissionForNotExistingBucket Copy",
+											"id": "625400b9-5cab-4ae2-b7ec-47d132a78578",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{notExistingBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+											},
+											"response": []
+										},
+										{
 											"name": "GrantBucketPermissionAsNotOwner",
 											"id": "e78ac6b0-108e-4614-9985-90784e84a68c",
 											"protocolProfileBehavior": {
