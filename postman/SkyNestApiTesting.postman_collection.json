@@ -59633,7 +59633,7 @@
 					"id": "4c8592d1-58b0-404e-a838-c78a5af0d805"
 				},
 				{
-					"name": "ActivateLambdaForBucket Copy",
+					"name": "DeactivateLambdaForBucket",
 					"item": [
 						{
 							"name": "ValidToken",
