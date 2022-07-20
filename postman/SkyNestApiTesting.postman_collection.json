@@ -59921,7 +59921,84 @@
 													]
 												}
 											},
-											"response": []
+											"response": [
+												{
+													"id": "b2f71ad1-f955-47c6-8242-a54f729debab",
+													"name": "DeactivateLambdaForAlreadyDeletedBucket",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": {
+															"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_DEACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+															"host": [
+																"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{deletedBucketId}}{{ENDPOINT_DEACTIVATE}}"
+															],
+															"query": [
+																{
+																	"key": "lambda",
+																	"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 11:53:20 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
 										},
 										{
 											"name": "DeactivateLambdaForBucketWithoutPermssion",
