@@ -57817,6 +57817,11 @@
 									"id": "77f79b1c-67c2-4413-a29f-8b6595f9d28c"
 								},
 								{
+									"name": "ValidTokenButUnsuccessfulPUT",
+									"item": [],
+									"id": "0e5edb49-7f74-4186-8aaa-f53d9004b94b"
+								},
+								{
 									"name": "New Request",
 									"id": "271b0552-b1e5-4052-8856-96890fe3d29c",
 									"protocolProfileBehavior": {
