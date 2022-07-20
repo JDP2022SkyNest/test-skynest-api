@@ -43032,7 +43032,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{deletedFolderId}}"
 											},
 											"response": []
 										},
