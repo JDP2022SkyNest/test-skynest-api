@@ -55096,90 +55096,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "526b620c-1923-4c44-898d-197de0dc822b",
-													"name": "GrantBucketPermissionAsOwnerToAnotherUser",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Tue, 19 Jul 2022 12:16:08 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"grantedToId\": \"eb735228-f4dd-4802-9fa0-7bc9c66bb3cc\",\n    \"grantedToEmail\": \"nanito9953@lankew.com\",\n    \"objectId\": \"eeb4db84-828d-4d3d-99b4-4d32399c9c50\",\n    \"grantedOn\": null,\n    \"accessName\": \"edit\",\n    \"grantedById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
-												}
-											]
+											"response": []
 										}
 									],
 									"id": "13a7af2b-cb9e-4a66-8f62-d74643f260bc"
@@ -55188,7 +55105,7 @@
 									"name": "ValidTokenButUnsuccessfulDELETE",
 									"item": [
 										{
-											"name": "DuplicateBucketPermission",
+											"name": "RevokeALreadyRevokedPermission",
 											"id": "31446c33-2448-4df5-bb93-9dbd6fdb894c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -55213,93 +55130,10 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "3041e18a-f45c-4c27-96cd-c32445ddd8fc",
-													"name": "DuplicateBucketPermission",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
-													},
-													"status": "Conflict",
-													"code": 409,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Mon, 18 Jul 2022 11:57:03 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User already has some kind of access to requested object\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-18 13:57:03\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
-											"name": "GrantPermissionForNotExistingBucket",
+											"name": "RevokePermissionForNotExistingBucket",
 											"id": "085ee5fc-1b21-4415-87a3-317c556f3a68",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -55324,90 +55158,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "367c0b53-bc5c-4a80-8fbf-5441860c049b",
-													"name": "GrantPermissionForNotExistingBucket",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{notExistingBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
-													},
-													"status": "Not Found",
-													"code": 404,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Mon, 18 Jul 2022 11:58:00 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-18 13:58:00\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
 											"name": "GrantBucketPermissionAsNotOwner",
@@ -55435,90 +55186,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "b26eebd3-361a-4d7a-9118-b61fb9dd92f6",
-													"name": "GrantBucketPermissionAsNotOwner",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
-													},
-													"status": "Forbidden",
-													"code": 403,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Mon, 18 Jul 2022 13:23:47 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-18 15:23:47\"\n}"
-												}
-											]
+											"response": []
 										}
 									],
 									"id": "040c8ab1-99af-4227-b339-12a53f3fc68e"
