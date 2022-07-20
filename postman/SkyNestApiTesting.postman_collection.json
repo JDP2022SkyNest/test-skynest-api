@@ -61453,9 +61453,24 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{adminAuthToken}}"
+							}
+						},
 						"method": "POST",
 						"header": [],
-						"url": "{{BASE_URL}}"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
 					},
 					"response": []
 				}
