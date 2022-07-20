@@ -59639,6 +59639,11 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "32b62e4f-c003-4072-8f21-246028c2a73c"
+								},
+								{
 									"name": "GetAllActiveLambdasForCertainBucket",
 									"id": "59ef207c-7257-4817-b05b-fdb7bccb377f",
 									"protocolProfileBehavior": {
