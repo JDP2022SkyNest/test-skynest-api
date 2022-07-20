@@ -60072,9 +60072,305 @@
 							]
 						},
 						{
-							"name": "InvalidToken",
-							"item": [],
-							"id": "165e2539-793e-4d83-b705-f3029592e406"
+							"name": "InvalidToken Copy",
+							"item": [
+								{
+									"name": "GetAllLambdasExpiredToken",
+									"id": "b4ca4fe6-46d7-42ce-b979-fd22e0fef9f7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+									},
+									"response": [
+										{
+											"id": "877e2c02-7ea3-4a6d-bcc9-afa5a721b725",
+											"name": "GetAllLambdasExpiredToken",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 09:55:20 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 09:55:20\"\n}"
+										}
+									]
+								},
+								{
+									"name": "GetAllLambdasEmptyToken",
+									"id": "fbc021ce-3ae3-4690-bbda-aaf9408d6d85",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+									},
+									"response": [
+										{
+											"id": "d8a71331-29ff-4280-aee5-2399539ad9cc",
+											"name": "GetAllLambdasEmptyToken",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 09:56:00 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "GetAllLambdasInvalidToken",
+									"id": "3eec91da-3fb2-4e12-a381-cb052e329aa0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{invalidToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+									},
+									"response": [
+										{
+											"id": "66a2dfaa-7fc9-4d8f-a49e-0b57507981da",
+											"name": "GetAllLambdasInvalidToken",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 09:56:50 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "c19d1e80-2043-40ae-b39a-956bb4db025e",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "37ba8576-f3ee-4e51-a664-49c08fec4b0d",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "31da3618-08ce-42ca-892a-69b0f8d03361",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "69fd66a8-2f4e-4a70-b08f-e990fc16419d"
