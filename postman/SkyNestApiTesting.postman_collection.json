@@ -60075,7 +60075,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "GetAllLambdasExpiredToken",
+									"name": "GetActiveLambdasExpiredToken",
 									"id": "b4ca4fe6-46d7-42ce-b979-fd22e0fef9f7",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
