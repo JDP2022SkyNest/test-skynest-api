@@ -61944,7 +61944,7 @@
 							]
 						},
 						{
-							"name": "SendRegistrationInviteEmptyToken Copy",
+							"name": "SendRegistrationInviteExpiredToken",
 							"id": "1b6679fb-5f21-46c3-9ddc-4534073a5030",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
