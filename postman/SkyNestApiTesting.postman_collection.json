@@ -61953,7 +61953,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{adminAuthToken}}"
+										"token": "{{expiredToken}}"
 									}
 								},
 								"method": "POST",
@@ -61969,7 +61969,90 @@
 								},
 								"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "a6d30a04-89d9-4efd-bf91-841588fe418d",
+									"name": "SendRegistrationInviteExpiredToken",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Jul 2022 12:53:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 14:53:50\"\n}"
+								}
+							]
 						}
 					],
 					"id": "b9eae4a9-4a80-4ed7-aac4-21baefd5fa07"
