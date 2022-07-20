@@ -62206,7 +62206,7 @@
 									]
 								},
 								{
-									"name": "SendRegistrationInviteToInvalidMail Copy",
+									"name": "SendRegistrationInviteToEmptyMail",
 									"event": [
 										{
 											"listen": "test",
