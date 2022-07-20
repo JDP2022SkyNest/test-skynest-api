@@ -39482,7 +39482,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Folder for restore\",\r\n  \"bucketId\": \"fb38c205-8d72-40ce-b3de-7d683a8e778b\",\r\n  \"parentFolderId\": null\r\n}",
+													"raw": "{\r\n  \"name\": \"Folder for restore\",\r\n  \"bucketId\": \"{{workerBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
