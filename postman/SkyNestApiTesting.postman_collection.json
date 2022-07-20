@@ -43018,6 +43018,25 @@
 											]
 										},
 										{
+											"name": "GetContentOfNotExistingFolder Copy",
+											"id": "295e56cf-34c6-40a8-bdbf-877b09dad9e3",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "GetFolderContentAsNotCreator",
 											"id": "667676f9-d7a6-4300-a4ba-b59d8b6a391a",
 											"protocolProfileBehavior": {
