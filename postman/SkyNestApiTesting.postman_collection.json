@@ -55610,7 +55610,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "GrantPermissionEmptyToken",
+									"name": "RevokePermissionEmptyToken",
 									"id": "405faad4-f8eb-43e9-9aca-bd888a89fc33",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
