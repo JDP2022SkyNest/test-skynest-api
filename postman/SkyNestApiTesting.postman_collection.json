@@ -55186,7 +55186,90 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "b26eebd3-361a-4d7a-9118-b61fb9dd92f6",
+													"name": "GrantBucketPermissionAsNotOwner",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 18 Jul 2022 13:23:47 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-18 15:23:47\"\n}"
+												}
+											]
 										}
 									],
 									"id": "040c8ab1-99af-4227-b339-12a53f3fc68e"
