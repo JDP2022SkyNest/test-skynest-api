@@ -61942,6 +61942,34 @@
 									"body": null
 								}
 							]
+						},
+						{
+							"name": "SendRegistrationInviteEmptyToken Copy",
+							"id": "1b6679fb-5f21-46c3-9ddc-4534073a5030",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+							},
+							"response": []
 						}
 					],
 					"id": "b9eae4a9-4a80-4ed7-aac4-21baefd5fa07"
