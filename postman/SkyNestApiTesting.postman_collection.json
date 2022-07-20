@@ -59858,7 +59858,7 @@
 									"name": "ValidTokenButUnsuccessfulGET",
 									"item": [
 										{
-											"name": "GetAllActiveLambdasForBucketThatHasNotActiveLambdas Copy",
+											"name": "GetAllActiveLambdasForNotExistingBucket",
 											"id": "2508ecbf-f03e-4fc1-a396-88397d6c5645",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
