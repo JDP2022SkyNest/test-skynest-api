@@ -59730,6 +59730,25 @@
 											"body": "[\n    \"UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA\"\n]"
 										}
 									]
+								},
+								{
+									"name": "GetAllActiveLambdasForCertainBucket Copy",
+									"id": "a283c647-9f22-4f64-b479-52b0fabad8a0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{adminBucketId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "944b8e00-847b-4daf-a959-1b941c71eeef"
