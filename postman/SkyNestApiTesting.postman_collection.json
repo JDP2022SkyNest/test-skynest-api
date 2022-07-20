@@ -62204,6 +62204,48 @@
 											"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 14:52:23\"\n}"
 										}
 									]
+								},
+								{
+									"name": "SendRegistrationInviteToInvalidMail Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "9bcd1378-0e33-496d-a7a2-2c19bba3dddd",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"invalidmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": []
 								}
 							],
 							"id": "8f262302-eab4-4b2c-a087-130ceda8641c"
