@@ -62325,6 +62325,48 @@
 											"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 15:08:13\"\n}"
 										}
 									]
+								},
+								{
+									"name": "SendRegistrationInviteToEmptyMail Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "dbfd1975-ee75-4e5e-bccf-26166dc8dc82",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": []
 								}
 							],
 							"id": "8f262302-eab4-4b2c-a087-130ceda8641c"
