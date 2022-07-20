@@ -57807,7 +57807,20 @@
 				},
 				{
 					"name": "ActivateLambdaForBucket",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "271b0552-b1e5-4052-8856-96890fe3d29c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "4c8592d1-58b0-404e-a838-c78a5af0d805"
 				}
 			],
