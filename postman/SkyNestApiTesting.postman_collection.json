@@ -57673,7 +57673,7 @@
 									]
 								},
 								{
-									"name": "GetAllLambdasEmptyToken Copy",
+									"name": "GetAllLambdasInvalidToken",
 									"id": "a6c66e30-e87b-4b15-be45-1f94addd1993",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -57682,17 +57682,111 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": ""
+												"token": "{{invalidToken}}"
 											}
 										},
 										"method": "GET",
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "1fc17476-a1d3-423a-8042-663ad2dded80",
+											"name": "GetAllLambdasInvalidToken",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 09:56:50 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
 								}
 							],
-							"id": "16863592-4d5c-476e-b836-92d342feebd6"
+							"id": "16863592-4d5c-476e-b836-92d342feebd6",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "37ba8576-f3ee-4e51-a664-49c08fec4b0d",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "31da3618-08ce-42ca-892a-69b0f8d03361",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "153cb9ba-bc4f-4e75-afcf-f3eab1ed7101"
