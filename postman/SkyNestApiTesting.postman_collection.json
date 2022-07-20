@@ -61987,7 +61987,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{managerAuthToken}}"
 											}
 										},
 										"method": "POST",
