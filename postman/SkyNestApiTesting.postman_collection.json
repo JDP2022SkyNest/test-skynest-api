@@ -59839,7 +59839,7 @@
 											"response": []
 										},
 										{
-											"name": "ActivateLambdaForBucketWithoutPermssion",
+											"name": "DeactivateLambdaForBucketWithoutPermssion",
 											"id": "61d5ada0-f207-44a8-9d90-d20177736203",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
