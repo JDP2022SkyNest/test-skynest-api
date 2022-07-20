@@ -60168,7 +60168,7 @@
 									]
 								},
 								{
-									"name": "GetAllLambdasEmptyToken",
+									"name": "GetActiveLambdasEmptyToken",
 									"id": "fbc021ce-3ae3-4690-bbda-aaf9408d6d85",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
