@@ -55622,7 +55622,7 @@
 												"token": ""
 											}
 										},
-										"method": "POST",
+										"method": "DELETE",
 										"header": [],
 										"body": {
 											"mode": "formdata",
