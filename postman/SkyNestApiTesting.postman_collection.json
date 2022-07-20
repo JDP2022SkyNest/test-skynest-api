@@ -59779,7 +59779,7 @@
 									"name": "ValidTokenButUnsuccessfulPUT",
 									"item": [
 										{
-											"name": "ActivateLambdaForNotExistingBucket",
+											"name": "DeactivateLambdaForNotExistingBucket",
 											"id": "0a5b7b11-bf04-4d88-a570-176c288815e1",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
