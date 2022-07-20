@@ -57408,7 +57408,7 @@
 							"response": [
 								{
 									"id": "5ab0df68-4efc-49d1-a83c-18a031388dda",
-									"name": "New Request",
+									"name": "GetAllPredefinedExistingLambdas",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
