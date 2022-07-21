@@ -17917,7 +17917,7 @@
 					"name": "UserRegistrationAfterInvitation",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidPayloads",
 							"item": [],
 							"id": "b28cb18a-cc74-4d0c-9d12-c5e894ab7591"
 						},
