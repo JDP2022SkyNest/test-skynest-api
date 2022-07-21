@@ -49858,7 +49858,7 @@
 							"response": [
 								{
 									"id": "bc670fca-8e0c-4de9-acdd-43c0a41a531f",
-									"name": "New Request",
+									"name": "MoveFolderInFolderThatIsAlreadyIn",
 									"originalRequest": {
 										"method": "PUT",
 										"header": [],
