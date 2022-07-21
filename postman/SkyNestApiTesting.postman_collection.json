@@ -18234,14 +18234,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=",
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
 											"host": [
 												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
 											],
 											"query": [
 												{
 													"key": "token",
-													"value": ""
+													"value": "{{invitedUserToken}}"
 												}
 											]
 										}
