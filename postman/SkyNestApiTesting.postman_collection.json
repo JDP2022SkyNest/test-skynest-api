@@ -20316,8 +20316,8 @@
 											"script": {
 												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.response.to.have.status(400);\r",
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -20333,7 +20333,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"password\": \"Ulica12\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+											"raw": "{\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -20355,7 +20355,7 @@
 									},
 									"response": [
 										{
-											"id": "3adfd4da-a892-4651-a75a-a068e7d9b17a",
+											"id": "5889ffba-9752-4692-9926-439080ce79c0",
 											"name": "PasswordLessThan8Chars",
 											"originalRequest": {
 												"method": "POST",
@@ -20432,7 +20432,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:47:49 GMT"
+													"value": "Thu, 21 Jul 2022 11:47:36 GMT"
 												},
 												{
 													"key": "Connection",
@@ -20441,17 +20441,12 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:47:49\"\n}"
+											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:47:36\"\n}"
 										}
 									]
 								}
 							],
 							"id": "e3ae9017-e9f0-42b9-a60f-7e354b7b3f6a"
-						},
-						{
-							"name": "New Folder",
-							"item": [],
-							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb"
 						}
 					],
 					"id": "57e4e72e-8ff6-453d-a100-400c721d2df3"
