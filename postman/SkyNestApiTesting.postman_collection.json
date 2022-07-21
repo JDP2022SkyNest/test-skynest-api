@@ -18204,7 +18204,7 @@
 									]
 								},
 								{
-									"name": "RegisterInvitedUserEmptyToken Copy",
+									"name": "EmptyPassword",
 									"event": [
 										{
 											"listen": "test",
