@@ -18294,14 +18294,26 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"username@gmail.com\",\r\n  \"password\": \"paSword1\",\r\n  \"name\": \"Name\",\r\n  \"surname\": \"Surname\",\r\n  \"phoneNumber\": \"38166575757\",\r\n  \"address\": \"Local address\"\r\n}",
+											"raw": "{\r\n  \"password\": \"paSword1\",\r\n  \"name\": \"Name\",\r\n  \"surname\": \"Surname\",\r\n  \"phoneNumber\": \"38166575757\",\r\n  \"address\": \"Local address\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZW1veGk5MzQ0QHN0b3J5cG8uY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ4NzM0MX0.N_uvbZJg0AoviFcOiEwQS5Mw4fTGVd70pYpgy2UtfORXZhJayhhvuPZmamA53wlymQ4SUrPq-k9-yZs23xgMAQ",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZW1veGk5MzQ0QHN0b3J5cG8uY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ4NzM0MX0.N_uvbZJg0AoviFcOiEwQS5Mw4fTGVd70pYpgy2UtfORXZhJayhhvuPZmamA53wlymQ4SUrPq-k9-yZs23xgMAQ",
+													"type": "text"
+												}
+											]
+										}
 									},
 									"response": []
 								}
