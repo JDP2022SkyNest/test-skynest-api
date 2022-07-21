@@ -16714,7 +16714,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"negid81810@chimpad.com\"\r\n}",
+											"raw": "{\r\n  \"email\": \"cofeyow547@logodez.com\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -20192,7 +20192,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"LgfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"Lkfssj\",\r\n  \"phoneNumber\": \"872312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+											"raw": "{\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -20200,28 +20200,28 @@
 											}
 										},
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w",
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA",
 											"host": [
 												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
 											],
 											"query": [
 												{
 													"key": "token",
-													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w"
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA"
 												}
 											]
 										}
 									},
 									"response": [
 										{
-											"id": "6c920ea9-1f2c-45b2-8022-eff0db797799",
-											"name": "ExactLimitLength",
+											"id": "4d8a204a-57f1-4f2f-8b4e-22d26d7b55f5",
+											"name": "AllParametersTheMinLimit",
 											"originalRequest": {
 												"method": "POST",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"LgfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"Lkfssj\",\r\n  \"phoneNumber\": \"872312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+													"raw": "{\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -20229,14 +20229,14 @@
 													}
 												},
 												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w",
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA",
 													"host": [
 														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
 													],
 													"query": [
 														{
 															"key": "token",
-															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w"
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA"
 														}
 													]
 												}
@@ -20291,7 +20291,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:43:39 GMT"
+													"value": "Thu, 21 Jul 2022 11:46:27 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -20304,7 +20304,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"id\": \"d41bd3ea-a2ee-4939-bb39-1e729e87f038\",\n    \"email\": \"negid81810@chimpad.com\",\n    \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\n    \"surname\": \"Lkfssj\",\n    \"phoneNumber\": \"872312547854522452188935412322\",\n    \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\",\n    \"roleName\": \"role_worker\",\n    \"positionInCompany\": null,\n    \"companyName\": \"HTEC\",\n    \"verified\": true,\n    \"enabled\": true\n}"
+											"body": "{\n    \"id\": \"9411b1f1-8a69-4818-a415-748f2c3aa5b6\",\n    \"email\": \"cofeyow547@logodez.com\",\n    \"name\": \"T\",\n    \"surname\": \"L\",\n    \"phoneNumber\": \"2\",\n    \"address\": \"g\",\n    \"roleName\": \"role_worker\",\n    \"positionInCompany\": null,\n    \"companyName\": \"HTEC\",\n    \"verified\": true,\n    \"enabled\": true\n}"
 										}
 									]
 								}
