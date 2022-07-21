@@ -20307,6 +20307,53 @@
 											"body": "{\n    \"id\": \"9411b1f1-8a69-4818-a415-748f2c3aa5b6\",\n    \"email\": \"cofeyow547@logodez.com\",\n    \"name\": \"T\",\n    \"surname\": \"L\",\n    \"phoneNumber\": \"2\",\n    \"address\": \"g\",\n    \"roleName\": \"role_worker\",\n    \"positionInCompany\": null,\n    \"companyName\": \"HTEC\",\n    \"verified\": true,\n    \"enabled\": true\n}"
 										}
 									]
+								},
+								{
+									"name": "PasswordLessThan8Chars",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "2d9f3323-7d13-41df-875e-1b4fd58ae760",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "e3ae9017-e9f0-42b9-a60f-7e354b7b3f6a"
