@@ -19714,7 +19714,7 @@
 							"name": "EmptyHeader",
 							"item": [
 								{
-									"name": "TrimmingTrailing&LeadingSPaces Copy",
+									"name": "EmptyHeader",
 									"event": [
 										{
 											"listen": "test",
