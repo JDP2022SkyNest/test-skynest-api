@@ -18766,7 +18766,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"First56453\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"Local address\"\r\n}",
+											"raw": "{\r\n  \"password\": \"First56453\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"43567543\",\r\n  \"address\": \"\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
