@@ -8,7 +8,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 public class GetBucketContentTest extends BucketBaseTest {
 
     @Test
-    void logged_admin_should_be_able_to_view_bucket_content() {
+    void user_should_be_able_to_view_created_bucket_content() {
         Response response = skyNestBackendClient.getBucketContent(createdBucketId);
         response.then().statusCode(SC_OK);
     }

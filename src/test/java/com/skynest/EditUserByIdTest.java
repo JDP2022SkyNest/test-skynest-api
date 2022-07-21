@@ -1,7 +1,7 @@
 package com.skynest;
 
-import com.skynest.models.EditRequest;
-import com.skynest.models.EditResponse;
+import com.skynest.models.EditUserRequest;
+import com.skynest.models.EditUserResponse;
 import com.skynest.models.UserResponse;
 import io.restassured.response.Response;
 import org.testng.annotations.DataProvider;
@@ -17,14 +17,14 @@ import static org.testng.Assert.assertNotNull;
 public class EditUserByIdTest extends BaseTest {
 
     @Test(dataProvider = "UserData")
-    void logged_admin_should_be_able_to_edit_its_own_details(EditRequest editRequest) {
+    void logged_admin_should_be_able_to_edit_its_own_details(EditUserRequest editRequest) {
         loginAs(Roles.ADMIN);
         UUID loggedUserId = getLoggedUserId();
 
         Response editUserResponse = skyNestBackendClient.editUserById(editRequest, loggedUserId);
         editUserResponse.then().statusCode(SC_OK);
 
-        EditResponse editResponse = editUserResponse.as(EditResponse.class);
+        EditUserResponse editResponse = editUserResponse.as(EditUserResponse.class);
 
         assertNotNull(editResponse.getId());
 
@@ -36,7 +36,7 @@ public class EditUserByIdTest extends BaseTest {
     }
 
     @Test(dataProvider = "UserData")
-    void logged_admin_should_be_able_to_edit_details_of_random_worker(EditRequest editRequest) {
+    void logged_admin_should_be_able_to_edit_details_of_random_worker(EditUserRequest editRequest) {
         loginAs(Roles.ADMIN);
         Response getAllUsersResponse = skyNestBackendClient.getAllUsers();
         getAllUsersResponse.then().statusCode(SC_OK);
@@ -47,7 +47,7 @@ public class EditUserByIdTest extends BaseTest {
         Response editUserResponse = skyNestBackendClient.editUserById(editRequest, specificWorkerId);
         editUserResponse.then().statusCode(SC_OK);
 
-        EditResponse editResponse = editUserResponse.as(EditResponse.class);
+        EditUserResponse editResponse = editUserResponse.as(EditUserResponse.class);
 
         assertNotNull(editResponse.getId());
 
@@ -61,7 +61,7 @@ public class EditUserByIdTest extends BaseTest {
     @DataProvider(name = "UserData")
     public Object[][] getUserData() {
         return new Object[][]{
-                new Object[]{EditRequest.generateValidEditRequest()}
+                new Object[]{EditUserRequest.generateValidEditRequest()}
         };
     }
 

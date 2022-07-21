@@ -10,8 +10,8 @@ import java.util.UUID;
 import static org.apache.http.HttpHeaders.AUTHORIZATION;
 
 public class SkyNestBackendClient extends BaseClient {
-    private static String userId = "userId";
-    private static String bucketId = "bucketId";
+    private static String userIdKey = "userId";
+    private static String bucketIdKey = "bucketId";
 
     public SkyNestBackendClient(String targetDomain) throws URISyntaxException {
         super(targetDomain);
@@ -41,23 +41,23 @@ public class SkyNestBackendClient extends BaseClient {
                 .get(ApiConstants.GET_ALL_USERS_PATH);
     }
 
-    public Response getUserById(UUID uuid) {
+    public Response getUserById(UUID userId) {
         return requestMaker()
-                .pathParam(userId, uuid)
+                .pathParam(userIdKey, userId)
                 .get(ApiConstants.USER_BY_ID_PATH);
     }
 
-    public Response editUserById(EditRequest editRequest, UUID uuid) {
+    public Response editUserById(EditUserRequest editRequest, UUID userId) {
         return requestMaker()
                 .body(editRequest)
-                .pathParam(userId, uuid)
+                .pathParam(userIdKey, userId)
                 .put(ApiConstants.USER_BY_ID_PATH);
     }
 
-    public Response changePassword(ChangePasswordRequest changePasswordRequest, UUID uuid) {
+    public Response changePassword(ChangePasswordRequest changePasswordRequest, UUID userId) {
         return requestMaker()
                 .body(changePasswordRequest)
-                .pathParam(userId, uuid)
+                .pathParam(userIdKey, userId)
                 .put(ApiConstants.CHANGE_PASSWORD_PATH);
     }
 
@@ -66,27 +66,27 @@ public class SkyNestBackendClient extends BaseClient {
                 .post(ApiConstants.LOGOUT_PATH);
     }
 
-    public Response disableUser(UUID uuid) {
+    public Response disableUser(UUID userId) {
         return requestMaker()
-                .pathParam(userId, uuid)
+                .pathParam(userIdKey, userId)
                 .put(ApiConstants.DISABLE_PATH);
     }
 
-    public Response enableUser(UUID uuid) {
+    public Response enableUser(UUID userId) {
         return requestMaker()
-                .pathParam(userId, uuid)
+                .pathParam(userIdKey, userId)
                 .put(ApiConstants.ENABLE_PATH);
     }
 
-    public Response promoteUser(UUID uuid) {
+    public Response promoteUser(UUID userId) {
         return requestMaker()
-                .pathParam(userId, uuid)
+                .pathParam(userIdKey, userId)
                 .put(ApiConstants.PROMOTE_PATH);
     }
 
-    public Response demoteUser(UUID uuid) {
+    public Response demoteUser(UUID userId) {
         return requestMaker()
-                .pathParam(userId, uuid)
+                .pathParam(userIdKey, userId)
                 .put(ApiConstants.DEMOTE_PATH);
     }
 
@@ -101,29 +101,40 @@ public class SkyNestBackendClient extends BaseClient {
                 .get(ApiConstants.BUCKETS_PATH);
     }
 
-    public Response getBucketById(UUID uuid) {
+    public Response getBucketById(UUID bucketId) {
         return requestMaker()
-                .pathParam(bucketId, uuid)
+                .pathParam(bucketIdKey, bucketId)
                 .get(ApiConstants.BUCKET_DETAILS_PATH);
     }
 
-    public Response getBucketContent(UUID uuid) {
+    public Response getBucketContent(UUID bucketId) {
         return requestMaker()
-                .pathParam(bucketId, uuid)
+                .pathParam(bucketIdKey, bucketId)
                 .get(ApiConstants.BUCKET_BY_ID_PATH);
     }
 
-    public Response deleteBucket(UUID uuid) {
+    public Response deleteBucket(UUID bucketId) {
         return requestMaker()
-                .pathParam(bucketId, uuid)
+                .pathParam(bucketIdKey, bucketId)
                 .put(ApiConstants.DELETE_BUCKET_PATH);
     }
 
-    public Response editBucket(EditBucketRequest editBucketRequest, UUID uuid) {
+    public Response editBucket(EditBucketRequest editBucketRequest, UUID bucketId) {
         return requestMaker()
                 .body(editBucketRequest)
-                .pathParam(bucketId, uuid)
+                .pathParam(bucketIdKey, bucketId)
                 .put(ApiConstants.BUCKET_BY_ID_PATH);
+    }
+
+    public Response getDeletedBuckets() {
+        return requestMaker()
+                .get(ApiConstants.DELETED_BUCKETS_PATH);
+    }
+
+    public Response restoreBucket(UUID bucketId) {
+        return requestMaker()
+                .pathParam(bucketIdKey, bucketId)
+                .put(ApiConstants.RESTORE_BUCKET_PATH);
     }
 
 }

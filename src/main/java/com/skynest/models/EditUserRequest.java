@@ -10,15 +10,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class EditRequest {
+public class EditUserRequest {
     private String name;
     private String surname;
     private String phoneNumber;
     private String address;
     private String positionInCompany;
 
-    public static EditRequest generateValidEditRequest() {
-        return EditRequest.builder()
+    public static EditUserRequest generateValidEditRequest() {
+        return EditUserRequest.builder()
                 .name(RandomGenerator.generateRandomFirstName())
                 .surname(RandomGenerator.generateRandomLastName())
                 .phoneNumber(RandomGenerator.generateRandomPhoneNumber())

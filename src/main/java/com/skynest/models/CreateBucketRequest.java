@@ -1,16 +1,15 @@
 package com.skynest.models;
 
 import com.skynest.utils.RandomGenerator;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@With
 public class CreateBucketRequest {
+
     private String name;
     private String description;
 

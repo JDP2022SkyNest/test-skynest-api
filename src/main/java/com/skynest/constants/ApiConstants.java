@@ -20,6 +20,8 @@ public final class ApiConstants {
     public static final String BUCKET_DETAILS_PATH = "/buckets/{bucketId}/info";
     public static final String BUCKET_BY_ID_PATH = "/buckets/{bucketId}";
     public static final String DELETE_BUCKET_PATH = "/buckets/{bucketId}/delete";
+    public static final String DELETED_BUCKETS_PATH = "/buckets/deleted";
+    public static final String RESTORE_BUCKET_PATH = "/buckets/{bucketId}/restore";
 
 }
 
