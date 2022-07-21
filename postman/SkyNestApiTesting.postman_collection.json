@@ -49839,7 +49839,7 @@
 					"name": "MoveFolder",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "MoveFolderInFolderThatIsAlreadyIn",
 							"id": "d7b021fd-0e52-4cda-bb90-10691775afbf",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
