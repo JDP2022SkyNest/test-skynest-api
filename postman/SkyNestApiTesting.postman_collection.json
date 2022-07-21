@@ -18065,7 +18065,7 @@
 							"name": "EmptyInputs",
 							"item": [
 								{
-									"name": "RegisterInvitedUserEmptyToken",
+									"name": "EmptyToken",
 									"event": [
 										{
 											"listen": "test",
