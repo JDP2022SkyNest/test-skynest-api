@@ -50676,7 +50676,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "RemoveFolderEmptyToken",
+									"name": "MoveFolderEmptyToken",
 									"id": "eefdfe31-4e21-4b97-8fb1-d4a877031b8d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
