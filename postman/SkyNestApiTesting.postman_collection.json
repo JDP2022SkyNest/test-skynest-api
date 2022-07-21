@@ -18257,7 +18257,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
+											"raw": "{\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -18272,22 +18272,21 @@
 											"query": [
 												{
 													"key": "token",
-													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
-													"type": "text"
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
 												}
 											]
 										}
 									},
 									"response": [
 										{
-											"id": "4904a928-ab4c-4dcc-9d3e-8e526d7837ef",
-											"name": "AlphabeticPhoneInput",
+											"id": "ff69201c-e4cb-4cb6-b5f5-1bee00235cc4",
+											"name": "CyrilicInputs",
 											"originalRequest": {
 												"method": "POST",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
+													"raw": "{\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -18357,7 +18356,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:49:51 GMT"
+													"value": "Thu, 21 Jul 2022 11:50:47 GMT"
 												},
 												{
 													"key": "Connection",
@@ -18366,7 +18365,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:49:51\"\n}"
+											"body": "{\n    \"messages\": [\n        \"password format not valid\",\n        \"name format not valid\",\n        \"surname format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:50:47\"\n}"
 										}
 									]
 								}
