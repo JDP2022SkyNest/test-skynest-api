@@ -19235,8 +19235,172 @@
 						},
 						{
 							"name": "TrimmingSpaces",
-							"item": [],
-							"id": "a1fabaea-27a1-40f7-8442-9b18c9739606"
+							"item": [
+								{
+									"name": "RegisterUserTwiceWithSameMail Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "005169c3-bfe3-4d3e-8bdc-2e2f592e31bc",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "{{invitedUserToken}}"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "b1f69f5d-c4a9-4d58-8ae0-dae5cb4bc2f7",
+											"name": "RegisterUserTwiceWithSameMail",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "{{invitedUserToken}}"
+														}
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:26:02 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Email already in use\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-21 13:26:02\"\n}"
+										}
+									]
+								}
+							],
+							"id": "a1fabaea-27a1-40f7-8442-9b18c9739606",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "73d09c16-86a5-4640-8ca8-5f0eb8828ea2",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "3086861d-da7a-4891-9727-e46a09b15776",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "57e4e72e-8ff6-453d-a100-400c721d2df3"
