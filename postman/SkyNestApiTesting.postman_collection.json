@@ -20175,8 +20175,8 @@
 											"script": {
 												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.response.to.have.status(400);\r",
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
 													"});"
 												],
 												"type": "text/javascript"
