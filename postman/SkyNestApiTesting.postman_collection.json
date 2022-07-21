@@ -18086,6 +18086,63 @@
 							]
 						},
 						{
+							"name": "InvalidInputs",
+							"item": [
+								{
+									"name": "AlphabeticPhoneInput",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
+												"exec": [
+													"pm.test(\"Proper warning message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.messages).to.eql([\r",
+													"        \"phoneNumber format not valid\"\r",
+													"    ]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "93ee1c28-e74d-4b72-8929-8871a12af270",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb"
+						},
+						{
 							"name": "EmptyInputs",
 							"item": [
 								{
@@ -20316,8 +20373,8 @@
 											"script": {
 												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
 												"exec": [
-													"pm.test(\"Status code is 200\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -20333,7 +20390,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
+											"raw": "{\r\n    \"password\": \"Ulica12\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -20353,7 +20410,97 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"id": "3adfd4da-a892-4651-a75a-a068e7d9b17a",
+											"name": "PasswordLessThan8Chars",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"password\": \"Ulica12\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:47:49 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:47:49\"\n}"
+										}
+									]
 								}
 							],
 							"id": "e3ae9017-e9f0-42b9-a60f-7e354b7b3f6a"
