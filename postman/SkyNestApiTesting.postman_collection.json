@@ -50487,6 +50487,25 @@
 													"body": "{\n    \"messages\": [\n        \"Folder is already inside that folder\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-21 16:50:40\"\n}"
 												}
 											]
+										},
+										{
+											"name": "MoveFolderInFolderThatIsAlreadyIn Copy",
+											"id": "5713dcff-fea7-4e71-a7ab-9ed14818963c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolderId}}{{ENDPOINT_MOVE}}{{adminBucketId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "cdcae760-d7e4-4e6b-8d3f-fc16baf03005"
