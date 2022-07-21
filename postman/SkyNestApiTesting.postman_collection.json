@@ -18537,7 +18537,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
+											"raw": "{\r\n  \"password\": null,\r\n  \"name\": null,\r\n  \"surname\": null,\r\n  \"phoneNumber\": null,\r\n  \"address\": null\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
