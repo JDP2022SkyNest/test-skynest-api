@@ -19575,14 +19575,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{expiredToken}}",
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invalidToken}}",
 											"host": [
 												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
 											],
 											"query": [
 												{
 													"key": "token",
-													"value": "{{expiredToken}}"
+													"value": "{{invalidToken}}"
 												}
 											]
 										}
