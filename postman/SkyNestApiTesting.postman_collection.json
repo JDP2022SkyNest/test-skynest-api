@@ -18086,6 +18086,51 @@
 							]
 						},
 						{
+							"name": "InvalidInputs",
+							"item": [
+								{
+									"name": "AlphabeticPhoneInput Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
+												"exec": [
+													"pm.test(\"Proper warning message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.messages).to.eql([\r",
+													"        \"phoneNumber format not valid\"\r",
+													"    ]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "93ee1c28-e74d-4b72-8929-8871a12af270",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"alphabetic@yahoo.com\",\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+									},
+									"response": []
+								}
+							],
+							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb"
+						},
+						{
 							"name": "EmptyInputs",
 							"item": [
 								{
@@ -20316,8 +20361,8 @@
 											"script": {
 												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
 												"exec": [
-													"pm.test(\"Status code is 200\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -20333,7 +20378,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
+											"raw": "{\r\n    \"password\": \"Ulica12\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"741258963\",\r\n    \"address\": \"Street33\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -20355,7 +20400,7 @@
 									},
 									"response": [
 										{
-											"id": "5889ffba-9752-4692-9926-439080ce79c0",
+											"id": "3adfd4da-a892-4651-a75a-a068e7d9b17a",
 											"name": "PasswordLessThan8Chars",
 											"originalRequest": {
 												"method": "POST",
@@ -20432,7 +20477,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:47:36 GMT"
+													"value": "Thu, 21 Jul 2022 11:47:49 GMT"
 												},
 												{
 													"key": "Connection",
@@ -20441,7 +20486,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:47:36\"\n}"
+											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:47:49\"\n}"
 										}
 									]
 								}
