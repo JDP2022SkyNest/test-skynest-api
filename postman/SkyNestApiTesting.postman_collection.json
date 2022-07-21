@@ -50598,7 +50598,73 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolderId}}{{ENDPOINT_MOVE}}{{deletedFolderId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "16f8dfe9-7c1d-4758-9289-6c7dc8c5233a",
+													"name": "MoveFolderInAlreadyDeletedFolder",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolderId}}{{ENDPOINT_MOVE}}{{deletedFolderId}}"
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 21 Jul 2022 15:08:33 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
 										}
 									],
 									"id": "cdcae760-d7e4-4e6b-8d3f-fc16baf03005"
