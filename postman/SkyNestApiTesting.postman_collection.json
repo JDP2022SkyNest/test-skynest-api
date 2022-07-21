@@ -18923,14 +18923,14 @@
 									},
 									"response": [
 										{
-											"id": "52f96db2-cf39-4b73-b498-99b267d5f6d6",
-											"name": "EmptyAddress",
+											"id": "97b0de21-3db4-4ed9-ba33-bcc0a8ac8606",
+											"name": "AllInputsEmpty",
 											"originalRequest": {
 												"method": "POST",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"First56453\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"43567543\",\r\n  \"address\": \"\"\r\n}",
+													"raw": "{\r\n  \"password\": \"\",\r\n  \"name\": \"\",\r\n  \"surname\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"address\": \"\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -19000,7 +19000,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:21:00 GMT"
+													"value": "Thu, 21 Jul 2022 11:24:09 GMT"
 												},
 												{
 													"key": "Connection",
@@ -19009,7 +19009,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:21:00\"\n}"
+											"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\",\n        \"name format not valid\",\n        \"phoneNumber cannot be null or empty\",\n        \"phoneNumber format not valid\",\n        \"surname cannot be null or empty\",\n        \"name cannot be null or empty\",\n        \"password format not valid\",\n        \"surname format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:24:09\"\n}"
 										}
 									]
 								}
