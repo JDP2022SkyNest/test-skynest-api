@@ -49977,7 +49977,7 @@
 							"request": {
 								"method": "PUT",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_MOVE}}{{"
 							},
 							"response": []
 						}
