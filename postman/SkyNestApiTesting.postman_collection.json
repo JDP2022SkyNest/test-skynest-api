@@ -50673,7 +50673,7 @@
 							"id": "f05b31a6-2c4a-4392-9345-3cd804b07d28"
 						},
 						{
-							"name": "InvalidToken Copy",
+							"name": "InvalidToken",
 							"item": [
 								{
 									"name": "RemoveFolderEmptyToken",
@@ -50692,77 +50692,7 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
 									},
-									"response": [
-										{
-											"id": "47b905ce-4d7f-4592-86da-4f269051cb50",
-											"name": "RemoveFolderEmptyToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 11 Jul 2022 13:10:38 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "RemoveFolderExpiredToken",
