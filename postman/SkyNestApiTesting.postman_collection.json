@@ -50211,7 +50211,7 @@
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolder1Id}}{{ENDPOINT_MOVE}}{{adminBucketId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolder1Id}}{{ENDPOINT_MOVE}}"
 													},
 													"status": "Not Found",
 													"code": 404,
