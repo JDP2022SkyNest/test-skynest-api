@@ -49932,6 +49932,25 @@
 							]
 						},
 						{
+							"name": "MoveFolderInChildFolder Copy",
+							"id": "aa0c40a0-7bf6-4fcc-88a2-459971614264",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_MOVE}}{{folderInFolderId}}"
+							},
+							"response": []
+						},
+						{
 							"name": "MoveFolderInFolderThatIsAlreadyIn",
 							"id": "efa99b89-3dd7-481e-bcca-0a78c974fe42",
 							"protocolProfileBehavior": {
