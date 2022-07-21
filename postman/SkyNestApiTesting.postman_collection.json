@@ -50788,7 +50788,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{workerFolderId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolder1Id}}{{ENDPOINT_MOVE}}{{folderInFolder2Id}}"
 									},
 									"response": []
 								},
