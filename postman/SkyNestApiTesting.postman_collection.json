@@ -18059,7 +18059,31 @@
 									]
 								}
 							],
-							"id": "b28cb18a-cc74-4d0c-9d12-c5e894ab7591"
+							"id": "b28cb18a-cc74-4d0c-9d12-c5e894ab7591",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "08916640-2e5a-48c8-8873-023094c62cc2",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "6e47ccbc-fe5e-48f4-913d-199e96bacfbd",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "EmptyInputs",
