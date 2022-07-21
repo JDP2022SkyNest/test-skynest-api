@@ -18677,7 +18677,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": null,\r\n  \"name\": null,\r\n  \"surname\": null,\r\n  \"phoneNumber\": null,\r\n  \"address\": null\r\n}",
+											"raw": "{\r\n    \"password\": \"ulica1234\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"75428339623\",\r\n    \"address\": \"Street 33\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
