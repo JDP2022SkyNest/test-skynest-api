@@ -18508,6 +18508,56 @@
 											"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:52:27\"\n}"
 										}
 									]
+								},
+								{
+									"name": "NameOnlyMultipleSpaces Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
+												"exec": [
+													"pm.test(\"Proper warning message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.messages).to.eql([\r",
+													"        \"phoneNumber format not valid\"\r",
+													"    ]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "bb149a65-4b53-4e3c-9470-daaa9d7e1b48",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb",
