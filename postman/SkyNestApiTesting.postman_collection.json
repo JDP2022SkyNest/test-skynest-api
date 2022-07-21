@@ -19044,7 +19044,7 @@
 							"name": "Re-registration",
 							"item": [
 								{
-									"name": "RegisterInvitedUser Copy",
+									"name": "RegisterUserTwiceWithSameMail",
 									"event": [
 										{
 											"listen": "test",
