@@ -50097,7 +50097,7 @@
 					"name": "MoveFolder",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidToken",
 							"item": [],
 							"id": "f05b31a6-2c4a-4392-9345-3cd804b07d28"
 						},
