@@ -49967,20 +49967,7 @@
 				},
 				{
 					"name": "MoveFolder",
-					"item": [
-						{
-							"name": "New Request",
-							"id": "d7b021fd-0e52-4cda-bb90-10691775afbf",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
-						}
-					],
+					"item": [],
 					"id": "bc823014-0209-4280-a976-e94780e6d15e"
 				}
 			],
