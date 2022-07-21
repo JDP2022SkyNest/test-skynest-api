@@ -50580,6 +50580,25 @@
 													"body": "{\n    \"messages\": [\n        \"Folder not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-21 17:07:33\"\n}"
 												}
 											]
+										},
+										{
+											"name": "MoveFolderInNotExistingFolder Copy",
+											"id": "cfc93a33-2730-4536-adff-614b18cb4515",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolderId}}{{ENDPOINT_MOVE}}{{adminBucketId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "cdcae760-d7e4-4e6b-8d3f-fc16baf03005"
