@@ -19259,7 +19259,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"   First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
+											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"   First   \",\r\n  \"surname\": \"   User   \",\r\n  \"phoneNumber\": \"785653215645\",\r\n  \"address\": \"Local address\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
