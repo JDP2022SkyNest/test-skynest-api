@@ -18877,6 +18877,51 @@
 											"body": "{\n    \"messages\": [\n        \"address cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:21:00\"\n}"
 										}
 									]
+								},
+								{
+									"name": "AllInputsEmpty",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "0ca58797-0ce7-40eb-889a-4cea21a79f2f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"First56453\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"43567543\",\r\n  \"address\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "{{invitedUserToken}}"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "757d797d-7a95-420b-9b0d-67de002bd79a"
