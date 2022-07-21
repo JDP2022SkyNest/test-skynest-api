@@ -19663,14 +19663,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=",
 											"host": [
 												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
 											],
 											"query": [
 												{
 													"key": "token",
-													"value": "{{invitedUserToken}}"
+													"value": ""
 												}
 											]
 										}
