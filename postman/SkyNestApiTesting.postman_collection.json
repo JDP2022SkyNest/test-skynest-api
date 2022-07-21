@@ -18137,7 +18137,97 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"id": "17cdc53a-f09a-4fb0-96f9-065205782e23",
+											"name": "AlphabeticPhoneInput",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:49:51 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:49:51\"\n}"
+										}
+									]
 								}
 							],
 							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb"
