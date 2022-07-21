@@ -44464,6 +44464,52 @@
 											]
 										},
 										{
+											"name": "CreateFolderInAdmin'sFolder Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "70017d98-8ff8-450f-9ac0-ec8693a54232",
+														"exec": [
+															"const jsonData = pm.response.json()\r",
+															"\r",
+															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
+															"    pm.environment.set(\"folderInFolderId\", jsonData.id);\r",
+															"});\r",
+															"\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "05d64b60-01c4-4d7e-90b1-c19a0b55ffec",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"FolderInFolder\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+											},
+											"response": []
+										},
+										{
 											"name": "CreateFolderInWorker'sBucketAsWorker",
 											"event": [
 												{
