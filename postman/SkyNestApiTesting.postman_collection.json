@@ -18086,7 +18086,7 @@
 							]
 						},
 						{
-							"name": "InvalidInputs",
+							"name": "InvalidPayloads",
 							"item": [
 								{
 									"name": "AlphabeticPhoneInput",
@@ -18116,19 +18116,845 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"alphabetic@yahoo.com\",\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
+											"raw": "{\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"type": "text"
+												}
+											]
+										}
 									},
-									"response": []
+									"response": [
+										{
+											"id": "17cdc53a-f09a-4fb0-96f9-065205782e23",
+											"name": "AlphabeticPhoneInput",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:49:51 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"phoneNumber format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:49:51\"\n}"
+										}
+									]
+								},
+								{
+									"name": "CyrilicInputs",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
+												"exec": [
+													"pm.test(\"Proper warning message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.messages).to.eql([\r",
+													"        \"phoneNumber format not valid\"\r",
+													"    ]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "78f68389-ab37-456d-84a4-f2a913fdfc60",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "ff69201c-e4cb-4cb6-b5f5-1bee00235cc4",
+											"name": "CyrilicInputs",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:50:47 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"password format not valid\",\n        \"name format not valid\",\n        \"surname format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:50:47\"\n}"
+										}
+									]
+								},
+								{
+									"name": "NameOnlyMultipleSpaces",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
+												"exec": [
+													"pm.test(\"Proper warning message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.messages).to.eql([\r",
+													"        \"phoneNumber format not valid\"\r",
+													"    ]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "1f700b05-44e1-4fe6-872c-8c36d8d8d9ab",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\":\"Ulica123\",\r\n    \"name\": \"    \",\r\n    \"surname\": \"Surname\",\r\n    \"phoneNumber\": \"7412543717\",\r\n    \"address\": \"Street 33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "3fe3e35b-b59b-4320-a16c-b709fdd0fa51",
+											"name": "NameOnlyMultipleSpaces",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"password\":\"Ulica123\",\r\n    \"name\": \"    \",\r\n    \"surname\": \"Surname\",\r\n    \"phoneNumber\": \"7412543717\",\r\n    \"address\": \"Street 33\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:52:27 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:52:27\"\n}"
+										}
+									]
+								},
+								{
+									"name": "NullParameters",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
+												"exec": [
+													"pm.test(\"Proper warning message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.messages).to.eql([\r",
+													"        \"phoneNumber format not valid\"\r",
+													"    ]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "bb149a65-4b53-4e3c-9470-daaa9d7e1b48",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": null,\r\n  \"name\": null,\r\n  \"surname\": null,\r\n  \"phoneNumber\": null,\r\n  \"address\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "a3d45fea-f1d2-4169-a2a5-33ebb5efaa98",
+											"name": "NullParameters",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": null,\r\n  \"name\": null,\r\n  \"surname\": null,\r\n  \"phoneNumber\": null,\r\n  \"address\": null\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:53:23 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"password cannot be null\",\n        \"address cannot be null or empty\",\n        \"phoneNumber cannot be null or empty\",\n        \"name cannot be null or empty\",\n        \"surname cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:53:23\"\n}"
+										}
+									]
+								},
+								{
+									"name": "PasswordWithoutUpperCase",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
+												"exec": [
+													"pm.test(\"Proper warning message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.messages).to.eql([\r",
+													"        \"phoneNumber format not valid\"\r",
+													"    ]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "7f4fa6ae-8e46-4a3d-ad80-c4cccca34f2c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\": \"ulica1234\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"75428339623\",\r\n    \"address\": \"Street 33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "a63b247c-fff0-4c72-b30c-fd2538101664",
+											"name": "PasswordWithoutUpperCase",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"password\": \"ulica1234\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"75428339623\",\r\n    \"address\": \"Street 33\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:54:11 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:54:11\"\n}"
+										}
+									]
+								},
+								{
+									"name": "PasswordWithoutNumber",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
+												"exec": [
+													"pm.test(\"Proper warning message\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.messages).to.eql([\r",
+													"        \"phoneNumber format not valid\"\r",
+													"    ]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "6b600753-bb0a-41aa-9182-a6365065376b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"password\": \"Ulicaulica\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"74442582963\",\r\n    \"address\": \"Street 33\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "f9cff387-01ff-43f6-a84b-27de4d546884",
+											"name": "PasswordWithoutNumber",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"password\": \"Ulicaulica\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"74442582963\",\r\n    \"address\": \"Street 33\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:54:49 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:54:49\"\n}"
+										}
+									]
 								}
 							],
-							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb"
+							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "7bb9ddde-86fc-4d92-949d-ac17b93140f0",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "0726ecf6-76e0-42af-9cd9-d41959f42226",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});"
+										]
+									}
+								}
+							]
 						},
 						{
 							"name": "EmptyInputs",
@@ -49138,6 +49964,11 @@
 						}
 					],
 					"id": "7b3db6b5-ffbb-4482-9946-2c46035faef0"
+				},
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "bc823014-0209-4280-a976-e94780e6d15e"
 				}
 			],
 			"id": "7c5604c7-db6c-45b2-97a4-74a97e535d69"
