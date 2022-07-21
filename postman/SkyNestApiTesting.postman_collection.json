@@ -50207,7 +50207,7 @@
 											"response": [
 												{
 													"id": "e56404d7-5e84-40f7-ad5f-ad1b0d111974",
-													"name": "folderInFolderId",
+													"name": "MoveFolderBackInBucketLevel",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
@@ -50273,7 +50273,31 @@
 											]
 										}
 									],
-									"id": "a4b475e2-5253-4673-8d4e-7a56526a6f06"
+									"id": "a4b475e2-5253-4673-8d4e-7a56526a6f06",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "828b6517-f82b-4e2d-b67c-f5f3f9ed8e14",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "e8fdf951-4221-4cf5-b2af-f7d3a7e4726d",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});"
+												]
+											}
+										}
+									]
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulPUT",
