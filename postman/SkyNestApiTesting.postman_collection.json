@@ -20071,7 +20071,101 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"id": "5b7d726d-aa9f-43ad-bbb1-9e86756c3615",
+											"name": "ExactLimitLength",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": \"LgfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"Lkfssj\",\r\n  \"phoneNumber\": \"872312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:43:39 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"d41bd3ea-a2ee-4939-bb39-1e729e87f038\",\n    \"email\": \"negid81810@chimpad.com\",\n    \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\n    \"surname\": \"Lkfssj\",\n    \"phoneNumber\": \"872312547854522452188935412322\",\n    \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\",\n    \"roleName\": \"role_worker\",\n    \"positionInCompany\": null,\n    \"companyName\": \"HTEC\",\n    \"verified\": true,\n    \"enabled\": true\n}"
+										}
+									]
 								}
 							],
 							"id": "e3ae9017-e9f0-42b9-a60f-7e354b7b3f6a"
