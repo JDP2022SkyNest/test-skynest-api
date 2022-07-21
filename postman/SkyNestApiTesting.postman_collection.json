@@ -50723,7 +50723,7 @@
 									"response": []
 								},
 								{
-									"name": "RemoveFolderInvalidToken",
+									"name": "MoveFolderInvalidToken",
 									"id": "aed02906-adb1-4b17-9684-4f4cc6c35b4a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
