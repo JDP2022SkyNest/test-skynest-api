@@ -19897,7 +19897,9 @@
 											"script": {
 												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
 												"exec": [
-													""
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
 												],
 												"type": "text/javascript"
 											}
@@ -19912,7 +19914,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+											"raw": "{\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco12345678910pogfhfg78\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
