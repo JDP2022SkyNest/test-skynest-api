@@ -19448,7 +19448,101 @@
 											]
 										}
 									},
-									"response": []
+									"response": [
+										{
+											"id": "cff0ada4-d909-4586-9b5f-f1e95519a83a",
+											"name": "ExpiredToken",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{expiredToken}}",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": "{{expiredToken}}"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:32:18 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid email token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-21 13:32:18\"\n}"
+										}
+									]
 								}
 							],
 							"id": "2f9b114a-4c3f-48c9-8a3b-9512eaec9c81",
