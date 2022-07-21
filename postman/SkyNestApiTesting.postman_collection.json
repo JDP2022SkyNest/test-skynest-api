@@ -16714,7 +16714,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"negid81810@chimpad.com\"\r\n}",
+											"raw": "{\r\n  \"email\": \"xinere8440@tebyy.com\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -18059,35 +18059,150 @@
 									]
 								}
 							],
-							"id": "b28cb18a-cc74-4d0c-9d12-c5e894ab7591",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "08916640-2e5a-48c8-8873-023094c62cc2",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "6e47ccbc-fe5e-48f4-913d-199e96bacfbd",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
-										]
-									}
-								}
-							]
+							"id": "b28cb18a-cc74-4d0c-9d12-c5e894ab7591"
 						},
 						{
 							"name": "EmptyInputs",
 							"item": [
+								{
+									"name": "EmptyToken",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "87c54737-5eed-4c7d-b218-7443fd331fa2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "d44023fb-b2ab-4bb6-add7-10636e8c3c51",
+											"name": "EmptyToken",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=",
+													"host": [
+														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+													],
+													"query": [
+														{
+															"key": "token",
+															"value": ""
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 11:06:53 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid email token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-21 13:06:53\"\n}"
+										}
+									]
+								},
 								{
 									"name": "EmptyPassword",
 									"event": [
@@ -18926,1155 +19041,9 @@
 							]
 						},
 						{
-							"name": "Re-registration",
-							"item": [
-								{
-									"name": "RegisterUserTwiceWithSameMail",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "b60d6d19-53d5-4976-87ac-3e276e1871f8",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "{{invitedUserToken}}"
-												}
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "1be18350-0679-4667-a6ae-b0f4449524eb",
-											"name": "RegisterUserTwiceWithSameMail",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
-													"host": [
-														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "{{invitedUserToken}}"
-														}
-													]
-												}
-											},
-											"status": "Conflict",
-											"code": 409,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:26:02 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Email already in use\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-21 13:26:02\"\n}"
-										}
-									]
-								}
-							],
-							"id": "e618416d-fe48-4f9d-9ab7-f92b5a2c4725",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a85d0daa-94fb-4c01-beb0-82543ae47c96",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "0a2d3db8-928a-4bdc-8b3f-145e072f4d05",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 409\", function () {",
-											"    pm.response.to.have.status(409);",
-											"});"
-										]
-									}
-								}
-							]
-						},
-						{
-							"name": "TrimmingSpaces",
-							"item": [
-								{
-									"name": "TrimmingTrailing&LeadingSPaces",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "005169c3-bfe3-4d3e-8bdc-2e2f592e31bc",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"   First   \",\r\n  \"surname\": \"   User   \",\r\n  \"phoneNumber\": \"785653215645\",\r\n  \"address\": \"Local address\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
-												}
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "5ef72d4b-eefd-45df-88ff-5bcf5a9376f8",
-											"name": "TrimmingTrailing&LeadingSPaces",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"   First   \",\r\n  \"surname\": \"   User   \",\r\n  \"phoneNumber\": \"785653215645\",\r\n  \"address\": \"Local address\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
-													"host": [
-														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
-														}
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:29:42 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"a931eb86-0e5d-44af-bcf8-51c28f539b3d\",\n    \"email\": \"cidal64553@galotv.com\",\n    \"name\": \"First\",\n    \"surname\": \"User\",\n    \"phoneNumber\": \"785653215645\",\n    \"address\": \"Local address\",\n    \"roleName\": \"role_worker\",\n    \"positionInCompany\": null,\n    \"companyName\": \"HTEC\",\n    \"verified\": true,\n    \"enabled\": true\n}"
-										}
-									]
-								}
-							],
-							"id": "a1fabaea-27a1-40f7-8442-9b18c9739606",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "73d09c16-86a5-4640-8ca8-5f0eb8828ea2",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "3086861d-da7a-4891-9727-e46a09b15776",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
-										]
-									}
-								}
-							]
-						},
-						{
-							"name": "InvalidToken",
-							"item": [
-								{
-									"name": "EmptyToken",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "87c54737-5eed-4c7d-b218-7443fd331fa2",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": ""
-												}
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "d44023fb-b2ab-4bb6-add7-10636e8c3c51",
-											"name": "EmptyToken",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=",
-													"host": [
-														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": ""
-														}
-													]
-												}
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:06:53 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid email token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-21 13:06:53\"\n}"
-										}
-									]
-								},
-								{
-									"name": "ExpiredToken",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "0f45fd36-2203-49f2-b39f-6ed3dafb75ac",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{expiredToken}}",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "{{expiredToken}}"
-												}
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "cff0ada4-d909-4586-9b5f-f1e95519a83a",
-											"name": "ExpiredToken",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{expiredToken}}",
-													"host": [
-														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "{{expiredToken}}"
-														}
-													]
-												}
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:32:18 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid email token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-21 13:32:18\"\n}"
-										}
-									]
-								},
-								{
-									"name": "InvalidToken",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "9b42861f-7674-487b-b90f-ef45f58be219",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invalidToken}}",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "{{invalidToken}}"
-												}
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "dcc9a873-f009-4327-884b-6dfd6c9f393b",
-											"name": "InvalidToken",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invalidToken}}",
-													"host": [
-														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "{{invalidToken}}"
-														}
-													]
-												}
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:32:49 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid email token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-21 13:32:49\"\n}"
-										}
-									]
-								}
-							],
-							"id": "2f9b114a-4c3f-48c9-8a3b-9512eaec9c81",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "5c4ce340-6296-493d-abfe-591de1162111",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "25034730-01dd-47e8-8a47-df399466eeda",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 401\", function () {",
-											"    pm.response.to.have.status(401);",
-											"});"
-										]
-									}
-								}
-							]
-						},
-						{
-							"name": "EmptyHeader",
-							"item": [
-								{
-									"name": "EmptyHeader",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
-												"exec": [
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "db569b1b-e59d-4cf0-9aa5-2bcd448418ba",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true,
-										"disabledSystemHeaders": {
-											"content-type": true
-										}
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"785653215645\",\r\n  \"address\": \"Local address\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
-												}
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "ed097b74-0ddd-4226-9b3b-2219f4aebc0d",
-											"name": "EmptyHeader",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"785653215645\",\r\n  \"address\": \"Local address\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
-													"host": [
-														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
-														}
-													]
-												}
-											},
-											"status": "Unsupported Media Type",
-											"code": 415,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Accept",
-													"value": "application/json, application/*+json"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:34:22 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"timestamp\": 1658403262013,\n    \"status\": 415,\n    \"error\": \"Unsupported Media Type\",\n    \"path\": \"/public/register\"\n}"
-										}
-									]
-								}
-							],
-							"id": "ddb0ca29-ebc6-4670-a041-8304efe668cb",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "118a8572-229b-4bd8-a5b9-628331bdc5d7",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "63611aba-476f-4c19-9034-f1b336c04d98",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 415\", function () {",
-											"    pm.response.to.have.status(415);",
-											"});"
-										]
-									}
-								}
-							]
-						},
-						{
-							"name": "StringLength",
-							"item": [
-								{
-									"name": "AllParametersJustAboveMaxLimit",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
-												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.response.to.have.status(400);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "a5fd4a20-a1c4-4e0b-bc66-0c2288b2ac7f",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco12345678910pogfhfg78\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "{{invitedUserToken}}"
-												}
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "e71beff3-8c42-4d1f-9cb0-5ff7d8b3398b",
-											"name": "AllParametersJustAboveMaxLimit",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco12345678910pogfhfg78\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
-													"host": [
-														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "{{invitedUserToken}}"
-														}
-													]
-												}
-											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:38:19 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"surname length cannot be over 100\",\n        \"password format not valid\",\n        \"phoneNumber length cannot be over 30\",\n        \"address length cannot be over 254\",\n        \"surname format not valid\",\n        \"name length cannot be over 50\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:38:19\"\n}"
-										}
-									]
-								},
-								{
-									"name": "ExactLimitLength",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
-												"exec": [
-													"pm.test(\"Status code is 400\", function () {\r",
-													"    pm.response.to.have.status(400);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "b1fe4254-daae-476d-a5b2-c16283928f91",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"LkfdsjfdrjvdjLhfshhsdh34559hgco12345678910pogfhfg78\",\r\n  \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\r\n  \"surname\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\r\n  \"phoneNumber\": \"8754125478545224521889654123225\",\r\n  \"address\": \"Jhfhjdfhjdfhjds9iewioi455823475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweieewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-											],
-											"query": [
-												{
-													"key": "token",
-													"value": "{{invitedUserToken}}"
-												}
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"id": "e3ae9017-e9f0-42b9-a60f-7e354b7b3f6a"
+							"name": "New Folder",
+							"item": [],
+							"id": "e618416d-fe48-4f9d-9ab7-f92b5a2c4725"
 						}
 					],
 					"id": "57e4e72e-8ff6-453d-a100-400c721d2df3"
