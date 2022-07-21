@@ -19729,14 +19729,17 @@
 									],
 									"id": "db569b1b-e59d-4cf0-9aa5-2bcd448418ba",
 									"protocolProfileBehavior": {
-										"disableBodyPruning": true
+										"disableBodyPruning": true,
+										"disabledSystemHeaders": {
+											"content-type": true
+										}
 									},
 									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"   First   \",\r\n  \"surname\": \"   User   \",\r\n  \"phoneNumber\": \"785653215645\",\r\n  \"address\": \"Local address\"\r\n}",
+											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"785653215645\",\r\n  \"address\": \"Local address\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -19857,7 +19860,31 @@
 									]
 								}
 							],
-							"id": "ddb0ca29-ebc6-4670-a041-8304efe668cb"
+							"id": "ddb0ca29-ebc6-4670-a041-8304efe668cb",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "118a8572-229b-4bd8-a5b9-628331bdc5d7",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "63611aba-476f-4c19-9034-f1b336c04d98",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 415\", function () {",
+											"    pm.response.to.have.status(415);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "57e4e72e-8ff6-453d-a100-400c721d2df3"
