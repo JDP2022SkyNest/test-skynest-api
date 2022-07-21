@@ -44474,7 +44474,7 @@
 															"const jsonData = pm.response.json()\r",
 															"\r",
 															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-															"    pm.environment.set(\"folderInFolder1Id\", jsonData.id);\r",
+															"    pm.environment.set(\"folderInFolder2Id\", jsonData.id);\r",
 															"});\r",
 															"\r",
 															""
@@ -44498,7 +44498,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"FolderInFolder1\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
+													"raw": "{\r\n  \"name\": \"FolderInFolder2\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
