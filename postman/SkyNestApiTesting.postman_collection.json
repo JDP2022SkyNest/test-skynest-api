@@ -18086,51 +18086,6 @@
 							]
 						},
 						{
-							"name": "InvalidInputs",
-							"item": [
-								{
-									"name": "AlphabeticPhoneInput Copy",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "378a823a-b91c-44a0-9ca1-0be3e77fbfa7",
-												"exec": [
-													"pm.test(\"Proper warning message\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.messages).to.eql([\r",
-													"        \"phoneNumber format not valid\"\r",
-													"    ]);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "93ee1c28-e74d-4b72-8929-8871a12af270",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"alphabetic@yahoo.com\",\r\n  \"password\": \"Xyz123456\",\r\n  \"name\": \"Leonid\",\r\n  \"surname\": \"Andersson\",\r\n  \"phoneNumber\": \"abcdefgh\",\r\n  \"address\": \"Street 8833\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-									},
-									"response": []
-								}
-							],
-							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb"
-						},
-						{
 							"name": "EmptyInputs",
 							"item": [
 								{
@@ -20492,6 +20447,11 @@
 								}
 							],
 							"id": "e3ae9017-e9f0-42b9-a60f-7e354b7b3f6a"
+						},
+						{
+							"name": "InvalidInputs",
+							"item": [],
+							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb"
 						}
 					],
 					"id": "57e4e72e-8ff6-453d-a100-400c721d2df3"
