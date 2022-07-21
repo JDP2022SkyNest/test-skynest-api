@@ -19237,7 +19237,7 @@
 							"name": "TrimmingSpaces",
 							"item": [
 								{
-									"name": "RegisterUserTwiceWithSameMail Copy",
+									"name": "TrimmingTrailing&LeadingSPaces",
 									"event": [
 										{
 											"listen": "test",
