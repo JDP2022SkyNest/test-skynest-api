@@ -48689,7 +48689,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "PUT",
