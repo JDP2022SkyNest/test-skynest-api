@@ -18110,7 +18110,7 @@
 									"response": [
 										{
 											"id": "d44023fb-b2ab-4bb6-add7-10636e8c3c51",
-											"name": "RegisterInvitedUserEmptyToken",
+											"name": "EmptyToken",
 											"originalRequest": {
 												"method": "POST",
 												"header": [],
