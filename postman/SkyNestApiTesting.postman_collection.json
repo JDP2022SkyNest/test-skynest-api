@@ -18086,7 +18086,7 @@
 							]
 						},
 						{
-							"name": "InvalidPayloads",
+							"name": "InvalidInputs",
 							"item": [
 								{
 									"name": "AlphabeticPhoneInput",
@@ -18397,7 +18397,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"password\":\"Ulica123\",\r\n    \"name\": \"    \",\r\n    \"surname\": \"Surname\",\r\n    \"phoneNumber\": \"7412543717\",\r\n    \"address\": \"Street 33\"\r\n}",
+											"raw": "{\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -18837,97 +18837,7 @@
 											]
 										}
 									},
-									"response": [
-										{
-											"id": "f9cff387-01ff-43f6-a84b-27de4d546884",
-											"name": "PasswordWithoutNumber",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n    \"password\": \"Ulicaulica\",\r\n    \"name\": \"Aster\",\r\n    \"surname\": \"Marc\",\r\n    \"phoneNumber\": \"74442582963\",\r\n    \"address\": \"Street 33\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA",
-													"host": [
-														"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
-													],
-													"query": [
-														{
-															"key": "token",
-															"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjaWRhbDY0NTUzQGdhbG90di5jb20iLCJDb21wYW55IG5hbWUiOiJIVEVDIiwiZXhwIjoxNjU4NDg5MzI1fQ.s-yPQuMu4upiDwH-O59qj4c39-ixs6PdTBzW08sU8YHtL9oaq11rIGtleJ4gojPha4IEkCaCb9FQ9DliojP0XA"
-														}
-													]
-												}
-											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 11:54:49 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"password format not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 13:54:49\"\n}"
-										}
-									]
+									"response": []
 								}
 							],
 							"id": "9652cc90-befb-43ab-8fb1-e3ab7d7a0acb",
