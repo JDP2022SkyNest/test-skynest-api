@@ -16689,6 +16689,1228 @@
 			"id": "b8038a57-14cf-400a-bf44-bd4f0dd751e0"
 		},
 		{
+			"name": "InviteAPI",
+			"item": [
+				{
+					"name": "ValidToken",
+					"item": [
+						{
+							"name": "ValidTokenAndSuccessfulPOST",
+							"item": [
+								{
+									"name": "SendRegistrationInviteAsAdmin",
+									"id": "533d90c5-7b92-4545-868c-a353fb585e62",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"nemoxi9344@storypo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": [
+										{
+											"id": "9369eef1-51f7-471d-b887-ecfed425fafc",
+											"name": "SendRegistrationInviteAsAdmin",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 12:34:41 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								}
+							],
+							"id": "f5eca1a4-c5bc-441b-ba94-e8fa3e434ff1",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "6fa49bfd-c426-42a0-8009-ed1af9ead53b",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "1bd57198-387a-41ea-9b89-5ad0605e28cb",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 204\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "ValidTokenButUnsuccessfulPOST",
+							"item": [
+								{
+									"name": "SendRegistrationInviteAsWorker",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "798faac1-90c9-4181-abfa-0854ae4444fa",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": [
+										{
+											"id": "43a17efd-070b-4eef-aa53-c15bf67f79be",
+											"name": "SendRegistrationInviteAsWorker",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 12:41:14 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "SendRegistrationInviteAsManager",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "d2c42a71-b892-4e34-bd22-a63c4a0ef418",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{managerAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": [
+										{
+											"id": "458b80dd-114f-4b3f-ab1e-0bf07e0fd978",
+											"name": "SendRegistrationInviteAsManager",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 13:04:35 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "SendRegistrationInviteToInvalidMail",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "caacdbe6-ce0d-463b-8da1-fefa0b806c35",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"invalidmail.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": [
+										{
+											"id": "8826a2cf-6e83-4978-9eca-dfa06e766c3d",
+											"name": "SendRegistrationInviteToInvalidMail",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"invalidmail.com\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 12:52:23 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 14:52:23\"\n}"
+										}
+									]
+								},
+								{
+									"name": "SendRegistrationInviteToEmptyMail",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "9bcd1378-0e33-496d-a7a2-2c19bba3dddd",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": [
+										{
+											"id": "f38aa7e5-8f34-426f-b1df-cb892660f69b",
+											"name": "SendRegistrationInviteToEmptyMail",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 13:08:13 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 15:08:13\"\n}"
+										}
+									]
+								},
+								{
+									"name": "SendRegistrationInviteToNullMail",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
+												"exec": [
+													"pm.test(\"Status code is 403\", function () {\r",
+													"    pm.response.to.have.status(403);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "dbfd1975-ee75-4e5e-bccf-26166dc8dc82",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": [
+										{
+											"id": "eeadb013-4384-4d00-b1e2-f9b2d48318ad",
+											"name": "SendRegistrationInviteToNullMail",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": null\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 20 Jul 2022 13:08:44 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"email cannot be null\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 15:08:44\"\n}"
+										}
+									]
+								},
+								{
+									"name": "SendRegistrationInviteAlreadyRegisteredMail",
+									"id": "0b75dc57-b59f-42b0-bc1a-6f4fc31f2477",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"response": [
+										{
+											"id": "4c945fcf-f2d6-4e61-933b-8f6c04825947",
+											"name": "SendRegistrationInviteAlreadyRegisteredMail",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 21 Jul 2022 07:20:31 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"email is already in use\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 09:20:31\"\n}"
+										}
+									]
+								}
+							],
+							"id": "8f262302-eab4-4b2c-a087-130ceda8641c"
+						}
+					],
+					"id": "85b619fd-be74-487d-86fb-eb5992716d63"
+				},
+				{
+					"name": "InvalidToken",
+					"item": [
+						{
+							"name": "SendRegistrationInviteEmptyToken",
+							"id": "2602752f-12f5-42d2-993d-9e0595f0fd29",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": ""
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+							},
+							"response": [
+								{
+									"id": "edfc7612-e03f-483a-8ec5-bf3e01dcc68b",
+									"name": "SendRegistrationInviteEmptyToken",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Jul 2022 12:53:13 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "SendRegistrationInviteExpiredToken",
+							"id": "1b6679fb-5f21-46c3-9ddc-4534073a5030",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{expiredToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+							},
+							"response": [
+								{
+									"id": "a6d30a04-89d9-4efd-bf91-841588fe418d",
+									"name": "SendRegistrationInviteExpiredToken",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Jul 2022 12:53:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 14:53:50\"\n}"
+								}
+							]
+						},
+						{
+							"name": "SendRegistrationInviteInvalidToken",
+							"id": "7e52407b-2228-41f8-8720-a9756a4bc90d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{invalidToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+							},
+							"response": [
+								{
+									"id": "d7be75c6-15d4-40f5-84c3-c42cc978f7bc",
+									"name": "SendRegistrationInviteInvalidToken",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 20 Jul 2022 12:54:48 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 14:54:48\"\n}"
+								}
+							]
+						}
+					],
+					"id": "b9eae4a9-4a80-4ed7-aac4-21baefd5fa07",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "e40dc1b0-e51f-4b67-af8a-3bf843c2e64c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f6cca3e0-4377-47e6-ad05-bbafb56774af",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								]
+							}
+						}
+					]
+				}
+			],
+			"id": "64667e8b-3231-4293-a351-566f66aa8559"
+		},
+		{
 			"name": "RegistrationAPI",
 			"item": [
 				{
@@ -18272,7 +19494,7 @@
 									]
 								},
 								{
-									"name": "NewRegister",
+									"name": "RegisterInvitedUser",
 									"event": [
 										{
 											"listen": "test",
@@ -62284,1228 +63506,6 @@
 				}
 			],
 			"id": "0123d4da-0930-43ef-98ea-6f0a9dcee640"
-		},
-		{
-			"name": "InviteAPI",
-			"item": [
-				{
-					"name": "ValidToken",
-					"item": [
-						{
-							"name": "ValidTokenAndSuccessfulPOST",
-							"item": [
-								{
-									"name": "SendRegistrationInviteAsAdmin",
-									"id": "533d90c5-7b92-4545-868c-a353fb585e62",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"nemoxi9344@storypo.com\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"response": [
-										{
-											"id": "9369eef1-51f7-471d-b887-ecfed425fafc",
-											"name": "SendRegistrationInviteAsAdmin",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-											},
-											"status": "No Content",
-											"code": 204,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 20 Jul 2022 12:34:41 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
-								}
-							],
-							"id": "f5eca1a4-c5bc-441b-ba94-e8fa3e434ff1",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "6fa49bfd-c426-42a0-8009-ed1af9ead53b",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "1bd57198-387a-41ea-9b89-5ad0605e28cb",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 204\", function () {",
-											"    pm.response.to.have.status(204);",
-											"});"
-										]
-									}
-								}
-							]
-						},
-						{
-							"name": "ValidTokenButUnsuccessfulPOST",
-							"item": [
-								{
-									"name": "SendRegistrationInviteAsWorker",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
-												"exec": [
-													"pm.test(\"Status code is 403\", function () {\r",
-													"    pm.response.to.have.status(403);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "798faac1-90c9-4181-abfa-0854ae4444fa",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"response": [
-										{
-											"id": "43a17efd-070b-4eef-aa53-c15bf67f79be",
-											"name": "SendRegistrationInviteAsWorker",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-											},
-											"status": "Forbidden",
-											"code": 403,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 20 Jul 2022 12:41:14 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
-								},
-								{
-									"name": "SendRegistrationInviteAsManager",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
-												"exec": [
-													"pm.test(\"Status code is 403\", function () {\r",
-													"    pm.response.to.have.status(403);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "d2c42a71-b892-4e34-bd22-a63c4a0ef418",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{managerAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"response": [
-										{
-											"id": "458b80dd-114f-4b3f-ab1e-0bf07e0fd978",
-											"name": "SendRegistrationInviteAsManager",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-											},
-											"status": "Forbidden",
-											"code": 403,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 20 Jul 2022 13:04:35 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
-								},
-								{
-									"name": "SendRegistrationInviteToInvalidMail",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
-												"exec": [
-													"pm.test(\"Status code is 403\", function () {\r",
-													"    pm.response.to.have.status(403);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "caacdbe6-ce0d-463b-8da1-fefa0b806c35",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"invalidmail.com\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"response": [
-										{
-											"id": "8826a2cf-6e83-4978-9eca-dfa06e766c3d",
-											"name": "SendRegistrationInviteToInvalidMail",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"email\": \"invalidmail.com\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 20 Jul 2022 12:52:23 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 14:52:23\"\n}"
-										}
-									]
-								},
-								{
-									"name": "SendRegistrationInviteToEmptyMail",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
-												"exec": [
-													"pm.test(\"Status code is 403\", function () {\r",
-													"    pm.response.to.have.status(403);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "9bcd1378-0e33-496d-a7a2-2c19bba3dddd",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"response": [
-										{
-											"id": "f38aa7e5-8f34-426f-b1df-cb892660f69b",
-											"name": "SendRegistrationInviteToEmptyMail",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"email\": \"\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 20 Jul 2022 13:08:13 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"email format is not valid\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 15:08:13\"\n}"
-										}
-									]
-								},
-								{
-									"name": "SendRegistrationInviteToNullMail",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f105d8d3-db33-479d-b508-c9b1cbcaa7cd",
-												"exec": [
-													"pm.test(\"Status code is 403\", function () {\r",
-													"    pm.response.to.have.status(403);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "dbfd1975-ee75-4e5e-bccf-26166dc8dc82",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": null\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"response": [
-										{
-											"id": "eeadb013-4384-4d00-b1e2-f9b2d48318ad",
-											"name": "SendRegistrationInviteToNullMail",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"email\": null\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 20 Jul 2022 13:08:44 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"email cannot be null\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-20 15:08:44\"\n}"
-										}
-									]
-								},
-								{
-									"name": "SendRegistrationInviteAlreadyRegisteredMail",
-									"id": "0b75dc57-b59f-42b0-bc1a-6f4fc31f2477",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"response": [
-										{
-											"id": "4c945fcf-f2d6-4e61-933b-8f6c04825947",
-											"name": "SendRegistrationInviteAlreadyRegisteredMail",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-											},
-											"status": "Bad Request",
-											"code": 400,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 21 Jul 2022 07:20:31 GMT"
-												},
-												{
-													"key": "Connection",
-													"value": "close"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"email is already in use\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-21 09:20:31\"\n}"
-										}
-									]
-								}
-							],
-							"id": "8f262302-eab4-4b2c-a087-130ceda8641c"
-						}
-					],
-					"id": "85b619fd-be74-487d-86fb-eb5992716d63"
-				},
-				{
-					"name": "InvalidToken",
-					"item": [
-						{
-							"name": "SendRegistrationInviteEmptyToken",
-							"id": "2602752f-12f5-42d2-993d-9e0595f0fd29",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": ""
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-							},
-							"response": [
-								{
-									"id": "edfc7612-e03f-483a-8ec5-bf3e01dcc68b",
-									"name": "SendRegistrationInviteEmptyToken",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Length",
-											"value": "0"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 20 Jul 2022 12:53:13 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": null
-								}
-							]
-						},
-						{
-							"name": "SendRegistrationInviteExpiredToken",
-							"id": "1b6679fb-5f21-46c3-9ddc-4534073a5030",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{expiredToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-							},
-							"response": [
-								{
-									"id": "a6d30a04-89d9-4efd-bf91-841588fe418d",
-									"name": "SendRegistrationInviteExpiredToken",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=ISO-8859-1"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 20 Jul 2022 12:53:50 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 14:53:50\"\n}"
-								}
-							]
-						},
-						{
-							"name": "SendRegistrationInviteInvalidToken",
-							"id": "7e52407b-2228-41f8-8720-a9756a4bc90d",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{invalidToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-							},
-							"response": [
-								{
-									"id": "d7be75c6-15d4-40f5-84c3-c42cc978f7bc",
-									"name": "SendRegistrationInviteInvalidToken",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"cojade8237@storypo.com\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_INVITE}}"
-									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=ISO-8859-1"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 20 Jul 2022 12:54:48 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-20 14:54:48\"\n}"
-								}
-							]
-						}
-					],
-					"id": "b9eae4a9-4a80-4ed7-aac4-21baefd5fa07",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "e40dc1b0-e51f-4b67-af8a-3bf843c2e64c",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "f6cca3e0-4377-47e6-ad05-bbafb56774af",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 401\", function () {",
-									"    pm.response.to.have.status(401);",
-									"});"
-								]
-							}
-						}
-					]
-				}
-			],
-			"id": "64667e8b-3231-4293-a351-566f66aa8559"
 		}
 	]
 }
