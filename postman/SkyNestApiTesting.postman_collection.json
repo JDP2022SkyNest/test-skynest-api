@@ -20166,6 +20166,53 @@
 											"body": "{\n    \"id\": \"d41bd3ea-a2ee-4939-bb39-1e729e87f038\",\n    \"email\": \"negid81810@chimpad.com\",\n    \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\n    \"surname\": \"Lkfssj\",\n    \"phoneNumber\": \"872312547854522452188935412322\",\n    \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\",\n    \"roleName\": \"role_worker\",\n    \"positionInCompany\": null,\n    \"companyName\": \"HTEC\",\n    \"verified\": true,\n    \"enabled\": true\n}"
 										}
 									]
+								},
+								{
+									"name": "AllParametersTheMinLimit",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {\r",
+													"    pm.response.to.have.status(400);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "cdc10a49-e0ce-417d-bd89-322feb4d816e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"LgfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"Lkfssj\",\r\n  \"phoneNumber\": \"872312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w"
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "e3ae9017-e9f0-42b9-a60f-7e354b7b3f6a"
