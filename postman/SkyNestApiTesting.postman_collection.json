@@ -18339,7 +18339,7 @@
 									]
 								},
 								{
-									"name": "AllInputsEmpty",
+									"name": "EmptyName",
 									"event": [
 										{
 											"listen": "test",
