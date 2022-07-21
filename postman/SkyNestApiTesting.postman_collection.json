@@ -50204,7 +50204,7 @@
 								},
 								"method": "PUT",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolderInFolderId}}{{ENDPOINT_MOVE}}{{folderInFolderId}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolder1Id}}{{ENDPOINT_MOVE}}{{folderInFolder2Id}}"
 							},
 							"response": []
 						},
