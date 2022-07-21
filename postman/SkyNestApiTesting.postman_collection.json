@@ -49932,7 +49932,7 @@
 							]
 						},
 						{
-							"name": "MoveFolderInChildFolder Copy",
+							"name": "MoveFolderInAnotherFolder",
 							"id": "aa0c40a0-7bf6-4fcc-88a2-459971614264",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
