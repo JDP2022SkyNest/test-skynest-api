@@ -50186,6 +50186,25 @@
 													"body": null
 												}
 											]
+										},
+										{
+											"name": "MoveFolderInAnotherFolderOnSameLevel Copy",
+											"id": "29b907d8-ea4b-4fd9-8716-47561a622f6d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{folderInFolder1Id}}{{ENDPOINT_MOVE}}{{folderInFolder2Id}}"
+											},
+											"response": []
 										}
 									],
 									"id": "a4b475e2-5253-4673-8d4e-7a56526a6f06"
