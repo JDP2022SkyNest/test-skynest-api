@@ -18397,7 +18397,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"Кирилица123\",\r\n  \"name\": \"Кирилица\",\r\n  \"surname\": \"Кирилица\",\r\n  \"phoneNumber\": \"77857332233365\",\r\n  \"address\": \"Улица 66\"\r\n}",
+											"raw": "{\r\n    \"password\":\"Ulica123\",\r\n    \"name\": \"    \",\r\n    \"surname\": \"Surname\",\r\n    \"phoneNumber\": \"7412543717\",\r\n    \"address\": \"Street 33\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
