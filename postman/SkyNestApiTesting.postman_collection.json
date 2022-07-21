@@ -49932,7 +49932,7 @@
 							]
 						},
 						{
-							"name": "MoveFolderInFolderThatIsAlreadyIn Copy",
+							"name": "MoveFolderInFolderThatIsAlreadyIn",
 							"id": "efa99b89-3dd7-481e-bcca-0a78c974fe42",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
