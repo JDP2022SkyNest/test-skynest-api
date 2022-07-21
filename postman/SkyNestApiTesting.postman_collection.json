@@ -50489,7 +50489,7 @@
 											]
 										},
 										{
-											"name": "MoveFolderInFolderThatIsAlreadyIn Copy",
+											"name": "MoveFolderInNotExistingFolder",
 											"id": "5713dcff-fea7-4e71-a7ab-9ed14818963c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
