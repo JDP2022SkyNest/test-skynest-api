@@ -50097,6 +50097,11 @@
 					"name": "MoveFolder",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "f05b31a6-2c4a-4392-9345-3cd804b07d28"
+						},
+						{
 							"name": "MoveFolderInChildFolder",
 							"id": "d7b021fd-0e52-4cda-bb90-10691775afbf",
 							"protocolProfileBehavior": {
