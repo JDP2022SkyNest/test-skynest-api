@@ -44474,7 +44474,7 @@
 															"const jsonData = pm.response.json()\r",
 															"\r",
 															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-															"    pm.environment.set(\"folderInFolderId\", jsonData.id);\r",
+															"    pm.environment.set(\"folderInFolder2Id\", jsonData.id);\r",
 															"});\r",
 															"\r",
 															""
@@ -44507,7 +44507,90 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "707c0f6a-da1d-4497-b131-aaf119fbf512",
+													"name": "CreateFolderInAdmin'sFolder Copy",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"FolderInFolder2\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 21 Jul 2022 15:01:50 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"a293bc0a-af10-4dfb-9785-1a96b91bed14\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"FolderInFolder2\",\n    \"createdById\": \"a64314f7-08fc-11ed-b371-0242ac120003\",\n    \"parentFolderId\": \"c598985a-b7f6-43fe-86e1-fc4bc0a4f39a\",\n    \"bucketId\": \"2b20f5fb-0054-4405-8adf-00832cf81522\"\n}"
+												}
+											]
 										},
 										{
 											"name": "CreateFolderInFolderInFolder",
