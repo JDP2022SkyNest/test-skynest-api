@@ -19888,7 +19888,53 @@
 						},
 						{
 							"name": "StringLength",
-							"item": [],
+							"item": [
+								{
+									"name": "RegisterInvitedUser Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8a521470-9d81-4439-8dc3-905f290a8eec",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "a5fd4a20-a1c4-4e0b-bc66-0c2288b2ac7f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"First123\",\r\n  \"name\": \"First\",\r\n  \"surname\": \"User\",\r\n  \"phoneNumber\": \"7856532145\",\r\n  \"address\": \"Local address\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token={{invitedUserToken}}",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "{{invitedUserToken}}"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
 							"id": "e3ae9017-e9f0-42b9-a60f-7e354b7b3f6a"
 						}
 					],
