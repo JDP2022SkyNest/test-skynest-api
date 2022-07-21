@@ -20192,7 +20192,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"password\": \"LgfdsjfdrjvdjLhfshhsdh34459hgc\",\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"Lkfssj\",\r\n  \"phoneNumber\": \"872312547854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\"\r\n}",
+											"raw": "{\r\n  \"password\": \"Limit1234\",\r\n  \"name\": \"T\",\r\n  \"surname\": \"L\",\r\n  \"phoneNumber\": \"2\",\r\n  \"address\": \"g\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -20200,14 +20200,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w",
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA",
 											"host": [
 												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
 											],
 											"query": [
 												{
 													"key": "token",
-													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJuZWdpZDgxODEwQGNoaW1wYWQuY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDAxMX0.9mzCTR1IIOsm4q8B9NLbQBoKpuijPO1oxaaIsJ0LY91TnmQYYKiyaMIEQs0mjO4tiClGSxjgmXrSNw1bh2-o1w"
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJjb2ZleW93NTQ3QGxvZ29kZXouY29tIiwiQ29tcGFueSBuYW1lIjoiSFRFQyIsImV4cCI6MTY1ODQ5MDM1MX0.3Xk8zSa70P22nR8KVsMvzQljetwAXJ70dYNz5dxfSS4psbVCtKVbSOe8LSIDM0qE7dpEbwdRaRiowQ8Am0CIqA"
 												}
 											]
 										}
