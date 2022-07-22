@@ -60631,6 +60631,34 @@
 											]
 										},
 										{
+											"name": "DuplicateBucketPermission Copy",
+											"id": "5e5b068c-94da-44c9-8193-c5876bd4f424",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+											},
+											"response": []
+										},
+										{
 											"name": "GrantInvalidPermission",
 											"id": "f13bb52d-0786-4a46-838d-787318bcdc02",
 											"protocolProfileBehavior": {
