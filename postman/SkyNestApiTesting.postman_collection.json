@@ -66637,12 +66637,12 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "POST",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{adminBucketId}}"
 											},
 											"response": [
 												{
