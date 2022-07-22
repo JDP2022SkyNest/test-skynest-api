@@ -66713,7 +66713,31 @@
 											]
 										}
 									],
-									"id": "203d8beb-aee2-4515-ae58-8e3f00600ed9"
+									"id": "203d8beb-aee2-4515-ae58-8e3f00600ed9",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "da610dff-f49a-493b-a974-03b490894674",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "97b50398-30b5-4852-812a-560a9c9d4d17",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulPOST",
