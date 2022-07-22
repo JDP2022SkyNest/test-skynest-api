@@ -60033,7 +60033,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"owner\"\r\n}",
+													"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -61201,9 +61201,84 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{secondValidAdminId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "0cf977bf-7a9e-4587-8bfc-a57e73a853cd",
+													"name": "RevokePermissionAsOwnerToAnotherUser",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 22 Jul 2022 07:29:11 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
 										}
 									],
 									"id": "13a7af2b-cb9e-4a66-8f62-d74643f260bc"
