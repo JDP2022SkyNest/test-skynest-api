@@ -66545,6 +66545,11 @@
 									"id": "203d8beb-aee2-4515-ae58-8e3f00600ed9"
 								},
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "38a379a8-4bd0-41c1-8e93-b6a685da0dc0"
+								},
+								{
 									"name": "TagABucketAsOwner",
 									"id": "5f80c29b-be53-423f-a506-ec2389ce0435",
 									"protocolProfileBehavior": {
