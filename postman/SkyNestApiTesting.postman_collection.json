@@ -66637,12 +66637,12 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "POST",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerBucketId}}"
 											},
 											"response": [
 												{
@@ -66713,7 +66713,7 @@
 											]
 										},
 										{
-											"name": "TagAFolderInsideThatBucketWithSameTag",
+											"name": "TagAFolderAsOwner",
 											"id": "b2a4f78d-2de4-4809-9a36-54a2648c1cb6",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
