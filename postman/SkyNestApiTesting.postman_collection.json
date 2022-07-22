@@ -66628,7 +66628,7 @@
 											]
 										},
 										{
-											"name": "TagManyObjectsWithSameTag",
+											"name": "TagAnotherBucketWithSameTag",
 											"id": "be8daa51-8eca-45b7-ac81-8f9af3e51bb7",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -66647,7 +66647,7 @@
 											"response": [
 												{
 													"id": "5411ed0f-4422-45cb-b639-b4e32572a8aa",
-													"name": "TagManyObjectsWithSameTag",
+													"name": "TagAnotherBucketWithSameTag",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
