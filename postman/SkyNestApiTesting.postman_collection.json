@@ -62084,6 +62084,34 @@
 											]
 										},
 										{
+											"name": "RevokePermissionForNotExistingBucket Copy",
+											"id": "b8ac4e43-4cfd-4295-9f3e-a177af5c3ecf",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{notExistingBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "RevokePermissionForAlreadyDeletedBucket",
 											"id": "f36acb45-97f8-4ecb-ac08-3a431a0e394a",
 											"protocolProfileBehavior": {
