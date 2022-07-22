@@ -50667,7 +50667,7 @@
 											]
 										},
 										{
-											"name": "MoveFolderInAlreadyDeletedFolder Copy",
+											"name": "MoveFolderInAlreadyDeletedBucket",
 											"id": "a60e086c-8295-453c-b1a3-af6869aa5617",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
