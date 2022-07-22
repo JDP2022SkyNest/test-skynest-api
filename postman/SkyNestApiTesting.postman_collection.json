@@ -66542,6 +66542,11 @@
 							"id": "5781dcf0-34e3-4551-b8cf-ae714c16fa12"
 						},
 						{
+							"name": "InvalidToken",
+							"item": [],
+							"id": "0f6f39bb-1368-40a5-9fef-545622781936"
+						},
+						{
 							"name": "TagABucketAsOwner",
 							"id": "5f80c29b-be53-423f-a506-ec2389ce0435",
 							"protocolProfileBehavior": {
