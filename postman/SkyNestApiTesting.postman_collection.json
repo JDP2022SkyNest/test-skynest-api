@@ -62211,7 +62211,7 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{secondValidWorkerId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 									},
 									"response": []
 								}
