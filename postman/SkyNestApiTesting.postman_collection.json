@@ -34807,7 +34807,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Hristina's Bucket\",\r\n  \"description\": \"Bucket of worker\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Bucket of a worker\",\r\n  \"description\": \"Bucket of a worker\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
