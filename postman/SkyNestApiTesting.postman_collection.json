@@ -66620,6 +66620,25 @@
 									"body": null
 								}
 							]
+						},
+						{
+							"name": "TagABucketAsNotOwner",
+							"id": "ae069a6b-9b85-4d23-98c4-c7d0e31da1e7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerBucketId}}"
+							},
+							"response": []
 						}
 					],
 					"id": "515f559a-91ec-4bae-b0b7-24664c4b601f"
