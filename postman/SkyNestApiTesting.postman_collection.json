@@ -35231,7 +35231,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Christine's Bucket\",\r\n  \"description\": \"Bucket of admin\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Bucket of an admin,\r\n  \"description\": \"Bucket of admin\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
