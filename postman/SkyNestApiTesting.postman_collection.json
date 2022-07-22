@@ -67092,7 +67092,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "TagABucketAsOwner Copy",
+									"name": "TagObjectEmptyToken",
 									"id": "7552897e-6507-4e4b-a540-e0b8641e9f6b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
