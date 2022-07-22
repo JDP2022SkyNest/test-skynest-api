@@ -61091,7 +61091,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"owner\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
