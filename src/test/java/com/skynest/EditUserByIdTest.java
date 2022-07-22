@@ -36,7 +36,7 @@ public class EditUserByIdTest extends BaseTest {
     }
 
     @Test(dataProvider = "UserData")
-    void logged_admin_should_be_able_to_edit_details_of_random_worker(EditUserRequest editRequest) {
+    void logged_admin_should_be_able_to_edit_details_of_specific_worker(EditUserRequest editRequest) {
         loginAs(Roles.ADMIN);
         Response getAllUsersResponse = skyNestBackendClient.getAllUsers();
         getAllUsersResponse.then().statusCode(SC_OK);

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -17,4 +18,6 @@ public class BucketResponse {
     private String description;
     private int size;
     private Boolean isPublic;
+    private String deletedOn;
+    private List<String> tags;
 }

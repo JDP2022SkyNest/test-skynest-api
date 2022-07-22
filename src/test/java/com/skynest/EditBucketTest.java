@@ -15,7 +15,7 @@ public class EditBucketTest extends BucketBaseTest {
     @Test
     void logged_admin_should_be_able_to_edit_specific_bucket_with_valid_inputs() {
         EditBucketRequest editBucketRequest = EditBucketRequest.generateValidBucketEditRequest();
-        Response response = skyNestBackendClient.editBucket(editBucketRequest, createdBucketId);
+        Response response = skyNestBackendClient.editBucket(editBucketRequest, createdBucketResponse.getBucketId());
         response.then().statusCode(SC_OK);
 
         BucketResponse editBucketResponse = response.as(BucketResponse.class);
@@ -23,18 +23,24 @@ public class EditBucketTest extends BucketBaseTest {
         assertEquals(editBucketResponse.getName(), editBucketRequest.getName());
         assertEquals(editBucketResponse.getDescription(), editBucketRequest.getDescription());
         assertEquals(editBucketResponse.getIsPublic(), editBucketRequest.getIsPublic());
+
+        createdBucketResponse = editBucketResponse;
     }
 
     @Test(dataProvider = "invalidBucketData")
     void logged_admin_should_not_be_able_to_edit_specific_bucket_with_invalid_inputs(EditBucketRequest editBucketRequest) {
-        Response response = skyNestBackendClient.editBucket(editBucketRequest, createdBucketId);
+        Response response = skyNestBackendClient.editBucket(editBucketRequest, createdBucketResponse.getBucketId());
         response.then().statusCode(SC_BAD_REQUEST);
     }
 
     @DataProvider(name = "invalidBucketData")
     public Object[][] getInvalidBucketData() {
         return new Object[][]{
-                new Object[]{EditBucketRequest.generateValidBucketEditRequest().withName("").withDescription("").withIsPublic(null)}
+                new Object[]{EditBucketRequest.generateValidBucketEditRequest().withName("")},
+                {EditBucketRequest.generateValidBucketEditRequest().withDescription("")},
+                {EditBucketRequest.generateValidBucketEditRequest().withName(null)},
+                {EditBucketRequest.generateValidBucketEditRequest().withDescription(null)},
+                {EditBucketRequest.generateValidBucketEditRequest().withIsPublic(null)}
         };
     }
 

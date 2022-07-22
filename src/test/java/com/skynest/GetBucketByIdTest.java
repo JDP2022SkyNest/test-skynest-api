@@ -15,13 +15,15 @@ public class GetBucketByIdTest extends BucketBaseTest {
 
     @Test
     void user_should_be_able_to_view_details_of_specific_bucket_by_valid_id() {
-        Response getBucketResponse = skyNestBackendClient.getBucketById(createdBucketId);
+        Response getBucketResponse = skyNestBackendClient.getBucketById(createdBucketResponse.getBucketId());
         getBucketResponse.then().statusCode(SC_OK);
 
         BucketResponse bucketResponse = getBucketResponse.as(BucketResponse.class);
 
         assertNotNull(bucketResponse.getBucketId());
-        assertEquals(bucketResponse.getName(), bucketName);
+        assertEquals(bucketResponse.getName(), createdBucketResponse.getName());
+        assertEquals(bucketResponse.getDescription(), createdBucketResponse.getDescription());
+        assertEquals(bucketResponse.getIsPublic(), createdBucketResponse.getIsPublic());
     }
 
     @Test

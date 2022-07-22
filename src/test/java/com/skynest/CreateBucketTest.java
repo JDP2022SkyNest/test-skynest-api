@@ -14,7 +14,7 @@ import static org.testng.AssertJUnit.assertNotNull;
 public class CreateBucketTest extends BaseTest {
 
     @Test
-    void creating_new_valid_bucket_should_return_specified_response() {
+    void logged_user_should_be_able_to_create_bucket_with_valid_inputs() {
         loginAs(Roles.ADMIN);
 
         CreateBucketRequest createBucketRequest = CreateBucketRequest.generateValidBucketCreationRequest();
@@ -24,12 +24,12 @@ public class CreateBucketTest extends BaseTest {
         BucketResponse createBucketResponse = response.as(BucketResponse.class);
 
         assertNotNull(createBucketResponse.getBucketId());
-        assertEquals(createBucketResponse.getName(),createBucketRequest.getName());
+        assertEquals(createBucketResponse.getName(), createBucketRequest.getName());
         assertEquals(createBucketResponse.getDescription(), createBucketRequest.getDescription());
     }
 
     @Test(dataProvider = "invalidBucketData")
-    void creating_new_invalid_bucket_should_return_specified_response(CreateBucketRequest createBucketRequest) {
+    void logged_user_should_not_be_able_to_create_bucket_with_invalid_inputs(CreateBucketRequest createBucketRequest) {
         loginAs(Roles.ADMIN);
         Response response = skyNestBackendClient.createBucket(createBucketRequest);
         response.then().statusCode(SC_BAD_REQUEST);
@@ -37,9 +37,11 @@ public class CreateBucketTest extends BaseTest {
 
     @DataProvider(name = "invalidBucketData")
     public Object[][] getInvalidBucketData() {
-        return new Object[][] {
-                new Object[]{ CreateBucketRequest.generateValidBucketCreationRequest().withName("").withDescription("")
-                }
+        return new Object[][]{
+                new Object[]{CreateBucketRequest.generateValidBucketCreationRequest().withName("")},
+                {CreateBucketRequest.generateValidBucketCreationRequest().withDescription("")},
+                {CreateBucketRequest.generateValidBucketCreationRequest().withName(null)},
+                {CreateBucketRequest.generateValidBucketCreationRequest().withDescription(null)}
         };
     }
 }
