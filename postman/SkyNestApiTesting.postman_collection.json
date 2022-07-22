@@ -62084,7 +62084,7 @@
 											]
 										},
 										{
-											"name": "RevokePermissionForNotExistingBucket Copy",
+											"name": "RevokePermissionForNotExistingUser",
 											"id": "b8ac4e43-4cfd-4295-9f3e-a177af5c3ecf",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
