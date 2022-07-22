@@ -60238,7 +60238,7 @@
 												},
 												{
 													"id": "aad70fae-00e9-4284-b57f-5eb5fa2f9ecc",
-													"name": "GrantBucketPermissionAsOwnerToAnotherUser",
+													"name": "DownloadPermission",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
