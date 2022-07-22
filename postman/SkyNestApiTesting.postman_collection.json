@@ -62476,7 +62476,7 @@
 									"response": [
 										{
 											"id": "c17e818f-7040-4786-a480-51bbef9aac21",
-											"name": "EditGrantedPermissionForYourself",
+											"name": "EditGrantedPermissionForYourselfAsAdmin",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
