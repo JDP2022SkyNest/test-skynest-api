@@ -66537,7 +66537,7 @@
 					"name": "TagAnObject",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "TagABucketAsOwner",
 							"id": "5f80c29b-be53-423f-a506-ec2389ce0435",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
