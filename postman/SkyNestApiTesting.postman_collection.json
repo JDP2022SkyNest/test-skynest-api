@@ -66551,7 +66551,7 @@
 								},
 								"method": "PUT",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerFileId}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerBucketId}}"
 							},
 							"response": []
 						}
