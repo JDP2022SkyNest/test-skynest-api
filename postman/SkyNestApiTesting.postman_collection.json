@@ -66556,7 +66556,7 @@
 							"response": [
 								{
 									"id": "b45628bd-3506-4a75-aac0-2734ddf779f1",
-									"name": "New Request",
+									"name": "TagABucketAsOwner",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
