@@ -66922,6 +66922,25 @@
 													"body": "{\n    \"timestamp\": 1658494711417,\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"path\": \"/tags/29f451a7-8d33-44db-be39-601757f71666/object/\"\n}"
 												}
 											]
+										},
+										{
+											"name": "TagAlreadyDeletedBucket",
+											"id": "fd809e0f-5dc1-4b30-9bbe-a9fcb767ef39",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{notExistingBucketId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "38a379a8-4bd0-41c1-8e93-b6a685da0dc0"
