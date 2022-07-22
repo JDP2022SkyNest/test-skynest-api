@@ -60631,7 +60631,7 @@
 											]
 										},
 										{
-											"name": "DuplicateBucketPermission Copy",
+											"name": "GrantPermissionForFolder(NotBucket)",
 											"id": "5e5b068c-94da-44c9-8193-c5876bd4f424",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
