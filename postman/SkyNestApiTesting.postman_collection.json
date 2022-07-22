@@ -67006,7 +67006,81 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{notExistingTagId}}{{ENDPOINT_OBJECT}}{{adminBucketId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "7f080aa8-b0bc-4c2e-9986-b04de3a79f58",
+													"name": "TagABucketWithNotExistingTag",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{notExistingTagId}}{{ENDPOINT_OBJECT}}{{adminBucketId}}"
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 22 Jul 2022 13:08:06 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Tag doesn't exist\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-22 13:08:06\"\n}"
+												}
+											]
 										}
 									],
 									"id": "38a379a8-4bd0-41c1-8e93-b6a685da0dc0"
