@@ -66622,7 +66622,7 @@
 							]
 						},
 						{
-							"name": "TagABucketAsNotOwner",
+							"name": "TagABucketWithSameTagTwice",
 							"id": "ae069a6b-9b85-4d23-98c4-c7d0e31da1e7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
