@@ -67090,7 +67090,27 @@
 						},
 						{
 							"name": "InvalidToken",
-							"item": [],
+							"item": [
+								{
+									"name": "TagABucketAsOwner Copy",
+									"id": "7552897e-6507-4e4b-a540-e0b8641e9f6b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerBucketId}}"
+									},
+									"response": []
+								}
+							],
 							"id": "0f6f39bb-1368-40a5-9fef-545622781936"
 						}
 					],
