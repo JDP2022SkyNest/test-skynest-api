@@ -50667,7 +50667,7 @@
 											]
 										},
 										{
-											"name": "MoveFolderInAlreadyDeletedBucket",
+											"name": "MoveFolderInAnotherBucket",
 											"id": "a60e086c-8295-453c-b1a3-af6869aa5617",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -50681,7 +50681,7 @@
 												},
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_MOVE}}{{deletedBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_MOVE}}{{workerBucketId}}"
 											},
 											"response": []
 										}
