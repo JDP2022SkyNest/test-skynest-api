@@ -66713,7 +66713,7 @@
 											]
 										},
 										{
-											"name": "TagAFolderAsOwner",
+											"name": "TagAFolderInsideThatBucketWithSameTag",
 											"id": "b2a4f78d-2de4-4809-9a36-54a2648c1cb6",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
