@@ -66711,6 +66711,25 @@
 													"body": null
 												}
 											]
+										},
+										{
+											"name": "TagAFolderAsOwner Copy",
+											"id": "2d684a27-ab78-4137-b9b4-a46ea6c80a67",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "203d8beb-aee2-4515-ae58-8e3f00600ed9"
