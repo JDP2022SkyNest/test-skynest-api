@@ -67272,6 +67272,25 @@
 											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-22 13:11:16\"\n}"
 										}
 									]
+								},
+								{
+									"name": "TagObjectExpiredToken Copy",
+									"id": "2d2121e6-78bc-4ab0-ab7e-57e5f49bf405",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerBucketId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "0f6f39bb-1368-40a5-9fef-545622781936"
