@@ -61075,7 +61075,7 @@
 									"name": "ValidTokenAndSuccessfulDELETE",
 									"item": [
 										{
-											"name": "RevokeBucketPermissionAsOwner",
+											"name": "RevokeBucketPermissionAsOwnerToYourself",
 											"id": "c82cce3f-d676-47e4-821a-c37525be6877",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
