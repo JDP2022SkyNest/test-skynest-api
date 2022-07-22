@@ -66537,6 +66537,11 @@
 					"name": "TagAnObject",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "5781dcf0-34e3-4551-b8cf-ae714c16fa12"
+						},
+						{
 							"name": "TagABucketAsOwner",
 							"id": "5f80c29b-be53-423f-a506-ec2389ce0435",
 							"protocolProfileBehavior": {
