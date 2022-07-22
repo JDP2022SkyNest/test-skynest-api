@@ -60320,7 +60320,7 @@
 												},
 												{
 													"id": "21c7ac90-1d6e-420a-aa85-89b89dadf308",
-													"name": "GrantBucketPermissionAsOwnerToAnotherUser",
+													"name": "ViewPermission",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
