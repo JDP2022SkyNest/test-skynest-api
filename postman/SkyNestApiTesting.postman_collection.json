@@ -66535,7 +66535,20 @@
 				},
 				{
 					"name": "TagAnObject",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "5f80c29b-be53-423f-a506-ec2389ce0435",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "515f559a-91ec-4bae-b0b7-24664c4b601f"
 				}
 			],
