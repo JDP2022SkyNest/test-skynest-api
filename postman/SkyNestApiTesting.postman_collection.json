@@ -61815,7 +61815,7 @@
 											]
 										},
 										{
-											"name": "GetWorker'sFIleInfoAsUserWithDownloadPermission Copy",
+											"name": "GetWorker'sFIleInfoAsUserWithEditPermission",
 											"id": "9e67d6a9-0313-46e2-af96-2bd7f8b8fc3c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
