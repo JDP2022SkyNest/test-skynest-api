@@ -56161,6 +56161,18 @@
 													"body": "{\n    \"id\": \"ce0cda64-6c73-43d9-b301-3b6c387126c6\",\n    \"createdOn\": \"2022-07-06T12:46:42\",\n    \"modifiedOn\": \"2022-07-06T12:46:42\",\n    \"deletedOn\": null,\n    \"name\": \"chair.dwg\",\n    \"createdById\": \"14449105-1f68-4c1e-b7b0-4b30f22cc97f\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"c9a2d7dd-b647-467c-8735-16c4b8a338d6\",\n    \"type\": \"image/vnd.dwg\",\n    \"size\": \"523842\"\n}"
 												}
 											]
+										},
+										{
+											"name": "New Request",
+											"id": "33712c82-09a2-4b00-bd9e-9903e7b16c21",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
 										}
 									],
 									"id": "fca28138-a9eb-4d46-bebc-3d0801451da5",
