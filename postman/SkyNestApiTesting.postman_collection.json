@@ -35490,7 +35490,7 @@
 											]
 										},
 										{
-											"name": "GrantDownloadPermissionAsOwner",
+											"name": "GrantDownloadBucketPermissionAsOwner",
 											"id": "ff737655-b3a4-493b-af68-5fe1123cd4df",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
