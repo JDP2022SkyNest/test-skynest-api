@@ -126,15 +126,16 @@ public class SkyNestBackendClient extends BaseClient {
                 .put(ApiConstants.BUCKET_BY_ID_PATH);
     }
 
-    public Response getDeletedBuckets() {
-        return requestMaker()
-                .get(ApiConstants.DELETED_BUCKETS_PATH);
-    }
-
     public Response restoreBucket(UUID bucketId) {
         return requestMaker()
                 .pathParam(bucketIdKey, bucketId)
                 .put(ApiConstants.RESTORE_BUCKET_PATH);
+    }
+
+    public Response createFolder(CreateFolderRequest createFolderRequest) {
+        return requestMaker()
+                .body(createFolderRequest)
+                .post(ApiConstants.FOLDERS_PATH);
     }
 
 }

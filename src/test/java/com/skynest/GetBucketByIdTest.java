@@ -14,7 +14,21 @@ import static org.testng.Assert.assertNotNull;
 public class GetBucketByIdTest extends BucketBaseTest {
 
     @Test
-    void user_should_be_able_to_view_details_of_specific_bucket_by_valid_id() {
+    void owner_should_be_able_to_view_details_of_its_private_bucket_by_valid_id() {
+        Response getBucketResponse = skyNestBackendClient.getBucketById(createdBucketResponse.getBucketId());
+        getBucketResponse.then().statusCode(SC_OK);
+
+        BucketResponse bucketResponse = getBucketResponse.as(BucketResponse.class);
+
+        assertNotNull(bucketResponse.getBucketId());
+        assertEquals(bucketResponse.getName(), createdBucketResponse.getName());
+        assertEquals(bucketResponse.getDescription(), createdBucketResponse.getDescription());
+        assertEquals(bucketResponse.getIsPublic(), createdBucketResponse.getIsPublic());
+    }
+
+    @Test
+    void every_logged_user_should_be_able_to_view_details_of_public_bucket_by_valid_id() {
+        loginAs(Roles.WORKER);
         Response getBucketResponse = skyNestBackendClient.getBucketById(createdBucketResponse.getBucketId());
         getBucketResponse.then().statusCode(SC_OK);
 

@@ -11,7 +11,8 @@ import static org.apache.http.HttpStatus.SC_OK;
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
-public class CreateBucketTest extends BaseTest {
+public class CreateAndDeleteBucketTest extends BaseTest {
+    protected BucketResponse createdBucketResponse;
 
     @Test
     void logged_user_should_be_able_to_create_bucket_with_valid_inputs() {
@@ -23,9 +24,16 @@ public class CreateBucketTest extends BaseTest {
 
         BucketResponse createBucketResponse = response.as(BucketResponse.class);
 
+        createdBucketResponse = createBucketResponse;
+
         assertNotNull(createBucketResponse.getBucketId());
         assertEquals(createBucketResponse.getName(), createBucketRequest.getName());
         assertEquals(createBucketResponse.getDescription(), createBucketRequest.getDescription());
+    }
+
+    @Test(dependsOnMethods = "logged_user_should_be_able_to_create_bucket_with_valid_inputs")
+    void user_should_be_able_to_delete_created_bucket() {
+        skyNestBackendClient.deleteBucket(createdBucketResponse.getBucketId()).then().statusCode(SC_OK);
     }
 
     @Test(dataProvider = "invalidBucketData")

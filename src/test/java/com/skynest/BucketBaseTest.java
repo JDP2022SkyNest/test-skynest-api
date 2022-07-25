@@ -2,6 +2,7 @@ package com.skynest;
 
 import com.skynest.models.BucketResponse;
 import com.skynest.models.CreateBucketRequest;
+import com.skynest.models.FolderResponse;
 import io.restassured.response.Response;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -11,6 +12,7 @@ import static org.testng.Assert.assertNotNull;
 
 public class BucketBaseTest extends BaseTest {
     protected BucketResponse createdBucketResponse;
+    protected FolderResponse createdFolderResponse;
 
     @BeforeClass
     void create_a_bucket_for_test_purpose() {
@@ -24,6 +26,8 @@ public class BucketBaseTest extends BaseTest {
 
         createdBucketResponse = createBucketResponse;
     }
+
+
 
     @AfterClass
     void delete_bucket_after_all_bucket_related_tests() {

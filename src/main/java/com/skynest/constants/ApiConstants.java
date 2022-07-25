@@ -22,6 +22,7 @@ public final class ApiConstants {
     public static final String DELETE_BUCKET_PATH = "/buckets/{bucketId}/delete";
     public static final String DELETED_BUCKETS_PATH = "/buckets/deleted";
     public static final String RESTORE_BUCKET_PATH = "/buckets/{bucketId}/restore";
+    public static final String FOLDERS_PATH = "/folders";
 
 }
 

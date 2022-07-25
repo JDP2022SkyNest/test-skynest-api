@@ -21,4 +21,13 @@ public class EditBucketRequest {
                 .build();
     }
 
+    public static EditBucketRequest generateEditRequestForPublicBucket() {
+        return EditBucketRequest.builder()
+                .name(RandomGenerator.generateRandomBucketName())
+                .description(RandomGenerator.generateRandomBucketDescription())
+                .isPublic(true)
+                .build();
+    }
+
+
 }

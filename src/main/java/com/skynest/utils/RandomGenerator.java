@@ -63,4 +63,8 @@ public final class RandomGenerator {
         return FAKER.lorem().sentence();
     }
 
+    public static String generateRandomFolderName() {
+        return FAKER.name().name();
+    }
+
 }
