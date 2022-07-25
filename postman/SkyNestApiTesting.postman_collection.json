@@ -14122,6 +14122,23 @@
 							"item": [
 								{
 									"name": "GetLoggedWorker",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "0d29600a-8eec-4513-b634-161402337296",
+												"exec": [
+													"pm.test(\"Set the id of a valid user registration as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validWorkerId\", jsonData.uuid);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "fcaa2cd8-9933-4810-9991-c0e3312f08a1",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
