@@ -61611,7 +61611,7 @@
 											]
 										},
 										{
-											"name": "GetAdmin'sFIleInfoAsUserWithViewPermission Copy",
+											"name": "GetFileDetailsFromPublicBucketWithoutPermissions",
 											"id": "02dc685b-a8aa-45cb-9480-fa58cc02a126",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
