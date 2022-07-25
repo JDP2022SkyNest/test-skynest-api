@@ -35601,7 +35601,7 @@
 											]
 										},
 										{
-											"name": "GrantDownloadPermissionAsOwner Copy",
+											"name": "GrantEdit(Delete)PermissionAsOwner",
 											"id": "1688158a-7209-4785-a562-3796de58e280",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
