@@ -14231,6 +14231,116 @@
 									]
 								},
 								{
+									"name": "GetLoggedSecondWorker",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "0d29600a-8eec-4513-b634-161402337296",
+												"exec": [
+													"pm.test(\"Set the id of a valid user registration as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validWorkerId\", jsonData.uuid);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "7a0b2569-be65-4c41-8c0f-1e043808d7bb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+									},
+									"response": [
+										{
+											"id": "d5c82410-8ad1-4a97-9aaa-aae1b8303801",
+											"name": "GetLoggedWorker",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 29 Jun 2022 13:26:44 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"uuid\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"username\": \"hristina.zaharieva@htecgroup.com\",\n    \"name\": \"Hristina\",\n    \"surname\": \"Zaharieva\",\n    \"company\": null,\n    \"roles\": [\n        \"role_worker\"\n    ]\n}"
+										}
+									]
+								},
+								{
 									"name": "GetLoggedAdmin",
 									"event": [
 										{
