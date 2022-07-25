@@ -38811,7 +38811,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "7dfa48cd-e35c-48cb-a8c3-be94aa9fd829",
+												"id": "0fbc49bc-9a90-41f7-92bb-6dbeb212e805",
 												"type": "text/javascript",
 												"exec": [
 													""
@@ -38821,11 +38821,24 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2aef9c87-0139-4871-aff2-45ea281e79ca",
+												"id": "975e41fe-0863-475d-aa48-2d0845ddb30c",
 												"type": "text/javascript",
 												"exec": [
+													"const jsonData = pm.response.json();",
+													"",
 													"pm.test(\"Status code is 200\", function () {",
 													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Test data type of the response\", () => {",
+													"  pm.expect(jsonData).to.be.an(\"object\");",
+													"  pm.expect(jsonData.bucketId).to.be.a(\"string\");",
+													"  pm.expect(jsonData.createdById).to.be.a(\"string\");",
+													"  pm.expect(jsonData.name).to.be.a(\"string\");",
+													"  pm.expect(jsonData.companyId).to.be.a(\"string\");",
+													"  pm.expect(jsonData.description).to.be.a(\"string\");",
+													"  pm.expect(jsonData.size).to.be.a(\"number\");",
+													"  pm.expect(jsonData.isPublic).to.be.a(\"boolean\");",
 													"});"
 												]
 											}
