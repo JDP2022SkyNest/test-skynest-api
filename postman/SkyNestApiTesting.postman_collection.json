@@ -35600,7 +35600,7 @@
 												},
 												{
 													"id": "b98e9926-5a91-48ae-bfd3-102c6c86e81b",
-													"name": "GrantOwnerPermissionToNotOwnerAsOwner",
+													"name": "GrantDownloadPermissionAsOwner",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
