@@ -14449,6 +14449,116 @@
 											"body": "{\n    \"uuid\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"username\": \"christinezahar@yahoo.com\",\n    \"name\": \"Porter\",\n    \"surname\": \"Sipes\",\n    \"company\": null,\n    \"roles\": [\n        \"role_worker\"\n    ]\n}"
 										}
 									]
+								},
+								{
+									"name": "GetLoggedSecondAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "dee3720b-2e5e-4915-9192-ae6f8c198e0b",
+												"exec": [
+													"pm.test(\"Set the uuid as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validAdminId\", jsonData.uuid);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "47b002df-f41d-4dde-86ab-5a5bb5bd81b9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+									},
+									"response": [
+										{
+											"id": "e36da70b-5c9b-491e-b2d0-6d867702d1ca",
+											"name": "GetLoggedAdmin",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 29 Jun 2022 13:26:36 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"uuid\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"username\": \"christinezahar@yahoo.com\",\n    \"name\": \"Porter\",\n    \"surname\": \"Sipes\",\n    \"company\": null,\n    \"roles\": [\n        \"role_worker\"\n    ]\n}"
+										}
+									]
 								}
 							],
 							"id": "796219da-be45-48ba-9795-ecd7544d15ed",
