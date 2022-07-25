@@ -29609,13 +29609,13 @@
 													"    pm.response.to.have.status(403);\r",
 													"});\r",
 													"\r",
-													"pm.environment.set(\"count\", 5);\r",
+													"pm.environment.set(\"count\", 6);\r",
 													"\r",
 													"var currentCount = pm.environment.get(\"count\")\r",
 													"if (currentCount > 0){\r",
 													" currentCount = currentCount -1 ;\r",
 													" pm.environment.set(\"count\", currentCount);\r",
-													" postman.setNextRequest(\"Create SE\");\r",
+													" postman.setNextRequest(\"ValidLoginAfterFourInvalidAttempts\");\r",
 													"}"
 												],
 												"type": "text/javascript"
