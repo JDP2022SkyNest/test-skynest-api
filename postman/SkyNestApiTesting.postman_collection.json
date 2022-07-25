@@ -61609,6 +61609,25 @@
 													"body": "{\n    \"id\": \"e7afc61c-c299-4823-8a26-1c8cdad3f5a7\",\n    \"createdOn\": \"2022-07-25T14:48:17\",\n    \"modifiedOn\": \"2022-07-25T14:48:17\",\n    \"deletedOn\": null,\n    \"name\": \"env\",\n    \"createdById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"b788cb93-fdd3-4389-879f-8863e995e527\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"429\",\n    \"tags\": []\n}"
 												}
 											]
+										},
+										{
+											"name": "GetAdmin'sFIleInfoAsUserWithViewPermission Copy",
+											"id": "02dc685b-a8aa-45cb-9480-fa58cc02a126",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": []
 										}
 									],
 									"id": "fca28138-a9eb-4d46-bebc-3d0801451da5",
