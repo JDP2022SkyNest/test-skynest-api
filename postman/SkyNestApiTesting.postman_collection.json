@@ -38569,6 +38569,11 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "d8379caa-3848-4538-aa6b-f69b6b30e367"
+								},
+								{
 									"name": "ViewOwnBucketAsWorker",
 									"event": [
 										{
