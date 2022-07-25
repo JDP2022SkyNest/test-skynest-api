@@ -35626,7 +35626,90 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "b56fd96a-0a7f-472a-bc5f-607ccfe3935f",
+													"name": "GrantEdit(Delete)PermissionAsOwner",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 25 Jul 2022 15:01:50 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"grantedToId\": \"c59c80fc-0cdc-44cc-9abd-bbb7e8e29e87\",\n    \"grantedToEmail\": \"tabax15797@aregods.com\",\n    \"objectId\": \"a80c3181-ed30-4edf-915d-33e06d2be933\",\n    \"grantedOn\": null,\n    \"accessName\": \"edit\",\n    \"grantedById\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n    \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n}"
+												}
+											]
 										}
 									],
 									"id": "6e9b7a0e-9164-4e47-9e6b-d5bb205fb32d"
