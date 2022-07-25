@@ -14458,11 +14458,11 @@
 											"script": {
 												"id": "dee3720b-2e5e-4915-9192-ae6f8c198e0b",
 												"exec": [
-													"pm.test(\"Set the uuid as an environment variable\", function () {\r",
+													"pm.test(\"Set the id of a valid user registration as an environment variable\", function () {\r",
 													"    pm.response.to.have.status(200);\r",
 													"    var jsonData = pm.response.json();\r",
 													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"validAdminId\", jsonData.uuid);\r",
+													"    pm.environment.set(\"secondValidAdminId\", jsonData.uuid);\r",
 													"});"
 												],
 												"type": "text/javascript"
