@@ -61516,6 +61516,25 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"response": []
+										},
+										{
+											"name": "GetAdmin'sFIleInfoAsUserWithViewPermission",
+											"id": "492a0509-23c2-41d4-af47-3630fb0a619c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": []
 										}
 									],
 									"id": "fca28138-a9eb-4d46-bebc-3d0801451da5",
