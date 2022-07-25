@@ -35407,7 +35407,7 @@
 												},
 												{
 													"id": "fe9b8ba3-3fef-4500-a0c1-a20a4c256b5c",
-													"name": "GrantBucketPermissionAsOwnerToAnotherUser",
+													"name": "GrantViewPermissionAsOwner",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
