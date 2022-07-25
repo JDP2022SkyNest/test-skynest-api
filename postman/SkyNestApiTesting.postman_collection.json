@@ -51493,7 +51493,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Folder\",\r\n  \"bucketId\": \"\",\r\n  \"parentFolderId\": null\r\n}",
+													"raw": "{\r\n  \"name\": \"Folder in not existing bucket\",\r\n  \"parentFolderId\": null,\r\n  \"bucketId\": \"{{notExistingBucketId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
