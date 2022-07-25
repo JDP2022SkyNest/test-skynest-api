@@ -35133,7 +35133,7 @@
 											]
 										},
 										{
-											"name": "GrantViewBucketPermissionAsOwner",
+											"name": "GrantViewPermissionAsOwner",
 											"id": "6d050576-d380-44a6-a3f5-57f6d57e3d74",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
