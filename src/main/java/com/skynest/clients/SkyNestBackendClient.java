@@ -2,8 +2,10 @@ package com.skynest.clients;
 
 import com.skynest.constants.ApiConstants;
 import com.skynest.models.*;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+import java.io.File;
 import java.net.URISyntaxException;
 import java.util.UUID;
 
@@ -136,6 +138,14 @@ public class SkyNestBackendClient extends BaseClient {
         return requestMaker()
                 .body(createFolderRequest)
                 .post(ApiConstants.FOLDERS_PATH);
+    }
+
+    public Response uploadFile(UUID bucketId) {
+        return requestMaker()
+                .contentType(ContentType.MULTIPART)
+                .multiPart("file", new File("src/test/resources/FileForUpload.txt"))
+                .pathParam(bucketIdKey, bucketId)
+                .post(ApiConstants.UPLOAD_FILE_TO_BUCKET);
     }
 
 }

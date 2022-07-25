@@ -37,7 +37,7 @@ public class CreateAndDeleteBucketTest extends BaseTest {
     }
 
     @Test(dataProvider = "invalidBucketData")
-    void logged_user_should_not_be_able_to_create_bucket_with_invalid_inputs(CreateBucketRequest createBucketRequest) {
+    void logged_user_should_not_be_able_to_create_bucket_with_invalid_data(CreateBucketRequest createBucketRequest) {
         loginAs(Roles.ADMIN);
         Response response = skyNestBackendClient.createBucket(createBucketRequest);
         response.then().statusCode(SC_BAD_REQUEST);

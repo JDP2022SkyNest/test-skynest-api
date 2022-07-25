@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 public class EditBucketTest extends BucketBaseTest {
 
     @Test(dataProvider = "validBucketData")
-    void logged_owner_should_be_able_to_edit_private_bucket_with_valid_inputs(EditBucketRequest editBucketRequest) {
+    void logged_owner_should_be_able_to_edit_private_bucket_with_valid_data(EditBucketRequest editBucketRequest) {
         Response response = skyNestBackendClient.editBucket(editBucketRequest, createdBucketResponse.getBucketId());
         response.then().statusCode(SC_OK);
 
@@ -28,7 +28,7 @@ public class EditBucketTest extends BucketBaseTest {
     }
 
     @Test
-    void every_logged_user_should_be_able_to_edit_public_bucket_with_valid_inputs() {
+    void every_logged_user_should_be_able_to_edit_public_bucket_with_valid_data() {
         loginAs(Roles.WORKER);
         EditBucketRequest editBucketRequest = EditBucketRequest.generateEditRequestForPublicBucket();
         Response response = skyNestBackendClient.editBucket(editBucketRequest, createdBucketResponse.getBucketId());
@@ -51,7 +51,7 @@ public class EditBucketTest extends BucketBaseTest {
     }
 
     @Test(dataProvider = "invalidBucketData")
-    void logged_user_should_not_be_able_to_edit_specific_bucket_with_invalid_inputs(EditBucketRequest editBucketRequest) {
+    void logged_user_should_not_be_able_to_edit_specific_bucket_with_invalid_data(EditBucketRequest editBucketRequest) {
         Response response = skyNestBackendClient.editBucket(editBucketRequest, createdBucketResponse.getBucketId());
         response.then().statusCode(SC_BAD_REQUEST);
     }
