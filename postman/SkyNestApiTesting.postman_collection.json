@@ -14484,7 +14484,81 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "27fcace5-d0eb-4938-a1b6-badbae7a582b",
+											"name": "GetLoggedSecondAdmin",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 25 Jul 2022 14:27:45 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"uuid\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"username\": \"christinezahar@yahoo.com\",\n    \"name\": \"Hris\",\n    \"surname\": \"Zahar\",\n    \"positionInCompany\": null,\n    \"companyName\": \"HTEC group\",\n    \"roles\": [\n        \"role_admin\"\n    ]\n}"
+										}
+									]
 								}
 							],
 							"id": "796219da-be45-48ba-9795-ecd7544d15ed",
