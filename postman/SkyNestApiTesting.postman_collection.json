@@ -38806,7 +38806,31 @@
 											]
 										}
 									],
-									"id": "d8379caa-3848-4538-aa6b-f69b6b30e367"
+									"id": "d8379caa-3848-4538-aa6b-f69b6b30e367",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "7dfa48cd-e35c-48cb-a8c3-be94aa9fd829",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "2aef9c87-0139-4871-aff2-45ea281e79ca",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												]
+											}
+										}
+									]
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulGET",
