@@ -35599,6 +35599,34 @@
 													"body": "{\n    \"grantedToId\": \"7c67344f-9692-4158-b2c6-af69234d188c\",\n    \"grantedToEmail\": \"cofeyow547@logodez.com\",\n    \"objectId\": \"a80c3181-ed30-4edf-915d-33e06d2be933\",\n    \"grantedOn\": null,\n    \"accessName\": \"download\",\n    \"grantedById\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n    \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n}"
 												}
 											]
+										},
+										{
+											"name": "GrantDownloadPermissionAsOwner Copy",
+											"id": "1688158a-7209-4785-a562-3796de58e280",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"owner\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+											},
+											"response": []
 										}
 									],
 									"id": "6e9b7a0e-9164-4e47-9e6b-d5bb205fb32d"
