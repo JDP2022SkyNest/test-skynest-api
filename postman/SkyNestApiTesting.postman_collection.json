@@ -14215,6 +14215,23 @@
 								},
 								{
 									"name": "GetLoggedAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "dee3720b-2e5e-4915-9192-ae6f8c198e0b",
+												"exec": [
+													"pm.test(\"Set the uuid as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validAdminId\", jsonData.id);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "d03dfc02-c032-4e2d-9145-df9ac7099587",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
