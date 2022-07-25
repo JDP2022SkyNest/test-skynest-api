@@ -61815,6 +61815,25 @@
 											]
 										},
 										{
+											"name": "GetWorker'sFIleInfoAsUserWithDownloadPermission Copy",
+											"id": "9e67d6a9-0313-46e2-af96-2bd7f8b8fc3c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": []
+										},
+										{
 											"name": "GetFileDetailsFromPublicBucketWithoutPermissions",
 											"id": "02dc685b-a8aa-45cb-9480-fa58cc02a126",
 											"protocolProfileBehavior": {
