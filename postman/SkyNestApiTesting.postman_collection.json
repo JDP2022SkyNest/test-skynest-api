@@ -47685,7 +47685,7 @@
 									"response": [
 										{
 											"id": "0720cc5b-9312-4955-b62a-b2045fa6518d",
-											"name": "DeletePrivateBucketAsUserWIthoutPermissions",
+											"name": "DeletePrivateBucketAsUserWithoutPermissions",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
