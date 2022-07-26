@@ -66634,6 +66634,25 @@
 									"response": []
 								},
 								{
+									"name": "RestoreFileAsOwner-Admin",
+									"id": "538047b1-a564-4b25-8219-19793ebf9c96",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
+								},
+								{
 									"name": "RestoreNotDeletedFolderFromDeletedBucket",
 									"id": "1c80a9a9-6a1d-459c-9c42-0834ecbcde8d",
 									"protocolProfileBehavior": {
