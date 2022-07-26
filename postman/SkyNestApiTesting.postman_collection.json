@@ -45904,6 +45904,222 @@
 													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-25 12:40:59\"\n}"
 												}
 											]
+										},
+										{
+											"name": "ViewAlreadyDeletedBucket",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "76c04764-9c38-4453-95aa-60d361729a31",
+														"exec": [
+															"pm.test(\"Status code is 404\", function () {\r",
+															"    pm.response.to.have.status(404);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "1b487924-e6ca-494a-844b-d0aebad227e9",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{deletedBucketId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": [
+												{
+													"id": "057f3251-6485-419a-a8ab-103f5f150b95",
+													"name": "ViewAlreadyDeletedBucket",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{deletedBucketId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 20 Jul 2022 10:24:42 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"bucketId\": \"bf4ca7df-d30d-4ebc-81f6-7063b6d9a5ce\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"name\": \"Trim\",\n    \"companyId\": \"c465f04d-ec9f-11ec-a23d-0242ac180002\",\n    \"description\": \"Description Three\",\n    \"size\": 0,\n    \"isPublic\": false,\n    \"deletedOn\": \"2022-07-20T10:23:25\"\n}"
+												}
+											]
+										},
+										{
+											"name": "ViewNotExistingBucket",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "76c04764-9c38-4453-95aa-60d361729a31",
+														"exec": [
+															"pm.test(\"Status code is 404\", function () {\r",
+															"    pm.response.to.have.status(404);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "014ea327-b4c0-4a15-8297-f7bcce1cc49b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": [
+												{
+													"id": "7587a1f7-8712-4570-90cf-45449b5cef01",
+													"name": "ViewNotExistingBucket",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 08 Jul 2022 10:17:03 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-08 12:17:03\"\n}"
+												}
+											]
 										}
 									],
 									"id": "7246426b-0474-4a87-8444-1c12f87416aa",
@@ -46259,222 +46475,6 @@
 											"});"
 										]
 									}
-								}
-							]
-						},
-						{
-							"name": "ViewNotExistingBucket",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "76c04764-9c38-4453-95aa-60d361729a31",
-										"exec": [
-											"pm.test(\"Status code is 404\", function () {\r",
-											"    pm.response.to.have.status(404);\r",
-											"});\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "014ea327-b4c0-4a15-8297-f7bcce1cc49b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_GET_INFO}}"
-							},
-							"response": [
-								{
-									"id": "7587a1f7-8712-4570-90cf-45449b5cef01",
-									"name": "ViewNotExistingBucket",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{notExistingBucketId}}{{ENDPOINT_GET_INFO}}"
-									},
-									"status": "Not Found",
-									"code": 404,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Fri, 08 Jul 2022 10:17:03 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-08 12:17:03\"\n}"
-								}
-							]
-						},
-						{
-							"name": "ViewAlreadyDeletedBucket",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "76c04764-9c38-4453-95aa-60d361729a31",
-										"exec": [
-											"pm.test(\"Status code is 404\", function () {\r",
-											"    pm.response.to.have.status(404);\r",
-											"});\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "1b487924-e6ca-494a-844b-d0aebad227e9",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{deletedBucketId}}{{ENDPOINT_GET_INFO}}"
-							},
-							"response": [
-								{
-									"id": "057f3251-6485-419a-a8ab-103f5f150b95",
-									"name": "ViewAlreadyDeletedBucket",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{deletedBucketId}}{{ENDPOINT_GET_INFO}}"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 20 Jul 2022 10:24:42 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"bucketId\": \"bf4ca7df-d30d-4ebc-81f6-7063b6d9a5ce\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"name\": \"Trim\",\n    \"companyId\": \"c465f04d-ec9f-11ec-a23d-0242ac180002\",\n    \"description\": \"Description Three\",\n    \"size\": 0,\n    \"isPublic\": false,\n    \"deletedOn\": \"2022-07-20T10:23:25\"\n}"
 								}
 							]
 						}
@@ -67350,7 +67350,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Tag For Test\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Test Hris\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
