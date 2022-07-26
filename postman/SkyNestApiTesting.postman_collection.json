@@ -37103,7 +37103,7 @@
 												},
 												"method": "DELETE",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{secondValidWorkerId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validAdminId}}"
 											},
 											"response": [
 												{
@@ -44471,44 +44471,23 @@
 								}
 							],
 							"id": "c007452c-9dfb-45b8-9481-eed94802a6c7"
-						}
-					],
-					"id": "b746812a-6d5c-4bb7-88e0-6b51700a99f8"
-				},
-				{
-					"name": "InvalidToken",
-					"item": [
+						},
 						{
-							"name": "EditBucketEmptyToken",
-							"id": "551724d3-6de0-4c7a-bdb4-62f1fd0c343b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": ""
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Empty\",\r\n  \"description\": \"Empty Token\",\r\n  \"isPublic\": true\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-							},
-							"response": [
+							"name": "InvalidToken",
+							"item": [
 								{
-									"id": "1e14026e-528c-4714-8854-e5f16b3f75d1",
 									"name": "EditBucketEmptyToken",
-									"originalRequest": {
+									"id": "551724d3-6de0-4c7a-bdb4-62f1fd0c343b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
 										"method": "PUT",
 										"header": [],
 										"body": {
@@ -44522,100 +44501,100 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
 									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "plain",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Length",
-											"value": "0"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 04 Jul 2022 11:13:12 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "1e14026e-528c-4714-8854-e5f16b3f75d1",
+											"name": "EditBucketEmptyToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Empty\",\r\n  \"description\": \"Empty Token\",\r\n  \"isPublic\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Jul 2022 11:13:12 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": null
-								}
-							]
-						},
-						{
-							"name": "EditBucketExpiredToken",
-							"id": "7018f457-c1c5-4f6e-af6f-98a146df3d32",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{expiredToken}}"
-									}
+									]
 								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Expired\",\r\n  \"description\": \"Expired Token\",\r\n  \"isPublic\": true\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-							},
-							"response": [
 								{
-									"id": "f8a4057c-0602-48ad-b35f-4588d758bc10",
 									"name": "EditBucketExpiredToken",
-									"originalRequest": {
+									"id": "7018f457-c1c5-4f6e-af6f-98a146df3d32",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
 										"method": "PUT",
 										"header": [],
 										"body": {
@@ -44629,104 +44608,104 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
 									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=ISO-8859-1"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 04 Jul 2022 11:14:31 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "f8a4057c-0602-48ad-b35f-4588d758bc10",
+											"name": "EditBucketExpiredToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Expired\",\r\n  \"description\": \"Expired Token\",\r\n  \"isPublic\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Jul 2022 11:14:31 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-04 13:14:31\"\n}"
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-04 13:14:31\"\n}"
-								}
-							]
-						},
-						{
-							"name": "EditBucketInvalidToken",
-							"id": "2e2bceb1-ddce-4a23-98fa-c08fe5233bf7",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{invalidToken}}"
-									}
+									]
 								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"Invalid\",\r\n  \"description\": \"Invalid Token\",\r\n  \"isPublic\": true\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{validWorkerId}}"
-							},
-							"response": [
 								{
-									"id": "b155685a-1516-40d4-820d-0e61abc3bfc7",
 									"name": "EditBucketInvalidToken",
-									"originalRequest": {
+									"id": "2e2bceb1-ddce-4a23-98fa-c08fe5233bf7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{invalidToken}}"
+											}
+										},
 										"method": "PUT",
 										"header": [],
 										"body": {
@@ -44740,99 +44719,120 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{validWorkerId}}"
 									},
-									"status": "Unauthorized",
-									"code": 401,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=ISO-8859-1"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 04 Jul 2022 11:15:16 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "b155685a-1516-40d4-820d-0e61abc3bfc7",
+											"name": "EditBucketInvalidToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Invalid\",\r\n  \"description\": \"Invalid Token\",\r\n  \"isPublic\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{validWorkerId}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Jul 2022 11:15:16 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-04 13:15:16\"\n}"
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-04 13:15:16\"\n}"
+									]
+								}
+							],
+							"id": "1bc4f1ec-b582-4e9e-8159-e2348bca7c36",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "92a652d5-da47-4a85-9ae9-ca8d1db34264",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "237ae01c-f898-45b9-a0c0-539c5f366c90",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
 								}
 							]
 						}
 					],
-					"id": "1bc4f1ec-b582-4e9e-8159-e2348bca7c36",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "92a652d5-da47-4a85-9ae9-ca8d1db34264",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "237ae01c-f898-45b9-a0c0-539c5f366c90",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 401\", function () {",
-									"    pm.response.to.have.status(401);",
-									"});"
-								]
-							}
-						}
-					]
+					"id": "b746812a-6d5c-4bb7-88e0-6b51700a99f8"
 				},
 				{
 					"name": "ViewBucketById",
