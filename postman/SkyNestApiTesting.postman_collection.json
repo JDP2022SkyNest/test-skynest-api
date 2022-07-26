@@ -70474,7 +70474,7 @@
 									]
 								},
 								{
-									"name": "TagObjectExpiredToken",
+									"name": "UntagObjectExpiredToken",
 									"id": "b4905faf-cd49-42cd-b73f-5ba71229858a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
