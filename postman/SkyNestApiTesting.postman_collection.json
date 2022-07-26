@@ -17354,7 +17354,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": "{{expiredToken}}"
 											}
 										},
 										"method": "PUT",
