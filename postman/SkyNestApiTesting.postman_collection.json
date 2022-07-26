@@ -46468,6 +46468,11 @@
 									"id": "f1f3b27b-12c6-4f84-a158-f0bcb8fb4d21"
 								},
 								{
+									"name": "ValidTokenButUnsuccessfulGET",
+									"item": [],
+									"id": "2bd04e5c-d03b-4805-a574-43aa14f75d58"
+								},
+								{
 									"name": "ViewAllBucketsAsAdmin",
 									"id": "5a0bdc45-2bdb-45b4-9253-514ef2bc9d94",
 									"protocolProfileBehavior": {
