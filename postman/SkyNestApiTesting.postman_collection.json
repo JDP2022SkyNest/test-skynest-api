@@ -70300,7 +70300,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{workerBucketId}}"
+										"token": "{{workerAuthToken}}"
 									}
 								},
 								"method": "PUT",
