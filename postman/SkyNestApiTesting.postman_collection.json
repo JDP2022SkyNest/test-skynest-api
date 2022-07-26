@@ -49934,6 +49934,25 @@
 													"body": "{\n    \"bucketId\": \"9e4c1b99-3e84-424f-81b9-f2c39206ba6b\",\n    \"folders\": [],\n    \"files\": [\n        {\n            \"id\": \"7f0755d6-1efb-4c20-b6c2-4a5254540175\",\n            \"createdOn\": \"2022-07-26T09:41:26\",\n            \"modifiedOn\": \"2022-07-26T09:41:52\",\n            \"deletedOn\": \"2022-07-26T11:41:53\",\n            \"name\": \"MicrosoftTeams-image.png\",\n            \"createdById\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n            \"parentFolderId\": null,\n            \"bucketId\": \"9e4c1b99-3e84-424f-81b9-f2c39206ba6b\",\n            \"type\": \"image/png\",\n            \"size\": \"75536\",\n            \"tags\": []\n        }\n    ],\n    \"path\": null\n}"
 												}
 											]
+										},
+										{
+											"name": "ViewPrivateBucketContentAsUserWithViewPermission Copy",
+											"id": "79e8effc-e4d6-4647-9f37-96a485ccbe69",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "a034e64e-1677-40cc-b1b6-da8412b83131",
