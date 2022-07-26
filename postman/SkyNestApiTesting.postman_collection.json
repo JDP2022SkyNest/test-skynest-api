@@ -13919,7 +13919,7 @@
 									},
 									"response": [
 										{
-											"id": "1d3bb189-f60c-439f-9fd6-ab411a8c73aa",
+											"id": "3d086895-7e17-4c18-b413-c45f771a63b4",
 											"name": "GetLoggedAdmin",
 											"originalRequest": {
 												"method": "GET",
@@ -13976,7 +13976,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Wed, 29 Jun 2022 13:26:36 GMT"
+													"value": "Tue, 26 Jul 2022 11:43:28 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -13989,7 +13989,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"uuid\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"username\": \"christinezahar@yahoo.com\",\n    \"name\": \"Porter\",\n    \"surname\": \"Sipes\",\n    \"company\": null,\n    \"roles\": [\n        \"role_worker\"\n    ]\n}"
+											"body": "{\n    \"uuid\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"username\": \"christinezahar@yahoo.com\",\n    \"name\": \"Hris\",\n    \"surname\": \"Zahar\",\n    \"positionInCompany\": null,\n    \"companyName\": \"HTEC group\",\n    \"roles\": [\n        \"role_admin\"\n    ]\n}"
 										}
 									]
 								},
