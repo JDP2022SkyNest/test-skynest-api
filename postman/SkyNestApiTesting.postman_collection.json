@@ -46464,199 +46464,200 @@
 							"item": [
 								{
 									"name": "ValidTokenAndSuccessfulGET",
-									"item": [],
+									"item": [
+										{
+											"name": "ViewAllBucketsAsUserWithViewPermission",
+											"id": "5a0bdc45-2bdb-45b4-9253-514ef2bc9d94",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
+											},
+											"response": [
+												{
+													"id": "5bfedaa6-c1ae-4de9-8b19-c0130991b75f",
+													"name": "ViewAllBucketsAsAdmin",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 01 Jul 2022 07:43:55 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "[\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket Two\",\n        \"companyId\": null,\n        \"description\": \"Description Two\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    }\n]"
+												}
+											]
+										},
+										{
+											"name": "ViewAllBucketsAsWorker",
+											"id": "c6b6f064-c7d9-404d-8ab2-db72549c234c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
+											},
+											"response": [
+												{
+													"id": "c49264bd-0480-4c68-808f-eb0274a3932c",
+													"name": "ViewAllBucketsAsWorker",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 01 Jul 2022 11:33:34 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "[\n    {\n        \"bucketId\": \"048e0f7f-4742-4aa6-a316-59bdcd7aad58\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"23b2b01c-25ea-40ef-9246-203b51c837cd\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"2e1c7440-9ac0-4f71-9151-303226bba89c\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"341c30c0-167a-4fca-89e3-a26ddac71f90\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"34757133-5d0e-4479-8cfc-4610ab4aedd9\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"40ef794e-a393-4f75-9e5e-340793b21f17\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"55cd57c0-0374-4e3b-a226-fa8ac97ecd1d\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"5779b61f-cbd3-4259-8fc9-113c8fb101be\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"67aa7e3c-58f4-4828-b1a8-a70adf91cf41\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"68c27a8f-7f3e-4ea6-8720-80c37d717ed3\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"6bad168a-3b57-4cec-b91e-0e58ec92a9fc\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"71b9b0c0-050a-4f49-aff5-21f4a385e020\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"7d24cab2-317c-45b7-88ff-2cafa8759cc7\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"895de2dd-41c4-43ad-a480-4ded596f0598\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"8d3068f7-d94c-4477-800d-149304022a7e\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"965653c3-cbe0-404f-87b7-6b6223c9aca6\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"98140700-3e77-4f9f-9e6d-3a44df651f56\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"aff8e756-389f-47d8-b396-9b1e7dbd048f\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket Two\",\n        \"companyId\": null,\n        \"description\": \"Description Two\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"baff73d5-9133-4782-b1e3-064c44cc1082\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"bb83c4af-0d22-4307-b05d-050e6892a78c\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"c86ca5c2-cd24-44c4-bf9a-7131dd4a2745\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"ce7b3981-0549-44c3-8307-e5b07b9306a3\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"d7f1c5f7-95a1-4faf-b7f3-caf8e589cf13\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"da30a9b0-9bff-406d-b556-d1ed9326599d\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"ddf884ff-f1f5-4f8a-a5a8-672726a26efb\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"de6adabc-95de-4426-ba80-e4842a1a29fa\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"ed4ad4b1-9f34-48c4-b5fd-a70b6850fa9e\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"f42f5439-69c9-44cc-91e7-a3714eb3665f\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"fefc8660-afb7-470b-81aa-b22df7b2aa81\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    }\n]"
+												}
+											]
+										}
+									],
 									"id": "f1f3b27b-12c6-4f84-a158-f0bcb8fb4d21"
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulGET",
 									"item": [],
 									"id": "2bd04e5c-d03b-4805-a574-43aa14f75d58"
-								},
-								{
-									"name": "ViewAllBucketsAsAdmin",
-									"id": "5a0bdc45-2bdb-45b4-9253-514ef2bc9d94",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
-									},
-									"response": [
-										{
-											"id": "5bfedaa6-c1ae-4de9-8b19-c0130991b75f",
-											"name": "ViewAllBucketsAsAdmin",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Fri, 01 Jul 2022 07:43:55 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "[\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket Two\",\n        \"companyId\": null,\n        \"description\": \"Description Two\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    }\n]"
-										}
-									]
-								},
-								{
-									"name": "ViewAllBucketsAsWorker",
-									"id": "c6b6f064-c7d9-404d-8ab2-db72549c234c",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
-									},
-									"response": [
-										{
-											"id": "c49264bd-0480-4c68-808f-eb0274a3932c",
-											"name": "ViewAllBucketsAsWorker",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Fri, 01 Jul 2022 11:33:34 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "[\n    {\n        \"bucketId\": \"048e0f7f-4742-4aa6-a316-59bdcd7aad58\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"LkfdsjfdhjvdjLhfsdtsdh34559hgcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfje\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"23b2b01c-25ea-40ef-9246-203b51c837cd\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"2e1c7440-9ac0-4f71-9151-303226bba89c\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"341c30c0-167a-4fca-89e3-a26ddac71f90\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"34757133-5d0e-4479-8cfc-4610ab4aedd9\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"40ef794e-a393-4f75-9e5e-340793b21f17\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"55cd57c0-0374-4e3b-a226-fa8ac97ecd1d\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"5779b61f-cbd3-4259-8fc9-113c8fb101be\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"67aa7e3c-58f4-4828-b1a8-a70adf91cf41\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"68c27a8f-7f3e-4ea6-8720-80c37d717ed3\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"6bad168a-3b57-4cec-b91e-0e58ec92a9fc\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"71b9b0c0-050a-4f49-aff5-21f4a385e020\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"7d24cab2-317c-45b7-88ff-2cafa8759cc7\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"895de2dd-41c4-43ad-a480-4ded596f0598\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"8d3068f7-d94c-4477-800d-149304022a7e\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"965653c3-cbe0-404f-87b7-6b6223c9aca6\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"98140700-3e77-4f9f-9e6d-3a44df651f56\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Description Three\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"aff8e756-389f-47d8-b396-9b1e7dbd048f\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket Two\",\n        \"companyId\": null,\n        \"description\": \"Description Two\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"baff73d5-9133-4782-b1e3-064c44cc1082\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"bb83c4af-0d22-4307-b05d-050e6892a78c\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Кирилица\",\n        \"companyId\": null,\n        \"description\": \"Опис\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"c86ca5c2-cd24-44c4-bf9a-7131dd4a2745\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"ce7b3981-0549-44c3-8307-e5b07b9306a3\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"d7f1c5f7-95a1-4faf-b7f3-caf8e589cf13\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"da30a9b0-9bff-406d-b556-d1ed9326599d\",\n        \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"ddf884ff-f1f5-4f8a-a5a8-672726a26efb\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"de6adabc-95de-4426-ba80-e4842a1a29fa\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Trim\",\n        \"companyId\": null,\n        \"description\": \"Tinajkjdfsdfrncvxweieetjndnvcnlxkzdsndsfnjdjdjsjdjy\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"ed4ad4b1-9f34-48c4-b5fd-a70b6850fa9e\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"f42f5439-69c9-44cc-91e7-a3714eb3665f\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    },\n    {\n        \"bucketId\": \"fefc8660-afb7-470b-81aa-b22df7b2aa81\",\n        \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n        \"name\": \"Bucket One\",\n        \"companyId\": null,\n        \"description\": \"Description One\",\n        \"size\": 0,\n        \"isPublic\": false\n    }\n]"
-										}
-									]
 								}
 							],
 							"id": "8b3b8681-22fb-4eb8-b4cc-ecd483ead325",
