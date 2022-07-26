@@ -56757,646 +56757,6 @@
 					"id": "7b3db6b5-ffbb-4482-9946-2c46035faef0"
 				},
 				{
-					"name": "RestoreFile",
-					"item": [
-						{
-							"name": "ValidTokenAndSuccessfulPUT",
-							"item": [
-								{
-									"name": "RestoreOwnFolderAsWorker",
-									"id": "a440c1b8-f584-445a-bfbe-ab1d76a4980b",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-									},
-									"response": [
-										{
-											"id": "bc4b2b80-0ebe-4c00-adda-effdc54c5299",
-											"name": "RestoreOwnFolderAsWorker",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 19 Jul 2022 13:34:08 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"008cc325-bb2d-478f-81d4-bb984ad9cb91\",\n    \"createdOn\": \"2022-07-19T13:32:22\",\n    \"modifiedOn\": \"2022-07-19T13:34:05\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"d8e7d580-7f00-4d94-b141-bb3f3a918001\"\n}"
-										}
-									]
-								},
-								{
-									"name": "RestoreNotDeletedFolderFromDeletedBucket",
-									"id": "1c80a9a9-6a1d-459c-9c42-0834ecbcde8d",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}6a4940e3-f0b1-4d52-a5d3-1fb0dd9a0843{{ENDPOINT_RESTORE}}"
-									},
-									"response": []
-								}
-							],
-							"id": "6580e57c-ec47-45b4-b52f-31c0ca2168d5"
-						},
-						{
-							"name": "ValidTokenButUnsuccessfulPUT",
-							"item": [
-								{
-									"name": "RestoreAlreadyRestoredFolder",
-									"id": "8a413333-9f1f-43ae-bf2f-98e9e2be6fa2",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-									},
-									"response": [
-										{
-											"id": "da719bcd-ed65-4e61-a563-645942311ce7",
-											"name": "RestoreAlreadyRestoredFolder",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-											},
-											"status": "Conflict",
-											"code": 409,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 19 Jul 2022 13:35:27 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Folder already restored\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-19 15:35:27\"\n}"
-										}
-									]
-								},
-								{
-									"name": "RestoreNotExistingFolder",
-									"id": "7331767b-c9d3-4b93-a63d-01cff311203a",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_RESTORE}}"
-									},
-									"response": [
-										{
-											"id": "604e5a06-f3c1-4486-9fbe-6b49fbbd3e20",
-											"name": "RestoreNotExistingFolder",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_RESTORE}}"
-											},
-											"status": "Not Found",
-											"code": 404,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 19 Jul 2022 13:36:03 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Folder not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-19 15:36:03\"\n}"
-										}
-									]
-								},
-								{
-									"name": "RestoreFolderWithoutPermissionsForIt",
-									"id": "b82e94db-8900-4d21-b155-3fd468815846",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-									},
-									"response": []
-								}
-							],
-							"id": "6629d343-03ee-4088-9b6f-59c95a7d5cf0"
-						},
-						{
-							"name": "InvalidToken",
-							"item": [
-								{
-									"name": "RestoreFolderEmptyToken",
-									"id": "b13a7c07-f724-484c-bf16-e3192afc4198",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": ""
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}}"
-									},
-									"response": [
-										{
-											"id": "b88d549f-95b8-4821-8f61-2b2824cf318e",
-											"name": "RestoreFolderEmptyToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 19 Jul 2022 13:39:29 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
-								},
-								{
-									"name": "RestoreFolderExpiredToken",
-									"id": "c618f438-d516-48da-af5a-ad1896a210ca",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{expiredToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-									},
-									"response": [
-										{
-											"id": "a7db9b84-704b-4965-acff-4cace27a44b4",
-											"name": "RestoreFolderExpiredToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=ISO-8859-1"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 19 Jul 2022 13:39:37 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-19 15:39:37\"\n}"
-										}
-									]
-								},
-								{
-									"name": "RestoreFolderInvalidToken",
-									"id": "7e2c7ad6-c4af-44e6-af69-df78df4fcb6d",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{invalidToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-									},
-									"response": [
-										{
-											"id": "05514064-59fb-44bf-843f-5aff1b52fa6f",
-											"name": "RestoreFolderInvalidToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=ISO-8859-1"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 19 Jul 2022 13:39:45 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-19 15:39:45\"\n}"
-										}
-									]
-								}
-							],
-							"id": "95ae9632-6897-4750-9ccf-6698fc8a511a",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "1e8d1444-8e0b-45a1-aec5-23c61588e37e",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "28b27a32-a244-4913-85f5-7f206621461c",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 401\", function () {",
-											"    pm.response.to.have.status(401);",
-											"});"
-										]
-									}
-								}
-							]
-						}
-					],
-					"id": "5ff8e7e5-c708-4bb1-9149-98745a9aba40"
-				},
-				{
 					"name": "MoveFolder",
 					"item": [
 						{
@@ -67247,6 +66607,646 @@
 						}
 					],
 					"id": "f4c1e630-ce71-454f-9eec-ca6c88619333"
+				},
+				{
+					"name": "RestoreFile",
+					"item": [
+						{
+							"name": "ValidTokenAndSuccessfulPUT",
+							"item": [
+								{
+									"name": "RestoreFileAsOwner-Worker",
+									"id": "a440c1b8-f584-445a-bfbe-ab1d76a4980b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": [
+										{
+											"id": "bc4b2b80-0ebe-4c00-adda-effdc54c5299",
+											"name": "RestoreOwnFolderAsWorker",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 19 Jul 2022 13:34:08 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"008cc325-bb2d-478f-81d4-bb984ad9cb91\",\n    \"createdOn\": \"2022-07-19T13:32:22\",\n    \"modifiedOn\": \"2022-07-19T13:34:05\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"d8e7d580-7f00-4d94-b141-bb3f3a918001\"\n}"
+										}
+									]
+								},
+								{
+									"name": "RestoreNotDeletedFolderFromDeletedBucket",
+									"id": "1c80a9a9-6a1d-459c-9c42-0834ecbcde8d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}6a4940e3-f0b1-4d52-a5d3-1fb0dd9a0843{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
+								}
+							],
+							"id": "6580e57c-ec47-45b4-b52f-31c0ca2168d5"
+						},
+						{
+							"name": "ValidTokenButUnsuccessfulPUT",
+							"item": [
+								{
+									"name": "RestoreAlreadyRestoredFolder",
+									"id": "8a413333-9f1f-43ae-bf2f-98e9e2be6fa2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": [
+										{
+											"id": "da719bcd-ed65-4e61-a563-645942311ce7",
+											"name": "RestoreAlreadyRestoredFolder",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 19 Jul 2022 13:35:27 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Folder already restored\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-19 15:35:27\"\n}"
+										}
+									]
+								},
+								{
+									"name": "RestoreNotExistingFolder",
+									"id": "7331767b-c9d3-4b93-a63d-01cff311203a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": [
+										{
+											"id": "604e5a06-f3c1-4486-9fbe-6b49fbbd3e20",
+											"name": "RestoreNotExistingFolder",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{notExistingFolderId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 19 Jul 2022 13:36:03 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Folder not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-19 15:36:03\"\n}"
+										}
+									]
+								},
+								{
+									"name": "RestoreFolderWithoutPermissionsForIt",
+									"id": "b82e94db-8900-4d21-b155-3fd468815846",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
+								}
+							],
+							"id": "6629d343-03ee-4088-9b6f-59c95a7d5cf0"
+						},
+						{
+							"name": "InvalidToken",
+							"item": [
+								{
+									"name": "RestoreFolderEmptyToken",
+									"id": "b13a7c07-f724-484c-bf16-e3192afc4198",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": ""
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}}"
+									},
+									"response": [
+										{
+											"id": "b88d549f-95b8-4821-8f61-2b2824cf318e",
+											"name": "RestoreFolderEmptyToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 19 Jul 2022 13:39:29 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "RestoreFolderExpiredToken",
+									"id": "c618f438-d516-48da-af5a-ad1896a210ca",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{expiredToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": [
+										{
+											"id": "a7db9b84-704b-4965-acff-4cace27a44b4",
+											"name": "RestoreFolderExpiredToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 19 Jul 2022 13:39:37 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-19 15:39:37\"\n}"
+										}
+									]
+								},
+								{
+									"name": "RestoreFolderInvalidToken",
+									"id": "7e2c7ad6-c4af-44e6-af69-df78df4fcb6d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{invalidToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": [
+										{
+											"id": "05514064-59fb-44bf-843f-5aff1b52fa6f",
+											"name": "RestoreFolderInvalidToken",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 19 Jul 2022 13:39:45 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-19 15:39:45\"\n}"
+										}
+									]
+								}
+							],
+							"id": "95ae9632-6897-4750-9ccf-6698fc8a511a",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "1e8d1444-8e0b-45a1-aec5-23c61588e37e",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "28b27a32-a244-4913-85f5-7f206621461c",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});"
+										]
+									}
+								}
+							]
+						}
+					],
+					"id": "5ff8e7e5-c708-4bb1-9149-98745a9aba40"
 				},
 				{
 					"name": "MoveFileToFolder",
