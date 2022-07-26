@@ -70398,7 +70398,7 @@
 									"response": [
 										{
 											"id": "e127ff2a-9ec0-4e4e-b090-3d608fc79513",
-											"name": "UntagABucketAsNotOwner",
+											"name": "UntagABucketFromNotApliedTag",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
