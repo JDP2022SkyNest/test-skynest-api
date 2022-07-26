@@ -37208,7 +37208,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
