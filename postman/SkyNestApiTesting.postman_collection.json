@@ -66624,14 +66624,88 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{adminAuthToken}}"
 											}
 										},
 										"method": "PUT",
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_RESTORE}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "a77af2bb-6680-44a7-919a-7506abc6a2bf",
+											"name": "RestoreFileAsOwner-Admin",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 26 Jul 2022 20:26:38 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"330e7c73-6c70-4ba5-ab40-2f51c434519f\",\n    \"createdOn\": \"2022-07-26T20:00\",\n    \"modifiedOn\": \"2022-07-26T20:21:22\",\n    \"deletedOn\": null,\n    \"name\": \"@# 123_abc_Кирилица\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"ba0ac5d6-1d1d-4782-b1e7-b9f5e0ddec10\",\n    \"type\": \"text/plain\",\n    \"size\": \"300\",\n    \"tags\": null\n}"
+										}
+									]
 								},
 								{
 									"name": "RestoreFileAsOwner-Worker",
