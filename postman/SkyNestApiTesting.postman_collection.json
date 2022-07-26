@@ -66801,7 +66801,7 @@
 									]
 								},
 								{
-									"name": "RestoreNotDeletedFolderFromDeletedBucket",
+									"name": "RestoreNotDeletedFileFromDeletedBucket",
 									"id": "1c80a9a9-6a1d-459c-9c42-0834ecbcde8d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
