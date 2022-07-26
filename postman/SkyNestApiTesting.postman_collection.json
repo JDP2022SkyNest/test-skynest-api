@@ -67579,6 +67579,25 @@
 											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 20:39:59\"\n}"
 										}
 									]
+								},
+								{
+									"name": "RestoreFileAsUserWithoutPermissions Copy",
+									"id": "538e950d-bdc6-4368-81ab-972e8b728420",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
 								}
 							],
 							"id": "6629d343-03ee-4088-9b6f-59c95a7d5cf0"
