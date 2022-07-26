@@ -45442,7 +45442,7 @@
 									"name": "ValidTokenButUnsuccessfulGET",
 									"item": [
 										{
-											"name": "ViewWorker'sBucketAsAdmin(WithoutPermissions)",
+											"name": "ViewPrivateBucketAsUserWithoutPermissions",
 											"event": [
 												{
 													"listen": "test",
