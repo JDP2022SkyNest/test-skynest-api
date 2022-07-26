@@ -67138,7 +67138,7 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_RESTORE}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_RESTORE}}"
 									},
 									"response": []
 								},
