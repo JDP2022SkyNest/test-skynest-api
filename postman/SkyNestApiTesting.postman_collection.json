@@ -38170,7 +38170,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "ViewBucketPermissionsAsCreator",
+											"name": "ViewWorker'sBucketPermissionsAsCreator",
 											"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -38189,7 +38189,7 @@
 											"response": [
 												{
 													"id": "28b8a6ea-aadf-4c24-8c62-c6e662ab7189",
-													"name": "ViewBucketPermissionsAsCreator",
+													"name": "ViewWorker'sBucketPermissionsAsCreator",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
