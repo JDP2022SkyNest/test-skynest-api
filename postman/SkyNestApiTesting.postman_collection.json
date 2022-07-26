@@ -57817,7 +57817,7 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/notes.txt"
 														}
 													]
 												},
@@ -58260,7 +58260,7 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/notes.txt"
 														}
 													]
 												},
@@ -58432,89 +58432,6 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"id\": \"ef4863f0-4f5f-4d7c-9337-89e32836399a\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"bfcbe37a-a47c-48d3-9967-63ea122e4685\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\"\n}"
-												},
-												{
-													"id": "8f62682c-630d-4111-a8a0-bd2ab27818ad",
-													"name": "UploadFileToPublicBucketAsNotCreator",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "formdata",
-															"formdata": [
-																{
-																	"key": "file",
-																	"type": "file",
-																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
-																}
-															]
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{publicBucketId}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Tue, 26 Jul 2022 15:21:16 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"id\": \"b754d395-a9bc-4e27-9595-ba598cf90344\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"33a3ab20-b512-41d1-88f8-a620f0d86e7d\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\",\n    \"tags\": null\n}"
 												}
 											]
 										},
@@ -58680,7 +58597,7 @@
 									"name": "ValidTokenButUnsuccessfulPOST",
 									"item": [
 										{
-											"name": "UploadFileToPrivateBucketAsUserWithLowerPermission(Download)",
+											"name": "UploadFileToAdmin'sPrivateBucketAsWorker",
 											"event": [
 												{
 													"listen": "test",
@@ -58702,7 +58619,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{secondWorkerAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "POST",
@@ -58713,16 +58630,16 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+															"src": "/C:/Users/chris/Downloads/env"
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
 											},
 											"response": [
 												{
-													"id": "aa2f3a1c-32b5-4934-a6b1-77b0a5817853",
-													"name": "UploadFileToPrivateBucketAsUserWithLowerPermission(Download)",
+													"id": "b3183797-3686-4305-b546-d7c11e71ed92",
+													"name": "UploadFileToAdmin'sPrivateBucketAsWorker",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
@@ -58732,11 +58649,11 @@
 																{
 																	"key": "file",
 																	"type": "file",
-																	"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
 																}
 															]
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
 													},
 													"status": "Forbidden",
 													"code": 403,
@@ -58788,7 +58705,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Tue, 26 Jul 2022 15:23:30 GMT"
+															"value": "Fri, 08 Jul 2022 14:11:37 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -58801,12 +58718,12 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 17:23:30\"\n}"
+													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-08 16:11:37\"\n}"
 												}
 											]
 										},
 										{
-											"name": "UploadFileToPrivateBucketAsUserWithLowerPermission(View)",
+											"name": "UploadFileToWorker'sPrivateBucketAsAdmin",
 											"event": [
 												{
 													"listen": "test",
@@ -58839,7 +58756,7 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
 														}
 													]
 												},
@@ -58847,8 +58764,8 @@
 											},
 											"response": [
 												{
-													"id": "69d826a5-3d45-49eb-af73-6b4f8528c638",
-													"name": "UploadFileToPrivateBucketAsUserWithLowerPermission(View)",
+													"id": "0b17821d-9478-4f5f-bda0-144b284cf214",
+													"name": "UploadFileToWorker'sPrivateBucketAsAdmin",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
@@ -58858,7 +58775,7 @@
 																{
 																	"key": "file",
 																	"type": "file",
-																	"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
 																}
 															]
 														},
@@ -58914,7 +58831,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Tue, 26 Jul 2022 15:24:26 GMT"
+															"value": "Fri, 08 Jul 2022 14:13:46 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -58927,7 +58844,7 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 17:24:26\"\n}"
+													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-08 16:13:46\"\n}"
 												}
 											]
 										},
@@ -59102,11 +59019,11 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{deletedBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
 											},
 											"response": [
 												{
@@ -59191,6 +59108,142 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-11 14:57:59\"\n}"
+												}
+											]
+										},
+										{
+											"name": "UploadFileToBucketFromAnotherCompany",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
+															"    publicBucketId = pm.environment.get(\"publicBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(publicBucketId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"    pm.expect(jsonData.id).is.not.null;\r",
+															"    pm.environment.set(\"publicFileId\", jsonData.id);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "d1c18a49-e305-4060-a6ec-024c2957f8a5",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+											},
+											"response": [
+												{
+													"id": "ce895225-9c39-4db0-a39e-4a49c031fab0",
+													"name": "UploadFileToBucketFromAnotherCompany",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 11 Jul 2022 12:57:10 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-11 14:57:10\"\n}"
 												}
 											]
 										}
