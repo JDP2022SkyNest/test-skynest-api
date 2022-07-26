@@ -58680,7 +58680,7 @@
 									"name": "ValidTokenButUnsuccessfulPOST",
 									"item": [
 										{
-											"name": "UploadFileToAdmin'sPrivateBucketAsWorker",
+											"name": "UploadFileToPrivateBucketAsUserWithLowerPermission(Download)",
 											"event": [
 												{
 													"listen": "test",
