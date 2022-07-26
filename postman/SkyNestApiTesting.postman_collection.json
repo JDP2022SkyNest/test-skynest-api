@@ -45631,7 +45631,7 @@
 											]
 										},
 										{
-											"name": "ViewPrivateBucketAsUserWithHigherPermission(Download) Copy",
+											"name": "ViewPrivateBucketAsUserWithHigherPermission(Edit)",
 											"event": [
 												{
 													"listen": "test",
