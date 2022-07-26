@@ -70030,7 +70030,20 @@
 				},
 				{
 					"name": "UntagAnObject",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "e735c143-eae2-4fb2-8976-b1cd474fb6eb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "e7add2bc-0551-4d4c-9e03-14fb5e5a46ad"
 				}
 			],
