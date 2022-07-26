@@ -58509,7 +58509,7 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/Screenshot 2022-07-18 231010.png"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/MicrosoftTeams-image.png"
 														}
 													]
 												},
@@ -69792,7 +69792,7 @@
 											]
 										},
 										{
-											"name": "TagAlreadyDeletedFolder Copy",
+											"name": "TagAlreadyDeletedFile",
 											"id": "fc16c281-00ea-4197-a8bb-05f6d11b5450",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -69806,7 +69806,7 @@
 												},
 												"method": "POST",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{deletedFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{deletedFileId}}"
 											},
 											"response": []
 										},
