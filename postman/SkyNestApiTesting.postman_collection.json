@@ -14109,7 +14109,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a20fc7d5-02b3-4403-ac65-e88cded6894a",
+										"id": "79b10108-bf05-498c-b84d-7e871d6ea58f",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -14119,7 +14119,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f5ca3462-bd6a-4849-9216-c8ee9e26343b",
+										"id": "355e63d4-eac7-4986-be15-653aa59a0928",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Status code is 200\", function () {",
@@ -14136,9 +14136,9 @@
 											"     pm.response.to.be.json;",
 											"});",
 											"",
-											"pm.test(\"User role value is in valid list\", () => {",
-											"  pm.expect(pm.response.jsonData.roles).to.include.oneOf([\"role_worker\", \"role_admin\", \"role_manager\"]);",
-											"});",
+											"// pm.test(\"User role value is in valid list\", () => {",
+											"//   pm.expect(pm.response.jsonData.roles).to.include.oneOf([\"role_worker\", \"role_admin\", \"role_manager\"]);",
+											"// });",
 											""
 										]
 									}
