@@ -67108,25 +67108,6 @@
 											"body": "{\n    \"id\": \"45489ac4-1fda-41e0-849c-3c51037266fc\",\n    \"createdOn\": \"2022-07-26T20:30:32\",\n    \"modifiedOn\": \"2022-07-26T20:38:06\",\n    \"deletedOn\": null,\n    \"name\": \"env (1).env\",\n    \"createdById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"f332d937-f1aa-4273-8952-f76e34e8f732\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"750\",\n    \"tags\": null\n}"
 										}
 									]
-								},
-								{
-									"name": "RestoreFileAsUserWithoutPermissions",
-									"id": "aedca261-f02b-4d4e-9436-72da2eb20b47",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{SecondAdminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_RESTORE}}"
-									},
-									"response": []
 								}
 							],
 							"id": "6580e57c-ec47-45b4-b52f-31c0ca2168d5"
@@ -67505,6 +67486,25 @@
 											"body": "{\n    \"messages\": [\n        \"File's parent is deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-26 20:31:54\"\n}"
 										}
 									]
+								},
+								{
+									"name": "RestoreFileAsUserWithoutPermissions",
+									"id": "aedca261-f02b-4d4e-9436-72da2eb20b47",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
 								}
 							],
 							"id": "6629d343-03ee-4088-9b6f-59c95a7d5cf0"
