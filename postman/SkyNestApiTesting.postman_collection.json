@@ -44426,7 +44426,7 @@
 									"name": "ValidTokenButUnsuccessfulGET",
 									"item": [
 										{
-											"name": "ViewWorker'sBucketAsAdmin",
+											"name": "ViewWorker'sBucketAsAdmin(WithoutPermissions)",
 											"event": [
 												{
 													"listen": "test",
