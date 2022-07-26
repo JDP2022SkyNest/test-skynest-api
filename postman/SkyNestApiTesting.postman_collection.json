@@ -46485,7 +46485,7 @@
 											"response": []
 										},
 										{
-											"name": "ViewAllBucketsAsWorker",
+											"name": "ViewAllBucketsAs",
 											"id": "c6b6f064-c7d9-404d-8ab2-db72549c234c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
