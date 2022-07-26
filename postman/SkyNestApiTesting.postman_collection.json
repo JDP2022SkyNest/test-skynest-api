@@ -61102,7 +61102,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "DownloadWorker'sFileAsWorker",
+											"name": "DownloadFileFromPrivateBucketAsOwner",
 											"id": "62b1415d-48c8-44f1-ac32-dfbc91eb75aa",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
