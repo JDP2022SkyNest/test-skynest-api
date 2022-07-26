@@ -69699,7 +69699,7 @@
 											]
 										},
 										{
-											"name": "TagAlreadyDeletedBucket Copy",
+											"name": "TagAlreadyDeletedFolder",
 											"id": "f494977d-2c39-4b1f-a5cb-f97f24f398b3",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -69713,7 +69713,7 @@
 												},
 												"method": "POST",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{deletedBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{deletedFolderId}}"
 											},
 											"response": []
 										},
