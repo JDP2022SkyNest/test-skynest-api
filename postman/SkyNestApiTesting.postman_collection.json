@@ -15326,12 +15326,7 @@
 													"script": {
 														"id": "1ff0caaa-03d4-4ecf-a731-e19e3cac023a",
 														"exec": [
-															"pm.test(\"Proper warning message\", function () {\r",
-															"    var jsonData = pm.response.json();\r",
-															"    pm.expect(jsonData.messages).to.eql([\r",
-															"        \"name cannot be null or empty\"\r",
-															"    ]);\r",
-															"});"
+															""
 														],
 														"type": "text/javascript"
 													}
