@@ -70564,6 +70564,25 @@
 													"body": "{\n    \"messages\": [\n        \"Tag not found for selected object\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-26 11:47:54\"\n}"
 												}
 											]
+										},
+										{
+											"name": "UntagABucketFromNotApliedTag Copy",
+											"id": "db136961-960a-4608-bf1a-f82ee6abed85",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerBucketId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "c6105ff7-ac81-4ccc-b374-574b4efcb33b"
