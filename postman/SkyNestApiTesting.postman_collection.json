@@ -58951,7 +58951,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToPrivateBucketAsUserWithLowerPermission(View) Copy",
+											"name": "UploadFileToPrivateBucketAsUserWithoutPermissions",
 											"event": [
 												{
 													"listen": "test",
