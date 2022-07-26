@@ -49406,7 +49406,7 @@
 									]
 								},
 								{
-									"name": "RestorePrivateBucketAsUserWithLowerPermission(View) Copy",
+									"name": "RestorePrivateBucketAsUserWithoutPermissions",
 									"id": "48abe3f6-6855-4950-895e-b57d3965b001",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
