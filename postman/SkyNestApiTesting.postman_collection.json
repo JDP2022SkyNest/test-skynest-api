@@ -66634,7 +66634,7 @@
 									"response": []
 								},
 								{
-									"name": "RestoreFileAsOwner-Admin",
+									"name": "RestoreFileAsOwner-Worker",
 									"id": "538047b1-a564-4b25-8219-19793ebf9c96",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
