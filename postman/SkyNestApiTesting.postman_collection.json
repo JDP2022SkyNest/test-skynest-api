@@ -65735,7 +65735,73 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "110fbe5e-bffb-43b6-a16f-a2a0ecc1a95f",
+													"name": "DeleteFileAsOwner-Worker",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 26 Jul 2022 20:38:06 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
 										},
 										{
 											"name": "DeleteFileAsUserWithEditPermission",
@@ -66967,81 +67033,7 @@
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_RESTORE}}"
 									},
-									"response": [
-										{
-											"id": "38e9b0d0-6f96-4883-8b27-b0749cf43c3e",
-											"name": "RestoreFileAsOwner-Worker",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_RESTORE}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 26 Jul 2022 20:25:46 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"dc02e589-c2de-42a5-a089-d348e210ddbb\",\n    \"createdOn\": \"2022-07-26T20:00:09\",\n    \"modifiedOn\": \"2022-07-26T20:22\",\n    \"deletedOn\": null,\n    \"name\": \"Edited File Name 2\",\n    \"createdById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"f332d937-f1aa-4273-8952-f76e34e8f732\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"750\",\n    \"tags\": null\n}"
-										}
-									]
+									"response": []
 								}
 							],
 							"id": "6580e57c-ec47-45b4-b52f-31c0ca2168d5"
