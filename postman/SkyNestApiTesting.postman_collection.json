@@ -67581,7 +67581,7 @@
 									]
 								},
 								{
-									"name": "RestoreFileAsUserWithoutPermissions Copy",
+									"name": "RestoreFileAsUserWithLowerPermission(Download)",
 									"id": "538e950d-bdc6-4368-81ab-972e8b728420",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
