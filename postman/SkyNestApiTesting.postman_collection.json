@@ -65719,6 +65719,25 @@
 											]
 										},
 										{
+											"name": "DeleteFileAsOwner-Admin Copy",
+											"id": "dca3354b-12fd-429a-948d-89084ba140ce",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "DeleteFileAsUserWithEditPermission",
 											"id": "7b42f07d-72ec-472f-9185-ec602166ce44",
 											"protocolProfileBehavior": {
