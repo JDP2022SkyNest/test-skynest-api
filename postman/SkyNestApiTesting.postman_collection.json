@@ -64801,7 +64801,7 @@
 											]
 										},
 										{
-											"name": "EditNameOfAlreadyDeletedFile Copy",
+											"name": "EditFileNameAsUserWithLowerPermission(Download)",
 											"id": "420045fc-3525-4104-87db-a2b69448a77f",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
