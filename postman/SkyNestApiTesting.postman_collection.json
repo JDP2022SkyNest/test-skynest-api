@@ -64810,7 +64810,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{"
+														"token": "{{secondWorkerAuthToken}}"
 													}
 												},
 												"method": "PUT",
