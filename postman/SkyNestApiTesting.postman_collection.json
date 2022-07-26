@@ -66946,7 +66946,7 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}6a4940e3-f0b1-4d52-a5d3-1fb0dd9a0843{{ENDPOINT_RESTORE}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{fileInDeletedBucketId}}{{ENDPOINT_RESTORE}}"
 									},
 									"response": []
 								}
