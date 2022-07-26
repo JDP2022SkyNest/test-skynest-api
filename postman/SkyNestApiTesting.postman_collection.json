@@ -38263,6 +38263,25 @@
 											]
 										},
 										{
+											"name": "ViewWorker'sBucketPermissionsAsCreator Copy",
+											"id": "3449e3cb-28b8-4162-8c8f-85b65d009dec",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "ViewBucketPermissionsForOldExistingBucket",
 											"id": "e5270f61-1fcb-48c2-9bbe-affef0040e65",
 											"protocolProfileBehavior": {
