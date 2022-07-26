@@ -70032,7 +70032,7 @@
 					"name": "UntagAnObject",
 					"item": [
 						{
-							"name": "UntagObject",
+							"name": "UntagABucketAsOwner",
 							"id": "e735c143-eae2-4fb2-8976-b1cd474fb6eb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
