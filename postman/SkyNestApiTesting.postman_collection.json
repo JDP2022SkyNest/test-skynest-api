@@ -42353,7 +42353,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"PublicBucket\",\r\n  \"description\": \"string\",\r\n  \"isPublic\": true\r\n}",
+													"raw": "{\r\n  \"name\": \"Public Bucket\",\r\n  \"description\": \"Edited\",\r\n  \"isPublic\": true\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
