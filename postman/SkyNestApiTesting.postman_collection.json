@@ -43643,7 +43643,7 @@
 									]
 								},
 								{
-									"name": "EditBucketWithoutGrantedAccess",
+									"name": "EditPrivateBucketWithoutGrantedAccess",
 									"id": "d8d8a59a-4c52-4375-9d3a-8bb8eedb6fbc",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -43671,7 +43671,7 @@
 									"response": [
 										{
 											"id": "5c9e22b7-e26b-4b4b-afb1-25d1f92c5ff0",
-											"name": "EditBucketWithoutGrantedAccess",
+											"name": "EditPrivateBucketWithoutGrantedAccess",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
