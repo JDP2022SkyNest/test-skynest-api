@@ -67674,7 +67674,7 @@
 									]
 								},
 								{
-									"name": "RestoreFileAsUserWithLowerPermission(Download) Copy",
+									"name": "RestoreFileAsUserWithLowerPermission(View)",
 									"id": "81a0c59d-3f91-4613-9322-e0ed07b170a0",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
