@@ -66957,7 +66957,7 @@
 							"name": "ValidTokenButUnsuccessfulPUT",
 							"item": [
 								{
-									"name": "RestoreAlreadyRestoredFolder",
+									"name": "RestoreAlreadyRestoredFile",
 									"id": "8a413333-9f1f-43ae-bf2f-98e9e2be6fa2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
