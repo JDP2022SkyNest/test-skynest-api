@@ -70291,6 +70291,11 @@
 					"name": "UntagAnObject",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "95cd70fb-aba3-46b8-80da-720202f0ca51"
+						},
+						{
 							"name": "UntagABucketAsOwner",
 							"id": "e735c143-eae2-4fb2-8976-b1cd474fb6eb",
 							"protocolProfileBehavior": {
