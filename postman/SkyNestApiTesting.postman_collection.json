@@ -61813,7 +61813,7 @@
 											]
 										},
 										{
-											"name": "DownloadAdmin'sFileAsWorker",
+											"name": "DownloadFileFromPRivateBucketAsUserWithoutPermissions",
 											"event": [
 												{
 													"listen": "test",
