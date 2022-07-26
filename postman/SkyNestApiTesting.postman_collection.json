@@ -65584,6 +65584,71 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": null
+												},
+												{
+													"id": "31fae61f-3139-43a5-81d7-67441d714d94",
+													"name": "DeleteFileAsOwner",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 26 Jul 2022 20:21:23 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
 												}
 											]
 										},
