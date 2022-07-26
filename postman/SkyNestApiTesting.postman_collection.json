@@ -70294,6 +70294,11 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "0c344442-2de0-4bff-9024-1586cfd0d2f3"
+								},
+								{
 									"name": "UntagABucketAsOwner",
 									"id": "e735c143-eae2-4fb2-8976-b1cd474fb6eb",
 									"protocolProfileBehavior": {
