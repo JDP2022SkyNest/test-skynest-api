@@ -69792,6 +69792,25 @@
 											]
 										},
 										{
+											"name": "TagAlreadyDeletedFile",
+											"id": "fc16c281-00ea-4197-a8bb-05f6d11b5450",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{deletedFolderId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "TagABucketWithNotExistingTag",
 											"id": "1809c508-ddbe-4cbe-b272-78782e07340a",
 											"protocolProfileBehavior": {
