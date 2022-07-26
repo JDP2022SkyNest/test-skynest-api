@@ -58806,7 +58806,7 @@
 											]
 										},
 										{
-											"name": "UploadFileToWorker'sPrivateBucketAsAdmin",
+											"name": "UploadFileToPrivateBucketAsUserWithLowerPermission(View)",
 											"event": [
 												{
 													"listen": "test",
