@@ -49676,7 +49676,7 @@
 											"response": [
 												{
 													"id": "e72ddcf5-6b1b-4ec1-ab18-2b72658054f5",
-													"name": "ViewWorker'sBucketContentAsCreator",
+													"name": "ViewWorker'sBucketContentAsOwner",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
