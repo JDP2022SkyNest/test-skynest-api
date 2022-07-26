@@ -70379,7 +70379,7 @@
 									]
 								},
 								{
-									"name": "UntagABucketAsNotOwner",
+									"name": "UntagABucketFromNotApliedTag",
 									"id": "0e3fa4ad-628d-4f1d-b5ba-31918a3d762c",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
