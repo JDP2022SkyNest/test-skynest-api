@@ -64910,6 +64910,34 @@
 													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 20:10:54\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditFileNameAsUserWithLowerPermission(Download) Copy",
+											"id": "e14ea176-928a-4971-a58b-b17b7b79097e",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Already Deleted\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": []
 										}
 									],
 									"id": "311317d7-8503-4f89-9118-7d827b1608cc"
