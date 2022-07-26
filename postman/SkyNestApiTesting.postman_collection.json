@@ -61706,7 +61706,7 @@
 											]
 										},
 										{
-											"name": "DownloadWorker'sFileAsAdmin",
+											"name": "DownloadFileFromPrivateBucketAsUserWithLowerPermission(View)",
 											"event": [
 												{
 													"listen": "test",
