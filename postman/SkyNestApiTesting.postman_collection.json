@@ -49936,7 +49936,7 @@
 											]
 										},
 										{
-											"name": "ViewPrivateBucketContentAsUserWithViewPermission Copy",
+											"name": "ViewPrivateBucketContentAsUserWithHigherPermission(Edit)",
 											"id": "79e8effc-e4d6-4647-9f37-96a485ccbe69",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
