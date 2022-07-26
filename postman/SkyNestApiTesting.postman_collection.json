@@ -65941,7 +65941,7 @@
 											"response": []
 										},
 										{
-											"name": "DeleteFileAsUserWithEditPermission Copy",
+											"name": "DeleteFileAsUserWithLowerPermission(Download)",
 											"id": "95d37d8d-48c3-4a7a-afab-718b2cb3b3c1",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
