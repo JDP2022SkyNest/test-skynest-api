@@ -45631,7 +45631,7 @@
 											]
 										},
 										{
-											"name": "ViewAdmin'sBucketAsWorker",
+											"name": "ViewPrivateBucketAsUserWithViewPermission",
 											"event": [
 												{
 													"listen": "test",
