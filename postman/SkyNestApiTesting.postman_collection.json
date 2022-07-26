@@ -46458,6 +46458,20 @@
 									"item": [
 										{
 											"name": "ViewAllBucketsAsUserWithViewPermission",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f2364759-d3fe-4028-a89c-7e002973b71a",
+														"exec": [
+															"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+															"    console.log(response.json());\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
 											"id": "5a0bdc45-2bdb-45b4-9253-514ef2bc9d94",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
