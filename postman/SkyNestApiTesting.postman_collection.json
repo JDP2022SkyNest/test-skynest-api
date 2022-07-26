@@ -49322,12 +49322,12 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": "{{workerAuthToken}}"
 											}
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE}}"
 									},
 									"response": []
 								},
