@@ -37073,12 +37073,12 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "DELETE",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{secondValidWorkerId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validAdminId}}"
 											},
 											"response": [
 												{
