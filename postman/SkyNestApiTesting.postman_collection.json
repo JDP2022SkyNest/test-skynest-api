@@ -61609,6 +61609,25 @@
 											]
 										},
 										{
+											"name": "DownloadNotExistingFile Copy",
+											"id": "31f55624-d215-482a-a2a2-b451aad8143c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{notExistingFileId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "DownloadWorker'sFileAsAdmin",
 											"event": [
 												{
