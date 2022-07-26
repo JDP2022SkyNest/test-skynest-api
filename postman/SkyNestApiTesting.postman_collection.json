@@ -18096,14 +18096,14 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"LkfssjfdhjvdjLhfsdtsdh34559ggcofh Rnfdsndfasndavndfafnkmkvds ANandsdewjifewkedldfshjdsjfdjfjdjfjadfj\",\r\n  \"phoneNumber\": \"872313347854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\",\r\n  \"positionInCompany\": \"HR\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Tinrwkjdfsdfrncvxweieetjndnvcntxkzdsndsfnjdjdjsjdj\",\r\n  \"surname\": \"FDgdfgfdg\",\r\n  \"phoneNumber\": \"872313347854522452188935412322\",\r\n  \"address\": \"Jhfhjdfhjdfhjfsgiewioi455r23475888888888888888888888888kjhgfdsawertyu8884riejjjjjjjjkfdcxvnnnnnnnnnnnnnnnldfjfdjfdkdsfdsknajkjdfsdfsncvxweeewjndnvcnxzdsndsfnjdjdjsjdjsjddfjdsfyueyuer78433jdfsndfndfdskdskdfuiiu8438943udfsjdfsjdsaasdlflkjfajvdsnnkrakarolom\",\r\n  \"positionInCompany\": \"HR\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{secondValidWorkerId}}"
 									},
 									"response": [
 										{
