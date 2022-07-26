@@ -49146,7 +49146,7 @@
 									"response": []
 								},
 								{
-									"name": "RestoreAdmin'sBucketAsWorker",
+									"name": "RestorePrivateBucketAsUserWithLowerPermission(View)",
 									"id": "054b2fd0-1400-4f10-b55b-ffa2e300ca01",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
