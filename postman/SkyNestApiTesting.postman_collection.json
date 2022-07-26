@@ -61660,6 +61660,25 @@
 											]
 										},
 										{
+											"name": "DownloadFileFromPublicBucketAsNotOwner Copy",
+											"id": "8543caf3-8b21-4481-9ed4-1dc42e066c3d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "DownloadFileFromBucketFromAnotherCompany",
 											"id": "a163249c-ce2d-4265-9d7b-90a1ce5c81a9",
 											"protocolProfileBehavior": {
