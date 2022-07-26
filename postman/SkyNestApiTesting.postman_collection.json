@@ -65021,6 +65021,34 @@
 													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 20:13:56\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditFileNameAsUserWithLowerPermission(View) Copy",
+											"id": "caeed84e-0391-44b6-8465-67527c93c6e2",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Lower Permission\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": []
 										}
 									],
 									"id": "311317d7-8503-4f89-9118-7d827b1608cc"
