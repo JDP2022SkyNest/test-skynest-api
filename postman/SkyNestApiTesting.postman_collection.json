@@ -46508,7 +46508,27 @@
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulGET",
-									"item": [],
+									"item": [
+										{
+											"name": "ViewAllBucketsAsUserWithoutPermissions",
+											"id": "dcbd31fc-ef00-4bfc-998d-fbc25cab57ba",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_VIEW_ALL_BUCKETS}}"
+											},
+											"response": []
+										}
+									],
 									"id": "2bd04e5c-d03b-4805-a574-43aa14f75d58"
 								}
 							],
