@@ -57788,7 +57788,7 @@
 									"name": "ValidTokenAndSuccessfulPOST",
 									"item": [
 										{
-											"name": "UploadFileToBucketAsOwner",
+											"name": "UploadFileToBucketAsOwner-Worker",
 											"event": [
 												{
 													"listen": "test",
