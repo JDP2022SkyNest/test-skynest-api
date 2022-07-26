@@ -58113,7 +58113,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{SecondAdminAuthToken}}"
 													}
 												},
 												"method": "POST",
@@ -58124,11 +58124,11 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
 											},
 											"response": []
 										},
