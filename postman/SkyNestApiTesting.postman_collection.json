@@ -37112,7 +37112,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validAdminId}}"
 											},
 											"response": [
 												{
