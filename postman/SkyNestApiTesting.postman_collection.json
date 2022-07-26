@@ -50062,7 +50062,7 @@
 											"name": "ForbiddenView",
 											"item": [
 												{
-													"name": "ViewAdmin'sBucketContentAsWorker",
+													"name": "ViewBucketContentAsUserWithoutAnyPermission",
 													"id": "0955d10d-8f28-468b-81c0-4dcdcdade992",
 													"protocolProfileBehavior": {
 														"disableBodyPruning": true
