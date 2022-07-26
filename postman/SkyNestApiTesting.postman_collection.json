@@ -58951,6 +58951,48 @@
 											]
 										},
 										{
+											"name": "UploadFileToPrivateBucketAsUserWithLowerPermission(View) Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "b58dc2c5-5fac-4de6-a8d8-977975fdc6ba",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "UploadWithoutAttachingFile",
 											"event": [
 												{
