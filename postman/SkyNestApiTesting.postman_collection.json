@@ -45397,6 +45397,48 @@
 													"body": "{\n    \"bucketId\": \"b788cb93-fdd3-4389-879f-8863e995e527\",\n    \"createdById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"name\": \"Bucket of an admin\",\n    \"companyId\": \"a4bc0c08-08fc-11ed-b371-0242ac120003\",\n    \"description\": \"Bucket of admin\",\n    \"size\": 429,\n    \"isPublic\": false,\n    \"deletedOn\": null,\n    \"tags\": []\n}"
 												}
 											]
+										},
+										{
+											"name": "ViewPrivateBucketAsUserWithViewPermission",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "76c04764-9c38-4453-95aa-60d361729a31",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"createdById from the response is the same with the id of the user that created the bucket\", function () {\r",
+															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"bucketId from the response is the same with the id from the successful bucket creation\", function () {\r",
+															"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "1517347f-acab-42e8-b434-bfb64135687f",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": []
 										}
 									],
 									"id": "d8379caa-3848-4538-aa6b-f69b6b30e367",
@@ -45629,48 +45671,6 @@
 													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-25 12:39:37\"\n}"
 												}
 											]
-										},
-										{
-											"name": "ViewPrivateBucketAsUserWithViewPermission",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "76c04764-9c38-4453-95aa-60d361729a31",
-														"exec": [
-															"const jsonData = pm.response.json();\r",
-															"\r",
-															"pm.test(\"createdById from the response is the same with the id of the user that created the bucket\", function () {\r",
-															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
-															"});\r",
-															"\r",
-															"pm.test(\"bucketId from the response is the same with the id from the successful bucket creation\", function () {\r",
-															"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
-															"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
-															"});\r",
-															""
-														],
-														"type": "text/javascript"
-													}
-												}
-											],
-											"id": "1517347f-acab-42e8-b434-bfb64135687f",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{workerAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_GET_INFO}}"
-											},
-											"response": []
 										},
 										{
 											"name": "ViewAnotherWorker'sBucketAsWorker",
