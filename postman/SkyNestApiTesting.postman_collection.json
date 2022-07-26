@@ -47334,6 +47334,25 @@
 									]
 								},
 								{
+									"name": "DeletePrivateBucketAsUserWithEditPermission",
+									"id": "be1350ce-9bae-4296-9c33-c2d1235fa958",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+									},
+									"response": []
+								},
+								{
 									"name": "DeleteBucketForFurtherTests",
 									"id": "2674d232-b825-4ae4-8c27-d682027ec9a0",
 									"protocolProfileBehavior": {
