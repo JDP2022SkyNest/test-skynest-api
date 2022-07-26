@@ -70385,7 +70385,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "TagObjectEmptyToken",
+									"name": "UntagObjectEmptyToken",
 									"id": "d1e3fcbe-173b-4e7f-8fba-6ba8b48c621c",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
