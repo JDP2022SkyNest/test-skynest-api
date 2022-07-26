@@ -42564,7 +42564,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"PrivateBucket\",\r\n  \"description\": \"string string\",\r\n  \"isPublic\": false\r\n}",
+													"raw": "{\r\n  \"name\": \"Private Bucket\",\r\n  \"description\": \"string string\",\r\n  \"isPublic\": false\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
