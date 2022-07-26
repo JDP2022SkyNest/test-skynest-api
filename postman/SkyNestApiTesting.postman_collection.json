@@ -61312,7 +61312,85 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "6d075dfb-4654-4898-a81e-ff0fce25eeaa",
+													"name": "DownloadFileFromPublicBucketAsNotOwner",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "raw",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Content-Disposition",
+															"value": "attachment; filename=\"env (1).env\""
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/octet-stream"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 26 Jul 2022 19:48:25 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "#   local values\r\nSKYNEST_HOST=localhost\r\nBE_PORT=8080\r\nFE_PORT=3000\r\nDB_HOST=localhost\r\nDB_PORT=3306\r\nDB_NAME=skynest\r\nDB_USERNAME=user\r\nDB_PASSWORD=123456\r\nTOKEN_DB_HOST=localhost\r\nTOKEN_DB_PORT=9042\r\nTOKEN_DB_USERNAME=cassandra\r\nTOKEN_DB_PASSWORD=cassandra\r\nTOKEN_DB_CLUSTER=Test Cluster\r\nTOKEN_DB_LOCAL_DATACENTER=datacenter1\r\nTOKEN_DB_KEYSPACE=tokenkeyspace\r\nFILE_DB_PORT=27017\r\nFILE_DB_HOST=localhost\r\nFILE_DB_NAME=skynest\r\nFILE_DB_USERNAME=user\r\nFILE_DB_PASSWORD=123456\r\nJWT_SECRET=jfgi95jgnfi4\r\nJWT_ACCESS_EXPIRATION=1800000\r\nEMAIL_EXPIRATION=1800000\r\nJWT_REFRESH_EXPIRATION=1800000\r\nJWT_REGISTRATION_INVITE_EXPIRATION=86400000\r\nMAIL_HOST=smtp.gmail.com\r\nMAIL_PORT=587\r\nMAIL_USERNAME=no.reply.skynest@gmail.com\r\nMAIL_PASSWORD=ftzldfejzhtqjsok"
+												}
+											]
 										},
 										{
 											"name": "DownloadFileFromBucketFromAnotherCompany",
