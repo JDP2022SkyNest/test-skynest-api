@@ -70382,7 +70382,7 @@
 											]
 										},
 										{
-											"name": "UntagABucketAsOwner Copy",
+											"name": "UntagABucketAsUserFromTheSameCompanyButNotOwner",
 											"id": "0b533ed5-74e7-4dc2-833f-3472c7c2e004",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
