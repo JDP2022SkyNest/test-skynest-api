@@ -66615,7 +66615,7 @@
 							"name": "ValidTokenAndSuccessfulPUT",
 							"item": [
 								{
-									"name": "RestoreFileAsOwner-Worker",
+									"name": "RestoreFileAsOwner-Admin",
 									"id": "a440c1b8-f584-445a-bfbe-ab1d76a4980b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
