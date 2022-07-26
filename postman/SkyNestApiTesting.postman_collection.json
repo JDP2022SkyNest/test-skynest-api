@@ -61660,7 +61660,7 @@
 											]
 										},
 										{
-											"name": "DownloadFileFromPublicBucketAsNotOwner Copy",
+											"name": "DownloadFileFromPublicBucketAsUserWithHigherPermission(Edit)",
 											"id": "8543caf3-8b21-4481-9ed4-1dc42e066c3d",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
