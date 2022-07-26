@@ -42530,7 +42530,7 @@
 											]
 										},
 										{
-											"name": "EditPrivateBucketAsNonCreator",
+											"name": "EditPrivateBucketAsNotOwner",
 											"event": [
 												{
 													"listen": "test",
