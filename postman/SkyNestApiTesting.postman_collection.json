@@ -49892,7 +49892,81 @@
 														"header": [],
 														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
 													},
-													"response": []
+													"response": [
+														{
+															"id": "d651f03c-d3da-4ba4-987e-5d478dbce125",
+															"name": "ViewWorker'sBucketContentAsAdmin",
+															"originalRequest": {
+																"method": "GET",
+																"header": [],
+																"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Vary",
+																	"value": "Origin"
+																},
+																{
+																	"key": "Vary",
+																	"value": "Access-Control-Request-Method"
+																},
+																{
+																	"key": "Vary",
+																	"value": "Access-Control-Request-Headers"
+																},
+																{
+																	"key": "X-Content-Type-Options",
+																	"value": "nosniff"
+																},
+																{
+																	"key": "X-XSS-Protection",
+																	"value": "1; mode=block"
+																},
+																{
+																	"key": "Cache-Control",
+																	"value": "no-cache, no-store, max-age=0, must-revalidate"
+																},
+																{
+																	"key": "Pragma",
+																	"value": "no-cache"
+																},
+																{
+																	"key": "Expires",
+																	"value": "0"
+																},
+																{
+																	"key": "X-Frame-Options",
+																	"value": "DENY"
+																},
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																},
+																{
+																	"key": "Transfer-Encoding",
+																	"value": "chunked"
+																},
+																{
+																	"key": "Date",
+																	"value": "Mon, 11 Jul 2022 13:25:15 GMT"
+																},
+																{
+																	"key": "Keep-Alive",
+																	"value": "timeout=60"
+																},
+																{
+																	"key": "Connection",
+																	"value": "keep-alive"
+																}
+															],
+															"cookie": [],
+															"responseTime": null,
+															"body": "{\n    \"folders\": [\n        {\n            \"id\": \"7bfe5de0-44c3-4cf8-a926-2b0ae4e4cc85\",\n            \"createdOn\": \"2022-07-11T13:07:33\",\n            \"modifiedOn\": \"2022-07-11T13:07:33\",\n            \"deletedOn\": \"2022-07-11T15:07:45\",\n            \"name\": \"Folder\",\n            \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n            \"parentFolderId\": null,\n            \"bucketId\": \"fb384180-2e03-4a5d-8a3f-52c4f4974399\"\n        },\n        {\n            \"id\": \"a43a0dd9-d652-4554-a7a5-cdfbc42d7ada\",\n            \"createdOn\": \"2022-07-11T13:09:15\",\n            \"modifiedOn\": \"2022-07-11T13:09:15\",\n            \"deletedOn\": \"2022-07-11T15:09:18\",\n            \"name\": \"Folder\",\n            \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n            \"parentFolderId\": null,\n            \"bucketId\": \"fb384180-2e03-4a5d-8a3f-52c4f4974399\"\n        }\n    ],\n    \"files\": [\n        {\n            \"id\": \"38654652-7e2f-446d-af05-ebb75e0ee10c\",\n            \"createdOn\": \"2022-07-11T12:56:03\",\n            \"modifiedOn\": \"2022-07-11T12:56:03\",\n            \"deletedOn\": null,\n            \"name\": \"LoginTest.txt\",\n            \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n            \"parentFolderId\": null,\n            \"bucketId\": \"fb384180-2e03-4a5d-8a3f-52c4f4974399\",\n            \"type\": \"text/plain\",\n            \"size\": \"2838\"\n        },\n        {\n            \"id\": \"5e18abfb-675f-4962-b7a7-e5ae89c47f51\",\n            \"createdOn\": \"2022-07-11T12:51:39\",\n            \"modifiedOn\": \"2022-07-11T12:51:39\",\n            \"deletedOn\": null,\n            \"name\": \"May 2022 (4).jpg\",\n            \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n            \"parentFolderId\": null,\n            \"bucketId\": \"fb384180-2e03-4a5d-8a3f-52c4f4974399\",\n            \"type\": \"image/jpeg\",\n            \"size\": \"775766\"\n        }\n    ]\n}"
+														}
+													]
 												},
 												{
 													"name": "ViewAdmin'sBucketContentAsWorker",
