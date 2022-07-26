@@ -41931,7 +41931,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Edited Hristina's Bucket\",\r\n  \"description\": \"Worker's bucket\",\r\n  \"isPublic\": false \r\n}",
+													"raw": "{\r\n  \"name\": \"Worker's Bucket\",\r\n  \"description\": \"Opis na bucket\",\r\n  \"isPublic\": false \r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
