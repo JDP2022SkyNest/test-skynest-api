@@ -49945,7 +49945,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{secondValidAdminId}}"
 													}
 												},
 												"method": "GET",
