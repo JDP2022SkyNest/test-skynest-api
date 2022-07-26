@@ -61199,7 +61199,7 @@
 											]
 										},
 										{
-											"name": "DownloadAdmin'sFileAsAdmin",
+											"name": "DownloadFileFromPrivateBucketAsUserWithDownloadPermission",
 											"id": "7982fd79-7cdc-4233-abb3-21c4c61a6b41",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
