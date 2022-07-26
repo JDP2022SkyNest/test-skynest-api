@@ -49750,7 +49750,7 @@
 											]
 										},
 										{
-											"name": "ViewAdmin'sBucketContentAsCreator",
+											"name": "ViewAdmin'sBucketContentAsOwner",
 											"id": "59184dbf-2180-4d98-a336-09170df02650",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
