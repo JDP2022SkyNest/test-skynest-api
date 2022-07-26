@@ -61813,7 +61813,7 @@
 											]
 										},
 										{
-											"name": "DownloadFileFromPRivateBucketAsUserWithoutPermissions",
+											"name": "DownloadFileFromPrivateBucketAsUserWithoutPermissions",
 											"event": [
 												{
 													"listen": "test",
