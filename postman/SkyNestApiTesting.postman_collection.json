@@ -46463,6 +46463,11 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "f1f3b27b-12c6-4f84-a158-f0bcb8fb4d21"
+								},
+								{
 									"name": "ViewAllBucketsAsAdmin",
 									"id": "5a0bdc45-2bdb-45b4-9253-514ef2bc9d94",
 									"protocolProfileBehavior": {
