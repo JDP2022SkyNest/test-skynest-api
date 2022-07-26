@@ -46464,7 +46464,10 @@
 													"script": {
 														"id": "f2364759-d3fe-4028-a89c-7e002973b71a",
 														"exec": [
-															"\r",
+															"pm.test(\"Your test name\", function () {\r",
+															"    var jsonData = pm.response.json();\r",
+															"    pm.expect(jsonData.value).to.eql(100);\r",
+															"});\r",
 															"\r",
 															"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
 															"    console.log(response.json());\r",
