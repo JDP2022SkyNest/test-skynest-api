@@ -65588,7 +65588,7 @@
 											]
 										},
 										{
-											"name": "DeleteFileAsOwner Copy",
+											"name": "DeleteFileAsUserWithEditPermission",
 											"id": "7b42f07d-72ec-472f-9185-ec602166ce44",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
