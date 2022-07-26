@@ -47334,6 +47334,25 @@
 									]
 								},
 								{
+									"name": "DeletePrivateBucketAsUserWithEditPermission",
+									"id": "be1350ce-9bae-4296-9c33-c2d1235fa958",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{SecondAdminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+									},
+									"response": []
+								},
+								{
 									"name": "DeleteBucketForFurtherTests",
 									"id": "2674d232-b825-4ae4-8c27-d682027ec9a0",
 									"protocolProfileBehavior": {
@@ -47647,7 +47666,7 @@
 									]
 								},
 								{
-									"name": "DeleteWorker'sBucketAsAdmin",
+									"name": "DeletePrivateBucketAsUserWIthoutPermissions",
 									"id": "bc3faae1-587f-4b18-aeca-1e2562995b8b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -47656,7 +47675,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": "{{secondWorkerAuthToken}}"
 											}
 										},
 										"method": "PUT",
@@ -47665,15 +47684,15 @@
 									},
 									"response": [
 										{
-											"id": "55dbf83c-8c4f-4c77-b67a-9ed28b2623d7",
-											"name": "DeleteWorker'sBucketAsAdmin",
+											"id": "0720cc5b-9312-4955-b62a-b2045fa6518d",
+											"name": "DeletePrivateBucketAsUserWIthoutPermissions",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
-											"status": "Conflict",
-											"code": 409,
+											"status": "Forbidden",
+											"code": 403,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -47722,7 +47741,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 08 Jul 2022 10:22:04 GMT"
+													"value": "Tue, 26 Jul 2022 13:52:26 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -47735,12 +47754,12 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-08 12:22:04\"\n}"
+											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 15:52:26\"\n}"
 										}
 									]
 								},
 								{
-									"name": "DeleteAdmin'sBucketAsWorker",
+									"name": "DeletePrivateBucketAsUserWith",
 									"id": "ab61c9fa-3078-411d-a063-f1391f84353a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -50062,7 +50081,7 @@
 											"name": "ForbiddenView",
 											"item": [
 												{
-													"name": "ViewAdmin'sBucketContentAsWorker",
+													"name": "ViewBucketContentAsUserWithoutAnyPermission",
 													"id": "0955d10d-8f28-468b-81c0-4dcdcdade992",
 													"protocolProfileBehavior": {
 														"disableBodyPruning": true
@@ -50080,15 +50099,15 @@
 													},
 													"response": [
 														{
-															"id": "b7278767-f2e9-4489-b84f-953a82874650",
-															"name": "ViewAdmin'sBucketContentAsWorker",
+															"id": "9473434d-6cf5-4c94-bc4e-086a74dda331",
+															"name": "ViewBucketContentAsUserWithoutAnyPermission",
 															"originalRequest": {
 																"method": "GET",
 																"header": [],
 																"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}"
 															},
-															"status": "OK",
-															"code": 200,
+															"status": "Forbidden",
+															"code": 403,
 															"_postman_previewlanguage": "json",
 															"header": [
 																{
@@ -50137,7 +50156,7 @@
 																},
 																{
 																	"key": "Date",
-																	"value": "Mon, 11 Jul 2022 13:26:36 GMT"
+																	"value": "Tue, 26 Jul 2022 13:38:18 GMT"
 																},
 																{
 																	"key": "Keep-Alive",
@@ -50150,7 +50169,7 @@
 															],
 															"cookie": [],
 															"responseTime": null,
-															"body": "{\n    \"folders\": [\n        {\n            \"id\": \"21efbf6c-3d73-4bce-b4dc-7ba426b1a0f6\",\n            \"createdOn\": \"2022-07-11T13:07:24\",\n            \"modifiedOn\": \"2022-07-11T13:07:24\",\n            \"deletedOn\": \"2022-07-11T15:09:24\",\n            \"name\": \"Folder\",\n            \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n            \"parentFolderId\": null,\n            \"bucketId\": \"11775fbd-de90-47f2-bb72-b70f1321d76b\"\n        },\n        {\n            \"id\": \"2b6e6203-c5a7-4723-951a-e2fb3f066187\",\n            \"createdOn\": \"2022-07-11T13:04:19\",\n            \"modifiedOn\": \"2022-07-11T13:04:19\",\n            \"deletedOn\": null,\n            \"name\": \"Folder\",\n            \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n            \"parentFolderId\": null,\n            \"bucketId\": \"11775fbd-de90-47f2-bb72-b70f1321d76b\"\n        }\n    ],\n    \"files\": [\n        {\n            \"id\": \"520719a9-0967-40bf-a852-38b1918eceb0\",\n            \"createdOn\": \"2022-07-11T10:38:20\",\n            \"modifiedOn\": \"2022-07-11T10:38:20\",\n            \"deletedOn\": null,\n            \"name\": \"LoginTest.txt\",\n            \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n            \"parentFolderId\": null,\n            \"bucketId\": \"11775fbd-de90-47f2-bb72-b70f1321d76b\",\n            \"type\": \"text/plain\",\n            \"size\": \"2838\"\n        }\n    ]\n}"
+															"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 15:38:18\"\n}"
 														}
 													]
 												},
