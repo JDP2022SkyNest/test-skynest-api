@@ -10,13 +10,14 @@ import org.testng.annotations.Test;
 
 import java.util.UUID;
 
-import static org.apache.http.HttpStatus.*;
+import static org.apache.http.HttpStatus.SC_FORBIDDEN;
+import static org.apache.http.HttpStatus.SC_OK;
+import static org.apache.http.HttpStatus.SC_NOT_FOUND;
+import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.testng.Assert.assertEquals;
 import static org.testng.AssertJUnit.assertNotNull;
 
 public class BucketContentTest extends BucketBaseTest {
-
-    //TODO Upgrade this test when you have tests for creating folders and files inside the bucket
     @Test
     void bucket_content_should_be_empty_when_folders_and_files_are_not_added() {
         Response response = skyNestBackendClient.getBucketContent(createdBucketResponse.getBucketId());
@@ -58,7 +59,7 @@ public class BucketContentTest extends BucketBaseTest {
     }
 
     @Test(dependsOnMethods = "logged_owner_should_be_able_to_upload_file_in_its_own_private_bucket")
-    void bucket_content_should_contains_all_added_folders_and_files() {
+    void bucket_content_should_contain_all_added_folders_and_files() {
         Response response = skyNestBackendClient.getBucketContent(createdBucketResponse.getBucketId());
         response.then().statusCode(SC_OK);
 
