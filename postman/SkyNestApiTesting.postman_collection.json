@@ -46464,6 +46464,8 @@
 													"script": {
 														"id": "f2364759-d3fe-4028-a89c-7e002973b71a",
 														"exec": [
+															"\r",
+															"\r",
 															"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
 															"    console.log(response.json());\r",
 															"});"
