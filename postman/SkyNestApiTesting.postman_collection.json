@@ -46460,7 +46460,7 @@
 					"name": "ViewAllBuckets",
 					"item": [
 						{
-							"name": "AdminValidToken",
+							"name": "ValidToken",
 							"item": [
 								{
 									"name": "ViewAllBucketsAsAdmin",
