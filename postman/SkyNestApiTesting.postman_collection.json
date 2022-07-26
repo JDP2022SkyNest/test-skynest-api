@@ -47759,7 +47759,7 @@
 									]
 								},
 								{
-									"name": "DeletePrivateBucketAsUserWith",
+									"name": "DeletePrivateBucketAsUserWithLowerPermission(View)",
 									"id": "ab61c9fa-3078-411d-a063-f1391f84353a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
