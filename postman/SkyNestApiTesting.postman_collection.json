@@ -49769,7 +49769,7 @@
 											"response": [
 												{
 													"id": "59ffadb2-0997-4826-b3fb-5351bf9a7aa5",
-													"name": "ViewAdmin'sBucketContentAsCreator",
+													"name": "ViewAdmin'sBucketContentAsOwner",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
