@@ -65908,7 +65908,7 @@
 											]
 										},
 										{
-											"name": "DeleteFileAsNotCreator",
+											"name": "DeleteFileAsUserWithoutPermissions",
 											"event": [
 												{
 													"listen": "test",
@@ -66005,6 +66005,25 @@
 													"body": null
 												}
 											]
+										},
+										{
+											"name": "DeleteFileAsUserWithEditPermission Copy",
+											"id": "95d37d8d-48c3-4a7a-afab-718b2cb3b3c1",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "ea6ab095-ca15-4725-b731-9cb807cc22b2"
