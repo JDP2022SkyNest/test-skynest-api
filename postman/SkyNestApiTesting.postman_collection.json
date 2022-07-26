@@ -47343,14 +47343,88 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": "{{SecondAdminAuthToken}}"
 											}
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "1a1189ce-b04f-4037-9e0f-d1f83aee1017",
+											"name": "DeletePrivateBucketAsUserWithEditPermission",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 26 Jul 2022 13:56:13 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "true"
+										}
+									]
 								},
 								{
 									"name": "DeleteBucketForFurtherTests",
@@ -47666,7 +47740,7 @@
 									]
 								},
 								{
-									"name": "DeletePrivateBucketAsUserWIthoutPermissions",
+									"name": "DeletePrivateBucketAsUserWithoutPermissions",
 									"id": "bc3faae1-587f-4b18-aeca-1e2562995b8b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -47675,43 +47749,24 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": "{{secondWorkerAuthToken}}"
 											}
 										},
 										"method": "PUT",
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
-									"response": []
-								},
-								{
-									"name": "DeleteAdmin'sBucketAsWorker",
-									"id": "ab61c9fa-3078-411d-a063-f1391f84353a",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
-									},
 									"response": [
 										{
-											"id": "08b3ae20-be5e-4f00-976d-b1cc6413579e",
-											"name": "DeleteAdmin'sBucketAsWorker",
+											"id": "0720cc5b-9312-4955-b62a-b2045fa6518d",
+											"name": "DeletePrivateBucketAsUserWithoutPermissions",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 											},
-											"status": "Conflict",
-											"code": 409,
+											"status": "Forbidden",
+											"code": 403,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -47760,7 +47815,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Fri, 08 Jul 2022 10:22:38 GMT"
+													"value": "Tue, 26 Jul 2022 13:52:26 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -47773,7 +47828,100 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-08 12:22:38\"\n}"
+											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 15:52:26\"\n}"
+										}
+									]
+								},
+								{
+									"name": "DeletePrivateBucketAsUserWithLowerPermission(View)",
+									"id": "ab61c9fa-3078-411d-a063-f1391f84353a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+									},
+									"response": [
+										{
+											"id": "078b42cb-7901-42b1-a39b-8a60ca1307b0",
+											"name": "DeletePrivateBucketAsUserWithLowerPermission(View)",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 26 Jul 2022 13:54:25 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 15:54:25\"\n}"
 										}
 									]
 								}
@@ -48763,7 +48911,7 @@
 									]
 								},
 								{
-									"name": "RestoreOwnBucketAsWorker",
+									"name": "RestorePrivateBucketAsUserWithEditPermission",
 									"id": "f0bb76bb-a921-4e96-92fc-48f0a53487df",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -48772,7 +48920,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{SecondAdminAuthToken}}"
 											}
 										},
 										"method": "PUT",
@@ -48781,12 +48929,12 @@
 									},
 									"response": [
 										{
-											"id": "09dc7da2-05d0-488f-9e8b-234647f0ae11",
-											"name": "RestoreOwnBucketAsWorker",
+											"id": "77c6209e-d842-43b8-a798-fccd4c8e7bda",
+											"name": "RestorePrivateBucketAsUserWithEditPermission",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE}}"
 											},
 											"status": "OK",
 											"code": 200,
@@ -48838,7 +48986,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Tue, 05 Jul 2022 14:28:28 GMT"
+													"value": "Tue, 26 Jul 2022 14:01:53 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -48979,8 +49127,194 @@
 									]
 								},
 								{
-									"name": "RestoreWorker'sBucketAsAdmin",
+									"name": "RestorePrivateBucketAsUserWithLowerPermission(Download)",
 									"id": "23d7b31b-a319-4dae-a7a2-72fa09886912",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{secondWorkerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": [
+										{
+											"id": "432d0ce6-ba56-48b7-9aed-9a4d882feb4d",
+											"name": "RestorePrivateBucketAsUserWithLowerPermission(Download)",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 26 Jul 2022 14:04:54 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 16:04:54\"\n}"
+										}
+									]
+								},
+								{
+									"name": "RestorePrivateBucketAsUserWithLowerPermission(Download) Copy",
+									"id": "09a7909a-498c-4ea8-9fb9-4dc4321cb5b7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{secondWorkerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": [
+										{
+											"id": "5fbc524c-cb7a-41c9-aee0-0bc9bc028445",
+											"name": "RestorePrivateBucketAsUserWithLowerPermission(Download)",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 26 Jul 2022 14:04:54 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 16:04:54\"\n}"
+										}
+									]
+								},
+								{
+									"name": "RestorePrivateBucketAsUserWithLowerPermission(View)",
+									"id": "054b2fd0-1400-4f10-b55b-ffa2e300ca01",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -48997,15 +49331,15 @@
 									},
 									"response": [
 										{
-											"id": "9293f341-b481-489a-aa44-91e590d5399f",
-											"name": "RestoreWorker'sBucketAsAdmin",
+											"id": "0d23d796-7957-44f5-acbf-c1c1ec8b430b",
+											"name": "RestorePrivateBucketAsUserWithLowerPermission(View)",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE}}"
 											},
-											"status": "OK",
-											"code": 200,
+											"status": "Forbidden",
+											"code": 403,
 											"_postman_previewlanguage": "json",
 											"header": [
 												{
@@ -49054,7 +49388,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Tue, 05 Jul 2022 14:36:25 GMT"
+													"value": "Tue, 26 Jul 2022 14:04:04 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -49067,13 +49401,13 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "true"
+											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 16:04:04\"\n}"
 										}
 									]
 								},
 								{
-									"name": "RestoreAdmin'sBucketAsWorker",
-									"id": "054b2fd0-1400-4f10-b55b-ffa2e300ca01",
+									"name": "RestorePrivateBucketAsUserWithLowerPermission(View) Copy",
+									"id": "48abe3f6-6855-4950-895e-b57d3965b001",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -49081,88 +49415,14 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{adminAuthToken}}"
 											}
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_RESTORE}}"
 									},
-									"response": [
-										{
-											"id": "6b29909a-f350-4ff7-9877-da2b505fa433",
-											"name": "RestoreAdmin'sBucketAsWorker",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE_BUCKET}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Tue, 05 Jul 2022 14:38:34 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "true"
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "RestoreAlreadyRestoredBucket",
