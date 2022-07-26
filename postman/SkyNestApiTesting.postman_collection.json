@@ -42365,7 +42365,7 @@
 											"response": [
 												{
 													"id": "bf785b3d-c379-4c4c-bf4e-c27c1655d344",
-													"name": "EditPublicBucketAsNonCreator",
+													"name": "EditPublicBucketAsNotOwner",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
