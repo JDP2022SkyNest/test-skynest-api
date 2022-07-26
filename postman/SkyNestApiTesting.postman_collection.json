@@ -47647,7 +47647,7 @@
 									]
 								},
 								{
-									"name": "DeleteWorker'sBucketAsAdmin",
+									"name": "DeletePrivateBucketAsUserWIthoutPermissions",
 									"id": "bc3faae1-587f-4b18-aeca-1e2562995b8b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
