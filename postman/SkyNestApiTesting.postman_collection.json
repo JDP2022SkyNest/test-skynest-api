@@ -43631,7 +43631,7 @@
 									]
 								},
 								{
-									"name": "EditPrivateBucketWithoutGrantedAccess Copy",
+									"name": "EditPrivateBucketWithLowerPermission(ViewPermission)",
 									"id": "2e6cd024-5f57-4820-b7e9-5dc9a61a42d2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
