@@ -67017,7 +67017,7 @@
 									]
 								},
 								{
-									"name": "RestoreFileAsuserWithEditPermission",
+									"name": "RestoreFileAsUserWithEditPermission",
 									"id": "7c357e82-39c1-4c46-bcb5-0d61121c0fdf",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
