@@ -58139,7 +58139,91 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{deletedBucketId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "9fdcf8de-3df9-4504-b31c-7eae097a782d",
+													"name": "UploadFileToBucketAndDeleteTheBucket",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{deletedBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 26 Jul 2022 20:30:20 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"fa176412-8ed4-4948-91cd-055b6f4fe5c2\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"BaseTest.txt\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"28df1cb2-571a-4e8c-9c6a-55a87dffea1c\",\n    \"type\": \"text/plain\",\n    \"size\": \"300\",\n    \"tags\": null\n}"
+												}
+											]
 										},
 										{
 											"name": "UploadFileToBucketAsOwner-Admin",
