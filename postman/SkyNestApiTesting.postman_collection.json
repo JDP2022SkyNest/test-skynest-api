@@ -69792,7 +69792,7 @@
 											]
 										},
 										{
-											"name": "TagAlreadyDeletedFile",
+											"name": "TagAlreadyDeletedFolder Copy",
 											"id": "fc16c281-00ea-4197-a8bb-05f6d11b5450",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -69806,7 +69806,7 @@
 												},
 												"method": "POST",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{deletedFileId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{deletedFolderId}}"
 											},
 											"response": []
 										},
