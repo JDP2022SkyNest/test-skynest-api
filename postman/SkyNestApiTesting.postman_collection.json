@@ -66653,7 +66653,7 @@
 									"response": [
 										{
 											"id": "ed10aefd-9f86-4dba-a9a7-1494abdae94f",
-											"name": "RestoreFileAsOwner-Admin",
+											"name": "RestoreFileAsOwner-Worker",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
