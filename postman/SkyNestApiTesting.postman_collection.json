@@ -65588,6 +65588,25 @@
 											]
 										},
 										{
+											"name": "DeleteFileAsOwner Copy",
+											"id": "7b42f07d-72ec-472f-9185-ec602166ce44",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "DeleteFileForFurtherTests",
 											"id": "7749cee5-5d24-4dd1-8958-ef882abf3522",
 											"protocolProfileBehavior": {
