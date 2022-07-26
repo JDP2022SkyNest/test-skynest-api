@@ -65979,7 +65979,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "ad8daca9-2511-437e-b780-1b3d792d7739",
+												"id": "6b1f0f52-f59c-4c3a-8478-72a872762eb8",
 												"type": "text/javascript",
 												"exec": [
 													""
@@ -65989,11 +65989,11 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "78eaec90-5fad-4910-a83e-3a91d192fea8",
+												"id": "608b831c-530d-4fc0-9834-7de6a4327373",
 												"type": "text/javascript",
 												"exec": [
-													"pm.test(\"Status code is 200\", function () {",
-													"    pm.response.to.have.status(200);",
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
 													"});"
 												]
 											}
