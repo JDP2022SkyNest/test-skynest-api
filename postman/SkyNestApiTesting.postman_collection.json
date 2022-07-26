@@ -64002,7 +64002,7 @@
 									"name": "ValidTokenAndSuccessfulPUT",
 									"item": [
 										{
-											"name": "EditFileNameAsCreator",
+											"name": "EditFileNameAsOwner",
 											"id": "ea10b575-41d3-40e0-aa4d-4d8cbf6cb571",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
