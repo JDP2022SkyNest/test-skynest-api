@@ -45431,7 +45431,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{secondValidWorkerId}}"
 													}
 												},
 												"method": "GET",
