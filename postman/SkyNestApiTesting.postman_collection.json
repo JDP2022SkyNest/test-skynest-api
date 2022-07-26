@@ -65719,7 +65719,7 @@
 											]
 										},
 										{
-											"name": "DeleteFileAsOwner-Admin Copy",
+											"name": "DeleteFileAsOwner-Worker",
 											"id": "dca3354b-12fd-429a-948d-89084ba140ce",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
