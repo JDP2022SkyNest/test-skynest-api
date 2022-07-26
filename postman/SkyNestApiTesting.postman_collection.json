@@ -42156,7 +42156,90 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "b8612ba1-3bd2-488b-81f6-8380d728c22c",
+													"name": "EditPrivateBucketWithEditPermission",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Edited Hristina's Bucket\",\r\n  \"description\": \"Worker's bucket\",\r\n  \"isPublic\": false \r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 26 Jul 2022 08:55:44 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"bucketId\": \"9e4c1b99-3e84-424f-81b9-f2c39206ba6b\",\n    \"createdById\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n    \"name\": \"Edited Hristina's Bucket\",\n    \"companyId\": \"a4bc0c08-08fc-11ed-b371-0242ac120003\",\n    \"description\": \"Worker's bucket\",\n    \"size\": 0,\n    \"isPublic\": false,\n    \"deletedOn\": null,\n    \"tags\": null\n}"
+												}
+											]
 										},
 										{
 											"name": "MakeABucketPublic",
