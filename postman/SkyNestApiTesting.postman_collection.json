@@ -70657,25 +70657,6 @@
 													"body": "{\n    \"messages\": [\n        \"Tag doesn't exist\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-26 11:52:34\"\n}"
 												}
 											]
-										},
-										{
-											"name": "UntagAlreadyDeletedBucket",
-											"id": "0482c472-c184-4efd-b990-5b07055ed15c",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{notExistingTagId}}{{ENDPOINT_OBJECT}}{{workerBucketId}}"
-											},
-											"response": []
 										}
 									],
 									"id": "c6105ff7-ac81-4ccc-b374-574b4efcb33b"
