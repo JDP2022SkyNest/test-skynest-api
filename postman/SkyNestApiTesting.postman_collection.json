@@ -43047,42 +43047,7 @@
 													"body": "{\n    \"bucketId\": \"9e4c1b99-3e84-424f-81b9-f2c39206ba6b\",\n    \"createdById\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n    \"name\": \"Trim\",\n    \"companyId\": \"a4bc0c08-08fc-11ed-b371-0242ac120003\",\n    \"description\": \"Trim Description\",\n    \"size\": 0,\n    \"isPublic\": true,\n    \"deletedOn\": null,\n    \"tags\": null\n}"
 												}
 											]
-										}
-									],
-									"id": "3b0e735a-82b5-4ef6-ac1f-fe5f3360a3fc",
-									"event": [
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "9820349e-1e54-416e-9a8d-814b24433ab5",
-												"type": "text/javascript",
-												"exec": [
-													""
-												]
-											}
 										},
-										{
-											"listen": "test",
-											"script": {
-												"id": "785e416c-1dfb-403c-bae9-3eed5c7f26af",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Status code is 200\", function () {",
-													"    pm.response.to.have.status(200);",
-													"});",
-													"",
-													"",
-													"pm.test(\"Response contains bucketId\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"bucketId\");",
-													"});"
-												]
-											}
-										}
-									]
-								},
-								{
-									"name": "InvalidEdition",
-									"item": [
 										{
 											"name": "EditBucketWithSameNameTwice",
 											"id": "3d82c4ec-6016-4763-97bb-5ded8482a2d0",
@@ -43193,7 +43158,42 @@
 													"body": "{\n    \"bucketId\": \"f2509ba2-1651-4d74-951c-0468cf0e98fd\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"name\": \"Bucket One\",\n    \"companyId\": null,\n    \"description\": \"Description One\",\n    \"size\": 0,\n    \"isPublic\": true\n}"
 												}
 											]
+										}
+									],
+									"id": "3b0e735a-82b5-4ef6-ac1f-fe5f3360a3fc",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "9820349e-1e54-416e-9a8d-814b24433ab5",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
 										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "785e416c-1dfb-403c-bae9-3eed5c7f26af",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"",
+													"pm.test(\"Response contains bucketId\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"bucketId\");",
+													"});"
+												]
+											}
+										}
+									]
+								},
+								{
+									"name": "InvalidEdition",
+									"item": [
 										{
 											"name": "EditBucketWithEmptyParameters",
 											"id": "71993c14-4bfd-47a3-8630-dc3e14b612f5",
@@ -43485,324 +43485,6 @@
 													"body": "{\n    \"messages\": [\n        \"description cannot be null or empty\",\n        \"name cannot be null or empty\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-04 13:09:15\"\n}"
 												}
 											]
-										},
-										{
-											"name": "EditBucketWithoutGrantedAccess",
-											"id": "d8d8a59a-4c52-4375-9d3a-8bb8eedb6fbc",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{workerAuthToken}}"
-													}
-												},
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Bucket Name\",\r\n  \"description\": \"Description Three\",\r\n  \"isPublic\": null \r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-											},
-											"response": [
-												{
-													"id": "cdd9d03c-aa2b-4052-a4ae-ae96ec53c673",
-													"name": "EditBucketWithoutGrantedAccess",
-													"originalRequest": {
-														"method": "PUT",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"name\": \"Bucket Name\",\r\n  \"description\": \"Description Three\",\r\n  \"isPublic\": null \r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-													},
-													"status": "Bad Request",
-													"code": 400,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Mon, 04 Jul 2022 11:10:55 GMT"
-														},
-														{
-															"key": "Connection",
-															"value": "close"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"isPublic must be true or false\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-04 13:10:55\"\n}"
-												}
-											]
-										},
-										{
-											"name": "EditPrivateBucketAsNotOwner",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
-														"exec": [
-															"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
-															"    var jsonData = pm.response.json();\r",
-															"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
-															"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
-															"});\r",
-															"\r",
-															""
-														],
-														"type": "text/javascript"
-													}
-												}
-											],
-											"id": "79314c8e-931a-4e99-9739-b5182ed2efcb",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{secondWorkerAuthToken}}"
-													}
-												},
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Private Bucket\",\r\n  \"description\": \"string string\",\r\n  \"isPublic\": false\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-											},
-											"response": [
-												{
-													"id": "d7bc1c6f-a8e0-4c15-99b7-5e440e0a6cae",
-													"name": "EditPrivateBucketAsNotOwner",
-													"originalRequest": {
-														"method": "PUT",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"name\": \"PrivateBucket\",\r\n  \"description\": \"string string\",\r\n  \"isPublic\": false\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-													},
-													"status": "Forbidden",
-													"code": 403,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Wed, 13 Jul 2022 11:33:54 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"Current user can't edit this bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-13 13:33:54\"\n}"
-												},
-												{
-													"id": "33f49ed6-7fb6-4890-a4cb-c1106da6a464",
-													"name": "EditPrivateBucketAsNotOwner",
-													"originalRequest": {
-														"method": "PUT",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"name\": \"Private Bucket\",\r\n  \"description\": \"string string\",\r\n  \"isPublic\": false\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-													},
-													"status": "Forbidden",
-													"code": 403,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Tue, 26 Jul 2022 08:12:07 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 10:12:07\"\n}"
-												}
-											]
 										}
 									],
 									"id": "b2096f5b-00e8-420f-8961-3ea5f6021f66",
@@ -43833,365 +43515,6 @@
 								}
 							],
 							"id": "c007452c-9dfb-45b8-9481-eed94802a6c7"
-						},
-						{
-							"name": "InvalidToken",
-							"item": [
-								{
-									"name": "EditBucketEmptyToken",
-									"id": "551724d3-6de0-4c7a-bdb4-62f1fd0c343b",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": ""
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Empty\",\r\n  \"description\": \"Empty Token\",\r\n  \"isPublic\": true\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-									},
-									"response": [
-										{
-											"id": "1e14026e-528c-4714-8854-e5f16b3f75d1",
-											"name": "EditBucketEmptyToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Empty\",\r\n  \"description\": \"Empty Token\",\r\n  \"isPublic\": true\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 04 Jul 2022 11:13:12 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
-								},
-								{
-									"name": "EditBucketExpiredToken",
-									"id": "7018f457-c1c5-4f6e-af6f-98a146df3d32",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{expiredToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Expired\",\r\n  \"description\": \"Expired Token\",\r\n  \"isPublic\": true\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-									},
-									"response": [
-										{
-											"id": "f8a4057c-0602-48ad-b35f-4588d758bc10",
-											"name": "EditBucketExpiredToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Expired\",\r\n  \"description\": \"Expired Token\",\r\n  \"isPublic\": true\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=ISO-8859-1"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 04 Jul 2022 11:14:31 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-04 13:14:31\"\n}"
-										}
-									]
-								},
-								{
-									"name": "EditBucketInvalidToken",
-									"id": "2e2bceb1-ddce-4a23-98fa-c08fe5233bf7",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{invalidToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Invalid\",\r\n  \"description\": \"Invalid Token\",\r\n  \"isPublic\": true\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{validWorkerId}}"
-									},
-									"response": [
-										{
-											"id": "b155685a-1516-40d4-820d-0e61abc3bfc7",
-											"name": "EditBucketInvalidToken",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Invalid\",\r\n  \"description\": \"Invalid Token\",\r\n  \"isPublic\": true\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{validWorkerId}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=ISO-8859-1"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 04 Jul 2022 11:15:16 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-04 13:15:16\"\n}"
-										}
-									]
-								}
-							],
-							"id": "1bc4f1ec-b582-4e9e-8159-e2348bca7c36",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "92a652d5-da47-4a85-9ae9-ca8d1db34264",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "237ae01c-f898-45b9-a0c0-539c5f366c90",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Status code is 401\", function () {",
-											"    pm.response.to.have.status(401);",
-											"});"
-										]
-									}
-								}
-							]
 						},
 						{
 							"name": "ForbiddenEdit",
@@ -44316,6 +43639,324 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"messages\": [\n        \"Current user can't edit this bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-04 13:23:25\"\n}"
+										}
+									]
+								},
+								{
+									"name": "EditBucketWithoutGrantedAccess",
+									"id": "d8d8a59a-4c52-4375-9d3a-8bb8eedb6fbc",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{secondWorkerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Bucket Name\",\r\n  \"description\": \"Description Three\",\r\n  \"isPublic\": false \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+									},
+									"response": [
+										{
+											"id": "cdd9d03c-aa2b-4052-a4ae-ae96ec53c673",
+											"name": "EditBucketWithoutGrantedAccess",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Bucket Name\",\r\n  \"description\": \"Description Three\",\r\n  \"isPublic\": null \r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Jul 2022 11:10:55 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"isPublic must be true or false\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-04 13:10:55\"\n}"
+										}
+									]
+								},
+								{
+									"name": "EditPrivateBucketAsNotOwner",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
+												"exec": [
+													"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+													"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "79314c8e-931a-4e99-9739-b5182ed2efcb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{secondWorkerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Private Bucket\",\r\n  \"description\": \"string string\",\r\n  \"isPublic\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+									},
+									"response": [
+										{
+											"id": "d7bc1c6f-a8e0-4c15-99b7-5e440e0a6cae",
+											"name": "EditPrivateBucketAsNotOwner",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"PrivateBucket\",\r\n  \"description\": \"string string\",\r\n  \"isPublic\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 13 Jul 2022 11:33:54 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Current user can't edit this bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-13 13:33:54\"\n}"
+										},
+										{
+											"id": "33f49ed6-7fb6-4890-a4cb-c1106da6a464",
+											"name": "EditPrivateBucketAsNotOwner",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Private Bucket\",\r\n  \"description\": \"string string\",\r\n  \"isPublic\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 26 Jul 2022 08:12:07 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 10:12:07\"\n}"
 										}
 									]
 								}
@@ -44598,6 +44239,365 @@
 						}
 					],
 					"id": "b746812a-6d5c-4bb7-88e0-6b51700a99f8"
+				},
+				{
+					"name": "InvalidToken",
+					"item": [
+						{
+							"name": "EditBucketEmptyToken",
+							"id": "551724d3-6de0-4c7a-bdb4-62f1fd0c343b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": ""
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Empty\",\r\n  \"description\": \"Empty Token\",\r\n  \"isPublic\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+							},
+							"response": [
+								{
+									"id": "1e14026e-528c-4714-8854-e5f16b3f75d1",
+									"name": "EditBucketEmptyToken",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Empty\",\r\n  \"description\": \"Empty Token\",\r\n  \"isPublic\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 04 Jul 2022 11:13:12 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "EditBucketExpiredToken",
+							"id": "7018f457-c1c5-4f6e-af6f-98a146df3d32",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{expiredToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Expired\",\r\n  \"description\": \"Expired Token\",\r\n  \"isPublic\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+							},
+							"response": [
+								{
+									"id": "f8a4057c-0602-48ad-b35f-4588d758bc10",
+									"name": "EditBucketExpiredToken",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Expired\",\r\n  \"description\": \"Expired Token\",\r\n  \"isPublic\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 04 Jul 2022 11:14:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-04 13:14:31\"\n}"
+								}
+							]
+						},
+						{
+							"name": "EditBucketInvalidToken",
+							"id": "2e2bceb1-ddce-4a23-98fa-c08fe5233bf7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{invalidToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Invalid\",\r\n  \"description\": \"Invalid Token\",\r\n  \"isPublic\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{validWorkerId}}"
+							},
+							"response": [
+								{
+									"id": "b155685a-1516-40d4-820d-0e61abc3bfc7",
+									"name": "EditBucketInvalidToken",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Invalid\",\r\n  \"description\": \"Invalid Token\",\r\n  \"isPublic\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{validWorkerId}}"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=ISO-8859-1"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 04 Jul 2022 11:15:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-04 13:15:16\"\n}"
+								}
+							]
+						}
+					],
+					"id": "1bc4f1ec-b582-4e9e-8159-e2348bca7c36",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "92a652d5-da47-4a85-9ae9-ca8d1db34264",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "237ae01c-f898-45b9-a0c0-539c5f366c90",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "ViewBucketById",
