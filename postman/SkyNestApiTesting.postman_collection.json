@@ -42447,7 +42447,7 @@
 												},
 												{
 													"id": "61990931-ef2f-46d8-9d88-68043ff72616",
-													"name": "EditPublicBucketAsNonCreator",
+													"name": "EditPublicBucketAsNotOwner",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
