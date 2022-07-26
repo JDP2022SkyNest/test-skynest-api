@@ -65958,6 +65958,25 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
 											},
 											"response": []
+										},
+										{
+											"name": "DeleteFileAsUserWithLowerPermission(View)",
+											"id": "fbdb0b69-9950-4409-b1ae-c9d0f584fabf",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "ea6ab095-ca15-4725-b731-9cb807cc22b2"
