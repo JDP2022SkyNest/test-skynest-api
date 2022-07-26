@@ -67536,7 +67536,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Admin's Tag\",\r\n  \"rgb\": \"9FE2BE\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Test 2\",\r\n  \"rgb\": \"9FE2BE\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
