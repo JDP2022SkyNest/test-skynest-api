@@ -42576,7 +42576,7 @@
 											"response": [
 												{
 													"id": "d7bc1c6f-a8e0-4c15-99b7-5e440e0a6cae",
-													"name": "EditPrivateBucketAsNonCreator",
+													"name": "EditPrivateBucketAsNotOwner",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
@@ -42658,7 +42658,7 @@
 												},
 												{
 													"id": "33f49ed6-7fb6-4890-a4cb-c1106da6a464",
-													"name": "EditPrivateBucketAsNonCreator",
+													"name": "EditPrivateBucketAsNotOwner",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
