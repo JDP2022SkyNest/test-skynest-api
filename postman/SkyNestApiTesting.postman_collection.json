@@ -74956,6 +74956,25 @@
 													"body": "{\n    \"buckets\": [],\n    \"folders\": [],\n    \"files\": []\n}"
 												}
 											]
+										},
+										{
+											"name": "SearchByTagAsUserWithoutPermission Copy",
+											"id": "6f06f812-e2be-477b-bdbe-1a26687786e1",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}/objects"
+											},
+											"response": []
 										}
 									],
 									"id": "fd3bc15d-f6b0-4806-84b4-a1b0ce800de8"
