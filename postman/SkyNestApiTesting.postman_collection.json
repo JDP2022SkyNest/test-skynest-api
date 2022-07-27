@@ -72834,7 +72834,7 @@
 					"name": "ModifyFileContent",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidTokenAndSuccessfulPUT",
 							"item": [],
 							"id": "6210b9c9-077d-4973-b2fb-18710419831b"
 						},
