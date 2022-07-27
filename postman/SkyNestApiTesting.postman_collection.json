@@ -73772,7 +73772,7 @@
 									]
 								},
 								{
-									"name": "ModifyFileContentAsUserWithLowerPermission(View) Copy",
+									"name": "ModifyFileContentAsUserWithLowerPermission(Download)",
 									"id": "a0cead08-1ae1-42d2-9861-dac20832ec89",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
