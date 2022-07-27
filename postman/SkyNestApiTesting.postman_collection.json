@@ -72950,7 +72950,7 @@
 									]
 								},
 								{
-									"name": "ModifyFileContentAsCreator Copy",
+									"name": "ModifyFileContentAsUserWithEditPermission",
 									"id": "8d5f8023-6561-43c1-9a5a-1a9130a123cc",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
