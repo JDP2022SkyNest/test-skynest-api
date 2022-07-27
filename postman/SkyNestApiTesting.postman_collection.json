@@ -60249,7 +60249,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": ""
 													}
 												},
 												"method": "POST",
@@ -60264,7 +60264,7 @@
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{adminFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
 											},
 											"response": []
 										},
