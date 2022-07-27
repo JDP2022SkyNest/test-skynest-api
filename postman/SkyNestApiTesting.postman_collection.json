@@ -66083,7 +66083,7 @@
 											]
 										},
 										{
-											"name": "DeleteFileAsUserWithEditPermission Copy",
+											"name": "DeleteFileFromPublicBucketAsNotOwner",
 											"id": "09ed83f2-5672-447d-8b2f-610be4bebf13",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
