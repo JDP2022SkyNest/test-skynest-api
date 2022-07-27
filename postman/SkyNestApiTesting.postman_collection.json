@@ -73770,6 +73770,35 @@
 											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-27 19:32:14\"\n}"
 										}
 									]
+								},
+								{
+									"name": "ModifyFileContentAsUserWithLowerPermission(View) Copy",
+									"id": "a0cead08-1ae1-42d2-9861-dac20832ec89",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{secondWorkerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "57964a58-020f-4e73-87d8-f1c06b13baaa"
