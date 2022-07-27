@@ -72985,7 +72985,7 @@
 									"response": [
 										{
 											"id": "7255d26f-707e-4442-8f16-f3c9cf7033f4",
-											"name": "ModifyDifferentFile",
+											"name": "ModifyFileContentWithDifferentFileType",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
