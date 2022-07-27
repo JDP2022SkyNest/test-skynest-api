@@ -35611,7 +35611,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"{{secondWorkerAuthToken}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"download\"\r\n}",
+													"raw": "{\r\n  \"grantedTo\": \"{{secondWorkerAuthToken}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"download\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
