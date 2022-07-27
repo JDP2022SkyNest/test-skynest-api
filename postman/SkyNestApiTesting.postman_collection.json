@@ -38578,7 +38578,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminBucketId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
