@@ -5,6 +5,6 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Parameters {
-    public static final String WORKER_EMAIL = "fedese7585@kahase.com";
+    public static final String WORKER_EMAIL = "apiautomationworker@yahoo.com";
 
 }

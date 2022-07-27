@@ -10,14 +10,14 @@ import java.util.UUID;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class BucketResponse {
-    private UUID bucketId;
-    private UUID createdById;
-    private String name;
-    private UUID companyId;
-    private String description;
-    private int size;
-    private Boolean isPublic;
+public class FolderResponse {
+    private UUID id;
+    private String createdOn;
+    private String modifiedOn;
     private String deletedOn;
+    private String name;
+    private UUID createdById;
+    private UUID parentFolderId;
+    private UUID bucketId;
     private List<String> tags;
 }

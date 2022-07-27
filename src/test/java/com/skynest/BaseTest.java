@@ -3,7 +3,6 @@ package com.skynest;
 import com.skynest.clients.SkyNestBackendClient;
 import com.skynest.config.properties.PropertiesReader;
 import com.skynest.constants.Parameters;
-import com.skynest.models.BucketResponse;
 import com.skynest.models.LoggedUserResponse;
 import com.skynest.models.LoginRequest;
 import com.skynest.models.UserResponse;
@@ -21,6 +20,14 @@ public class BaseTest {
     private static final String TARGET_DOMAIN = "targetDomain";
     protected SkyNestBackendClient skyNestBackendClient;
 
+    @DataProvider(name = "loginAsWorkerOrAdmin")
+    public static Object[][] loginAsWorkerOrAdmin() {
+        return new Object[][]{
+                {Roles.WORKER},
+                {Roles.ADMIN}
+        };
+    }
+
     @BeforeSuite(alwaysRun = true)
     public void setupEnvironment() throws URISyntaxException {
         PropertiesReader propertiesReader = PropertiesReader.getInstance();
@@ -31,10 +38,10 @@ public class BaseTest {
     public void loginAs(Roles role) {
         switch (role) {
             case ADMIN:
-                loginUser("christinezahar@yahoo.com", "Hris8833");
+                loginUser("apiautomationadmi@gmail.com", "Automation8833");
                 break;
             case WORKER:
-                loginUser("hristina.zaharieva@htecgroup.com", "Hris8833");
+                loginUser("apiautomationworker@yahoo.com", "Automation8833");
                 break;
         }
     }
@@ -59,18 +66,6 @@ public class BaseTest {
             }
         }
         return null;
-    }
-
-    public UUID getFirstBucketId(List<BucketResponse> bucketResponses) {
-        return bucketResponses.get(0).getBucketId();
-    }
-
-    @DataProvider(name = "loginAsWorkerOrAdmin")
-    public static Object[][] loginAsWorkerOrAdmin() {
-        return new Object[][]{
-                {Roles.WORKER},
-                {Roles.ADMIN}
-        };
     }
 
 }

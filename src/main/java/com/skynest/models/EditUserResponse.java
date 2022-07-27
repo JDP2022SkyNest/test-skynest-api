@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class EditResponse {
+public class EditUserResponse {
     private String id;
     private String email;
     private String name;
