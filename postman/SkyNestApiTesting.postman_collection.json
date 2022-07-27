@@ -37087,7 +37087,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_FILE_PERMISSION}}"
 											},
 											"response": []
 										},
