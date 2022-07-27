@@ -60435,7 +60435,7 @@
 									"name": "ValidTokenButUnsuccessfulPOST",
 									"item": [
 										{
-											"name": "UploadFileToPrivateFolderAsNotCreator",
+											"name": "UploadFileToPrivateFolderAsUserWithLowerPermission(Download)",
 											"event": [
 												{
 													"listen": "test",
