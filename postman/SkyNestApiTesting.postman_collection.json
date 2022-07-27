@@ -65364,7 +65364,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Lower Permission\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Public File\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
