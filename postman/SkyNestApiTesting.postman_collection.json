@@ -74958,7 +74958,7 @@
 											]
 										},
 										{
-											"name": "SearchByTagAsUserWithoutPermission Copy",
+											"name": "SearchByNotExistingTag",
 											"id": "6f06f812-e2be-477b-bdbe-1a26687786e1",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
