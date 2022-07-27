@@ -67389,7 +67389,7 @@
 									]
 								},
 								{
-									"name": "RestoreFileAsUserWithEditPermission Copy",
+									"name": "RestoreFileFromPublicBucketAsNotOwner",
 									"id": "84c6bd75-296f-4b88-98b7-bc4572a0787b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
