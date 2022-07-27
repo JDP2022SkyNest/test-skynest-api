@@ -37970,14 +37970,14 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{notExistingUserId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"not.existing.user@yahoo.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_FILE_PERMISSION}}"
 											},
 											"response": [
 												{
