@@ -9451,7 +9451,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"wifanip504@aregods.com\",\r\n  \"password\": \"Wifanip8833\"\r\n}\r\n// {\r\n//   \"email\": \"tabax15797@aregods.com\",\r\n//   \"password\": \"Tabax8833\"\r\n// }\r\n\r\n\r\n\r\n\r\n\r\n",
+											"raw": "// {\r\n//   \"email\": \"wifanip504@aregods.com\",\r\n//   \"password\": \"Wifanip8833\"\r\n// }\r\n{\r\n  \"email\": \"tabax15797@aregods.com\",\r\n  \"password\": \"Tabax8833\"\r\n}\r\n\r\n\r\n\r\n\r\n\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -58133,7 +58133,7 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
 														}
 													]
 												},
@@ -58931,7 +58931,7 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/chris/Downloads/Test_image.txt"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
 														}
 													]
 												},
@@ -60458,6 +60458,48 @@
 													"type": "bearer",
 													"bearer": {
 														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/chris/Downloads/env (1)"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
+										},
+										{
+											"name": "UploadFileToPrivateFolderAsUserWithLowerPermission(View)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "021c234a-5ef6-466c-9ec2-fbfd89f29df0",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "POST",
@@ -62142,6 +62184,103 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "����\u0000\u0010JFIF\u0000\u0001\u0001\u0001\u0000H\u0000H\u0000\u0000��\u0000C\u0000\u0005\u0003\u0004\u0004\u0004\u0003\u0005\u0004\u0004\u0004\u0005\u0005\u0005\u0006\u0007\f\b\u0007\u0007\u0007\u0007\u000f\u000b\u000b\t\f\u0011\u000f\u0012\u0012\u0011\u000f\u0011\u0011\u0013\u0016\u001c\u0017\u0013\u0014\u001a\u0015\u0011\u0011\u0018!\u0018\u001a\u001d\u001d\u001f\u001f\u001f\u0013\u0017\"$\"\u001e$\u001c\u001e\u001f\u001e��\u0000C\u0001\u0005\u0005\u0005\u0007\u0006\u0007\u000e\b\b\u000e\u001e\u0014\u0011\u0014\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e\u001e��\u0000\u0011\b\u0001,\u0001�\u0003\u0001\"\u0000\u0002\u0011\u0001\u0003\u0011\u0001��\u0000\u001f\u0000\u0000\u0001\u0005\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b��\u0000�\u0010\u0000\u0002\u0001\u0003\u0003\u0002\u0004\u0003\u0005\u0005\u0004\u0004\u0000\u0000\u0001}\u0001\u0002\u0003\u0000\u0004\u0011\u0005\u0012!1A\u0006\u0013Qa\u0007\"q\u00142���\b#B��\u0015R��$3br�\t\n\u0016\u0017\u0018\u0019\u001a%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz���������������������������������������������������������������������������\u0000\u001f\u0001\u0000\u0003\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b��\u0000�\u0011\u0000\u0002\u0001\u0002\u0004\u0004\u0003\u0004\u0007\u0005\u0004\u0004\u0000\u0001\u0002w\u0000\u0001\u0002\u0003\u0011\u0004\u0005!1\u0006\u0012AQ\u0007aq\u0013\"2�\b\u0014B����\t#3R�\u0015br�\n\u0016$4�%�\u0017\u0018\u0019\u001a&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz��������������������������������������������������������������������������\u0000\f\u0003\u0001\u0000\u0002\u0011\u0003\u0011\u0000?\u0000�.�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002�(�\u0002��\u000f��3���[���\u0000\rxSF��͍��5��X�2�(�[\u0003 cnI\u0007\u0019Ȭ�\u0000��6�����\u0017P��m|3|�Io�!�<�\u001b���`eOPq��a����ߴ���5{����[��r<d\u0015Og�����\u0000O3��y<U��a�I�=\u001d5\u0012�\u0005�_F&-�v��b�k\u001a���Z��W���|�ͺ�bL�e�\u0015�\u0015SI������O<w�r�Ƶ�_���ۍN�Ě4�6�\u0019�c����\u001e��6\u0017�5�|*���x�\u0000�:ޟh���ظK5{�k��\u000bo� �\u000b����ںa��J�U\u0007�N��W���v!צ��}^ǤQ\\���\u0011�\u0016�EΩ�\r �^lqۮ�u\u001d�\fK\r���\u0018���\r��w�\r?�Vv֚]��5]\"�^��I��R!,\u00132\u0014RĔ\u0005_�HN3P�U]\u0005Yj�j�tI�n��?k\u0015.VoQX��*��������{�KR\u0005��^���OM�\u001b\u000b�ս\u001fWҵ�/��\u001a���k��u��*du\u001b����t*�7(�o\"���e�+\u0016���\u0013�Ԇ�i�}\u0012����m\u0015�M)>�Cg?�Yֵ�\u0013CH�Z�t�1e;ck���9�\u001b��7�������Vw\u000ex��4h��]wC�՟I��t��\u0018�\u0013=�wH�,d\u0002\u001c�;���s�|�֠��^\u0018�V\u001aD�#��Q-�Z5�bbޛ7n϶(Xz��E�}���\u0003�=͊(��((��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000(��\u0000����V{\u001f�o�A�>�}\r����\u0001�\u000e?�?\u001a���u\u001f\u0003��\u0017�h,��i�T\u0016��\u0017�@\nF�\u000fb\u0014�g�5�x���\u001d�Mƛ>��}�����i��A\u001c�\u0007$+\u0000�tp�\u001f����a�����(�T)$r(eu#\u0004\u0010x �����(��ᨨ_�nsOik\u001b/�\u0005Y�u9%BR��}՗��\u0000�>D��w���\tt�2|(ӭ5$�h5k��P2\u0012\u0018�JA\u0005�e\u0019\u0003�\u0007\u0000�q�7�\u001a���xJK-w�� �\u001e���o{�j�\u000b\"��\u0013/(��-�p'p^\u0002\u001cץ�_\u0007~\u001aiz�k\u0016^\u0013���9\u0004��$����\u0015Fb�\u0007�\u0007\u0015o�_\u000b�\u0005�\rK�K�>\u001d���hS:�$N�tɍ�8\u001cs_CW��O\u0015\u0019�K�s��-�ZZ���nԢ�$q�/��Օ���|�Fx��u\u0005I���6�?��/D���cg\u0014m�Y�#�\u0011�BL`\tc^\u0014\u00100\b'5�\u001f���t�\u001b�n��6�f5}B9&��B�w����n۵P��3]Ň��\u001dc�;�\n��~�=\u001a��v�%<\u001d���,00I����T~\u0006�{��\u0000\u0004Kw/��e���(���e,\u00178\u001f;6\u0007'�+��s�>'\u000bZ�'8�M5}S���ەַv��.�6���*FR���mo{��G�~ӧ�wſ\u000f|\n�:j\u001a���OHԪg��y*ʛDӾ#����Z����>\u001c��?)�I\u001c\u0005�0�7�!�}���{]�\u0000��;�\u000b\u000f\u0017]��n���a��3H\u0004hwdl\r����y�\u0018<=��\u000exW��}#N6��̾m��y\u001c��c���^]�\\\u000f�T���8\\\u001ciRRS�9E=>)�9;��\u0000\nI=��n9��R���f��%��|�\u0000�_�~\u0014�'į\u001f���G�o\u000eiwo\u001d���~�p_����E�\u0004`y����\\�|%�\u000b��&�4Y/-<C�\u001b(4�gkte\bX\r�ʧ��q�n:\u001a�KÞ\u0003�|5��\u001bJ�.��\u0019\r�B�Vi\u000b�F;ً\f�\u0003�1�\u0006�\u001f��\u0006�����B��\u0015%��Gw�\u0016,X9b��s��q]�x�\rV��E7Mʝ��� ��=$�g�ތc��R�����������\u0013�]B��?ÿ���?�WW��\u001bO왚]AA!T�/9R\\\u0010I$���k�<\te�x����\u000b�\u0000\u001c%���\u001c�����h�\u0005wS F�\u0000 9�3��3O�3��N����</\r�Νp.mf[��,��\u0002�~\\\u0002���\u0003�S�6�G�<e�k�Z���S�:��N!�-5��۶\u0006\u0015���2t\u001f{�\u0015�S�0م'F��\u001a�\\��2����=MSQ��ﮗ1xYї3W�i�Z.�^zhp�\ngҴ\u000f��4�{J��m��eF%��y�J��dA\b�\u0000zT�?\u000e��[�.��O�\u001au����\u0006�s<��\u0006BC\u0014iH �r�� r\u0000�\u001a����\u0000\u000f$�?×е�muw4�\u0017�/�B�|��mP\u000f\u0018�=�ޕ�wᦗ�&�e�;H�#�H��H�\u000eATf(0z`qY�x�\u000fK\u0011YSm�I�I)s(�E'w\u001e����p��(F��[Z����C�������\u001dV�n�\u000bk(a��X�,��;\u0002@',\t�w�*(��jM�NO��%e`��*\u0006\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000\u0014QE\u0000��"
+												}
+											]
+										},
+										{
+											"name": "DownloadFileFromDeletedBucket",
+											"id": "f0ab6e18-7937-445f-90a2-4eff61467a5b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{fileInDeletedBucketId}}"
+											},
+											"response": [
+												{
+													"id": "891eb028-e0a3-453e-9618-748f1f58e9d0",
+													"name": "DownloadFileFromDeletedBucket",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{fileInDeletedBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Content-Disposition",
+															"value": "attachment; filename=\"LoginTest.txt\""
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 27 Jul 2022 08:05:00 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "package com.skynest;\r\n\r\nimport com.skynest.models.LoginRequest;\r\nimport io.restassured.response.Response;\r\nimport org.testng.annotations.DataProvider;\r\nimport org.testng.annotations.Test;\r\n\r\nimport static org.apache.http.HttpStatus.*;\r\n\r\npublic class LoginTest extends BaseTest {\r\n\r\n    @DataProvider(name = \"invalidCredentialCombinations\")\r\n    public static Object[][] invalidCredentials() {\r\n        return new Object[][]{\r\n                {\"invalidemail@yahoo.com\", \"System123\"},\r\n                {\"invalidemail@yahoo.com\", \"invalidpass\"},\r\n                {\"invalidemail@yahoo.com\", \"\"},\r\n                {\"\", \"System123\"},\r\n                {\"\", \"invalidpass\"},\r\n                {\"\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"invalidPassword\")\r\n    public static Object[][] invalidPassword() {\r\n        return new Object[][]{\r\n                {\"yagaj78380@jrvps.com\", \"invalidpass\"},\r\n                {\"yagaj78380@jrvps.com\", \"\"}\r\n        };\r\n    }\r\n\r\n    @DataProvider(name = \"maxNumberOfLoginAttempts\")\r\n    public static Object[][] maxAttempts() {\r\n        return new Object[][]{\r\n                {5}\r\n        };\r\n    }\r\n\r\n    @Test\r\n    void verified_user_should_be_successfully_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"yagaj78380@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_OK);\r\n    }\r\n\r\n    @Test\r\n    void not_verified_user_should_not_be_logged_in() {\r\n        LoginRequest body = new LoginRequest(\"miwix46540@jrvps.com\", \"System123\");\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_FORBIDDEN);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidPassword\")\r\n    void user_should_not_log_in_with_invalid_or_blank_password(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_UNAUTHORIZED);\r\n    }\r\n\r\n    @Test(dataProvider = \"invalidCredentialCombinations\")\r\n    void user_should_not_log_in_with_invalid_credentials(String email, String password) {\r\n        LoginRequest body = new LoginRequest(email, password);\r\n        Response loginResponse = skyNestBackendClient.login(body);\r\n        loginResponse.then().statusCode(SC_NOT_FOUND);\r\n    }\r\n\r\n    @Test(dataProvider = \"maxNumberOfLoginAttempts\")\r\n    void user_should_be_locked_after_number_of_invalid_attempts(int maxAttempts) {\r\n        LoginRequest body = new LoginRequest(\"vobipi9211@kahase.com\", \"invalid\");\r\n        Response loginResponse = null;\r\n        for (int i = 0; i <= maxAttempts; i++) {\r\n            loginResponse = skyNestBackendClient.login(body);\r\n        }\r\n        loginResponse.then().statusCode(429);\r\n    }\r\n}\r\n"
 												}
 											]
 										},
