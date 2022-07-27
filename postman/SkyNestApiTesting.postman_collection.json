@@ -60434,7 +60434,91 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "ab6f0d38-2e08-4d91-80de-9b1121858c09",
+													"name": "UploadFileToPrivateFolderAsUserWithEditPermission",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Desktop/SkyNest Everything/Demo Notes.docx"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 27 Jul 2022 08:52:49 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"3c36a68b-352d-407a-8c7b-a98570bacce8\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Demo Notes.docx\",\n    \"createdById\": \"c59c80fc-0cdc-44cc-9abd-bbb7e8e29e87\",\n    \"parentFolderId\": \"97c89fad-a85c-4634-8f04-a27275ae871e\",\n    \"bucketId\": \"a9dab0d9-ce5b-48d5-9995-8fb289dd4073\",\n    \"type\": \"application/vnd.openxmlformats-officedocument.wordprocessingml.document\",\n    \"size\": \"13936\",\n    \"tags\": null\n}"
+												}
+											]
 										},
 										{
 											"name": "UploadFileToFolderFromPublicBucketAsNotCreator",
