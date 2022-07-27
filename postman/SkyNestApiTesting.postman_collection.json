@@ -72834,6 +72834,11 @@
 					"name": "ModifyFileContent",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "6210b9c9-077d-4973-b2fb-18710419831b"
+						},
+						{
 							"name": "ModifyFileContentAsCreator",
 							"id": "236e3c29-80f1-4cc9-9e22-de69ab69ae73",
 							"protocolProfileBehavior": {
