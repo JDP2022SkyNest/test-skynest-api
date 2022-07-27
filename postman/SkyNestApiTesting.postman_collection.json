@@ -60212,63 +60212,6 @@
 											"response": []
 										},
 										{
-											"name": "UploadFileToPrivateFolderAsUserWithEditPermission",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
-														"exec": [
-															"const jsonData = pm.response.json();\r",
-															"\r",
-															"pm.test(\"parentFolderId from the response is the same of the folder in which we are uploading the file\", function () {\r",
-															"    adminFolderId = pm.environment.get(\"adminFolderId\");\r",
-															"    pm.expect(jsonData.parentFolderId).to.eql(adminFolderId);\r",
-															"});\r",
-															"\r",
-															"pm.test(\"createdById from the response is the same of the user who uploaded the file\", function () {\r",
-															"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-															"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
-															"});\r",
-															"\r",
-															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
-															"    pm.expect(jsonData.id).is.not.null;\r",
-															"    pm.environment.set(\"adminFileInFolderId\", jsonData.id);\r",
-															"});\r",
-															""
-														],
-														"type": "text/javascript"
-													}
-												}
-											],
-											"id": "0b98cc3b-4d87-430c-aad2-81647f7a24e3",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": ""
-													}
-												},
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "formdata",
-													"formdata": [
-														{
-															"key": "file",
-															"type": "file",
-															"src": "/C:/Users/chris/Downloads/Test_image.png"
-														}
-													]
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
-											},
-											"response": []
-										},
-										{
 											"name": "UploadFileToFolderFromPublicBucketAsNotCreator",
 											"event": [
 												{
