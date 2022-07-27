@@ -69400,7 +69400,7 @@
 									]
 								},
 								{
-									"name": "MoveFileToFolderAsUserWithoutPermissions Copy",
+									"name": "MoveFileToFolderAsUserWithLowerPermission(View)",
 									"id": "f5e1de74-9a7d-45bb-98ac-eaed97c2dcef",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
