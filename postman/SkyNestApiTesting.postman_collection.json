@@ -37286,7 +37286,7 @@
 											]
 										},
 										{
-											"name": "GrantViewPermissionAsOwner",
+											"name": "GrantEditFilePermissionAsOwner",
 											"id": "dc49e4e3-2d74-433c-836f-dab7426bec8e",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
