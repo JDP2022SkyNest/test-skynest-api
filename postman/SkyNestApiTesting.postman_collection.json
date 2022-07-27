@@ -70629,7 +70629,7 @@
 									]
 								},
 								{
-									"name": "MoveFileToRootAsUserWithLowerPermission(View) Copy",
+									"name": "MoveFileToRootAsUserWithLowerPermission(Download)",
 									"id": "6cc3334f-e6b2-4206-8a4f-1cd6b4ff194d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
