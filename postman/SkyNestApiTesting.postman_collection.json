@@ -70627,6 +70627,25 @@
 											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-27 13:11:12\"\n}"
 										}
 									]
+								},
+								{
+									"name": "MoveFileToRootAsUserWithLowerPermission(View) Copy",
+									"id": "6cc3334f-e6b2-4206-8a4f-1cd6b4ff194d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}/move"
+									},
+									"response": []
 								}
 							],
 							"id": "ee310018-7ddd-4927-8fee-f7011a3cbddd"
