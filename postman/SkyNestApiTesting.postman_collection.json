@@ -74588,7 +74588,7 @@
 							"name": "ValidToken",
 							"item": [
 								{
-									"name": "GetAllTagsAsAdmin",
+									"name": "SearchByTag",
 									"id": "58978789-d72d-4c13-a832-3667c2283c2b",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
