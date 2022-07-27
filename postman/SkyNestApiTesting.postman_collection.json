@@ -74610,7 +74610,7 @@
 											"response": []
 										},
 										{
-											"name": "SearchByTagAsNotCreator",
+											"name": "SearchByTagAsUserWithoutPermission",
 											"id": "6bf915fc-748f-491d-a9cf-709fba01eab0",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
