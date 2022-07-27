@@ -69976,7 +69976,7 @@
 							"name": "ValidTokenAndSuccessfulPUT",
 							"item": [
 								{
-									"name": "MoveFileToRoot",
+									"name": "MoveFileToRootAsOwner",
 									"id": "1367e424-97f7-457e-8982-61ee856b969a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
