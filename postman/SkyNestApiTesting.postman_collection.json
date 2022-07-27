@@ -72863,8 +72863,98 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
 									},
-									"response": []
-								},
+									"response": [
+										{
+											"id": "5ae34f24-eb90-4d1b-a6cb-1d026b4e04a2",
+											"name": "ModifyFileContentAsCreator",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 27 Jul 2022 18:46:45 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"1475082f-4e4f-47ad-b36b-70086c3eb463\",\n    \"createdOn\": \"2022-07-27T18:44:55\",\n    \"modifiedOn\": \"2022-07-27T18:44:55\",\n    \"deletedOn\": null,\n    \"name\": \"BaseTest.txt\",\n    \"createdById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"f332d937-f1aa-4273-8952-f76e34e8f732\",\n    \"type\": \"text/plain\",\n    \"size\": \"300\",\n    \"tags\": null\n}"
+										}
+									]
+								}
+							],
+							"id": "6210b9c9-077d-4973-b2fb-18710419831b"
+						},
+						{
+							"name": "ValidTokenButUnsuccessfulPUT",
+							"item": [
 								{
 									"name": "ModifyDifferentFile",
 									"id": "2e740958-0a47-48d5-9456-2f2852ed93bf",
@@ -72973,13 +73063,37 @@
 											"body": "{\n    \"messages\": [\n        \"Cannot change file type, please upload content as a new file.\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-27 18:48:30\"\n}"
 										}
 									]
+								},
+								{
+									"name": "ModifyFileContentAsCreator Copy",
+									"id": "30945af9-083f-4e85-af0b-56b11fc55c47",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+									},
+									"response": []
 								}
 							],
-							"id": "6210b9c9-077d-4973-b2fb-18710419831b"
-						},
-						{
-							"name": "ValidTokenButUnsuccessfulPUT",
-							"item": [],
 							"id": "57964a58-020f-4e73-87d8-f1c06b13baaa"
 						}
 					],
