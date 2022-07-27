@@ -73334,7 +73334,7 @@
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{deletedFileId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{notExistingFileId}}"
 											},
 											"status": "Not Found",
 											"code": 404,
