@@ -66083,6 +66083,25 @@
 											]
 										},
 										{
+											"name": "DeleteFileAsUserWithEditPermission Copy",
+											"id": "09ed83f2-5672-447d-8b2f-610be4bebf13",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{SecondAdminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "DeleteFileForFurtherTests",
 											"id": "7749cee5-5d24-4dd1-8958-ef882abf3522",
 											"protocolProfileBehavior": {
