@@ -73065,7 +73065,7 @@
 									]
 								},
 								{
-									"name": "ModifyDifferentFileName",
+									"name": "ModifyDifferentFileNameSameFileType",
 									"id": "ba8a01c7-daa5-4b91-a2c7-ed505df7457a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
