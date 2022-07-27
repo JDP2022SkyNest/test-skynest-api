@@ -69994,12 +69994,12 @@
 									},
 									"response": [
 										{
-											"id": "58e20022-0ca3-4849-9886-27df8beda38c",
-											"name": "MoveFileToRoot",
+											"id": "0cd41b8a-35e4-4885-88e1-0b22f14d86db",
+											"name": "MoveFileToRootAsOwner",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}/move"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileInFolderId}}/move"
 											},
 											"status": "No Content",
 											"code": 204,
@@ -70043,7 +70043,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Mon, 18 Jul 2022 14:06:49 GMT"
+													"value": "Wed, 27 Jul 2022 11:15:02 GMT"
 												},
 												{
 													"key": "Keep-Alive",
