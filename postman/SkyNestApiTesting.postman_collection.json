@@ -67387,6 +67387,25 @@
 											"body": "{\n    \"id\": \"45489ac4-1fda-41e0-849c-3c51037266fc\",\n    \"createdOn\": \"2022-07-26T20:30:32\",\n    \"modifiedOn\": \"2022-07-26T20:38:06\",\n    \"deletedOn\": null,\n    \"name\": \"env (1).env\",\n    \"createdById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"f332d937-f1aa-4273-8952-f76e34e8f732\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"750\",\n    \"tags\": null\n}"
 										}
 									]
+								},
+								{
+									"name": "RestoreFileAsUserWithEditPermission Copy",
+									"id": "84c6bd75-296f-4b88-98b7-bc4572a0787b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{SecondAdminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
 								}
 							],
 							"id": "6580e57c-ec47-45b4-b52f-31c0ca2168d5"
