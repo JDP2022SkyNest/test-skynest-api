@@ -74818,7 +74818,7 @@
 									"response": []
 								},
 								{
-									"name": "GetAllTagsInvalidToken",
+									"name": "SearchByTagInvalidToken",
 									"id": "dfcf93e7-1253-4166-be4e-fb717f901c52",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
