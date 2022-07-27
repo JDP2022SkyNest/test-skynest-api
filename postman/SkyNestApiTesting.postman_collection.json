@@ -60098,7 +60098,7 @@
 									"name": "ValidTokenAndSuccessfulPOST",
 									"item": [
 										{
-											"name": "UploadFileToPrivateFolderAsOwner",
+											"name": "UploadFileToPrivateFolderAsOwner-Worker",
 											"event": [
 												{
 													"listen": "test",
