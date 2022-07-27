@@ -60287,13 +60287,97 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/chris/Downloads/Test_image.png"
+															"src": "/C:/Users/Hristina Zaharieva/Desktop/SkyNest Everything/Demo Notes.docx"
 														}
 													]
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{adminFolderId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "7cc18632-f2de-4891-acfc-a565e771a13d",
+													"name": "UploadFileToPrivateFolderAsOwner-Admin",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Desktop/SkyNest Everything/Demo Notes.docx"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{adminFolderId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 27 Jul 2022 08:52:28 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"d06d25fa-415a-4e12-aadb-41efeb3df5a9\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Demo Notes.docx\",\n    \"createdById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"parentFolderId\": \"9dc15aa0-55c7-4b46-a7e4-b8784e0c5be0\",\n    \"bucketId\": \"81786af4-c066-4c68-9ce5-7f23833f9cc6\",\n    \"type\": \"application/vnd.openxmlformats-officedocument.wordprocessingml.document\",\n    \"size\": \"13936\",\n    \"tags\": null\n}"
+												}
+											]
 										},
 										{
 											"name": "UploadFileToPrivateFolderAsUserWithEditPermission",
