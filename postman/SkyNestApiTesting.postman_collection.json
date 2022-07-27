@@ -73082,7 +73082,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Search Tag\",\r\n  \"rgb\": \"9FE9BE\"\r\n}",
+													"raw": "{\r\n  \"name\": \"SearchTag\",\r\n  \"rgb\": \"9FE9BE\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
