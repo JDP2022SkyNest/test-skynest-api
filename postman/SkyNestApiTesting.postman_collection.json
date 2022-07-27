@@ -72839,6 +72839,11 @@
 							"id": "6210b9c9-077d-4973-b2fb-18710419831b"
 						},
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "57964a58-020f-4e73-87d8-f1c06b13baaa"
+						},
+						{
 							"name": "ModifyFileContentAsCreator",
 							"id": "236e3c29-80f1-4cc9-9e22-de69ab69ae73",
 							"protocolProfileBehavior": {
