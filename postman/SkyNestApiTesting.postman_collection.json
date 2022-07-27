@@ -69190,6 +69190,25 @@
 											"body": null
 										}
 									]
+								},
+								{
+									"name": "MoveFileToFolderAsOwner Copy",
+									"id": "4b04da22-b191-4c64-9a4d-269253101b60",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE}}{{workerFolderId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "c3b46d1c-5b4b-4de6-9d6b-0cc1f087a988",
