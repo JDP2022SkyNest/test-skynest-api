@@ -72832,7 +72832,20 @@
 				},
 				{
 					"name": "ModifyFileContent",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "236e3c29-80f1-4cc9-9e22-de69ab69ae73",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "4c74922f-f0e1-4404-abe7-dba4121d23ab"
 				}
 			],
