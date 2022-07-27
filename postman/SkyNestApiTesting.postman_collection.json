@@ -73289,6 +73289,35 @@
 											"body": "{\n    \"messages\": [\n        \"File already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-27 18:53:09\"\n}"
 										}
 									]
+								},
+								{
+									"name": "ModifyContentOfFileFromDeletedBucket Copy",
+									"id": "ed860da1-4834-476c-8bb9-97536a59a678",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/Screenshot 2022-06-12 215311.png"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{fileInDeletedBucketId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "57964a58-020f-4e73-87d8-f1c06b13baaa"
