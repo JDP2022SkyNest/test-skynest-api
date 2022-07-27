@@ -69121,7 +69121,7 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{workerFolderId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE}}{{workerFolderId}}"
 									},
 									"response": [
 										{
@@ -69993,71 +69993,6 @@
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileInFolderId}}/move"
 									},
 									"response": [
-										{
-											"id": "58e20022-0ca3-4849-9886-27df8beda38c",
-											"name": "MoveFileToRoot",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}/move"
-											},
-											"status": "No Content",
-											"code": 204,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 18 Jul 2022 14:06:49 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										},
 										{
 											"id": "0cd41b8a-35e4-4885-88e1-0b22f14d86db",
 											"name": "MoveFileToRootAsOwner",
