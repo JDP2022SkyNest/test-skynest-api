@@ -65348,7 +65348,7 @@
 											]
 										},
 										{
-											"name": "EditFileNameAsUserWithoutPermissions Copy",
+											"name": "EditPublicFileNameAsNotOwner",
 											"id": "7426d8aa-a6a7-4277-a5be-dd6a3b0d2667",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
