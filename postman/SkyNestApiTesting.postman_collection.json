@@ -69262,7 +69262,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "e39ea84a-6c2c-42fb-85b6-a452fa331125",
+										"id": "86b8a574-84fd-471d-ac16-6c434e67b954",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -69272,11 +69272,11 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2a087112-2391-4b4c-b49c-8a27a6f98c22",
+										"id": "015a04ad-f0cf-4227-8d63-d2a9aae3e0c1",
 										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
+											"pm.test(\"Status code is 204\", function () {",
+											"    pm.response.to.have.status(204);",
 											"});"
 										]
 									}
