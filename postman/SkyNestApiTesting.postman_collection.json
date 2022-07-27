@@ -35032,7 +35032,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"christinezaha@yahoo.com\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"owner\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"christinezaha@yahoo.com\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"owner\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
