@@ -70061,7 +70061,7 @@
 									]
 								},
 								{
-									"name": "MoveFileToRootAsOwner Copy",
+									"name": "MoveFileToRootAsUserWithEditPermission",
 									"id": "12ff0f0e-e86a-41e7-b137-fc2600429317",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
