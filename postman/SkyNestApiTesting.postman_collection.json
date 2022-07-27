@@ -38679,7 +38679,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_USER}}{{secondValidAdminId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_USER}}{{validAdminId}}"
 											},
 											"response": [
 												{
