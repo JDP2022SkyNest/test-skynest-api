@@ -74766,7 +74766,7 @@
 											]
 										},
 										{
-											"name": "SearchByTagAsCreator Copy",
+											"name": "SearchByTagAsCreator",
 											"id": "c6d37647-eca2-489f-82a8-1d42531ced37",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
