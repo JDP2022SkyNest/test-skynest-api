@@ -61499,13 +61499,97 @@
 														{
 															"key": "file",
 															"type": "file",
-															"src": "/C:/Users/chris/Downloads/Test_image.png"
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
 														}
 													]
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{adminFolderId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "05c2d822-3775-4fd8-a2d0-92f31ca550f4",
+													"name": "UploadFileToPrivateFolderAsUserWithoutPermission",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{adminFolderId}}"
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 27 Jul 2022 08:57:40 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-27 10:57:40\"\n}"
+												}
+											]
 										}
 									],
 									"id": "a6470aa3-559f-47d9-a32f-63657189acae",
