@@ -73315,7 +73315,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{fileInDeletedBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{notExistingFileId}}"
 									},
 									"response": []
 								}
