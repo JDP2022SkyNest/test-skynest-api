@@ -37397,7 +37397,7 @@
 											]
 										},
 										{
-											"name": "GrantDownloadPermissionAsOwner",
+											"name": "GrantDownloadFilePermissionAsOwner",
 											"id": "21c0037b-ef9f-4e7b-a8a4-913141d14906",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
