@@ -75214,6 +75214,25 @@
 													"body": null
 												}
 											]
+										},
+										{
+											"name": "TagAFolderInsideThatBucketWithSameTag Copy",
+											"id": "31e560c6-603e-4370-9f40-615c2c22c792",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "203d8beb-aee2-4515-ae58-8e3f00600ed9",
