@@ -75219,7 +75219,7 @@
 											]
 										},
 										{
-											"name": "TagABucketAsOwner Copy",
+											"name": "TagPublicBucket",
 											"id": "d910b5c9-06f9-43fc-90f8-b6e613efd685",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
