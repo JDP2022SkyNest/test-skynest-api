@@ -74780,7 +74780,7 @@
 							"name": "InvalidToken",
 							"item": [
 								{
-									"name": "GetAllTagsEmptyToken",
+									"name": "SearchByTagEmptyToken",
 									"id": "6becb300-5083-49c3-ba47-fe4e3ac67371",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
