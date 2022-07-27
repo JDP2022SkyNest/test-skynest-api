@@ -62188,7 +62188,7 @@
 											]
 										},
 										{
-											"name": "DownloadAlreadyDeletedFile Copy",
+											"name": "DownloadFileFromDeletedBucket",
 											"id": "f0ab6e18-7937-445f-90a2-4eff61467a5b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
