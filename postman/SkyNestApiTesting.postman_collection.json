@@ -70059,6 +70059,25 @@
 											"body": null
 										}
 									]
+								},
+								{
+									"name": "MoveFileToRootAsOwner Copy",
+									"id": "12ff0f0e-e86a-41e7-b137-fc2600429317",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}/move"
+									},
+									"response": []
 								}
 							],
 							"id": "52a611de-2149-4b61-bb59-224a1ba4e323",
