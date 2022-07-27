@@ -37843,7 +37843,7 @@
 											]
 										},
 										{
-											"name": "GrantPermissionForAlreadyDeletedBucket",
+											"name": "GrantPermissionForAlreadyDeletedFile",
 											"id": "068477fc-57c4-4d47-933c-6334f8c50a43",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
