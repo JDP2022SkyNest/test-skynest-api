@@ -61110,7 +61110,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{SecondAdminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "POST",
@@ -61125,7 +61125,7 @@
 														}
 													]
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{adminFolderId}}"
 											},
 											"response": []
 										}
