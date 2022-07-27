@@ -75304,7 +75304,7 @@
 											]
 										},
 										{
-											"name": "TagPublicBucket Copy",
+											"name": "TagPublicFolder",
 											"id": "d4eb6a02-a171-41a3-9af4-f19026fa8f32",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
