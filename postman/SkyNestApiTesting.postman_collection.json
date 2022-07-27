@@ -72834,7 +72834,7 @@
 					"name": "ModifyFileContent",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "ModifyFileContentAsCreator",
 							"id": "236e3c29-80f1-4cc9-9e22-de69ab69ae73",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
