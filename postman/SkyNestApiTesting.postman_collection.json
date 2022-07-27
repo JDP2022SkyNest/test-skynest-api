@@ -61197,6 +61197,89 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"Folder already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-15 09:54:27\"\n}"
+												},
+												{
+													"id": "75e95bbd-b00c-4cfd-8092-2a9ca7d11af6",
+													"name": "UploadFileToAlreadyDeletedFolder",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{deletedFolderId}}"
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 27 Jul 2022 08:56:46 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Folder already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-27 10:56:46\"\n}"
 												}
 											]
 										},
