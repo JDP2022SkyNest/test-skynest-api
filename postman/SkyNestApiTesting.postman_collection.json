@@ -37089,7 +37089,90 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_FILE_PERMISSION}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "20352060-2a8e-4784-a654-4cbad85ed87c",
+													"name": "GrantFilePermissionAsOwner",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedToEmail\": \"cofeyow547@logodez.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"view\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_FILE_PERMISSION}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 27 Jul 2022 11:27:42 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"grantedToId\": \"7c67344f-9692-4158-b2c6-af69234d188c\",\n    \"grantedToEmail\": \"cofeyow547@logodez.com\",\n    \"objectId\": \"040deff6-35c0-496a-93e8-b2388639a7e3\",\n    \"grantedOn\": null,\n    \"accessName\": \"view\",\n    \"grantedById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
+												}
+											]
 										},
 										{
 											"name": "GrantOwnerPermissionToAnotherUserAsOwner",
