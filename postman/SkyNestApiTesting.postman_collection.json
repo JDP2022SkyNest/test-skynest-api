@@ -69201,7 +69201,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{SecondAdminAuthToken}}"
 											}
 										},
 										"method": "PUT",
