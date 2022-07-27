@@ -69325,16 +69325,16 @@
 									},
 									"response": [
 										{
-											"id": "691f595d-a987-4a2d-bdc5-50430992d3f4",
+											"id": "5f67a727-c165-42e2-bc38-2adc8ed59680",
 											"name": "MoveFileToFolderAsNotOwner",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE_FILE}}{{adminFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE}}{{adminFolderId}}"
 											},
-											"status": "No Content",
-											"code": 204,
-											"_postman_previewlanguage": "plain",
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
 											"header": [
 												{
 													"key": "Vary",
@@ -69373,8 +69373,16 @@
 													"value": "DENY"
 												},
 												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
 													"key": "Date",
-													"value": "Mon, 18 Jul 2022 13:59:46 GMT"
+													"value": "Wed, 27 Jul 2022 11:18:26 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -69387,7 +69395,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": null
+											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-27 13:18:26\"\n}"
 										}
 									]
 								},
