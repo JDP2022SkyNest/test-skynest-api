@@ -37092,7 +37092,7 @@
 											"response": [
 												{
 													"id": "20352060-2a8e-4784-a654-4cbad85ed87c",
-													"name": "GrantFilePermissionAsOwner",
+													"name": "GrantViewFilePermissionAsOwner",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
