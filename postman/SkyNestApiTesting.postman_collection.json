@@ -75304,6 +75304,25 @@
 											]
 										},
 										{
+											"name": "TagPublicBucket Copy",
+											"id": "d4eb6a02-a171-41a3-9af4-f19026fa8f32",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{adminTagId}}{{ENDPOINT_OBJECT}}{{publicBucketId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "TagADeletedBucketForTestPurpose",
 											"id": "edcd693c-dfb9-4f7e-9c61-44dab83c186d",
 											"protocolProfileBehavior": {
