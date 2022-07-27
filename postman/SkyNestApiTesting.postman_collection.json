@@ -74602,7 +74602,7 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}/objects"
 									},
 									"response": [
 										{
