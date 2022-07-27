@@ -73091,7 +73091,91 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "1c033cc1-2086-4dbe-ab10-99f63a27e3f9",
+											"name": "ModifyDifferentFileNameSameFileType",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/Properties Reader.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 27 Jul 2022 18:59:55 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"59a2015c-2890-4913-88b2-3590c88b135c\",\n    \"createdOn\": \"2022-07-27T18:55:17\",\n    \"modifiedOn\": \"2022-07-27T18:55:17\",\n    \"deletedOn\": null,\n    \"name\": \"BaseTest.txt\",\n    \"createdById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"f332d937-f1aa-4273-8952-f76e34e8f732\",\n    \"type\": \"text/plain\",\n    \"size\": \"561\",\n    \"tags\": null\n}"
+										}
+									]
 								},
 								{
 									"name": "ModifyFileContentAsUserWithoutPermission",
