@@ -69493,6 +69493,25 @@
 									]
 								},
 								{
+									"name": "MoveFileToFolderAsUserWithLowerPermission(Download)",
+									"id": "e1d293c7-e578-4675-8a38-ac718af1cf71",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE}}{{workerFolderId}}"
+									},
+									"response": []
+								},
+								{
 									"name": "MoveNotEistingFile",
 									"id": "19e7d997-c770-416d-99d8-b52563d5732a",
 									"protocolProfileBehavior": {
