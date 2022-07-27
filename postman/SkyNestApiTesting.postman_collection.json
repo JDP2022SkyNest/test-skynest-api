@@ -69192,7 +69192,7 @@
 									]
 								},
 								{
-									"name": "MoveFileToFolderAsOwner Copy",
+									"name": "MoveFileToFolderAsUserWithEditPermission",
 									"id": "4b04da22-b191-4c64-9a4d-269253101b60",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
