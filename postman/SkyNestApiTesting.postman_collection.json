@@ -60457,7 +60457,49 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/chris/Downloads/env (1)"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
+										},
+										{
+											"name": "UploadFileToPrivateFolderAsUserWithLowerPermission(View)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "021c234a-5ef6-466c-9ec2-fbfd89f29df0",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
 													}
 												},
 												"method": "POST",
