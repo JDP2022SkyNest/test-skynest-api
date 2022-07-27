@@ -72835,42 +72835,72 @@
 					"item": [
 						{
 							"name": "ValidTokenAndSuccessfulPUT",
-							"item": [],
+							"item": [
+								{
+									"name": "ModifyFileContentAsCreator",
+									"id": "236e3c29-80f1-4cc9-9e22-de69ab69ae73",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+									},
+									"response": []
+								},
+								{
+									"name": "ModifyDifferentFile",
+									"id": "2e740958-0a47-48d5-9456-2f2852ed93bf",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+									},
+									"response": []
+								}
+							],
 							"id": "6210b9c9-077d-4973-b2fb-18710419831b"
 						},
 						{
 							"name": "ValidTokenButUnsuccessfulPUT",
 							"item": [],
 							"id": "57964a58-020f-4e73-87d8-f1c06b13baaa"
-						},
-						{
-							"name": "ModifyFileContentAsCreator",
-							"id": "236e3c29-80f1-4cc9-9e22-de69ab69ae73",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{workerAuthToken}}"
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "file",
-											"type": "file",
-											"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
-										}
-									]
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
-							},
-							"response": []
 						}
 					],
 					"id": "4c74922f-f0e1-4404-abe7-dba4121d23ab"
