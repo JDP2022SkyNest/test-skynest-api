@@ -37302,7 +37302,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"tabax15797@aregods.com\",\r\n  \"objectId\": \"{{workerFileId}}\",\r\n  \"access\": \"edit\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"tabax15797@aregods.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"edit\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
