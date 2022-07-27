@@ -74608,6 +74608,25 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{adminTagId}}/objects"
 											},
 											"response": []
+										},
+										{
+											"name": "SearchByTagAsNotCreator",
+											"id": "6bf915fc-748f-491d-a9cf-709fba01eab0",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{adminTagId}}/objects"
+											},
+											"response": []
 										}
 									],
 									"id": "271bcf6f-0769-47d9-9807-7c1f4581260e"
