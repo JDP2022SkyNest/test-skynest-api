@@ -69400,6 +69400,25 @@
 									]
 								},
 								{
+									"name": "MoveFileToFolderAsUserWithoutPermissions Copy",
+									"id": "f5e1de74-9a7d-45bb-98ac-eaed97c2dcef",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE}}{{adminFolderId}}"
+									},
+									"response": []
+								},
+								{
 									"name": "MoveNotEistingFile",
 									"id": "19e7d997-c770-416d-99d8-b52563d5732a",
 									"protocolProfileBehavior": {
