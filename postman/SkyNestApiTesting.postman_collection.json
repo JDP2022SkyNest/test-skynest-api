@@ -61874,7 +61874,7 @@
 											]
 										},
 										{
-											"name": "DownloadFileFromPublicBucketAsUserWithHigherPermission(Edit)",
+											"name": "DownloadFileFromPrivateBucketAsUserWithHigherPermission(Edit)",
 											"id": "8543caf3-8b21-4481-9ed4-1dc42e066c3d",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -61990,6 +61990,99 @@
 											"response": [
 												{
 													"id": "2318f71f-9e0f-4d45-beaa-a0e868dd0e60",
+													"name": "DownloadFileFromBucketFromAnotherCompany",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 11 Jul 2022 12:53:28 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-11 14:53:28\"\n}"
+												}
+											]
+										},
+										{
+											"name": "DownloadFileFromBucketFromAnotherCompany Copy",
+											"id": "561705bf-6e08-40fb-a6ac-bf943ddda85a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+											},
+											"response": [
+												{
+													"id": "c274be10-fd17-419c-8c97-564b026e8bb5",
 													"name": "DownloadFileFromBucketFromAnotherCompany",
 													"originalRequest": {
 														"method": "GET",
@@ -64547,6 +64640,117 @@
 													"body": "{\n    \"id\": \"12222405-9076-4112-bd2a-954e4bddfbe1\",\n    \"createdOn\": \"2022-07-15T10:15:53\",\n    \"modifiedOn\": \"2022-07-15T10:15:53\",\n    \"deletedOn\": null,\n    \"name\": \"@# 123_abc_Кирилица\",\n    \"createdById\": \"14449105-1f68-4c1e-b7b0-4b30f22cc97f\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"6da707db-5839-42e3-8502-675485e50dda\",\n    \"type\": \"image/jpeg\",\n    \"size\": \"140011\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditPublicFileNameAsNotOwner",
+											"id": "7426d8aa-a6a7-4277-a5be-dd6a3b0d2667",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Public File\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": [
+												{
+													"id": "c16c4fa0-89e3-4009-81c5-4f428fbfa735",
+													"name": "EditPublicFileNameAsNotOwner",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Public File\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 27 Jul 2022 07:20:29 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"5ac5987d-df8a-4606-a5c2-792efa205024\",\n    \"createdOn\": \"2022-07-27T07:19:24\",\n    \"modifiedOn\": \"2022-07-27T07:19:24\",\n    \"deletedOn\": null,\n    \"name\": \"Public File\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"1d219490-1363-4f14-8bc3-88df16331a7a\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\",\n    \"tags\": null\n}"
+												}
+											]
 										}
 									],
 									"id": "b4bf6032-17e3-45e3-8b68-23e1311e4083",
@@ -65344,117 +65548,6 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-26 20:15:58\"\n}"
-												}
-											]
-										},
-										{
-											"name": "EditPublicFileNameAsNotOwner",
-											"id": "7426d8aa-a6a7-4277-a5be-dd6a3b0d2667",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{workerAuthToken}}"
-													}
-												},
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Public File\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}{{ENDPOINT_GET_INFO}}"
-											},
-											"response": [
-												{
-													"id": "c16c4fa0-89e3-4009-81c5-4f428fbfa735",
-													"name": "EditPublicFileNameAsNotOwner",
-													"originalRequest": {
-														"method": "PUT",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"name\": \"Public File\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}{{ENDPOINT_GET_INFO}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Wed, 27 Jul 2022 07:20:29 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"id\": \"5ac5987d-df8a-4606-a5c2-792efa205024\",\n    \"createdOn\": \"2022-07-27T07:19:24\",\n    \"modifiedOn\": \"2022-07-27T07:19:24\",\n    \"deletedOn\": null,\n    \"name\": \"Public File\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"1d219490-1363-4f14-8bc3-88df16331a7a\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\",\n    \"tags\": null\n}"
 												}
 											]
 										}
