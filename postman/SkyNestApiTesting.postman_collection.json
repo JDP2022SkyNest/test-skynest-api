@@ -67403,9 +67403,83 @@
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_RESTORE}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}{{ENDPOINT_RESTORE}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "415511a0-2893-4230-841f-4c0cee4928c5",
+											"name": "RestoreFileFromPublicBucketAsNotOwner",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 27 Jul 2022 07:28:17 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"5ac5987d-df8a-4606-a5c2-792efa205024\",\n    \"createdOn\": \"2022-07-27T07:19:24\",\n    \"modifiedOn\": \"2022-07-27T07:27\",\n    \"deletedOn\": null,\n    \"name\": \"Public File\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"1d219490-1363-4f14-8bc3-88df16331a7a\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\",\n    \"tags\": null\n}"
+										}
+									]
 								}
 							],
 							"id": "6580e57c-ec47-45b4-b52f-31c0ca2168d5"
