@@ -72948,6 +72948,35 @@
 											"body": "{\n    \"id\": \"1475082f-4e4f-47ad-b36b-70086c3eb463\",\n    \"createdOn\": \"2022-07-27T18:44:55\",\n    \"modifiedOn\": \"2022-07-27T18:44:55\",\n    \"deletedOn\": null,\n    \"name\": \"BaseTest.txt\",\n    \"createdById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"f332d937-f1aa-4273-8952-f76e34e8f732\",\n    \"type\": \"text/plain\",\n    \"size\": \"300\",\n    \"tags\": null\n}"
 										}
 									]
+								},
+								{
+									"name": "ModifyFileContentAsCreator Copy",
+									"id": "8d5f8023-6561-43c1-9a5a-1a9130a123cc",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/chris/OneDrive/Desktop/SkyNest Everything/Suggestions_UI Automation/BaseTest.txt"
+												}
+											]
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "6210b9c9-077d-4973-b2fb-18710419831b"
