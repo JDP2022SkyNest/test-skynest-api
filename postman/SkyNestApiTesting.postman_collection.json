@@ -37064,7 +37064,7 @@
 									"name": "ValidTokenAndSuccessfulPOST",
 									"item": [
 										{
-											"name": "GrantFilePermissionAsOwner",
+											"name": "GrantViewFilePermissionAsOwner",
 											"id": "15119fa3-e111-4bd3-a453-3191a5c205d5",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
