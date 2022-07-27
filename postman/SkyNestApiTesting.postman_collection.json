@@ -75207,7 +75207,7 @@
 												},
 												"method": "POST",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{workerTagId}}{{ENDPOINT_OBJECT}}{{workerFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{adminTagId}}{{ENDPOINT_OBJECT}}{{workerFolderId}}"
 											},
 											"response": [
 												{
