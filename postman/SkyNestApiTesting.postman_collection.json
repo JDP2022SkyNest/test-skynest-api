@@ -61893,7 +61893,7 @@
 											"response": [
 												{
 													"id": "7904136a-a6d6-4774-b579-b607ea6a0fa1",
-													"name": "DownloadFileFromPublicBucketAsUserWithHigherPermission(Edit)",
+													"name": "DownloadFileFromPrivateBucketAsUserWithHigherPermission(Edit)",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
