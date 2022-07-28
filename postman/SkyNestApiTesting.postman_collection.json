@@ -40161,7 +40161,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "",
+													"raw": "{\r\n  \"grantedToEmail\": \"notexisting@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
