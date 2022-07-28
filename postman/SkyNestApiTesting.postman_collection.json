@@ -61726,7 +61726,7 @@
 											]
 										},
 										{
-											"name": "CreateFolderInAsUserWithoutPermission Copy",
+											"name": "CreateFolderInAsUserWithLowerPermission(View)",
 											"id": "461c8cb5-226b-4ec5-ba5d-4cafd21a30fa",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
