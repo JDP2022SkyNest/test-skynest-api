@@ -45698,21 +45698,21 @@
 									},
 									"response": [
 										{
-											"id": "6ae4ba8e-da10-46dd-a58c-707682f9b019",
+											"id": "4d8d8e9e-a5ae-4085-b066-1ee12b229b0b",
 											"name": "EditGrantedPermissionsEmptyToken",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_EDIT}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
 											},
 											"status": "Unauthorized",
 											"code": 401,
@@ -45760,7 +45760,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Tue, 19 Jul 2022 12:18:17 GMT"
+													"value": "Thu, 28 Jul 2022 11:27:04 GMT"
 												},
 												{
 													"key": "Keep-Alive",
