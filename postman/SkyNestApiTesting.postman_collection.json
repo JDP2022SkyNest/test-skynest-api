@@ -37338,7 +37338,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
