@@ -43566,34 +43566,6 @@
 															"body": "{\n    \"grantedToId\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n    \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n    \"grantedOn\": \"2022-07-28T12:02:48\",\n    \"accessName\": \"edit\",\n    \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
 														}
 													]
-												},
-												{
-													"name": "EditGrantedPermissionForAnotherUserAsOwner",
-													"id": "69981567-e311-4a27-9e67-91868ce4f751",
-													"protocolProfileBehavior": {
-														"disableBodyPruning": true
-													},
-													"request": {
-														"auth": {
-															"type": "bearer",
-															"bearer": {
-																"token": "{{workerAuthToken}}"
-															}
-														},
-														"method": "PUT",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"edit\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{workerFolderId}}"
-													},
-													"response": []
 												}
 											],
 											"id": "9f96c218-cbb1-48f1-9b38-405a3ec0740c"
