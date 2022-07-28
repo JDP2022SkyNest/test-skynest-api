@@ -46703,7 +46703,7 @@
 											]
 										},
 										{
-											"name": "EditPermissionOfNotExistingBucket",
+											"name": "EditPermissionOfNotExistingFile",
 											"id": "bffd3285-b023-4077-8e74-13fb8996bae5",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -46726,7 +46726,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{notExistingFileId}}"
 											},
 											"response": []
 										}
