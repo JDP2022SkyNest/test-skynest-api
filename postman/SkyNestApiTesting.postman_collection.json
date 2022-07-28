@@ -46272,7 +46272,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "PUT",
@@ -46286,7 +46286,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{adminFileId}}"
 											},
 											"response": []
 										},
