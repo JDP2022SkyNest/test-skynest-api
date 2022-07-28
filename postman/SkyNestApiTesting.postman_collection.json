@@ -37419,7 +37419,7 @@
 											]
 										},
 										{
-											"name": "GrantDownloadPermissionToFolderInFolder",
+											"name": "GrantDownloadPermissionForFolderInFolder",
 											"id": "f20ce390-f916-44ea-a209-c78b9d93b32c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
