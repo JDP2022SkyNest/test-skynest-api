@@ -40424,7 +40424,7 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}/file"
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 									},
 									"response": []
 								},
