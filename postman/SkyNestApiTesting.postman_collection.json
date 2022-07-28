@@ -45028,7 +45028,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
 											},
 											"response": [
 												{
@@ -45694,7 +45694,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
 									},
 									"response": [
 										{
@@ -45912,7 +45912,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
 									},
 									"response": [
 										{
