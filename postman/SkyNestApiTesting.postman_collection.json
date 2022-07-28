@@ -37313,21 +37313,21 @@
 											},
 											"response": [
 												{
-													"id": "70fa49da-db4a-4795-ae9a-5d8647cd5731",
+													"id": "df1bef60-36d8-4d2a-ba0f-264c1e44ea3b",
 													"name": "GrantEditFilePermissionAsOwner",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"tabax15797@aregods.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"edit\"\r\n}",
+															"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"edit\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_FILE_PERMISSION}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 													},
 													"status": "OK",
 													"code": 200,
@@ -37379,7 +37379,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Wed, 27 Jul 2022 11:32:09 GMT"
+															"value": "Thu, 28 Jul 2022 09:13:14 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -37392,7 +37392,7 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"grantedToId\": \"c59c80fc-0cdc-44cc-9abd-bbb7e8e29e87\",\n    \"grantedToEmail\": \"tabax15797@aregods.com\",\n    \"objectId\": \"040deff6-35c0-496a-93e8-b2388639a7e3\",\n    \"grantedOn\": null,\n    \"accessName\": \"edit\",\n    \"grantedById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
+													"body": "{\n    \"grantedToId\": \"a5987b8d-08ff-11ed-ae23-0242ac120004\",\n    \"grantedToEmail\": \"skynest12345@gmail.com\",\n    \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n    \"grantedOn\": null,\n    \"accessName\": \"edit\",\n    \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
 												}
 											]
 										},
