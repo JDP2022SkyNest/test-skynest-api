@@ -37490,7 +37490,7 @@
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}/bucket"
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}bucket"
 													},
 													"response": [
 														{
