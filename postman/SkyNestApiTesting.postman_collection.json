@@ -46035,7 +46035,7 @@
 									"name": "ValidTokenAndSuccessfulPUT",
 									"item": [
 										{
-											"name": "EditGrantedPermissionForAnotherUser",
+											"name": "EditGrantedPermissionForAnotherUserAsOwner",
 											"id": "c5b6ff41-d3f1-4c1b-a37d-79b91af149a9",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
