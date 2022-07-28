@@ -62966,6 +62966,34 @@
 													"body": "{\n    \"messages\": [\n        \"Folder already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-20 10:32:52\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditFolderNameAsUserWithEditPermission Copy",
+											"id": "87452009-3e2a-4bf5-98be-e28bb18e6d31",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"CHanged Folder Name\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "627b40b4-8714-4163-9ab8-bbb906964b40"
