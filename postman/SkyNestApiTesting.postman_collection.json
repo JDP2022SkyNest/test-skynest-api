@@ -62325,7 +62325,7 @@
 											]
 										},
 										{
-											"name": "EditWorker'sFolderNameAsWorker",
+											"name": "EditFolderNameAsUserWithEditPermission",
 											"id": "2019e3b7-a11b-4f1a-99ec-64447ef0d8a1",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
