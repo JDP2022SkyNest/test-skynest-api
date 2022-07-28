@@ -40224,7 +40224,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{deletedBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validAdminId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
 											"response": []
 										},
