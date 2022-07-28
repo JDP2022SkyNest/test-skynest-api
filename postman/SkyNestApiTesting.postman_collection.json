@@ -39254,7 +39254,7 @@
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
