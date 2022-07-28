@@ -62968,7 +62968,7 @@
 											]
 										},
 										{
-											"name": "EditFolderNameAsUserWithEditPermission Copy",
+											"name": "EditFolderNameAsUserWithoutPermissions",
 											"id": "87452009-3e2a-4bf5-98be-e28bb18e6d31",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
