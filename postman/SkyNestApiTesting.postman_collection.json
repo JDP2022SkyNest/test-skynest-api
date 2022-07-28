@@ -43940,6 +43940,25 @@
 													"body": "[\n    {\n        \"grantedToId\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedToEmail\": \"christinezahar@yahoo.com\",\n        \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n        \"grantedOn\": \"2022-07-28T10:22:51\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"583727fa-74a4-49cc-a97f-842a8807e40b\",\n        \"grantedToEmail\": \"pirap60281@logodez.com\",\n        \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n        \"grantedOn\": \"2022-07-28T10:23:36\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"a5987b8d-08ff-11ed-ae23-0242ac120004\",\n        \"grantedToEmail\": \"skynest12345@gmail.com\",\n        \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n        \"grantedOn\": \"2022-07-28T10:24:10\",\n        \"accessName\": \"edit\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    }\n]"
 												}
 											]
+										},
+										{
+											"name": "ViewAdmin'sFilePermissionAsOwner Copy",
+											"id": "b79cabca-a318-494e-93ba-6f4283bdedc3",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "788c08f7-0581-4b52-bdc4-1e48811b5962",
