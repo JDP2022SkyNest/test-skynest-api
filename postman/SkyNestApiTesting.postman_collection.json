@@ -40622,7 +40622,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_EDIT}}{{adminBucketId}}"
 											},
 											"response": [
 												{
