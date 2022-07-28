@@ -40542,7 +40542,90 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "24464afe-3a94-4463-ad65-e80e7f4eb160",
+											"name": "RevokePermissionExpiredToken",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=ISO-8859-1"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 28 Jul 2022 09:15:36 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-28 09:15:36\"\n}"
+										}
+									]
 								},
 								{
 									"name": "RevokePermissionInvalidToken",
