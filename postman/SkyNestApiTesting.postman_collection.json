@@ -69172,7 +69172,7 @@
 											"response": [
 												{
 													"id": "3edb45fb-4e82-4f55-9d5d-1588aefe140f",
-													"name": "GetAdmin'sFIleInfoAsAdmin Copy",
+													"name": "GetInfoOfFileAsUserThatHasPermissionsForTheFOlder",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
