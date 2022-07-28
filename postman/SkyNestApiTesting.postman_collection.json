@@ -43103,7 +43103,13 @@
 											"body": "[\n    {\n        \"grantedToId\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedToEmail\": \"christinezahar@yahoo.com\",\n        \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n        \"grantedOn\": \"2022-07-28T09:03:40\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"583727fa-74a4-49cc-a97f-842a8807e40b\",\n        \"grantedToEmail\": \"pirap60281@logodez.com\",\n        \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n        \"grantedOn\": \"2022-07-28T09:13:58\",\n        \"accessName\": \"download\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"a5987b8d-08ff-11ed-ae23-0242ac120004\",\n        \"grantedToEmail\": \"skynest12345@gmail.com\",\n        \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n        \"grantedOn\": \"2022-07-28T09:13:14\",\n        \"accessName\": \"edit\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    }\n]"
 										}
 									]
-								},
+								}
+							],
+							"id": "2c42ce74-4ffa-4f2b-9bb0-d9fa93513e94"
+						},
+						{
+							"name": "ValidTokeButUnsuccessfulGET",
+							"item": [
 								{
 									"name": "ViewAdmin'sFilePermissionAsNotOwner",
 									"id": "30831c68-729f-43b3-b9fa-7697e93fade3",
@@ -43114,7 +43120,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": "{{workerAuthToken}}"
 											}
 										},
 										"method": "GET",
@@ -43124,11 +43130,6 @@
 									"response": []
 								}
 							],
-							"id": "2c42ce74-4ffa-4f2b-9bb0-d9fa93513e94"
-						},
-						{
-							"name": "ValidTokeButUnsuccessfulGET",
-							"item": [],
 							"id": "b4cb67a0-1939-4cf9-8931-4108f2a8710b"
 						}
 					],
