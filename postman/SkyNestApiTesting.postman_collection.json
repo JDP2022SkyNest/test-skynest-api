@@ -63544,14 +63544,88 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{SecondAdminAuthToken}}"
 													}
 												},
 												"method": "GET",
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_GET_INFO}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "451ec9e1-6e2e-4591-bd73-841ec124bc66",
+													"name": "GetFolderDetailsAsUserWithHigherPermission(Edit)",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 28 Jul 2022 12:44:40 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"a5919f5e-d763-40c4-b913-06f19d3603f8\",\n    \"createdOn\": \"2022-07-28T12:19:29\",\n    \"modifiedOn\": \"2022-07-28T12:19:29\",\n    \"deletedOn\": null,\n    \"name\": \"Admin's Folder in Admin's Bucket\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"c57cafdd-6fe0-40a3-b5c6-390b3ce85b57\",\n    \"tags\": []\n}"
+												}
+											]
 										},
 										{
 											"name": "GetAlreadyDeletedFolder",
