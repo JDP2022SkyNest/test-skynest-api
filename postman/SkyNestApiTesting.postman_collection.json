@@ -41760,7 +41760,7 @@
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"owner\"\r\n}",
+															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"owner\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
