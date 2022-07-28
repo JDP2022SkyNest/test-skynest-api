@@ -46051,7 +46051,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"access\": \"download\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
