@@ -44780,45 +44780,25 @@
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulPUT",
-									"item": [],
-									"id": "9071efad-b88e-4b7c-ad02-39179103e49c"
-								},
-								{
-									"name": "EditOwnerPermissionForYourselfAsAdmin",
-									"id": "2bac8c52-3073-43cf-a6b7-4e42e9886fb4",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"access\": \"download\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{adminBucketId}}"
-									},
-									"response": [
+									"item": [
 										{
-											"id": "78646b6e-2e55-437b-abda-805d3353d968",
 											"name": "EditOwnerPermissionForYourselfAsAdmin",
-											"originalRequest": {
+											"id": "2bac8c52-3073-43cf-a6b7-4e42e9886fb4",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
 												"method": "PUT",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"access\": \"download\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -44827,183 +44807,93 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{adminBucketId}}"
 											},
-											"status": "Conflict",
-											"code": 409,
-											"_postman_previewlanguage": "json",
-											"header": [
+											"response": [
 												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 28 Jul 2022 11:13:51 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"User cant revoke their own permissions.\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 11:13:51\"\n}"
-										}
-									]
-								},
-								{
-									"name": "EditGrantedPermissionForYourselfAsWorker",
-									"id": "6a6065e5-16d8-4969-900c-f838b8133758",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"access\": \"owner\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
-									},
-									"response": [
-										{
-											"id": "cde8ccb6-040b-420b-8d04-c2623e4fe4ea",
-											"name": "EditGrantedPermissionForYourselfAsWorker",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"access\": \"owner\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
+													"id": "78646b6e-2e55-437b-abda-805d3353d968",
+													"name": "EditOwnerPermissionForYourselfAsAdmin",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{adminBucketId}}"
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 28 Jul 2022 11:13:51 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
 														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_EDIT}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Fri, 22 Jul 2022 07:24:50 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User cant revoke their own permissions.\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 11:13:51\"\n}"
 												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"grantedToId\": \"893e1b4b-c119-4594-813f-30356120d438\",\n    \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n    \"objectId\": \"7046af0e-f6da-4231-a0aa-ac704eae1041\",\n    \"grantedOn\": \"2022-07-22T07:12:16\",\n    \"accessName\": \"owner\",\n    \"grantedById\": \"893e1b4b-c119-4594-813f-30356120d438\",\n    \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n}"
+											]
 										}
-									]
+									],
+									"id": "9071efad-b88e-4b7c-ad02-39179103e49c"
 								},
 								{
 									"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll",
