@@ -37111,90 +37111,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "66639569-4ccc-45d9-a99a-355d6cfbcc3b",
-													"name": "GrantViewPermissionAsOwner",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:23:37 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"grantedToId\": \"583727fa-74a4-49cc-a97f-842a8807e40b\",\n    \"grantedToEmail\": \"pirap60281@logodez.com\",\n    \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n    \"grantedOn\": null,\n    \"accessName\": \"view\",\n    \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
 											"name": "GrantDownloadPermissionAsOwner",
@@ -37222,90 +37139,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "f31aeaf6-8f61-42ab-bb95-fec3a0d50a4d",
-													"name": "GrantDownloadPermissionAsOwner",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"download\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:23:45 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"grantedToId\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n    \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n    \"grantedOn\": null,\n    \"accessName\": \"download\",\n    \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
 											"name": "GrantEdit(Delete)PermissionAsOwner",
@@ -37324,7 +37158,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"edit\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmailc.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"edit\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -37333,117 +37167,10 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "0d4a9dd4-3da2-419d-bab1-4bf5ee0bc632",
-													"name": "GrantEdit(Delete)PermissionAsOwner",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"edit\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:24:10 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"grantedToId\": \"a5987b8d-08ff-11ed-ae23-0242ac120004\",\n    \"grantedToEmail\": \"skynest12345@gmail.com\",\n    \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n    \"grantedOn\": null,\n    \"accessName\": \"edit\",\n    \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
-												}
-											]
+											"response": []
 										}
 									],
-									"id": "fbd3bf8a-b7d1-4bf9-b703-8ba6220caa37",
-									"event": [
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "4232cd76-4dd6-4427-a8e9-dc8f9d72f9ec",
-												"type": "text/javascript",
-												"exec": [
-													""
-												]
-											}
-										},
-										{
-											"listen": "test",
-											"script": {
-												"id": "ebf34bba-958a-4bf9-8a4e-fb3a6f602dd7",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Status code is 200\", function () {",
-													"    pm.response.to.have.status(200);",
-													"});"
-												]
-											}
-										}
-									]
+									"id": "fbd3bf8a-b7d1-4bf9-b703-8ba6220caa37"
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulPOST",
@@ -37458,7 +37185,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "POST",
@@ -37474,90 +37201,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "68e0214d-d1a5-449e-8737-7342348f5fb0",
-													"name": "DuplicateFolderPermission",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "Conflict",
-													"code": 409,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:24:37 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User already has some kind of access to requested object\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 10:24:37\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
 											"name": "GrantInvalidPermission",
@@ -37585,86 +37229,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "8a94d672-22a4-4b08-b513-9d70d8767f66",
-													"name": "GrantInvalidPermission",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"invalid\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "Bad Request",
-													"code": 400,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:24:54 GMT"
-														},
-														{
-															"key": "Connection",
-															"value": "close"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"access must match \\\"(view)|(download)|(edit)|(owner)\\\"\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-28 10:24:54\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
 											"name": "GrantPermissionForNotExistingFolder",
@@ -37692,90 +37257,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "aaf15016-9ae6-45b4-bd69-db0fa49acb38",
-													"name": "GrantPermissionForNotExistingFolder",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{notExistingFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "Not Found",
-													"code": 404,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:25:02 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"Folder not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-28 10:25:02\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
 											"name": "GrantPermissionForAlreadyDeletedFolder",
@@ -37803,90 +37285,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "7771c8ba-5c8e-46d9-bb83-b66f042a481d",
-													"name": "GrantPermissionForAlreadyDeletedFolder",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{deletedFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "Conflict",
-													"code": 409,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:25:08 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"Folder already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 10:25:08\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
 											"name": "GrantPermissionToNotExistingUser",
@@ -37914,90 +37313,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "4181fc2b-3d1f-4575-92eb-355c6f474f72",
-													"name": "GrantPermissionToNotExistingUser",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"notexisiting@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "Not Found",
-													"code": 404,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:25:14 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-28 10:25:14\"\n}"
-												}
-											]
+											"response": []
 										},
 										{
 											"name": "GrantBucketPermissionAsNotOwner",
@@ -38025,90 +37341,7 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": [
-												{
-													"id": "3386108d-90b2-4527-b3bb-f3bffc4986d7",
-													"name": "GrantBucketPermissionAsNotOwner",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-													},
-													"status": "Forbidden",
-													"code": 403,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:25:19 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-28 10:25:19\"\n}"
-												}
-											]
+											"response": []
 										}
 									],
 									"id": "3f43d337-0a24-40b8-9c96-2165f14b231e"
@@ -40822,6 +40055,34 @@
 									"name": "ValidTokenAndSuccessfulDELETE",
 									"item": [
 										{
+											"name": "RevokeBucketPermissionAsOwnerToYourself",
+											"id": "17363f4d-dd36-49ee-b372-f3ec8938a546",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"tabax15797@aregods.com\",\r\n  \"objectId\": \"{{workerBucketId}}\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+											},
+											"response": []
+										},
+										{
 											"name": "RevokePermissionAsOwnerToAnotherUser",
 											"id": "63ff1949-e14c-49a5-9887-1667227f6fa7",
 											"protocolProfileBehavior": {
@@ -40831,14 +40092,14 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "DELETE",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -40872,7 +40133,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -40884,7 +40145,7 @@
 											"response": []
 										},
 										{
-											"name": "RevokePermissionForNotExistingFolder",
+											"name": "RevokePermissionForNotExistingBucket",
 											"id": "a6b56f95-a453-44b7-898e-a969b5c3711b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -40900,7 +40161,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{notExistingFolderId}}\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -40928,7 +40189,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"notexisting@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -40940,7 +40201,7 @@
 											"response": []
 										},
 										{
-											"name": "RevokePermissionForAlreadyDeletedFolder",
+											"name": "RevokePermissionForAlreadyDeletedBucket",
 											"id": "89bf7d50-44f2-4090-b392-4b97ad542f6a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -40956,19 +40217,19 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{deletedFolderId}}\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{deletedBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validAdminId}}"
 											},
 											"response": []
 										},
 										{
-											"name": "RevokeFolderPermissionAsNotOwner",
+											"name": "RevokeBucketPermissionAsNotOwner",
 											"id": "4d05db1c-6e36-453a-b357-54ab80ecb136",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -40984,42 +40245,14 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-											},
-											"response": []
-										},
-										{
-											"name": "RevokeFolderPermissionAsOwnerToYourself",
-											"id": "17363f4d-dd36-49ee-b372-f3ec8938a546",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 											},
 											"response": []
 										}
@@ -41047,16 +40280,7 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 									},
 									"response": []
 								},
@@ -41075,16 +40299,7 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 									},
 									"response": []
 								},
@@ -41103,16 +40318,7 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 									},
 									"response": []
 								}
