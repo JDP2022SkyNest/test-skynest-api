@@ -45439,7 +45439,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{deletedBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{notExistingBucketId}}"
 											},
 											"response": []
 										}
