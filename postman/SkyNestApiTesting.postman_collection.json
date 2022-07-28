@@ -37472,7 +37472,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 									},
 									"response": []
 								}
