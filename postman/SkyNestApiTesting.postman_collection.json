@@ -39652,14 +39652,14 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "DELETE",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"tabax15797@aregods.com\",\r\n  \"objectId\": \"{{workerBucketId}}\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
