@@ -45414,6 +45414,34 @@
 													"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 11:24:50\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditPermissionOfAlreadyDeletedBucket Copy",
+											"id": "cd769d74-2adb-4ffe-827c-0b1b409618e1",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"view\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{deletedBucketId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "9071efad-b88e-4b7c-ad02-39179103e49c"
