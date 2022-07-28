@@ -43673,7 +43673,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "ViewWorker'sFilePermissionAsOwner",
+											"name": "ViewWorker'sFolderPermissionAsOwner",
 											"id": "f7f8bc20-cc23-4fc8-9c35-b829b55b367d",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
