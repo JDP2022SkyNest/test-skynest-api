@@ -64557,7 +64557,7 @@
 											]
 										},
 										{
-											"name": "GetFolderContentAsUserWithHigherPermission Copy",
+											"name": "GetPublicFolderContentAsUserWithoutPermissions",
 											"id": "1e943c69-e946-4ae6-ade0-f8f61a58b0c2",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
