@@ -45305,7 +45305,7 @@
 											]
 										},
 										{
-											"name": "EditWithInvalidPermission Copy",
+											"name": "EditPermissionOfAlreadyDeletedBucket",
 											"id": "7c6db504-c953-4e59-9cc2-1b02d773ab2d",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
