@@ -42916,7 +42916,7 @@
 					"name": "GetFilePermissions",
 					"item": [
 						{
-							"name": "ViewFilePermissionAsOwner",
+							"name": "ViewWorker'sFilePermissionAsOwner",
 							"id": "ca8b0c3b-08a4-405f-b3f4-97dae3dd90bb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
