@@ -37064,34 +37064,6 @@
 									"name": "ValidTokenAndSuccessfulPOST",
 									"item": [
 										{
-											"name": "GrantFolderPermissionAsOwner",
-											"id": "7af7d4fb-1b93-40b8-b3bf-55d501bc38dc",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"response": []
-										},
-										{
 											"name": "GrantOwnerPermissionToAnotherUserAsOwner",
 											"id": "663e0da3-71f9-44d9-9953-892c611f67f6",
 											"protocolProfileBehavior": {
