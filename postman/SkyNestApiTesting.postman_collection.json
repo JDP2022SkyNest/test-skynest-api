@@ -37444,7 +37444,90 @@
 												},
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "b9daf6c8-2d71-4af9-8aa1-14fe596a6d8c",
+													"name": "GrantDownloadPermissionForFolderInFolder",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{folderInFolder1Id}}\",\r\n  \"access\": \"download\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 28 Jul 2022 10:29:08 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"grantedToId\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n    \"objectId\": \"95bc6381-275d-4f71-8ecc-beced5031b89\",\n    \"grantedOn\": null,\n    \"accessName\": \"download\",\n    \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
+												}
+											]
 										}
 									],
 									"id": "fbd3bf8a-b7d1-4bf9-b703-8ba6220caa37",
