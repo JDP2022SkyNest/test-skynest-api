@@ -46058,7 +46058,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}{{adminFileId}}"
 											},
 											"response": [
 												{
