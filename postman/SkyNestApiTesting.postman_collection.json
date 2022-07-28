@@ -39643,117 +39643,6 @@
 									"name": "ValidTokenAndSuccessfulDELETE",
 									"item": [
 										{
-											"name": "RevokeBucketPermissionAsOwnerToYourself",
-											"id": "02af31fc-5b0e-4c23-b8c9-08ca88111848",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"response": [
-												{
-													"id": "ef5821f5-fa62-4e5f-bcd8-ad2ab1e411cc",
-													"name": "RevokeBucketPermissionAsOwnerToYourself",
-													"originalRequest": {
-														"method": "DELETE",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-													},
-													"status": "Conflict",
-													"code": 409,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 09:25:08 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User cant revoke their own permissions.\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 09:25:08\"\n}"
-												}
-											]
-										},
-										{
 											"name": "RevokePermissionAsOwnerToAnotherUser",
 											"id": "ebe71d4c-7abb-42b1-9bf3-315f50d8d5e0",
 											"protocolProfileBehavior": {
@@ -39857,7 +39746,31 @@
 											]
 										}
 									],
-									"id": "5e5539d0-cc28-4fbb-8296-022e73e246ac"
+									"id": "5e5539d0-cc28-4fbb-8296-022e73e246ac",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "a6dc51a5-2c5a-49c2-86e3-f98ffba474d2",
+												"type": "text/javascript",
+												"exec": [
+													""
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "cfc0fc4d-f146-4729-87c0-a4e4149b0eb1",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});"
+												]
+											}
+										}
+									]
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulDELETE",
@@ -40414,6 +40327,117 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-28 09:20:03\"\n}"
+												}
+											]
+										},
+										{
+											"name": "RevokeBucketPermissionAsOwnerToYourself",
+											"id": "02af31fc-5b0e-4c23-b8c9-08ca88111848",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+											},
+											"response": [
+												{
+													"id": "ef5821f5-fa62-4e5f-bcd8-ad2ab1e411cc",
+													"name": "RevokeBucketPermissionAsOwnerToYourself",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 28 Jul 2022 09:25:08 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User cant revoke their own permissions.\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 09:25:08\"\n}"
 												}
 											]
 										}
