@@ -43311,9 +43311,83 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{notExistingFileId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{deletedFileId}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "9a83ccd4-88f2-4bb1-867d-17d1052458dc",
+											"name": "ViewPermissionsForAlreadyDeletedFile",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{deletedFileId}}"
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 28 Jul 2022 09:32:40 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"messages\": [\n        \"File already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 09:32:40\"\n}"
+										}
+									]
 								}
 							],
 							"id": "b4cb67a0-1939-4cf9-8931-4108f2a8710b"
