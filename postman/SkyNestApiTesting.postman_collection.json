@@ -44792,7 +44792,7 @@
 											"mode": "urlencoded",
 											"urlencoded": []
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{adminBucketId}}"
 									},
 									"response": [
 										{
