@@ -43653,7 +43653,7 @@
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
 													},
 													"response": []
 												},
@@ -43681,7 +43681,7 @@
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
 													},
 													"response": []
 												}
