@@ -43865,7 +43865,7 @@
 									"name": "ValidTokeButUnsuccessfulGET",
 									"item": [
 										{
-											"name": "ViewAdmin'sFilePermissionAsNotOwner",
+											"name": "ViewFilePermissionAsNotOwner",
 											"id": "16d3400e-676e-43cf-9b47-252766cfec59",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
