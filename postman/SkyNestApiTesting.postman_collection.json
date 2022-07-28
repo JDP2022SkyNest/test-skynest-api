@@ -44251,7 +44251,7 @@
 											]
 										},
 										{
-											"name": "ViewPermissionsForAlreadyDeletedFile",
+											"name": "ViewPermissionsForAlreadyDeletedFolder",
 											"id": "1f2ecea0-6c4f-482c-af5b-6d184198bba0",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
