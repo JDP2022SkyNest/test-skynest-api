@@ -37080,14 +37080,14 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"christinezaha@yahoo.com\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"owner\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 											},
 											"response": [
 												{
