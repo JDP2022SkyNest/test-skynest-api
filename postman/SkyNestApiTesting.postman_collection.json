@@ -43796,34 +43796,6 @@
 													]
 												},
 												{
-													"name": "EditGrantedPermissionForYourselfAsWorker",
-													"id": "4f622c3f-b836-4a23-b78b-efb2f966f00f",
-													"protocolProfileBehavior": {
-														"disableBodyPruning": true
-													},
-													"request": {
-														"auth": {
-															"type": "bearer",
-															"bearer": {
-																"token": "{{workerAuthToken}}"
-															}
-														},
-														"method": "PUT",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"access\": \"download\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
-													},
-													"response": []
-												},
-												{
 													"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll",
 													"id": "5423e8cf-5b08-4e52-9c58-b108ea4e1055",
 													"protocolProfileBehavior": {
