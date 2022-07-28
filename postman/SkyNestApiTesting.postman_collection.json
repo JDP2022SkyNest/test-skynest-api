@@ -61624,7 +61624,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{SecondAdminAuthToken}}"
 													}
 												},
 												"method": "POST",
