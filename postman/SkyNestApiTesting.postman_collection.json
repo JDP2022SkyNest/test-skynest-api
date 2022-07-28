@@ -37413,14 +37413,14 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"download\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"download\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_FILE_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 											},
 											"response": [
 												{
