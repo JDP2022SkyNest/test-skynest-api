@@ -45303,6 +45303,34 @@
 													"body": "{\n    \"messages\": [\n        \"access must match \\\"(view)|(download)|(edit)|(owner)\\\"\"\n    ],\n    \"status\": 400,\n    \"timestamp\": \"2022-07-28 11:23:43\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditWithInvalidPermission Copy",
+											"id": "7c6db504-c953-4e59-9cc2-1b02d773ab2d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"invalid\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "9071efad-b88e-4b7c-ad02-39179103e49c"
