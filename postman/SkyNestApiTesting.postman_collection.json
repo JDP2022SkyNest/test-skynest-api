@@ -64371,6 +64371,25 @@
 											]
 										},
 										{
+											"name": "GetFolderContentAsOwner Copy",
+											"id": "63e5df5b-335a-4070-b40f-98e3e9b1b11b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "ReturnPathToFolder",
 											"id": "79bcf2c1-6147-48b1-95ae-513b580b08d5",
 											"protocolProfileBehavior": {
