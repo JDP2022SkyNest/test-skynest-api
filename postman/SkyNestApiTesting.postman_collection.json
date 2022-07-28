@@ -40642,6 +40642,15 @@
 										},
 										"method": "DELETE",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 									},
 									"response": []
