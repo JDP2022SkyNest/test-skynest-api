@@ -43202,6 +43202,25 @@
 											"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-28 09:31:19\"\n}"
 										}
 									]
+								},
+								{
+									"name": "ViewAdmin'sFilePermissionAsNotOwner Copy",
+									"id": "24611dfd-39ba-48b9-b390-9d8075fa9ae3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{adminFileId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "b4cb67a0-1939-4cf9-8931-4108f2a8710b"
