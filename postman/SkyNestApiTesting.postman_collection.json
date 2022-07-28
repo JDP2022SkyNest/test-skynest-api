@@ -39867,7 +39867,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{notExistingUserId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 											},
 											"response": []
 										},
