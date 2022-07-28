@@ -40531,7 +40531,16 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 									},
 									"response": []
 								},
