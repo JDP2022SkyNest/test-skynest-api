@@ -37424,6 +37424,88 @@
 											},
 											"response": [
 												{
+													"id": "8885be0d-c0b7-4955-a17a-deab48f6fc61",
+													"name": "GrantDownloadFilePermissionAsOwner",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"download\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_FILE_PERMISSION}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 27 Jul 2022 11:33:07 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"grantedToId\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n    \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n    \"objectId\": \"040deff6-35c0-496a-93e8-b2388639a7e3\",\n    \"grantedOn\": null,\n    \"accessName\": \"download\",\n    \"grantedById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
+												},
+												{
 													"id": "8e5f98f9-c79d-4be3-ab55-c210855e86f2",
 													"name": "GrantDownloadFilePermissionAsOwner",
 													"originalRequest": {
@@ -39643,8 +39725,8 @@
 									"name": "ValidTokenAndSuccessfulDELETE",
 									"item": [
 										{
-											"name": "RevokePermissionAsOwnerToAnotherUser",
-											"id": "ebe71d4c-7abb-42b1-9bf3-315f50d8d5e0",
+											"name": "RevokeBucketPermissionAsOwnerToYourself",
+											"id": "02af31fc-5b0e-4c23-b8c9-08ca88111848",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -39652,39 +39734,30 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "DELETE",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"tabax15797@aregods.com\",\r\n  \"objectId\": \"{{workerBucketId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}"
 											},
 											"response": [
 												{
-													"id": "0316de4f-461e-4391-9885-7b34cac3b7fb",
-													"name": "RevokePermissionAsOwnerToAnotherUser",
+													"id": "d76868bf-cf4d-48e1-8ab7-ad9de097aa0c",
+													"name": "RevokeBucketPermissionAsOwnerToYourself",
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_USER}}{{validWorkerId}}"
 													},
 													"status": "No Content",
 													"code": 204,
@@ -39728,7 +39801,110 @@
 														},
 														{
 															"key": "Date",
-															"value": "Thu, 28 Jul 2022 09:21:08 GMT"
+															"value": "Tue, 26 Jul 2022 15:08:02 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
+										},
+										{
+											"name": "RevokePermissionAsOwnerToAnotherUser",
+											"id": "ebe71d4c-7abb-42b1-9bf3-315f50d8d5e0",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_USER}}{{validAdminId}}"
+											},
+											"response": [
+												{
+													"id": "02f20457-c0b2-49c9-a4f7-48663db9068a",
+													"name": "RevokePermissionAsOwnerToAnotherUser",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 22 Jul 2022 07:29:11 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -39746,31 +39922,7 @@
 											]
 										}
 									],
-									"id": "5e5539d0-cc28-4fbb-8296-022e73e246ac",
-									"event": [
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "a6dc51a5-2c5a-49c2-86e3-f98ffba474d2",
-												"type": "text/javascript",
-												"exec": [
-													""
-												]
-											}
-										},
-										{
-											"listen": "test",
-											"script": {
-												"id": "cfc0fc4d-f146-4729-87c0-a4e4149b0eb1",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Status code is 204\", function () {",
-													"    pm.response.to.have.status(204);",
-													"});"
-												]
-											}
-										}
-									]
+									"id": "5e5539d0-cc28-4fbb-8296-022e73e246ac"
 								},
 								{
 									"name": "ValidTokenButUnsuccessfulDELETE",
@@ -39792,365 +39944,32 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 											},
 											"response": [
 												{
-													"id": "b804dcf5-1265-4112-904c-c1a20378c934",
+													"id": "4de7c953-fa0f-4216-b255-d586a91a1523",
 													"name": "RevokeAlreadyRevokedPermission",
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+															"raw": "",
 															"options": {
 																"raw": {
 																	"language": "json"
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-													},
-													"status": "Not Found",
-													"code": 404,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 09:21:28 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"File not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-28 09:21:28\"\n}"
-												}
-											]
-										},
-										{
-											"name": "RevokePermissionForNotExistingBucket",
-											"id": "d4978c70-3f8f-48c9-a302-a5c0e9c05d1e",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{notExistingFileId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"response": [
-												{
-													"id": "45a5f3fd-4741-4e41-b233-8dc0da5e6569",
-													"name": "RevokePermissionForNotExistingBucket",
-													"originalRequest": {
-														"method": "DELETE",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{notExistingFileId}}\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-													},
-													"status": "Not Found",
-													"code": 404,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 09:17:25 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"File not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-28 09:17:25\"\n}"
-												}
-											]
-										},
-										{
-											"name": "RevokePermissionForNotExistingUser",
-											"id": "a4c5b2b1-2c57-44f7-8a74-283559a0b013",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"notexistinguser@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"response": [
-												{
-													"id": "afe96a42-3928-4514-b8e0-c41bf941ff9e",
-													"name": "RevokePermissionForNotExistingUser",
-													"originalRequest": {
-														"method": "DELETE",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"notexistinguser@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-													},
-													"status": "Not Found",
-													"code": 404,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 09:18:10 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-28 09:18:10\"\n}"
-												}
-											]
-										},
-										{
-											"name": "RevokePermissionForAlreadyDeletedFile",
-											"id": "22eb8559-f679-4313-8597-299fccc86df9",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{deletedFileId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"response": [
-												{
-													"id": "177ea81b-8d6a-438e-b7bf-3716ec3bf2b6",
-													"name": "RevokePermissionForAlreadyDeletedFile",
-													"originalRequest": {
-														"method": "DELETE",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{deletedFileId}}\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 													},
 													"status": "Conflict",
 													"code": 409,
@@ -40202,7 +40021,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Thu, 28 Jul 2022 09:19:03 GMT"
+															"value": "Fri, 22 Jul 2022 07:32:14 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -40215,7 +40034,340 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"File already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 09:19:03\"\n}"
+													"body": "{\n    \"messages\": [\n        \"Permission doesn't exist.\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-22 09:32:14\"\n}"
+												}
+											]
+										},
+										{
+											"name": "RevokePermissionForNotExistingBucket",
+											"id": "d4978c70-3f8f-48c9-a302-a5c0e9c05d1e",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{notExistingBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+											},
+											"response": [
+												{
+													"id": "a5a2522e-06ce-4257-b980-ce0ab40e2201",
+													"name": "RevokePermissionForNotExistingBucket",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{notExistingBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 22 Jul 2022 07:33:53 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Bucket not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-22 09:33:53\"\n}"
+												}
+											]
+										},
+										{
+											"name": "RevokePermissionForNotExistingUser",
+											"id": "a4c5b2b1-2c57-44f7-8a74-283559a0b013",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{notExistingUserId}}"
+											},
+											"response": [
+												{
+													"id": "ab543025-69ce-412a-b4e9-be6109a9fb7d",
+													"name": "RevokePermissionForNotExistingUser",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{notExistingUserId}}"
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 22 Jul 2022 07:51:26 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"User not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-22 09:51:26\"\n}"
+												}
+											]
+										},
+										{
+											"name": "RevokePermissionForAlreadyDeletedBucket",
+											"id": "22eb8559-f679-4313-8597-299fccc86df9",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{deletedBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validAdminId}}"
+											},
+											"response": [
+												{
+													"id": "734ee937-17c4-403b-b1b1-cd74efbe421f",
+													"name": "RevokePermissionForAlreadyDeletedBucket",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{deletedBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validAdminId}}"
+													},
+													"status": "Conflict",
+													"code": 409,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 22 Jul 2022 07:34:19 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"messages\": [\n        \"Bucket already deleted\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-22 09:34:19\"\n}"
 												}
 											]
 										},
@@ -40236,32 +40388,32 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+													"raw": "",
 													"options": {
 														"raw": {
 															"language": "json"
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 											},
 											"response": [
 												{
-													"id": "f85e692f-c7cb-4c8d-9fd1-b27267ede533",
+													"id": "3ee613f9-865f-4df0-bb0a-a5ae114a49ba",
 													"name": "RevokeBucketPermissionAsNotOwner",
 													"originalRequest": {
 														"method": "DELETE",
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+															"raw": "",
 															"options": {
 																"raw": {
 																	"language": "json"
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 													},
 													"status": "Forbidden",
 													"code": 403,
@@ -40313,7 +40465,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Thu, 28 Jul 2022 09:20:03 GMT"
+															"value": "Fri, 22 Jul 2022 07:36:22 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -40326,118 +40478,7 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-28 09:20:03\"\n}"
-												}
-											]
-										},
-										{
-											"name": "RevokeBucketPermissionAsOwnerToYourself",
-											"id": "02af31fc-5b0e-4c23-b8c9-08ca88111848",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"response": [
-												{
-													"id": "ef5821f5-fa62-4e5f-bcd8-ad2ab1e411cc",
-													"name": "RevokeBucketPermissionAsOwnerToYourself",
-													"originalRequest": {
-														"method": "DELETE",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-													},
-													"status": "Conflict",
-													"code": 409,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 09:25:08 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"messages\": [\n        \"User cant revoke their own permissions.\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 09:25:08\"\n}"
+													"body": "{\n    \"messages\": [\n        \"User does not have access to bucket\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-22 09:36:22\"\n}"
 												}
 											]
 										}
@@ -40467,7 +40508,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
+											"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -40476,86 +40517,7 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 									},
-									"response": [
-										{
-											"id": "e83f3879-99df-4d8e-8405-b5e89922e336",
-											"name": "RevokePermissionEmptyToken",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 28 Jul 2022 09:15:08 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "RevokePermissionExpiredToken",
@@ -40572,101 +40534,9 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 									},
-									"response": [
-										{
-											"id": "24464afe-3a94-4463-ad65-e80e7f4eb160",
-											"name": "RevokePermissionExpiredToken",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=ISO-8859-1"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 28 Jul 2022 09:15:36 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"messages\": [\n        \"Invalid session token\"\n    ],\n    \"status\": 401,\n    \"timestamp\": \"2022-07-28 09:15:36\"\n}"
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "RevokePermissionInvalidToken",
@@ -40683,97 +40553,9 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
 									},
-									"response": [
-										{
-											"id": "1e43405f-4d9d-440e-a921-84cd3ef28cdf",
-											"name": "RevokePermissionInvalidToken",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"akynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
-											},
-											"status": "Unauthorized",
-											"code": 401,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Length",
-													"value": "0"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 28 Jul 2022 09:16:06 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
+									"response": []
 								}
 							],
 							"id": "575e8bb9-3801-404c-b45a-8a033d6aaa5d",
@@ -40815,7 +40597,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "ViewWorker'sBucketPermissionsAsOwner",
+											"name": "ViewWorker'sBucketPermissionsAsCreator",
 											"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -40908,7 +40690,7 @@
 											]
 										},
 										{
-											"name": "ViewAdmin'sBucketPermissionsAsOwner",
+											"name": "ViewAdmin'sBucketPermissionsAsCreator Copy",
 											"id": "3449e3cb-28b8-4162-8c8f-85b65d009dec",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -42916,111 +42698,8 @@
 					"name": "GetFilePermissions",
 					"item": [
 						{
-							"name": "ValidTokenAndSuccessfulGET",
-							"item": [],
-							"id": "2c42ce74-4ffa-4f2b-9bb0-d9fa93513e94"
-						},
-						{
-							"name": "ValidTokeButUnsuccessful",
-							"item": [],
-							"id": "b4cb67a0-1939-4cf9-8931-4108f2a8710b"
-						},
-						{
-							"name": "ViewWorker'sFilePermissionAsOwner",
+							"name": "ViewFilePermissionAsOwner",
 							"id": "ca8b0c3b-08a4-405f-b3f4-97dae3dd90bb",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{workerAuthToken}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
-							},
-							"response": [
-								{
-									"id": "358ad5fe-c73d-4be7-acf0-ba8677c0a52a",
-									"name": "ViewWorker'sFilePermissionAsOwner",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 28 Jul 2022 09:28:23 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    {\n        \"grantedToId\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedToEmail\": \"christinezahar@yahoo.com\",\n        \"objectId\": \"ccab1b24-5023-447d-b949-d02ef40859fa\",\n        \"grantedOn\": \"2022-07-28T09:04:38\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n        \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n    },\n    {\n        \"grantedToId\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n        \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n        \"objectId\": \"ccab1b24-5023-447d-b949-d02ef40859fa\",\n        \"grantedOn\": \"2022-07-28T09:02:27\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n        \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n    }\n]"
-								}
-							]
-						},
-						{
-							"name": "ViewAdmin'sFilePermissionAsOwner",
-							"id": "1db0b401-97ae-450f-b6b2-dcde54e25668",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -43037,8 +42716,8 @@
 							},
 							"response": [
 								{
-									"id": "d72d8c4b-c1f3-40b8-839d-679234b7c535",
-									"name": "ViewAdmin'sFilePermissionAsOwner",
+									"id": "3e15865a-f0d4-4752-b190-09184843ed3c",
+									"name": "ViewFilePermissionAsOwner",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -43094,7 +42773,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Thu, 28 Jul 2022 09:27:54 GMT"
+											"value": "Thu, 28 Jul 2022 09:10:37 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -43107,7 +42786,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "[\n    {\n        \"grantedToId\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedToEmail\": \"christinezahar@yahoo.com\",\n        \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n        \"grantedOn\": \"2022-07-28T09:03:40\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"583727fa-74a4-49cc-a97f-842a8807e40b\",\n        \"grantedToEmail\": \"pirap60281@logodez.com\",\n        \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n        \"grantedOn\": \"2022-07-28T09:13:58\",\n        \"accessName\": \"download\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"a5987b8d-08ff-11ed-ae23-0242ac120004\",\n        \"grantedToEmail\": \"skynest12345@gmail.com\",\n        \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n        \"grantedOn\": \"2022-07-28T09:13:14\",\n        \"accessName\": \"edit\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    }\n]"
+									"body": "[\n    {\n        \"grantedToId\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedToEmail\": \"christinezahar@yahoo.com\",\n        \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n        \"grantedOn\": \"2022-07-28T09:03:40\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    }\n]"
 								}
 							]
 						}
