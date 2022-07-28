@@ -63367,8 +63367,8 @@
 											},
 											"response": [
 												{
-													"id": "d250267e-f8d0-45f5-8ec4-5cab7a35e6d3",
-													"name": "GetFolderByIdAsAdmin",
+													"id": "8161b26b-9d1c-4ab2-a4b1-43380d9ad0fe",
+													"name": "GetFolderDetailsAsOwner",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
@@ -63424,7 +63424,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Thu, 07 Jul 2022 10:10:56 GMT"
+															"value": "Thu, 28 Jul 2022 12:30:34 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -63437,7 +63437,7 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"id\": \"3302aa25-deba-407e-af32-b8c40cc0d2d6\",\n    \"createdOn\": \"2022-07-07T10:08:20\",\n    \"modifiedOn\": \"2022-07-07T10:08:20\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"0e16cb8c-9f61-45ad-90cf-2b18e7dbe17b\"\n}"
+													"body": "{\n    \"id\": \"a5919f5e-d763-40c4-b913-06f19d3603f8\",\n    \"createdOn\": \"2022-07-28T12:19:29\",\n    \"modifiedOn\": \"2022-07-28T12:19:29\",\n    \"deletedOn\": null,\n    \"name\": \"Admin's Folder in Admin's Bucket\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"c57cafdd-6fe0-40a3-b5c6-390b3ce85b57\",\n    \"tags\": []\n}"
 												}
 											]
 										},
