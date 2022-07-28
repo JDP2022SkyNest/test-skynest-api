@@ -60426,7 +60426,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Worker Folder\",\r\n  \"bucketId\": \"{{workerBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+													"raw": "{\r\n  \"name\": \"Permissions WOrker\",\r\n  \"bucketId\": \"{{workerBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
