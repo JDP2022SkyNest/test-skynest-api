@@ -43868,7 +43868,7 @@
 											"response": [
 												{
 													"id": "ed554efb-1007-4bea-a1a6-640106a7e515",
-													"name": "ViewAdmin'sFilePermissionAsOwner",
+													"name": "ViewAdmin'sFilePermissionAsOwnerOfBucket",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
