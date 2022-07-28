@@ -63535,6 +63535,25 @@
 											]
 										},
 										{
+											"name": "GetFolderDetailsAsUserWithViewPermission Copy",
+											"id": "96db5904-58fc-4cb3-ad0d-fc4c5bfdffb5",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": []
+										},
+										{
 											"name": "GetAlreadyDeletedFolder",
 											"id": "ddb895f8-ea59-4ef8-9560-c86ae0ad8858",
 											"protocolProfileBehavior": {
