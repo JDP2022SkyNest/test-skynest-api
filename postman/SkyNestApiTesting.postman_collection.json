@@ -43494,7 +43494,7 @@
 														"auth": {
 															"type": "bearer",
 															"bearer": {
-																"token": "{{adminAuthToken}}"
+																"token": "{{workerAuthToken}}"
 															}
 														},
 														"method": "PUT",
@@ -43508,7 +43508,7 @@
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{workerFolderId}}"
 													},
 													"response": []
 												}
