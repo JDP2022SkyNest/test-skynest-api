@@ -43597,7 +43597,7 @@
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{adminFileId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
 													},
 													"response": []
 												},
