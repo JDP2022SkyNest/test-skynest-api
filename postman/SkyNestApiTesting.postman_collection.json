@@ -43448,7 +43448,7 @@
 							"id": "414d6642-7b2f-465e-b467-835eaba8899a"
 						},
 						{
-							"name": "EditFilePermissions",
+							"name": "EditFolderPermissions",
 							"item": [
 								{
 									"name": "ValidToken",
