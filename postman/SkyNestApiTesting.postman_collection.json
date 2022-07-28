@@ -44802,7 +44802,7 @@
 									"response": [
 										{
 											"id": "78646b6e-2e55-437b-abda-805d3353d968",
-											"name": "EditGrantedPermissionForYourselfAsAdmin",
+											"name": "EditOwnerPermissionForYourselfAsAdmin",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [],
