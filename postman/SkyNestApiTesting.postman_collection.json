@@ -63858,7 +63858,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_GET_INFO}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"response": [
 												{
