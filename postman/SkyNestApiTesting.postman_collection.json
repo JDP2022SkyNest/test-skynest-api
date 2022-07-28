@@ -44089,7 +44089,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{workerFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{deletedFolderId}}"
 											},
 											"response": []
 										}
