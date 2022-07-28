@@ -43521,6 +43521,34 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
 											},
 											"response": []
+										},
+										{
+											"name": "EditGrantedPermissionForAnotherUserAsNotOwner",
+											"id": "c5d74379-1efa-499d-abe1-5941f2a54554",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "47bf1471-3fea-4020-ad4c-deb9fcfb7edd"
