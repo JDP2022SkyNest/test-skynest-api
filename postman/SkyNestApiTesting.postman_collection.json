@@ -36571,7 +36571,7 @@
 														"auth": {
 															"type": "bearer",
 															"bearer": {
-																"token": "{{SecondAdminAuthToken}}"
+																"token": "{{workerAuthToken}}"
 															}
 														},
 														"method": "GET",
