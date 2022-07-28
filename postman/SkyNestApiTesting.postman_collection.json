@@ -63442,7 +63442,7 @@
 											]
 										},
 										{
-											"name": "GetFolderDetailsAsOwner Copy",
+											"name": "GetFolderDetailsAsUserWithViewPermission",
 											"id": "e0a291b3-4f19-4ec1-9714-61de1e9db987",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
