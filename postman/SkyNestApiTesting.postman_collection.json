@@ -44804,21 +44804,21 @@
 											},
 											"response": [
 												{
-													"id": "eb8cf88e-39fa-4737-a7b0-aa166335d3ac",
+													"id": "7e01d02f-64c7-4286-b550-d6b3458e340b",
 													"name": "EditGrantedPermissionForAnotherUser",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"access\": \"view\"\r\n}",
+															"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_EDIT}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{workerBucketId}}"
 													},
 													"status": "OK",
 													"code": 200,
@@ -44870,7 +44870,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Tue, 19 Jul 2022 14:14:29 GMT"
+															"value": "Thu, 28 Jul 2022 11:22:24 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -44883,7 +44883,7 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"grantedToId\": \"eb735228-f4dd-4802-9fa0-7bc9c66bb3cc\",\n    \"grantedToEmail\": \"nanito9953@lankew.com\",\n    \"objectId\": \"92bba1c4-fa77-4540-932e-28820f13df49\",\n    \"grantedOn\": \"2022-07-19T13:17:50\",\n    \"accessName\": \"view\",\n    \"grantedById\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
+													"body": "{\n    \"grantedToId\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedToEmail\": \"christinezahar@yahoo.com\",\n    \"objectId\": \"f780962d-4ceb-470b-bc25-5dae301f77a9\",\n    \"grantedOn\": \"2022-07-28T09:04:38\",\n    \"accessName\": \"download\",\n    \"grantedById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n}"
 												}
 											]
 										}
