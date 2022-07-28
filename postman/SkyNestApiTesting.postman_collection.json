@@ -37064,7 +37064,7 @@
 									"name": "ValidTokenAndSuccessfulPOST",
 									"item": [
 										{
-											"name": "GrantBucketPermissionAsOwner",
+											"name": "GrantFolderPermissionAsOwner",
 											"id": "7af7d4fb-1b93-40b8-b3bf-55d501bc38dc",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
