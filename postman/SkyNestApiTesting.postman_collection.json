@@ -37164,7 +37164,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"edit\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
