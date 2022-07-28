@@ -46564,7 +46564,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{notExistingBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
 											},
 											"response": []
 										}
