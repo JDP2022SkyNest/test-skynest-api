@@ -63535,7 +63535,7 @@
 											]
 										},
 										{
-											"name": "GetFolderDetailsAsUserWithViewPermission Copy",
+											"name": "GetFolderDetailsAsUserWithHigherPermission(Edit)",
 											"id": "96db5904-58fc-4cb3-ad0d-fc4c5bfdffb5",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
