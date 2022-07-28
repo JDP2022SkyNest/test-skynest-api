@@ -43922,7 +43922,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{notExistingFileId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{workerFolderId}}"
 											},
 											"response": []
 										},
