@@ -43849,7 +43849,7 @@
 											]
 										},
 										{
-											"name": "ViewAdmin'sFilePermissionAsOwnerOfBucekt",
+											"name": "ViewAdmin'sFilePermissionAsOwnerOfBucket",
 											"id": "14b5ef0b-2e4e-465e-87ab-0a8122a670fc",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -43868,7 +43868,7 @@
 											"response": [
 												{
 													"id": "ed554efb-1007-4bea-a1a6-640106a7e515",
-													"name": "ViewAdmin'sFilePermissionAsOwner",
+													"name": "ViewAdmin'sFilePermissionAsOwnerOfBucket",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
@@ -43951,7 +43951,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "GET",
