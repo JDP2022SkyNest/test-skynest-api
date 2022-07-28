@@ -43405,7 +43405,7 @@
 									"name": "ValidTokenAndSuccessfulPUT",
 									"item": [
 										{
-											"name": "EditGrantedPermissionForAnotherUser",
+											"name": "EditGrantedPermissionForAnotherUserAsOwner",
 											"id": "663db62c-8620-4e70-bdbb-742f1a2e0230",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -43493,37 +43493,37 @@
 												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
 											},
 											"response": []
+										},
+										{
+											"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll",
+											"id": "5423e8cf-5b08-4e52-9c58-b108ea4e1055",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"access\": \"download\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "47bf1471-3fea-4020-ad4c-deb9fcfb7edd"
-								},
-								{
-									"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll",
-									"id": "5423e8cf-5b08-4e52-9c58-b108ea4e1055",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"access\": \"download\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
-									},
-									"response": []
 								}
 							],
 							"id": "19db2224-ceca-4051-b5e6-145cdf72aa37",
