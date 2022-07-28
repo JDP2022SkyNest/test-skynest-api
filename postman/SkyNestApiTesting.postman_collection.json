@@ -40173,7 +40173,7 @@
 											"response": []
 										},
 										{
-											"name": "RevokePermissionForAlreadyDeletedBucket",
+											"name": "RevokePermissionForAlreadyDeletedFolder",
 											"id": "89bf7d50-44f2-4090-b392-4b97ad542f6a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
