@@ -42963,7 +42963,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"access\": \"owner\"\r\n}",
+											"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"access\": \"download\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
