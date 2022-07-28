@@ -37238,7 +37238,7 @@
 											"response": []
 										},
 										{
-											"name": "GrantPermissionForNotExistingBucket",
+											"name": "GrantPermissionForNotExistingFolder",
 											"id": "dd839366-bbf8-4569-a986-7195637fd042",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
