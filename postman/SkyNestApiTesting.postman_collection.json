@@ -37424,21 +37424,21 @@
 											},
 											"response": [
 												{
-													"id": "8885be0d-c0b7-4955-a17a-deab48f6fc61",
+													"id": "8e5f98f9-c79d-4be3-ab55-c210855e86f2",
 													"name": "GrantDownloadFilePermissionAsOwner",
 													"originalRequest": {
 														"method": "POST",
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"download\"\r\n}",
+															"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFileId}}\",\r\n  \"access\": \"download\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_FILE_PERMISSION}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 													},
 													"status": "OK",
 													"code": 200,
@@ -37490,7 +37490,7 @@
 														},
 														{
 															"key": "Date",
-															"value": "Wed, 27 Jul 2022 11:33:07 GMT"
+															"value": "Thu, 28 Jul 2022 09:13:58 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -37503,7 +37503,7 @@
 													],
 													"cookie": [],
 													"responseTime": null,
-													"body": "{\n    \"grantedToId\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n    \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n    \"objectId\": \"040deff6-35c0-496a-93e8-b2388639a7e3\",\n    \"grantedOn\": null,\n    \"accessName\": \"download\",\n    \"grantedById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
+													"body": "{\n    \"grantedToId\": \"583727fa-74a4-49cc-a97f-842a8807e40b\",\n    \"grantedToEmail\": \"pirap60281@logodez.com\",\n    \"objectId\": \"3f84f9fd-5db8-4396-aa0f-35bd1d65a877\",\n    \"grantedOn\": null,\n    \"accessName\": \"download\",\n    \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
 												}
 											]
 										}
