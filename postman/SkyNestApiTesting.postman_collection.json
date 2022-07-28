@@ -60673,7 +60673,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{SecondAdminAuthToken}}"
+														"token": "{{secondWorkerAuthToken}}"
 													}
 												},
 												"method": "POST",
@@ -61615,7 +61615,7 @@
 											]
 										},
 										{
-											"name": "CreateFolderInNotExistingBucket Copy",
+											"name": "CreateFolderInAsUserWithoutPermission",
 											"id": "294b86f0-d001-4053-8349-7dd026ad42b8",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
