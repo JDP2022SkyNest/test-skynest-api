@@ -42935,7 +42935,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"access\": \"owner\"\r\n}",
+											"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"access\": \"download\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
