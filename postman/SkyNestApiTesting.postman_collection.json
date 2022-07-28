@@ -44270,7 +44270,7 @@
 											"response": [
 												{
 													"id": "707ebc83-7564-4740-aca0-d650296a6479",
-													"name": "ViewPermissionsForAlreadyDeletedFile",
+													"name": "ViewPermissionsForAlreadyDeletedFolder",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
