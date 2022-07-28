@@ -45198,7 +45198,7 @@
 											]
 										},
 										{
-											"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll Copy",
+											"name": "EditWithInvalidPermission",
 											"id": "1c95cefe-d00a-4f47-843b-85f02938980e",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
