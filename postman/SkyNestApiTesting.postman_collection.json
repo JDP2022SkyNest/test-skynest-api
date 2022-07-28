@@ -37115,7 +37115,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
 											"response": []
 										},
