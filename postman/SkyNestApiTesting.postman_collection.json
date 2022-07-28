@@ -62230,7 +62230,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"CHanged Folder Name\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Changed Folder Name\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
