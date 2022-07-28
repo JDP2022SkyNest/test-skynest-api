@@ -43402,6 +43402,39 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "New Folder",
+									"item": [],
+									"id": "9f96c218-cbb1-48f1-9b38-405a3ec0740c"
+								},
+								{
+									"name": "EditGrantedPermissionForAnotherUser",
+									"id": "663db62c-8620-4e70-bdbb-742f1a2e0230",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"access\": \"view\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
+									},
+									"response": []
+								},
+								{
 									"name": "EditGrantedPermissionForYourselfAsAdmin",
 									"id": "156d0b5b-9a84-4282-97ae-e2a895c79c63",
 									"protocolProfileBehavior": {
@@ -43482,34 +43515,6 @@
 											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
-									},
-									"response": []
-								},
-								{
-									"name": "EditGrantedPermissionForAnotherUser",
-									"id": "663db62c-8620-4e70-bdbb-742f1a2e0230",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedTo\": \"{{secondValidAdminId}}\",\r\n  \"access\": \"view\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
 									},
 									"response": []
 								}
