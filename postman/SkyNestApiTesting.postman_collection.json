@@ -62434,6 +62434,34 @@
 													"body": "{\n    \"id\": \"8cc69b50-e101-4f06-8e8d-fb4252eb9bb2\",\n    \"createdOn\": \"2022-07-28T12:32:49\",\n    \"modifiedOn\": \"2022-07-28T12:32:49\",\n    \"deletedOn\": null,\n    \"name\": \"CHanged Folder Name\",\n    \"createdById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"f780962d-4ceb-470b-bc25-5dae301f77a9\",\n    \"tags\": []\n}"
 												}
 											]
+										},
+										{
+											"name": "EditFolderNameAsUserWithEditPermission Copy",
+											"id": "a3e8aa65-9a60-45ae-8b56-9acadde17fa6",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"CHanged Folder Name\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "07701d24-6327-4542-996e-8a07fda7a838",
