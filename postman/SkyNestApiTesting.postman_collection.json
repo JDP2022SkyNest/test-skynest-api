@@ -40815,7 +40815,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "ViewWorker'sBucketPermissionsAsCreator",
+											"name": "ViewWorker'sBucketPermissionsAsOwner",
 											"id": "c19231f3-0161-49d5-9ad1-0677127bce27",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
