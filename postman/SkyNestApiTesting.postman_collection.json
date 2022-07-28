@@ -39680,14 +39680,14 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "DELETE",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "",
+													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFileId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
