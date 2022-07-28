@@ -43819,7 +43819,7 @@
 																}
 															}
 														},
-														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{workerFolderId}}"
 													},
 													"response": [
 														{
