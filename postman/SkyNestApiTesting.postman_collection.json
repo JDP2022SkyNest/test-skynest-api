@@ -40133,7 +40133,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "",
+													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{notExistingFolderId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
