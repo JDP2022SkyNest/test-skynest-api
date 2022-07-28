@@ -64371,7 +64371,7 @@
 											]
 										},
 										{
-											"name": "GetFolderContentAsOwner Copy",
+											"name": "GetFolderContentAsOwner",
 											"id": "63e5df5b-335a-4070-b40f-98e3e9b1b11b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
