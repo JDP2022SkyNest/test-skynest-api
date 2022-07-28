@@ -69153,7 +69153,7 @@
 											]
 										},
 										{
-											"name": "GetAdmin'sFIleInfoAsAdmin Copy",
+											"name": "GetInfoOfFileAsUserThatHasPermissionsForTheFOlder",
 											"id": "e81bc454-9292-4d9a-8c95-163ca029379c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
