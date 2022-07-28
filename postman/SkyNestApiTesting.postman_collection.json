@@ -60648,7 +60648,7 @@
 											]
 										},
 										{
-											"name": "CreateFolderInPublicBucket Copy",
+											"name": "CreateFolderInBucketAsUserWithEditPermission",
 											"event": [
 												{
 													"listen": "test",
