@@ -37528,6 +37528,99 @@
 													"body": "{\n    \"grantedToId\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n    \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n    \"objectId\": \"95bc6381-275d-4f71-8ecc-beced5031b89\",\n    \"grantedOn\": null,\n    \"accessName\": \"download\",\n    \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"grantedByEmail\": \"christinezahar@yahoo.com\"\n}"
 												}
 											]
+										},
+										{
+											"name": "GetInfoOfFileAsUserThatHasPermissionsForTheFOlder",
+											"id": "e81bc454-9292-4d9a-8c95-163ca029379c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileInFolderId}}{{ENDPOINT_GET_INFO}}"
+											},
+											"response": [
+												{
+													"id": "3edb45fb-4e82-4f55-9d5d-1588aefe140f",
+													"name": "GetInfoOfFileAsUserThatHasPermissionsForTheFOlder",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileInFolderId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 28 Jul 2022 10:37:26 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"ac3926df-66a2-4d4d-a960-a2562aa9e262\",\n    \"createdOn\": \"2022-07-28T10:33:42\",\n    \"modifiedOn\": \"2022-07-28T10:33:42\",\n    \"deletedOn\": null,\n    \"name\": \"env\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n    \"bucketId\": \"c57cafdd-6fe0-40a3-b5c6-390b3ce85b57\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"429\",\n    \"tags\": []\n}"
+												}
+											]
 										}
 									],
 									"id": "fbd3bf8a-b7d1-4bf9-b703-8ba6220caa37",
@@ -44793,12 +44886,12 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{adminAuthToken}}"
 											}
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{adminFileInFolderId}}"
 									},
 									"response": [
 										{
@@ -69149,99 +69242,6 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"id\": \"5c43fe9e-21f1-4f30-a55c-84db3856b749\",\n    \"createdOn\": \"2022-07-25T13:51:09\",\n    \"modifiedOn\": \"2022-07-25T13:51:09\",\n    \"deletedOn\": null,\n    \"name\": \"env\",\n    \"createdById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"cc76ae37-1070-4fa0-b47a-50cd7f1ff70b\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"429\",\n    \"tags\": []\n}"
-												}
-											]
-										},
-										{
-											"name": "GetAdmin'sFIleInfoAsAdmin Copy",
-											"id": "e81bc454-9292-4d9a-8c95-163ca029379c",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{secondWorkerAuthToken}}"
-													}
-												},
-												"method": "GET",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileInFolderId}}{{ENDPOINT_GET_INFO}}"
-											},
-											"response": [
-												{
-													"id": "3edb45fb-4e82-4f55-9d5d-1588aefe140f",
-													"name": "GetAdmin'sFIleInfoAsAdmin Copy",
-													"originalRequest": {
-														"method": "GET",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileInFolderId}}{{ENDPOINT_GET_INFO}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 28 Jul 2022 10:37:26 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"id\": \"ac3926df-66a2-4d4d-a960-a2562aa9e262\",\n    \"createdOn\": \"2022-07-28T10:33:42\",\n    \"modifiedOn\": \"2022-07-28T10:33:42\",\n    \"deletedOn\": null,\n    \"name\": \"env\",\n    \"createdById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n    \"parentFolderId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n    \"bucketId\": \"c57cafdd-6fe0-40a3-b5c6-390b3ce85b57\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"429\",\n    \"tags\": []\n}"
 												}
 											]
 										},
