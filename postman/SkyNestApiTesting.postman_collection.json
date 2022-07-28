@@ -40252,7 +40252,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 											},
 											"response": []
 										}
