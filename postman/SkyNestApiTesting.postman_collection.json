@@ -45005,6 +45005,34 @@
 											]
 										},
 										{
+											"name": "EditOwnerPermissionForYourselfAsAdmin Copy",
+											"id": "a1780ed9-f30b-4473-88a3-e7e0d85401f6",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{adminBucketId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "EditPermissionForAnotherUserThatHasNotPermissionAtAll",
 											"id": "27751a50-b089-4e65-bc8b-9e4fc68ca872",
 											"protocolProfileBehavior": {
