@@ -45005,7 +45005,7 @@
 											]
 										},
 										{
-											"name": "EditOwnerPermissionForYourselfAsAdmin Copy",
+											"name": "EditBucketPermissionAsNotOwner",
 											"id": "a1780ed9-f30b-4473-88a3-e7e0d85401f6",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
