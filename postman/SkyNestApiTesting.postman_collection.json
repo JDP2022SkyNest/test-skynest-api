@@ -43942,7 +43942,7 @@
 											]
 										},
 										{
-											"name": "ViewAdmin'sFilePermissionAsOwner Copy",
+											"name": "ViewAdmin'sFilePermissionAsOwnerOnlyToFolder",
 											"id": "b79cabca-a318-494e-93ba-6f4283bdedc3",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
