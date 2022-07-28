@@ -42998,7 +42998,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
 									},
 									"response": []
 								},
