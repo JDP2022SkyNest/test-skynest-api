@@ -43295,6 +43295,25 @@
 											"body": "{\n    \"messages\": [\n        \"File not found\"\n    ],\n    \"status\": 404,\n    \"timestamp\": \"2022-07-28 09:32:07\"\n}"
 										}
 									]
+								},
+								{
+									"name": "ViewPermissionsForNotExistingFile Copy",
+									"id": "bb85e07d-2ec2-4612-a2c8-d9a1cecbebfb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{notExistingFileId}}"
+									},
+									"response": []
 								}
 							],
 							"id": "b4cb67a0-1939-4cf9-8931-4108f2a8710b"
