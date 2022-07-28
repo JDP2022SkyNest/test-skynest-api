@@ -40201,7 +40201,7 @@
 											"response": []
 										},
 										{
-											"name": "RevokeBucketPermissionAsNotOwner",
+											"name": "RevokeFolderPermissionAsNotOwner",
 											"id": "4d05db1c-6e36-453a-b357-54ab80ecb136",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
