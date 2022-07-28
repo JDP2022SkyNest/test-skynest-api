@@ -63079,7 +63079,7 @@
 											]
 										},
 										{
-											"name": "EditFolderNameAsUserWithoutPermissions Copy",
+											"name": "EditFolderNameAsUserWithLowerPermission(View)",
 											"id": "37e365c0-56e3-43ad-960f-225a273ff28b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
