@@ -43682,14 +43682,88 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{adminAuthToken}}"
+														"token": "{{workerAuthToken}}"
 													}
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{adminFileInFolderId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{workerFolderId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "c524e14b-ed50-4427-bddd-187f6ea0fc72",
+													"name": "ViewWorker'sFolderPermissionAsOwner",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{workerFolderId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 28 Jul 2022 11:45:35 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "[\n    {\n        \"grantedToId\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n        \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n        \"objectId\": \"8d4b69ba-4c4c-49fe-ada4-7d24ea5da920\",\n        \"grantedOn\": \"2022-07-28T10:23:02\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n        \"grantedByEmail\": \"hristina.zaharieva@htecgroup.com\"\n    }\n]"
+												}
+											]
 										},
 										{
 											"name": "ViewAdmin'sFilePermissionAsOwner",
