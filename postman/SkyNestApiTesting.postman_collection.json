@@ -63077,6 +63077,34 @@
 													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-28 13:02:38\"\n}"
 												}
 											]
+										},
+										{
+											"name": "EditFolderNameAsUserWithoutPermissions Copy",
+											"id": "37e365c0-56e3-43ad-960f-225a273ff28b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{SecondAdminAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"CHanged Folder Name\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "627b40b4-8714-4163-9ab8-bbb906964b40"
