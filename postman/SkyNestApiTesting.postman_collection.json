@@ -37317,7 +37317,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 											},
 											"response": []
 										},
@@ -37345,7 +37345,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 											},
 											"response": []
 										},
