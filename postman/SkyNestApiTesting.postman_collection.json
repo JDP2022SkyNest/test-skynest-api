@@ -39666,7 +39666,7 @@
 														}
 													}
 												},
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 											},
 											"response": []
 										},
