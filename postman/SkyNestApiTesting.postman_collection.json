@@ -37080,7 +37080,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"owner\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"owner\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -37101,14 +37101,14 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "POST",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -37129,14 +37129,14 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "POST",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"download\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"download\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -37157,14 +37157,14 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{adminAuthToken}}"
 													}
 												},
 												"method": "POST",
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"edit\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -37182,7 +37182,7 @@
 									"name": "ValidTokenButUnsuccessfulPOST",
 									"item": [
 										{
-											"name": "DuplicateBucketPermission",
+											"name": "DuplicateFolderPermission",
 											"id": "bc36d855-10bf-447f-a25d-9d2f4fd7a059",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -37198,7 +37198,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+													"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -37412,7 +37412,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 									},
 									"response": []
 								},
@@ -37442,7 +37442,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 									},
 									"response": []
 								},
@@ -37472,7 +37472,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 									},
 									"response": []
 								}
