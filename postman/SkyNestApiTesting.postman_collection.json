@@ -39955,7 +39955,7 @@
 											]
 										},
 										{
-											"name": "RevokePermissionForAlreadyDeletedBucket",
+											"name": "RevokePermissionForAlreadyDeletedFile",
 											"id": "22eb8559-f679-4313-8597-299fccc86df9",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
