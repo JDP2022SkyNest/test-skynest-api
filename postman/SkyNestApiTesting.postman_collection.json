@@ -62334,7 +62334,7 @@
 												"auth": {
 													"type": "bearer",
 													"bearer": {
-														"token": "{{workerAuthToken}}"
+														"token": "{{secondWorkerAuthToken}}"
 													}
 												},
 												"method": "PUT",
