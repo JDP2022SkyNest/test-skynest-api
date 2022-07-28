@@ -42921,6 +42921,11 @@
 							"id": "2c42ce74-4ffa-4f2b-9bb0-d9fa93513e94"
 						},
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "b4cb67a0-1939-4cf9-8931-4108f2a8710b"
+						},
+						{
 							"name": "ViewWorker'sFilePermissionAsOwner",
 							"id": "ca8b0c3b-08a4-405f-b3f4-97dae3dd90bb",
 							"protocolProfileBehavior": {
