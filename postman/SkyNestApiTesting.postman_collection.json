@@ -43600,14 +43600,14 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"access\": \"view\"\r\n}",
+											"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{workerFileId}}"
 									},
 									"response": []
 								},
