@@ -44084,7 +44084,7 @@
 											"response": [
 												{
 													"id": "e2d05f8f-b90e-4d6c-8fbb-e1d9689d29bf",
-													"name": "ViewFilePermissionAsNotOwner",
+													"name": "ViewFolderPermissionAsNotOwner",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
@@ -44158,7 +44158,7 @@
 											]
 										},
 										{
-											"name": "ViewPermissionsForNotExistingFile",
+											"name": "ViewPermissionsForNotExistingFolder",
 											"id": "6ded81f3-74bd-4cda-b258-e3703c8ed7c6",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -44177,7 +44177,7 @@
 											"response": [
 												{
 													"id": "9dfbf3f4-83cd-4448-b9b9-91a1330ebc77",
-													"name": "ViewPermissionsForNotExistingFile",
+													"name": "ViewPermissionsForNotExistingFolder",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
