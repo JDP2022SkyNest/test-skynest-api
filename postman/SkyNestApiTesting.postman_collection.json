@@ -40424,6 +40424,15 @@
 										},
 										"method": "DELETE",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"objectId\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}"
 									},
 									"response": []
