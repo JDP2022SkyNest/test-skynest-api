@@ -37182,7 +37182,7 @@
 									"name": "ValidTokenButUnsuccessfulPOST",
 									"item": [
 										{
-											"name": "DuplicateBucketPermission",
+											"name": "DuplicateFolderPermission",
 											"id": "bc36d855-10bf-447f-a25d-9d2f4fd7a059",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -37199,34 +37199,6 @@
 												"body": {
 													"mode": "raw",
 													"raw": "{\r\n  \"grantedToEmail\": \"pirap60281@logodez.com\",\r\n  \"objectId\": \"{{adminFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-											},
-											"response": []
-										},
-										{
-											"name": "GrantPermissionForFolder(NotBucket)",
-											"id": "40f9597c-0e7c-4919-9015-f3a3682523b2",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedTo\": \"{{validWorkerId}}\",\r\n  \"objectId\": \"{{workerFolderId}}\",\r\n  \"access\": \"view\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
