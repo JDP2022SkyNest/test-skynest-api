@@ -64606,7 +64606,7 @@
 											]
 										},
 										{
-											"name": "GetFolderContentAsNotCreator",
+											"name": "GetFolderContentAsUserWIthoutPermission",
 											"id": "667676f9-d7a6-4300-a4ba-b59d8b6a391a",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
