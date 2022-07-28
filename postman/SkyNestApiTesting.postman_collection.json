@@ -42614,7 +42614,20 @@
 				},
 				{
 					"name": "GetFilePermissions",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "ca8b0c3b-08a4-405f-b3f4-97dae3dd90bb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "0c836ea6-6adc-4fe9-bb5d-fbe8c151a4c5"
 				}
 			],
