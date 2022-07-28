@@ -45680,6 +45680,11 @@
 									}
 								}
 							]
+						},
+						{
+							"name": "New Folder",
+							"item": [],
+							"id": "28e0d6c3-cb5f-4679-a85a-62aa263c9e8f"
 						}
 					],
 					"id": "86ace443-9242-49ea-825c-8aa9d17e48dc"
