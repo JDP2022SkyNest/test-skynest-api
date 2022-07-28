@@ -43218,7 +43218,7 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{adminFileId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{notExistingFileId}}"
 									},
 									"response": []
 								}
