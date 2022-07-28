@@ -36810,15 +36810,13 @@
 										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "file",
-													"type": "file",
-													"value": null,
-													"disabled": true
+											"mode": "raw",
+											"raw": "{\r\n  \"grantedToEmail\": \"christinezaha@yahoo.com\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"owner\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
 												}
-											]
+											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
 									},
