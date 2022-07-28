@@ -42916,7 +42916,7 @@
 					"name": "GetFilePermissions",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "ValidTokenAndSuccessfulGET",
 							"item": [],
 							"id": "2c42ce74-4ffa-4f2b-9bb0-d9fa93513e94"
 						},
