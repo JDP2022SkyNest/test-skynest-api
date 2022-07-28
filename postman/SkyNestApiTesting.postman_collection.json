@@ -40299,7 +40299,7 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 									},
 									"response": []
 								},
@@ -40318,7 +40318,7 @@
 										},
 										"method": "DELETE",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}{{ENDPOINT_REVOKE_PERMISSION}}{{validWorkerId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
 									},
 									"response": []
 								}
