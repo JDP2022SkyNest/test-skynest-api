@@ -63349,7 +63349,7 @@
 									"name": "ValidTokenAndSuccessfulGET",
 									"item": [
 										{
-											"name": "GetFolderByIdAsAdmin",
+											"name": "GetFolderDetailsAsOwner",
 											"id": "cd227e90-f4c3-465e-b801-30e74aa7291c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
