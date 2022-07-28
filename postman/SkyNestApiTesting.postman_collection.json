@@ -43599,6 +43599,117 @@
 														},
 														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
 													},
+													"response": [
+														{
+															"id": "69bf7e27-289f-4d4a-a72e-259cf13f4cac",
+															"name": "EditGrantedPermissionForYourselfAsAdmin",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
+															},
+															"status": "Conflict",
+															"code": 409,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Vary",
+																	"value": "Origin"
+																},
+																{
+																	"key": "Vary",
+																	"value": "Access-Control-Request-Method"
+																},
+																{
+																	"key": "Vary",
+																	"value": "Access-Control-Request-Headers"
+																},
+																{
+																	"key": "X-Content-Type-Options",
+																	"value": "nosniff"
+																},
+																{
+																	"key": "X-XSS-Protection",
+																	"value": "1; mode=block"
+																},
+																{
+																	"key": "Cache-Control",
+																	"value": "no-cache, no-store, max-age=0, must-revalidate"
+																},
+																{
+																	"key": "Pragma",
+																	"value": "no-cache"
+																},
+																{
+																	"key": "Expires",
+																	"value": "0"
+																},
+																{
+																	"key": "X-Frame-Options",
+																	"value": "DENY"
+																},
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																},
+																{
+																	"key": "Transfer-Encoding",
+																	"value": "chunked"
+																},
+																{
+																	"key": "Date",
+																	"value": "Thu, 28 Jul 2022 12:07:47 GMT"
+																},
+																{
+																	"key": "Keep-Alive",
+																	"value": "timeout=60"
+																},
+																{
+																	"key": "Connection",
+																	"value": "keep-alive"
+																}
+															],
+															"cookie": [],
+															"responseTime": null,
+															"body": "{\n    \"messages\": [\n        \"User cant revoke their own permissions.\"\n    ],\n    \"status\": 409,\n    \"timestamp\": \"2022-07-28 12:07:47\"\n}"
+														}
+													]
+												},
+												{
+													"name": "EditGrantedPermissionForYourselfAsAdmin Copy",
+													"id": "a065d954-a812-4ccb-bb82-81fb9f514875",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "bearer",
+															"bearer": {
+																"token": "{{adminAuthToken}}"
+															}
+														},
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedToEmail\": \"christinezahar@yahoo.com\",\r\n  \"access\": \"download\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
+													},
 													"response": []
 												},
 												{
