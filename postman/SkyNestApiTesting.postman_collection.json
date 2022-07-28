@@ -37412,7 +37412,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+										"url": "{{BASE_URL}}"
 									},
 									"response": []
 								},
