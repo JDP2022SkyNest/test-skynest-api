@@ -64464,6 +64464,25 @@
 											]
 										},
 										{
+											"name": "GetFolderContentAsUserWithViewPermission Copy",
+											"id": "9a94dd11-b9fa-4cc9-a786-a64660471212",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{SecondAdminAuthToken}}"
+													}
+												},
+												"method": "GET",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}"
+											},
+											"response": []
+										},
+										{
 											"name": "ReturnPathToFolder",
 											"id": "79bcf2c1-6147-48b1-95ae-513b580b08d5",
 											"protocolProfileBehavior": {
