@@ -44084,7 +44084,7 @@
 											"response": [
 												{
 													"id": "e2d05f8f-b90e-4d6c-8fbb-e1d9689d29bf",
-													"name": "ViewFolderPermissionAsNotOwner",
+													"name": "ViewFilePermissionAsNotOwner",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
