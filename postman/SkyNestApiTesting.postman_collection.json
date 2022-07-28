@@ -43483,6 +43483,34 @@
 														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
 													},
 													"response": []
+												},
+												{
+													"name": "EditGrantedPermissionForAnotherUserAsOwner",
+													"id": "69981567-e311-4a27-9e67-91868ce4f751",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "bearer",
+															"bearer": {
+																"token": "{{adminAuthToken}}"
+															}
+														},
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedToEmail\": \"hristina.zaharieva@yahoo.com\",\r\n  \"access\": \"edit\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
+													},
+													"response": []
 												}
 											],
 											"id": "9f96c218-cbb1-48f1-9b38-405a3ec0740c"
