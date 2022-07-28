@@ -40055,34 +40055,6 @@
 									"name": "ValidTokenAndSuccessfulDELETE",
 									"item": [
 										{
-											"name": "RevokeFolderPermissionAsOwnerToYourself",
-											"id": "17363f4d-dd36-49ee-b372-f3ec8938a546",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{workerAuthToken}}"
-													}
-												},
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"grantedToEmail\": \"tabax15797@aregods.com\",\r\n  \"objectId\": \"{{workerBucketId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
-											},
-											"response": []
-										},
-										{
 											"name": "RevokePermissionAsOwnerToAnotherUser",
 											"id": "63ff1949-e14c-49a5-9887-1667227f6fa7",
 											"protocolProfileBehavior": {
@@ -40145,7 +40117,7 @@
 											"response": []
 										},
 										{
-											"name": "RevokePermissionForNotExistingBucket",
+											"name": "RevokePermissionForNotExistingFolder",
 											"id": "a6b56f95-a453-44b7-898e-a969b5c3711b",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -40246,6 +40218,34 @@
 												"body": {
 													"mode": "raw",
 													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}"
+											},
+											"response": []
+										},
+										{
+											"name": "RevokeFolderPermissionAsOwnerToYourself",
+											"id": "17363f4d-dd36-49ee-b372-f3ec8938a546",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"grantedToEmail\": \"tabax15797@aregods.com\",\r\n  \"objectId\": \"{{workerBucketId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
