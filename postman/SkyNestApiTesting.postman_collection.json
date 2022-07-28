@@ -43694,7 +43694,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_EDIT}}{{adminBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{adminBucketId}}"
 											},
 											"response": [
 												{
