@@ -42942,7 +42942,7 @@
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_FILE_PERMISSION}}/{{adminFileId}}"
 									},
 									"response": []
 								},
