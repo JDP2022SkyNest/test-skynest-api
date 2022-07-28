@@ -60646,6 +60646,50 @@
 													"body": "{\n    \"id\": \"1115ae3a-df1f-4509-8182-de878735a299\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"Public Folder\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"728ed688-dc37-4657-9082-9bdbec4180a5\"\n}"
 												}
 											]
+										},
+										{
+											"name": "CreateFolderInPublicBucket Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "d29147c0-437d-4e03-ad52-6fb59383ef05",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
+															"    pm.environment.set(\"publicFolderId\", jsonData.id);\r",
+															"});"
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "f1f72aef-eafd-466c-8306-3bab52030f12",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Public Folder\",\r\n  \"bucketId\": \"{{publicBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+											},
+											"response": []
 										}
 									],
 									"id": "2b29a473-0c29-472c-b45a-91d1bdd96642",
