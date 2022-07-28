@@ -43958,7 +43958,81 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "ed8baf7b-50e9-47a2-96f5-536ce86aeb51",
+													"name": "ViewAdmin'sFilePermissionAsOwnerOnlyToFolder",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_FOLDER_PERMISSION}}/{{adminFolderId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 28 Jul 2022 11:50:30 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "[\n    {\n        \"grantedToId\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedToEmail\": \"christinezahar@yahoo.com\",\n        \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n        \"grantedOn\": \"2022-07-28T10:22:51\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"583727fa-74a4-49cc-a97f-842a8807e40b\",\n        \"grantedToEmail\": \"pirap60281@logodez.com\",\n        \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n        \"grantedOn\": \"2022-07-28T10:23:36\",\n        \"accessName\": \"view\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"a5987b8d-08ff-11ed-ae23-0242ac120004\",\n        \"grantedToEmail\": \"skynest12345@gmail.com\",\n        \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n        \"grantedOn\": \"2022-07-28T10:24:10\",\n        \"accessName\": \"edit\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    },\n    {\n        \"grantedToId\": \"bdb248a1-faf1-4c0c-a2db-0434e63ca560\",\n        \"grantedToEmail\": \"hristina.zaharieva@htecgroup.com\",\n        \"objectId\": \"0e8cb489-28e4-4b37-a866-11113da18d47\",\n        \"grantedOn\": \"2022-07-28T11:48:58\",\n        \"accessName\": \"owner\",\n        \"grantedById\": \"4c6e7124-632b-46ef-a6d2-1f3b41ffa95b\",\n        \"grantedByEmail\": \"christinezahar@yahoo.com\"\n    }\n]"
+												}
+											]
 										}
 									],
 									"id": "788c08f7-0581-4b52-bdc4-1e48811b5962",
