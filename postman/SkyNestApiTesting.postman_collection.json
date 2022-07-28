@@ -61631,7 +61631,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"Folder in not existing bucket\",\r\n  \"parentFolderId\": null,\r\n  \"bucketId\": \"{{adminBucketId}}\"\r\n}",
+													"raw": "{\r\n  \"name\": \"Not Owner\",\r\n  \"parentFolderId\": null,\r\n  \"bucketId\": \"{{adminBucketId}}\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
