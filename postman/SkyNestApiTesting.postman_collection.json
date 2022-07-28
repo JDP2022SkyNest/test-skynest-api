@@ -69153,7 +69153,7 @@
 											]
 										},
 										{
-											"name": "GetInfoOfFileAsUserThatHasPermissionsForTheFOlder",
+											"name": "GetAdmin'sFIleInfoAsAdmin Copy",
 											"id": "e81bc454-9292-4d9a-8c95-163ca029379c",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -69172,7 +69172,7 @@
 											"response": [
 												{
 													"id": "3edb45fb-4e82-4f55-9d5d-1588aefe140f",
-													"name": "GetInfoOfFileAsUserThatHasPermissionsForTheFOlder",
+													"name": "GetAdmin'sFIleInfoAsAdmin Copy",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
