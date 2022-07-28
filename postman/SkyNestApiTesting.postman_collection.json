@@ -44774,6 +44774,16 @@
 							"name": "ValidToken",
 							"item": [
 								{
+									"name": "ValidTokenAndSuccessfulPUT",
+									"item": [],
+									"id": "28e0d6c3-cb5f-4679-a85a-62aa263c9e8f"
+								},
+								{
+									"name": "New Folder",
+									"item": [],
+									"id": "9071efad-b88e-4b7c-ad02-39179103e49c"
+								},
+								{
 									"name": "EditOwnerPermissionForYourselfAsAdmin",
 									"id": "2bac8c52-3073-43cf-a6b7-4e42e9886fb4",
 									"protocolProfileBehavior": {
@@ -45680,11 +45690,6 @@
 									}
 								}
 							]
-						},
-						{
-							"name": "ValidTokenAndSuccessfulPUT",
-							"item": [],
-							"id": "28e0d6c3-cb5f-4679-a85a-62aa263c9e8f"
 						}
 					],
 					"id": "86ace443-9242-49ea-825c-8aa9d17e48dc"
