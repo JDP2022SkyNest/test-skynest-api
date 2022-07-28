@@ -41114,7 +41114,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{workerBucketId}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_EDIT}}{{adminBucketId}}"
 											},
 											"response": [
 												{
