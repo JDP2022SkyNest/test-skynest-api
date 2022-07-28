@@ -44789,8 +44789,13 @@
 										"method": "PUT",
 										"header": [],
 										"body": {
-											"mode": "urlencoded",
-											"urlencoded": []
+											"mode": "raw",
+											"raw": "{\r\n  \"grantedToEmail\": \"\",\r\n  \"access\": \"download\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_BUCKET_PERMISSION}}{{adminBucketId}}"
 									},
