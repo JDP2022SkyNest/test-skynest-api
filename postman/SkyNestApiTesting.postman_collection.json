@@ -44789,15 +44789,10 @@
 										"method": "PUT",
 										"header": [],
 										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"access\": \"owner\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
+											"mode": "urlencoded",
+											"urlencoded": []
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_PERMISSIONS}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_EDIT}}"
 									},
 									"response": [
 										{
