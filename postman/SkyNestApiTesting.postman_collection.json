@@ -37266,7 +37266,7 @@
 											"response": []
 										},
 										{
-											"name": "GrantPermissionForAlreadyDeletedBucket",
+											"name": "GrantPermissionForAlreadyDeletedFolder",
 											"id": "1019a5c1-6b05-4fbe-b9e1-8bc48b814032",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
