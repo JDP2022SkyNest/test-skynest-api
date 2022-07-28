@@ -43961,7 +43961,7 @@
 											"response": [
 												{
 													"id": "ed8baf7b-50e9-47a2-96f5-536ce86aeb51",
-													"name": "ViewAdmin'sFilePermissionAsOwnerOnlyToFolder",
+													"name": "ViewAdmin'sFolderPermissionAsOwnerOnlyToFolder",
 													"originalRequest": {
 														"method": "GET",
 														"header": [],
