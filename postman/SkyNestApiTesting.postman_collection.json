@@ -92224,7 +92224,7 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}"
 							},
 							"response": []
 						},
