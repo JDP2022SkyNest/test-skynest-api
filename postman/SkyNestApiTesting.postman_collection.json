@@ -64101,7 +64101,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{deletedFolderId}}{{ENDPOINT_GET_INFO}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{publicFolderId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"response": []
 										}
