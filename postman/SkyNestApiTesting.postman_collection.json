@@ -66126,7 +66126,7 @@
 											"response": [
 												{
 													"id": "6f344a90-51b9-45fe-b7b0-90a8a38a89f3",
-													"name": "RemoveFileWithLowerPermission(View)",
+													"name": "RemoveFolderWithLowerPermission(View)",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
