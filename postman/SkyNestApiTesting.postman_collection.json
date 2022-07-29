@@ -67131,7 +67131,7 @@
 									]
 								},
 								{
-									"name": "RestoreFolderWithoutPermissionsForIt",
+									"name": "RestoreFolderWithoutPermissions",
 									"id": "142e8981-98dc-4652-8c48-e346310a1f13",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
