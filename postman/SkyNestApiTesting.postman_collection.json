@@ -66219,7 +66219,7 @@
 											"response": [
 												{
 													"id": "43e81251-a309-4942-af9c-f02d49244b6b",
-													"name": "RemoveFileWithLowerPermission(Download)",
+													"name": "RemoveFolderWithLowerPermission(Download)",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
