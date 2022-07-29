@@ -54823,7 +54823,7 @@
 											]
 										},
 										{
-											"name": "ViewPrivateBucketAsUserWithHigherPermission(Edit) Copy",
+											"name": "ViewPublicBucketWithoutPermission",
 											"event": [
 												{
 													"listen": "test",
