@@ -67148,6 +67148,25 @@
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_RESTORE}}"
 									},
 									"response": []
+								},
+								{
+									"name": "RestoreFolderWithLowerPermission(View)",
+									"id": "ad02fffd-d4cf-4527-9de1-815b756920c2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
 								}
 							],
 							"id": "df09c8d2-dcf0-4b31-8e17-4ce775645ae3"
