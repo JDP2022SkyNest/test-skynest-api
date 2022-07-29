@@ -66920,7 +66920,7 @@
 									]
 								},
 								{
-									"name": "RestoreFolderAsOwner Copy",
+									"name": "RestoreFolderWithEditPermission",
 									"id": "1102e9df-12a6-4b80-81b1-94bcf60d4f09",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
