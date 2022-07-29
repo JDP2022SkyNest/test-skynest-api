@@ -74516,7 +74516,81 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}{{ENDPOINT_GET_INFO}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "98aebab8-bd34-4db6-b23e-fd9a41f8f668",
+													"name": "GetFileDetailsFromPublicBucketWithoutPermissions",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{publicFileId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 29 Jul 2022 13:59:12 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"c6320656-cd22-4dc2-9963-15eb31f58282\",\n    \"createdOn\": \"2022-07-27T14:56:24\",\n    \"modifiedOn\": \"2022-07-27T14:56:24\",\n    \"deletedOn\": null,\n    \"name\": \"env\",\n    \"createdById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"createdByEmail\": \"christinezahar@yahoo.com\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"72b71e1f-11bb-444c-ac2b-82f9dd327af9\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"429\",\n    \"tags\": [\n        {\n            \"id\": \"b6404177-511d-4c7b-ae67-fb03fce6a9a9\",\n            \"name\": \"SearchTag\",\n            \"rgb\": \"9FE9BE\"\n        }\n    ]\n}"
+												}
+											]
 										}
 									],
 									"id": "fca28138-a9eb-4d46-bebc-3d0801451da5",
