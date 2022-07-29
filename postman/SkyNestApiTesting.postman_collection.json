@@ -66293,7 +66293,7 @@
 											]
 										},
 										{
-											"name": "RemoveFileWithLowerPermission(Download) Copy",
+											"name": "RemoveFileWithoutPermission",
 											"id": "fcd00058-93b2-478e-9bd4-caec43ee1b50",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
