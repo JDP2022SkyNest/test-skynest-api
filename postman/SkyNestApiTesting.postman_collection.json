@@ -67013,7 +67013,7 @@
 									]
 								},
 								{
-									"name": "RestoreFolderWithEditPermission Copy",
+									"name": "RestorePublicFolderWithoutPermission",
 									"id": "9719fda7-2734-4996-8c7f-a702126103a1",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
