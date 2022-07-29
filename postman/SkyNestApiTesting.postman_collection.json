@@ -66386,7 +66386,7 @@
 											]
 										},
 										{
-											"name": "RemoveFileWithoutPermission Copy",
+											"name": "RemovePublicFileW",
 											"id": "ff44ba6e-0a79-4e9f-98b2-b4ebfbef92e2",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
