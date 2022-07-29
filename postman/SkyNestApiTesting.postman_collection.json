@@ -92120,12 +92120,12 @@
 							},
 							"response": [
 								{
-									"id": "cd7a65d9-a2f7-4a3b-8b52-164791e67da1",
+									"id": "add7b09e-9f70-494b-b09f-bd9a55f31240",
 									"name": "StartDropboxAuthorization",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_DROPBOX_START}}"
 									},
 									"status": "OK",
 									"code": 200,
@@ -92177,7 +92177,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 29 Jul 2022 14:31:10 GMT"
+											"value": "Fri, 29 Jul 2022 14:52:05 GMT"
 										},
 										{
 											"key": "Keep-Alive",
