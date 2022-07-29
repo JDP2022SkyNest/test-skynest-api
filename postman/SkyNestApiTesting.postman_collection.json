@@ -67020,7 +67020,7 @@
 											]
 										},
 										{
-											"name": "MoveFolderBackInBucketLevel",
+											"name": "MoveFolderBackInBucketLevelAsOwner",
 											"id": "29b907d8-ea4b-4fd9-8716-47561a622f6d",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
