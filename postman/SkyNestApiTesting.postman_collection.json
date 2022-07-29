@@ -64103,7 +64103,81 @@
 												"header": [],
 												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{publicFolderId}}{{ENDPOINT_GET_INFO}}"
 											},
-											"response": []
+											"response": [
+												{
+													"id": "fcf92549-0123-4738-b5ca-e5ca107d11ba",
+													"name": "GetPublicFolderWithoutPermission",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{publicFolderId}}{{ENDPOINT_GET_INFO}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 29 Jul 2022 13:58:40 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"c29df414-3a5e-4bdf-9000-758e61b0d0d7\",\n    \"createdOn\": \"2022-07-29T13:58:06\",\n    \"modifiedOn\": \"2022-07-29T13:58:06\",\n    \"deletedOn\": null,\n    \"name\": \"Public Folder\",\n    \"createdById\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n    \"createdByEmail\": \"hristina.zaharieva@htecgroup.com\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"72b71e1f-11bb-444c-ac2b-82f9dd327af9\",\n    \"tags\": []\n}"
+												}
+											]
 										}
 									],
 									"id": "b39a1fdd-868d-4a25-8b95-375db3b5dde3",
