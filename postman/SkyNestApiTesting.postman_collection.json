@@ -54860,7 +54860,7 @@
 												},
 												"method": "GET",
 												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_GET_INFO}}"
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{publicBucketId}}{{ENDPOINT_GET_INFO}}"
 											},
 											"response": []
 										}
