@@ -92189,14 +92189,84 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{adminAuthToken}}"
+										"token": ""
 									}
 								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "04330b96-721f-473f-bbb0-5927f8150e35",
+									"name": "StartDropboxAuthorizationEmptyToken",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 29 Jul 2022 14:33:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
 						}
 					],
 					"id": "10772d99-8499-486d-934f-f156752df7a6"
