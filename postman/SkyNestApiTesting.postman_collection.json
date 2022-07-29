@@ -92224,7 +92224,19 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}"
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}?code=wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+											"type": "text"
+										}
+									]
+								}
 							},
 							"response": []
 						},
