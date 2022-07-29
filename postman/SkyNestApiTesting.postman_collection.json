@@ -60126,135 +60126,6 @@
 											]
 										},
 										{
-											"name": "CreateSecondFolderInAdmin'sFolder",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "70017d98-8ff8-450f-9ac0-ec8693a54232",
-														"exec": [
-															"const jsonData = pm.response.json()\r",
-															"\r",
-															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-															"    pm.environment.set(\"folderInFolder2Id\", jsonData.id);\r",
-															"});\r",
-															"\r",
-															""
-														],
-														"type": "text/javascript"
-													}
-												}
-											],
-											"id": "454d5834-b87a-46ae-8aeb-061d9ec8bc1c",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{adminAuthToken}}"
-													}
-												},
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"FolderInFolder2\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
-											},
-											"response": [
-												{
-													"id": "9658f538-0dd8-424a-ab47-d26011592c28",
-													"name": "CreateSecondFolderInAdmin'sFolder",
-													"originalRequest": {
-														"method": "POST",
-														"header": [],
-														"body": {
-															"mode": "raw",
-															"raw": "{\r\n  \"name\": \"FolderInFolder2\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
-															"options": {
-																"raw": {
-																	"language": "json"
-																}
-															}
-														},
-														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														},
-														{
-															"key": "Transfer-Encoding",
-															"value": "chunked"
-														},
-														{
-															"key": "Date",
-															"value": "Thu, 21 Jul 2022 15:02:46 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": "{\n    \"id\": \"1faaa9f9-8bba-4aec-b37d-6154c91b0d66\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"FolderInFolder2\",\n    \"createdById\": \"a64314f7-08fc-11ed-b371-0242ac120003\",\n    \"parentFolderId\": \"c598985a-b7f6-43fe-86e1-fc4bc0a4f39a\",\n    \"bucketId\": \"2b20f5fb-0054-4405-8adf-00832cf81522\"\n}"
-												}
-											]
-										},
-										{
 											"name": "CreateFolderInFolderInFolder",
 											"event": [
 												{
@@ -60380,6 +60251,135 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"id\": \"ea74572d-d74d-4b9f-a193-894308eb3be3\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"FolderInFolderInFolder\",\n    \"createdById\": \"a64314f7-08fc-11ed-b371-0242ac120003\",\n    \"parentFolderId\": \"b0181f1e-9752-4f31-a190-3e3ba17d9d10\",\n    \"bucketId\": \"2b20f5fb-0054-4405-8adf-00832cf81522\"\n}"
+												}
+											]
+										},
+										{
+											"name": "CreateSecondFolderInAdmin'sFolder",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "70017d98-8ff8-450f-9ac0-ec8693a54232",
+														"exec": [
+															"const jsonData = pm.response.json()\r",
+															"\r",
+															"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
+															"    pm.environment.set(\"folderInFolder2Id\", jsonData.id);\r",
+															"});\r",
+															"\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "454d5834-b87a-46ae-8aeb-061d9ec8bc1c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{adminAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"FolderInFolder2\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+											},
+											"response": [
+												{
+													"id": "9658f538-0dd8-424a-ab47-d26011592c28",
+													"name": "CreateSecondFolderInAdmin'sFolder",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"FolderInFolder2\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": \"{{adminFolderId}}\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Thu, 21 Jul 2022 15:02:46 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"1faaa9f9-8bba-4aec-b37d-6154c91b0d66\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"FolderInFolder2\",\n    \"createdById\": \"a64314f7-08fc-11ed-b371-0242ac120003\",\n    \"parentFolderId\": \"c598985a-b7f6-43fe-86e1-fc4bc0a4f39a\",\n    \"bucketId\": \"2b20f5fb-0054-4405-8adf-00832cf81522\"\n}"
 												}
 											]
 										},
@@ -66935,7 +66935,7 @@
 									"name": "ValidTokenAndSuccessfulPUT",
 									"item": [
 										{
-											"name": "MoveFolderInAnotherFolderOnSameLevel",
+											"name": "MoveFolderInAnotherFolderOnSameLevelAsOwner",
 											"id": "aa0c40a0-7bf6-4fcc-88a2-459971614264",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
