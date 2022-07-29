@@ -92087,7 +92087,7 @@
 					"name": "CreateLambda",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "StartDropboxAuthorization",
 							"id": "fefcd310-0a08-4c19-8a6d-17da52aca976",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
