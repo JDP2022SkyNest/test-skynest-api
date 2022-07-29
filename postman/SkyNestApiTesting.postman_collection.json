@@ -92238,7 +92238,84 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"id": "ddeea9cc-c7e3-473c-a533-cd47ebb1716a",
+									"name": "FinishDropboxAuthorization",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}?code=wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}"
+											],
+											"query": [
+												{
+													"key": "code",
+													"value": "wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 29 Jul 2022 14:54:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
 						},
 						{
 							"name": "StartDropboxAuthorizationEmptyToken",
