@@ -66312,7 +66312,7 @@
 											"response": [
 												{
 													"id": "0e61ceef-f1ac-45f3-87aa-501743f5dfd0",
-													"name": "RemoveFileWithoutPermission",
+													"name": "RemoveFolderWithoutPermission",
 													"originalRequest": {
 														"method": "PUT",
 														"header": [],
