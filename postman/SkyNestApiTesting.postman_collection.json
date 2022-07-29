@@ -92195,6 +92195,40 @@
 							]
 						},
 						{
+							"name": "FinishDropboxAuthorization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "81cee48b-7784-41d9-abfc-ad0486a1d006",
+										"exec": [
+											"pm.test(\"Set the response of a valid dropbox authorization as an environment variable\", function () {\r",
+											"    var jsonData = pm.response.text();\r",
+											"    pm.environment.set(\"redirectLinkDropbox\", jsonData);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "bdbdcb39-f035-4a43-ba63-5dae8b5b9fd9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
+							},
+							"response": []
+						},
+						{
 							"name": "StartDropboxAuthorizationEmptyToken",
 							"id": "f38f903d-b181-4069-aaed-03f9074e70e8",
 							"protocolProfileBehavior": {
