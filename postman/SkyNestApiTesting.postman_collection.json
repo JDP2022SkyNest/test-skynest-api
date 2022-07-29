@@ -92178,6 +92178,25 @@
 									"body": "https://www.dropbox.com/oauth2/authorize?response_type=code&client_id=7y0fr9h4lw3lsgz"
 								}
 							]
+						},
+						{
+							"name": "StartDropboxAuthorizationEmptyToken",
+							"id": "f38f903d-b181-4069-aaed-03f9074e70e8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
+							},
+							"response": []
 						}
 					],
 					"id": "10772d99-8499-486d-934f-f156752df7a6"
