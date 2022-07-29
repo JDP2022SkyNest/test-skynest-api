@@ -66291,6 +66291,25 @@
 													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-29 16:08:23\"\n}"
 												}
 											]
+										},
+										{
+											"name": "RemoveFileWithLowerPermission(Download) Copy",
+											"id": "fcd00058-93b2-478e-9bd4-caec43ee1b50",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{adminFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "4c288785-71d9-4cae-beef-32d92f788d26"
