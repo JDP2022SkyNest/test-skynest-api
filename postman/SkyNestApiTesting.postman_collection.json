@@ -92088,6 +92088,21 @@
 					"item": [
 						{
 							"name": "StartDropboxAuthorization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "81cee48b-7784-41d9-abfc-ad0486a1d006",
+										"exec": [
+											"pm.test(\"Set the response of a valid dropbox authorization as an environment variable\", function () {\r",
+											"    var jsonData = pm.response.text();\r",
+											"    pm.environment.set(\"redirectLinkDropbox\", jsonData);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "fefcd310-0a08-4c19-8a6d-17da52aca976",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
