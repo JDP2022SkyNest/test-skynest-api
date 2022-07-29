@@ -66384,6 +66384,25 @@
 													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-29 16:09:31\"\n}"
 												}
 											]
+										},
+										{
+											"name": "RemoveFileWithoutPermission Copy",
+											"id": "ff44ba6e-0a79-4e9f-98b2-b4ebfbef92e2",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{adminFolderId}}"
+											},
+											"response": []
 										}
 									],
 									"id": "4c288785-71d9-4cae-beef-32d92f788d26"
