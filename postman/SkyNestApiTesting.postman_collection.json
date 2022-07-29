@@ -66836,12 +66836,12 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{adminAuthToken}}"
 											}
 										},
 										"method": "PUT",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{workerFolderId}}{{ENDPOINT_RESTORE}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_RESTORE}}"
 									},
 									"response": [
 										{
@@ -66916,6 +66916,79 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"id\": \"008cc325-bb2d-478f-81d4-bb984ad9cb91\",\n    \"createdOn\": \"2022-07-19T13:32:22\",\n    \"modifiedOn\": \"2022-07-19T13:34:05\",\n    \"deletedOn\": null,\n    \"name\": \"Folder\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"d8e7d580-7f00-4d94-b141-bb3f3a918001\"\n}"
+										},
+										{
+											"id": "96ebe931-a85a-488d-ba74-5cf36f20e3d7",
+											"name": "RestoreFolderAsOwner",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_FOLDER}}{{adminFolderId}}{{ENDPOINT_RESTORE}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 29 Jul 2022 14:16:25 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"505c4961-f886-41d3-b4f0-99677190d36f\",\n    \"createdOn\": \"2022-07-29T10:04:51\",\n    \"modifiedOn\": \"2022-07-29T14:13:34\",\n    \"deletedOn\": null,\n    \"name\": \"Admin's Folder in Admin's Bucket\",\n    \"createdById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"createdByEmail\": \"christinezahar@yahoo.com\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"d367a331-3cd3-4d4c-ae9b-a250395c84f0\",\n    \"tags\": []\n}"
 										}
 									]
 								},
