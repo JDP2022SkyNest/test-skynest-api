@@ -65806,7 +65806,7 @@
 											]
 										},
 										{
-											"name": "RemoveOwnFolderByIdAsAdmin",
+											"name": "RemoveFolderWithEditPermission",
 											"id": "f3685c01-6911-402d-aedc-54a88e9768f9",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
@@ -65874,6 +65874,91 @@
 														{
 															"key": "Date",
 															"value": "Mon, 11 Jul 2022 13:09:24 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
+										},
+										{
+											"name": "RemovePublicFolderWithoutPermission",
+											"id": "ff44ba6e-0a79-4e9f-98b2-b4ebfbef92e2",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{secondWorkerAuthToken}}"
+													}
+												},
+												"method": "PUT",
+												"header": [],
+												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{adminFolderId}}"
+											},
+											"response": [
+												{
+													"id": "cc9b3444-8d5d-47ca-9cb2-07f35a6849c3",
+													"name": "RemovePublicFileW",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{publicFolderId}}"
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 29 Jul 2022 14:12:25 GMT"
 														},
 														{
 															"key": "Keep-Alive",
@@ -66382,91 +66467,6 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"messages\": [\n        \"User does not have access to object\"\n    ],\n    \"status\": 403,\n    \"timestamp\": \"2022-07-29 16:09:31\"\n}"
-												}
-											]
-										},
-										{
-											"name": "RemovePublicFolderWithoutPermission",
-											"id": "ff44ba6e-0a79-4e9f-98b2-b4ebfbef92e2",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"auth": {
-													"type": "bearer",
-													"bearer": {
-														"token": "{{secondWorkerAuthToken}}"
-													}
-												},
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{adminFolderId}}"
-											},
-											"response": [
-												{
-													"id": "cc9b3444-8d5d-47ca-9cb2-07f35a6849c3",
-													"name": "RemovePublicFileW",
-													"originalRequest": {
-														"method": "PUT",
-														"header": [],
-														"url": "{{BASE_URL}}{{ENDPOINT_REMOVE_FOLDER}}{{publicFolderId}}"
-													},
-													"status": "No Content",
-													"code": 204,
-													"_postman_previewlanguage": "plain",
-													"header": [
-														{
-															"key": "Vary",
-															"value": "Origin"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Method"
-														},
-														{
-															"key": "Vary",
-															"value": "Access-Control-Request-Headers"
-														},
-														{
-															"key": "X-Content-Type-Options",
-															"value": "nosniff"
-														},
-														{
-															"key": "X-XSS-Protection",
-															"value": "1; mode=block"
-														},
-														{
-															"key": "Cache-Control",
-															"value": "no-cache, no-store, max-age=0, must-revalidate"
-														},
-														{
-															"key": "Pragma",
-															"value": "no-cache"
-														},
-														{
-															"key": "Expires",
-															"value": "0"
-														},
-														{
-															"key": "X-Frame-Options",
-															"value": "DENY"
-														},
-														{
-															"key": "Date",
-															"value": "Fri, 29 Jul 2022 14:12:25 GMT"
-														},
-														{
-															"key": "Keep-Alive",
-															"value": "timeout=60"
-														},
-														{
-															"key": "Connection",
-															"value": "keep-alive"
-														}
-													],
-													"cookie": [],
-													"responseTime": null,
-													"body": null
 												}
 											]
 										}
