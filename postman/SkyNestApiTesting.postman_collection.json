@@ -92106,7 +92106,7 @@
 							"response": [
 								{
 									"id": "cd7a65d9-a2f7-4a3b-8b52-164791e67da1",
-									"name": "New Request",
+									"name": "StartDropboxAuthorization",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
