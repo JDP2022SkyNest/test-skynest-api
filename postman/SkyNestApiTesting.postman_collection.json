@@ -39577,7 +39577,7 @@
 													]
 												},
 												{
-													"name": "GrantBucketPermissionAsNotOwner Copy",
+													"name": "GrantBucketPermissionAsUserWithEditPermission",
 													"id": "7c7db22c-5eb0-4590-ba99-004f19136abc",
 													"protocolProfileBehavior": {
 														"disableBodyPruning": true
