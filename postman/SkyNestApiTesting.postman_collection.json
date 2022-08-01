@@ -39577,6 +39577,34 @@
 													]
 												},
 												{
+													"name": "GrantBucketPermissionAsNotOwner Copy",
+													"id": "7c7db22c-5eb0-4590-ba99-004f19136abc",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "bearer",
+															"bearer": {
+																"token": "{{adminAuthToken}}"
+															}
+														},
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedToEmail\": \"cofeyow547@logodez.com\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+													},
+													"response": []
+												},
+												{
 													"name": "GrantPermissionForFolder(NotBucket)",
 													"id": "5e5b068c-94da-44c9-8193-c5876bd4f424",
 													"protocolProfileBehavior": {
