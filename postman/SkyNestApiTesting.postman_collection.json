@@ -37483,7 +37483,7 @@
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminBucketId}}\"\r\n}",
+															"raw": "{\r\n  \"grantedToEmail\": \"skynest12345@gmail.com\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
