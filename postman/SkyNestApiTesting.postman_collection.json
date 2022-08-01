@@ -38675,7 +38675,7 @@
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"cofeyow547@logodez.com\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"owner\"\r\n}",
+															"raw": "{\r\n  \"grantedToEmail\": \"cofeyow547@logodez.com\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"edit\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
