@@ -39466,7 +39466,7 @@
 													]
 												},
 												{
-													"name": "DuplicateBucketPermission Copy",
+													"name": "GrantBucketPermissionAsNotOwner",
 													"id": "997bf8f1-647e-4ba5-acf3-dcea0d39af23",
 													"protocolProfileBehavior": {
 														"disableBodyPruning": true
