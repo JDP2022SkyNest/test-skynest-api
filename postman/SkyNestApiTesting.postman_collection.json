@@ -39466,6 +39466,34 @@
 													]
 												},
 												{
+													"name": "DuplicateBucketPermission Copy",
+													"id": "997bf8f1-647e-4ba5-acf3-dcea0d39af23",
+													"protocolProfileBehavior": {
+														"disableBodyPruning": true
+													},
+													"request": {
+														"auth": {
+															"type": "bearer",
+															"bearer": {
+																"token": "{{workerAuthToken}}"
+															}
+														},
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"grantedTo\": \"{{validAdminId}}\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_GRANT_PERMISSION}}"
+													},
+													"response": []
+												},
+												{
 													"name": "GrantPermissionForFolder(NotBucket)",
 													"id": "5e5b068c-94da-44c9-8193-c5876bd4f424",
 													"protocolProfileBehavior": {
@@ -92116,16 +92144,16 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_DROPBOX_START}}"
 							},
 							"response": [
 								{
-									"id": "cd7a65d9-a2f7-4a3b-8b52-164791e67da1",
+									"id": "add7b09e-9f70-494b-b09f-bd9a55f31240",
 									"name": "StartDropboxAuthorization",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_DROPBOX_START}}"
 									},
 									"status": "OK",
 									"code": 200,
@@ -92177,7 +92205,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 29 Jul 2022 14:31:10 GMT"
+											"value": "Fri, 29 Jul 2022 14:52:05 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -92195,7 +92223,7 @@
 							]
 						},
 						{
-							"name": "StartDropboxAuthorization Copy",
+							"name": "FinishDropboxAuthorization",
 							"event": [
 								{
 									"listen": "test",
@@ -92224,9 +92252,98 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_AUTH_DROPBOX}}"
+								"url": {
+									"raw": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}?code=wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+									"host": [
+										"{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+											"type": "text"
+										}
+									]
+								}
 							},
-							"response": []
+							"response": [
+								{
+									"id": "ddeea9cc-c7e3-473c-a533-cd47ebb1716a",
+									"name": "FinishDropboxAuthorization",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}?code=wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}"
+											],
+											"query": [
+												{
+													"key": "code",
+													"value": "wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 29 Jul 2022 14:54:05 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
 						},
 						{
 							"name": "StartDropboxAuthorizationEmptyToken",
