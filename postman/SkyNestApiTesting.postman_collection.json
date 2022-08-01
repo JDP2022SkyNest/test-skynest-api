@@ -39475,14 +39475,14 @@
 														"auth": {
 															"type": "bearer",
 															"bearer": {
-																"token": "{{workerAuthToken}}"
+																"token": "{{adminAuthToken}}"
 															}
 														},
 														"method": "POST",
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"grantedToEmail\": \"cofeyow547@logodez.com\",\r\n  \"objectId\": \"{{adminBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
+															"raw": "{\r\n  \"grantedToEmail\": \"cofeyow547@logodez.com\",\r\n  \"objectId\": \"{{workerBucketId}}\",\r\n  \"access\": \"view\"\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
