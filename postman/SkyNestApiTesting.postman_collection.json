@@ -87523,6 +87523,71 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": null
+												},
+												{
+													"id": "fcb91134-fabd-48fd-a150-6536c80bc4c4",
+													"name": "TagABucketAsOwner(N)",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/546207f6-f7e8-41b7-9e65-cc11720291e5{{ENDPOINT_OBJECT}}a77d4bf9-32ca-4c8b-884e-310c280090b6"
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 05 Aug 2022 13:32:16 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
 												}
 											]
 										},
