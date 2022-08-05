@@ -9376,6 +9376,163 @@
 									]
 								},
 								{
+									"name": "WorkerVerifiedUserLogin(N)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+												"exec": [
+													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+													"        pm.environment.set(\"workerAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"workerRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+													"});\r",
+													"\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "d414b662-dac3-4ebe-bb18-a84ce12890f3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									},
+									"response": [
+										{
+											"id": "4cd62698-8a6f-4ee4-b96a-586c65882a18",
+											"name": "WorkerVerifiedUserLogin",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"hristina.zaharieva@htecgroup.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Authorization",
+													"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJocmlzdGluYS56YWhhcmlldmFAaHRlY2dyb3VwLmNvbSIsInJvbGVzIjpbInJvbGVfd29ya2VyIl0sImV4cCI6MTY1NjA4MjI5MSwidXVpZCI6IjgyZGU2NWZjLWUzZTctNGI0Ny04ZmI5LWRiZDYwNjNmYjYwZCJ9.c3ZogZBgifmP9lJZaJ7G8nIFo1SIreTEttDvWi7p8lp5dyKuvnh3GDKIvOoF7rarolJzG8XbBAKoQhE_zwaSgw"
+												},
+												{
+													"key": "refresh-token",
+													"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJocmlzdGluYS56YWhhcmlldmFAaHRlY2dyb3VwLmNvbSIsInJvbGVzIjpbInJvbGVfd29ya2VyIl0sImV4cCI6MTY1Nzg4MDQ5MSwidXVpZCI6IjgyZGU2NWZjLWUzZTctNGI0Ny04ZmI5LWRiZDYwNjNmYjYwZCJ9.AwGlzGux0j4XCE4RW-3UKRC-duxiQ_cT7_FyNbQz0QCxOVdFTXHc7Cx3AuFgVL7Gw9hhryD1WrIAwt3ByXzz_A"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Length",
+													"value": "0"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 24 Jun 2022 14:21:31 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										},
+										{
+											"id": "c3690f05-d4e5-4121-b42b-df68a8149314",
+											"name": "WorkerUserLogin(N)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"email\": \"safehe9788@agrolivana.com\",\r\n  \"password\": \"Pablo12345\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
 									"name": "ManagerVerifiedUserLogin",
 									"event": [
 										{
