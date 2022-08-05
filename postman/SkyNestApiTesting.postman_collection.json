@@ -188,7 +188,7 @@
 									]
 								},
 								{
-									"name": "New Request",
+									"name": "RegisterUser(N)",
 									"id": "767fb739-ab7d-423d-bbb5-206df80cf75d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
