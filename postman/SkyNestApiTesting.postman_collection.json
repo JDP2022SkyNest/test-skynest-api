@@ -50469,6 +50469,88 @@
 													"cookie": [],
 													"responseTime": null,
 													"body": "{\n    \"bucketId\": \"85459e23-9baf-4636-9b38-6529193af409\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"name\": \"Hristina's Bucket\",\n    \"companyId\": \"c465f04d-ec9f-11ec-a23d-0242ac180002\",\n    \"description\": \"Bucket of worker\",\n    \"size\": 0,\n    \"isPublic\": false\n}"
+												},
+												{
+													"id": "a7ac405f-67d4-4cb0-ad62-f3f4dff7348f",
+													"name": "CreatePrivateBucketAsWorker(N)",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n  \"name\": \"Pablo\",\r\n  \"description\": \"Picasso\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_CREATE_BUCKET}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 05 Aug 2022 13:13:28 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"bucketId\": \"a77d4bf9-32ca-4c8b-884e-310c280090b6\",\n    \"createdById\": \"74e96c87-2690-4b3e-9b9b-00757d1b0e3a\",\n    \"createdByEmail\": \"safehe9788@agrolivana.com\",\n    \"name\": \"Pablo\",\n    \"companyId\": \"4bb9345b-e63f-11ec-98ef-0242ac170003\",\n    \"description\": \"Picasso\",\n    \"size\": 0,\n    \"isPublic\": false,\n    \"deletedOn\": null,\n    \"tags\": null\n}"
 												}
 											]
 										},
