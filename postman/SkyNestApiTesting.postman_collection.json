@@ -194,6 +194,12 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJiZXNhbGljNzU2QDVrMnUuY29tIiwiQ29tcGFueSBuYW1lIjoiREVMTCIsImV4cCI6MTY1OTY5NDA1M30.k9gbJgpy3ZJF5FUiPNHl4soarSB2mCT5lBkw_XHZCCf4lxdThUsdgYNIBjrCFUCuqREGHw0g2Rdkn9fdjOhf4Q"
+											}
+										},
 										"method": "POST",
 										"header": [],
 										"body": {
@@ -206,27 +212,15 @@
 											}
 										},
 										"url": {
-											"raw": "http://localhost:8080/signup?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJiZXNhbGljNzU2QDVrMnUuY29tIiwiQ29tcGFueSBuYW1lIjoiREVMTCIsImV4cCI6MTY1OTY5NDA1M30.k9gbJgpy3ZJF5FUiPNHl4soarSB2mCT5lBkw_XHZCCf4lxdThUsdgYNIBjrCFUCuqREGHw0g2Rdkn9fdjOhf4Q&email=besalic756@5k2u.com&companyName=DELL",
-											"protocol": "http",
+											"raw": "{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}",
 											"host": [
-												"localhost"
-											],
-											"port": "8080",
-											"path": [
-												"signup"
+												"{{BASE_URL}}{{ENDPOINT_REGISTER_USER}}"
 											],
 											"query": [
 												{
 													"key": "token",
-													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJiZXNhbGljNzU2QDVrMnUuY29tIiwiQ29tcGFueSBuYW1lIjoiREVMTCIsImV4cCI6MTY1OTY5NDA1M30.k9gbJgpy3ZJF5FUiPNHl4soarSB2mCT5lBkw_XHZCCf4lxdThUsdgYNIBjrCFUCuqREGHw0g2Rdkn9fdjOhf4Q"
-												},
-												{
-													"key": "email",
-													"value": "besalic756@5k2u.com"
-												},
-												{
-													"key": "companyName",
-													"value": "DELL"
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJiZXNhbGljNzU2QDVrMnUuY29tIiwiQ29tcGFueSBuYW1lIjoiREVMTCIsImV4cCI6MTY1OTY5NDA1M30.k9gbJgpy3ZJF5FUiPNHl4soarSB2mCT5lBkw_XHZCCf4lxdThUsdgYNIBjrCFUCuqREGHw0g2Rdkn9fdjOhf4Q",
+													"disabled": true
 												}
 											]
 										}
