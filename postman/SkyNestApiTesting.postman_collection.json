@@ -70143,6 +70143,313 @@
 											]
 										},
 										{
+											"name": "UploadFileToBucketAsOwner-Worker(N)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "f251d732-b05d-41b7-a97c-97bc918dc58a",
+														"exec": [
+															"const jsonData = pm.response.json();\r",
+															"\r",
+															"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
+															"    workerBucketId = pm.environment.get(\"workerBucketId\");\r",
+															"    pm.expect(jsonData.bucketId).to.eql(workerBucketId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"createdById from the response is the same of the user who created the bucket\", function () {\r",
+															"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+															"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+															"});\r",
+															"\r",
+															"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
+															"    pm.expect(jsonData.id).is.not.null;\r",
+															"    pm.environment.set(\"workerFileId\", jsonData.id);\r",
+															"});\r",
+															""
+														],
+														"type": "text/javascript"
+													}
+												}
+											],
+											"id": "41dbdc62-0fec-44eb-a90d-fb2d79ac5b1f",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": {
+														"token": "{{workerAuthToken}}"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "file",
+															"type": "file",
+															"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+														}
+													]
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+											},
+											"response": [
+												{
+													"id": "8f912d02-6ae2-4589-a087-28fa17de3b6c",
+													"name": "UploadFileToWorker'sBucketAsWorker",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/LoginTest.txt"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Wed, 06 Jul 2022 10:07:56 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"a6119818-0fee-4e17-94ed-dafcd4144a77\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"LoginTest.txt\",\n    \"createdById\": \"1097d593-6583-45d9-acd9-e60911704470\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"0dd0ac3e-2ecf-446e-a376-3127d1766a7e\",\n    \"type\": \"text/plain\",\n    \"size\": \"2838\"\n}"
+												},
+												{
+													"id": "15937f38-4519-47d5-9130-d02bbd9aa01e",
+													"name": "UploadFileToWorker'sBucketAsWorker",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/May 2022 (4).jpg"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 08 Jul 2022 14:09:16 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"eaa26107-d805-4396-89b7-282ca0ce026b\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"May 2022 (4).jpg\",\n    \"createdById\": \"26a64d25-4394-488c-940d-0dfd9282e1fb\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"4fac5308-f5f3-45cc-b73f-8f1d87690170\",\n    \"type\": \"image/jpeg\",\n    \"size\": \"775766\"\n}"
+												},
+												{
+													"id": "7a7240f3-6cc8-4255-94fc-7fb3125f0594",
+													"name": "UploadFileToBucketAsOwner",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "formdata",
+															"formdata": [
+																{
+																	"key": "file",
+																	"type": "file",
+																	"src": "/C:/Users/Hristina Zaharieva/Downloads/env"
+																}
+															]
+														},
+														"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{workerBucketId}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "X-Content-Type-Options",
+															"value": "nosniff"
+														},
+														{
+															"key": "X-XSS-Protection",
+															"value": "1; mode=block"
+														},
+														{
+															"key": "Cache-Control",
+															"value": "no-cache, no-store, max-age=0, must-revalidate"
+														},
+														{
+															"key": "Pragma",
+															"value": "no-cache"
+														},
+														{
+															"key": "Expires",
+															"value": "0"
+														},
+														{
+															"key": "X-Frame-Options",
+															"value": "DENY"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Tue, 26 Jul 2022 15:18:00 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"76fdcb96-8c90-4473-8d5a-030a0ba44350\",\n    \"createdOn\": null,\n    \"modifiedOn\": null,\n    \"deletedOn\": null,\n    \"name\": \"env\",\n    \"createdById\": \"5ff651bc-0581-4021-bdba-0203bac14381\",\n    \"parentFolderId\": null,\n    \"bucketId\": \"a9dab0d9-ce5b-48d5-9995-8fb289dd4073\",\n    \"type\": \"application/octet-stream\",\n    \"size\": \"429\",\n    \"tags\": null\n}"
+												}
+											]
+										},
+										{
 											"name": "UploadFileToBucketAndDeleteTheBucket",
 											"event": [
 												{
