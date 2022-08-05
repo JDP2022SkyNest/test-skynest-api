@@ -194,8 +194,42 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"password\": \"Pablo12345\",\r\n  \"name\": \"Pablo\",\r\n  \"surname\": \"Picasso\",\r\n  \"phoneNumber\": \"123456789\",\r\n  \"address\": \"ArtStreet\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/signup?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJiZXNhbGljNzU2QDVrMnUuY29tIiwiQ29tcGFueSBuYW1lIjoiREVMTCIsImV4cCI6MTY1OTY5NDA1M30.k9gbJgpy3ZJF5FUiPNHl4soarSB2mCT5lBkw_XHZCCf4lxdThUsdgYNIBjrCFUCuqREGHw0g2Rdkn9fdjOhf4Q&email=besalic756@5k2u.com&companyName=DELL",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"signup"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJFbWFpbCB0b2tlbiI6InJlZ2lzdHJhdGlvbiBpbnZpdGUiLCJzdWIiOiJiZXNhbGljNzU2QDVrMnUuY29tIiwiQ29tcGFueSBuYW1lIjoiREVMTCIsImV4cCI6MTY1OTY5NDA1M30.k9gbJgpy3ZJF5FUiPNHl4soarSB2mCT5lBkw_XHZCCf4lxdThUsdgYNIBjrCFUCuqREGHw0g2Rdkn9fdjOhf4Q"
+												},
+												{
+													"key": "email",
+													"value": "besalic756@5k2u.com"
+												},
+												{
+													"key": "companyName",
+													"value": "DELL"
+												}
+											]
+										}
 									},
 									"response": []
 								}
