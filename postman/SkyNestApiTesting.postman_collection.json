@@ -95929,7 +95929,7 @@
 									"response": []
 								},
 								{
-									"name": "SearchByTagAsCreator Copy",
+									"name": "GetAllTaggedObjectsWithCertainTag",
 									"id": "ddda11dc-a553-42a4-8176-22700c9ce1f4",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
