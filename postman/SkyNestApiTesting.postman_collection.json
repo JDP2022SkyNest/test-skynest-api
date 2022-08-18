@@ -95759,7 +95759,7 @@
 									"response": []
 								},
 								{
-									"name": "TagABucket",
+									"name": "TagTheBucket",
 									"id": "b4c0fea0-ac62-4e9f-a635-79378570dce8",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -95891,7 +95891,7 @@
 									"response": []
 								},
 								{
-									"name": "TagAFolder",
+									"name": "TagTheParentFolder",
 									"id": "86a34300-3a34-4ff8-a8b1-a006ec29f8eb",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
