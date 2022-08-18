@@ -95345,6 +95345,25 @@
 									"response": []
 								},
 								{
+									"name": "RestoreOwnBucketAsAdmin Copy",
+									"id": "6f5b0140-291d-45ea-883b-5018631293ac",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{adminBucketId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
+								},
+								{
 									"name": "LogoutAsWorker",
 									"event": [
 										{
