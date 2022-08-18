@@ -95756,6 +95756,25 @@
 							"response": []
 						},
 						{
+							"name": "TagABucketAsOwner Copy",
+							"id": "b4c0fea0-ac62-4e9f-a635-79378570dce8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{adminTagId}}{{ENDPOINT_OBJECT}}{{adminBucketId}}"
+							},
+							"response": []
+						},
+						{
 							"name": "DeleteOwnBucket",
 							"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
 							"protocolProfileBehavior": {
