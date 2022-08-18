@@ -94063,7 +94063,7 @@
 			"name": "TestScenarios",
 			"item": [
 				{
-					"name": "SC1: Logged user can edit itw own detais",
+					"name": "SC1: Logged user can edit itw own detais and change its password",
 					"item": [
 						{
 							"name": "LoginAsAdmin",
