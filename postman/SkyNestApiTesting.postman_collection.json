@@ -95910,6 +95910,25 @@
 									"response": []
 								},
 								{
+									"name": "TagTheChildFolder",
+									"id": "79ae3c7d-e040-4c84-9834-80299bfa47ac",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{tagId}}{{ENDPOINT_OBJECT}}{{parentFolderId}}"
+									},
+									"response": []
+								},
+								{
 									"name": "DeleteOwnBucket",
 									"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
 									"protocolProfileBehavior": {
