@@ -94063,813 +94063,942 @@
 			"name": "TestScenarios",
 			"item": [
 				{
-					"name": "SC1: Logged user can edit itw own detais and change its password",
+					"name": "HappyPaths",
 					"item": [
 						{
-							"name": "LoginAsAdmin",
-							"event": [
+							"name": "SC1: Logged user can edit itw own detais and change its password",
+							"item": [
 								{
-									"listen": "test",
-									"script": {
-										"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
-										"exec": [
-											"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
-											"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
-											"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "802f14db-4a3f-4af1-abee-80be0f493e7d",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+									"name": "LoginAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+												"exec": [
+													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
 										}
-									}
+									],
+									"id": "802f14db-4a3f-4af1-abee-80be0f493e7d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									},
+									"response": []
 								},
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "GetAllUsersAsAdmin",
-							"event": [
 								{
-									"listen": "test",
-									"script": {
-										"id": "8fb15808-3a88-43e4-8432-3a002dd01c27",
-										"exec": [
-											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.id).is.not.null;\r",
-											"    pm.environment.set(\"firstUserId\", jsonData[0].id);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "e433eacf-7e67-46b0-868d-62a26ace4d80",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
-							},
-							"response": []
-						},
-						{
-							"name": "LogoutAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
-										"exec": [
-											"pm.test(\"Response value is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.eql(true);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "b8c7139e-53fd-4694-be8c-1cff7bb62dc9",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-							},
-							"response": []
-						}
-					],
-					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "95395f23-d659-4013-abed-924a39306f91",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "1ec4a0ac-8280-4688-bc6c-68d3dd50acee",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "SC2: Logged admin can promote & demote users (non admins)",
-					"item": [
-						{
-							"name": "LoginAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
-										"exec": [
-											"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
-											"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
-											"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "a8b1188f-f6a5-46cf-a526-6419c2a807f7",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+									"name": "LogoutAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
 										}
-									}
+									],
+									"id": "b8c7139e-53fd-4694-be8c-1cff7bb62dc9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+									},
+									"response": []
 								},
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "GetFirstUserDetailsAsAdmin",
+								{
+									"name": "EditOwnParametersAsAdmin Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "1ad626f7-c3b7-4553-83de-05ad743cfdb9",
+												"exec": [
+													"pm.test(\"Response body contains id which is the same as the user id\", function () {\r",
+													"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+													"    var jsonData = pm.response.json();\r",
+													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
+													"    pm.expect(jsonData.id).to.eql(validAdminId);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "2bfbdcf0-c231-41a9-b30e-a33845bf12ca",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"Hris\",\r\n  \"surname\": \"Zahar\",\r\n  \"phoneNumber\": \"883388338833\",\r\n  \"address\": \"Edited 88\",\r\n  \"positionInCompany\": \"Developer\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validAdminId}}"
+									},
+									"response": [
+										{
+											"id": "e2a059d7-adbf-4904-839e-6b303d675ae7",
+											"name": "EditOwnParametersAsAdmin",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Hris\",\r\n  \"surname\": \"Zahar\",\r\n  \"phoneNumber\": \"883388338833\",\r\n  \"address\": \"Edited 88\",\r\n  \"positionInCompany\": \"Developer\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validAdminId}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 04 Jul 2022 08:02:57 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"email\": \"christinezahar@yahoo.com\",\n    \"name\": \"Hris\",\n    \"surname\": \"Zahar\",\n    \"phoneNumber\": \"883388338833\",\n    \"address\": \"Edited 88\",\n    \"roleName\": \"role_admin\",\n    \"positionInCompany\": \"Developer\",\n    \"verified\": true,\n    \"enabled\": true\n}"
+										}
+									]
+								}
+							],
+							"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24",
 							"event": [
 								{
-									"listen": "test",
+									"listen": "prerequest",
 									"script": {
-										"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+										"id": "95395f23-d659-4013-abed-924a39306f91",
+										"type": "text/javascript",
 										"exec": [
 											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "15d7ff7e-a6e8-4cea-bc03-b910c6662673",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
+										]
 									}
 								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									},
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{firstUserId}}"
-							},
-							"response": []
-						},
-						{
-							"name": "GetSpecificWorkerFromListAsAdmin",
-							"event": [
 								{
 									"listen": "test",
 									"script": {
-										"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+										"id": "1ec4a0ac-8280-4688-bc6c-68d3dd50acee",
+										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
-											"_.each(pm.response.json(), (arrItem) => {\r",
-											"        if (arrItem.roleName === \"role_worker\") {\r",
-											"           pm.environment.set(\"randomWorkerId\", arrItem.id) \r",
-											"        }\r",
-											"    })\r",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
 											"});"
-										],
-										"type": "text/javascript"
+										]
 									}
 								}
-							],
-							"id": "417b229f-28e6-4b93-a202-1aa6708e0ece",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									},
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
+							]
+						},
+						{
+							"name": "SC2: Logged admin can promote & demote users (non admins)",
+							"item": [
+								{
+									"name": "LoginAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+												"exec": [
+													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
 										}
-									}
+									],
+									"id": "a8b1188f-f6a5-46cf-a526-6419c2a807f7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									},
+									"response": []
 								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
-							},
-							"response": []
-						},
-						{
-							"name": "PromoteTheSpecificWorkerToManager",
-							"id": "e6ff2c07-c975-4e10-bc64-733c50e388d8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
+								{
+									"name": "GetFirstUserDetailsAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "15d7ff7e-a6e8-4cea-bc03-b910c6662673",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											},
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{firstUserId}}"
+									},
+									"response": []
 								},
-								"method": "PUT",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_PROMOTE_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "DemotePromotedWorker",
-							"id": "688ab510-ad75-449b-a56d-bd2b889fafb3",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
+								{
+									"name": "GetSpecificWorkerFromListAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+												"exec": [
+													"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
+													"_.each(pm.response.json(), (arrItem) => {\r",
+													"        if (arrItem.roleName === \"role_worker\") {\r",
+													"           pm.environment.set(\"randomWorkerId\", arrItem.id) \r",
+													"        }\r",
+													"    })\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "417b229f-28e6-4b93-a202-1aa6708e0ece",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											},
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
+									},
+									"response": []
 								},
-								"method": "PUT",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_DEMOTE_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "LogoutAsAdmin",
+								{
+									"name": "PromoteTheSpecificWorkerToManager",
+									"id": "e6ff2c07-c975-4e10-bc64-733c50e388d8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_PROMOTE_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "DemotePromotedWorker",
+									"id": "688ab510-ad75-449b-a56d-bd2b889fafb3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_DEMOTE_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "LogoutAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "f644633f-1537-42bf-aa35-7b811ef3595f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "GetAllUsersAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8fb15808-3a88-43e4-8432-3a002dd01c27",
+												"exec": [
+													"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"firstUserId\", jsonData[0].id);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "e433eacf-7e67-46b0-868d-62a26ace4d80",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
+									},
+									"response": []
+								}
+							],
+							"id": "8e0e5319-488a-4584-b36c-a407ede4694b",
 							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "c2381b90-b12e-47d3-9c5b-cd7bded18d65",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
 								{
 									"listen": "test",
 									"script": {
-										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+										"id": "88c3df35-331a-46df-bbe9-7a439442a69a",
+										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Response value is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.eql(true);\r",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
 											"});"
-										],
-										"type": "text/javascript"
+										]
 									}
 								}
+							]
+						},
+						{
+							"name": "SC3: Logged admin can disable and enable users (non admins)",
+							"item": [
+								{
+									"name": "LoginAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+												"exec": [
+													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "182e2700-19ad-4238-9e86-bf536886da2e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "GetSpecificWorkerFromListAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+												"exec": [
+													"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
+													"_.each(pm.response.json(), (arrItem) => {\r",
+													"        if (arrItem.roleName === \"role_worker\") {\r",
+													"           pm.environment.set(\"randomWorkerId\", arrItem.id) \r",
+													"        }\r",
+													"    })\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "bfcd03d4-4d04-4c0e-97e7-cb3d68f984fd",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											},
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
+									},
+									"response": []
+								},
+								{
+									"name": "DisableTheSpecificWorker",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "531fba58-5103-41cd-b441-69f538ae3fce",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "eb1ebb5a-b333-4162-9b89-1761ed1bd002",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_DISABLE_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "EnableDisabledUser",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "99bb3669-7fab-44a6-a17a-2c1af29ace18",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "781f1b88-84c6-47a3-a3d3-9a2a280d05b8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_ENABLE_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "LogoutAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "ea24949e-c2e9-46e7-ac74-89af8c2e3b26",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+									},
+									"response": []
+								}
 							],
-							"id": "f644633f-1537-42bf-aa35-7b811ef3595f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
+							"id": "a848068f-251e-429d-b003-b2552d2e4360",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "eb2d1e44-b60c-4a67-9258-34d1fc0869e7",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
 									}
 								},
-								"method": "POST",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-							},
-							"response": []
+								{
+									"listen": "test",
+									"script": {
+										"id": "ec1499fc-321d-459c-a6e7-df22a24f2257",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "DEPRICATED SC4: Logged admin can add and remove workers from its company",
+							"item": [
+								{
+									"name": "LoginAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+												"exec": [
+													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "4eaf2805-6e1f-4e36-bfbb-aaa2ff2134b4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "GetSpecificWorkerFromListAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+												"exec": [
+													"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
+													"_.each(pm.response.json(), (arrItem) => {\r",
+													"        if (arrItem.roleName === \"role_worker\") {\r",
+													"           pm.environment.set(\"randomWorkerId\", arrItem.id) \r",
+													"        }\r",
+													"    })\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "feba42d9-8d6e-4776-a02c-fdf0aa97ca48",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											},
+											{
+												"key": "",
+												"value": "",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
+									},
+									"response": []
+								},
+								{
+									"name": "AddWorkerToAdmin'sCompany",
+									"id": "481101ea-589b-4521-ba83-dc577175bd96",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_ADD_COMPANY_FOR_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "RemoveWorkerFromAdmin'sCompany",
+									"id": "e7862e07-e183-46e7-9e86-187a03cba592",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_REMOVE_COMPANY_FOR_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "LogoutAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "660ef22e-a19b-4f1b-a5bc-01c53b318520",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+									},
+									"response": []
+								}
+							],
+							"id": "987336dd-77ad-4e9b-9911-dcfdcf8deb83"
 						}
 					],
-					"id": "8e0e5319-488a-4584-b36c-a407ede4694b",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "c2381b90-b12e-47d3-9c5b-cd7bded18d65",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "88c3df35-331a-46df-bbe9-7a439442a69a",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "SC3: Logged admin can disable and enable users (non admins)",
-					"item": [
-						{
-							"name": "LoginAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
-										"exec": [
-											"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
-											"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
-											"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "182e2700-19ad-4238-9e86-bf536886da2e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "GetSpecificWorkerFromListAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
-										"exec": [
-											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
-											"_.each(pm.response.json(), (arrItem) => {\r",
-											"        if (arrItem.roleName === \"role_worker\") {\r",
-											"           pm.environment.set(\"randomWorkerId\", arrItem.id) \r",
-											"        }\r",
-											"    })\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "bfcd03d4-4d04-4c0e-97e7-cb3d68f984fd",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									},
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
-							},
-							"response": []
-						},
-						{
-							"name": "DisableTheSpecificWorker",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "531fba58-5103-41cd-b441-69f538ae3fce",
-										"exec": [
-											"pm.test(\"Response value is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.eql(true);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "eb1ebb5a-b333-4162-9b89-1761ed1bd002",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_DISABLE_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "EnableDisabledUser",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "99bb3669-7fab-44a6-a17a-2c1af29ace18",
-										"exec": [
-											"pm.test(\"Response value is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.eql(true);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "781f1b88-84c6-47a3-a3d3-9a2a280d05b8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_ENABLE_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "LogoutAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
-										"exec": [
-											"pm.test(\"Response value is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.eql(true);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "ea24949e-c2e9-46e7-ac74-89af8c2e3b26",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-							},
-							"response": []
-						}
-					],
-					"id": "a848068f-251e-429d-b003-b2552d2e4360",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "eb2d1e44-b60c-4a67-9258-34d1fc0869e7",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "ec1499fc-321d-459c-a6e7-df22a24f2257",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "DEPRICATED SC4: Logged admin can add and remove workers from its company",
-					"item": [
-						{
-							"name": "LoginAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
-										"exec": [
-											"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
-											"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
-											"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "4eaf2805-6e1f-4e36-bfbb-aaa2ff2134b4",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "GetSpecificWorkerFromListAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
-										"exec": [
-											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
-											"_.each(pm.response.json(), (arrItem) => {\r",
-											"        if (arrItem.roleName === \"role_worker\") {\r",
-											"           pm.environment.set(\"randomWorkerId\", arrItem.id) \r",
-											"        }\r",
-											"    })\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "feba42d9-8d6e-4776-a02c-fdf0aa97ca48",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									},
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
-							},
-							"response": []
-						},
-						{
-							"name": "AddWorkerToAdmin'sCompany",
-							"id": "481101ea-589b-4521-ba83-dc577175bd96",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_ADD_COMPANY_FOR_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "RemoveWorkerFromAdmin'sCompany",
-							"id": "e7862e07-e183-46e7-9e86-187a03cba592",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_REMOVE_COMPANY_FOR_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "LogoutAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
-										"exec": [
-											"pm.test(\"Response value is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData).to.eql(true);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "660ef22e-a19b-4f1b-a5bc-01c53b318520",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-							},
-							"response": []
-						}
-					],
-					"id": "987336dd-77ad-4e9b-9911-dcfdcf8deb83"
-				},
-				{
-					"name": "HappyPaths",
-					"item": [],
 					"id": "8d4ed993-ce09-46b3-b307-44743e842c2a"
 				}
 			],
