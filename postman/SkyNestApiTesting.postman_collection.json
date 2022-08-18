@@ -95794,7 +95794,7 @@
 							"response": []
 						},
 						{
-							"name": "DeleteRestoredBucketAfterTest Copy",
+							"name": "DeleteRestoredBucketAfterTest",
 							"id": "58e95432-9df4-4f1a-8fb8-4bbc5e977130",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
