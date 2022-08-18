@@ -95531,507 +95531,323 @@
 			"id": "2160086f-120d-4d85-b413-90f892c21b34"
 		},
 		{
-			"name": "EndToEndTestSuites",
+			"name": "EndToEndTests",
 			"item": [
 				{
 					"name": "HappyPaths",
 					"item": [
 						{
-							"name": "TS1:",
-							"item": [
+							"name": "LoginAsAdmin",
+							"event": [
 								{
-									"name": "LoginAsAdmin",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
-												"exec": [
-													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
-													"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
-													"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "38fdf290-1346-44ca-a58d-ee608231b303",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
-									},
-									"response": []
-								},
-								{
-									"name": "GetLoggedUser",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "dee3720b-2e5e-4915-9192-ae6f8c198e0b",
-												"exec": [
-													"pm.test(\"Set the uuid as an environment variable\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"validAdminId\", jsonData.uuid);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "f0d0bc52-fae7-4d95-8da6-6224a4976b30",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
-									},
-									"response": []
-								},
-								{
-									"name": "CreatePrivateBucket",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
-												"exec": [
-													"const jsonData = pm.response.json();\r",
-													"\r",
-													"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
-													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
-													"    pm.expect(jsonData.bucketId).is.not.null;\r",
-													"    pm.environment.set(\"privateBucketId\", jsonData.bucketId);\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "8b1c781b-c487-45b5-9e6d-b0ddb4a3fc51",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Test 1\",\r\n  \"description\": \"Bucket of a worker\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_CREATE_BUCKET}}"
-									},
-									"response": []
-								},
-								{
-									"name": "ViewOwnBucketDetails",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "76c04764-9c38-4453-95aa-60d361729a31",
-												"exec": [
-													"const jsonData = pm.response.json();\r",
-													"\r",
-													"pm.test(\"createdById from the response is the same with the id of the user that created the bucket\", function () {\r",
-													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"bucketId from the response is the same id from the successful bucket creation\", function () {\r",
-													"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
-													"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
-													"});\r",
-													"\r",
-													"\r",
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "ea490962-04bf-4279-b59a-1c64f56e1095",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_GET_INFO}}"
-									},
-									"response": []
-								},
-								{
-									"name": "CreateNewTag",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "9dc80728-438a-4da4-86b2-d6c74b21bfb4",
-												"exec": [
-													"const jsonData = pm.response.json();\r",
-													"\r",
-													"pm.test(\"Set the id of a valid tag creation as an environment variable\", function () {\r",
-													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"tagId\", jsonData.id);\r",
-													"});\r",
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "60ece528-cf4f-4103-ab0b-3f9f34722d9a",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"EndToEnd\",\r\n  \"rgb\": \"9FH2BR\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
-									},
-									"response": []
-								},
-								{
-									"name": "TagABucket",
-									"id": "b4c0fea0-ac62-4e9f-a635-79378570dce8",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{tagId}}{{ENDPOINT_OBJECT}}{{privateBucketId}}"
-									},
-									"response": []
-								},
-								{
-									"name": "CreateFolderInTheBucket",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "70017d98-8ff8-450f-9ac0-ec8693a54232",
-												"exec": [
-													"const jsonData = pm.response.json()\r",
-													"\r",
-													"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-													"    pm.environment.set(\"folderId\", jsonData.id);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"bucketId from the response is the same of the bucket in which folder is created\", function () {\r",
-													"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
-													"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"createdById from the response is the same of the user who created the folder\", function () {\r",
-													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "b9a4260d-a983-4f1d-bbab-0d606a192a88",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Folder_in_private_bucket\",\r\n  \"bucketId\": \"{{privateBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
-									},
-									"response": []
-								},
-								{
-									"name": "CreateFolderInTheFolder",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "70017d98-8ff8-450f-9ac0-ec8693a54232",
-												"exec": [
-													"const jsonData = pm.response.json()\r",
-													"\r",
-													"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-													"    pm.environment.set(\"folderInFolderId\", jsonData.id);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"bucketId from the response is the same of the bucket in which folder is created\", function () {\r",
-													"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
-													"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"bucketId from the response is the same of the bucket in which folder is created\", function () {\r",
-													"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
-													"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"createdById from the response is the same of the user who created the folder\", function () {\r",
-													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "788620b5-2e67-4f00-b49a-a583b78043ac",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Folder_in_folder\",\r\n  \"bucketId\": \"{{privateBucketId}}\",\r\n  \"parentFolderId\": \"{{folderId}}\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
-									},
-									"response": []
-								},
-								{
-									"name": "DeleteOwnBucket",
-									"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
-									},
-									"response": []
-								},
-								{
-									"name": "RestoreOwnDeletedBucket",
-									"id": "1fffc8fd-fc43-4f49-808f-8742d2446830",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_RESTORE}}"
-									},
-									"response": []
-								},
-								{
-									"name": "EditPrivateBucketToPublic",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
-												"exec": [
-													"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
-													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
-													"});\r",
-													"\r",
-													""
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "52f37ef6-f73e-4f52-bfc9-ced04e5cd49e",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"PublicBucket\",\r\n  \"description\": \"Edited bucket\",\r\n  \"isPublic\": true\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}"
-									},
-									"response": []
-								},
-								{
-									"name": "DeleteRestoredBucketAfterTest",
-									"id": "58e95432-9df4-4f1a-8fb8-4bbc5e977130",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
-									},
-									"response": []
-								},
-								{
-									"name": "LogoutAsAdmin",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
-												"exec": [
-													"pm.test(\"Response value is correct\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData).to.eql(true);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "ab70a5f4-9fac-4c94-a97f-15667a1ecd23",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-									},
-									"response": []
+									"listen": "test",
+									"script": {
+										"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+										"exec": [
+											"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+											"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+											"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
-							"id": "65e5bc63-b1c1-4578-9646-1b43944093b7"
+							"id": "38fdf290-1346-44ca-a58d-ee608231b303",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+							},
+							"response": []
+						},
+						{
+							"name": "GetLoggedUser",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "dee3720b-2e5e-4915-9192-ae6f8c198e0b",
+										"exec": [
+											"pm.test(\"Set the uuid as an environment variable\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.id).is.not.null;\r",
+											"    pm.environment.set(\"validAdminId\", jsonData.uuid);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "f0d0bc52-fae7-4d95-8da6-6224a4976b30",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+							},
+							"response": []
+						},
+						{
+							"name": "CreatePrivateBucket",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
+											"    pm.expect(jsonData.bucketId).is.not.null;\r",
+											"    pm.environment.set(\"privateBucketId\", jsonData.bucketId);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "8b1c781b-c487-45b5-9e6d-b0ddb4a3fc51",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Test 1\",\r\n  \"description\": \"Bucket of a worker\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_CREATE_BUCKET}}"
+							},
+							"response": []
+						},
+						{
+							"name": "ViewOwnBucketDetails Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "76c04764-9c38-4453-95aa-60d361729a31",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"createdById from the response is the same with the id of the user that created the bucket\", function () {\r",
+											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"bucketId from the response is the same id from the successful bucket creation\", function () {\r",
+											"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
+											"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
+											"});\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "ea490962-04bf-4279-b59a-1c64f56e1095",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_GET_INFO}}"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteOwnBucket Copy",
+							"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+							},
+							"response": []
+						},
+						{
+							"name": "RestoreOwnDeletedBucket Copy",
+							"id": "1fffc8fd-fc43-4f49-808f-8742d2446830",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_RESTORE}}"
+							},
+							"response": []
+						},
+						{
+							"name": "EditPrivateBucketToPublic Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
+										"exec": [
+											"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "52f37ef6-f73e-4f52-bfc9-ced04e5cd49e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"PublicBucket\",\r\n  \"description\": \"Edited bucket\",\r\n  \"isPublic\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteRestoredBucketAfterTest Copy",
+							"id": "58e95432-9df4-4f1a-8fb8-4bbc5e977130",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+							},
+							"response": []
+						},
+						{
+							"name": "LogoutAsAdmin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+										"exec": [
+											"pm.test(\"Response value is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.eql(true);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "ab70a5f4-9fac-4c94-a97f-15667a1ecd23",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+							},
+							"response": []
 						}
 					],
-					"id": "262f809d-4704-4b80-8aca-c4f1c1630d23"
+					"id": "65e5bc63-b1c1-4578-9646-1b43944093b7"
 				}
 			],
 			"id": "55549532-0d79-4c2b-853f-5ca470cd71b2"
