@@ -95040,7 +95040,7 @@
 									"response": []
 								},
 								{
-									"name": "AddNewCompany",
+									"name": "AddANewCompany",
 									"event": [
 										{
 											"listen": "test",
