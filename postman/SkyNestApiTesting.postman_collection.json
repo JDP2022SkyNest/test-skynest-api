@@ -95713,7 +95713,7 @@
 									"response": []
 								},
 								{
-									"name": "CreateNewTag",
+									"name": "CreateANewTag",
 									"event": [
 										{
 											"listen": "test",
