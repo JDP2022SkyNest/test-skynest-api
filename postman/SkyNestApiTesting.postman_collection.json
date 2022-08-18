@@ -95236,31 +95236,7 @@
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
 									},
-									"response": [
-										{
-											"id": "13e0f14f-2a0b-40fb-b817-798153aa88dc",
-											"name": "WorkerUserLogin(N)",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n  \"email\": \"safehe9788@agrolivana.com\",\r\n  \"password\": \"Pablo12345\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
-											},
-											"_postman_previewlanguage": null,
-											"header": null,
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
+									"response": []
 								}
 							],
 							"id": "ef93c4ec-182a-473a-ad82-e92405af276d"
