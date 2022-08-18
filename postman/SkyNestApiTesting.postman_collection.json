@@ -96074,6 +96074,25 @@
 									"response": []
 								},
 								{
+									"name": "DownloadFileFromPrivateBucketAsOwner Copy",
+									"id": "4f7e4894-c719-4d67-8b1f-c68a4c19426c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}"
+									},
+									"response": []
+								},
+								{
 									"name": "DeleteOwnBucket",
 									"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
 									"protocolProfileBehavior": {
