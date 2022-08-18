@@ -95879,7 +95879,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Folder_in_folder\",\r\n  \"bucketId\": \"{{privateBucketId}}\",\r\n  \"parentFolderId\": \"{{folderId}}\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Folder_in_folder\",\r\n  \"bucketId\": \"{{privateBucketId}}\",\r\n  \"parentFolderId\": \"{{parentFolderId}}\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
