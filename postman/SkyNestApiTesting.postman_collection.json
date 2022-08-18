@@ -94112,40 +94112,6 @@
 									"response": []
 								},
 								{
-									"name": "LogoutAsAdmin",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
-												"exec": [
-													"pm.test(\"Response value is correct\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData).to.eql(true);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "b8c7139e-53fd-4694-be8c-1cff7bb62dc9",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-									},
-									"response": []
-								},
-								{
 									"name": "EditOwnDetails",
 									"event": [
 										{
@@ -94179,7 +94145,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Hris\",\r\n  \"surname\": \"Zahar\",\r\n  \"phoneNumber\": \"883388338833\",\r\n  \"address\": \"Edited 88\",\r\n  \"positionInCompany\": \"Developer\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Hris\",\r\n  \"surname\": \"Zahar\",\r\n  \"phoneNumber\": \"883388338833\",\r\n  \"address\": \"Edited Address 1\",\r\n  \"positionInCompany\": \"QA Engineer\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -94187,6 +94153,40 @@
 											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validAdminId}}"
+									},
+									"response": []
+								},
+								{
+									"name": "LogoutAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "b8c7139e-53fd-4694-be8c-1cff7bb62dc9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
 									},
 									"response": []
 								}
