@@ -94160,7 +94160,7 @@
 					"name": "SC1:",
 					"item": [
 						{
-							"name": "AdminVerifiedUserLogin Copy",
+							"name": "LoginAsAdmin",
 							"event": [
 								{
 									"listen": "test",
