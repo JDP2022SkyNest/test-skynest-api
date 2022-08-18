@@ -94302,6 +94302,68 @@
 							"response": []
 						},
 						{
+							"name": "GetSpecificWorkerFromListAsAdmin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+										"exec": [
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Response body contains id and that id is the same as the user id\", function () {\r",
+											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+											"    pm.expect(jsonData.id).to.eql(validWorkerId);\r",
+											"\r",
+											"});\r",
+											"\r",
+											"pm.test(\"User role is admin\", function () {\r",
+											"    pm.expect(jsonData.roleName).to.eql(\"role_worker\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "417b229f-28e6-4b93-a202-1aa6708e0ece",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}"
+							},
+							"response": []
+						},
+						{
 							"name": "LogoutAsAdmin",
 							"event": [
 								{
