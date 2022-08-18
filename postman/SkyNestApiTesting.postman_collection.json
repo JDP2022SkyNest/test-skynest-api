@@ -95118,7 +95118,31 @@
 									"response": []
 								}
 							],
-							"id": "60b21469-b318-47a3-b5af-d7fba24b612c"
+							"id": "60b21469-b318-47a3-b5af-d7fba24b612c",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "de717d39-a59a-41a5-b093-ae54ef4c2c55",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "824e1531-0d77-45b2-ad6b-bd962e618b2c",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "8d4ed993-ce09-46b3-b307-44743e842c2a"
