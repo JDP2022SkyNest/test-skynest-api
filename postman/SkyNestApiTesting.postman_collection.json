@@ -94270,6 +94270,88 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"id\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"email\": \"christinezahar@yahoo.com\",\n    \"name\": \"Hris\",\n    \"surname\": \"Zahar\",\n    \"phoneNumber\": \"883388338833\",\n    \"address\": \"Edited 88\",\n    \"roleName\": \"role_admin\",\n    \"positionInCompany\": \"Developer\",\n    \"verified\": true,\n    \"enabled\": true\n}"
+										},
+										{
+											"id": "35be890b-d666-43d0-b81b-f90c92f674f4",
+											"name": "EditOwnParametersAsAdmin",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"name\": \"Hris\",\r\n  \"surname\": \"Zahar\",\r\n  \"phoneNumber\": \"883388338833\",\r\n  \"address\": \"Edited 88\",\r\n  \"positionInCompany\": \"Developer\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validAdminId}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "1; mode=block"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 05 Jul 2022 09:34:53 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"c1287cdf-b7d4-497c-8bfd-30633d1f192c\",\n    \"email\": \"christinezahar@yahoo.com\",\n    \"name\": \"Hris\",\n    \"surname\": \"Zahar\",\n    \"phoneNumber\": \"883388338833\",\n    \"address\": \"Edited 88\",\n    \"roleName\": \"role_admin\",\n    \"positionInCompany\": \"Developer\",\n    \"companyName\": \"Htec Group\",\n    \"verified\": true,\n    \"enabled\": true\n}"
 										}
 									]
 								}
