@@ -95710,6 +95710,52 @@
 							"response": []
 						},
 						{
+							"name": "CreateValidTag Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9dc80728-438a-4da4-86b2-d6c74b21bfb4",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Set the id of a valid tag creation as an environment variable\", function () {\r",
+											"    pm.expect(jsonData.id).is.not.null;\r",
+											"    pm.environment.set(\"workerTagId\", jsonData.id);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "60ece528-cf4f-4103-ab0b-3f9f34722d9a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"1\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_TAG}}"
+							},
+							"response": []
+						},
+						{
 							"name": "DeleteOwnBucket",
 							"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
 							"protocolProfileBehavior": {
