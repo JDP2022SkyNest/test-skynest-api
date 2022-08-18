@@ -95380,7 +95380,26 @@
 									"response": []
 								},
 								{
-									"name": "RestoreOwnDeletedBucket",
+									"name": "DeleteOwnBucket Copy",
+									"id": "3462fcd7-667d-456f-9ae9-1448ddf8097d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+									},
+									"response": []
+								},
+								{
+									"name": "DeleteBucketAfterTest",
 									"id": "6f5b0140-291d-45ea-883b-5018631293ac",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
