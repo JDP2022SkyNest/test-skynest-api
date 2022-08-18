@@ -94300,6 +94300,39 @@
 								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}"
 							},
 							"response": []
+						},
+						{
+							"name": "AdminLogoutValidToken Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "b8c7139e-53fd-4694-be8c-1cff7bb62dc9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+							},
+							"response": []
 						}
 					],
 					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24"
