@@ -94302,7 +94302,7 @@
 							"response": []
 						},
 						{
-							"name": "AdminLogoutValidToken Copy",
+							"name": "AdminLogout",
 							"event": [
 								{
 									"listen": "test",
