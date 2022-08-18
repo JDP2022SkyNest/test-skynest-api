@@ -94240,7 +94240,7 @@
 							"response": []
 						},
 						{
-							"name": "GetWorkerDetailsAsAdmin Copy",
+							"name": "GetFirstWorkerDetailsAsAdmin",
 							"event": [
 								{
 									"listen": "test",
