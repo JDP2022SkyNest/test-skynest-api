@@ -95930,6 +95930,18 @@
 								},
 								{
 									"name": "GetAllTaggedObjectsWithCertainTag",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "304d61de-46ee-4f84-b3a3-f557d7348b9e",
+												"exec": [
+													"// Test for number of tagged objects according the suite!"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "ddda11dc-a553-42a4-8176-22700c9ce1f4",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
