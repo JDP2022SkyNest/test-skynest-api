@@ -95237,6 +95237,37 @@
 										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
 									},
 									"response": []
+								},
+								{
+									"name": "WorkerLogoutValidToken Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "164ef23f-b3cf-4fec-a716-1e82fa7150f7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+									},
+									"response": []
 								}
 							],
 							"id": "ef93c4ec-182a-473a-ad82-e92405af276d"
