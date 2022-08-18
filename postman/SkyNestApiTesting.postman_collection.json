@@ -94693,7 +94693,7 @@
 					"name": "SC4: Logged admin can add and remove workers from its company",
 					"item": [
 						{
-							"name": "LoginAsAdmin",
+							"name": "LoginAsAdmin\\",
 							"event": [
 								{
 									"listen": "test",
