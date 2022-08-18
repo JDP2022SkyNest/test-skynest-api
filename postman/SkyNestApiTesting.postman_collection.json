@@ -84783,7 +84783,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"name\": \"3\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
+													"raw": "{\r\n  \"name\": \"1\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -95747,7 +95747,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"EndEnd\",\r\n  \"rgb\": \"7FE2BF\"\r\n}",
+											"raw": "{\r\n  \"name\": \"EndToEnd\",\r\n  \"rgb\": \"9FH2BR\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -95788,15 +95788,15 @@
 													"const jsonData = pm.response.json()\r",
 													"\r",
 													"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-													"    pm.environment.set(\"parentFolderId\", jsonData.id);\r",
+													"    pm.environment.set(\"folderId\", jsonData.id);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"bucketId from the response is the same of the bucket in which the folder is created\", function () {\r",
-													"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
-													"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
+													"pm.test(\"bucketId from the response is the same of the bucket in which folder is created\", function () {\r",
+													"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
+													"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"createdById from the response is the same with the user id who created the folder\", function () {\r",
+													"pm.test(\"createdById from the response is the same of the user who created the folder\", function () {\r",
 													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
 													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
 													"});"
@@ -95842,20 +95842,15 @@
 													"const jsonData = pm.response.json()\r",
 													"\r",
 													"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-													"    pm.environment.set(\"childFolderId\", jsonData.id);\r",
+													"    pm.environment.set(\"adminFolderId\", jsonData.id);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"bucketId from the response is the same with the bucket id in which the folder is created\", function () {\r",
-													"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
-													"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
+													"pm.test(\"bucketId from the response is the same of the bucket in which folder is created\", function () {\r",
+													"    adminBucketId = pm.environment.get(\"adminBucketId\");\r",
+													"    pm.expect(jsonData.bucketId).to.eql(adminBucketId);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"parentFolderId from the response is the same with the folder id in which the folder is created\", function () {\r",
-													"    parentFolderId = pm.environment.get(\"parentFolderId\");\r",
-													"    pm.expect(jsonData.parentFolderId).to.eql(parentFolderId);\r",
-													"});\r",
-													"\r",
-													"pm.test(\"createdById from the response is the same with the user id who created the folder\", function () {\r",
+													"pm.test(\"createdById from the response is the same of the user who created the folder\", function () {\r",
 													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
 													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
 													"});"
@@ -95879,7 +95874,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Folder_in_folder\",\r\n  \"bucketId\": \"{{privateBucketId}}\",\r\n  \"parentFolderId\": \"{{folderId}}\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Folder_in_private_bucket\",\r\n  \"bucketId\": \"{{privateBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -95887,25 +95882,6 @@
 											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_CREATE_FOLDER}}"
-									},
-									"response": []
-								},
-								{
-									"name": "TagAFolder",
-									"id": "86a34300-3a34-4ff8-a8b1-a006ec29f8eb",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{tagId}}{{ENDPOINT_OBJECT}}{{privateBucketId}}"
 									},
 									"response": []
 								},
@@ -96047,56 +96023,10 @@
 									"response": []
 								}
 							],
-							"id": "65e5bc63-b1c1-4578-9646-1b43944093b7",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "5dfed51d-f66e-45e2-9197-442240ccd386",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "0960ac3f-0e6d-49bb-acd4-e633cdd2689b",
-										"type": "text/javascript",
-										"exec": [
-											""
-										]
-									}
-								}
-							]
+							"id": "65e5bc63-b1c1-4578-9646-1b43944093b7"
 						}
 					],
-					"id": "262f809d-4704-4b80-8aca-c4f1c1630d23",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "acb0d4fe-9670-4ad4-bc47-4fcca5779cec",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "b5328a76-9942-4040-a31e-f91a009ffb04",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Unsuccessful POST request\", () => {",
-									"  pm.expect(pm.response.code).to.be.oneOf([200,204]);",
-									"});"
-								]
-							}
-						}
-					]
+					"id": "262f809d-4704-4b80-8aca-c4f1c1630d23"
 				}
 			],
 			"id": "55549532-0d79-4c2b-853f-5ca470cd71b2"
