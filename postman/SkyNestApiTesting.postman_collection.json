@@ -95326,7 +95326,7 @@
 									"response": []
 								},
 								{
-									"name": "DeleteOwnBucketByIdAsWorker Copy",
+									"name": "DeleteOwnBucket",
 									"id": "2f08ede1-f4b1-41c2-8e76-d973bcb18177",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
