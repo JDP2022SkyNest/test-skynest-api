@@ -95905,7 +95905,7 @@
 										},
 										"method": "POST",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{tagId}}{{ENDPOINT_OBJECT}}{{privateBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{tagId}}{{ENDPOINT_OBJECT}}{{parentFolderId}}"
 									},
 									"response": []
 								},
