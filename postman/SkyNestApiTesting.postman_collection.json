@@ -95273,31 +95273,7 @@
 							"id": "ef93c4ec-182a-473a-ad82-e92405af276d"
 						}
 					],
-					"id": "8d4ed993-ce09-46b3-b307-44743e842c2a",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "8407a06b-96f0-4889-8320-c840a4efb560",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "1bf55986-8132-4f96-abe1-d45223223189",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});"
-								]
-							}
-						}
-					]
+					"id": "8d4ed993-ce09-46b3-b307-44743e842c2a"
 				}
 			],
 			"id": "2160086f-120d-4d85-b413-90f892c21b34"
