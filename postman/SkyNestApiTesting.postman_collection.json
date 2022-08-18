@@ -95969,7 +95969,7 @@
 												"exec": [
 													"const jsonData = pm.response.json();\r",
 													"\r",
-													"pm.test(\"bucketId from the response is the same of the bucket in which we are uploading the file\", function () {\r",
+													"pm.test(\"bucketId from the response is the same with the bucket id in which the file is uploaded\", function () {\r",
 													"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
 													"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
 													"});\r",
