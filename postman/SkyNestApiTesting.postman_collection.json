@@ -94807,7 +94807,7 @@
 								},
 								"method": "PUT",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{secondValidWorkerId}}{{ENDPOINT_ADD_COMPANY_FOR_USER}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_ADD_COMPANY_FOR_USER}}"
 							},
 							"response": []
 						}
