@@ -94204,7 +94204,7 @@
 							"response": []
 						},
 						{
-							"name": "GetAllUsersAsAdmin",
+							"name": "GetAllUsersAsAdminAndPickSpecificWorker",
 							"event": [
 								{
 									"listen": "test",
