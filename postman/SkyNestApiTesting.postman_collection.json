@@ -95399,7 +95399,7 @@
 									"response": []
 								},
 								{
-									"name": "MakeABucketPublic Copy",
+									"name": "EditPrivateBucketToPublic",
 									"event": [
 										{
 											"listen": "test",
