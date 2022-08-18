@@ -96074,7 +96074,7 @@
 									"response": []
 								},
 								{
-									"name": "DownloadFileFromPrivateBucketAsOwner Copy",
+									"name": "DownloadFile",
 									"id": "4f7e4894-c719-4d67-8b1f-c68a4c19426c",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
