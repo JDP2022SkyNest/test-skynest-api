@@ -95326,6 +95326,25 @@
 									"response": []
 								},
 								{
+									"name": "DeleteOwnBucketByIdAsWorker Copy",
+									"id": "2f08ede1-f4b1-41c2-8e76-d973bcb18177",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{workerBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+									},
+									"response": []
+								},
+								{
 									"name": "LogoutAsWorker",
 									"event": [
 										{
