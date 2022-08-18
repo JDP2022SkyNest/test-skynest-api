@@ -96093,7 +96093,7 @@
 									"response": []
 								},
 								{
-									"name": "MoveFileToFolderAsOwner Copy",
+									"name": "MoveFileToFolder",
 									"id": "28734433-ac03-4f13-9319-51dbca2afc22",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
