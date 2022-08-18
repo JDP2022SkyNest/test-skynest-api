@@ -96069,7 +96069,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{privateBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{parentFolderId}}"
 									},
 									"response": []
 								},
