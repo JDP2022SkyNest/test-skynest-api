@@ -95960,7 +95960,7 @@
 									"response": []
 								},
 								{
-									"name": "UploadFileToBucketAsOwner-Admin Copy",
+									"name": "UploadFileInTheBucket",
 									"event": [
 										{
 											"listen": "test",
