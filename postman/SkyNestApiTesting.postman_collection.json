@@ -94324,7 +94324,31 @@
 							"response": []
 						}
 					],
-					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24"
+					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "95395f23-d659-4013-abed-924a39306f91",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "1ec4a0ac-8280-4688-bc6c-68d3dd50acee",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "SC2: Logged admin can promote & demote users (non admins)",
