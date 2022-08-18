@@ -95282,7 +95282,7 @@
 									"response": []
 								},
 								{
-									"name": "ViewOwnBucketAsWorker Copy",
+									"name": "ViewOwnBucketDetails",
 									"event": [
 										{
 											"listen": "test",
