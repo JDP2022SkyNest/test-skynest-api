@@ -95231,6 +95231,41 @@
 									"response": []
 								},
 								{
+									"name": "GetLoggedUser",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "dee3720b-2e5e-4915-9192-ae6f8c198e0b",
+												"exec": [
+													"pm.test(\"Set the uuid as an environment variable\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validAdminId\", jsonData.uuid);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "65547d4c-ef02-4c95-bee6-4a24aed4eb8b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+									},
+									"response": []
+								},
+								{
 									"name": "CreatePrivateBucket",
 									"event": [
 										{
