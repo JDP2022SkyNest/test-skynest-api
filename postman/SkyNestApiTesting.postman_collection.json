@@ -95433,14 +95433,14 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"PublicBucket\",\r\n  \"description\": \"string\",\r\n  \"isPublic\": true\r\n}",
+											"raw": "{\r\n  \"name\": \"PublicBucket\",\r\n  \"description\": \"Edited bucket\",\r\n  \"isPublic\": true\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{publicBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}"
 									},
 									"response": []
 								},
