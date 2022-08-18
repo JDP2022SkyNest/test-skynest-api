@@ -95929,6 +95929,25 @@
 									"response": []
 								},
 								{
+									"name": "SearchByTagAsCreator Copy",
+									"id": "ddda11dc-a553-42a4-8176-22700c9ce1f4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_TAG}}/{{adminTagId}}/objects"
+									},
+									"response": []
+								},
+								{
 									"name": "DeleteOwnBucket",
 									"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
 									"protocolProfileBehavior": {
