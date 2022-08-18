@@ -95845,7 +95845,7 @@
 													"    pm.environment.set(\"childFolderId\", jsonData.id);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"bucketId from the response is the same with the bucket id in which folder is created\", function () {\r",
+													"pm.test(\"bucketId from the response is the same with the bucket id in which the folder is created\", function () {\r",
 													"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
 													"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
 													"});\r",
