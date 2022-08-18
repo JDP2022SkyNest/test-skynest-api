@@ -94561,6 +94561,44 @@
 							"response": []
 						},
 						{
+							"name": "DisableTheSpecificWorker",
+							"id": "eb1ebb5a-b333-4162-9b89-1761ed1bd002",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_DISABLE_USER}}"
+							},
+							"response": []
+						},
+						{
+							"name": "EnableDisabledUser",
+							"id": "781f1b88-84c6-47a3-a3d3-9a2a280d05b8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_ENABLE_USER}}"
+							},
+							"response": []
+						},
+						{
 							"name": "LogoutAsAdmin",
 							"event": [
 								{
@@ -94591,44 +94629,6 @@
 								"method": "POST",
 								"header": [],
 								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "DisableTheSpecificWorker",
-							"id": "eb1ebb5a-b333-4162-9b89-1761ed1bd002",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_DISABLE_USER}}"
-							},
-							"response": []
-						},
-						{
-							"name": "EnableDisabledUser",
-							"id": "781f1b88-84c6-47a3-a3d3-9a2a280d05b8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "PUT",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_ENABLE_USER}}"
 							},
 							"response": []
 						}
