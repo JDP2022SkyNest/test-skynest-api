@@ -96072,7 +96072,31 @@
 							]
 						}
 					],
-					"id": "262f809d-4704-4b80-8aca-c4f1c1630d23"
+					"id": "262f809d-4704-4b80-8aca-c4f1c1630d23",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "93b0f825-147b-4248-85aa-4d9e979a937d",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "e7c7e884-9252-482e-8542-3a2924e6de20",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					]
 				}
 			],
 			"id": "55549532-0d79-4c2b-853f-5ca470cd71b2"
