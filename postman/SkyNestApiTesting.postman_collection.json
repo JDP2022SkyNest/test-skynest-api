@@ -95737,14 +95737,14 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{workerAuthToken}}"
+										"token": "{{adminAuthToken}}"
 									}
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"name\": \"1\",\r\n  \"rgb\": \"9FE2BF\"\r\n}",
+									"raw": "{\r\n  \"name\": \"EndToEnd\",\r\n  \"rgb\": \"9FH2BR\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
