@@ -95399,7 +95399,7 @@
 									"response": []
 								},
 								{
-									"name": "DeleteBucketAfterTest",
+									"name": "RestoreOwnDeletedBucket",
 									"id": "6f5b0140-291d-45ea-883b-5018631293ac",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
