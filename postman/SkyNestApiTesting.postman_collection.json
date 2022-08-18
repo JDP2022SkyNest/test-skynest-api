@@ -95040,7 +95040,7 @@
 									"response": []
 								},
 								{
-									"name": "LogoutAsAdmin Copy",
+									"name": "LogoutAsAdmin",
 									"event": [
 										{
 											"listen": "test",
