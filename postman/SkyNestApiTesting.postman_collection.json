@@ -95270,7 +95270,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Hristina's Bucket\",\r\n  \"description\": \"Bucket of a worker\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Test 1\",\r\n  \"description\": \"Bucket of a worker\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
