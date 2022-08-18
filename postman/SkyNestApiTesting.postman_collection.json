@@ -94829,6 +94829,40 @@
 								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_ADD_COMPANY_FOR_USER}}"
 							},
 							"response": []
+						},
+						{
+							"name": "LogoutAsAdmin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+										"exec": [
+											"pm.test(\"Response value is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.eql(true);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "660ef22e-a19b-4f1b-a5bc-01c53b318520",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+							},
+							"response": []
 						}
 					],
 					"id": "987336dd-77ad-4e9b-9911-dcfdcf8deb83"
