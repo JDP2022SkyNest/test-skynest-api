@@ -95040,6 +95040,51 @@
 									"response": []
 								},
 								{
+									"name": "AddNewCompanyAsAdmin Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a03012da-d1f0-4195-bef2-f0f452d1dda9",
+												"exec": [
+													"pm.test(\"Set the id of a valid company registration as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validCompanyId\", jsonData.id);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "d001dcce-f701-490e-9ccf-8007bc330233",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"contactdeskk@htec.com\",\r\n  \"pib\": \"333888999\",\r\n  \"name\": \"Htec Group\",\r\n  \"tierName\": \"basic\",\r\n  \"phoneNumber\": \"325223477757\",\r\n  \"address\": \"Company Address 12\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_ADD_COMPANY}}"
+									},
+									"response": []
+								},
+								{
 									"name": "LogoutAsAdmin",
 									"event": [
 										{
