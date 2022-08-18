@@ -94157,7 +94157,7 @@
 									"response": []
 								},
 								{
-									"name": "NewPasswordSameAsCurrent Copy",
+									"name": "ChangeOwnPassword",
 									"id": "f86b7e0c-1847-49a1-92fb-d8ecbde95046",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
