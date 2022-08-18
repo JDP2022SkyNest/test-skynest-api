@@ -95161,7 +95161,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "de717d39-a59a-41a5-b093-ae54ef4c2c55",
+										"id": "ab645f55-885e-430f-a2af-b602e387a614",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -95171,12 +95171,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "824e1531-0d77-45b2-ad6b-bd962e618b2c",
+										"id": "42b66919-7de6-495b-ab05-b1086294c0a6",
 										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
+											""
 										]
 									}
 								}
