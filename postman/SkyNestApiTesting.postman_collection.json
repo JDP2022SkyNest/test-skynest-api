@@ -95040,7 +95040,7 @@
 									"response": []
 								},
 								{
-									"name": "AddANewCompany",
+									"name": "AddNewCompany",
 									"event": [
 										{
 											"listen": "test",
@@ -95084,7 +95084,7 @@
 									"response": []
 								},
 								{
-									"name": "EditCompanyDetails",
+									"name": "EditCompanyAsAdmin Copy",
 									"event": [
 										{
 											"listen": "test",
