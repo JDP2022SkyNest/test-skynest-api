@@ -94598,7 +94598,7 @@
 							"response": []
 						},
 						{
-							"name": "GetSpecificWorkerFromListAsAdmin Copy",
+							"name": "GetSpecificWorkerFromListAsAdmin",
 							"event": [
 								{
 									"listen": "test",
@@ -94655,7 +94655,7 @@
 							"response": []
 						},
 						{
-							"name": "LogoutAsAdmin Copy",
+							"name": "LogoutAsAdmin",
 							"event": [
 								{
 									"listen": "test",
