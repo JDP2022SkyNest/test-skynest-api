@@ -94158,6 +94158,21 @@
 								},
 								{
 									"name": "ChangeOwnPassword",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "e9d4ce40-e8ef-4890-9b76-2051cb6e47a3",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "f86b7e0c-1847-49a1-92fb-d8ecbde95046",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
