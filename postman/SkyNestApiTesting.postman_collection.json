@@ -94223,7 +94223,7 @@
 							"response": []
 						},
 						{
-							"name": "GetWorkerDetailsAsAdmin Copy",
+							"name": "GetSpecificUserAsAdmin",
 							"event": [
 								{
 									"listen": "test",
