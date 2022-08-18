@@ -94158,7 +94158,20 @@
 			"item": [
 				{
 					"name": "SC1:",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "726d6e2c-73ee-48ba-b8d0-d93f10468526",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24"
 				}
 			],
