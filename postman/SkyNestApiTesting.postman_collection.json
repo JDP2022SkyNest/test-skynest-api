@@ -95822,8 +95822,8 @@
 										"exec": [
 											"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
-											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"    validAdminId = pm.environment.get(\"validAdminId\");\r",
+											"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
 											"});\r",
 											"\r",
 											""
