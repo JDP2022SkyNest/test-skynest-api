@@ -94445,7 +94445,7 @@
 								},
 								"method": "PUT",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_PROMOTE_USER}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_PROMOTE_USER}}"
 							},
 							"response": []
 						},
