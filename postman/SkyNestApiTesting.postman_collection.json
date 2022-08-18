@@ -94791,6 +94791,25 @@
 								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
 							},
 							"response": []
+						},
+						{
+							"name": "AddCompanyForWorkerAsAdmin Copy",
+							"id": "481101ea-589b-4521-ba83-dc577175bd96",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{secondValidWorkerId}}{{ENDPOINT_ADD_COMPANY_FOR_USER}}"
+							},
+							"response": []
 						}
 					],
 					"id": "987336dd-77ad-4e9b-9911-dcfdcf8deb83"
