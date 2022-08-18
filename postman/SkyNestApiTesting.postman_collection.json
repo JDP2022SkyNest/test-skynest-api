@@ -94793,6 +94793,25 @@
 							"response": []
 						},
 						{
+							"name": "RemoveCompanyForUserAsAdmin Copy",
+							"id": "e7862e07-e183-46e7-9e86-187a03cba592",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_REMOVE_COMPANY_FOR_USER}}"
+							},
+							"response": []
+						},
+						{
 							"name": "AddWorkerToAdmin'sCompany",
 							"id": "481101ea-589b-4521-ba83-dc577175bd96",
 							"protocolProfileBehavior": {
