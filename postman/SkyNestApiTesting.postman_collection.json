@@ -94157,6 +94157,34 @@
 									"response": []
 								},
 								{
+									"name": "NewPasswordSameAsCurrent Copy",
+									"id": "f86b7e0c-1847-49a1-92fb-d8ecbde95046",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"currentPassword\": \"Htec8833\",\r\n  \"newPassword\": \"Htec8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_PASSWORD_CHANGE}}"
+									},
+									"response": []
+								},
+								{
 									"name": "LogoutAsAdmin",
 									"event": [
 										{
