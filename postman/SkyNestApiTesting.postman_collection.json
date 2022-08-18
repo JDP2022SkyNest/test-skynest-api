@@ -95710,7 +95710,7 @@
 							"response": []
 						},
 						{
-							"name": "DeleteOwnBucket Copy",
+							"name": "DeleteOwnBucket",
 							"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
