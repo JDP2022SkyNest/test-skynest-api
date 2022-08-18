@@ -95615,6 +95615,57 @@
 							"response": []
 						},
 						{
+							"name": "CreatePrivateBucket",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Set the id of a valid bucket creation as an environment variable\", function () {\r",
+											"    pm.expect(jsonData.bucketId).is.not.null;\r",
+											"    pm.environment.set(\"privateBucketId\", jsonData.bucketId);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "8b1c781b-c487-45b5-9e6d-b0ddb4a3fc51",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Test 1\",\r\n  \"description\": \"Bucket of a worker\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_CREATE_BUCKET}}"
+							},
+							"response": []
+						},
+						{
 							"name": "LogoutAsAdmin",
 							"event": [
 								{
