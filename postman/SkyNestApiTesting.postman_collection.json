@@ -96047,7 +96047,29 @@
 									"response": []
 								}
 							],
-							"id": "65e5bc63-b1c1-4578-9646-1b43944093b7"
+							"id": "65e5bc63-b1c1-4578-9646-1b43944093b7",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "5dfed51d-f66e-45e2-9197-442240ccd386",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "0960ac3f-0e6d-49bb-acd4-e633cdd2689b",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "262f809d-4704-4b80-8aca-c4f1c1630d23"
