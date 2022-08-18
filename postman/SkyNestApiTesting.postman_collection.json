@@ -94112,7 +94112,7 @@
 									"response": []
 								},
 								{
-									"name": "GetLoggedAdmin",
+									"name": "GetLoggedUser",
 									"event": [
 										{
 											"listen": "test",
