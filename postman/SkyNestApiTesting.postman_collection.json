@@ -94312,7 +94312,7 @@
 											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
 											"_.each(pm.response.json(), (arrItem) => {\r",
 											"        if (arrItem.roleName === \"role_worker\") {\r",
-											"           pm.environment.set(\"ID\", arrItem.id) \r",
+											"           pm.environment.set(\"randomWorkerId\", arrItem.id) \r",
 											"        }\r",
 											"    })\r",
 											"});"
