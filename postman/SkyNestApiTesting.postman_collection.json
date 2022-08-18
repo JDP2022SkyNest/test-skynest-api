@@ -94793,7 +94793,7 @@
 							"response": []
 						},
 						{
-							"name": "RemoveCompanyForUserAsAdmin Copy",
+							"name": "RemoveWorkerFromAdmin'sCompany",
 							"id": "e7862e07-e183-46e7-9e86-187a03cba592",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
