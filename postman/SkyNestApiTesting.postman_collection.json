@@ -95788,7 +95788,7 @@
 													"const jsonData = pm.response.json()\r",
 													"\r",
 													"pm.test(\"Set the id of a valid folder creation as an environment variable\", function () {\r",
-													"    pm.environment.set(\"folderId\", jsonData.id);\r",
+													"    pm.environment.set(\"parentFolderId\", jsonData.id);\r",
 													"});\r",
 													"\r",
 													"pm.test(\"bucketId from the response is the same of the bucket in which folder is created\", function () {\r",
