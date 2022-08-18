@@ -94595,7 +94595,7 @@
 							"response": []
 						},
 						{
-							"name": "DisableVerifiedUser Copy",
+							"name": "DisableTheSpecificWorker",
 							"id": "eb1ebb5a-b333-4162-9b89-1761ed1bd002",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
