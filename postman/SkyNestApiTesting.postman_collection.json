@@ -94174,11 +94174,7 @@
 											"\r",
 											"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
 											"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
-											"});\r",
-											"\r",
-											"\r",
-											"\r",
-											""
+											"});"
 										],
 										"type": "text/javascript"
 									}
