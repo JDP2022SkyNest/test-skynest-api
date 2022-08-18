@@ -95756,7 +95756,7 @@
 							"response": []
 						},
 						{
-							"name": "TagABucketAsOwner Copy",
+							"name": "TagABucket",
 							"id": "b4c0fea0-ac62-4e9f-a635-79378570dce8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
