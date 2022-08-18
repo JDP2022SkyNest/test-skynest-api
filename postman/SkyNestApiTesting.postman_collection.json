@@ -94204,7 +94204,7 @@
 							"response": []
 						},
 						{
-							"name": "GetAllUsersDetailsAsAdmin Copy",
+							"name": "GetAllUsersAsAdmin",
 							"id": "e433eacf-7e67-46b0-868d-62a26ace4d80",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
