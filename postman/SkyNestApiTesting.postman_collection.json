@@ -95380,25 +95380,6 @@
 									"response": []
 								},
 								{
-									"name": "DeleteRestoredBucketAfterTest",
-									"id": "3462fcd7-667d-456f-9ae9-1448ddf8097d",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{workerAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
-									},
-									"response": []
-								},
-								{
 									"name": "RestoreOwnDeletedBucket",
 									"id": "6f5b0140-291d-45ea-883b-5018631293ac",
 									"protocolProfileBehavior": {
@@ -95414,6 +95395,71 @@
 										"method": "PUT",
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_RESTORE}}"
+									},
+									"response": []
+								},
+								{
+									"name": "MakeABucketPublic Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
+												"exec": [
+													"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+													"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "c8878439-a5ea-45b0-8149-ebaf4012668f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"name\": \"PublicBucket\",\r\n  \"description\": \"string\",\r\n  \"isPublic\": true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{publicBucketId}}"
+									},
+									"response": []
+								},
+								{
+									"name": "DeleteRestoredBucketAfterTest",
+									"id": "3462fcd7-667d-456f-9ae9-1448ddf8097d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 									},
 									"response": []
 								},
