@@ -95981,7 +95981,7 @@
 													"\r",
 													"pm.test(\"Set the id of a valid upload file as an environment variable\", function () {\r",
 													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"adminFileId\", jsonData.id);\r",
+													"    pm.environment.set(\"fileInBucketId\", jsonData.id);\r",
 													"});\r",
 													""
 												],
