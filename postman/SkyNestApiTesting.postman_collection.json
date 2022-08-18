@@ -94155,7 +94155,13 @@
 		},
 		{
 			"name": "TestScenarios",
-			"item": [],
+			"item": [
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24"
+				}
+			],
 			"id": "2160086f-120d-4d85-b413-90f892c21b34"
 		}
 	]
