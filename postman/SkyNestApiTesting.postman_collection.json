@@ -94063,7 +94063,7 @@
 			"name": "TestScenarios",
 			"item": [
 				{
-					"name": "SC1: Logged admin can get first user detais and logout",
+					"name": "SC1: Logged admin can get first user detais",
 					"item": [
 						{
 							"name": "LoginAsAdmin",
