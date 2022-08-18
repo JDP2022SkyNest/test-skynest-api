@@ -94240,31 +94240,22 @@
 							"response": []
 						},
 						{
-							"name": "GetFirstUserFromListAsAdmin",
+							"name": "LogoutAsAdmin",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
-										"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
 										"exec": [
-											"var jsonData = pm.response.json();\r",
-											"\r",
-											"pm.test(\"Response body contains id and that id is the same as the user id\", function () {\r",
-											"    pm.expect(pm.response.text()).to.include(\"id\");\r",
-											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
-											"    pm.expect(jsonData.id).to.eql(validWorkerId);\r",
-											"\r",
-											"});\r",
-											"\r",
-											"pm.test(\"User role is admin\", function () {\r",
-											"    pm.expect(jsonData.roleName).to.eql(\"role_worker\");\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
 											"});"
 										],
 										"type": "text/javascript"
 									}
 								}
 							],
-							"id": "074db146-fa30-417e-afae-9cb83ed1c8cb",
+							"id": "b8c7139e-53fd-4694-be8c-1cff7bb62dc9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -94275,32 +94266,18 @@
 										"token": "{{adminAuthToken}}"
 									}
 								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									},
-									{
-										"key": "",
-										"value": "",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}"
+								"method": "POST",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
 							},
 							"response": []
-						},
+						}
+					],
+					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24"
+				},
+				{
+					"name": "SC2:",
+					"item": [
 						{
 							"name": "GetSpecificWorkerFromListAsAdmin",
 							"event": [
@@ -94357,46 +94334,8 @@
 								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
 							},
 							"response": []
-						},
-						{
-							"name": "LogoutAsAdmin",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
-										"exec": [
-											"pm.test(\"Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "b8c7139e-53fd-4694-be8c-1cff7bb62dc9",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{adminAuthToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-							},
-							"response": []
 						}
 					],
-					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24"
-				},
-				{
-					"name": "SC2:",
-					"item": [],
 					"id": "8e0e5319-488a-4584-b36c-a407ede4694b"
 				}
 			],
