@@ -94112,6 +94112,42 @@
 									"response": []
 								},
 								{
+									"name": "GetLoggedAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "dee3720b-2e5e-4915-9192-ae6f8c198e0b",
+												"exec": [
+													"pm.test(\"Set the uuid as an environment variable\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.id).is.not.null;\r",
+													"    pm.environment.set(\"validAdminId\", jsonData.uuid);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "91e1dc73-d6bc-4d2b-8beb-cc103f9c7b6a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+									},
+									"response": []
+								},
+								{
 									"name": "EditOwnDetails",
 									"event": [
 										{
