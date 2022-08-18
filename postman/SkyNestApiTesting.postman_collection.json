@@ -95040,7 +95040,7 @@
 									"response": []
 								},
 								{
-									"name": "AddNewCompany",
+									"name": "AddANewCompany",
 									"event": [
 										{
 											"listen": "test",
@@ -95084,7 +95084,7 @@
 									"response": []
 								},
 								{
-									"name": "EditCompanyAsAdmin Copy",
+									"name": "EditCompanyDetails",
 									"event": [
 										{
 											"listen": "test",
@@ -95116,7 +95116,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"HTEC\",\r\n  \"address\": \"Company Address 13\",\r\n  \"phoneNumber\": \"5344534256\"\r\n}",
+											"raw": "{\r\n  \"name\": \"ZAHAR\",\r\n  \"address\": \"Company Address 13\",\r\n  \"phoneNumber\": \"5344534256\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
