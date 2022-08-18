@@ -94146,7 +94146,7 @@
 									"response": []
 								},
 								{
-									"name": "EditOwnParametersAsAdmin Copy",
+									"name": "EditOwnDetails",
 									"event": [
 										{
 											"listen": "test",
