@@ -94596,6 +94596,21 @@
 						},
 						{
 							"name": "EnableDisabledUser",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "99bb3669-7fab-44a6-a17a-2c1af29ace18",
+										"exec": [
+											"pm.test(\"Response value is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.eql(true);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "781f1b88-84c6-47a3-a3d3-9a2a280d05b8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
