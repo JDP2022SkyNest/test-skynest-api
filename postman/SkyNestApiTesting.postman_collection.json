@@ -94309,10 +94309,13 @@
 									"script": {
 										"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
 										"exec": [
-											"const res = pm.response.json();\r",
-											"res.forEach((e) => {\r",
-											"    pm.environment.set(e.Type + \"Value\", e.Value);\r",
-											"})"
+											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
+											"_.each(pm.response.json(), (arrItem) => {\r",
+											"        if (arrItem.roleName === \"role_worker\") {\r",
+											"           pm.environment.set(\"ID\", arrItem.id) \r",
+											"        }\r",
+											"    })\r",
+											"});"
 										],
 										"type": "text/javascript"
 									}
