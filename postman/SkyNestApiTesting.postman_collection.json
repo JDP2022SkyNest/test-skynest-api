@@ -94354,7 +94354,7 @@
 										}
 									}
 								},
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
 							},
 							"response": []
 						},
