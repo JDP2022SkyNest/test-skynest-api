@@ -94202,6 +94202,25 @@
 								"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
 							},
 							"response": []
+						},
+						{
+							"name": "GetAllUsersDetailsAsAdmin Copy",
+							"id": "e433eacf-7e67-46b0-868d-62a26ace4d80",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
+							},
+							"response": []
 						}
 					],
 					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24"
