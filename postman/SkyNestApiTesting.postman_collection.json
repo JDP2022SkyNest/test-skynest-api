@@ -95534,7 +95534,7 @@
 			"name": "EndToEndTests",
 			"item": [
 				{
-					"name": "HappyPaths",
+					"name": "TS1:",
 					"item": [
 						{
 							"name": "LoginAsAdmin",
