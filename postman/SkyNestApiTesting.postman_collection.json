@@ -94218,22 +94218,15 @@
 											"//     pm.environment.set(\"firstUserId\", jsonData.id[1]);\r",
 											"// });\r",
 											"\r",
+											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
 											" const jsonData = pm.response.json();\r",
 											" const index = Math.trunc(Math.random() * jsonData.response.length);\r",
 											" const item = jsonData.response[index];\r",
 											"\r",
 											" pm.collectionVariables.set(\"test-itemId\", item.id);\r",
+											" });\r",
 											"\r",
-											" pm.test(\"Set AccountId for the file upload, download and delete collection\", function () {\r",
-											"    var AccountId = (pm.response.text().split(\",\")[0].split(\":\")[1].replace(/\\\"/g, \"\"));\r",
-											"    pm.environment.set(\"accountid\", AccountId);\r",
-											"    //console.log(AccountId)\r",
-											"});\r",
-											"\r",
-											"pm.test(\"Unset the environment variables for accountId and account_fileId\", function () {\r",
-											"    pm.environment.unset(\"accountid\");\r",
-											"    pm.environment.unset(\"account_fileId\");\r",
-											"});"
+											""
 										],
 										"type": "text/javascript"
 									}
