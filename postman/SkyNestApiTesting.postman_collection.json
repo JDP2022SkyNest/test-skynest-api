@@ -95855,7 +95855,7 @@
 													"    pm.expect(jsonData.parentFolderId).to.eql(parentFolderId);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"createdById from the response is the same of the user who created the folder\", function () {\r",
+													"pm.test(\"createdById from the response is the same with the user id who created the folder\", function () {\r",
 													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
 													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
 													"});"
