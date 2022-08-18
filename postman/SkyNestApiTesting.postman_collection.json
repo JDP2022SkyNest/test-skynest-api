@@ -95241,7 +95241,7 @@
 													"pm.test(\"Set the uuid as an environment variable\", function () {\r",
 													"    var jsonData = pm.response.json();\r",
 													"    pm.expect(jsonData.id).is.not.null;\r",
-													"    pm.environment.set(\"validAdminId\", jsonData.uuid);\r",
+													"    pm.environment.set(\"validWorkerId\", jsonData.uuid);\r",
 													"});"
 												],
 												"type": "text/javascript"
@@ -95256,7 +95256,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{adminAuthToken}}"
+												"token": "{{workerAuthToken}}"
 											}
 										},
 										"method": "GET",
