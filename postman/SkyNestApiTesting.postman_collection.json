@@ -95974,7 +95974,7 @@
 													"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
 													"});\r",
 													"\r",
-													"pm.test(\"createdById from the response is the same with the user id who created the bucket\", function () {\r",
+													"pm.test(\"createdById from the response is the same with the user id who updloaded the file\", function () {\r",
 													"    validAdminId = pm.environment.get(\"validAdminId\");\r",
 													"    pm.expect(jsonData.createdById).to.eql(validAdminId);\r",
 													"});\r",
