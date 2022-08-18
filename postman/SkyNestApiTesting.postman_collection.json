@@ -94995,7 +94995,85 @@
 						},
 						{
 							"name": "SC5: Logged admin can add a new company and edit it",
-							"item": [],
+							"item": [
+								{
+									"name": "LoginAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+												"exec": [
+													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "213d0151-eb17-4f81-b630-8786fad72da8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									},
+									"response": []
+								},
+								{
+									"name": "LogoutAsAdmin Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "397f9d77-6a6f-449e-a302-1f6695afba7d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+									},
+									"response": []
+								}
+							],
 							"id": "60b21469-b318-47a3-b5af-d7fba24b612c"
 						}
 					],
