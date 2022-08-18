@@ -94296,7 +94296,10 @@
 									"script": {
 										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
 										"exec": [
-											""
+											"pm.test(\"Response value is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.eql(true);\r",
+											"});"
 										],
 										"type": "text/javascript"
 									}
@@ -94547,6 +94550,11 @@
 							}
 						}
 					]
+				},
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "a848068f-251e-429d-b003-b2552d2e4360"
 				}
 			],
 			"id": "2160086f-120d-4d85-b413-90f892c21b34"
