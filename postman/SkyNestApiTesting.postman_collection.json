@@ -95820,7 +95820,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Admin's Folder in Admin's Bucket\",\r\n  \"bucketId\": \"{{adminBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
+											"raw": "{\r\n  \"name\": \"Folder_in_private_bucket\",\r\n  \"bucketId\": \"{{privateBucketId}}\",\r\n  \"parentFolderId\": null\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
