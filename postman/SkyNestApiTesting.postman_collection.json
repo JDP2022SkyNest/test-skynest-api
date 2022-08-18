@@ -94205,6 +94205,23 @@
 						},
 						{
 							"name": "GetAllUsersAsAdmin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8fb15808-3a88-43e4-8432-3a002dd01c27",
+										"exec": [
+											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.id).is.not.null;\r",
+											"    pm.environment.set(\"firstUserId\", jsonData.id);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "e433eacf-7e67-46b0-868d-62a26ace4d80",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
