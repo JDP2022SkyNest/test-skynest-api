@@ -94302,7 +94302,7 @@
 							"response": []
 						},
 						{
-							"name": "AdminLogout",
+							"name": "LogoutAsAdmin",
 							"event": [
 								{
 									"listen": "test",
