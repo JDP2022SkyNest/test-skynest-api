@@ -95532,7 +95532,125 @@
 		},
 		{
 			"name": "EndToEndTests",
-			"item": [],
+			"item": [
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "65e5bc63-b1c1-4578-9646-1b43944093b7"
+				},
+				{
+					"name": "LoginAsAdmin Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+								"exec": [
+									"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+									"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+									"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "38fdf290-1346-44ca-a58d-ee608231b303",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetLoggedUser Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dee3720b-2e5e-4915-9192-ae6f8c198e0b",
+								"exec": [
+									"pm.test(\"Set the uuid as an environment variable\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.id).is.not.null;\r",
+									"    pm.environment.set(\"validAdminId\", jsonData.uuid);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "f0d0bc52-fae7-4d95-8da6-6224a4976b30",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{adminAuthToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_URL}}{{ENDPOINT_GET_ME}}"
+					},
+					"response": []
+				},
+				{
+					"name": "LogoutAsAdmin Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+								"exec": [
+									"pm.test(\"Response value is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "ab70a5f4-9fac-4c94-a97f-15667a1ecd23",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{adminAuthToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+					},
+					"response": []
+				}
+			],
 			"id": "55549532-0d79-4c2b-853f-5ca470cd71b2"
 		}
 	]
