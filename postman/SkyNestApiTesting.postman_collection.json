@@ -94274,7 +94274,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "95395f23-d659-4013-abed-924a39306f91",
+										"id": "fcdc8276-b0a1-4317-89b5-902db624e7c1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -94284,12 +94284,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1ec4a0ac-8280-4688-bc6c-68d3dd50acee",
+										"id": "6803590a-5e78-444d-aac1-f49d383c3d02",
 										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
+											""
 										]
 									}
 								}
@@ -95246,7 +95244,10 @@
 											"script": {
 												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
 												"exec": [
-													""
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
 												],
 												"type": "text/javascript"
 											}
@@ -95273,7 +95274,31 @@
 							"id": "ef93c4ec-182a-473a-ad82-e92405af276d"
 						}
 					],
-					"id": "8d4ed993-ce09-46b3-b307-44743e842c2a"
+					"id": "8d4ed993-ce09-46b3-b307-44743e842c2a",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "8407a06b-96f0-4889-8320-c840a4efb560",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "1bf55986-8132-4f96-abe1-d45223223189",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					]
 				}
 			],
 			"id": "2160086f-120d-4d85-b413-90f892c21b34"
