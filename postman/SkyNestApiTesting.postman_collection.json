@@ -95647,7 +95647,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{workerAuthToken}}"
+										"token": "{{adminAuthToken}}"
 									}
 								},
 								"method": "POST",
@@ -95662,6 +95662,153 @@
 									}
 								},
 								"url": "{{BASE_URL}}{{ENDPOINT_CREATE_BUCKET}}"
+							},
+							"response": []
+						},
+						{
+							"name": "ViewOwnBucketDetails Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "76c04764-9c38-4453-95aa-60d361729a31",
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"createdById from the response is the same with the id of the user that created the bucket\", function () {\r",
+											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"bucketId from the response is the same id from the successful bucket creation\", function () {\r",
+											"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
+											"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
+											"});\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "ea490962-04bf-4279-b59a-1c64f56e1095",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_GET_INFO}}"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteOwnBucket Copy",
+							"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+							},
+							"response": []
+						},
+						{
+							"name": "RestoreOwnDeletedBucket Copy",
+							"id": "1fffc8fd-fc43-4f49-808f-8742d2446830",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_RESTORE}}"
+							},
+							"response": []
+						},
+						{
+							"name": "EditPrivateBucketToPublic Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f4043cb0-e3af-4de1-a163-5a9d5cf42cc3",
+										"exec": [
+											"pm.test(\"Id from the response is the same of the user that created the bucket\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    validWorkerId = pm.environment.get(\"validWorkerId\");\r",
+											"    pm.expect(jsonData.createdById).to.eql(validWorkerId);\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "52f37ef6-f73e-4f52-bfc9-ced04e5cd49e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"PublicBucket\",\r\n  \"description\": \"Edited bucket\",\r\n  \"isPublic\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteRestoredBucketAfterTest Copy",
+							"id": "58e95432-9df4-4f1a-8fb8-4bbc5e977130",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{workerAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
 							},
 							"response": []
 						},
