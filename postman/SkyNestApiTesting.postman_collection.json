@@ -95747,7 +95747,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"EndToEnd\",\r\n  \"rgb\": \"7FE2BF\"\r\n}",
+											"raw": "{\r\n  \"name\": \"EndEnd\",\r\n  \"rgb\": \"7FE2BF\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -96077,7 +96077,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "93b0f825-147b-4248-85aa-4d9e979a937d",
+								"id": "acb0d4fe-9670-4ad4-bc47-4fcca5779cec",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -96087,11 +96087,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e7c7e884-9252-482e-8542-3a2924e6de20",
+								"id": "b5328a76-9942-4040-a31e-f91a009ffb04",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
+									"pm.test(\"Unsuccessful POST request\", () => {",
+									"  pm.expect(pm.response.code).to.be.oneOf([200,204]);",
 									"});"
 								]
 							}
