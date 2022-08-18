@@ -94160,7 +94160,7 @@
 					"name": "SC1:",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "LoginAsAdmin",
 							"id": "726d6e2c-73ee-48ba-b8d0-d93f10468526",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
