@@ -95380,7 +95380,7 @@
 									"response": []
 								},
 								{
-									"name": "DeleteOwnBucket Copy",
+									"name": "DeleteRestoredBucketAfterTest",
 									"id": "3462fcd7-667d-456f-9ae9-1448ddf8097d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
