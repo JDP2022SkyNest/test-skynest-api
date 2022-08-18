@@ -94464,7 +94464,7 @@
 								},
 								"method": "PUT",
 								"header": [],
-								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_DEMOTE_USER}}"
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{randomWorkerId}}{{ENDPOINT_DEMOTE_USER}}"
 							},
 							"response": []
 						},
