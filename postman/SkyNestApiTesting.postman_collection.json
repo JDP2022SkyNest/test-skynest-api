@@ -18863,101 +18863,7 @@
 					"item": [
 						{
 							"name": "ValidTokenAndSuccesfulPUT",
-							"item": [
-								{
-									"name": "EnableVerifiedUser",
-									"id": "781f1b88-84c6-47a3-a3d3-9a2a280d05b8",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_ENABLE_USER}}"
-									},
-									"response": [
-										{
-											"id": "800f42e2-a55d-44ef-b653-0587de9861af",
-											"name": "EnableVerifiedUser",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_ENABLE_USER}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "X-Content-Type-Options",
-													"value": "nosniff"
-												},
-												{
-													"key": "X-XSS-Protection",
-													"value": "1; mode=block"
-												},
-												{
-													"key": "Cache-Control",
-													"value": "no-cache, no-store, max-age=0, must-revalidate"
-												},
-												{
-													"key": "Pragma",
-													"value": "no-cache"
-												},
-												{
-													"key": "Expires",
-													"value": "0"
-												},
-												{
-													"key": "X-Frame-Options",
-													"value": "DENY"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Wed, 29 Jun 2022 08:57:01 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "true"
-										}
-									]
-								}
-							],
+							"item": [],
 							"id": "8a429caf-3437-437e-ab81-d78787e80534",
 							"event": [
 								{
@@ -94685,6 +94591,44 @@
 								"method": "POST",
 								"header": [],
 								"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+							},
+							"response": []
+						},
+						{
+							"name": "DisableVerifiedUser Copy",
+							"id": "eb1ebb5a-b333-4162-9b89-1761ed1bd002",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_DISABLE_USER}}"
+							},
+							"response": []
+						},
+						{
+							"name": "EnableVerifiedUser",
+							"id": "781f1b88-84c6-47a3-a3d3-9a2a280d05b8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_USER}}{{validWorkerId}}{{ENDPOINT_ENABLE_USER}}"
 							},
 							"response": []
 						}
