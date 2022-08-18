@@ -94157,7 +94157,7 @@
 			"name": "TestScenarios",
 			"item": [
 				{
-					"name": "SC1:",
+					"name": "SC1: Logged admin can get user detais and logout",
 					"item": [
 						{
 							"name": "LoginAsAdmin",
