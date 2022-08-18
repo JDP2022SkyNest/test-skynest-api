@@ -94160,16 +94160,135 @@
 					"name": "SC1:",
 					"item": [
 						{
-							"name": "LoginAsAdmin",
-							"id": "726d6e2c-73ee-48ba-b8d0-d93f10468526",
+							"name": "AdminVerifiedUserLogin Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+										"exec": [
+											"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+											"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "802f14db-4a3f-4af1-abee-80be0f493e7d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "49cefdda-33b1-47ce-aa53-4ad650712add",
+									"name": "VerifiedUserLogin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Test1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}/users/login"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Authorization",
+											"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpbmV6YWhhckB5YWhvby5jb20iLCJyb2xlcyI6WyJyb2xlX3dvcmtlciJdLCJleHAiOjE2NTQ3OTI2NjV9.Q8mT9V5sAba_I6ftT-p1Kk2f02WW2wxA0LLSs7UXGr43Wh52EUEq0ODg3mDr0pJwgouYT55g0Mku9K65LZKBEw"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Jun 2022 16:07:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
 						}
 					],
 					"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24"
