@@ -94274,7 +94274,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "95395f23-d659-4013-abed-924a39306f91",
+										"id": "fcdc8276-b0a1-4317-89b5-902db624e7c1",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -94284,12 +94284,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1ec4a0ac-8280-4688-bc6c-68d3dd50acee",
+										"id": "6803590a-5e78-444d-aac1-f49d383c3d02",
 										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
+											""
 										]
 									}
 								}
@@ -94562,7 +94560,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "c2381b90-b12e-47d3-9c5b-cd7bded18d65",
+										"id": "e8b16b65-fc80-4e0e-bcca-1021a18bc6ac",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -94572,12 +94570,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "88c3df35-331a-46df-bbe9-7a439442a69a",
+										"id": "eccec899-7302-44db-bbbf-a28badc48ac8",
 										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
+											""
 										]
 									}
 								}
@@ -94794,7 +94790,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "eb2d1e44-b60c-4a67-9258-34d1fc0869e7",
+										"id": "f6cb2c2e-0f82-41f0-9ff7-8e55e5f046d7",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -94804,12 +94800,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ec1499fc-321d-459c-a6e7-df22a24f2257",
+										"id": "162a6bb3-2562-4eb1-98a2-b6f1b60a6f3c",
 										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
+											""
 										]
 									}
 								}
