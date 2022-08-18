@@ -96093,6 +96093,25 @@
 									"response": []
 								},
 								{
+									"name": "MoveFileToFolderAsOwner Copy",
+									"id": "28734433-ac03-4f13-9319-51dbca2afc22",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{workerAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{workerFileId}}{{ENDPOINT_MOVE}}{{workerFolderId}}"
+									},
+									"response": []
+								},
+								{
 									"name": "DeleteOwnBucket",
 									"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
 									"protocolProfileBehavior": {
