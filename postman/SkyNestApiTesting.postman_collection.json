@@ -94793,7 +94793,7 @@
 							"response": []
 						},
 						{
-							"name": "AddCompanyForWorkerAsAdmin Copy",
+							"name": "AddWorkerToAdmin'sCompany",
 							"id": "481101ea-589b-4521-ba83-dc577175bd96",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
