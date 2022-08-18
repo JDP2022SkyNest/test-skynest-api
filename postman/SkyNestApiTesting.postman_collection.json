@@ -94693,7 +94693,7 @@
 					"name": "SC4: Logged admin can add and remove workers from its company",
 					"item": [
 						{
-							"name": "LoginAsAdmin\\",
+							"name": "LoginAsAdmin",
 							"event": [
 								{
 									"listen": "test",
@@ -94732,6 +94732,63 @@
 									}
 								},
 								"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+							},
+							"response": []
+						},
+						{
+							"name": "GetSpecificWorkerFromListAsAdmin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2ca4e0c3-f833-4d44-9aaa-c5a20c9b7aae",
+										"exec": [
+											"pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
+											"_.each(pm.response.json(), (arrItem) => {\r",
+											"        if (arrItem.roleName === \"role_worker\") {\r",
+											"           pm.environment.set(\"randomWorkerId\", arrItem.id) \r",
+											"        }\r",
+											"    })\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "feba42d9-8d6e-4776-a02c-fdf0aa97ca48",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{adminAuthToken}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
 							},
 							"response": []
 						}
