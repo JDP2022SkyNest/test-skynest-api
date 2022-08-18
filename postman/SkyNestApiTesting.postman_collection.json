@@ -95778,7 +95778,7 @@
 									"response": []
 								},
 								{
-									"name": "CreateFolderInAdmin'sBucketAsAdmin Copy",
+									"name": "CreateFolderInTheBucket",
 									"event": [
 										{
 											"listen": "test",
