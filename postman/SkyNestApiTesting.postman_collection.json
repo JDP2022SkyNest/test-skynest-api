@@ -95040,7 +95040,7 @@
 									"response": []
 								},
 								{
-									"name": "AddNewCompanyAsAdmin Copy",
+									"name": "AddNewCompany",
 									"event": [
 										{
 											"listen": "test",
