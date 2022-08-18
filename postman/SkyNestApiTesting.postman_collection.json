@@ -94495,7 +94495,7 @@
 									"script": {
 										"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
 										"exec": [
-											"pm.test(\"Your test name\", function () {\r",
+											"pm.test(\"Response value is correct\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData).to.eql(true);\r",
 											"});"
