@@ -95181,7 +95181,7 @@
 							]
 						},
 						{
-							"name": "SC6: User can create, view, delete and restore its own private bucket; User can edit its own bucket to public",
+							"name": "SC6: User can create, view, delete and restore its own private bucket and edit it to public",
 							"item": [
 								{
 									"name": "LoginAsWorker",
