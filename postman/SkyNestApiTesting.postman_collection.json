@@ -94502,7 +94502,31 @@
 							"response": []
 						}
 					],
-					"id": "8e0e5319-488a-4584-b36c-a407ede4694b"
+					"id": "8e0e5319-488a-4584-b36c-a407ede4694b",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c2381b90-b12e-47d3-9c5b-cd7bded18d65",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "88c3df35-331a-46df-bbe9-7a439442a69a",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					]
 				}
 			],
 			"id": "2160086f-120d-4d85-b413-90f892c21b34"
