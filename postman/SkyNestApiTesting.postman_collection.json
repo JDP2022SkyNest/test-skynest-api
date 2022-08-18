@@ -95192,7 +95192,7 @@
 							"name": "SC6: User can create a bucket and folder",
 							"item": [
 								{
-									"name": "WorkerVerifiedUserLogin Copy",
+									"name": "LoginAsWorker",
 									"event": [
 										{
 											"listen": "test",
