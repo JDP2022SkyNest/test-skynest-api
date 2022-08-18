@@ -95710,7 +95710,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateValidTag Copy",
+							"name": "CreateTag",
 							"event": [
 								{
 									"listen": "test",
