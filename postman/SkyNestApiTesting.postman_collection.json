@@ -96069,7 +96069,7 @@
 												}
 											]
 										},
-										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{parentFolderId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{parentFolderId}}"
 									},
 									"response": []
 								},
