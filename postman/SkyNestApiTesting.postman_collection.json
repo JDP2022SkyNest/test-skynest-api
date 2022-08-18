@@ -94633,7 +94633,31 @@
 							"response": []
 						}
 					],
-					"id": "a848068f-251e-429d-b003-b2552d2e4360"
+					"id": "a848068f-251e-429d-b003-b2552d2e4360",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "eb2d1e44-b60c-4a67-9258-34d1fc0869e7",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ec1499fc-321d-459c-a6e7-df22a24f2257",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					]
 				}
 			],
 			"id": "2160086f-120d-4d85-b413-90f892c21b34"
