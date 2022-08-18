@@ -96112,6 +96112,25 @@
 									"response": []
 								},
 								{
+									"name": "MoveFileToRootAsOwner Copy",
+									"id": "1f044bca-fe83-4f29-b00d-38d8bf630bea",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_FILE}}{{adminFileInFolderId}}/move"
+									},
+									"response": []
+								},
+								{
 									"name": "DeleteOwnBucket",
 									"id": "09484959-b3fc-4461-981c-ab3bbb9da199",
 									"protocolProfileBehavior": {
