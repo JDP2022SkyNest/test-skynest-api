@@ -95729,7 +95729,7 @@
 							"response": []
 						},
 						{
-							"name": "RestoreOwnDeletedBucket Copy",
+							"name": "RestoreOwnDeletedBucket",
 							"id": "1fffc8fd-fc43-4f49-808f-8742d2446830",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
