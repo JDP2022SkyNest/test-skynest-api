@@ -94216,17 +94216,7 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.id).is.not.null;\r",
 											"    pm.environment.set(\"firstUserId\", jsonData[0].id);\r",
-											"});\r",
-											"\r",
-											"// pm.test(\"Set the id of the first user as environmental variable\", function () {\r",
-											"//  const jsonData = pm.response.json();\r",
-											"//  const index = Math.trunc(Math.random() * jsonData.response.length);\r",
-											"//  const item = jsonData.response[index];\r",
-											"\r",
-											"//  pm.collectionVariables.set(\"test-itemId\", item.id);\r",
-											"//  });\r",
-											"\r",
-											""
+											"});"
 										],
 										"type": "text/javascript"
 									}
