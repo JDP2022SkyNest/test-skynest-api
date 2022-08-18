@@ -95332,7 +95332,7 @@
 													"});\r",
 													"\r",
 													"pm.test(\"bucketId from the response is the same id from the successful bucket creation\", function () {\r",
-													"    workerBucketId = pm.environment.get(\"privateBucketId\");\r",
+													"    privateBucketId = pm.environment.get(\"privateBucketId\");\r",
 													"    pm.expect(jsonData.bucketId).to.eql(privateBucketId);\r",
 													"});\r",
 													"\r",
