@@ -94614,7 +94614,7 @@
 							"response": []
 						},
 						{
-							"name": "EnableVerifiedUser",
+							"name": "EnableDisabledUser",
 							"id": "781f1b88-84c6-47a3-a3d3-9a2a280d05b8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
