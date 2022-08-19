@@ -95752,7 +95752,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"KRFD\",\r\n  \"rgb\": \"8FE2BF\"\r\n}",
+											"raw": "{\r\n  \"name\": \"KRD\",\r\n  \"rgb\": \"8FE2BF\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
