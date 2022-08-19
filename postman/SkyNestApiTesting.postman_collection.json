@@ -96299,7 +96299,42 @@
 						},
 						{
 							"name": "TS2: Regression (LambdaDropbox)",
-							"item": [],
+							"item": [
+								{
+									"name": "StartDropboxAuthorization Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "81cee48b-7784-41d9-abfc-ad0486a1d006",
+												"exec": [
+													"pm.test(\"Set the response of a valid dropbox authorization as an environment variable\", function () {\r",
+													"    var jsonData = pm.response.text();\r",
+													"    pm.environment.set(\"redirectLinkDropbox\", jsonData);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "325b52fc-baf8-4b95-b040-f182ce89a238",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_DROPBOX_START}}"
+									},
+									"response": []
+								}
+							],
 							"id": "e9b448ef-185a-4599-8bd6-d85d37a7304d"
 						}
 					],
