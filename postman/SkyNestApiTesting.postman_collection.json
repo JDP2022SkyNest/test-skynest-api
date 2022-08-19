@@ -96426,7 +96426,7 @@
 									"response": []
 								},
 								{
-									"name": "GetAllActiveLambdasForCertainBucket Copy",
+									"name": "GetAllActiveLambdasForCertainBucket",
 									"id": "a61f0b30-70df-483d-908d-bbd1e0771e18",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
