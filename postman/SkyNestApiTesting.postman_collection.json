@@ -96627,7 +96627,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "6fa4c7fe-d763-44f4-b4d9-929f68fbf04a",
+										"id": "def3f68f-23cb-41c4-82bf-39ba7609edc9",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -96637,12 +96637,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4784aa4c-cbdc-4aaf-b91d-a59b9233154a",
+										"id": "14077556-eac3-41c2-88c6-cfc5588fa71a",
 										"type": "text/javascript",
 										"exec": [
-											"pm.test(\"Status code is 200\", function () {",
-											"    pm.response.to.have.status(200);",
-											"});"
+											""
 										]
 									}
 								}
