@@ -96512,6 +96512,40 @@
 									"response": []
 								},
 								{
+									"name": "LogoutAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "a1a38118-3c3f-4429-ad6c-f4de00f711a5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
+									},
+									"response": []
+								},
+								{
 									"name": "DeactivateLambda",
 									"id": "a6d09aa6-e778-4e78-9050-b38c6a5d585e",
 									"protocolProfileBehavior": {
