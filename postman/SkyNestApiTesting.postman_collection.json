@@ -96429,6 +96429,52 @@
 									"response": []
 								},
 								{
+									"name": "FinishDropboxAuthorization Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "81cee48b-7784-41d9-abfc-ad0486a1d006",
+												"exec": [
+													"pm.test(\"Set the response of a valid dropbox authorization as an environment variable\", function () {\r",
+													"    var jsonData = pm.response.text();\r",
+													"    pm.environment.set(\"redirectLinkDropbox\", jsonData);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "8f0023b9-ca1b-4d16-b45b-0da93ce50bc7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}?code=wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}"
+											],
+											"query": [
+												{
+													"key": "code",
+													"value": "wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "GetAllPredefinedExistingLambdas",
 									"event": [
 										{
@@ -96512,6 +96558,36 @@
 									"response": []
 								},
 								{
+									"name": "DeactivateLambda",
+									"id": "a6d09aa6-e778-4e78-9050-b38c6a5d585e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_DEACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_DEACTIVATE}}"
+											],
+											"query": [
+												{
+													"key": "lambda",
+													"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "LogoutAsAdmin",
 									"event": [
 										{
@@ -96542,36 +96618,6 @@
 										"method": "POST",
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-									},
-									"response": []
-								},
-								{
-									"name": "DeactivateLambda",
-									"id": "a6d09aa6-e778-4e78-9050-b38c6a5d585e",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "PUT",
-										"header": [],
-										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_DEACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
-											"host": [
-												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_DEACTIVATE}}"
-											],
-											"query": [
-												{
-													"key": "lambda",
-													"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA"
-												}
-											]
-										}
 									},
 									"response": []
 								}
