@@ -96301,7 +96301,7 @@
 							"name": "TS2: Regression (LambdaDropbox)",
 							"item": [
 								{
-									"name": "StartDropboxAuthorization Copy",
+									"name": "StartDropboxAuthorization",
 									"event": [
 										{
 											"listen": "test",
