@@ -96560,14 +96560,14 @@
 										"method": "PUT",
 										"header": [],
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_ACTIVATE}}?code=U_F_T_E_S_L",
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_ACTIVATE}}?code={{bucketStatsCode}}",
 											"host": [
 												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_ACTIVATE}}"
 											],
 											"query": [
 												{
 													"key": "code",
-													"value": "U_F_T_E_S_L"
+													"value": "{{bucketStatsCode}}"
 												}
 											]
 										}
