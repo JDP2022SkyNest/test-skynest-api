@@ -96622,7 +96622,31 @@
 									"response": []
 								}
 							],
-							"id": "e9b448ef-185a-4599-8bd6-d85d37a7304d"
+							"id": "e9b448ef-185a-4599-8bd6-d85d37a7304d",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "6fa4c7fe-d763-44f4-b4d9-929f68fbf04a",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "4784aa4c-cbdc-4aaf-b91d-a59b9233154a",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										]
+									}
+								}
+							]
 						}
 					],
 					"id": "262f809d-4704-4b80-8aca-c4f1c1630d23",
