@@ -96429,7 +96429,7 @@
 									"response": []
 								},
 								{
-									"name": "GetAllPredefinedExistingLambdas Copy",
+									"name": "GetAllPredefinedExistingLambdas",
 									"event": [
 										{
 											"listen": "test",
