@@ -96481,7 +96481,17 @@
 											"script": {
 												"id": "013588c4-e68f-4ee7-a5d3-3dccef40b0c4",
 												"exec": [
-													""
+													"pm.test(\"Set the code of Upload file to dropbox lambda as env variable\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.code).is.not.null;\r",
+													"    pm.environment.set(\"uploadLambdaCode\", jsonData[0].code);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Set the code of Send bucket stats to e-mail as env variable\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData.code).is.not.null;\r",
+													"    pm.environment.set(\"bucketStatsCode\", jsonData[1].code);\r",
+													"});"
 												],
 												"type": "text/javascript"
 											}
