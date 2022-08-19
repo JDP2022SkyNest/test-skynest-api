@@ -94486,40 +94486,6 @@
 									"response": []
 								},
 								{
-									"name": "LogoutAsAdmin",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
-												"exec": [
-													"pm.test(\"Response value is correct\", function () {\r",
-													"    var jsonData = pm.response.json();\r",
-													"    pm.expect(jsonData).to.eql(true);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "f644633f-1537-42bf-aa35-7b811ef3595f",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
-									},
-									"response": []
-								},
-								{
 									"name": "GetAllUsersAsAdmin",
 									"event": [
 										{
@@ -94551,6 +94517,40 @@
 										"method": "GET",
 										"header": [],
 										"url": "{{BASE_URL}}{{ENDPOINT_GET_ALL_USERS}}"
+									},
+									"response": []
+								},
+								{
+									"name": "LogoutAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9b6f338-e4d4-4fcc-aed5-e2a69e0e69ab",
+												"exec": [
+													"pm.test(\"Response value is correct\", function () {\r",
+													"    var jsonData = pm.response.json();\r",
+													"    pm.expect(jsonData).to.eql(true);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "f644633f-1537-42bf-aa35-7b811ef3595f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
 									},
 									"response": []
 								}
@@ -95955,7 +95955,7 @@
 										"auth": {
 											"type": "bearer",
 											"bearer": {
-												"token": "{{workerAuthToken}}"
+												"token": "{{adminAuthToken}}"
 											}
 										},
 										"method": "GET",
