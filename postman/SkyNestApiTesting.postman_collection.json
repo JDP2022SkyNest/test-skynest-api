@@ -96654,6 +96654,25 @@
 									"response": []
 								},
 								{
+									"name": "DeleteOwnBucket",
+									"id": "6e39fcfb-644d-4a7e-b44c-8ca01df84c0d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_BUCKET}}{{privateBucketId}}{{ENDPOINT_DELETE_BUCKET}}"
+									},
+									"response": []
+								},
+								{
 									"name": "LogoutAsAdmin",
 									"event": [
 										{
