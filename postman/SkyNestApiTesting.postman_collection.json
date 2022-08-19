@@ -96395,6 +96395,73 @@
 									"response": []
 								},
 								{
+									"name": "StartDropboxAuthorization",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "81cee48b-7784-41d9-abfc-ad0486a1d006",
+												"exec": [
+													"pm.test(\"Set the response of a valid dropbox authorization as an environment variable\", function () {\r",
+													"    var jsonData = pm.response.text();\r",
+													"    pm.environment.set(\"redirectLinkDropbox\", jsonData);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "325b52fc-baf8-4b95-b040-f182ce89a238",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_DROPBOX_START}}"
+									},
+									"response": []
+								},
+								{
+									"name": "GetAllPredefinedExistingLambdas Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "013588c4-e68f-4ee7-a5d3-3dccef40b0c4",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "2097e335-f6b3-4c84-a473-503b93d1d3c3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "GET",
+										"header": [],
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_LAMBDAS}}"
+									},
+									"response": []
+								},
+								{
 									"name": "ActivateLambdaForCertainBucket",
 									"id": "c4d839ab-ce8b-4b98-9a13-8d949dba7784",
 									"protocolProfileBehavior": {
@@ -96471,40 +96538,6 @@
 												}
 											]
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "StartDropboxAuthorization",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "81cee48b-7784-41d9-abfc-ad0486a1d006",
-												"exec": [
-													"pm.test(\"Set the response of a valid dropbox authorization as an environment variable\", function () {\r",
-													"    var jsonData = pm.response.text();\r",
-													"    pm.environment.set(\"redirectLinkDropbox\", jsonData);\r",
-													"});"
-												],
-												"type": "text/javascript"
-											}
-										}
-									],
-									"id": "325b52fc-baf8-4b95-b040-f182ce89a238",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": {
-												"token": "{{adminAuthToken}}"
-											}
-										},
-										"method": "GET",
-										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_DROPBOX_START}}"
 									},
 									"response": []
 								}
