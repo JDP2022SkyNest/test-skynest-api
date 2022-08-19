@@ -96429,7 +96429,7 @@
 									"response": []
 								},
 								{
-									"name": "FinishDropboxAuthorization",
+									"name": "MANUALFinishDropboxAuthorization",
 									"event": [
 										{
 											"listen": "test",
