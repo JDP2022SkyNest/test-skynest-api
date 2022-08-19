@@ -96344,6 +96344,37 @@
 									"response": []
 								},
 								{
+									"name": "ActivateLambdaForCertainBucket Copy",
+									"id": "c4d839ab-ce8b-4b98-9a13-8d949dba7784",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}?lambda=UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_ACTIVATE}}"
+											],
+											"query": [
+												{
+													"key": "lambda",
+													"value": "UPLOAD_FILE_TO_EXTERNAL_SERVICE_LAMBDA",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "StartDropboxAuthorization",
 									"event": [
 										{
