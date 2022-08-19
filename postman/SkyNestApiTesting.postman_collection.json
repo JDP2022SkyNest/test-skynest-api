@@ -96507,7 +96507,7 @@
 									"response": []
 								},
 								{
-									"name": "ActivateLambdaForCertainBucket",
+									"name": "ActivateUploadToDropboxLambdaForTheBucket",
 									"id": "c4d839ab-ce8b-4b98-9a13-8d949dba7784",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
