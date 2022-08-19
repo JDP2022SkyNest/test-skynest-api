@@ -96445,7 +96445,7 @@
 									"response": []
 								},
 								{
-									"name": "DeactivateLambdaForCertainBucket Copy",
+									"name": "DeactivateLambda",
 									"id": "a6d09aa6-e778-4e78-9050-b38c6a5d585e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
