@@ -96459,15 +96459,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}?code=wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
+											"raw": "{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}?code=wk4YChbfEaEAAAAAAAAAHvgRFP1Qm84RgugKfx7Pmo4",
 											"host": [
 												"{{BASE_URL}}{{ENDPOINT_DROPBOX_FINISH}}"
 											],
 											"query": [
 												{
 													"key": "code",
-													"value": "wk4YChbfEaEAAAAAAAAAGkHNu4fITKsOVGh0TMgxDzU",
-													"type": "text"
+													"value": "wk4YChbfEaEAAAAAAAAAHvgRFP1Qm84RgugKfx7Pmo4"
 												}
 											]
 										}
