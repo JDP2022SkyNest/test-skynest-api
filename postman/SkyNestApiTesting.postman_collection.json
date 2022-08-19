@@ -96537,6 +96537,36 @@
 									"response": []
 								},
 								{
+									"name": "ActivateStatsToEmailLambdaForTheBucket Copy",
+									"id": "89eab0b5-001d-42b5-a862-6019c3c10f25",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{adminAuthToken}}"
+											}
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_ACTIVATE}}?code=U_F_T_E_S_L",
+											"host": [
+												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_ACTIVATE}}"
+											],
+											"query": [
+												{
+													"key": "code",
+													"value": "U_F_T_E_S_L"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "GetAllActiveLambdasForCertainBucket",
 									"id": "a61f0b30-70df-483d-908d-bbd1e0771e18",
 									"protocolProfileBehavior": {
