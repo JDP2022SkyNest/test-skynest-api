@@ -96481,9 +96481,7 @@
 											"script": {
 												"id": "013588c4-e68f-4ee7-a5d3-3dccef40b0c4",
 												"exec": [
-													"pm.test(\"Status code is 200\", function () {\r",
-													"    pm.response.to.have.status(200);\r",
-													"});"
+													""
 												],
 												"type": "text/javascript"
 											}
