@@ -96522,14 +96522,14 @@
 										"method": "PUT",
 										"header": [],
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_ACTIVATE}}?code=Upload file to dropbox lambda",
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_ACTIVATE}}?code=U_F_T_E_S_L",
 											"host": [
 												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_ACTIVATE}}"
 											],
 											"query": [
 												{
 													"key": "code",
-													"value": "Upload file to dropbox lambda"
+													"value": "U_F_T_E_S_L"
 												}
 											]
 										}
