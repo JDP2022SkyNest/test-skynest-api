@@ -96301,6 +96301,49 @@
 							"name": "TS2: Regression (LambdaDropbox)",
 							"item": [
 								{
+									"name": "LoginAsAdmin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8daa4a0f-931e-4324-a935-a5a54f392cf0",
+												"exec": [
+													"pm.test(\"Set the Authorization header value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminAuthToken\", pm.response.headers.get(\"Authorization\"));\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Set the Refresh Token value as environmental variable\", function () {\r",
+													"    pm.environment.set(\"adminRefreshToken\", pm.response.headers.get(\"refresh-token\"));\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "0ea4b804-430c-4456-a608-b05055979750",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"email\": \"christinezahar@yahoo.com\",\r\n  \"password\": \"Hris8833\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{BASE_URL}}{{ENDPOINT_LOGIN_USER}}"
+									},
+									"response": []
+								},
+								{
 									"name": "StartDropboxAuthorization",
 									"event": [
 										{
