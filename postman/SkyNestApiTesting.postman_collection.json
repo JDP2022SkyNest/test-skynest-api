@@ -96383,7 +96383,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"Test 1\",\r\n  \"description\": \"Bucket of a worker\"\r\n}",
+											"raw": "{\r\n  \"name\": \"Lambda Regression\",\r\n  \"description\": \"Bucket for test\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
