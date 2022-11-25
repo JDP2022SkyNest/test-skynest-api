@@ -96022,7 +96022,7 @@
 										"body": {
 											"mode": "file",
 											"file": {
-												"src": "/C:/Users/Hristina Zaharieva/Desktop/SkyNest/.m2/copy_reference_file.log"
+												"src": ""
 											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{privateBucketId}}"
