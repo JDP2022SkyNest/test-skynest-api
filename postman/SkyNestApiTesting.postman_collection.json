@@ -51180,6 +51180,18 @@
 													"body": "{\n    \"bucketId\": \"8ef2ed3b-b64e-4a1d-b79d-1332e26f7ffc\",\n    \"createdById\": \"14472112-3022-4f20-bb16-8e896e175809\",\n    \"name\": \"To be deleted\",\n    \"companyId\": \"a4bc0c08-08fc-11ed-b371-0242ac120003\",\n    \"description\": \"Description\",\n    \"size\": 0,\n    \"isPublic\": false,\n    \"deletedOn\": null,\n    \"tags\": null\n}"
 												}
 											]
+										},
+										{
+											"name": "New Request",
+											"id": "4357bfab-d393-4f23-b2a4-77616297ebb8",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": []
+											},
+											"response": []
 										}
 									],
 									"id": "f73f5d47-25fe-4a7e-acf9-b608274e4ca0",
