@@ -96020,14 +96020,10 @@
 										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "",
-													"type": "file",
-													"src": "/C:/Users/Hristina Zaharieva/Desktop/SkyNest/.gitignore"
-												}
-											]
+											"mode": "file",
+											"file": {
+												"src": "/C:/Users/Hristina Zaharieva/Desktop/SkyNest/.m2/copy_reference_file.log"
+											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{privateBucketId}}"
 									},
