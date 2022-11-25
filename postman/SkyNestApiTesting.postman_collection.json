@@ -94267,18 +94267,6 @@
 										"url": "{{BASE_URL}}{{ENDPOINT_LOGOUT_USER}}"
 									},
 									"response": []
-								},
-								{
-									"name": "New Request",
-									"id": "88063bb2-883f-4cd6-b03f-ccf95045b6ef",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
-									},
-									"response": []
 								}
 							],
 							"id": "cbd6cc84-aa44-45f7-8d78-bb7ad9ffae24",
