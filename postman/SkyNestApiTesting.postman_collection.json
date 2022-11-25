@@ -96075,7 +96075,7 @@
 										"body": {
 											"mode": "file",
 											"file": {
-												"src": "/C:/Users/Hristina Zaharieva/Desktop/SkyNest/.m2/copy_reference_file.log"
+												"src": "To do.txt"
 											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{parentFolderId}}"
