@@ -96557,7 +96557,7 @@
 									"response": []
 								},
 								{
-									"name": "ActivateStatsToEmailLambdaForTheBucket Copy",
+									"name": "ActivateStatsToEmailLambdaForTheBucket",
 									"id": "89eab0b5-001d-42b5-a862-6019c3c10f25",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
