@@ -96601,7 +96601,7 @@
 										},
 										"method": "GET",
 										"header": [],
-										"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{adminBucketId}}"
+										"url": "{{BASE_URL}}{{ENDPOINT_GET_ACTIVE_LAMBDAS}}{{privateBucketId}}"
 									},
 									"response": []
 								},
