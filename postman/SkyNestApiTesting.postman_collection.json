@@ -96651,9 +96651,9 @@
 										"method": "PUT",
 										"header": [],
 										"url": {
-											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_DEACTIVATE}}?code={{bucketStatsCode}}",
+											"raw": "{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_DEACTIVATE}}?code={{bucketStatsCode}}",
 											"host": [
-												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{adminBucketId}}{{ENDPOINT_DEACTIVATE}}"
+												"{{BASE_URL}}{{ENDPOINT_LAMBDAS_FOR_BUCKET}}{{privateBucketId}}{{ENDPOINT_DEACTIVATE}}"
 											],
 											"query": [
 												{
