@@ -96020,14 +96020,10 @@
 										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "",
-													"type": "file",
-													"src": "To do.txt"
-												}
-											]
+											"mode": "file",
+											"file": {
+												"src": "To do.txt"
+											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{privateBucketId}}"
 									},
