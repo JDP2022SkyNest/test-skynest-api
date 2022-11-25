@@ -96077,10 +96077,14 @@
 										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "file",
-											"file": {
-												"src": "To do.txt"
-											}
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "",
+													"type": "file",
+													"src": "To do.txt"
+												}
+											]
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE_TO_FOLDER}}{{parentFolderId}}"
 									},
