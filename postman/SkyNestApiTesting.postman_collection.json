@@ -95764,7 +95764,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"name\": \"PSP\",\r\n  \"rgb\": \"8DE7BF\"\r\n}",
+											"raw": "{\r\n  \"name\": \"POP\",\r\n  \"rgb\": \"8DE7BF\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -96022,7 +96022,7 @@
 										"body": {
 											"mode": "file",
 											"file": {
-												"src": ""
+												"src": "/C:/Users/Hristina Zaharieva/Desktop/SkyNest/.m2/copy_reference_file.log"
 											}
 										},
 										"url": "{{BASE_URL}}{{ENDPOINT_UPLOAD_FILE}}{{privateBucketId}}"
