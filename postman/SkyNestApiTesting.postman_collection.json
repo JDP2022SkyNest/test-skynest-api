@@ -96749,7 +96749,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "acb0d4fe-9670-4ad4-bc47-4fcca5779cec",
+								"id": "4ea3e661-7ec1-4768-ab66-7f2d0a840bb5",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -96759,10 +96759,10 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b5328a76-9942-4040-a31e-f91a009ffb04",
+								"id": "b129072c-031c-4a49-9ca9-2f8fa55d00f0",
 								"type": "text/javascript",
 								"exec": [
-									"pm.test(\"Unsuccessful POST request\", () => {",
+									"pm.test(\"Successful POST request\", () => {",
 									"  pm.expect(pm.response.code).to.be.oneOf([200,204]);",
 									"});"
 								]
